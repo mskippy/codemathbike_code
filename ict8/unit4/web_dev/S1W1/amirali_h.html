@@ -1,0 +1,140 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage – Amirali</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Your Name" />
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #000000;
+      --ink: #ff7b00;
+      --accent: #ff0000; /* change me! */   
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      font-family: system-ui, Arial, sans-serif;
+      color: var(--ink);
+      /* این قسمت مهمه */
+ background: url("https://support.activision.com/content/dam/atvi/support/article-assets/hero-banners/black-ops-7/BO7-CP-hero-003.jpg") no-repeat center center fixed;
+ background-size: cover; 
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #121212; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:hsl(0, 0%, 100%); }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#ffffff; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <p style="margin-top:12px;">
+        <a href='/code/ict8/unit4/web_dev/S1W1/index.html'>← Back to S1W1 class page</a>
+      </p>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="studentName">Amirali</span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I am a curious and motivated individual who enjoys learning, exploring new ideas, and finding creative solutions. My focus is on growth, both personally and professionally, and I value honesty, respect, and continuous improvement. I believe in treating others with kindness and fairness, and I strive to build meaningful connections through my work and interests and my favourite video game is call of duty
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">instagram</a></li>
+        <li><a href="https://www.callofduty.com/ca/en" target="_blank" rel="noopener">activision</a></li>
+        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">youtube</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="https://m.media-amazon.com/images/M/MV5BYjE3OGFkMmItZGMzOC00YmVjLWE5ZmYtNzcxMTk0OTY5NTU2XkEyXkFqcGc@._V1_.jpg" alt="my favourite video game" />
+        <figcaption>Photo credit: Unsplash</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">Why do programmers like dark mode?</p>
+      <button type="button" onclick="myFunction()">Why?</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p>In Essential Skills & Digital Literacy, I enjoyed learning how to stay safe online and use technology responsibly. A challenge was remembering all the rules, but I improved by practicing. I would like to learn more about online security in the future, because it is important for everyday life.
+
+In Digital Media (Word, Excel, Canva), I liked making designs in Canva because it was fun and creative. A challenge for me was using Excel formulas, but next time I would practice more. I think I can use these skills in school projects and later in jobs.
+
+In Game Development (GDevelop), I enjoyed creating my own simple game because it felt rewarding. A challenge was fixing bugs when the game didn’t work. I want to learn more about coding so I can make better games in the future.
+
+In Web Development (HTML/CSS/JS), I liked building my own webpage because it was interesting to see my ideas online. The hardest part was writing correct code without mistakes. I would like to learn more about JavaScript because it makes websites interactive. In the future, I can use web development skills for personal or professional projects.
+ </p>
+      
+    </section>
+    
+    
+    
+    <footer>
+      <p>
+        Built by <strong>Amirali</strong>. Last updated: <span id="lastUpdated"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "Because in the dark, they can finally hide from their bugs";
+    }
+  </script>
+</body>
+</html>   
+<!DOCTYPE html>
+    <html>
+       <head>
+          <title></title>
+       </head>
+       <body>
+          <h1>Add GIFs To HTML in 2022</h1>
+          
+          <video autoplay loop muted width="500" height="300" src="https://media1.giphy.com/media/2rqEdFfkMzXmo/giphy.mp4?cid=790b76118e85130b6027e42ff5aca28cf62871c4e09f8306&rid=giphy.mp4&ct=g">
+            A man moving his hands away from his forehead sideways, in a mind-explosion gesture. An overlaid animation enforces the explosion character.
+          </video>
+       </body>
+    </html>
+    8

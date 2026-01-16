@@ -1,0 +1,105 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>My First Webpage – Eleanor </title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Your Name" />
+
+  <!-- 💡 TYPE ZONE: You will edit the text above and below.  -->
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #55010156;
+      --ink: #1a1a1f;
+      --accent: #520202; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: 'Times New Roman';
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #fff; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#f3f3f6; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <header>
+
+      <p style="margin-top:12px;">
+        <a href='/code/ict8/unit4/web_dev/S1W1/index.html'>← Back to S1W1 class page</a>
+      </p>
+      <h1>Hi, I'm <span id="studentName">Eleanor</span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I am a grade eight student at Surtherland Secondary, I went to Brooksbank elementrey school. My favorite colours are navy blue and maroon.
+         I love to read and play sports. I love to drink matcha and ice coffees. I have a older brother that is in grade 10.
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href=  "https://www.starbucks.ca/en-CA/target="_blank rel="noopener">Starbucks</a></li>
+        <li><a href="https://www.nvschools.ca" target="_blank" rel="noopener">NVSD</a></li>
+        <li><a href="https://ca.pinterest.com/" target="_blank" rel="noopener">Pinterest</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="https://i.pinimg.com/736x/58/71/5d/58715d90cb0878cdf628341aa7242dd0.jpg" alt="A cool nature image from Unsplash" />
+        <figcaption>Photo credit: Unsplash</figcaption>
+      </figure>
+    </section>
+
+    <section>
+  
+      <h2>Something punny</h2>
+      <p id="pun">What do you do to get a robot mad?</p>
+      <button type="button" onclick="myFunction()">Why?</button>
+    </section>
+    <h2>Reflection</h2>
+    <p>In this class again I have learned a lot of things I did not know, like making a video game to learning how to create a file. The part I found most challenging was the video game because I was sick for the two days that she explained everything, so when I got back, I was behind and confused about it. Even though I did not finish it, it was fun! I would probably pick to learn more about the game because I did not get to finish it, and I wanted to. I would also love to make more websites like these. In the future I could use the skills that I learned in this class to do anything. If I got a job that I need to make websites with then I wound already know how to. Depending on how much I like the other classes, I would choose to take it again! 
+
+   </p>
+    <footer>
+      <p>
+        Built by <strong>Eleanor</strong>. Last updated:Oct 2, 2025 <span id="lastUpdated"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "Push all of its buttons.";
+    }
+  </script>
+</body>
+</html>

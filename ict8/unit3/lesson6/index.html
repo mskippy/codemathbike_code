@@ -1,0 +1,240 @@
+<!-- v2 – Oct 2025 -->
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ICT 8 • Unit 1 • Lesson 1</title>
+    <link rel="stylesheet" href="/code/common/css/base.css">
+    <script src="/code/common/js/nav_data.js" defer></script>
+    <script src="/code/common/js/utils.js" defer></script>
+    <script src="/code/common/js/inject_partials.js" defer></script>
+    <script src="/code/common/js/nav_systems.js" defer></script>
+    <script src="/code/common/js/main.js" defer></script>
+  </head>
+ 
+  <!-- Set body class to match course theme: ict8, ict9, dc1011, or none for purple -->
+  <body data-course="ict8">
+    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+    
+      <main id="content" role="main" data-page-title="ICT X • Unit X • Lesson X">
+
+
+      <section class="card">
+        <h2>Congrats! 🎉</h2>
+        <p>You’ve built a working Space Shooter. Now let’s <strong>fix rough edges</strong>, <strong>polish the feel</strong>, and <strong>add new mechanics</strong> to make it truly fun.</p>
+        <p>This is a <em>modular</em> assignment: Complete Part A then pick and choose which parts to implement based on your skill level and time. The <strong>Reflection</strong> section at the end has questions about your design choices.</p>
+      </section>
+
+      <section class="card">
+        <h2>Part A — Fix-It Pass</h2>
+      
+        <h3>Must-fix bugs / tweaks</h3>
+        <ul>
+          <li><strong>Bullets vs meteors:</strong> When player or enemy bullets hit a meteor, delete the bullet (optionally damage/destroy meteor).</li>
+          <li><strong>Game flow messaging:</strong> Add a <em>“Get Ready!”</em> overlay at the start and a <em>“Game Over”</em> screen/scene when health ≤ 0.</li>
+          <li><strong>Speed balance:</strong> Tune player, bullet, enemy, and meteor speeds to feel fair.</li>
+        </ul>
+      
+        <h3>Assets Audit</h3>
+        <p>Open your <code>Assets/</code> folder and list what else you can use right now—no new downloads needed.</p>
+        <ul>
+          <li>Extra SFX (shoot, hit, explosion, pickup), background music loops.</li>
+          <li>Alternate enemy/player sprites, meteor variants, background images.</li>
+          <li>HUD icons (hearts/shield), fonts, pickup art.</li>
+        </ul>
+      
+        <h3>Quick Audio Pass</h3>
+        <p>Add essential sound so actions feel responsive. Keep levels comfortable.</p>
+        <ul>
+          <li><strong>SFX:</strong> play on <em>shoot</em>, <em>enemy hit/explosion</em>, <em>player hit</em>, <em>pickup</em>.</li>
+          <li><strong>Music:</strong> loop a quiet background track; stop/duck it on Game Over.</li>
+          <li><strong>Mixing tips:</strong> SFX slightly louder than music; avoid clipping; reuse one or two channels for similar sounds.</li>
+        </ul>
+      
+        <details>
+          <summary>GDevelop hints (audio)</summary>
+          <pre><code>// Fire SFX when shooting
+      On press FireButton:
+        Audio → Play a sound: Assets/sfx/shoot.wav (volume ~70, not looped)
+      
+      // Enemy destroyed
+      When Enemy is deleted:
+        Audio → Play a sound: Assets/sfx/explosion.wav (vol ~80)
+      
+      // Pickup
+      On collision Player with Pickup:
+        Audio → Play a sound: Assets/sfx/pickup.wav (vol ~65)
+      
+      // Background music (scene start)
+      At the beginning of the scene:
+        Audio → Play a music file: Assets/music/loop.ogg (looped, vol ~35)
+      
+      // Game Over
+      When PlayerHealth ≤ 0:
+        Audio → Stop all sounds and music
+        // or: Audio → Set global volume to 0, then show Game Over
+      </code></pre>
+        </details>
+      
+        <h4>Polish checklist</h4>
+        <ul>
+          <li>Controls feel responsive; collisions make sense.</li>
+          <li>HUD is readable (no edge clipping/overlap).</li>
+          <li>Core SFX + music are working and well-balanced.</li>
+        </ul>
+      
+
+      </section>
+      
+
+      <section class="card">
+        <h2>Part B — Power-Ups &amp; Pickups (Depth)</h2>
+        <ul>
+          <li><strong>Health pickup:</strong> Increase <code>PlayerHealth</code> on collision, then delete the pickup.</li>
+          <li><strong>Shield pickup (timed):</strong> Set <code>PlayerHasShield = true</code>, start timer, ignore damage while true; add a ring animation for feedback.</li>
+          <li><strong>Stronger lasers / fire-rate boost:</strong> Temporarily increase <code>BulletDamage</code> or reduce <code>FireCooldown</code>, then revert.</li>
+        </ul>
+        <p><em>Stretch:</em> A pickup spawner that appears every X seconds at a safe random position; use rarity tiers.</p>
+        
+
+      </section>
+
+      <section class="card">
+        <h2>Part C — Enemies, Meteors &amp; Pacing (Fun)</h2>
+        <ul>
+          <li><strong>Gradual escalation:</strong> Track <code>DifficultyLevel</code>; every 20–30s, increase spawn rate or variety.</li>
+          <li><strong>Waves:</strong> Spawn enemies in waves; brief pause between waves; show “Wave 2”.</li>
+          <li><strong>Caps &amp; spacing:</strong> Limit concurrent enemies (e.g., ≤ 8) to avoid instant swarms.</li>
+          <li><strong>Meteor fields:</strong> Occasional clusters players must weave through.</li>
+        </ul>
+        <p><em>Stretch:</em> New enemy types with different speeds, health, and behaviors (e.g., zig-zag, kamikaze).</p>
+ 
+      </section>
+
+      <section class="card">
+        <h2>Part D — Score Systems (Motivation)</h2>
+        <ul>
+          <li><strong>High Score:</strong> Save and load with Storage actions so the best run persists across sessions.</li>
+          <li><strong>Combo / streak (optional):</strong> Bonus points for quick consecutive kills; reset on damage.</li>
+          <li><strong>Score pop-ups:</strong> Small “+10” BBText near destroyed enemies for satisfying feedback.</li>
+        </ul>
+        <p><em>Stretch:</em> Different points for different enemies; bonus for completing a wave without damage.</p>
+      </section>
+
+      <section class="card">
+        <h2>Part E — Feel &amp; Feedback (Juice)</h2>
+        <ul>
+          <li><strong>Particles:</strong> Small burst on hits/explosions.</li>
+          <li><strong>Camera screenshake:</strong> Very subtle shake on big hits.</li>
+          <li><strong>Animation states:</strong> Player flash while shielded/damaged.</li>
+          <li><strong>Sound mix:</strong> Balance volumes; distinct pickup chime.</li>
+        </ul>
+        <p><em>Stretch:</em> More particle effects (thrusters, pickups); dynamic music intensity based on difficulty.</p>
+      </section>
+
+      <section class="card">
+        <h2>Reflection</h2>
+        <ol>
+          <li><strong>Learning Curve:</strong> What was the hardest technical or creative problem you solved in GDevelop? What helped you break through that challenge?</li>
+
+          <li><strong>Player Experience:</strong> Think about how your game feels to play (controls, difficulty, pacing, feedback). What specific decisions did you make to create a fun or satisfying experience?</li>
+
+          <li><strong>Testing & Iterating:</strong> What’s one bug, imbalance, or design issue that you fixed that made the biggest improvement to your game?</li>
+
+          <li><strong>Creative Growth:</strong> What did you discover about yourself as a designer or creator during this project? (e.g., patience, creativity, problem-solving, attention to detail, persistence)</li>
+
+          <li><strong>Future Improvements:</strong> If you had one more week to work on your game, what feature or improvement would you add next — and why would it matter to the player?</li>
+
+        </ol>
+      </section>
+
+      <section class="card">
+        <h2>Quick GDevelop Snippets (pseudocode)</h2>
+        <pre><kbd>// Bullet vs Meteor
+        IF PlayerBullet collides with Meteor
+          → Delete PlayerBullet
+
+        // Get Ready overlay
+        At scene start:
+          Show GetReadyText
+          Disable PlayerControls
+        After 1.0 sec:
+          Hide GetReadyText
+          Enable PlayerControls
+
+        // Shield (5 seconds)
+        On collision Player with ShieldPickup:
+          Set PlayerHasShield = true
+          Reset timer "Shield"
+          Delete ShieldPickup
+
+        IF PlayerHasShield = true AND Timer "Shield" &gt; 5
+          Set PlayerHasShield = false
+
+        // Ignore damage while shielded
+        IF PlayerHasShield = false AND Player collides with EnemyBullet
+          PlayerHealth -= 1
+          Delete EnemyBullet
+
+        // High Score
+        On scene start:
+          Storage → Read "HighScore" into HighScore (default 0)
+
+        On Game Over:
+          IF PlayerScore &gt; HighScore:
+            HighScore = PlayerScore
+            Storage → Write "HighScore" = HighScore
+        </kbd></pre>
+      </section>
+
+        
+      </main>
+
+
+
+      <!-- RIGHT: optional materials/contact/reminders -->
+      <aside id="right-rail" aria-label="Resources">
+    
+        <section class="card">
+          <h3>Learning Goals</h3>
+          <ul>
+            <li>Identify and fix core gameplay bugs (collisions, speeds, flow).</li>
+            <li>Implement pickups (health, shield, fire-rate/damage boost).</li>
+            <li>Design pacing with waves, spawn caps, and gradual difficulty.</li>
+            <li>Persist a <strong>High Score</strong> using Storage actions.</li>
+            <li>Add “game feel” polish (particles, screen shake, feedback).</li>
+          </ul>
+        </section>
+  
+        <section class="card">
+          <h3>Submit List (3.6)</h3>
+          <ul>
+            <li>Before/After note or screenshots for one polish fix (e.g., bullet vs meteor).</li>
+            <li>Gameplay screenshot with HUD visible + 1–2 sentences on your difficulty curve.</li>
+            <li>High Score proof (screenshot) or a brief note if implemented differently.</li>
+            <li>Optional 10–20s clip showing a pickup or wave escalation.</li>
+          </ul>
+        </section>
+  
+        <section class="card">
+          <h3>Challenge by Choice</h3>
+          <ul>
+            <li><strong>Green:</strong> Fix bullet/meteor, add Get Ready + Game Over, balance speeds, add High Score.</li>
+            <li><strong>Blue:</strong> Two pickups, wave-based spawns, score pop-ups, one particle effect.</li>
+            <li><strong>Black:</strong> Combo/streak or new enemy behaviors, dynamic difficulty, shield with HUD icon.</li>
+          </ul>
+        </section>
+
+      </aside>
+      
+    </div> <!--Closing div for unit-shell layout-3-->
+
+    <!-- Footer -->
+    <footer id="site-footer" data-partial="/code/common/partials/footer.html"></footer>
+
+  </body>
+</html>

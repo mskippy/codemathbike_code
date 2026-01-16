@@ -1,0 +1,151 @@
+<!-- v2 – Oct 2025 -->
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ICT 9 • 2.3 Adding the Player</title>
+    <link rel="stylesheet" href="/code/common/css/base.css">
+    <script src="/code/common/js/nav_data.js" defer></script>
+    <script src="/code/common/js/utils.js" defer></script>
+    <script src="/code/common/js/inject_partials.js" defer></script>
+    <script src="/code/common/js/nav_systems.js" defer></script>
+    <script src="/code/common/js/main.js" defer></script>
+  </head>
+ 
+  <!-- Set body class to match course theme: ict8, ict9, dc1011, or none for purple -->
+  <body data-course="ict9">
+    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+    
+      <main id="content" role="main" data-page-title="ICT 9 • Unit 2 • Lesson 3">
+
+<!-- 2.6.0 -->
+<section class="card">
+    <h2>Overview</h2>
+    <p>This lesson is about <strong>exploring</strong>. You’ve built a working platformer with enemies, stomp-to-defeat, pickups, and a HUD. Now try some <em>common features</em> and start thinking about your own original game idea.</p>
+    <p>Complete at least <strong>three challenges</strong>. Experiment, test, and take notes—you’ll use what you learn when you design your own game in the next lessons of this unit.</p>
+    <p><em>These are suggestions on how you can carryout each challenge, you can customize to your liking.</em></p>
+  </section>
+  
+  <!-- 2.6.1 -->
+  <section class="card">
+    <h2>Challenges</h2>
+    <ol>
+      <li><strong>Spend time creating your platforms</strong>
+        <p>Polish your level geometry: add varied ledge heights, gaps, safe zones, and optional routes. Try one “skill check” jump that teaches timing.</p>
+      </li>
+  
+      <li><strong>Add points for killing enemies</strong>
+        <p>When the player <em>stomps</em> an enemy, add <code>score += 5</code> (or your value) and update the HUD. Keep pickup points separate so you can tune balance later.</p>
+      </li>
+  
+      <li><strong>Add new enemies &amp; change their characteristics</strong>
+        <p>Create a second enemy type or tweak variables (speed, patrol width, jump strength, damage). Consider a “tough” enemy that takes two stomps (use an <code>hp</code> object variable).</p>
+      </li>
+  
+      <li><strong>Add new levels that get harder</strong>
+        <p>Make a <em>Level 2</em> scene and increase difficulty gradually (enemy count, spacing, tighter jumps). Add a <em>Next Level</em> trigger at the end of Level 1.</p>
+      </li>
+  
+      <li><strong>Add a health component to your player</strong>
+        <p>Create a <code>health</code> scene or object variable (e.g., 3). On side/below enemy hit, <code>health -= 1</code>, flash briefly, and show hearts or a health number on the HUD. Go to Game Over when health reaches 0.</p>
+      </li>
+  
+      <li><strong>Start &amp; Game Over screens</strong>
+        <p>Build a simple <em>Title</em> scene (Play/Quit). Build a <em>Game Over</em> scene that appears when lives/health reach 0. Add buttons to restart or return to Title.</p>
+      </li>
+  
+      <li><strong>Restarting the game</strong>
+        <p>Add a key (e.g., <kbd>R</kbd>) to restart the current scene, or auto-restart after Game Over. Also restart if the player falls off the level.</p>
+      </li>
+  
+      <li><strong>Level decorations (polish)</strong>
+        <p>Add background details and other elements to polish your game. Use the tilemap to add more items and be mindful of the Z-order of instances.</p>
+      </li>
+  
+      <li><strong>Your own idea</strong>
+        <p>Try moving platforms, springs, checkpoints, health pickups, timers, or a quick mini-boss. Keep scope small and test often.</p>
+      </li>
+    </ol>
+  </section>
+  
+  <!-- 2.6.2 -->
+  <section class="card">
+    <h2>Reflection</h2>
+    <ul>
+      <li>Which three challenges did you implement? What worked right away, and what required debugging?</li>
+      <li>How did your changes affect <em>difficulty</em> and <em>fun</em>? Give one specific example (e.g., “+5 points on stomp made riskier routes feel rewarding”).</li>
+      <li>Identify one mechanic you’d keep for your own game and one you’d cut. Why?</li>
+      <li>Write a 2–3 sentence pitch for your own game: theme, main goal, and the 2–3 mechanics you’ll include first.</li>
+    </ul>
+  </section>
+  
+  <!-- 2.6.3 -->
+  <section class="card">
+    <h2>Submit</h2>
+    <p>Submit to Teams under <strong>“Lesson 2.6 — Explore &amp; Extend.”</strong></p>
+    <ul>
+      <li><strong>Preview clip</strong> (10–20s) showing the new feature(s) in action.</li>
+      <li><strong>Event Sheet screenshot(s)</strong> for each challenge you tried (e.g., score on stomp, health/lives logic, next-level trigger).</li>
+      <li><strong>Reflection</strong> (all 4 prompts answered).</li>
+    </ul>
+  </section>
+  
+
+  
+  
+      </main>
+
+
+
+      <!-- RIGHT: optional materials/contact/reminders -->
+    <aside id="right-rail" aria-label="Resources">
+        <section class="card sticky">
+          <h3>Checklist</h3>
+          <ul>
+            <li>≥ 2 challenges completed (documented).</li>
+            <li>Points on stomp update HUD (if chosen).</li>
+            <li>New enemy type or tuned behaviour (if chosen).</li>
+            <li>Second level loads from Level 1 (if chosen).</li>
+            <li>Health/Lives reduce on side hit; Game Over at 0 (if chosen).</li>
+            <li>Decorations on parallax layer (optional polish).</li>
+            <li>Saved &amp; previewed.</li>
+          </ul>
+        </section>
+      
+        <section class="card sticky">
+          <h3>Lesson 2.6 — Submit List</h3>
+          <ul>
+            <li>Preview clip (10–20s)</li>
+            <li>Event Sheet screenshot(s)</li>
+            <li>Reflection (4 prompts)</li>
+          </ul>
+        </section>
+      
+        <section class="card">
+          <h3>Helpful Hints</h3>
+          <ul class="list-tight">
+            <li><strong>Score on stomp:</strong> on top-hit event, <code>score += 5</code>; keep HUD text in a blank-condition action.</li>
+            <li><strong>Enemy HP:</strong> </br>add object variable <code>hp</code>; on stomp, <code>hp -= 1</code>; delete when <code>hp &lt;= 0</code>.</li>
+            <li><strong>Health/Lives:</strong></br> <code>health = 3</code>; on side hit, <code>health -= 1</code>; if 0 → change scene to Game Over.</li>
+            <li><strong>Next Level:</strong> add a goal object; on collision → <em>Change to scene</em> (Level 2).</li>
+            <li><strong>Restart:</strong> key <kbd>R</kbd> → <em>Restart the current scene</em>.</li>
+          </ul>
+        </section>
+
+
+      </aside>
+      
+
+
+    </div> <!--Closing div for unit-shell layout-3-->
+
+    <!-- Footer -->
+
+  <footer id="site-footer" data-partial="/code/common/partials/footer.html"></footer>
+
+  </body>
+</html>

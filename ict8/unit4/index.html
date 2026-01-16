@@ -1,0 +1,266 @@
+<!-- v2 – Oct 2025 -->
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ICT 8 • Unit 4</title>
+    <link rel="stylesheet" href="/code/common/css/base.css">
+    <script src="/code/common/js/nav_data.js" defer></script>
+    <script src="/code/common/js/utils.js" defer></script>
+    <script src="/code/common/js/inject_partials.js" defer></script>
+    <script src="/code/common/js/nav_systems.js" defer></script>
+    <script src="/code/common/js/main.js" defer></script>
+    
+  </head>
+
+  <body data-course="ict8">
+    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+    
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+    
+      <main id="content" data-page-title="ICT 8 • Unit 4">
+<section class="card">
+          <h2>What you'll make</h2>
+            <p>A simple personal webpage with: </p>
+            <ul>
+                <li>a big heading and a short <strong>About Me</strong> paragraph</li>
+                <li><strong>2-3 favourite links</strong> you actually use</li>
+                <li><strong>One image</strong> with a short credit</li>
+                <li><strong>One "punny" button</strong> (change the button text and the message it shows)</li>
+                <li>One or two small <strong>CSS tweaks</strong> (colour/size/spacing)</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Files you need</h2>
+            <ul>
+                <li><a href="/code/ict8/unit4/templates/student_template.html"><code>student_template</code></a></li>
+                <details>
+                    <summary>How to save a copy of the template file.</summary>
+                    <ol>
+                        <li>Right-click on the link</li>
+                        <figure class="figure">
+                            <img src="/code/ict8/unit4/1_right_click.png" alt="Right-click context menu" />
+                            <figcaption>Right-click context menu</figcaption>
+                        </figure>
+
+                        <li>Select your <code>H: → ICT8 → 4. Web Development</code></li>
+
+                        <li>Rename the copy to <code>firstname_lastinitial</code></li>
+                        <figure class="figure">
+                            <img src="/code/ict8/unit4/2_file_name.png" alt="Save As dialog" />
+                            <figcaption>Save As dialog</figcaption>
+                        </figure>
+                    </ol>
+                </details>
+                <br>
+                <li>Save as <code>firstname_lastinitial</code> in <strong>H: → ICT8 → 4. Web Development</strong></li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Setting up VS Code (first time only)</h2>
+            <ol>
+                <li>Open <strong>VS Code</strong></li>
+                    <figure class="figure">
+                        <img src="/code/ict8/unit4/3_vs_code.png" alt="VS Code icon" />
+                        <figcaption>VS Code icon</figcaption>
+                    </figure>
+                </li>
+                <li><strong>Open the folder that has your file</strong></li>
+                <ul>
+                    <li>VS Code → <strong>File → Open Folder</strong></li>
+                    <figure class="figure">
+                        <img src="/code/ict8/unit4/4_open_folder.png" alt="Open Folder" />
+                        <figcaption>Open Folder</figcaption>
+                    </figure>
+                    <li>Browse to <strong>H: → ICT8 → 4. Web Development</strong> and Select Folder</li>
+                    <figure class="figure">
+                        <img src="/code/ict8/unit4/5_select_folder.png" alt="Select Folder" />
+                        <figcaption>Select Folder</figcaption>
+                    </figure>
+                    <li>If asked, choose <strong>Trust this folder</strong></li>
+                </ul>
+
+                <li><strong>Turn on Auto Save</strong></li>
+                <ul>
+                    <li>VS Code → <strong>File → Auto Save</strong> (check it)</li>
+                    <figure class="figure">
+                        <img src="/code/ict8/unit4/6_auto_save.png" alt="Auto Save" />
+                        <figcaption>Auto Save</figcaption>
+                    </figure>
+                </ul>
+                <li><strong>Open your file</strong></li>
+                <ul>
+                    <li>In the left sidebar, click the <strong>Explorer</strong> icon (top icon that looks like 2 files)</li>
+                    <li>Click your file <code>firstname_lastinitial.html</code> to open it</li>
+                    <figure class="figure">
+                        <img src="/code/ict8/unit4/7_open_file.png" alt="Open File" />
+                        <figcaption>Open File</figcaption>
+                    </figure>
+                </ul>
+            </ol>           
+        </section>
+
+        <section class="card">
+            <h2>Preview your page</h2>
+            <ol>
+                <li><strong>Install the Live Preview extension</strong></li>
+                <ul>
+                    <li>In VS Code, click the <strong>Extensions</strong> icon in the left sidebar (looks like 4 squares)</li>
+                    <li>Search for <strong>Live Preview</strong></li>
+                    <li>Click <strong>Install</strong></li>
+                    <figure class="figure">
+                        <img src="/code/ict8/unit4/8_live_preview.png" alt="Live Preview extension" />
+                        <figcaption>Live Preview extension</figcaption>  
+                    </figure>
+                </ul>
+
+                <li><strong>Start the Live Preview</strong></li>
+                <ul>
+                    <li>Click on the <strong>Live Preview</strong> button in the top right corner of the window</li>
+                    <figure class="figure">
+                        <img src="/code/ict8/unit4/9_show_preview.png" alt="Live Preview" />
+                        <figcaption>Live Preview Button</figcaption>
+                    </figure>
+                    <li>Your default web browser should open and show your page</li>
+                    <figure class="figure">
+                        <img src="/code/ict8/unit4/10_preview.png" alt="Live Preview" />
+                        <figcaption>Live Preview</figcaption>
+                    </figure>
+                </ul>
+
+                <li><strong>Keep it open while you work</strong></li>
+                <ul>
+                    <li>Whenever you make changes to your code, just save (Ctrl+S) and refresh the browser (F5)</li>
+                    <li>Press <code>ALT + Tab</code> to switch between VS Code and your browser</li>
+                </ul>
+        </section>
+
+        <section class="card">
+            <h2>Timeline (3 classes)</h2>
+
+            <h3>Class 1 - Set up + core content</h3>
+            <ol>
+                <li>Download the template and save it as <code>firstname_lastinitial.html</code> in your <strong>H: Drive</strong></li>
+                <li>Open in <strong>VS Code</strong>. Update the <strong>title, heading, About Me</strong> (3-4 sentences), and <strong>2-3 links</strong></li>
+                <li>Add <strong>one image</strong> (use a <strong>web image URL</strong>) + short credit.</li>
+                <li>Make the <strong>button a pun</strong> (change the button text + the message it shows).</li>
+                <li>Complete the course reflection (see below)</li>
+                <li>Preview in browser using <strong>Live Server</strong></li>
+            </ol>
+
+            <h3>Class 2 - Polish + Style</h3>
+            <ol>
+                <li>Change at least <strong>one colour and the font type</strong>, tweak <strong>font size/spacing</strong>, and tidy the layout. </li>
+                <li>Optional: add another section or a short list</li>
+                <li>Change the background colour</li>
+            </ol>
+
+            <h3>Class 3 - Final tidy + and hand-in</h3>
+            <ol>
+                <li>Check spelling, links, image and the <strong>pun button</strong></li>
+                <li>Hand in (instructions below)</li>
+                <li>Your website will be published to your class showcase.</li>
+            </ol>
+        </section>
+
+        <section class="card">
+            <h2>ICT 8 - Final Reflection</h2>
+            <p>Write <strong>6-10 sentences total</strong>. For <strong>each unit</strong>, include:</p>
+            <ul>
+                <ul>
+                <li>What you enjoyed most</li>
+                <li>What you found challenging</li>
+                <li>What you would like to learn more about</li>
+                <li>How you might use what you learned in the future</li>
+            </ul>
+            </ul>
+            
+
+            <h3>Units to cover:</h3>
+            <ul>
+                <ul>
+                    <li><strong>Essential Skills & Digital Literacy</strong></li>
+                    <li><strong>Digital Media </strong>(Word, Excel, Canva)</li>
+                    <li><strong>Game Development </strong>(GDevelop)</li>
+                    <li><strong>Web Development </strong>(VS Code/HTML/CSS/JS)</li>
+                </ul>
+                
+            </ul>
+            
+            <h3>Sentence starters you can use:</h3>
+            <ul>
+                <ul>
+                    <li>"In _____, I learned ______ because ______."</li>
+                    <li>"A challenge in ___ was ___ ; next time I would ___ ."</li>
+                    <li>"I handled ___ by ____ ."</li>
+                </ul>
+            </ul>
+
+
+            <h3>Success check:</h3>
+            <ul>
+                <ul>
+                <li>6-10 sentences</li>
+                <li>Each unit has a <strong>learned + challenge</strong> statement</li>
+                <li>Clear, proofread, school-appropriate</li>
+                <li>no personal info (first name + last initial only)</li>
+            </ul>
+            </ul>
+
+        </section>
+      </main>
+      
+    
+      <!-- Optional, unit-level resources -->
+      <aside id="right-rail" aria-label="Resources">
+        <section class="card">
+            <h2>Learning Goals</h2>
+                <ul>
+                    <li>Understand basic HTML structure (head, body, elements).</li>
+                    <li>Style with CSS (selectors, properties, values).</li>
+                    <li>Add a tiny JavaScript interaction.</li>
+                    <li>Publish a static page to a class showcase.</li>
+                </ul>
+        </section>
+        
+        <section class="card">
+          <h2>Resources</h2>
+          <ul>
+            <li><a href="/code/ict8/unit4/templates/student_template.html" target="_blank" rel="noopener"><code>student_template.html</code></a></li>
+  
+          </ul>
+        </section>
+
+        <section class="card">
+            <h2>Check List</h2>
+            <ul>
+                <li>File name is correct</li>
+                <li>Title, heading, <strong>About Me</strong> (2-3 sentences)</li>
+                <li><strong>2-3 working links</strong></li>
+                <li><strong>One image</strong> visible + credit</li>
+                <li>At lease <strong>one CSS change</strong> (colour/size/spacing)</li>
+                <li><strong>Punny button</strong> works (shows your message)</li>
+                <li>Clear, readable, and proofread</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Troubleshooting</h2>
+            <ul>
+                <li><em>My image doesn’t show:</em> Right-click the image on the web → Copy image address; paste into <span class="mono">src="..."</span>.</li>
+                <li><em>Page looks plain:</em> Edit the <span class="mono">&lt;style&gt;</span> colours and padding; small changes make a big difference.</li>
+                <li><em>Button does nothing:</em> Open the file in a real browser (not the VS Code preview), then click.</li>
+                </ul>
+        </section>
+      </aside>
+    </div>
+    
+    <footer id="site-footer" data-partial="/code/common/partials/footer.html"></footer>
+    
+  </body>
+</html>
+  

@@ -1,0 +1,199 @@
+<!-- v2 – Oct 2025 -->
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ICT 8 • 3.5 HUD</title>
+    <link rel="stylesheet" href="/code/common/css/base.css">
+    <script src="/code/common/js/nav_data.js" defer></script>
+    <script src="/code/common/js/utils.js" defer></script>
+    <script src="/code/common/js/inject_partials.js" defer></script>
+    <script src="/code/common/js/nav_systems.js" defer></script>
+    <script src="/code/common/js/main.js" defer></script>
+  </head>
+ 
+  <!-- Set body class to match course theme: ict8, ict9, dc1011, or none for purple -->
+  <body data-course="ict8">
+    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+    
+      <main id="content" role="main" data-page-title="ICT 8 • Unit 3 • Lesson 5">
+
+        <section class="card">
+            <h2>Overview</h2>
+            <p>
+              The Heads Up Display <strong>(HUD)</strong> is where you display always-visible information like <em>Score</em> and <em>Health</em>.
+              We’ll place these on a dedicated <strong>HUD layer</strong> so they render above gameplay and stay fixed on screen.
+            </p>
+            <figure class="img">
+              <img src="/code/ict8/unit3/lesson5/01_HUD.png" alt="Example of HUD with Score (top-left) and Health (bottom-left)">
+            </figure>
+          </section>
+    
+          <section class="card">
+            <h2>1) Create the HUD Layer</h2>
+            <ol>
+              <li>Open your <strong>Level 1</strong> scene and show the <strong>Layers Panel</strong>.</li>
+              <li><strong>Add new layer</strong> and rename it <code>HUD</code>.</li>
+              <li>Drag the <code>HUD</code> layer to the top so it draws above all other layers.</li>
+              <li>Make sure <code>HUD</code> is the active (selected) layer before adding HUD objects.</li>
+            </ol>
+            <figure class="img">
+              <img src="/code/ict8/unit3/lesson5/02_new_layer.png" alt="Layers panel with HUD layer on top">
+            </figure>
+          </section>
+    
+          <section class="card">
+            <h2>2) Add HUD Text Objects (BBText)</h2>
+            <p>We’ll use <strong>BBText</strong> so we can format text and update it at runtime.</p>
+            <h3>Score</h3>
+            <ul>
+              <li><strong>New Object → BBText</strong></li>
+              <li><strong>Object Name:</strong> <code>Score</code></li>
+              <li><strong>BBCode Text:</strong> <code>Score: 0</code></li>
+              <li><strong>Font:</strong> Replace → Choose from Asset Store (e.g., <em>Kenny High Square</em>)</li>
+              <li><strong>Base Size:</strong> ~50 (adjust to taste)</li>
+              <li><strong>Base Color:</strong> Yellow (high contrast)</li>
+            </ul>
+    
+            <h3>Health</h3>
+            <ul>
+              <li>Duplicate <code>Score</code> and rename to <code>Health</code></li>
+              <li><strong>BBCode Text:</strong> <code>Health: 5</code></li>
+              <li><strong>Base Color:</strong> Green</li>
+            </ul>
+    
+            <p>Place the objects on the layout:</p>
+            <ul>
+              <li><strong>Score:</strong> top-left</li>
+              <li><strong>Health:</strong> bottom-left</li>
+            </ul>
+    
+          <figure class="img">
+              <img src="/code/ict8/unit3/lesson5/03_text_objects.png" alt="BBText settings for HUD labels and values">
+            </figure>
+          </section>
+    
+          <section class="card">
+            <h2>3) Add a Global Score Variable</h2>
+            <p>We’ll track score across scenes using a <strong>Global Variable</strong>:</p>
+            <ol>
+              <li>Open <strong>Project Manager → Project Settings → Global variables</strong>.</li>
+              <li>Add <strong>Number</strong> variable <code>PlayerScore</code> with initial value <code>0</code>.</li>
+            </ol>
+            <p><em>Note:</em> You already have <code>PlayerHealth</code> from earlier lessons.</p>
+            <figure class="img">
+              <img src="/code/ict8/unit3/lesson5/04_global_variables.png" alt="Global variables showing PlayerScore and PlayerHealth">
+            </figure>
+          </section>
+    
+          <section class="card">
+            <h2>4) Display Text from Variables</h2>
+            <p>Add the following actions to your no conditions event at the top of your event sheet</p>
+
+            <ul>
+                <li>Add action: <code>Score</code> → BBCode text</li>
+                <ul>
+                    <li>Modification's sign → <k-input>= (set to)</k-input></li>
+                    <li>Text → <k-input>"Score : " + PlayerScore</k-input></li>
+                </ul>
+            </ul>
+
+            <ul>
+                <li>Add action: <code>Health</code> → BBCode text</li>
+                <ul>
+                    <li>Modification's sign → <k-input>= (set to)</k-input></li>
+                    <li>Text → <k-input>"Health : " + PlayerHealth</k-input></li>
+                </ul>
+            </ul>
+            
+            <p>
+              Keeping “display” actions grouped near the top makes it easy to maintain and guarantees the HUD refreshes every frame.
+            </p>
+
+            <p><em>Don't forget to add spaces in between the quotes to make your text readable.</em></p>
+            <figure class="img">
+              <img src="/code/ict8/unit3/lesson5/05_text_event.png" alt="Events sheet showing Score and Health text bindings">
+            </figure>
+
+            <p>Now you can see your Player's Health and if it get hits by enemy fire, and now we can see the score when the enemy is killed.</p>
+          
+            <figure class="img">
+              <img src="/code/ict8/unit3/lesson5/06_player_pts.png" alt="Enemy destroyed event with PlayerScore increment">
+            </figure>
+          </section>
+    
+          <section class="card">
+            <h2>Test &amp; Polish</h2>
+            <ul>
+              <li>Run the game and destroy an enemy — confirm the score increases.</li>
+              <li>Get hit by an enemy bullet — confirm health decreases (from previous lesson logic).</li>
+              <li>Adjust font size/position for readability on your screen resolution.</li>
+            </ul>
+            <p><strong>Stretch:</strong> add a brief <em>score pop-up</em> animation near the enemy when destroyed.</p>
+          </section>
+    
+          <section class="card">
+            <h2>Reflection</h2>
+            <ol>
+              <li>Why should the HUD live on its own layer? What issues does that prevent?</li>
+              <li>When would you choose a <em>Global</em> variable vs a <em>Scene</em> variable?</li>
+              <li>What small polish could improve your HUD’s readability (placement, contrast, icon, spacing)?</li>
+
+              <p>Answer the reflection questions in a Word document and attach it to the Lesson 3.5 assignment along with your screenshots</p>
+            </ol>
+          </section>
+        </section>
+
+        <section class="card">
+            <h2>Congrats!</h2>
+            <p>Great job! You have the basics of a working Space Shooter game! In the next lesson you have a couple of challenges to help enhance your game.</p>
+          </section>
+
+      </main>
+
+
+
+      <!-- RIGHT: optional materials/contact/reminders -->
+      <aside id="right-rail" aria-label="Resources">
+    
+       <section class="card">
+        <h3>Learning Goals</h3>
+        <ul>
+            <li>Create and order layers; keep HUD above gameplay.</li>
+            <li>Add <strong>BBText</strong> objects for Score and Health.</li>
+            <li>Use a <strong>Global Variable</strong> (<code>PlayerScore</code>) for cross-level scoring.</li>
+            <li>Bind text to variables with BBCode and update via events.</li>
+        </ul>
+        </section>
+
+        <section class="card">
+        <h3>Lesson 3.5 Assignment</h3>
+        <ul>
+            <li>Screenshot of your Layers panel showing the <strong>HUD</strong> layer on top.</li>
+            <li>Screenshot of your scene with visible <strong>Score</strong> and <strong>Health</strong>.</li>
+            <li>Short clip/GIF (or screenshot + note) showing score increasing when an enemy is destroyed.</li>
+        </ul>
+        </section>
+
+        <section class="card">
+        <h3>Tips</h3>
+        <ul>
+            <li>Lock gameplay layers to avoid moving HUD by accident.</li>
+            <li>Keep HUD text high-contrast; test at multiple resolutions.</li>
+            <li>Group “display” actions under a comment at the top of events for clarity.</li>
+        </ul>
+        </section>
+
+      </aside>
+      
+    </div> <!--Closing div for unit-shell layout-3-->
+
+    <!-- Footer -->
+    <footer id="site-footer" data-partial="/code/common/partials/footer.html"></footer>
+
+  </body>
+</html>

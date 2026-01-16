@@ -1,0 +1,110 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>My First Webpage – Sophie</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Your Name" />
+
+  <!-- 💡 TYPE ZONE: You will edit the text above and below.  -->
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #f7f7fb;
+      --ink: #1a1a1f;
+      --accent: #4f46e5; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #fff; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:hsl(0, 0%, 100%); }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#ffffff; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <header>
+      <p style="margin-top:12px;">
+        <a href='/code/ict8/unit4/web_dev/S1W1/index.html'>← Back to S1W1 class page</a>
+      </p>
+      <h1>Hi, I'm <span id="studentName">Sophie</span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me </h2>
+      <p>Im a twelve year old tween who enjoys the outdoors, rock climbing, and watching shows. I spent 4 years of my life doing kickboxing, until i dropped out for rock climbing. I have a cat named sugar, and she throws up a lot, but thats okay... she's also killed 2 birds from our balcony and brought them to me as a little christmas present.
+        
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">Youtube</a></li>
+        <li><a href="https://ca.pinterest.com/" target="_blank" rel="noopener">Pinterest</a></li>
+        <li><a href="https://www.canva.com/" target="_blank" rel="noopener">canva</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>A seasonal image.</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="https://www.shutterstock.com/image-photo/cute-red-fox-vulpes-fall-600nw-1379127074.jpg" alt="A cool nature image from Unsplash" />
+        <figcaption>Photo credit: shutterstock</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">What do you call an angry carrot?</p>
+      <button type="button" onclick="myFunction()">Why?</button>
+    </section>
+    
+    <section>
+      <h2>Relfection</h2>
+
+        <p>This class was slightly painful at times, but it definitely bumped up my skill level with computers... and probably my level of patients. It shows the amount of joy when you get something correct after working on something for what feels like HOURS! But its also not a good feeling when you're working on code and you misspell something slightly, or dont add a capitol and it ruins the whole thing and drives you to endless madness. Using canva were the EPIC days when I did a colour coded resume of my favourite childhood cartoon character. I also enjoy reminiscing about the glory days when we were making paper cranes from a youtube tutorial and had EXTRA TIME to make an extra paper dragon. Another genuinely painful experiene from this class was one of the first days when we learned how to use our files and i had a major headache for a good number of hours. But thats okay. It doesnt happen anymore... I MIGHT be able to use this information in the future when I have to make spread sheets and all that pizzazz as an adult. And presentations I suppose... Coding will probably useful at some point, although I'd rather not do it as a job or hobby. And, of course, writting my own resume or online profile should helpful in my adult life as an accomplished human being!</p>
+
+        <p></p>
+    
+    
+    
+    </section>
+    
+    <footer>
+      <p>
+        Built by <strong>Your Name</strong>. Last updated: <span id="lastUpdated"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "A steamed veggie!";
+    }
+  </script>
+</body>
+</html>

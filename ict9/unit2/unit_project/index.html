@@ -1,0 +1,397 @@
+<!-- v2 – Oct 2025 -->
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ICT 9 • U2 Project</title>
+    <link rel="stylesheet" href="/code/common/css/base.css">
+    <script src="/code/common/js/nav_data.js" defer></script>
+    <script src="/code/common/js/utils.js" defer></script>
+    <script src="/code/common/js/inject_partials.js" defer></script>
+    <script src="/code/common/js/nav_systems.js" defer></script>
+    <script src="/code/common/js/main.js" defer></script>
+  </head>
+ 
+  <!-- Set body class to match course theme: ict8, ict9, dc1011, or none for purple -->
+  <body data-course="ict9">
+    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+    
+      <main id="content" role="main" data-page-title="ICT 9 • U2 Project">
+
+      <!-- Intro -->
+      <section class="card" id="intro">
+        <h2>Introduction</h2>
+        <p>Design and build a complete platformer game. You’ll plan first, then build in stages, test, and polish so the result feels complete and fun.</p>
+        <ul>
+          <li>A <strong>playable platformer</strong> with at least <strong>3 levels</strong> (increasing difficulty)</li>
+          <li><strong>Start</strong> and <strong>Game Over/Win</strong> screens</li>
+          <li>Clear theme, characters, enemies/obstacles, and a scoring/progression model</li>
+          <li>Short <strong>reflection</strong> at the end</li>
+        </ul>
+        <p><strong>Planning Worksheet:</strong> <a href="/code/ict9/unit2/unit_project/part_1_planning_worksheet.pdf">Download the Word copy</a></p>
+      </section>
+
+      <!-- Project Flow -->
+      <section class="card" id="flow">
+        <h2>Project Flow</h2>
+        <ol>
+          <li><strong>Part 1 – Game Design &amp; Storyboarding</strong>: research, design doc, 3+ level storyboards, game flow, asset list.</li>
+          <li><strong>Part 2 – Core Mechanics</strong>: player movement/jump, collisions, test level, import at least one custom asset.</li>
+          <li><strong>Part 3 – Level Development</strong>: build 3+ levels, add enemies/obstacles/collectibles, hook up Start &amp; Game Over/Win.</li>
+          <li><strong>Part 4 – Polish &amp; Playtesting</strong>: add sound/music and scoring/timer/lives, balance &amp; debug, peer playtest.</li>
+          <li><strong>Part 5 – Final Submission</strong>: export/submit project + reflection.</li>
+        </ol>
+      </section>
+
+      <!-- Timeline -->
+      <section class="card" id="timeline">
+        <h2>Timeline </h2>
+        <p>Estimated time: <strong>12-15 classes</strong> (about 3 weeks)</p>
+        <div class="table-wrap">
+          <table class="schedule-table">
+            <thead><tr><th>Part</th><th>Focus</th><th>Estimated Time</th></tr></thead>
+            <tbody>
+              <tr><td>Part 1</td><td>Game Design &amp; Storyboarding</td><td><strong>2 classes</strong></td></tr>
+              <tr><td>Part 2</td><td>Core Mechanics</td><td><strong>4–5 classes</strong></td></tr>
+              <tr><td>Part 3</td><td>Level Development</td><td><strong>4-5 classes</strong></td></tr>
+              <tr><td>Part 4</td><td>Polish &amp; Playtesting</td><td><strong>3 classes</strong></td></tr>
+              <tr><td>Part 5</td><td>Final Submission &amp; Reflection</td><td><strong>2 classes</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Resources -->
+      <section class="card" id="resources">
+        <h2>Resources: Free Assets & Audio</h2>
+        <p>Use free, student-friendly resources. Always check the license and give credit when required.</p>
+
+        <h3>Pixel art / sprites / tiles</h3>
+        <ul class="list-tight">
+          <li><a href="https://kenney.nl/assets" target="_blank" rel="noopener">Kenney</a> – large free bundles (CC0) for sprites, tiles, UI.</li>
+          <li><a href="https://opengameart.org/" target="_blank" rel="noopener">OpenGameArt</a> – community assets; check license per item.</li>
+          <li><a href="https://itch.io/game-assets/free" target="_blank" rel="noopener">itch.io (free assets)</a> – packs by indie artists; licenses vary.</li>
+          <li><a href="https://craftpix.net/freebies/" target="_blank" rel="noopener">CraftPix Freebies</a> – curated free packs (attribution terms vary).</li>
+          <li><a href="https://limezu.itch.io/" target="_blank" rel="noopener">Limezu</a> – popular tilesets on itch.io (many free/sample packs).</li>
+        </ul>
+
+        <h3>Backgrounds / UI / fonts</h3>
+        <ul class="list-tight">
+          <li><a href="https://www.1001fonts.com/pixel-fonts.html" target="_blank" rel="noopener">1001 Fonts (Pixel)</a> – pixel fonts (check licenses).</li>
+          <li><a href="https://www.fontsquirrel.com/" target="_blank" rel="noopener">Font Squirrel</a> – free fonts, many for commercial use.</li>
+          <li><a href="https://kenney.nl/assets/ui-pack" target="_blank" rel="noopener">Kenney UI packs</a> – buttons, HUD, icons.</li>
+        </ul>
+
+        <h3>Sound effects & music</h3>
+        <ul class="list-tight">
+          <li><a href="https://freesound.org/" target="_blank" rel="noopener">Freesound</a> – huge library (check license; attribution often required).</li>
+          <li><a href="https://pixabay.com/sound-effects/" target="_blank" rel="noopener">Pixabay SFX & Music</a> – free, generous licensing.</li>
+          <li><a href="https://www.zapsplat.com/" target="_blank" rel="noopener">ZapSplat</a> – free tier SFX (attribution); paid removes credit.</li>
+          <li><a href="https://www.youtube.com/audiolibrary" target="_blank" rel="noopener">YouTube Audio Library</a> – free music/SFX (check usage notes).</li>
+          <li><a href="https://sonniss.com/gameaudiogdc" target="_blank" rel="noopener">Sonniss GDC Packs</a> – large, free pro SFX bundles (read license).</li>
+        </ul>
+
+        <details>
+          <summary>Licensing tip</summary>
+          <p>Prefer CC0/Public Domain when possible. If an item requires attribution, include a simple “Assets used” screen or credits line in your game and on your submission page.</p>
+        </details>
+      </section>
+
+      <!-- Daily Stand-ups (kept here, but we’ll link from right rail) -->
+      <section class="card" id="standups">
+        <h2>Daily 5-Minute Stand-ups</h2>
+        <p>At the start of class, answer:</p>
+        <ul>
+          <li><strong>Yesterday I…</strong></li>
+          <li><strong>Today I will…</strong></li>
+          <li><strong>Blockers…</strong></li>
+        </ul>
+        <p><em>Form:</em> <a href="https://forms.office.com/r/9D6DXVuVxn" target="_blank" rel="noopener">Open the daily check-in form</a>.</p>
+      </section>
+
+      <!-- Rubric -->
+      <section class="card" id="rubric">
+        <h2>Final Rubric</h2>
+
+        <figure class="figure">
+          <a href="/code/ict9/unit2/unit_project/u2_game_dev_rubric.pdf" target="_blank" rel="noopener">
+            <img src="/code/ict9/unit2/unit_project/u2_project_rubric.png"
+                alt="U2 Project Rubric Preview"
+                style="max-width:100%;height:auto;display:block;">
+          </a>
+          <figcaption>
+            <a href="/code/ict9/unit2/unit_project/u2_game_dev_rubric.pdf" target="_blank" rel="noopener">
+              U2 Game Development Rubric (PDF)
+            </a>
+          </figcaption>
+        </figure>
+      </section>
+
+
+      <!-- Parts 1-5 (with deliverables) -->
+      <section class="card" id="part1">
+        <h2>Part 1 – Game Design &amp; Storyboarding (Planning)</h2>
+        <p><strong>Goal:</strong> Plan before you build.</p>
+        <ul>
+          <li><strong>Research &amp; Inspiration:</strong> study example platformers; note themes/characters/enemies/level ideas.</li>
+          <li><strong>Design Document:</strong> title, theme/setting, main character &amp; abilities, ≥2 enemy/obstacle ideas, goal/win, scoring/progression.</li>
+          <li><strong>Storyboard 3+ Levels:</strong> platform layout, enemies/obstacles, collectibles, start/finish.</li>
+          <li><strong>Game Flow:</strong> Start → L1 → L2 → L3 → Game Over/Win.</li>
+          <li><strong>Asset Planning:</strong> list possible graphics/sounds/music (links or sketches). Credit sources if using free assets.</li>
+        </ul>
+        <p><strong>Digital copy:</strong> <a href="/downloads/Platformer_Game_Project_Part1_Planning_Worksheet.docx" target="_blank" rel="noopener">Planning Worksheet (DOCX)</a></p>
+        <h3>Deliverables (submit for approval)</h3>
+        <ul>
+          <li>[ ] Design document</li>
+          <li>[ ] 3+ level storyboards</li>
+          <li>[ ] Game flow chart</li>
+          <li>[ ] Asset list (links or sketches)</li>
+        </ul>
+        <p><strong>Gate:</strong> ✅ Approval required to move to Part 2.</p>
+      </section>
+
+      <section class="card" id="part2">
+        <h2>Part 2 – Core Mechanics (Build Foundations)</h2>
+        <p><strong>Goal:</strong> Get the engine working.</p>
+        <ul>
+          <li>Implement movement &amp; jump; set up collisions/platforms.</li>
+          <li>Build one <strong>playable test level</strong>.</li>
+          <li>Import at least <strong>one custom asset</strong> (player sprite or background).</li>
+        </ul>
+        <h3>Deliverables</h3>
+        <ul>
+          <li>[ ] Test level playable (movement/jump/collisions)</li>
+          <li>[ ] ≥1 custom asset imported</li>
+          <li>[ ] Project saved in correct folder structure</li>
+        </ul>
+        <p><strong>Gate:</strong> ✅ Quick playtest check.</p>
+      </section>
+
+      <section class="card" id="part3">
+        <h2>Part 3 – Level Development (Content &amp; Structure)</h2>
+        <p><strong>Goal:</strong> Build out the game and connect screens.</p>
+        <ul>
+          <li>Create <strong>3+ levels</strong> with increasing challenge.</li>
+          <li>Add at least <strong>2 enemy/obstacle types</strong> and <strong>collectibles</strong>.</li>
+          <li>Hook up <strong>Start</strong> and <strong>Game Over/Win</strong> screens.</li>
+          <li>Ensure transitions work between levels and end screens.</li>
+        </ul>
+        <h3>Deliverables</h3>
+        <ul>
+          <li>[ ] 3+ playable levels (rising difficulty)</li>
+          <li>[ ] Enemies/obstacles + collectibles present</li>
+          <li>[ ] Start &amp; Game Over/Win wired up</li>
+          <li>[ ] Level transitions working</li>
+        </ul>
+        <p><strong>Gate:</strong> ✅ Mid-project playtest (teacher or peer).</p>
+      </section>
+
+      <section class="card" id="part4">
+        <h2>Part 4 – Polish &amp; Playtesting (Finish the Experience)</h2>
+        <p><strong>Goal:</strong> Make it feel finished.</p>
+        <ul>
+          <li>Add sound effects and/or music.</li>
+          <li>Add or finalize <strong>scoring/timer/lives/win conditions</strong>.</li>
+          <li>Balance difficulty; fix bugs; improve visual consistency.</li>
+          <li>Peer playtest; note feedback; make changes.</li>
+        </ul>
+        <h3>Deliverables</h3>
+        <ul>
+          <li>[ ] Audio added (SFX/music)</li>
+          <li>[ ] Scoring/timer/lives/win implemented</li>
+          <li>[ ] Difficulty tuned; major bugs fixed</li>
+          <li>[ ] Playtest notes + 1+ change made</li>
+        </ul>
+      </section>
+
+      <section class="card" id="part5">
+        <h2>Part 5 – Final Submission</h2>
+
+        <h3>Save &amp; Submit Your Platformer (Packaging, Checklist &amp; Reflection)</h3>
+        <p class="muted">Follow these steps to package your full project, then complete the checklist and reflection before submitting to Teams.</p>
+
+        <!-- Packaging Guide (Desktop) -->
+        <h3>1) Package your project (Desktop GDevelop)</h3>
+        <ol>
+          <li><strong>Keep everything in one folder.</strong> Your folder should contain:
+            <ul class="list-tight">
+              <li><code>game.json</code> (or similar)</li>
+              <li><code>assets/</code> (images, sounds, fonts, tilemaps)</li>
+              <li>Any external event/layout files</li>
+            </ul>
+          </li>
+  <ul>
+    <li>Export or save a complete copy of your GDevelop game project folder.</li>
+    <li>Upload that folder to your <strong>OneDrive → ICT 9 → Game Project</strong> folder.</li>
+    <li>Right-click the uploaded folder → <strong>Share</strong> → choose <strong>“People in North Vancouver School District with the link can view”</strong>.</li>
+    <li>Copy the sharing link.</li>
+    <li>In Teams → <em>ICT 9 Assignments → Unit 2 Game Project – Final Submission</em>, paste that link in the text box and turn in your assignment.</li>
+    <li>Write and attach your  <strong>reflection</strong></li>
+  </ul>
+        </ol>
+
+
+      <!-- Final Checklist -->
+<br>
+      <h3>2) Final Submission Checklist</h3>
+      <p class="muted">Tick every box before you zip &amp; submit.</p>
+
+        <div class="checklist-grid">
+          <h4>Project &amp; Files</h4>
+          <ul class="list-tight">
+            <li><label><input type="checkbox"> Everything is in <strong>one folder</strong> (project + assets).</label></li>
+            <li><label><input type="checkbox"> Game opens from the <code>.json</code> without errors.</label></li>
+            <li><label><input type="checkbox"> No <strong>missing images/sounds</strong> in preview.</label></li>
+            <li><label><input type="checkbox"> Folder name includes <strong>First Last + Game Title</strong>.</label></li>
+          </ul>
+
+          <h4>Design &amp; Naming</h4>
+          <ul class="list-tight">
+            <li><label><input type="checkbox"> All <strong>scenes/levels</strong> have clear names (e.g., <code>Level_1_Forest</code>).</label></li>
+            <li><label><input type="checkbox"> All <strong>objects</strong> are descriptively named (e.g., <code>Enemy_Slime</code>, <code>Coin_Gold</code>).</label></li>
+            <li><label><input type="checkbox"> No test/placeholder objects or default names (e.g., <code>NewObject</code>).</label></li>
+            <li><label><input type="checkbox"> Object groups used logically (e.g., <code>Enemies</code>, <code>Collectibles</code>).</label></li>
+          </ul>
+
+          <h4>Presentation</h4>
+          <ul class="list-tight">
+            <li><label><input type="checkbox"> <strong>Spelling/grammar</strong> checked in all on-screen text.</label></li>
+            <li><label><input type="checkbox"> <strong>Title screen</strong> shows game name and your name.</label></li>
+            <li><label><input type="checkbox"> HUD (score/lives/timer) is readable and positioned well.</label></li>
+            <li><label><input type="checkbox"> Sound/music balanced; not too loud.</label></li>
+            <li><label><input type="checkbox"> Clear <strong>start → progress → finish</strong> flow (win/lose states).</label></li>
+          </ul>
+
+          <h4>Technical Quality</h4>
+          <ul class="list-tight">
+            <li><label><input type="checkbox"> No unused/duplicate assets.</label></li>
+            <li><label><input type="checkbox"> Fair collisions; polished feel.</label></li>
+            <li><label><input type="checkbox"> Art aligns: backgrounds, tiles, characters.</label></li>
+            <li><label><input type="checkbox"> Runs smoothly (no freezing/major lag).</label></li>
+          </ul>
+
+          <h4>Submission</h4>
+          <ul class="list-tight">
+            <li><label><input type="checkbox"> I copied <strong>entire folder</strong> (not just the <code>.json</code>) to my OneDrive</label></li>
+            <li><label><input type="checkbox"> The folder name is <code>Game Title - First Name</code>.</label></li>
+            <li><label><input type="checkbox"> Created shareable link with <strong>view access</strong>.</label></li>
+            <li><label><input type="checkbox"> Attached link to Teams assignment and clicked <em>Turn in</em>.</label></li>
+          </ul>
+        </div>
+
+        <!-- Player Instructions helper -->
+        <details class="mt-2">
+          <summary><strong>Optional:</strong> Add a “How to Play” panel in your game</summary>
+          <ul class="list-tight">
+            <li>Controls (move/jump/attack/collect)</li>
+            <li>Goal and how to win</li>
+            <li>What to avoid (enemies, hazards)</li>
+            <li>How the player knows they’ve won or lost</li>
+          </ul>
+        </details>
+<br>
+<br>
+        <h2>🧠 Final Reflection: Tell the Story of Your Game</h2>
+        <p class="muted">
+          Along with submitting your game folder, write a reflection that explains the creative and technical choices behind your project.
+          Use the prompts below to guide your writing — you can write in paragraphs or answer each as detailed bullet points.
+        </p>
+
+        <h3>🎮 Game Overview</h3>
+        <ul class="list-tight">
+          <li>What is the <strong>title</strong> of your game and what type of game is it (platformer, puzzle, adventure, etc.)?</li>
+          <li>What is the <strong>goal</strong> of your game? (What does the player need to do to win or finish?)</li>
+          <li>Who is the <strong>main character</strong>, and what makes them interesting?</li>
+          <li>Describe the <strong>setting or world</strong> of your game — what inspired it?</li>
+        </ul>
+
+        <h3>🧩 Design &amp; Mechanics</h3>
+        <ul class="list-tight">
+          <li>What are the main <strong>gameplay mechanics</strong>? (jumping, collecting, avoiding enemies, solving puzzles, etc.)</li>
+          <li>What makes your game <strong>unique or fun</strong>? (special power-ups, movement, challenge, humour, etc.)</li>
+          <li>How did you design your <strong>levels</strong> to get harder or more interesting as the player progresses?</li>
+          <li>What did you learn about <strong>testing and debugging</strong> while building your game?</li>
+        </ul>
+
+        <h3>🎨 Visuals &amp; Audio</h3>
+        <ul class="list-tight">
+          <li>How did you choose your <strong>art style</strong> and <strong>colour palette</strong>?</li>
+          <li>What kind of <strong>sound effects</strong> and <strong>music</strong> did you include, and why?</li>
+          <li>What <strong>mood or tone</strong> were you trying to create for your players?</li>
+        </ul>
+
+        <h3>🧭 Instructions for the Player</h3>
+        <p class="muted">Include a short <em>“How to Play”</em> section so others can understand your controls and goals:</p>
+        <ul class="list-tight">
+          <li>How do you <strong>move, jump, attack, or collect</strong> items?</li>
+          <li>What should the player <strong>avoid</strong>?</li>
+          <li>How does the player know when they’ve <strong>won or lost</strong>?</li>
+        </ul>
+
+        <h3>💡 Reflection on the Process</h3>
+        <ul class="list-tight">
+          <li>What part of your game are you <strong>most proud of</strong>?</li>
+          <li>What <strong>challenges</strong> did you face while creating it, and how did you solve them?</li>
+          <li>If you had more time, what would you <strong>add or improve</strong>?</li>
+          <li>What <strong>skills</strong> did you develop through this project?</li>
+        </ul>
+<br>
+        <h3>3) Submit List</h3>
+        <p>Before you submit, make sure you have:</p>
+        <ul class="list-tight">
+          <li>[ ] Final playable game (3+ levels, Start &amp; Game Over/Win)</li>
+          <li>[ ] Shared folder link added</li>
+          <li>[ ] Reflection submitted</li>
+          <li>[ ] Screen recording of you playing your game (30 - 60 seconds)</li>
+        </ul>
+      </section>
+
+  
+</main>
+    
+      <!-- Lesson-specific right rail -->
+      <aside id="right-rail" aria-label="Resources">
+        <section class="card">
+            <h3>On this page</h3>
+            <ul class="list-tight">
+              <li><a href="#intro">Introduction</a></li>
+              <li><a href="#flow">Project Flow</a></li>
+              <li><a href="#timeline">Timeline</a></li>
+              <li><a href="#resources">Resources</a></li>
+              <li><a href="#rubric">Rubric</a></li>
+              <li><a href="#part1">Part 1 – Planning</a></li>
+              <li><a href="#part2">Part 2 – Core Mechanics</a></li>
+              <li><a href="#part3">Part 3 – Level Dev</a></li>
+              <li><a href="#part4">Part 4 – Polish</a></li>
+              <li><a href="#part5">Part 5 – Final</a></li>
+              <li><a href="#checkpoints">Checkpoints</a></li>
+            </ul>
+          </section>
+    
+          <section class="card">
+            <h3>Daily check-in</h3>
+            <p><a class="btn" href="https://forms.office.com/r/9D6DXVuVxn" target="_blank" rel="noopener">Open 5-minute stand-up</a></p>
+          </section>
+    
+          <section class="card">
+            <h3>Submit lists</h3>
+            <ul class="list-tight">
+              <li>Part 1: Design doc, 3 storyboards, flow chart, asset list</li>
+              <li>Part 2: Test level demo + 1 custom asset</li>
+              <li>Part 3: 3+ levels, enemies/collectibles, screens wired</li>
+              <li>Part 4: Audio + scoring + bugfix + playtest change</li>
+              <li>Part 5: Final game + reflection</li>
+            </ul>
+          </section>
+        
+        </aside>
+    </div>
+    
+    <footer id="site-footer" data-partial="/code/common/partials/footer.html"></footer>
+  </body>
+</html>
+  

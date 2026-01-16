@@ -1,0 +1,117 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage –ARYA</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Your Name" />
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #2a2ab6;
+      --ink: #1a1a1f;
+      --accent: #d80a0a; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #fff; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#f3f3f6; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <p style="margin-top:12px;">
+        <a href='/code/ict8/unit4/web_dev/S1W1/index.html'>← Back to S1W1 class page</a>
+      </p>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="studentName">–ARYA</span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+       Hi im Arya Mohammadlou. I am born in Vancouver, but I moved to Iran and then back to Vancouver in grade 5. I have mony hobbies such as soccer,and my goal for this course is to get a good grade and to finish
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://www.fotmob.com/" target="_blank" rel="noopener">fotmob</a></li>
+        <li><a href=https://www.youtube.com/ target="_blank" rel="noopener">youtube</a></li>
+        <li><a href=https://www.sd44.ca/ target="_blank" rel="noopener">sd44</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src=https://external-preview.redd.it/fc-barcelona-official-fc-barcelona-como-1907-bar%C3%A7as-5-0-win-v0-b2ukTqrk-6FrG5qY84yIvt45kt1B-f9QTmmS1FTIOTM.jpeg?width=640&crop=smart&auto=webp&s=fd2306a9e25b80975238cb9423c7e8f5f42ba29f alt="A team celebration" />
+        <figcaption>Photo credit: Unsplash</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">What do you call a magic dog?</p>
+      <button type="button" onclick="myFunction()">What?</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p>1. The thing I enjoyed the most was probably the space shooter game because it was fun to play.
+        2.What I found most challenging was also the space shooter game espesialy unit 3.5 because I didn't underestand it at first for a whole day.
+        3.I would probably choose the unit for web develpoement because it was the shortest unit
+        4.I would use what I learned from file management and canva because I think its very usefull for things in school.(I allready used the things I learned for canva for english)
+      </p>
+      
+    </section>
+    
+    
+    
+    <footer>
+      <p>
+        Built by <strong>Arya Mohammadlou</strong>. : <span id=11:09am 2025-10-02></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "a labracadabrador";
+    }
+  </script>
+</body>
+</html>

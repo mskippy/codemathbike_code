@@ -1,0 +1,226 @@
+<!-- v2 – Oct 2025 -->
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ICT 9 • 2.2 Adding Platforms</title>
+    <link rel="stylesheet" href="/code/common/css/base.css">
+    <script src="/code/common/js/nav_data.js" defer></script>
+    <script src="/code/common/js/utils.js" defer></script>
+    <script src="/code/common/js/inject_partials.js" defer></script>
+    <script src="/code/common/js/nav_systems.js" defer></script>
+    <script src="/code/common/js/main.js" defer></script>
+  </head>
+ 
+  <!-- Set body class to match course theme: ict8, ict9, dc1011, or none for purple -->
+  <body data-course="ict9">
+    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+    
+      <main id="content" role="main" data-page-title="ICT 9 • Unit 2 • Lesson 2">
+
+      <!-- Intro -->
+      <div class="card">
+        <h2>Intro</h2>
+        <p>Now it is time to create <em>Platforms</em> for our Player to run on.</p>
+        <ul>
+          <li><strong>Ground platforms</strong> = solid floors/walls the player cannot pass through.</li>
+          <li><strong>Floating platforms</strong> = smaller “islands” placed at various heights.</li>
+          <li><strong>Jump-thru (one-way)</strong> = player can jump up through them from below and land on top (we’ll prep the art now, add behavior later).</li>
+
+        </ul>
+      </div>
+
+      <!-- Setup-->
+      <div class="card">
+        <h2>1. Turn On Grid &amp; Snapping</h2>
+        <ol>
+          <li>Select the <code>Toggle/Grid</code> → <code>Show grid</code> (ON).</li>
+          <div class="figure"><img src="/code/ict9/unit2/lesson2/2_grid.png" alt="Show grid"></div>
+          <li>Select <code>Setup grid</code> to set grid the grid size to match your tiles: <k-input>64 × 64</k-input>.<br></li>
+          <p class="muted"><em>Why</em>: snapping keeps edges aligned so collisions are clean and movement feels right.</p>
+        </ol>
+      </div>
+
+      <!-- 2.1.3 -->
+      <div class="card">
+        <h2>2. Add the Tilemap for Platforms</h2>
+        <ol>
+          <li><code>Add a new object</code> → choose <code>Tile map</code> → select <code>Skip and create from scratch</code> </li>
+            <ul>
+              <li>Object name: <k-input>Level 1 Platforms</k-input></li>
+              
+              <li>Tile size: <k-input>64</k-input>
+              
+                <li>Choose a file: File(s) from your device <code>U2 Game Development</code> → <code>assets</code> → <code>Tilesheet</code> → <code>tilesheet_complete.png</code>    </li>
+
+              <li>In the <kbd>Editor</kbd> click on the tiles that will be used as platforms - it will configure its behaviours.</li>
+
+              <div class="figure"><img src="/code/ict9/unit2/lesson2/3_level_1_platform.png" alt="Level 1 Platform properties"></div>
+              </ul>
+
+
+
+          <li>Click <code>Apply</code>.</li>
+          
+          <li>Drag the <code>Level_1_Platforms</code> object to the scene layout and click on it. You'll notice the <code>Tilemap painter</code> is now open. Enter <k-input>0</k-input> for both the <code>X</code> and <code>Y</code> values.</li>
+          
+          <li>Close the <code>Layers</code> and <code> Objects</code> pannel to adjust the view so you can see more of the <kbd>Tilemap painter</kbd></li>
+
+          <div class="figure"><img src="/code/ict9/unit2/lesson2/4_adding_tilemap.png" alt="Level 1 Platform properties"></div>
+        </ol>
+        <p><em>We are not placing individual tiles as separate objects — we paint everything inside this one Tilemap.</em></p>
+      </div>
+
+      <!-- 2.1.4 -->
+      <div class="card">
+        <h2>3 "Painting" Platforms</h2>
+
+        <p>You'll notice that you can click on a tile and it is selected. At the same time the paint brush button is selected. This means you will "draw" this tile on your layout.
+          <div class="figure"><img src="/code/ict9/unit2/lesson2/5_tilemap_painter.png" alt="Tilemap Printer"></div> 
+        </p>
+
+        <ul>
+
+          <li>Place your cursor where you want to draw your platform, hold your button down and the tile will be drawn.</li>
+          <li>Draw some platforms. Combine different tiles to form different grounds. You can spend a lot of time creating your game world, but for now create enough to help you learn how to make your game.</li>
+          <li>You can create a platform or two and duplicate them for faster building</li>
+          <li>Make platforms to span the whole of your background.</li>
+        </ul>
+        <p class="muted">Here is an example you can copy if you don't know where to start.</p>
+
+        <div class="figure"><img src="/code/ict9/unit2/lesson2/6_platform_example.png" alt="Layout example"></div>
+         
+      </div>
+
+
+      <div class="card">
+        <h2>4. Lock & Behaviours</h2>
+
+          <ol>
+            <li>Click on the <code>Open Instance List Panel</code> and lock all the <code>Level_1_Platforms</code> objects.
+          <li>Open <kbd>Objects</kbd> menu and <strong>double-click</strong> on the <code>Level_1_Platforms</code> object.</li>
+          <li>Click on the <kbd>Behaviors</kbd> tab and <code>Add a behavior</code>.</li>
+          <li>Add the <code>Platform</code> behavior. This will make your platform a solid object for sprites to run along. </li>
+          <li>Click <kbd>Apply</kbd>. </li>
+
+          <div class="figure"><img src="/code/ict9/unit2/lesson2/8_platform_behaviour.png" alt="Layout example"></div>
+
+          <li><code>Save</code> your work</li>
+        </ol>
+      </div>
+      
+
+      <!-- 2.1.6 -->
+      <div class="card">
+      
+          <h2>5. Floating Platforms</h2>
+          <p>Now let's add some floating platforms. These are platforms that the sprite can jump through to get on top of.</p>
+          <ol>
+            <li>Right click on the <code>Level_1_Platforms</code> object and <kbd>duplicate</kbd> it.</li>
+            <li>Rename the object to <code>Level_1_Floating</code></li>
+            <li>Double click the <code>Level_1_Floating</code> object and change the <code>Platform</code> behviour, to <code>Jumpthrough platform</code>.</li>
+            <li>Drag the object onto the layout and position it at <k-input>X : 0</k-input> and <k-input>Y : 0</k-input>, and double click on it to open the Tilemap painter.</li>
+            <li>Create one or two floating platforms. Select and duplicate to make multiples easily.</li>
+            <li>Open the <code>Instance List Panel</code> and lock all the floating objects.</li>
+            <li>Save your work.</li>
+            <div class="figure"><img src="/code/ict9/unit2/lesson2/7_floating_platforms.png" alt="Floating Platforms"></div>
+          </ol>
+        </div>
+           
+
+      <!-- 2.1.7 -->
+      <div class="card">
+        <h2>6. Preview &amp; Save</h2>
+        <ol>
+          <li>Click <code>Preview</code> to check visuals (movement won’t work yet—no player).</li>
+          <li>Look for gaps/misaligned edges. Fix anything that isn’t snapping cleanly to the grid. (Tiles will snap to the grid if it is viewable)</li>
+
+          <li>Save your project (<kbd>Ctrl</kbd> + <kbd>S</kbd>).</li>
+        </ol>
+        <details>
+          <summary>Troubleshooting tips</summary>
+          <ul>
+            <li>Edges look fuzzy? Use whole-number sizes aligned to grid; avoid fractional scaling.</li>
+            <li>Texture repeats oddly? Ensure your source tile is exactly 64×64 (or your chosen grid size).</li>
+            
+          </ul>
+        </details>
+      </div>
+
+      <!-- 2.1.8 -->
+      <div class="card">
+        <h2>7. Reflection</h2>
+        <p>
+          Think about the choices you made when designing your platforms. 
+        </p>
+        <ul>
+          <li>How did the placement of your ground and floating platforms affect how a player might move through your level?</li>
+          <li>What challenges or strategies do you think your platform layout creates for the player?</li>
+          <li>If you were to redesign your level, what would you change to make it easier or harder?</li>
+        </ul>
+        <p class="muted">Copy and write the answers to the reflection questions in a word document with the title <code>2.2 Reflection</code> Add your document in the <code>Lesson 2.2 Assignment</code> on Teams.
+      </div>
+      
+      <div class="card">
+        <h2>8. Submit</h2>
+        <p>Take a screenshot showing:</p>
+        <ul>
+          <li><strong>Objects panel</strong> with <em>Background</em> and <em>Platforms</em> visible.</li>
+          <li>Your scene (background + floor + at least 2 floating platforms).</li>
+          <li>Rename and save your screenshots to your <code>2. Game Development</code> folder.</li>
+          
+        </ul>
+        <p>Upload the screenshot to Teams under “Lesson 2.2 Assignment”.</p>
+      </div>
+
+      <div class="card">
+        <h2>Note on Hit Boxes (Collision Polygons)</h2>
+        <p>
+          Every object in your game has an invisible <strong>hit box</strong> (collision polygon) that the engine uses to
+          detect when things touch. For platforms built with the <code>Tilemap + Collision Mask</code>, these are handled
+          automatically — you do not need to configure them now.
+        </p>
+        <p>
+          Later, when we add the Player and Enemies, we will adjust their hit boxes so collisions feel accurate
+          (for example, aligning the player’s hit box to their body, not the empty space around the sprite).
+        </p>
+        <p>
+          <em>For now, you can ignore hit box editing and focus on building your level layout.</em>
+        </p>
+      </div>
+      
+    </main>
+
+    <aside id="right-rail" aria-label="Resources">
+      <div class="card">
+        <h3>Lesson 2.2 Submit List</h3>
+        <ul class="list-tight">
+          <li><kbd>Object pannel</kbd> screenshot</li>
+          <li><kbd>Level 1 Scene</kbd> layout screenshot</li>
+          <li><kbd>2.2 Reflection.docx</kbd>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Checklist</h3>
+        <ul class="list-tight">
+          <li>Platforms layer created</li>
+          <li>Grid + snapping set (64×64)</li>
+          <li>Ground tiled sprite placed &amp; has <em>Platform</em> behavior</li>
+          <li>2–3 floating platforms</li>
+          <li>JumpThru object placed with <em>Jumputhrough platform</em> behavior</li>
+          <li>Previewed &amp; saved</li>
+        </ul>
+      </div>
+
+    </aside>
+  </div>
+
+  <footer id="site-footer" data-partial="/code/common/partials/footer.html"></footer>
+  
+  
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>ICT 8 – Web Dev Showcase (All Classes)</title>
+        <meta name="robots" content="noindex, nofollow" />
+
+        <style>
+            body{margin:0;font-family:system-ui,Arial,sans-serif;background:#0b1020;color:#e2e8f0}
+            header{padding:28px 18px;text-align:center}
+            h1{margin:0;font-size:clamp(28px,5vw,44px)}
+            main{max-width:1100px;margin:0 auto;padding:18px}
+            .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+            .card{background:#111827;border:1px solid #1f2937;border-radius:14px;padding:16px; text-align: center;}
+            a{color:#93c5fd;text-decoration:none}
+            a:hover{text-decoration:underline}
+            small{opacity:.8}
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>ICT 8 – Web Development Showcase </h1>
+            <p>Choose your class to view student pages. <small>Privacy: first name + last initial only; no personal info; educational links/images.</small></p>
+
+            <nav class="margin-bottom: 12px">
+                <a href="/code/ict8/unit4/index.html">Back to Unit 4</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="grid">
+                <div class="card"><a href="/code/ict8/unit4/web_dev/S1W1/index.html">S1W1</a></div>
+                <div class="card"><a href="/code/ict8/unit4/web_dev/S1W2/index.html">S1W2</a></div>
+                <div class="card"><a href="/code/ict8/unit4/web_dev/S1W3/index.html">S1W3</a></div>
+                <div class="card"><a href="/code/ict8/unit4/web_dev/S1W4/index.html">S1W4</a></div>
+                <div class="card"><a href="/code/ict8/unit4/web_dev/S2W1/index.html">S2W1</a></div>
+                <div class="card"><a href="/code/ict8/unit4/web_dev/S2W2/index.html">S2W2</a></div>
+                <div class="card"><a href="/code/ict8/unit4/web_dev/S2W3/index.html">S2W3</a></div>
+                <div class="card"><a href="/code/ict8/unit4/web_dev/S2W4/index.html">S2W4</a></div>
+            </section>
+        </main>
+
+    <script>
+      (function () {
+        const p = location.pathname;
+        const b = document.body;
+        if (p.includes('/ict8/')) b.classList.add('ict8');
+        else if (p.includes('/ict9/')) b.classList.add('ict9');
+        else if (p.includes('/dc1011/')) b.classList.add('dc1011');
+      })();
+    </script>
+    
+    </body>
+</html>

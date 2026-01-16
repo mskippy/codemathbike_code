@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>3.2 Brand Identity Design</title>
+
+    <!-- Use your site-wide CSS + JS (same stack as index.html) -->
+    <link rel="stylesheet" href="/code/common/css/base.css">
+    <script src="/code/common/js/nav_data.js" defer></script>
+    <script src="/code/common/js/utils.js" defer></script>
+    <script src="/code/common/js/inject_partials.js" defer></script>
+    <script src="/code/common/js/nav_systems.js" defer></script>
+    <script src="/code/common/js/main.js" defer></script>
+
+    <style>
+      /* Page-local helpers (safe to keep minimal) */
+      .muted{opacity:.85}
+      .small{font-size:.95rem}
+      .embed {
+        position: relative; width:100%; aspect-ratio: 16 / 9;
+        background:#f3f4f6; border:1px dashed #d1d5db; border-radius:12px;
+        display:grid; place-items:center; color:#6b7280; margin: .5rem 0 1rem;
+      }
+      .embed > span{ padding:.5rem 1rem; text-align:center }
+      .pill { display:inline-block; padding:.15rem .5rem; border:1px solid #e5e7eb; border-radius:999px; background:#fff; }
+      .checklist{ padding-left:1.1rem; }
+      .two-col{ display:grid; grid-template-columns:1fr 1fr; gap:1rem 2rem }
+      @media (max-width:900px){ .two-col{ grid-template-columns:1fr } }
+      .swatch{ display:inline-block; width:28px; height:28px; border-radius:6px; border:1px solid #e5e7eb; vertical-align:middle; margin-right:.4rem }
+      .example-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1rem }
+      @media (max-width:900px){ .example-grid{ grid-template-columns:1fr } }
+    </style>
+  </head>
+
+  <body data-course="ict9">
+    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+
+    <div class="page-wrap unit-shell layout-3">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="Topic 2 — Brand Identity Design">
+        <section class="card">
+          <h2>Overview</h2>
+          <p>Create a <strong>visual identity</strong> for your game that communicates tone and personality. You’ll learn the four core design principles — <strong>CRAP</strong> (Contrast, Repetition, Alignment, Proximity) — and apply them to design your <strong>logo</strong>, choose your <strong>colors</strong>, and write a <strong>tagline</strong>. Everything comes together in a one-page <strong>Game Brand Style Guide</strong> you’ll make in Canva.</p>
+          <p><span class="pill">Deliverable: Game Brand Style Guide</span></p>
+        </section>
+
+        <!-- Activity A -->
+        <section class="card">
+          <h2>Activity A — Mini-Lesson: Design Principles 101</h2>
+          <p class="muted small">Watch the video on CRAP principles. Notice how each principle guides attention and mood.</p>
+
+
+        <!-- YouTube embed: CRAP Design Principles video -->
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; margin: 1rem 0;">
+        <iframe 
+            src="https://www.youtube.com/embed/JAQbxZAAS6k?si=_7meCO2Oh7EhtZ1T" 
+            title="CRAP Design Principles Video"
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+        </iframe>
+        </div>
+
+
+          <div class="two-col">
+            <div>
+              <h3>Key Ideas</h3>
+              <ul class="list-tight">
+                <li><strong>Contrast:</strong> Make important elements stand out (color, size, weight).</li>
+                <li><strong>Repetition:</strong> Repeat colors, fonts, or shapes for unity.</li>
+                <li><strong>Alignment:</strong> Line things up to reduce visual noise.</li>
+                <li><strong>Proximity:</strong> Group related items so they read as one unit.</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Quick Examples</h3>
+              <ul class="list-tight">
+                <li>Bright title on a dark background (contrast).</li>
+                <li>Same stroke/shape style repeated across letters (repetition).</li>
+                <li>Centered title for stability; left-aligned for a modern feel (alignment).</li>
+                <li>Title + tagline kept close so they read together (proximity).</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Activity B -->
+        <section class="card">
+          <h2>Activity B — Poster Analysis</h2>
+          <p>Revisit posters from the games you watched in Topic 1 (e.g., <em>Halo</em>, <em>Overcooked 2</em>, <em>Among Us</em>, <em>Zelda</em>). Explore how designers use typography, color, and layout to tell a story.</p>
+
+        <!-- Canva slideshow embed: Game Posters -->
+        <div style="position: relative; width: 100%; height: 0; padding-top: 56.25%;
+        box-shadow: 0 2px 8px rgba(63,69,81,0.16); margin-top: 1.25rem; margin-bottom: 1rem;
+        overflow: hidden; border-radius: 12px;">
+        <iframe loading="lazy"
+            src="https://www.canva.com/design/DAG32Zyxgd8/AlRcZvSNO5Dg4SntKdUMqQ/view?embed"
+            allowfullscreen
+            allow="fullscreen"
+            style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none;">
+        </iframe>
+        </div>
+
+        <p class="small muted" style="text-align:center;">
+        <a href="https://www.canva.com/design/DAG32Zyxgd8/AlRcZvSNO5Dg4SntKdUMqQ/view?utm_content=DAG32Zyxgd8&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link"
+            target="_blank" rel="noopener">
+            Open slideshow in Canva
+        </a>
+        </p>
+
+
+          <p>Use the <strong>Poster Analysis Handout</strong> to record notes for each example.</p>
+          <ul class="checklist">
+            <li><strong>Font & Typography:</strong> What does the typeface suggest?</li>
+            <li><strong>Color Palette:</strong> What emotions do the colors create?</li>
+            <li><strong>Contrast & Shape:</strong> What draws your eye first? Why?</li>
+            <li><strong>Mood & Message:</strong> What overall feeling does it create?</li>
+          </ul>
+
+
+            <!-- Poster Analysis Handout placeholder -->
+            <a href="/code/ict9/unit3/lesson2/b_poster-analysis.pdf" target="_blank" rel="noopener">Poster Analysis Handout</a>
+        </section>
+
+        <!-- Activity C -->
+        <section class="card">
+          <h2>Activity C — Create Your Game Brand Style Guide (in Canva)</h2>
+          <p>Design your own brand identity and collect everything on a single page.</p>
+
+          <h3>Steps</h3>
+          <ol class="list-tight">
+            <li><strong>Open Canva</strong> → create a blank <strong>8.5 × 11 in</strong> page (portrait).</li>
+            <li><strong>Top section:</strong> Add your <strong>game logo</strong> and <strong>tagline</strong>.</li>
+            <li><strong>Color palette:</strong> Add <strong>3–5 swatches</strong> and label each with its <strong>HEX code</strong>.</li>
+            <li><strong>Typography:</strong> Show your chosen font(s) and list their <strong>font names</strong>.</li>
+            <li><strong>Connections & Reflection:</strong> Write 1–2 sentences explaining:
+              <ul class="list-tight">
+                <li>Why these colors and fonts fit your game’s tone, genre, or story.</li>
+                <li>How your design supports the player experience.</li>
+              </ul>
+            </li>
+            <li><strong>Export</strong> your page as a high-quality <strong>PNG or PDF</strong>.</li>
+          </ol>
+
+            <a href="/code/ict9/unit3/lesson2/game_style_guide-boundless.pdf" target="_blank" rel="noopener">Boundless Style Guide - Example</a>
+         
+          <p class="muted small">Tip: Use the CRAP checklist — is your design balanced, clear, and consistent?</p>
+        </section>
+
+        <!-- Activity D / Submission -->
+        <section class="card">
+          <h2>Activity D — Share & Submit</h2>
+          <p>Upload your Style Guide PNG to the Class Padlet and provide feedback to two of your peers (that are sitting on the opposite side of the room).</p>
+
+          <!-- Padlet placeholder -->
+          <div class="padlet-embed"
+              style="border:1px solid rgba(0,0,0,0.1);
+                      border-radius:12px;
+                      overflow:hidden;
+                      width:100%;
+                      background:#f4f4f4;
+                      box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+            <iframe src="https://padlet.com/embed/zv1jvtsrnc3mafbx"
+                    frameborder="0"
+                    allow="camera; microphone; geolocation; display-capture; clipboard-write"
+                    style="width:100%; height:608px; display:block; border:0; margin:0; padding:0;">
+            </iframe>
+          </div>
+
+          <p style="text-align:right; margin-top:.5rem;">
+            <a href="https://padlet.com/zv1jvtsrnc3mafbx" target="_blank" rel="noopener">
+              Open in Padlet ↗
+            </a>
+          </p>
+   
+        </section>
+
+        <section class="card">
+
+        <h3>Deliverable</h3>
+          <ul class="list-tight">
+            <li>✅ <strong>Game Brand Style Guide</strong> saved as a PNG and PDF including:
+              <ul class="list-tight">
+                <li>Logo and tagline</li>
+                <li>Color swatches + HEX codes</li>
+                <li>Font name(s)</li>
+                <li>Connections & reflection sentences</li>
+              </ul>
+            </li>
+          </ul>
+   
+        </section>
+
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card">
+          <strong>Resources</strong>
+          <ul class="list-tight">
+            <li><a href="https://youtu.be/JAQbxZAAS6k?si=Xg01Bqs2V-nsPpUW" id="yt-link">Principles of Design (CRAP)</a></li>
+            <li><a href="https://www.canva.com/design/DAG32Zyxgd8/X4ESqY3UfOhqmYgexdm_yA/view?utm_content=DAG32Zyxgd8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hbb2f46cca4" id="poster-slides-link">Poster slideshow</a></li>
+            <li><a href="/code/ict9/unit3/lesson2/b_poster-analysis.pdf" id="poster-analysis">Activity B Handout</a></li>
+            <li><a href="/code/ict9/unit3/lesson2/game_style_guide-boundless.pdf" id="style-guide">Style Guide Example</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <strong>Checklist</strong>
+          <ul class="list-tight">
+            <li>Watched CRAP video</li>
+            <li>Completed poster analysis</li>
+            <li>Style guide: logo + tagline</li>
+            <li>Style guide: colors (HEX) + fonts</li>
+            <li>Connections & reflection added</li>
+            <li>Exported PNG/PDF & posted to Padlet</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <img src="/code/ict9/unit3/lesson2/style_guide.png" alt="Boundless Style Guide">Boundless Style Guide
+        </div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/code/common/partials/footer.html"></footer>
+  </body>
+</html>

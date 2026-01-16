@@ -1,0 +1,209 @@
+<!-- v2 – Oct 2025 -->
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DC10/11 • 3.3 Audio Production</title>
+    <link rel="stylesheet" href="/code/common/css/base.css">
+    <script src="/code/common/js/nav_data.js" defer></script>
+    <script src="/code/common/js/utils.js" defer></script>
+    <script src="/code/common/js/inject_partials.js" defer></script>
+    <script src="/code/common/js/nav_systems.js" defer></script>
+    <script src="/code/common/js/main.js" defer></script>
+    
+  </head>
+
+  <body data-course="dc1011" data-unit="unit3">
+    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+    
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="DigiComm10/11 • Unit 3">
+
+      <!-- Page Intro -->
+      <section class="card" id="intro">
+        <h2>3.3 Audio Production Foundations</h2>
+        <h3>Recording, Editing &amp; Mixing in Adobe Audition</h3>
+        <p>In this topic you’ll learn how to capture clean recordings and edit them in <strong>Adobe Audition</strong>. We will <em>practice first</em> with a short clip so that your real podcast production is smooth and uninterrupted.</p>
+        <p><strong>Big idea:</strong> Record in short, well-planned <em>segments</em> (intro, body, outro), then edit and mix them into a cohesive rough cut.</p>
+      </section>
+
+      <!-- Learning Goals -->
+      <section class="card" id="learning-goals">
+        <h3>Learning Goals</h3>
+        <ul>
+          <li>Capture clear, consistent voice recordings using good mic technique and environment choices.</li>
+          <li>Edit and mix audio confidently in Adobe Audition (trim, noise cleanup, levels, fades).</li>
+          <li>Combine dialogue, music, and sound effects into a balanced, engaging rough cut.</li>
+          <li>Follow copyright-safe practices when using Creative Commons music and SFX.</li>
+          <li>Collaborate effectively and name/organize files for a smooth workflow.</li>
+        </ul>
+      </section>
+
+      <!-- Production Workflow -->
+      <section class="card" id="workflow">
+        <style>
+          #workflow table { width: 100%; border-collapse: collapse; }
+          #workflow th, #workflow td { border-top: 1px solid var(--u3-border, #e5e7eb); padding: .6rem .5rem; text-align: left; vertical-align: top; }
+          #workflow th { font-weight: 600; }
+        </style>
+        <h3>Production Workflow</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>Focus</th>
+              <th>Audition Skill</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1) Skill Practice</td>
+              <td>Short “test” project to learn tools</td>
+              <td>Waveform View: record, trim, normalize</td>
+            </tr>
+            <tr>
+              <td>2) Segment Recording</td>
+              <td>Record intro / body / outro separately</td>
+              <td>Input setup, monitoring, file naming</td>
+            </tr>
+            <tr>
+              <td>3) Edit &amp; Clean</td>
+              <td>Clarity and pacing</td>
+              <td>Razor tool, noise reduction, normalize</td>
+            </tr>
+            <tr>
+              <td>4) Mix &amp; Enhance</td>
+              <td>Layer music and SFX, add fades</td>
+              <td>Multitrack Session, Track Mixer, fades</td>
+            </tr>
+            <tr>
+              <td>5) Review &amp; Export</td>
+              <td>Peer feedback and revision</td>
+              <td>Export Mixdown (MP3/WAV)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Mini-Lesson: Recording Foundations -->
+      <section class="card" id="recording-foundations">
+        <h3>Mini-Lesson: Recording Foundations</h3>
+        <ul>
+          <li><strong>Environment:</strong> choose a quiet, low-echo space (soft furnishings help).</li>
+          <li><strong>Mic distance:</strong> about one hand-span from your mouth; stay consistent.</li>
+          <li><strong>Monitor levels:</strong> aim for peaks around <code>–6 dB</code>; always wear headphones.</li>
+          <li><strong>Record in segments:</strong> plan short takes (30–60s) to make editing easier.</li>
+          <li><strong>Name files clearly:</strong> <code>lastname_firstname_test_room.wav</code> or <code>ep1_intro_raw.wav</code>.</li>
+        </ul>
+        <details>
+          <summary><strong>Practice Script (copy-paste)</strong></summary>
+          <blockquote>
+            “This is my test recording for Adobe Audition practice. I’m checking mic distance, background noise, and voice levels. This short clip helps me hear the difference between clean and noisy recordings.”
+          </blockquote>
+          <p><em>Record this in three locations</em> (e.g., classroom, hallway, quiet room) to compare sound quality.</p>
+        </details>
+      </section>
+
+      <!-- Mini-Lesson: Audition Basics -->
+      <section class="card" id="audition-basics">
+        <h3>Mini-Lesson: Adobe Audition Basics</h3>
+        <h4>Waveform View (single-file editing)</h4>
+        <ol>
+          <li><strong>New audio file:</strong> 44.1 kHz, 16-bit, Mono.</li>
+          <li><strong>Check input:</strong> Preferences → Audio Hardware → select your mic.</li>
+          <li><strong>Record</strong> a 15–30s clip; <strong>trim</strong> false starts and long silences.</li>
+          <li><strong>Noise Reduction (gentle):</strong> capture noise print → reduce ~20–40%.</li>
+          <li><strong>Normalize</strong> to –3 dB for consistent loudness; <strong>save</strong>.</li>
+        </ol>
+        <h4>Multitrack View (mixing multiple tracks)</h4>
+        <ol>
+          <li><strong>New Multitrack Session</strong> → import dialogue on Track 1, music on Track 2, SFX on Track 3.</li>
+          <li>Use the <strong>Track Mixer</strong> to balance levels (voice ≈ –6 dB peak; music/SFX ≈ –18 dB).</li>
+          <li>Add <strong>fade-ins/outs</strong> and use <strong>crossfades</strong> for smooth transitions.</li>
+          <li><strong>Export Mixdown</strong> → Entire Session → MP3 or WAV.</li>
+        </ol>
+        <div class="note">
+          <p><strong>Helpful guides:</strong> 
+            <a href="https://helpx.adobe.com/audition/user-guide.html" target="_blank" rel="noopener">Adobe Audition User Guide</a> · 
+            <a href="https://helpx.adobe.com/audition/using/noise-reduction-restoration.html" target="_blank" rel="noopener">Noise Reduction &amp; Restoration</a> · 
+            <a href="https://freemusicarchive.org/" target="_blank" rel="noopener">Free Music Archive</a> · 
+            <a href="https://mixkit.co/free-sound-effects/" target="_blank" rel="noopener">Mixkit SFX</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- Activities -->
+      <section class="card" id="activities">
+        <h3>Activities</h3>
+
+        <h4>🎙 Activity 1 — Audition Skill Test (Practice First)</h4>
+        <ul>
+          <li>Record the practice script (15–30s). Do <em>three takes</em> in different environments.</li>
+          <li>Edit one take: trim → gentle noise reduction → normalize to –3 dB.</li>
+          <li>Open a Multitrack session and add a music bed + one SFX (balance under the voice).</li>
+          <li><strong>Export:</strong> <code>lastname_auditionpractice.mp3</code>. Write one sentence on what improved your audio most.</li>
+        </ul>
+
+        <h4>🎧 Activity 2 — Segment Recording (Episode 1)</h4>
+        <ul>
+          <li>Record <em>intro, body, outro</em> as separate files.</li>
+          <li>Keep mic distance and input settings consistent for all speakers.</li>
+          <li>Use clear names: <code>ep1_intro_raw.wav</code>, <code>ep1_bodyA_raw.wav</code>, <code>ep1_outro_raw.wav</code>.</li>
+        </ul>
+
+        <h4>🎚 Activity 3 — Edit &amp; Mix Lab</h4>
+        <ul>
+          <li>Import best takes into a Multitrack session.</li>
+          <li>Tighten pacing; remove distractions; add fades/crossfades.</li>
+          <li>Balance levels (dialogue first; music/SFX support).</li>
+          <li><strong>Export rough cut:</strong> 1–2 minutes.</li>
+        </ul>
+
+        <h4>💬 Activity 4 — Peer Review &amp; Revision</h4>
+        <ul>
+          <li>Swap rough cuts with another team.</li>
+          <li>Give feedback on clarity, pacing, balance, and transitions.</li>
+          <li>Revise your session before submission.</li>
+        </ul>
+      </section>
+
+      <section class="card" id="group-individual-accountability">
+        <h3>Group Work &amp; Individual Accountability</h3>
+        <p>Plan and record in groups, share ideas and raw audio—but each student must independently <strong>produce</strong> (edit, mix, and export) <strong>at least one complete episode</strong>.</p>
+
+        <h4>What “produce an episode” means</h4>
+        <ul>
+          <li>You manage the full post-production in <strong>Adobe Audition</strong> for your episode: import selects, trim/clean, balance levels, add music/SFX, fades, export.</li>
+          <li>You maintain the <code>.sesx</code> session and final mixdown for that episode.</li>
+          <li>Collaboration is encouraged for planning/recording, but the hands-on edit/mix/export of your episode is your work.</li>
+        </ul>
+
+        <p class="muted"><em>Heads-up:</em> This is assessed with the final product. See the Final Submission page for exactly what to hand in.</p>
+      </section>
+
+
+      <!-- Checkpoint -->
+      <section class="card" id="checkpoint">
+        <h3>Checkpoint: Episode 1 Rough Cut</h3>
+        <p><strong>Submit:</strong> your <code>episode1_mixdown.mp3</code> and your Audition <code>.sesx</code> session file. Include a brief reflection on one editing or mixing choice that improved your story.</p>
+        <p><strong>Feedback focuses on:</strong> clean recording, clear edits, balanced mix, smooth transitions, and organized files.</p>
+        <p><em>Submit via your class Teams folder.</em></p>
+
+        <p><strong>Now:</strong> Submit a 1–2 minute rough cut for feedback. 
+        <strong>Later:</strong> Each group member will submit their own produced episode files on the Final Submission page.</p>
+
+      </section>
+
+      <!-- End -->
+      <section class="card" id="wrap">
+        <h3>Next Step</h3>
+        <p>After feedback, you’ll expand your rough cut toward a full episode and prepare it for publishing.</p>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

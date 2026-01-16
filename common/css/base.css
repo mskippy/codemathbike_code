@@ -1,0 +1,571 @@
+/* ============================================================
+   base.css  — codemathbike v2 unified layout (refined)
+   Version 2.0 layout – established Oct 2025
+   ============================================================ */
+
+/* ─── Root tokens ──────────────────────────────────────────── */
+:root {
+  /* layout sizing */
+  --sidebar-w: 200px;         /* was 260px */
+  --right-rail-w: 220px;      /* was 300px */
+  --header-h: 90px;
+  --page-max: 1480px;         /* a tad wider canvas for the center column */
+  --gap: 1.5rem;              /* was 2rem */
+
+  /* surfaces */
+  --bg: #f7f9fb;
+  --surface: #ffffff;
+  --surface-alt: #fcfcfc;
+  --border: #e5e5e5;
+  --shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+
+  /* text */
+  --text: #0f172a;
+  --muted: #475569;
+
+  /* accent defaults */
+  --accent: #6a1b9a;
+  --accent-hover: #4a148c;
+
+  /* typography */
+  --font-body: "Segoe UI", "Segoe UI Variable", system-ui, -apple-system, Roboto, sans-serif;
+  --font-light: 300;
+  --font-regular: 400;
+  --radius: 12px;
+
+  /* new: type scale tokens (smaller overall) */
+  --base-font: 14px;                /* was 16px */
+  --h1: clamp(22px, 2.2vw, 32px);
+  --h2: clamp(18px, 1.9vw, 26px);
+  --h3: clamp(16px, 1.6vw, 22px);
+
+  --top-offset: calc(var(--header-h) + 1rem);
+
+  /* ─── Code block colors ─────────────────────────────────── */
+  --code-bg: #0f172a;     /* dark slate */
+  --code-text: #e5e7eb;   /* light gray text */
+  --code-border: #1f2937; /* subtle border */
+  --code-inline: #f1f5f9; /* chip bg for inline code */
+}
+
+  
+  /* ─── Accents per course ───────────────────────────────────── */
+  body.theme-ict8 { --accent: #2e7d32; --accent-hover: #1b5e20; }
+  body.theme-ict9 { --accent: #1565c0; --accent-hover: #0d47a1; }
+  body.theme-dc1011 { --accent: #b8860b; --accent-hover: #b45309; }
+  body.ict8   { --accent: #2e7d32; --accent-hover: #1b5e20; }
+  body.ict9   { --accent: #1565c0; --accent-hover: #0d47a1; }
+  body.dc1011 { --accent: #f59e0b; --accent-hover: #b45309; }
+
+  /* ─── Resets ───────────────────────────────────────────────── */
+  *,
+  *::before,
+  *::after { box-sizing: border-box; }
+  
+  html { scroll-behavior: smooth; }
+  
+  /* Resets keep as-is above */
+  body {
+    margin: 0;
+    font: var(--base-font)/1.6 var(--font-body);  /* use the new token */
+    color: var(--text);
+    background: var(--bg);
+    padding-top: 0;
+  }
+
+  /* ─── Typography (new, compact & responsive) ───────────────── */
+h1 { font-size: var(--h1); line-height: 1.2; font-weight: 500; margin: 0 0 .5rem; }
+h2 { font-size: var(--h2); line-height: 1.25; font-weight: 500; margin: 0 0 .5rem; }
+h3 { font-size: var(--h3); line-height: 1.3; font-weight: 500; margin: 0 0 .4rem; }
+
+
+  /* make rails a touch smaller so content stands out */
+  #sidebar, #right-rail { font-size: 0.95rem; }
+  #content { font-size: 1rem; }  /* readable body size in main column */
+
+  
+  img, video, iframe { max-width: 100%; height: auto; border-radius: var(--radius); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { color: var(--accent-hover); text-decoration: underline; }
+  
+  a { color: var(--accent); }
+  #site-header, #site-footer { border-top: 4px solid var(--accent); }
+  #sidebar a.active { color: var(--accent); }
+
+  /* ─── Header ───────────────────────────────────────────────── */
+  #site-header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: var(--header-h);
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 6px rgba(0,0,0,.05);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2rem;
+    z-index: 1000;
+  }
+  #site-header h1 {
+    font-weight: var(--font-light);
+    font-size: 1.6rem;
+    color: var(--accent);
+    margin: 0;
+  }
+  
+  /* ─── Layout grid ──────────────────────────────────────────── */
+  .page-wrap {
+    display: grid;
+    grid-template-columns: var(--sidebar-w) minmax(0, 1fr) var(--right-rail-w);
+    gap: var(--gap);
+    max-width: var(--page-max);
+    margin: 0 auto;
+    padding: 0 var(--gap) var(--gap);
+    align-items: start; /* already present later, safe to keep here */
+  }
+
+  @media (max-width: 1100px) {
+    /* show left + content; hide right rail below */
+  .page-wrap { grid-template-columns: var(--sidebar-w) 1fr; }
+  #right-rail { display: none; }
+  }
+
+  @media (max-width: 768px) {
+    .page-wrap { grid-template-columns: 1fr; padding: 1rem; }
+  #sidebar { position: static; }
+  }
+
+  
+  /* — Sidebar (tree-line card, deterministic) — */
+  #sidebar {
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.2rem 1rem;
+    position: sticky;
+    top: var(--top-offset);
+    align-self: start;
+    box-shadow: var(--shadow);
+  }
+  
+  #sidebar h2 {
+    margin-top: 0;
+    color: var(--accent);
+    font-weight: var(--font-light);
+  }
+  
+  /* units */
+  #sidebar .unit { margin-bottom: .75rem; }
+  
+  /* unit header (no chevron) */
+  #sidebar .unit .unit-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .55rem .65rem;
+    margin: .25rem 0;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+  }
+  #sidebar .unit .unit-link:hover { background: rgba(0,0,0,.04); }
+  #sidebar .unit .unit-link:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+  
+  /* lessons container — single vertical guide line */
+  #sidebar .unit .nav {
+    display: none;                 /* default: collapsed */
+    margin-left: .75rem;
+    padding-left: .75rem;
+    border-left: 2px solid rgba(0,0,0,.12);
+    list-style: none;
+  }
+  #sidebar .unit.is-open .nav {    /* only the open unit shows */
+    display: block;
+    border-left-color: var(--accent); /* optional accent on open unit */
+  }
+
+  #sidebar .unit .nav li {       /* ⬅ add this whole rule */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  /* lesson links (no horizontal connectors) */
+  #sidebar .nav a {
+    display: block;
+    padding: .45rem .6rem;
+    color: var(--text);
+  }
+  #sidebar .nav a:hover {
+    color: var(--accent);
+    background: rgba(0,0,0,.04);
+  }
+  #sidebar .nav a.active {
+    font-weight: 600;
+    color: var(--accent);
+    background: transparent;
+  }
+  
+  
+  /* ─── Main content area ────────────────────────────────────── */
+
+  #content {
+  min-width: 0;
+  margin-top: var(--top-offset);              /* aligns with sticky rails */
+  }
+
+  /* absolutely no gap before the first thing in #content */
+  #content > :first-child { margin-top: 0 !important; }
+
+  /* consistent spacing between siblings in #content */
+  #content > * + * { margin-top: 1.5rem; }
+
+  /* cards have no intrinsic margins (spacing handled above) */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    /* no margin here */
+  }
+
+  #content ul li,
+  #content ol li {
+  margin-bottom: 0.6em;
+}
+
+  
+  /* ─── Right rail ───────────────────────────────────────────── */
+  #right-rail {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem;
+    position: sticky;
+    top: var(--top-offset);
+    align-self: start;
+    box-shadow: var(--shadow);
+  }
+  #right-rail h2 {
+    font-weight: var(--font-light);
+    color: var(--accent);
+    margin-top: 0;
+  }
+  #right-rail .card {
+    border: none;
+    box-shadow: none;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  #right-rail .card:last-child { border-bottom: none; }
+  
+  /* ─── Footer ───────────────────────────────────────────────── */
+  #site-footer {
+    margin-top: 3rem;
+    padding: 1rem 2rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  
+  /* ─── Utilities ────────────────────────────────────────────── */
+  .text-center { text-align: center; }
+  .muted { color: var(--muted); }
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius);
+    padding: 0.6rem 1.2rem;
+    font-weight: var(--font-regular);
+    cursor: pointer;
+    transition: background .2s ease;
+  }
+  .btn:hover { background: var(--accent-hover); }
+  
+  @media print {
+    body { background: #fff; }
+    #sidebar, #right-rail, #site-header { display: none; }
+    .page-wrap { grid-template-columns: 1fr; }
+  }
+  /* ===== Align columns & remove extra gap in main ===== */
+
+  /* Make all three columns start at the same height under the fixed header */
+  .page-wrap { align-items: start; }
+
+  /* Main column clears the header by the same offset as the sticky rails */
+  #content { margin-top: var(--top-offset); }
+
+  /* Keep regular spacing between cards, but not before the first one */
+  #content .card { margin-top: 1rem; }
+  #content .card:first-child { margin-top: 0; }
+
+  /* (If your first section isn't using .card, cover that too) */
+  #content > section:first-child { margin-top: 0; }
+
+  /* ─── List spacing ─────────────────────────────────────────── */
+  ul li,
+  ol li {
+    margin-bottom: 0.5em;   /* adds vertical space between items */
+  }
+
+  /* remove the last item’s extra gap */
+  ul li:last-child,
+  ol li:last-child {
+    margin-bottom: 0;
+  }
+
+
+  /* ─── Table Formating ───────────────────────────────────── */
+  /* Schedule table styling */
+  table.schedule {
+    width: 100%;
+    border-collapse: separate;     /* keep rounded card edges */
+    border-spacing: 0;
+  }
+
+  table.schedule th,
+  table.schedule td {
+    padding: .6rem .8rem;
+    vertical-align: top;
+  }
+
+  /* Bold the first column (time) nicely */
+  table.schedule th {
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  /* Draw a stronger rule at the start of each block */
+  table.schedule tr.block-start > * {
+    border-top: 2px solid rgba(0,0,0,.15);     /* use your var(--border) if you prefer */
+  }
+
+  /* Softer rule before “Break”/“Lunch” rows (and a light tint) */
+  table.schedule tr.break-row > * {
+    border-top: 1px solid rgba(0,0,0,.1);
+    background: rgba(0,0,0,.02);
+    font-style: italic;
+  }
+
+  /* Remove the very top rule so the card’s top radius stays clean */
+  table.schedule tbody tr:first-child > * {
+    border-top: none;
+  }
+
+  /* Print-friendly: make rules darker on paper */
+  @media print {
+    table.schedule tr.block-start > * { border-top-color: #000; }
+    table.schedule tr.break-row  > * { border-top-color: #666; }
+  }
+
+  
+/* ============================================================
+   Enhanced Table Styles for Rubrics / Schedules (v2 compatible)
+   ============================================================ */
+    .table-wrap {
+      overflow: auto;
+      margin: 0 0 1rem 0;
+    }
+
+    table.schedule-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.95rem;
+      box-shadow: var(--shadow);
+    }
+
+    /* Header */
+    table.schedule-table thead th {
+      position: sticky;
+      top: 0;
+      background: var(--surface-alt);
+      color: var(--text);
+      font-weight: 600;
+      text-align: left;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Body cells */
+    table.schedule-table td {
+      padding: 0.75rem 1rem;
+      vertical-align: top;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+      line-height: 1.45;
+    }
+
+    /* Zebra rows for readability */
+    table.schedule-table tbody tr:nth-child(even) {
+      background: #f9fafc;
+    }
+
+    /* Rounded corners (if table in a card) */
+    table.schedule-table thead th:first-child { border-top-left-radius: var(--radius); }
+    table.schedule-table thead th:last-child  { border-top-right-radius: var(--radius); }
+    table.schedule-table tbody tr:last-child td:first-child { border-bottom-left-radius: var(--radius); }
+    table.schedule-table tbody tr:last-child td:last-child  { border-bottom-right-radius: var(--radius); }
+
+    /* Text wrapping for long rubric text */
+    table.schedule-table th,
+    table.schedule-table td {
+      word-break: normal;
+      overflow-wrap: anywhere;
+    }
+
+    /* Slight hover highlight (optional) */
+    table.schedule-table tbody tr:hover {
+      background: rgba(0,0,0,0.015);
+    }
+
+    /* Compact variant inside cards */
+    .card .table-wrap { margin-bottom: 0.75rem; }
+
+    @media (max-width: 768px) {
+      table.schedule-table {
+        font-size: 0.9rem;
+      }
+      table.schedule-table th,
+      table.schedule-table td {
+        padding: 0.6rem 0.75rem;
+      }
+    }
+
+  /* ============================================================
+    Content Tables (general-purpose tables for lessons)
+    ============================================================ */
+
+  .table-wrap {
+    overflow-x: auto;
+    margin: 0.75rem 0;
+  }
+
+  table.content-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    font-size: 0.95rem;
+  }
+
+  /* Header row */
+  table.content-table thead th {
+    background: var(--surface-alt);
+    font-weight: 600;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* Body cells */
+  table.content-table td {
+    padding: 0.75rem 1rem;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border);
+    line-height: 1.45;
+  }
+
+  /* Remove bottom rule on last row */
+  table.content-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* Zebra striping for readability */
+  table.content-table tbody tr:nth-child(even) {
+    background: #f9fafc;
+  }
+
+  /* Rounded corners */
+  table.content-table thead th:first-child {
+    border-top-left-radius: var(--radius);
+  }
+  table.content-table thead th:last-child {
+    border-top-right-radius: var(--radius);
+  }
+  table.content-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: var(--radius);
+  }
+  table.content-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: var(--radius);
+  }
+
+  /* Responsive tightening */
+  @media (max-width: 768px) {
+    table.content-table {
+      font-size: 0.9rem;
+    }
+    table.content-table th,
+    table.content-table td {
+      padding: 0.6rem 0.75rem;
+    }
+  }
+
+
+/* ─── Code Blocks ──────────────────────────────────────────── */
+  /* Inline code chips (within paragraphs) */
+code {
+  background: var(--code-inline);
+  color: #111827;
+  padding: 0 .4em;
+  border-radius: 6px;
+  font-family: "Cascadia Mono","Consolas",ui-monospace,monospace;
+  font-size: 0.95rem;
+}
+
+/* Multi-line code blocks like in this chat */
+pre {
+  background: var(--code-bg);
+  color: var(--code-text);
+  border: 1px solid var(--code-border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  overflow: auto;
+  box-shadow: var(--shadow);
+  -webkit-overflow-scrolling: touch;
+}
+pre code {
+  background: transparent;   /* don’t double-tint inside pre */
+  color: inherit;
+  font-family: "Cascadia Mono","Consolas",ui-monospace,monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  tab-size: 2;
+  white-space: pre;          /* preserve formatting */
+}
+/* Breadcrumbs sit under the site title, left-aligned */
+#breadcrumbs {
+  display: block;
+  margin-top: .25rem;
+  font-size: .9rem;
+  line-height: 1.3;
+  text-align: left;        /* prevent inheriting centered header styles */
+}
+
+#breadcrumbs a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.crumb-sep {
+  margin: 0 .4rem;
+  opacity: .6;
+}
+
+#site-footer { border-top: 1px solid var(--border-200, #e5e7eb); margin-top: 2rem; padding: 1rem 0; }
+#site-footer .footer-brand { margin: 0; font-size: .95rem; }
+.sr-only { position: absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }

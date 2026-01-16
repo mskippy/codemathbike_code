@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ICT 8 • 2.2 Excel: Class Data &amp; Charts</title>
+
+    <!-- Common CSS + JS -->
+    <link rel="stylesheet" href="/code/common/css/base.css">
+    <script src="/code/common/js/nav_data.js" defer></script>
+    <script src="/code/common/js/utils.js" defer></script>
+    <script src="/code/common/js/inject_partials.js" defer></script>
+    <script src="/code/common/js/nav_systems.js" defer></script>
+    <script src="/code/common/js/main.js" defer></script>
+
+    <style>
+      /* 2.2 Excel lesson – data tables */
+      .lesson-2-2 table.data-table {
+        width: 100%;
+        table-layout: fixed;        /* fixed column widths */
+        border-collapse: collapse;
+        font-size: 0.95rem;
+      }
+
+      .lesson-2-2 table.data-table th,
+      .lesson-2-2 table.data-table td {
+        border: 1px solid #ccc;     /* light grid lines */
+        padding: 0.4rem 0.6rem;
+        text-align: center;
+      }
+
+      .lesson-2-2 table.data-table th {
+        background: #f5f5f5;        /* light header background */
+        font-weight: 600;
+      }
+    </style>
+
+  </head>
+ 
+  <!-- Set body class to match course theme: ict8, ict9, dc1011, or none for purple -->
+  <body data-course="ict8">
+    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+    
+      <main id="content" 
+        role="main" 
+        class="lesson-2-2"
+        data-page-title="ICT 8 • Unit 2 • 2.2 Excel: Class Data &amp; Charts">
+
+        <!-- Lesson overview -->
+        <section class="card">
+          <h1>Overview</h1>
+          <p><strong>Big idea:</strong> Use Excel to work with small, realistic datasets so you can organize information, use formulas, and create charts that tell a story.</p>
+
+          <p>In this lesson you will:</p>
+          <ul>
+            <li>Create simple tables with clear headings.</li>
+            <li>Enter and edit text and numbers correctly.</li>
+            <li>Use basic formulas (sum, area, perimeter, squares).</li>
+            <li>Use AutoSum and AutoFill to work efficiently.</li>
+            <li>Sort data alphabetically and by number.</li>
+            <li>Create and label basic charts (column/bar).</li>
+            <li>Explain what your chart shows in your own words.</li>
+          </ul>
+
+          <p><strong>Important:</strong> You will hand in <em>one Excel workbook</em> with multiple sheets.  
+            Create a separate sheet for each part of the lesson:</p>
+            <ul>
+            <li><strong>Sheet 1</strong> – Mini Lesson Practice (optional but recommended)</li>
+            <li><strong>Sheet 2</strong> – Activity A: Class Demographics Data</li>
+            <li><strong>Sheet 3</strong> – Activity B: Triangle Classification Challenge</li>
+            </ul>
+
+        </section>
+
+        <!-- Mini Lesson 1 -->
+        <section class="card">
+          <h2>Mini Lesson 1 – Names &amp; Family Size</h2>
+          <p>In the first mini lesson, we’ll practice entering text and numbers, turning them into a table, sorting, and using AutoSum.</p>
+
+          <h3>Reference data – Family size</h3>
+          <p>Type this table into Excel exactly as shown. You can come back here later if you need to double-check the values.</p>
+
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th># of People in Family</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Ava</td><td>4</td></tr>
+                <tr><td>Ben</td><td>3</td></tr>
+                <tr><td>Chris</td><td>5</td></tr>
+                <tr><td>Diego</td><td>2</td></tr>
+                <tr><td>Emma</td><td>6</td></tr>
+                <tr><td>Farah</td><td>3</td></tr>
+                <tr><td>Jacob</td><td>1</td></tr>
+                <tr><td>Lily</td><td>4</td></tr>
+                <tr><td>Noah</td><td>2</td></tr>
+                <tr><td>Sofia</td><td>5</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>What we’ll practice together</h3>
+          <ul class="list-tight">
+            <li>Enter the data into Excel with two headers: <strong>Name</strong> and <strong># of People in Family</strong>.</li>
+
+            <li><strong>Sort</strong> the table by <em>Name</em> (A → Z).</li>
+            <li>Use <strong>AutoSum</strong> to find the <em>total number of people</em> across all families.</li>
+            <li>Sort by <strong># of People in Family</strong> (smallest → largest).</li>
+            <li>(Optional) Make a simple column/bar chart showing family size for each name.</li>
+          </ul>
+        </section>
+
+        <!-- Mini Lesson 2 -->
+        <section class="card">
+          <h2>Mini Lesson 2 – Rectangle Area &amp; Perimeter</h2>
+          <p>In the second mini lesson, we’ll use formulas to calculate the <strong>area</strong> and <strong>perimeter</strong> of rectangles, then sort and chart the results.</p>
+
+          <h3>Reference data – Rectangle dimensions</h3>
+          <p>Use this dataset for practice:</p>
+
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Rectangle</th>
+                  <th>Length (cm)</th>
+                  <th>Width (cm)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>R1</td><td>5</td><td>3</td></tr>
+                <tr><td>R2</td><td>8</td><td>2.5</td></tr>
+                <tr><td>R3</td><td>10</td><td>4</td></tr>
+                <tr><td>R4</td><td>6</td><td>6</td></tr>
+                <tr><td>R5</td><td>12</td><td>7</td></tr>
+                <tr><td>R6</td><td>4.5</td><td>3</td></tr>
+                <tr><td>R7</td><td>9</td><td>5</td></tr>
+                <tr><td>R8</td><td>7.5</td><td>2</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>What we’ll practice together</h3>
+          <ol>
+            <li>Add two new columns: <strong>Area</strong> and <strong>Perimeter</strong>.</li>
+            <li>In the first row of each column, enter formulas:
+              <ul class="list-tight">
+                <li>Area: <code>=B2*C2</code></li>
+                <li>Perimeter: <code>=2*(B2+C2)</code></li>
+              </ul>
+            </li>
+            <li>Use the fill handle to <strong>AutoFill</strong> the formulas down the column.</li>
+            <li><strong>Sort</strong> the table by Area (smallest → largest).</li>
+            <li>Insert a <strong>Column chart</strong> that compares rectangle areas.</li>
+            <li>Add a clear <strong>chart title</strong> and labels so someone else can understand it.</li>
+          </ol>
+        </section>
+
+        <!-- Activity A -->
+        <section class="card">
+          <h2>Activity A – Class Demographics Data</h2>
+         <p><strong>Create a new sheet for this activity.</strong>  
+            Right-click the bottom tab → select <em>Insert</em> or <em>New Sheet</em> → rename it <strong>"Activity A – Class Data"</strong>.</p>
+
+            <p>Now it’s your turn to work with <strong>real data from our class</strong>. You will enter the names of your classmates in a table and record their results. You'll take that information and create a summary of the class demographics.</p>
+
+
+          <h3>Possible data categories</h3>
+          <ul class="list-tight">
+            <li>Favourite fruit</li>
+            <li>Favourite sport</li>
+            <li>Daily screen time</li>
+            <li>Device used most (phone / tablet / laptop)</li>
+            <li>Favourite video game</li>
+            <li>Favourite school subject</li>
+          </ul>
+
+          <h3>Your tasks</h3>
+          <ol>
+            <li>Enter the class data into Excel and turn it into a <strong>clean table</strong> with headings.</li>
+            <li>Create <strong>1–2 charts</strong> that show something interesting about our class.</li>
+            <li>Write a short summary (2–4 sentences) explaining what you notice.
+              <p class="example"><strong>Example:</strong> “More students prefer basketball than soccer. I expected soccer to be more popular, so this surprised me.”</p>
+            </li>
+
+          </ol>
+        </section>
+
+        <!-- Activity B -->
+        <section class="card">
+          <h2>Activity B – Triangle Classification Challenge</h2>
+          <p><strong>Create a new sheet for this activity.</strong>  
+            Right-click the bottom tab → <em>New Sheet</em> → rename it <strong>"Activity B – Triangles"</strong>.</p>
+
+            <p>In this activity, you'll use Excel to determine the <strong>area</strong> and <strong>perimeter</strong> of the following triangles.</p>
+
+          <br>
+          <h3>Your Task</h3>
+          <ol>
+            <li>Add two new columns: <strong>Perimeter</strong> and <strong>Area</strong>.
+            <ul>
+              <li>Area is calculated by multiplying the base and the height and dividing by 2.</li>
+              <li>Perimeter is calculated by finding the sum of the base and the other two sides.</li>
+            </ul></li>
+                        <li>Use the fill handle to <strong>AutoFill</strong> any formulas you created.</li>
+            <li>Sort the table by Area (smallest → largest).</li>
+            <li>Insert a <strong>Column chart</strong> that compares triangle areas.</li>
+            <li>Add a clear <strong>chart title</strong> and labels so someone else can understand it.</li>
+          </ol>
+       
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Triangle</th>
+                  <th>Base (cm)</th>
+                  <th>Height (cm)</th>
+                  <th>Side 2 (cm)</th>
+                  <th>Side 3 (cm)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>T1</td><td>6</td><td>4</td><td>5</td><td>7</td></tr>
+                <tr><td>T2</td><td>8</td><td>3</td><td>6</td><td>7</td></tr>
+                <tr><td>T3</td><td>5</td><td>5</td><td>4</td><td>6</td></tr>
+                <tr><td>T4</td><td>10</td><td>4.5</td><td>7</td><td>9</td></tr>
+                <tr><td>T5</td><td>7</td><td>6</td><td>5</td><td>8</td></tr>
+                <tr><td>T6</td><td>9</td><td>5</td><td>7</td><td>10</td></tr>
+                <tr><td>T7</td><td>4.5</td><td>3.5</td><td>4</td><td>5</td></tr>
+                <tr><td>T8</td><td>12</td><td>6</td><td>9</td><td>11</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <br>
+          <details>
+            <summary><strong>What kind of triangle is it? - Extension</strong></summary>
+
+            <p>In this task you will use Excel and math to determine the different types of triangles.</p>
+
+            <h3>The triangle rule (for c as the longest side)</h3>
+          <ul class="list-tight">
+            <li>If <code>a^2 + b^2 &gt; c^2</code> → the triangle is <strong>acute</strong>.</li>
+            <li>If <code>a^2 + b^2 = c^2</code> → the triangle is <strong>right</strong>.</li>
+            <li>If <code>a^2 + b^2 &lt; c^2</code> → the triangle is <strong>obtuse</strong>.</li>
+          </ul>
+
+          <h3>What Kind of Triangle - dataset</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+
+              <thead>
+                <tr>
+                  <th>Triangle</th>
+                  <th>Side A (cm)</th>
+                  <th>Side B (cm)</th>
+                  <th>Side C (cm)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>T1</td><td>5</td><td>5</td><td>5</td></tr>
+                <tr><td>T2</td><td>3</td><td>4</td><td>5</td></tr>
+                <tr><td>T3</td><td>7</td><td>8</td><td>9</td></tr>
+                <tr><td>T4</td><td>6</td><td>6</td><td>9</td></tr>
+                <tr><td>T5</td><td>8</td><td>15</td><td>17</td></tr>
+                <tr><td>T6</td><td>4</td><td>7</td><td>8</td></tr>
+                <tr><td>T7</td><td>10</td><td>10</td><td>14</td></tr>
+                <tr><td>T8</td><td>9</td><td>12</td><td>15</td></tr>
+                <tr><td>T9</td><td>5</td><td>6</td><td>10</td></tr>
+                <tr><td>T10</td><td>6</td><td>8</td><td>11</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <br>
+
+          <h3>Your tasks</h3>
+          <ol>
+            <li>Enter the triangle data into Excel as a table.</li>
+            <li>Add these new columns: <strong>a^2</strong>, <strong>b^2</strong>, <strong>c^2</strong>, <strong>a^2 + b^2</strong>, and <strong>Triangle Type</strong>.</li>
+            <li>Use formulas like:
+              <ul class="list-tight">
+                <li><code>=B2^2</code></li>
+                <li><code>=C2^2</code></li>
+                <li><code>=D2^2</code></li>
+                <li><code>=B2^2+C2^2</code></li>
+              </ul>
+            </li>
+            <li>Use the rule above to decide if each triangle is <strong>acute</strong>, <strong>right</strong>, or <strong>obtuse</strong>, and type that into the Triangle Type column.</li>
+            <li><strong>Sort</strong> your table by Triangle Type.</li>
+            <li>(Optional) Create a chart that compares perimeters or the largest sides.</li>
+          </ol>
+          </details>
+
+        </section>
+
+        <!-- Reflection / Hand-in -->
+        <section class="card">
+            <h2>Reflection &amp; Hand-In</h2>
+
+            <p>Your final Excel file should include <strong>one workbook with multiple sheets</strong>:</p>
+
+            <ul class="list-tight">
+            <li><strong>Sheet 1 (optional):</strong> Mini Lesson practice</li>
+            <li><strong>Sheet 2:</strong> Activity A – Class Data table + chart(s)</li>
+            <li><strong>Sheet 3:</strong> Activity B – Triangle table + chart(s)</li>
+            <li><strong>Sheet 4:</strong> Activity B (Extension) - Triangle Table and Triangle Type column (+ chart if included)</li>
+            </ul>
+
+            <p>Write a short reflection (3–5 sentences) explaining:</p>
+            <ul class="list-tight">
+            <li>What you learned about using Excel</li>
+            <li>Which activity you found most interesting and why</li>
+            <li>How charts helped you understand your data</li>
+            </ul>
+
+            <p>Save and upload your file to the Teams assignment:</p>
+            <p><code>2.2_Excel_Class_Data_YourName.xlsx</code></p>
+
+        </section>
+
+      </main>
+    
+      <!-- Lesson-specific right rail -->
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card">
+          <strong>What you need</strong>
+          <ul class="list-tight">
+            <li>Computer with Excel or Google Sheets</li>
+            <li>Access to class survey results (from your teacher)</li>
+            <li>This lesson page open for reference data</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>File naming</strong>
+          <ul class="list-tight">
+            <li><code>2.2_Excel_Class_Data_YourName.xlsx</code></li>
+          </ul>
+          <p>Save this where you can easily find it when you upload to Teams.</p>
+        </div>
+
+        <div class="card">
+          <strong>Checklist</strong>
+          <ul class="list-tight">
+            <li>Mini Lesson 1: family size table entered</li>
+            <li>Mini Lesson 2: rectangle table with area &amp; perimeter</li>
+            <li>Activity A: class data table + chart(s)</li>
+            <li>Activity B: triangle table + Triangle Type filled in</li>
+            <li>Reflection (3–5 sentences) written</li>
+            <li>Workbook saved with correct file name</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    <footer id="site-footer" data-partial="/code/common/partials/footer.html"></footer>
+  </body>
+</html>

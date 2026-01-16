@@ -1,0 +1,439 @@
+<!-- 5.3–5.4 Building Our Website Pages (Combined Lesson) -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DigiComm 10/11 • Unit 5 • 5.3 Building Our Website Pages</title>
+
+    <!-- Common CSS + JS -->
+    <link rel="stylesheet" href="/code/common/css/base.css">
+    <script src="/code/common/js/nav_data.js" defer></script>
+    <script src="/code/common/js/utils.js" defer></script>
+    <script src="/code/common/js/inject_partials.js" defer></script>
+    <script src="/code/common/js/nav_systems.js" defer></script>
+    <script src="/code/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="dc1011">
+    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" role="main"
+        data-page-title="DigiComm 10/11 • Unit 5 • 5.3 Building Our Website Pages">
+
+        <!-- Overview -->
+        <section class="card">
+          <h1>Overview</h1>
+
+          <p>
+            <strong>Big idea:</strong>
+            Today you’ll build the foundation of your website:
+            <strong>create your folder</strong>, <strong>download the starter files</strong>,
+            and <strong>start adding your content</strong>.
+          </p>
+
+          <p>
+            <strong>Today is about structure and consistency — not styling.</strong>
+            Your website should <em>work</em> first. Next lesson we’ll make it look intentional.
+          </p>
+
+          <p><strong>Today’s goal:</strong> Leave class with:</p>
+          <ul>
+            <li>A correctly saved project folder on your <strong>H: Drive</strong></li>
+            <li>Four working pages (<code>index</code>, <code>about</code>, <code>gallery</code>, <code>contact</code>)</li>
+            <li>Your content from 5.2 started inside the templates</li>
+            <li>A website you can preview in a browser</li>
+          </ul>
+
+          <p>
+            <strong>You should have completed:</strong>
+            5.1 Roadmap + Plan and 5.2 Website Content
+          </p>
+        </section>
+
+        <!-- Step 0: Folder location rule -->
+        <section class="card">
+          <h2>Before you start: Where your website folder lives</h2>
+
+          <p>
+            At school, not all folders work the same way. For this unit, your website must live
+            in your <strong>H: Drive</strong> so it’s accessible through the school file system.
+          </p>
+
+          <p><strong>Rule:</strong> If it’s part of your website, it lives here:</p>
+
+          <pre><code>H: Drive
+└── DigiComm1011
+    └── your_project_folder</code></pre>
+
+          <p class="note">
+            <strong>File naming rules:</strong> lowercase only • no spaces (use underscores) • keep names short
+          </p>
+        </section>
+
+        <!-- Step 1: Create project folder -->
+        <section class="card">
+          <h2>Step 1 — Create your project folder</h2>
+
+          <ol>
+            <li>
+              Open File Explorer and go to:
+              <code>H: Drive → DigiComm1011</code>
+            </li>
+            <li>
+              Create one folder for your website:
+              <ul class="list-tight">
+                <li>Lowercase</li>
+                <li>No spaces (use underscores)</li>
+                <li>Short and clear</li>
+              </ul>
+              <p class="note">
+                Examples: <code>portfolio_site</code>, <code>music_blog</code>, <code>club_site</code>
+              </p>
+            </li>
+          </ol>
+
+          <details>
+            <summary><strong>Help: If you don’t see your H: Drive</strong></summary>
+            <ul class="list-tight">
+              <li>Restart File Explorer</li>
+              <li>Log out and back in</li>
+              <li>Ask the teacher for help (your drive may not be mounted)</li>
+            </ul>
+          </details>
+        </section>
+
+        <!-- Step 2: Choose nav + download templates -->
+        <section class="card">
+          <h2>Step 2 — Choose a navigation layout (and download your starter files)</h2>
+
+          <p>
+            You will choose <strong>one</strong> navigation layout and use it on
+            <strong>every page</strong> of your site.
+          </p>
+
+          <p class="note">
+            <strong>Important:</strong> Choose one layout and use it everywhere.
+            Do <strong>not</strong> mix navigation styles.
+          </p>
+
+          <details>
+            <summary><strong>Option A — Sidebar Navigation (Recommended)</strong></summary>
+
+            <figure>
+              <img
+                src="/code/dc1011/unit5/lesson4/sidebar_nav_eg.png"
+                alt="Website layout with sidebar navigation"
+                loading="lazy">
+              <figcaption>
+                Example layout with navigation on the side and content beside it.
+                <em><a href="https://www.navbar.gallery/type/side-bar" target="_blank" rel="noopener">
+                  Sidebar navigation examples</a></em>
+              </figcaption>
+            </figure>
+
+            <ul class="list-tight">
+              <li>Navigation links appear on the side</li>
+              <li>Content appears beside the navigation</li>
+              <li>Easier to keep consistent across pages</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary><strong>Option B — Navigation Under the Header</strong></summary>
+
+            <figure>
+              <img
+                src="/code/dc1011/unit5/lesson4/top_nav_eg.png"
+                alt="Website layout with navigation under header"
+                loading="lazy">
+              <figcaption>
+                Example layout with navigation under the header.
+                <em><a href="https://www.navbar.gallery/type/static" target="_blank" rel="noopener">
+                  Top navigation examples</a></em>
+              </figcaption>
+            </figure>
+
+            <ul class="list-tight">
+              <li>Header at the top</li>
+              <li>Navigation directly underneath</li>
+              <li>Clean and simple layout</li>
+            </ul>
+          </details>
+
+          <p>
+            <strong>Download your starter files</strong> using the links in the <strong>right rail</strong>.
+            Save all files directly into your <strong>project folder</strong>.
+          </p>
+
+          <ul class="list-tight">
+            <li>You should end up with <strong>5 files</strong> in your folder: 4 HTML pages + <code>style.css</code></li>
+            <li>Do not rename anything yet</li>
+          </ul>
+
+          <p class="note">
+            Extra inspiration (optional): <a href="https://www.navbar.gallery/" target="_blank" rel="noopener">Navbar Gallery</a>
+          </p>
+        </section>
+
+        <!-- Step 3: Open in VS Code -->
+        <section class="card">
+          <h2>Step 3 — Open your folder in VS Code</h2>
+
+          <ol>
+            <li>Open VS Code</li>
+            <li>Go to <strong>File → Open Folder…</strong></li>
+            <li>Select your <strong>project folder</strong> (not individual files)</li>
+          </ol>
+
+          <p class="note">
+            <strong>Rule:</strong> Open folders, not files. This keeps your website organized and prevents broken links.
+          </p>
+
+          <details>
+            <summary><strong>Help: VS Code setup guide</strong></summary>
+            <p>
+              If you’re stuck on opening folders or using Live Server, review this guide:
+            </p>
+            <p>
+              <a href="https://codemathbike.ca/code/ict8/unit4/"
+                 target="_blank" rel="noopener">
+                VS Code Setup Guide (CodeMathBike)
+              </a>
+            </p>
+          </details>
+        </section>
+
+        <!-- Step 4: Preview -->
+        <section class="card">
+          <h2>Step 4 — Preview your website in a browser</h2>
+
+          <p>Use one of these options:</p>
+          <ul class="list-tight">
+            <li><strong>Live Server</strong> (recommended)</li>
+            <li><strong>Live Preview</strong></li>
+            <li>Or double-click <code>index.html</code> to open it in a browser</li>
+          </ul>
+
+          <p><strong>Quick test:</strong></p>
+          <ul class="list-tight">
+            <li>If the page looks styled (not plain), your CSS link is working ✅</li>
+            <li>If it looks plain, something is missing or in the wrong folder ⛔</li>
+          </ul>
+
+          <p class="note">
+            <strong>Workflow:</strong> change → save → refresh → check
+          </p>
+        </section>
+
+        <!-- Mini semantic map (light) -->
+        <section class="card">
+          <h2>Mini structure check (keep it simple)</h2>
+
+          <p>
+            Before you start typing a lot of content, make sure you know what each page area is for:
+          </p>
+
+          <ul class="list-tight">
+            <li><strong>Header</strong> = site name/logo/tagline</li>
+            <li><strong>Nav</strong> = links to your pages</li>
+            <li><strong>Main</strong> = your actual page content</li>
+            <li><strong>Sections</strong> = grouped chunks of content</li>
+            <li><strong>Footer</strong> = credits / contact / socials (later)</li>
+          </ul>
+
+          <p class="note">
+            Your Canva mock-up from 5.2 is your guide for what belongs on each page.
+          </p>
+        </section>
+
+        <!-- Editing safely + adding content -->
+        <section class="card">
+          <h2>Step 5 — Start adding your content (this is the main work today)</h2>
+
+          <p>
+            Right now, everyone is using the <strong>same templates</strong>.
+            That means websites will look similar at first — and that’s exactly what we want.
+          </p>
+
+          <p>
+            Your job today is to <strong>place your content into the correct sections</strong>.
+            Styling comes next lesson.
+          </p>
+
+          <h3>✅ Safe to edit</h3>
+          <ul class="list-tight">
+            <li>Text between tags (example: <code>&lt;p&gt;this text&lt;/p&gt;</code>)</li>
+            <li>Headings (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>)</li>
+            <li>Paragraphs and lists</li>
+            <li>The page title inside <code>&lt;title&gt;</code></li>
+          </ul>
+
+          <h3>⛔ Do not edit (yet)</h3>
+          <ul class="list-tight">
+            <li>Navigation links inside <code>&lt;nav&gt;</code></li>
+            <li>File names inside links (<code>href="about.html"</code>)</li>
+            <li>Main structure tags (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;footer&gt;</code>)</li>
+            <li>CSS file links (<code>href="style.css"</code>)</li>
+            <li>Layout structure (wrappers like <code>.layout</code>, <code>&lt;aside&gt;</code>, <code>&lt;main&gt;</code>)</li>
+          </ul>
+
+          <h3>Where most of your typing happens</h3>
+          <pre><code>&lt;main&gt;
+  &lt;h2&gt;Page title&lt;/h2&gt;
+
+  &lt;section&gt;
+    &lt;h3&gt;Section heading&lt;/h3&gt;
+    &lt;p&gt;Replace this text with your content from 5.2.&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/main&gt;</code></pre>
+
+          <h3>Use your Canva mock-up as a guide</h3>
+          <ul class="list-tight">
+            <li>Match your page sections to your Canva plan</li>
+            <li>Replace placeholder text with your real writing</li>
+            <li>If you need more sections, copy/paste an existing <code>&lt;section&gt;</code> block</li>
+          </ul>
+
+          <p class="note">
+            <strong>Reminder:</strong> Don’t worry if it doesn’t look like Canva yet.
+            Next lesson you’ll use CSS to format and customize.
+          </p>
+        </section>
+
+        <!-- Quick troubleshooting -->
+        <section class="card">
+          <h2>Quick troubleshooting</h2>
+
+          <details>
+            <summary><strong>My page looks plain (no styling)</strong></summary>
+            <ul class="list-tight">
+              <li>Check that <code>style.css</code> is in the same folder as your HTML files</li>
+              <li>Make sure the CSS link in the template was not changed</li>
+              <li>Hard refresh the browser (Ctrl + Shift + R)</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary><strong>My links aren’t working / I get a “file not found” error</strong></summary>
+            <ul class="list-tight">
+              <li>Make sure you did not rename files after linking</li>
+              <li>Check spelling: <code>about.html</code> is not the same as <code>About.html</code></li>
+              <li>Keep everything lowercase</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary><strong>My changes aren’t showing up</strong></summary>
+            <ul class="list-tight">
+              <li>Did you press <strong>Save</strong> in VS Code?</li>
+              <li>Did you refresh the browser?</li>
+              <li>Are you editing the correct file?</li>
+            </ul>
+          </details>
+        </section>
+
+        <!-- Next up -->
+        <section class="card">
+          <h2>Next up</h2>
+          <p>
+            Once your site pages are working and your content is in place,
+            it’s time to make your design intentional.
+          </p>
+          <ul class="list-tight">
+            <li><strong>5.4 — Formatting Our Website</strong></li>
+          </ul>
+        </section>
+      </main>
+
+      <!-- Right rail -->
+      <aside id="right-rail" aria-label="Resources">
+        <!-- What students need -->
+        <div class="card">
+          <strong>What you need today</strong>
+          <ul class="list-tight">
+            <li>Your website content draft (from 5.2)</li>
+            <li>H: Drive access</li>
+            <li>VS Code + browser preview</li>
+          </ul>
+        </div>
+
+        <!-- Folder location -->
+        <div class="card">
+          <strong>Folder location</strong>
+          <pre><code>H:\DigiComm1011\your_project_folder</code></pre>
+        </div>
+
+        <!-- Navigation rule -->
+        <div class="card">
+          <strong>Navigation rule</strong>
+          <p class="small-text">
+            Choose <strong>one</strong> navigation layout and use it on
+            <strong>every page</strong>.
+          </p>
+          <p class="note small-text">Do not mix layouts.</p>
+        </div>
+
+        <!-- Sidebar templates -->
+        <div class="card">
+          <details>
+            <summary><strong>Sidebar Navigation Templates</strong></summary>
+            <ul class="list-tight">
+              <li><a href="/code/dc1011/unit5/lesson4/side_nav_templates/index.html" download>index.html</a></li>
+              <li><a href="/code/dc1011/unit5/lesson4/side_nav_templates/about.html" download>about.html</a></li>
+              <li><a href="/code/dc1011/unit5/lesson4/side_nav_templates/gallery.html" download>gallery.html</a></li>
+              <li><a href="/code/dc1011/unit5/lesson4/side_nav_templates/contact.html" download>contact.html</a></li>
+              <li><a href="/code/dc1011/unit5/lesson4/side_nav_templates/style.css" download>style.css</a></li>
+            </ul>
+            <p class="small-text muted">
+              Download all files and save them into your project folder.
+            </p>
+          </details>
+        </div>
+
+        <!-- Top nav templates -->
+        <div class="card">
+          <details>
+            <summary><strong>Top Navigation Templates</strong></summary>
+            <ul class="list-tight">
+              <li><a href="/code/dc1011/unit5/lesson4/top_nav_templates/index.html" download>index.html</a></li>
+              <li><a href="/code/dc1011/unit5/lesson4/top_nav_templates/about.html" download>about.html</a></li>
+              <li><a href="/code/dc1011/unit5/lesson4/top_nav_templates/gallery.html" download>gallery.html</a></li>
+              <li><a href="/code/dc1011/unit5/lesson4/top_nav_templates/contact.html" download>contact.html</a></li>
+              <li><a href="/code/dc1011/unit5/lesson4/top_nav_templates/style.css" download>style.css</a></li>
+            </ul>
+            <p class="small-text muted">
+              Use these only if you chose top navigation.
+            </p>
+          </details>
+        </div>
+
+        <!-- File rules -->
+        <div class="card">
+          <strong>File rules</strong>
+          <ul class="list-tight">
+            <li>Lowercase filenames only</li>
+            <li>No spaces (use underscores)</li>
+            <li>Same nav on every page</li>
+            <li>Do not rename files after linking</li>
+          </ul>
+        </div>
+
+        <!-- Quick reminders -->
+        <div class="card">
+          <strong>Quick reminders</strong>
+          <ul class="list-tight">
+            <li>Open folders, not files</li>
+            <li>Save often</li>
+            <li>If something breaks: check file names first</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/code/common/partials/footer.html"></footer>
+  </body>
+</html>

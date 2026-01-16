@@ -1,0 +1,317 @@
+<!-- 3.6 Website Design -->
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ICT 9 • 3.6 Website Design</title>
+
+    <!-- Common CSS + JS -->
+    <link rel="stylesheet" href="/code/common/css/base.css">
+    <script src="/code/common/js/nav_data.js" defer></script>
+    <script src="/code/common/js/utils.js" defer></script>
+    <script src="/code/common/js/inject_partials.js" defer></script>
+    <script src="/code/common/js/nav_systems.js" defer></script>
+    <script src="/code/common/js/main.js" defer></script>
+  </head>
+ 
+  <!-- Set body class to match course theme: ict8, ict9, dc1011, or none for purple -->
+  <body data-course="ict9">
+    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+    
+      <main id="content" role="main" data-page-title="ICT 9 • Unit 3 • 3.6 Website Design">
+
+        <!-- Lesson overview -->
+        <section class="card">
+          <h1>Overview</h1>
+          <p><strong>Big idea:</strong> Build a <strong>multi-page promotional website</strong> for your game using VS Code and Microsoft Copilot, and apply your branding consistently across all pages.</p>
+
+          <p>In this lesson you will:</p>
+          <ul>
+            <li>Create <strong>at least three pages</strong> for your game website.</li>
+            <li>Use <strong>Microsoft Copilot</strong> in your browser to help you write HTML and CSS.</li>
+            <li>Apply your <strong>logo, colours, fonts, poster, banner, and screenshots</strong> across the site.</li>
+            <li>Organize your content so visitors can easily understand and get excited about your game.</li>
+          </ul>
+
+          <p><strong>You should have completed:</strong> 3.2 Game Branding • 3.3 Style Guide • 3.4 Poster &amp; Banner Design • 3.5 Game Trailer Production (draft or final).</p>
+        </section>
+
+        <!-- Website creation basics -->
+        <section class="card">
+          <h2>Website Creation Basics (Using Microsoft Copilot + VS Code)</h2>
+          <p>You will build your website in <strong>VS Code</strong> and use <strong>Microsoft Copilot</strong> in your browser to help you write and improve your HTML/CSS. Copilot is a helper — you are still the designer.</p>
+
+          <details>
+            <summary><strong>1. Set up your website folder</strong></summary>
+            <p>Create a folder structure for a multi-page site:</p>
+<pre><code>GameWebsite
+│
+├── index.html          (Home / Overview / Trailer)
+├── gallery.html        (Screenshots / Poster / Banner)
+├── how_to_play.html    (Controls / Goals / Tips)
+├── style.css           (shared styling)
+└── images
+      ├── logo.png
+      ├── banner.png
+      ├── poster.png
+      ├── screenshot1.png
+      ├── screenshot2.png
+      └── ...
+</code></pre>
+            <ol>
+              <li>Create this structure on your <strong>H: drive</strong> or OneDrive.</li>
+              <li>Put your <strong>logo, banner, poster, and screenshots</strong> inside the <code>images</code> folder.</li>
+              <li>Open the <strong>GameWebsite</strong> folder in VS Code.</li>
+            </ol>
+            <p>You can choose different page names (for example <code>about.html</code>), but you must have <strong>at least three HTML pages</strong> that all share the same <code>style.css</code>.</p>
+          </details>
+
+          <details>
+            <summary><strong>2. Plan your site structure</strong></summary>
+            <p>Before asking Copilot for code, decide what each page will do. A simple structure:</p>
+            <ul class="list-tight">
+              <li><strong>index.html</strong> – Home
+                <ul class="list-tight">
+                  <li>Navigation bar</li>
+                  <li>Hero section (banner, logo, tagline)</li>
+                  <li>Short “About the Game” section</li>
+                  <li>Trailer section (embedded video or placeholder)</li>
+                </ul>
+              </li>
+              <li><strong>gallery.html</strong> – Gallery
+                <ul class="list-tight">
+                  <li>Screenshots</li>
+                  <li>Poster and/or banner</li>
+                  <li>Short captions for images</li>
+                </ul>
+              </li>
+              <li><strong>how_to_play.html</strong> – How to Play &amp; Credits
+                <ul class="list-tight">
+                  <li>Controls and main goal</li>
+                  <li>Tips for success</li>
+                  <li>Your name(s) and any asset credits</li>
+                </ul>
+              </li>
+            </ul>
+            <p>Quickly sketch or list where your trailer, poster, and key information will go.</p>
+          </details>
+
+          <details>
+            <summary><strong>3. Use Copilot for your home page (index.html)</strong></summary>
+            <ol>
+              <li>Open <strong>Microsoft Copilot</strong> in your browser (for example in Edge).</li>
+              <li>Ask for a simple, beginner-friendly home page. For example:</li>
+            </ol>
+<pre><code>"Create an HTML5 home page for my 2D platformer game.
+
+It should include:
+- a navigation bar with links to Home, Gallery, and How to Play
+- a hero section with a banner image (images/banner.png), game title, and tagline
+- an About the Game section with a heading and placeholder paragraph
+- a Trailer section with a heading and a placeholder for an embedded video
+
+Link to a CSS file called style.css.
+Use simple, clean HTML that a beginner can understand."
+</code></pre>
+            <ol start="3">
+              <li>Copy Copilot’s HTML into <code>index.html</code> in VS Code.</li>
+              <li>Save and open <code>index.html</code> in your browser to preview.</li>
+              <li>If the code is too complex, ask Copilot: <em>“Rewrite this HTML to be simpler and more beginner-friendly.”</em></li>
+            </ol>
+          </details>
+
+          <details>
+            <summary><strong>4. Use Copilot for your other pages</strong></summary>
+            <p>Repeat the process for <code>gallery.html</code> and <code>how_to_play.html</code>.</p>
+
+            <p><strong>Gallery page prompt example:</strong></p>
+<pre><code>"Create an HTML gallery page for my game.
+
+Include:
+- the same navigation bar as my home page (Home, Gallery, How to Play)
+- a heading 'Gallery'
+- a grid of 4 images using files:
+  images/screenshot1.png, images/screenshot2.png,
+  images/screenshot3.png, images/poster.png
+- short captions under each image
+
+Link to style.css and keep the HTML simple."
+</code></pre>
+
+            <p><strong>How to Play page prompt example:</strong></p>
+<pre><code>"Create an HTML page called How to Play for my game.
+
+Include:
+- the same navigation bar as my other pages
+- sections for: Controls, Game Goal, Tips, and Credits
+
+Use clean HTML and link to style.css."
+</code></pre>
+
+            <p>Copy the code into the correct file in VS Code, then test that the navigation links move between all three pages.</p>
+          </details>
+
+          <details>
+            <summary><strong>5. Ask Copilot for shared CSS (style.css)</strong></summary>
+            <p>Once your pages and navigation are working, use Copilot to help with design.</p>
+            <p><strong>CSS prompt example:</strong></p>
+<pre><code>"Write a CSS file called style.css for my multi-page game website.
+
+Requirements:
+- Use a sans-serif font
+- Background colour: #F2F7FF
+- Primary colour: #2264F8
+- Accent colour: #F97316
+- Style the navigation bar so links are in a row, with spacing and hover styles
+- Limit the main content width to about 900px and center it on the page
+- Add spacing between sections and make images responsive
+
+Keep the CSS simple and suitable for a beginner."
+</code></pre>
+            <ol>
+              <li>Paste the CSS into <code>style.css</code> in VS Code.</li>
+              <li>Refresh your pages in the browser to see the changes.</li>
+              <li>If something doesn’t match your style guide, ask Copilot to adjust the CSS (for example, darker headings, larger <code>h1</code>, more padding).</li>
+            </ol>
+          </details>
+
+          <details>
+            <summary><strong>6. Your responsibility (not Copilot’s)</strong></summary>
+            <ul class="list-tight">
+              <li>Choose page names and sections that make sense for your game.</li>
+              <li>Make sure <strong>all pages</strong> share the same navigation and branding.</li>
+              <li>Rewrite text so it sounds like <strong>your voice</strong>, not an AI.</li>
+              <li>Check that every link and image works correctly.</li>
+              <li>Ask Copilot to explain or simplify code you don’t understand.</li>
+            </ul>
+          </details>
+        </section>
+
+        <!-- Activity A: Plan multi-page site -->
+        <section class="card">
+          <h2>Activity A – Plan Your Multi-Page Site</h2>
+          <ol>
+            <li>
+              <strong>Confirm your site map.</strong><br>
+              At minimum:
+              <ul class="list-tight">
+                <li><strong>index.html</strong> – Home / Overview / Trailer</li>
+                <li><strong>gallery.html</strong> – Screenshots / Poster / Banner</li>
+                <li><strong>how_to_play.html</strong> – Controls / Goal / Tips / Credits</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Decide where each asset will go.</strong><br>
+              Answer:
+              <ul class="list-tight">
+                <li>Which page will show the <strong>trailer</strong>?</li>
+                <li>Where will your <strong>poster and banner</strong> appear?</li>
+                <li>Which page will list your <strong>controls and credits</strong>?</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Check your navigation.</strong><br>
+              Make sure that every page includes the same navigation bar with working links to Home, Gallery, and How to Play.
+            </li>
+          </ol>
+        </section>
+
+        <!-- Activity B: Build & style -->
+        <section class="card">
+          <h2>Activity B – Build &amp; Style Your Pages</h2>
+          <ol>
+            <li>
+              <strong>Set up headings and content on each page.</strong><br>
+              <ul class="list-tight">
+                <li>Add clear headings (for example: <em>Gallery</em>, <em>How to Play</em>, <em>Credits</em>).</li>
+                <li>Write your <strong>About</strong> and <strong>How to Play</strong> text in your own words.</li>
+                <li>List your <strong>controls</strong> and <strong>game goal</strong> clearly.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Add images and media.</strong><br>
+              <ul class="list-tight">
+                <li>Insert your <strong>logo, poster, banner</strong>, and <strong>screenshots</strong> using correct file names.</li>
+                <li>Place your <strong>trailer</strong> or a “Trailer coming soon” placeholder on the home page.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Refine the layout with CSS.</strong><br>
+              Use <code>style.css</code> to adjust:
+              <ul class="list-tight">
+                <li>Font families and sizes.</li>
+                <li>Colours that match your style guide.</li>
+                <li>Spacing (padding/margins) between sections.</li>
+                <li>Image sizes so nothing looks stretched or squished.</li>
+              </ul>
+              <p>If you get stuck, you can paste a small part of your CSS into Copilot and ask it to:
+
+<pre><code>"Improve this CSS to center the content, add more spacing, 
+and keep it simple for a beginner."</code></pre>
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <!-- Activity C: Branding & quality check -->
+        <section class="card">
+          <h2>Activity C – Branding &amp; Quality Check</h2>
+          <p>Use this checklist to review your site before handing it in:</p>
+          <ul>
+            <li><strong>Pages:</strong> You have at least <strong>three</strong> HTML pages.</li>
+            <li><strong>Navigation:</strong> All pages share the same navigation bar and links work.</li>
+            <li><strong>Branding:</strong> Logo, colours, and fonts match your <strong>style guide</strong>.</li>
+            <li><strong>Assets:</strong> Poster, banner, screenshots, and trailer (or placeholder) appear somewhere on the site.</li>
+            <li><strong>Text:</strong> All writing is in your own words and makes sense.</li>
+            <li><strong>Layout:</strong> Content is readable, spaced out, and not crowded.</li>
+          </ul>
+          <p>Make any final changes using VS Code, and use Copilot only when you need suggestions or improvements.</p>
+        </section>
+
+        <!-- Hand-in -->
+        <section class="card">
+          <h2>Hand-In Checklist</h2>
+          <p>When you are ready to submit your website in Teams, make sure:</p>
+          <ul>
+            <li>Your <strong>GameWebsite</strong> folder contains all of your pages, <code>style.css</code>, and the <code>images</code> folder.</li>
+            <li>All links and images work when you open the site in your browser.</li>
+            <li>Your branding is consistent and your pages match the requirements of this lesson.</li>
+          </ul>
+          <p>Your teacher will let you know whether to upload a <strong>ZIP folder</strong> or share a <strong>OneDrive / H: drive</strong> link for your GameWebsite folder.</p>
+        </section>
+
+      </main>
+    
+      <!-- Lesson-specific right rail -->
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card">
+          <strong>What you need</strong>
+          <ul class="list-tight">
+            <li>Logo &amp; style guide</li>
+            <li>Poster &amp; banner PNGs</li>
+            <li>Game screenshots</li>
+            <li>Trailer (or draft)</li>
+            <li>VS Code + Copilot</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Multi-page checklist</strong>
+          <ul class="list-tight">
+            <li>3+ HTML pages</li>
+            <li>Shared CSS</li>
+            <li>Nav on each page</li>
+            <li>Links working</li>
+          </ul>
+        </div>
+     </aside>
+    </div>
+    
+    <footer id="site-footer" data-partial="/code/common/partials/footer.html"></footer>
+  </body>
+</html>

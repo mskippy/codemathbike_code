@@ -1,0 +1,233 @@
+<!-- v2 – Oct 2025 -->
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ICT 8 • 3.2 Adding the Player</title>
+    <link rel="stylesheet" href="/code/common/css/base.css">
+    <script src="/code/common/js/nav_data.js" defer></script>
+    <script src="/code/common/js/utils.js" defer></script>
+    <script src="/code/common/js/inject_partials.js" defer></script>
+    <script src="/code/common/js/nav_systems.js" defer></script>
+    <script src="/code/common/js/main.js" defer></script>
+  </head>
+ 
+  <!-- Set body class to match course theme: ict8, ict9, dc1011, or none for purple -->
+  <body data-course="ict8">
+    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+    
+      <main id="content" role="main" data-page-title="ICT 8 • Unit 3 • Lesson 2">
+
+        <section class="card">
+          <h2>Overview</h2>
+          <p>
+            In this lesson, we’ll bring our game to life by adding a controllable player ship. 
+            You’ll learn how to create the player object, set up movement, keep the ship on screen, 
+            and make it fire bullets toward the mouse cursor. By the end, your game will have a 
+            player that can move, aim, and shoot — the foundation for all future gameplay.
+          </p>
+        </section>
+        
+        <!-- Step 1 -->
+        <section class="card">
+          <h2>Step 1 – Add the Player</h2>
+          <p>To add the player, create a new <strong>Sprite</strong> object and configure behaviors.</p>
+          <ul>
+            <li><strong>Add a new object:</strong> Sprite</li>
+            <li><strong>Object name:</strong> <code>Player</code></li>
+            <li><strong>Import image:</strong> <code>player</code></li>
+
+            <img src="/code/ict8/unit3/lesson2/01_add_sprite.png" alt="" />
+            <img src="/code/ict8/unit3/lesson2/02_player_png.png" alt="" />
+            <img src="/code/ict8/unit3/lesson2/03_player_properties.png" alt="" />
+          </ul>
+          <p>Add these behaviors (in <em>Behaviors</em>):</p>
+          <ul>
+            <li><strong>Top Down movement</strong> — uncheck <em>Rotate object</em></li>
+            <li><strong>FireBullet</strong></li>
+
+            <img src="/code/ict8/unit3/lesson2/04_add_behaviours.png" alt="" />
+            <img src="/code/ict8/unit3/lesson2/05_top_down.png" alt="" />
+            <img src="/code/ict8/unit3/lesson2/06_fire_bullets.png" alt="" />
+          </ul>
+          <p>Press <em>Apply</em>, drag <code>Player</code> onto your scene, and preview to move the player. If it feels slow, increase <strong>Acceleration</strong> and <strong>Max speed</strong>. Save your work.</p>
+          <!-- image placeholders -->
+           <img src="/code/ict8/unit3/lesson2/07_player_in_scene.png" alt="" />
+
+          
+        </section>
+
+        <!-- Step 2 -->
+        <section class="card">
+          <h2>Step 2 – Resize the Player</h2>
+          <p>Now it looks like the Player is too big for the space we are working it... Let's resize the player, but we need to do that in the events sheet.</p>
+          <ol>
+            <li>Open the event sheet → <strong>Add action</strong> under our first event.</li>
+              <img src="/code/ict8/unit3/lesson2/08_add_action.png" alt="" />
+
+            <li><strong>Add action</strong> (no condition): <code>Player → Scale → 0.6</code>.</li>
+               <img src="/code/ict8/unit3/lesson2/09_scale_player.png" alt="" />
+          </ol>
+          <p>Preview: the player should be smaller. Don't forget to save!</p>
+          <!-- image placeholders -->
+          
+         
+        </section>
+
+        <!-- Step 3 -->
+        <section class="card">
+          <h2>Step 3 – Keep the Player on Screen</h2>
+          <p>Now you've probably noticed that the player goes off the screen. We need to add a behaviour to keep it ON screen</p>
+          <ul>
+            <li>Double-click <code>Player</code> → <strong>Add behavior</strong> → <em>Stay on Screen</em>.</li>
+            <li>Set margins to <strong>10</strong> on all four sides.</li>
+          </ul>
+          <p>Save and preview to confirm the player stays visible.</p>
+          <!-- image placeholders -->
+          <img src="/code/ict8/unit3/lesson2/10_stay_on_screen.png" alt="" />
+        </section>
+
+        <!-- Step 4 -->
+        <section class="card">
+          <h2>Step 4 – Firing Bullets</h2>
+          <p>Great! Now we have a Player that moves around and stays on screen - but the bullets aren't shooting! Well there aren't any bullets to shoot! So we need to add a bullet and tell the game how to shoot the bullets from the Player.</p>
+          
+          <ol>
+            <h3>Adding the Bullet</h3>
+            <li>Create a new <strong>Sprite</strong> for the bullet:
+              <ul>
+                <li><strong>Name:</strong> <code>Bullet</code></li>
+                <li><strong>Import image:</strong> <code>laser_player.png</code></li>
+              </ul>
+            </li>
+            <li>Add behavior to <code>Bullet</code>: <strong>Destroy when outside of screen</strong>.</li>
+          </ol>
+          <p>Now we need to add an event to make the bullets fire from our space ship towards where our cursor is on the screen.</p>
+
+          <ul>
+            <p><strong>Add a new event</strong></p>
+
+            <ul>
+              <p><strong>Condition:</strong> <code>Mouse button released</code> → <k-input>Left</k-input></p>
+
+              <img src="/code/ict8/unit3/lesson2/11_fire_condition.png" alt="" />
+
+              <p><strong>Action: </strong> <code>Fire bullets towards a position</code></p>
+              <ul>
+                <li>Object: <k-input>Player</k-input></li>
+                <li>X: <k-input>Player.X()</k-input></li>
+                <li>Y: <k-input>Player.Y()</k-input></li>
+                <li>Bullet object: <k-input>Bullet</k-input></li>
+                <li>Target X: <k-input>CursorX()</k-input></li>
+                <li>Target Y: <k-input>CursorY()</k-input></li>
+
+                <img src="/code/ict8/unit3/lesson2/12_bullet_action.png" alt="" />
+
+                <p>Preview: click to shoot bullets from the ship toward the cursor. Save your work.</p>
+              </ul>
+            </ul>
+          </ul>
+        </section>
+          
+        <!-- Step 5 -->
+        <section class="card">
+          <h2>Step 5 – Shoot from the Nose (Custom Point)</h2>
+          <p>When we shoot the Bullets, they seem to be shooting from the wing. By default, bullets spawn at the origin. We can add a custom point and adjust our event so that the bullet shoots from the nose of the Player</p>
+          <ol>
+            <li>Main scene → double-click <code>Player</code> → <strong>Edit Points</strong>.</li>
+
+              <img src="/code/ict8/unit3/lesson2/13_edit_point.png" alt="edit points"/>
+
+            <li><strong>Add a new point</strong> at the ship’s nose and name it <code>ShootingPoint</code>.</li>
+            <li>Apply changes.</li>
+
+            <img src="/code/ict8/unit3/lesson2/14_new_point.png" alt="" />
+          </ol>
+          <p>Now we need to update our code to say where we want the point to shoot from:</p>
+          <p>Go to your event sheet and click on the Player.X() to change it to the following</p>
+
+          <ul>
+            <li>Click on <code>Player.X()</code></li>
+            <li>In the expression editor, replace it with <code>Player.PointX("ShootingPoint")</code></li>
+            <li>Do the same for <code>Player.Y()</code>, replacing it with <code>Player.PointY("ShootingPoint")</code></li>
+            <li>Press OK to save your changes.</li>
+            <li>Preview: click to shoot bullets from the ship’s nose toward the cursor. Save your work.</li>
+          </ul>
+          
+          <img src="/code/ict8/unit3/lesson2/15_update_code.png" alt="" />
+
+              <div class="figure">  <video autoplay loop muted playsinline width="720">
+                <source src="/code/ict8/unit3/lesson2/16_shooting_clip.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video></div>
+        </section>
+
+        <!-- Step 6 -->
+        <section class="card">
+          <h2>Step 6 – Rotate Towards the Cursor</h2>
+          <p>Great! Now we have a shooting Player, but the player doesn't rotate. We want the player to rotate towards where it is shooting, which in the direction of the cursor. To do this we will need to add an action. </p>
+
+          <ul>
+            <li><strong>Add an event</strong> (no condition)</li>
+            <li><strong>Add action</strong>:  <code>Player → Rotate towards position</code></li>
+            <li>Set X to <code>CursorX()</code></li>  
+            <li>Set Y to <code>CursorY()</code></li>
+            <li>Set Angular speed to <code>0</code></li>
+            <li>Press <code>Apply</code></li>
+          </ul>
+          <p>Preview: the ship should now rotate to face the cursor. Save your work.</p>
+          <!-- image placeholders -->
+          <img src="/code/ict8/unit3/lesson2/17_rotate_player.png" alt="" />
+          
+        <div class="figure">  <video autoplay loop muted playsinline width="720">
+                <source src="/code/ict8/unit3/lesson2/19_shooting_clip.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video></div>
+        </section>
+
+        <!-- Wrap -->
+        <section class="card">
+          <h2>Wrap Up</h2>
+          <ul>
+            <li>Player moves and stays on screen.</li>
+            <li>Bullets fire toward the cursor from the nose.</li>
+            <li>Ship rotates to face the cursor.</li>
+            <li>This is what your event sheet should look like</li>
+          </ul>
+          <!-- image placeholders -->
+          <img src="/code/ict8/unit3/lesson2/18_event_sheet.png" alt="" />
+        </section>
+
+      </main>
+
+      <!-- RIGHT: optional materials/contact/reminders -->
+      <aside id="right-rail" aria-label="Resources">
+    
+      <section class="card">
+        <h2>Skills Summary</h2>
+        <ul>
+          <li>Create and configure a <code>Sprite</code> object.</li>
+          <li>Add and adjust object behaviors (Top Down movement, FireBullet, Stay on Screen).</li>
+          <li>Resize sprites using the event sheet (Scale action).</li>
+          <li>Set up bullet objects with behaviors and firing events.</li>
+          <li>Use custom points (<code>ShootingPoint</code>) for precise bullet spawn locations.</li>
+          <li>Rotate the player object toward the cursor position.</li>
+          <li>Test and tweak movement speed, acceleration, and gameplay feel.</li>
+        </ul>
+      </section>
+
+
+
+      </aside>
+      
+    </div> <!--Closing div for unit-shell layout-3-->
+
+        <!-- Footer -->
+        <footer id="site-footer" data-partial="/code/common/partials/footer.html"></footer>
+
+  </body>
+</html>

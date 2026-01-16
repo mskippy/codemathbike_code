@@ -1,0 +1,118 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage – Abril L</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Abril L" />
+
+      <p style="margin-top:12px;">
+        <a href='/code/ict8/unit4/web_dev/S1W2/index.html'>← Back to S1W2 class page</a>
+      </p>
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #f5ba9f;
+      --ink: #145999;
+      --accent: #dda3ca; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #fff; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#f3f3f6; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+     
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="studentname">Abril L</span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+       My name is Abril. I was born in Meico, Puebla and moved to Canada with my family five years ago. I enjoy playing sports especcially soccer; I currently play for the U14 Impact. Apart from playing soccer I enjoy photography and hanging out with my friends. A fun fact about myself is that my favourite animal is a bear. My main goal for this course was to improve my typig which I feel that I have done.
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+    <header>
+    <header>
+        <li><a href="https://www.nsgsc.com/" target="_blank" rel="noopener">NSGSC</a></li>
+        <li><a href="https://www.youtube.com/shorts/T5Di0J1AZZw" target="_blank" rel="noopener">Youtube </a></li>
+        <li><a href="https://www.aritzia.com/en?utm_id=22383803692--173984065381--aritzia--741948480879&utm_source=google&utm_medium=cpc&gad_source=1&gad_campaignid=22383803692&gclid=EAIaIQobChMImO2v8YXZkAMVqQGtBh2LdzX8EAAYASAAEgLdHPD_BwE" target="_blank" rel="noopener">Aritzia</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="/code/ict8/unit4/web_dev/S1W2/abril_l.jpg" alt="A cool nature image from Unsplash" />
+        
+        <figcaption>Photo credit: Unsplash</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">Why was the math book so sad?</p>
+      <button type="button" onclick="myFunction()">Why?</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p>In essential skills and digital literacy, I learned how to put everything in my H folder, the parts of my computer and more. A challenge I faced was not knowing the diffrence between an AI generated picture or text from a real source; In th future I will look at the source and re-read the text more carefully. During the digital media unit I learnt how to generate ai images with canva ai and, how to make a proper exel chart. A challenged I faced was how to make the exel chart eassier to read; next time I want to expand the ways to use exel. My personal favourite unit was the game development unit, during that unit I lernet how to follow instructions more throughly, and how to program a game; a challenged I faced was keeping on task. In the future I want to be able to program a game without instructions. During the last unit, web development I learnt a lot, like how to copy and paste, I also learnt a new joke which made me very happy; in the future I want to be able to put more deatils on it.</p>
+      
+    </section>
+    
+    
+    
+    <footer>
+      <p>
+        Built by <strong>Abril</strong>. Last updated: <span id="lastUpdated"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "Because it had to many problems!!!!;)";
+    }
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

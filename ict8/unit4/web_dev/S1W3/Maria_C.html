@@ -1,0 +1,115 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage – Maria</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Maria" />
+
+      <p style="margin-top:12px;">
+        <a href='/code/ict8/unit4/web_dev/S1W2/index.html'>← Back to S1W3 class page</a>
+      </p>
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #f1abff;
+      --ink: #e4a6dc;
+      --accent: #e4a6dc; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #fff; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#f3f3f6; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="studentName">Maria</span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I really like doing sports and spending time with my family and friends. Some sports I do is basketball, and volleyball. 
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://www.aritzia.com/en/gifts/all-gifts?utm_" target="_blank" rel="noopener">Aritzia</a></li>
+        <li><a href="https://www.sephora.com/ca/en" target="_blank" rel="noopener">Sephora</a></li>
+        <li><a href="https://ca.coach.com/en/shop/women/view" target="_blank" rel="noopener">Coach</a></li>
+      </u
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="data:image/jpeg;base64,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" alt="A cool image o San Luis Potosi" />
+        <figcaption>Photo credit: Pexels</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something funny</h2>
+      <p id="pun">What kind of tea is hard to swallow?</p>
+      <button type="button" onclick="myFunction()">Which?</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p>In this class I learned how to make a website, but I really found challenging how to make the image appear in the poster. I would like to learn more about how to do more</p>
+      I might use what I learned today in the future when I own my own services 
+    </section>
+    
+    
+    
+    <footer>
+      <p>
+        Built by <strong>Maria</strong>. Last updated: 2025-12-10 <span id="lastUpdated"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "Reality";
+    }
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage – Kenzie G </title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Kenzie" />
+
+      <p style="margin-top:12px;">
+        <a href='/code/ict8/unit4/web_dev/S1W3/index.html'>← Back to S1W3 class page</a>
+      </p>
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: rgb(197, 149, 224);
+      --ink: #1a1a1f;
+      --accent: #5207b4; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: Georgia, 'Times New Roman', Times, serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #fff; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#f3f3f6; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="studentName">Kenzie</span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        The sports I do are soccer, skiing, field hockey. volleyball, basketball, dance. Some interests I like to do are movie nights with my family, go to school and play volleyball with my friends, and ski at whistler. I have a dog named Gali, she is a viszla. I have a cat named Lucky but my family doesnt know her breed. My goal in this class is to get a proficient and learn a lot of things that I can use in my daily life on a device that can also be useful for my future.
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://www.aritzia.com/en?utm_id=22383803692--173984065381--aritzia--741948480879&utm_source=google&utm_medium=cpc&gad_source=1&gad_campaignid=22383803692&gclid=EAIaIQobChMIu9Gx-4uxkQMVci2tBh1Z7hEEEAAYASAAEgKSfvD_BwE" target="_blank" rel="noopener">Aritzia</a></li>
+        <li><a href=https://www.amazon.ca/amazonprime?_encoding=UTF8&pd_rd_w=KVKxF&content-id=amzn1.sym.ca4c64ce-8fab-4590-aed7-349223739d71&pf_rd_p=ca4c64ce-8fab-4590-aed7-349223739d71&pf_rd_r=M1VBGWNAQSTEAEQ3326W&pd_rd_wg=K9czJ&pd_rd_r=ca62e685-50f0-4df8-959d-44cdf49b15c1&ref_=pd_hp_d_hero_unk"" target="_blank" rel="noopener">Amazon</a></li>
+        <li><a href="https://us.brandymelville.com/" target="_blank" rel="noopener">Brandy Melville</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+       <img src="https://www.travelmanagers.com.au/wp-content/uploads/2018/03/AdobeStock_116567811-kauai-hawaii-1-scaled.jpeg" alt="A cool nature image from Unsplash" />
+      <figure>
+      <figcaption>Photo credit: Hawaii</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something Funny</h2>
+      <p id="pun">What kind of cheese doesnt belong to you?</p>
+      <button type="button" onclick="myFunction()">Why?</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p>In essential skills and digital literacy i enjoyed the about me poster the most and i thought that the 1.2 quest was the most challenging. Something I would like to know more about is the poster and design concept of it and I think that knowing the parts of your computer will be good for knowing in the future. In digital media I enjoyed the class data assignment and found that making the 10 posters was the most difficult.Something i would like to know more about is hwo to acess  your h:drive from all devices ad something that ill be useful for the future is the things on microsoft word.  </p>
+
+      <p>In the game development I enjoyed previewing the game and something I found challenging was the writing. Something that would be useful in the future is all of it and somethig I would like to know more aout is making my own event sheet. In the web development something i rally enjoyed was choosing my own colours and something iI found challenging was accessing the game. One thing I would like to learn more about is all of it and all of it would be useful for the future.</p>
+      
+    </section>
+    
+    
+    
+    <footer>
+      <p>
+        Built by <strong>Your Name</strong>. Last updated: <span id="lastUpdated"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "Nacho cheese";
+    }
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

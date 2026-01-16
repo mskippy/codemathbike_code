@@ -1,0 +1,440 @@
+<!-- 5.5 Formatting Your Website -->
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DigiComm 10/11 • Unit 5 • 5.4 Formatting Your Website</title>
+
+    <!-- Common CSS + JS -->
+    <link rel="stylesheet" href="/code/common/css/base.css">
+    <script src="/code/common/js/nav_data.js" defer></script>
+    <script src="/code/common/js/utils.js" defer></script>
+    <script src="/code/common/js/inject_partials.js" defer></script>
+    <script src="/code/common/js/nav_systems.js" defer></script>
+    <script src="/code/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="dc1011">
+    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" role="main"
+        data-page-title="DigiComm 10/11 • Unit 5 • 5.4 Formatting Your Website">
+
+        <!-- Overview -->
+        <section class="card">
+          <h1>Overview</h1>
+
+          <p>
+            <strong>Big idea:</strong>
+            Your website structure is finished and your content is in place.
+            Now it’s time to make your website <strong>look the way you planned</strong>.
+          </p>
+
+          <p>
+            In this lesson, you will format your website by editing the
+            <strong><code>style.css</code></strong> file from your Layout Kit so your site matches
+            the <strong>visual design you created in 5.2</strong> (your Canva mock-up).
+          </p>
+
+          <p>
+            Everyone started with the same template. By the end of this lesson,
+            your site should feel like <strong>your</strong> design.
+          </p>
+
+          <p class="note">
+            <strong>Reminder:</strong> The final checklist happens in <strong>5.6</strong>.
+            Today is for formatting + polishing.
+          </p>
+        </section>
+
+        <!-- Start here -->
+        <section class="card">
+          <h2>Start Here: What You’ll Probably Want to Change</h2>
+          <p>
+            Most students begin with the same formatting goals. You do <strong>not</strong> need to do everything —
+            choose changes that support your design plan.
+          </p>
+
+          <ul>
+            <li><strong>Fonts &amp; text</strong> (style, size, spacing)</li>
+            <li><strong>Colours</strong> (backgrounds, text, accents)</li>
+            <li><strong>Spacing</strong> (tight vs open layout)</li>
+            <li><strong>Cards &amp; sections</strong> (borders, rounding, shadows)</li>
+            <li><strong>Images</strong> (adding images, placing text beside images, image backgrounds)</li>
+          </ul>
+
+          <p class="note">
+            All of these changes happen in <strong>one file</strong>: <code>style.css</code>
+          </p>
+        </section>
+
+        <!-- Before you edit -->
+        <section class="card">
+          <h2>Before You Edit</h2>
+
+          <p class="note">
+            <strong>Rule for today:</strong> <em>Edit values, not structure.</em>
+          </p>
+
+          <h3>✅ Safe to edit</h3>
+          <ul>
+            <li>Colours: <code>color</code>, <code>background-color</code></li>
+            <li>Text: <code>font-family</code>, <code>font-size</code>, <code>line-height</code></li>
+            <li>Spacing: <code>margin</code>, <code>padding</code></li>
+            <li>Cards: <code>border</code>, <code>border-radius</code>, <code>box-shadow</code></li>
+            <li>Hover effects (optional): <code>:hover</code></li>
+          </ul>
+
+          <h3>⛔ Do not change (yet)</h3>
+          <ul>
+            <li>Layout rules that control navigation placement</li>
+            <li>Large sections of code you don’t understand</li>
+            <li>Selector names (the left side of CSS rules)</li>
+            <li>Deleting blocks of CSS “to clean it up”</li>
+          </ul>
+
+          <p class="note">
+            Best workflow: <strong>one change at a time</strong> → save → refresh → observe.
+            If something breaks, undo your last change.
+          </p>
+        </section>
+
+        <!-- Step 1 Canva -->
+        <section class="card">
+          <h2>Step 1 — Open Your Canva Mock-Up</h2>
+
+          <p>
+            Open the Canva design you created in <strong>5.2</strong>. This is your guide.
+            You are not guessing — you are <strong>translating a plan into code</strong>.
+          </p>
+
+          <ul class="list-tight">
+            <li>What fonts did you choose?</li>
+            <li>What colours set the mood?</li>
+            <li>Is the layout tight or airy?</li>
+            <li>Do sections feel like cards, panels, or full-width blocks?</li>
+          </ul>
+        </section>
+
+        <!-- Step 2 Open CSS -->
+        <section class="card">
+          <h2>Step 2 — Open Your Stylesheet</h2>
+
+          <ol>
+            <li>Open your project folder in <strong>VS Code</strong>.</li>
+            <li>Open <code>style.css</code>.</li>
+            <li>Read the comment block at the top of the file.</li>
+          </ol>
+
+          <p class="note">
+            <strong>Quick check:</strong> If you edit <code>style.css</code> and nothing changes when you refresh,
+            your HTML pages may not be linked to it.
+          </p>
+
+          <details>
+            <summary><strong>If your CSS isn’t loading</strong> (click to expand)</summary>
+            <div>
+              <ul class="list-tight">
+                <li>Confirm <code>style.css</code> is in the same folder as your HTML files.</li>
+                <li>Confirm each HTML file has: <code>&lt;link rel="stylesheet" href="style.css"&gt;</code></li>
+                <li>Hard refresh your browser (Ctrl + Shift + R / Cmd + Shift + R).</li>
+              </ul>
+            </div>
+          </details>
+        </section>
+
+        <!-- Fonts -->
+        <section class="card">
+          <h2>Change 1 — Fonts &amp; Text (Typography)</h2>
+
+          <p>
+            Typography has the biggest impact on how your site feels.
+            Start here.
+          </p>
+
+          <h3>What you can change</h3>
+          <ul>
+            <li>Font style (<code>font-family</code>)</li>
+            <li>Text size (<code>font-size</code>)</li>
+            <li>Line spacing (<code>line-height</code>)</li>
+            <li>Heading vs body contrast (bigger headings, readable body text)</li>
+          </ul>
+
+          <h3>Customization ideas</h3>
+          <ul class="list-tight">
+            <li><strong>Clean + minimal:</strong> simple sans-serif fonts and larger spacing</li>
+            <li><strong>Bold + energetic:</strong> strong headings and tighter layout</li>
+            <li><strong>Creative vibe:</strong> expressive headings with readable body text</li>
+          </ul>
+
+          <p class="note">
+            Reference:
+            <a href="https://www.w3schools.com/css/css_font.asp" target="_blank" rel="noopener">
+              W3Schools – CSS Fonts
+            </a>
+          </p>
+        </section>
+
+        <!-- Colors -->
+        <section class="card">
+          <h2>Change 2 — Colours &amp; Mood</h2>
+
+          <p>
+            Colour sets the tone of your website. Match your Canva palette as closely as you can.
+          </p>
+
+          <h3>What you can change</h3>
+          <ul>
+            <li>Page backgrounds</li>
+            <li>Text colour</li>
+            <li>Navigation colour</li>
+            <li>Accent colour (used consistently)</li>
+          </ul>
+
+          <p class="note">
+            <strong>Tip:</strong> If text is hard to read, simplify your colours and increase contrast.
+          </p>
+
+          <p class="note">
+            Reference:
+            <a href="https://www.w3schools.com/css/css_colors.asp" target="_blank" rel="noopener">
+              W3Schools – CSS Colors
+            </a>
+          </p>
+        </section>
+
+        <!-- Spacing -->
+        <section class="card">
+          <h2>Change 3 — Spacing &amp; Layout Feel</h2>
+
+          <p>
+            Spacing controls whether your site feels calm or cluttered.
+          </p>
+
+          <h3>What you can change</h3>
+          <ul>
+            <li>Space inside sections (<code>padding</code>)</li>
+            <li>Space between sections (<code>margin</code>)</li>
+          </ul>
+
+          <p class="note">
+            Reference:
+            <a href="https://www.w3schools.com/css/css_boxmodel.asp" target="_blank" rel="noopener">
+              W3Schools – CSS Box Model
+            </a>
+          </p>
+        </section>
+
+        <!-- Cards & Sections -->
+        <section class="card">
+          <h2>Change 4 — Cards &amp; Sections</h2>
+
+          <p>
+            Cards and sections help organize content. Small changes here can make your site feel much more polished.
+          </p>
+
+          <h3>Common upgrades</h3>
+          <ul class="list-tight">
+            <li>Rounded corners (<code>border-radius</code>)</li>
+            <li>Soft borders (<code>border</code>)</li>
+            <li>Subtle depth (<code>box-shadow</code>)</li>
+            <li>Consistent spacing inside sections (<code>padding</code>)</li>
+          </ul>
+
+          <p class="note">
+            Reference:
+            <a href="https://www.w3schools.com/css/css_border.asp" target="_blank" rel="noopener">
+              W3Schools – CSS Borders
+            </a>
+          </p>
+        </section>
+
+        <!-- Images -->
+        <section class="card">
+          <h2>Change 5 — Images (Common Layout Goals)</h2>
+
+          <p>
+            Images add personality and visual interest. Use them intentionally so they support your design plan.
+          </p>
+
+          <details>
+            <summary><strong>Goal A: Add an image with text beside it</strong></summary>
+            <div>
+              <p>
+                Use <strong>Flexbox</strong> to place an image and text side-by-side inside a section.
+              </p>
+              <p class="note">
+                Reference:
+                <a href="https://www.w3schools.com/css/css_flexbox.asp" target="_blank" rel="noopener">
+                  W3Schools – CSS Flexbox
+                </a>
+              </p>
+              <p class="small-text muted">
+                Helpful terms: <code>display: flex</code>, <code>align-items</code>, <code>gap</code>
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary><strong>Goal B: Make images look cleaner</strong></summary>
+            <div>
+              <p>
+                Control image sizing, spacing, and corners so images feel consistent across your site.
+              </p>
+              <p class="note">
+                Reference:
+                <a href="https://www.w3schools.com/css/css_images.asp" target="_blank" rel="noopener">
+                  W3Schools – CSS Images
+                </a>
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary><strong>Goal C: Use an image as a background</strong></summary>
+            <div>
+              <p>
+                Background images work well for header sections or featured areas.
+              </p>
+              <p class="note">
+                Reference:
+                <a href="https://www.w3schools.com/css/css_background.asp" target="_blank" rel="noopener">
+                  W3Schools – CSS Backgrounds
+                </a>
+              </p>
+              <p class="small-text muted">
+                Helpful terms: <code>background-image</code>, <code>background-size</code>, <code>background-position</code>
+              </p>
+            </div>
+          </details>
+        </section>
+
+        <!-- Optional effects -->
+        <section class="card">
+          <h2>Optional Polish — Subtle Effects</h2>
+
+          <p>
+            Small effects can add polish if used carefully (and not overdone).
+          </p>
+
+          <ul class="list-tight">
+            <li>Hover effects on navigation links</li>
+            <li>Hover effects on cards</li>
+            <li>Small transitions (optional)</li>
+          </ul>
+
+          <p class="note">
+            Reference:
+            <a href="https://www.w3schools.com/css/css_pseudo_classes.asp" target="_blank" rel="noopener">
+              W3Schools – CSS Pseudo-classes
+            </a>
+          </p>
+        </section>
+
+        <!-- How to use references -->
+        <section class="card">
+          <h2>How to Use Reference Guides Without Getting Lost</h2>
+
+          <ol>
+            <li>Decide what you want to change (font, colour, spacing, cards, images).</li>
+            <li>Open the matching W3Schools page (links above).</li>
+            <li>Copy <strong>only</strong> the line(s) you need.</li>
+            <li>Paste into <code>style.css</code> and adjust values to match your design.</li>
+            <li>Save → refresh → check at least 2 pages.</li>
+          </ol>
+
+          <p class="note">
+            You are adapting examples — not copying full pages of code.
+          </p>
+        </section>
+
+        <!-- Work time -->
+        <section class="card">
+          <h2>Work Time — Format &amp; Polish</h2>
+
+          <p>
+            Use the remainder of this lesson to:
+          </p>
+
+          <ul>
+            <li>Match your Canva design as closely as possible</li>
+            <li>Make intentional choices (not random changes)</li>
+            <li>Test across multiple pages</li>
+            <li>Ask for feedback when you’re stuck</li>
+          </ul>
+
+          <p class="note">
+            Next lesson (<strong>5.6</strong>) is your final checklist + finishing touches.
+          </p>
+        </section>
+
+      </main>
+
+      <!-- Right rail -->
+      <aside id="right-rail" aria-label="Resources">
+
+        <div class="card">
+          <strong>What you need today</strong>
+          <ul class="list-tight">
+            <li>Your Canva mock-up (from 5.2)</li>
+            <li>Your working Layout Kit (from 5.4)</li>
+            <li><code>style.css</code> in the same folder as your HTML files</li>
+            <li>VS Code + browser preview</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Today’s focus</strong>
+          <ul class="list-tight">
+            <li>Edit <code>style.css</code></li>
+            <li>Fonts, colours, spacing, cards</li>
+            <li>Optional: images + simple polish</li>
+          </ul>
+          <p class="note small-text">
+            No final checklist today — that’s 5.6.
+          </p>
+        </div>
+
+        <div class="card">
+          <strong>Safe edits</strong>
+          <ul class="list-tight">
+            <li><code>font-family</code>, <code>font-size</code>, <code>line-height</code></li>
+            <li><code>color</code>, <code>background-color</code></li>
+            <li><code>margin</code>, <code>padding</code></li>
+            <li><code>border-radius</code>, <code>box-shadow</code></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>W3Schools quick links</strong>
+          <ul class="list-tight">
+            <li><a href="https://www.w3schools.com/css/" target="_blank" rel="noopener">CSS Home</a></li>
+            <li><a href="https://www.w3schools.com/css/css_font.asp" target="_blank" rel="noopener">Fonts</a></li>
+            <li><a href="https://www.w3schools.com/css/css_colors.asp" target="_blank" rel="noopener">Colors</a></li>
+            <li><a href="https://www.w3schools.com/css/css_boxmodel.asp" target="_blank" rel="noopener">Box Model</a></li>
+            <li><a href="https://www.w3schools.com/css/css_border.asp" target="_blank" rel="noopener">Borders</a></li>
+            <li><a href="https://www.w3schools.com/css/css_flexbox.asp" target="_blank" rel="noopener">Flexbox</a></li>
+            <li><a href="https://www.w3schools.com/css/css_images.asp" target="_blank" rel="noopener">Images</a></li>
+            <li><a href="https://www.w3schools.com/css/css_background.asp" target="_blank" rel="noopener">Backgrounds</a></li>
+            <li><a href="https://www.w3schools.com/css/css_pseudo_classes.asp" target="_blank" rel="noopener">:hover / Pseudo-classes</a></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Next up</strong>
+          <ul class="list-tight">
+            <li><strong>5.6 — Final Polish &amp; Checklist</strong></li>
+          </ul>
+        </div>
+
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/code/common/partials/footer.html"></footer>
+  </body>
+</html>

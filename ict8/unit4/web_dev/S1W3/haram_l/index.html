@@ -1,0 +1,104 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage – Haram</title>
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+  <!-- Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+  <!-- Title -->
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Your Name" />
+
+      <p style="margin-top:12px;">
+        <a href='https://codemathbike.ca/code/ict8/unit4/' rel="noopener">← Back to S1W3 class page</a>
+      </p>
+        <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="h1name">Haram</span><span class="rem25">👋</span></h1>
+      <hr>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+      
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p class="about-me">
+        My hobbies are soccer, eda, and programming. I have a repository showcasing some of my best programming and eda work <strong><a href="https://github.com/mavenboard/capstone-projects">here</a></strong>. In school, my favourite subjects are math and adst.
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://stackoverflow.com/questions" target="_blank" rel="noopener">Stack Overflow</a></li>
+        <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://jetbrains.com/" target="_blank" rel="noopener">JetBrains</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="https://www.travelandleisure.com/thmb/YxlSkCh8xIy-M6fO_6sNw1OI_vg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-mount-baker-winter-ski-lift-MTBAKER0123-86f886435975441eac561fcfdbf0d495.jpg" alt="A cool nature image from Unsplash" />
+        <figcaption>Image Source: <strong><a href="https://www.travelandleisure.com/mount-baker-washington-ski-trip-mountain-mondays-7094325"> Travel and Leisure</a></strong></figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">Why was Dumbo sad?
+      </p><button type="button" class="btn btn-primary button-small" onclick="myFunction()"><b>Why?</b></button>
+      
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p>In this course I learned the basics of frontend web development using HTML, CSS, and JS. I enjoyed using different elements and learning further about CSS and Bootstrap.</p>
+
+      <p>My favourite part of this course was making my website look great. CSS and especially frameworks like <strong><a href="https://getbootstrap.com/">Bootstrap</a></strong> really helped, and I look forward to learning others like <strong><a href="https://tailwindcss.com/">Tailwind CSS</a></strong>. Some others that also helped were <strong><a href="https://fonts.google.com">Google Fonts</a></strong> as it had free and great fonts.
+      
+    </section>
+    
+    <section>
+      <h2> My Game</h2>
+      <iframe src="./assets/game/index.html" frameborder="0" width="800" height="300"></iframe>
+    </section>
+    <footer>
+      <hr>
+      <p>
+        Built by <strong><a href="https://xybiq.com/about-me">Haram</a></strong> with <strong><a href="https://getbootstrap.com/">Bootstrap</a></strong>. Last updated: <strong>Dec., 10 2025</strong><span id="lastUpdated"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = " He felt irrelephant.";
+    }
+  </script>
+  <br>
+</body>
+</html>

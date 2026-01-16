@@ -1,0 +1,273 @@
+<!-- v2 – Oct 2025 -->
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ICT 8 • 3.4 More Game Mechanics</title>
+    <link rel="stylesheet" href="/code/common/css/base.css">
+    <script src="/code/common/js/nav_data.js" defer></script>
+    <script src="/code/common/js/utils.js" defer></script>
+    <script src="/code/common/js/inject_partials.js" defer></script>
+    <script src="/code/common/js/nav_systems.js" defer></script>
+    <script src="/code/common/js/main.js" defer></script>
+  </head>
+ 
+  <!-- Set body class to match course theme: ict8, ict9, dc1011, or none for purple -->
+  <body data-course="ict8">
+    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+    
+      <main id="content" role="main" data-page-title="ICT 8 • Unit 3 • Lesson 4">
+
+      <!-- Title/Intro -->
+      <section class="card" id="title">
+        <h2>Overview</h2>
+        <p>We’ve got a working game so far — great job! 🎉 Now it’s time to make it more exciting. In this lesson you’ll add:</p>
+        <ul>
+          <li>Meteors that spawn and fly toward the player</li>
+          <li>Enemies that fire bullets</li>
+          <li>A health system so the player can take damage</li>
+        </ul>
+        <p>By the end, your game will feel more challenging and polished.</p>
+      </section>
+  
+      <!-- 1. Adding Meteors -->
+      <section class="card" id="meteors">
+        <h2>1) Add Meteors</h2>
+        <p>Adding the meteor is the same as adding any new object to the scene. Use the same process of adding the enemy.</p>
+        <ul>
+          <p><strong>Add a new object.</strong></p>
+          <ul>
+            <li>Select → <em>Sprite</em></li>
+          <ul>
+            <li>Object name: <k-input>Meteor</k-input></li>
+            <li>Import image → <k-input>meteor_1.png</k-input></li>
+            <li>Behviours: <k-input>Destroy when outside of scene</k-input></li>
+          </ul>
+        </ul>
+        
+        <p>Next, set up a timer to spawn meteors every 5 seconds. When the timer hits 5 seconds, create a meteor at a random X position along the top of the screen, then move it toward the player.</p>
+
+        <p><strong>Create the MeteorSpawn Timer</strong></p>
+        <ul>
+            <p>Add the following action to the <code>At beginning of the scene</code> event, under the <k-input>"EnemySpawn"</k-input> action</p>
+            <ul>
+                <li><strong>Add action:</strong> <em>Other action</em> → <em>Timers and time</em> → <em>Start (or reset) the timer</em></li>
+                <ul>
+                    <li>Timer name: <k-input>MeteorSpawn</k-input></li>
+                </ul>
+            </ul>
+        </ul>
+        <figure class="img"><img src="/code/ict8/unit3/lesson4/01_meteor_timer.png" alt=""></figure>
+        
+        <p>The events to spawn and move the meteors toward the player are the same as the Enemy Spawn events.</p>
+        <ul>
+            <p><strong>Add new event</strong></p>
+            <ul>
+                <li><strong>Add condition: </strong> <em>Value of a scene timer</em> → <k-input>MeteorSpawn</k-input> ≥ <k-input>5</k-input> seconds</li>
+                <li><strong>Add condition: </strong> <code>SpawnPoint</code> → <em>Pick random object</em></li>
+                <li><strong>Add action: </strong> <code>Meteor</code> → <em>Create object</em> at position <k-input>SpawnPoint.X()</k-input>, <k-input>SpawnPoint.Y()</k-input></li>
+                </li>
+                <li><strong>Add action: </strong> <em>Start (or reset) the timer</em> → <k-input>MeteorSpawn</k-input></li>
+                <li><strong>Add action: </strong> <code>Meteor</code> → <em>Move toward an object</em> → <k-input>Player</k-input> with a permanent force of <k-input>100</k-input> pixels</li>
+            </ul>
+            <p><em>Note: You can copy the Enemy events and replace <code>Enemy</code> and <code>Meteor</code></em></p>
+        </ul>
+
+        <!-- Image placeholders (replace src paths) -->
+        <figure class="img"><img src="/code/ict8/unit3/lesson4/02_meteor_events.png" alt="Meteor events"></figure>
+       
+        <p class="task">Preview your game to confirm meteors spawn and move toward the player.</p>
+        <p>Resize the meteors the same way you resized the Player and Enemy if they are too big</p>
+        <p class="tip"><strong>Tip:</strong> If you want to adjust the spawn rate, change the timer condition value and the timer reset action to match.</p>
+
+      </section>
+  
+      <!-- 2. Player Collisions with Enemy OR Meteor -->
+      <section class="card" id="player-collisions">
+        <h2>2) Player getting hit</h2>
+        <p>Now that we have some objects to dodge, we need to set up the following game logic:
+          <ul>
+            <li>If the Player is hit by the Meteor and/or the Enemy, the Player should die, and the game resets.</li>
+          </ul>
+        </p>
+        <p>To make the Player die when hit by either the Enemy or the Meteor, we can use an OR condition. This way, we only need one event instead of two.</p>
+        <ul>
+          <p><strong>Add an event</strong></p>
+          <ul>
+            <li><strong>Add condition:</strong> <em>Other conditions</em> → <em>Advanced</em> →  <em>Events and control flow</em>→  <em>OR</em></li>
+            <ul>
+              <li><strong>Add sub-condition: </strong> <code>Player</code> → <em>Collision</em> → <k-input>Enemy1</k-input></li>
+            <li><strong>Add sub-condition: </strong> <code>Player</code> → <em>Collision</em> → <k-input>Meteor</k-input></li>
+            </ul>
+            
+            <li><strong>Add action: </strong> <code>Player</code> → <em>Delete object</em></li>
+            <li><strong>Add action: </strong> <em>Other actions</em> → <em>Timers and time</em> → <em>Wait X seconds</em> → <k-input>1</k-input> second</li>
+            <li><strong>Add action: </strong> <em>Other actions</em> → <em>Scene</em> → <em>Change the scene</em> → <em>Choose the scene</em> → <k-input>Level 1</k-input></li>
+          </ul>
+        </ul>
+        <p class="task">Preview your game to confirm the Player dies and the scene restarts when hit by either the Enemy or Meteor.</p>
+        <!-- Image placeholders -->
+        <figure class="img"><img src="/code/ict8/unit3/lesson4/03_event_sheet.png" alt="Collision Events image"></figure>
+      </section>
+  
+      <!-- 3. Enemy Bullets -->
+      <section class="card" id="enemy-bullets">
+        <h2>3) A More Interesting Enemy</h2>
+        <p>Let’s make the game tougher by giving the enemy a laser attack. Every second, the enemy will fire a shot at the player, using the same steps as spawning enemies and meteors, combined with firing a bullet.</p>
+        <ul>
+          <p><strong>Step 1:</strong> Create a new object and call it "<strong>EnemyBullet</strong>" with the behaviour <strong>DestroyOutside</strong> </p>
+          <p><strong>Step 2:</strong> Edit the <code>Enemy1</code> object (double click on it)</p>
+          <ul>
+            <li>Add a new point to the Enemy and call it "<strong>EnemyShootPt</strong>" to shoot the bullet from the nose of the Enemy ship</li>
+            <li>Add the behaviour <strong>Fire Bullets</strong></li>
+          </ul>
+          <p><strong>Step 3:</strong> Add the following events</p>
+          <ul>
+            <li><strong>Add action: </strong>(add this under the other timers) → <em>Start (or reset) the timer </em> <k-input>"EnemyShoot"</k-input></li>
+
+            <figure class="img"><img src="/code/ict8/unit3/lesson4/04_timers.png" alt=""></figure>
+
+            <p><strong>Add a new event</strong></p>
+            <ul>
+              <li><strong>Add condition: </strong><em>Other condition</em> → <em>Timers and time</em> → <em>Value of a scene timer</em> → <k-input>EnemyShoot</k-input> <k-input>≥ (greater or equal to)</k-input>  → <k-input>1</k-input></li>
+              <li><strong>Add action: </strong><code>Enemy1</code> → <em>Fire bullets towards an object</em>
+                <ul>
+                  <li>X Position:  <code>Enemy1.PointX("EnemyShootPt")</code></li>
+                  <li>Y Position:  <code>Enemy1.PointY("EnemyShootPt")</code></li>
+                  <li>Bullet: <code>Enemy1Bullet</code></li>
+                  <li>Target Object: <code>Player</code></li>
+                  <li>Speed: <code>500</code> pixels/second</li>
+                </ul>
+              </li>
+              <li><strong>Add action: </strong> <code>Bullet</code> → <em>Z order</em>  → <em>Modification's sign</em> → <k-input>- (subtract)</k-input>  → <k-input>1</k-input></li>
+              <p><em>This will spawn your enemy bullet behind the enemy</em></p>
+              <li><strong>Add action: </strong><em>Other actions</em> → <em>Timers and time</em> → <em>Start (or reset) the timer </em> <k-input>"EnemyShoot"</k-input></li>
+            </ul>
+            <p class="task">Preview your game to confirm the enemy fires bullets at the player every second.</p>
+          </ul>
+        </ul>
+        <!-- Image placeholders -->
+        <figure class="img"><img src="/code/ict8/unit3/lesson4/05_enemy_shoot_event.png" alt="Enemy Shoot event"></figure>
+      </section>
+  
+      <!-- 4. Player Health (Global Variable) -->
+      <section class="card" id="player-health">
+        <h2>4) Player Health (Global Variable)</h2>
+        <p>Finally, let’s add a health system so the player can take a few hits before dying. We’ll use a global variable to track the player’s health, which starts at 5 and decreases by 1 each time the player is hit by an enemy bullet. When health reaches 0, the player dies and the scene restarts.</p>
+        <ol>
+          <li>In <strong>Project Manager → Project Settings → Global variables</strong>, add:
+            <ul>
+              <li><strong>PlayerHealth</strong> (Number) = <strong>5</strong></li>
+            </ul>
+          </li>
+          <li>Add a new event: <strong>EnemyBullet</strong> collides with <strong>Player</strong> 
+            <ul>
+              <li><em>Delete</em> the <code>EnemyBullet</code></li>
+              <li><em>Change the variable value</em> from the <code>Player</code> to <k-input>-1</k-input></li>
+            </ul></li>
+          <ul>
+            <p><em>Add this event above the Player death event</em></p>
+          </ul>
+          <li>When <strong>PlayerHealth ≤ 0</strong>, wait 1s, delete the Player, then restart the scene.</li>
+          <ul>
+            <p><em>Add this as a subcondition to when the Player dies</em></p>
+          </ul>
+          <li>At the beginning of the scene, <strong>reset PlayerHealth to 5</strong> so lives are restored on restart.</li>
+          <ul>
+            <p>Add this action to the other actions in the "At the beginning of scene" event</p>
+          </ul>
+        </ol>
+        <p class="task">Preview your game to confirm the player can take 5 hits from enemy bullets before dying and restarting the scene.</p>       
+  
+        <!-- Image placeholders -->
+        <figure class="img">
+          <a href="/code/ict8/unit3/lesson4/06_full_event_sheet.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size image in a new tab">
+            <img src="/code/ict8/unit3/lesson4/06_full_event_sheet.png" alt="Full event sheet after Lesson 3.4" loading="lazy">
+          </a>
+        </figure>
+ 
+        <p class="tip"><strong>Important:</strong> When changing the <em>global</em> variable, choose the variable picker without an object (globe icon). Do <em>not</em> create a new object variable.</p>
+      </section>
+  
+      <!-- Reflection -->
+      <section class="card" id="reflection">
+        <h2>Reflection</h2>
+        <p>Write 3–4 sentences answering:</p>
+        <ul>
+          <li>How did these mechanics change the feel of your game?</li>
+          <li>Is the difficulty fair? If not, what would you adjust (spawn rates, bullet speed, health)?</li>
+          <li>What is one polish idea you’ll try next?</li>
+        </ul>
+      </section>
+
+      <!-- Submit -->
+    <section class="card" id="submit">
+        <h2>What to Submit</h2>
+        <p><strong>Lesson 3.4 Assignment</strong></p>
+        <ul>
+          <li>Screenshot of meteors spawning.</li>
+          <li>Screenshot showing <code>PlayerHealth</code> decreasing after a hit.</li>
+          <li>Your reflection (3–4 sentences).</li>
+        </ul>
+      </section>
+
+      <!-- Up Next -->
+      <section class="card" id="up-next">
+        <h2>Up Next</h2>
+        <p>In the next lesson, you’ll add a score system to reward players for surviving and shooting enemies, plus some polish to make the game feel more complete.</p>
+        
+        
+      </main>
+
+
+
+      <!-- RIGHT: optional materials/contact/reminders -->
+      <aside id="right-rail" aria-label="Resources">
+    
+        <section class="card" id="goals">
+            <h3>Learning Goals</h3>
+            <ul>
+              <li>Use timers and events to spawn hazards.</li>
+              <li>Apply OR conditions for cleaner logic.</li>
+              <li>Implement enemy projectiles with spawn points.</li>
+              <li>Track player health using a global variable.</li>
+              <li>Handle death, delays, and scene resets.</li>
+            </ul>
+          </section>
+      
+          <section class="card" id="checklist">
+            <h3>Checklist</h3>
+            <ul>
+              <li> Meteor1 duplicates Enemy1 with meteor sprite</li>
+              <li> <code>MeteorSpawn</code> timer set to 5s</li>
+              <li>OR collision: Player vs Enemy1/Meteor1 → wait → restart</li>
+              <li> EnemyBullet object + <em>DestroyOutside</em></li>
+              <li> Enemy1 has <em>Fire Bullets</em> + <code>EnemyShootPt</code></li>
+              <li> <code>EnemyFire</code> timer fires every 1s</li>
+              <li> Global <code>PlayerHealth</code> = 5; decreases on hit</li>
+              <li> Death when <code>PlayerHealth ≤ 0</code>; reset on scene start</li>
+            </ul>
+          </section>
+      
+          <section class="card" id="submit-mini">
+            <h3>Lesson 3.4 Assignment</h3>
+            <ul>
+              <li>Meteor spawn screenshot</li>
+              <li>Health decreasing screenshot</li>
+              <li>Reflection (3–4 sentences)</li>
+            </ul>
+          </section>
+
+      </aside>
+      
+    </div> <!--Closing div for unit-shell layout-3-->
+
+    <!-- Footer -->
+    <footer id="site-footer" data-partial="/code/common/partials/footer.html"></footer>
+
+  </body>
+</html>

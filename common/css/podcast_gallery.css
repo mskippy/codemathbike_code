@@ -1,0 +1,85 @@
+/* podcast_gallery.css — layout for the podcast gallery */
+
+/* 1. Grid of cards (each .card is one podcast show) */
+.grid-gallery {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  align-items: stretch;
+}
+
+/* 2. Each podcast card:
+   - keep base .card styling (padding, background, etc.)
+   - make contents stack: title -> row (art+text) -> audio */
+.grid-gallery > .card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* 3. Podcast title (show name) at top of card */
+.podcast-title {
+  margin: 0 0 0.4rem;
+}
+
+/* 4. Row with art on the left and text block on the right */
+.podcast-row {
+  display: grid;
+  grid-template-columns: auto 1fr; /* art | text */
+  column-gap: 1rem;
+  row-gap: 0.25rem;
+  align-items: flex-start;
+}
+
+/* 5. Album art */
+.podcast-art {
+  width: 100%;
+  max-width: 120px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+/* 6. Text block to the right of the art */
+.podcast-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.podcast-info >* {
+  margin: 0;
+}
+
+.podcast-episode-title {
+  margin: 0;
+}
+
+.podcast-desc {
+  margin: 0;
+  font-style: italic;
+  font-size: smaller;
+}
+.podcast-desc {
+  margin: 0;
+}
+
+/* 7. Audio player at the bottom, full width */
+.podcast-audio {
+  width: 100%;
+}
+
+/* 8. Mobile: stack art above text */
+@media (max-width: 600px) {
+  .grid-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .podcast-row {
+    grid-template-columns: 1fr;
+  }
+
+  .podcast-art {
+    max-width: 160px;
+    justify-self: flex-start;
+  }
+}

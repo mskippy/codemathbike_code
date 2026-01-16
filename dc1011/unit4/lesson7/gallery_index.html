@@ -1,0 +1,1500 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Digital Communications 10/11 • Unit 4 Video Gallery</title>
+
+    <!-- Common CSS + JS -->
+    <link rel="stylesheet" href="/code/common/css/base.css">
+    <script src="/code/common/js/nav_data.js" defer></script>
+    <script src="/code/common/js/utils.js" defer></script>
+    <script src="/code/common/js/inject_partials.js" defer></script>
+    <script src="/code/common/js/nav_systems.js" defer></script>
+    <script src="/code/common/js/main.js" defer></script>
+
+    <!-- Page-specific styles -->
+    <style>
+        /* Entire video card layout */
+        .video-card {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        }
+
+        /* Header text */
+        .video-card-header h2 {
+        font-size: 1rem;
+        margin: 0 0 0.2rem;
+        }
+
+        .video-card-header p {
+        margin: 0;
+        font-size: 0.85rem;
+        color: var(--muted);
+        }
+
+        /* --- VIDEO WRAPPER (PAGE-SPECIFIC FINAL VERSION) --- */
+        .video-wrapper {
+          padding: 0.5rem 0;
+        }
+
+        /* Standard frame for ALL embedded videos (portrait + landscape) */
+        .video-frame {
+          position: relative;
+          width: 100%;
+          max-width: 640px;       /* overall size on desktop */
+          margin: 0 auto;
+          border-radius: var(--radius);
+          overflow: hidden;
+
+          /* This is the magic: one standard aspect ratio */
+          aspect-ratio: 16 / 9;
+        }
+
+        /* Cloudflare iframe fills the frame */
+        .video-frame iframe {
+          position: absolute;
+          inset: 0;               /* top:0; right:0; bottom:0; left:0 */
+          width: 100%;
+          height: 100%;
+          border: 0;
+      }
+
+      /* Video wrapper – same for all */
+        .video-wrapper {
+          padding: 0.5rem 0;
+          display: flex;
+          justify-content: center;
+        }
+
+        /* Automatically detect aspect ratio from iframe shape */
+        .video-frame {
+          position: relative;
+          width: 100%;
+          max-width: 360px;          /* default portrait width */
+          aspect-ratio: 9 / 16;      /* default portrait ratio */
+          overflow: hidden;
+          border-radius: var(--radius);
+        }
+
+        /* Landscape override */
+        .video-frame.landscape {
+          max-width: 640px;
+          aspect-ratio: 16 / 9;
+        }
+
+        /* Video itself fills the box */
+        .video-frame iframe {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          border: 0;
+        }
+
+
+
+        /* Description */
+        .video-description {
+        font-size: 0.9rem;
+        margin: 0;
+        }
+
+        /* Action bar */
+        .video-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        border-top: 1px solid var(--border);
+        padding-top: 0.5rem;
+        font-size: 0.85rem;
+        }
+
+        .video-actions button {
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        padding: 0.25rem 0.75rem;
+        font-size: 0.8rem;
+        cursor: pointer;
+        }
+
+        .video-actions button.is-liked {
+        background: rgba(245, 158, 11, 0.15);
+        border-color: var(--accent);
+        }
+
+        /* Comments area */
+        .video-comments {
+        margin-top: 0.5rem;
+        padding-top: 0.5rem;
+        border-top: 1px dashed var(--border);
+        display: none;
+        }
+
+        .video-comments.is-open {
+        display: block;
+        }
+
+        .comment-form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        margin-bottom: 0.5rem;
+        }
+
+        .comment-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        max-height: 180px;
+        overflow-y: auto;
+        }
+
+        .comment-item {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.4rem;
+        border-radius: 6px;
+        background: rgba(0,0,0,0.04);
+        }
+
+    </style>
+  </head>
+
+  <!-- Set body class to match course theme: ict8, ict9, dc1011, or none for purple -->
+  <body data-course="dc1011">
+    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" role="main" data-page-title="DigiComm 10/11 • Unit 4 • Video Gallery">
+
+        <!-- Intro card -->
+        <section class="card">
+            <h1>Unit 4 • Video Gallery</h1>
+            <p>Watch your classmates’ video projects and leave <strong>likes</strong> and <strong>comments</strong> with kind, specific feedback.</p>
+            <p class="muted">Likes & comments stay on this device only (localStorage).</p>
+        </section>
+
+        <!-- Alyssa -->
+        <section class="card video-card" data-video-id="dc1011_video_example">
+
+            <div class="video-card-header">
+            <h2>Learn to Draw</h2>
+            <p>By Alyssa C • DigiComm 10/11</p>
+            </div>
+
+            <div class="video-wrapper">
+              <div class="video-frame" data-aspect="auto">
+                <iframe
+                  src="https://customer-5bn4yvuguu8qv7e1.cloudflarestream.com/5cf4e72afd7d4af613d5f20764531b99/iframe"
+                  loading="lazy"
+                  allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                  allowfullscreen
+                  title="Learn to Draw by Alyssa C">
+                </iframe>
+              </div>
+            </div>
+
+            <p class="video-description">
+            Learn how to draw a cute character with me with a pencil, eraser, and paper!
+            </p>
+
+            <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+            </div>
+
+            <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+                <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+                </label>
+                <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+                </label>
+                <button type="submit">Post comment</button>
+            </form>
+
+            <div class="comment-list"></div>
+            </div>
+        </section>
+
+        <!-- Sophie H -->
+        <section class="card video-card" data-video-id="dc1011_video_example">
+
+            <div class="video-card-header">
+            <h2>Five Minute Instant Noodles</h2>
+            <p>By Sophie H • DigiComm 10/11</p>
+            </div>
+
+              <div class="video-wrapper">
+                <div class="video-frame" data-aspect="auto">
+                  <!-- STEP 3 below: replace ONLY the src value -->
+                  <iframe
+                    src="https://customer-5bn4yvuguu8qv7e1.cloudflarestream.com/9fa45333515e6f24f2f32c1bac6d6bb4/iframe?poster=https%3A%2F%2Fcustomer-5bn4yvuguu8qv7e1.cloudflarestream.com%2F9fa45333515e6f24f2f32c1bac6d6bb4%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+                    loading="lazy"
+                    style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                    allowfullscreen="true"
+                  ></iframe>
+                </div>
+              </div>
+
+            <p class="video-description">
+            mini documentary about the process of instant noodles making
+            </p>
+
+            <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+            </div>
+
+            <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+                <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+                </label>
+                <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+                </label>
+                <button type="submit">Post comment</button>
+            </form>
+
+            <div class="comment-list"></div>
+            </div>
+        </section>
+
+        <!-- CHRISTOPH   -->
+        <section class="card video-card" data-video-id="dc1011_video_example">
+
+            <div class="video-card-header">
+            <h2>Mc Donalds Tasting </h2>
+            <p>By Christoph • DigiComm 10/11</p>
+            </div>
+
+              <div class="video-wrapper">
+                <div class="video-frame" data-aspect="auto">
+                  <!-- STEP 3 below: replace ONLY the src value -->
+                  <iframe
+                    src="https://customer-5bn4yvuguu8qv7e1.cloudflarestream.com/a56fb42561f43ab3b29791038605170f/iframe?poster=https%3A%2F%2Fcustomer-5bn4yvuguu8qv7e1.cloudflarestream.com%2Fa56fb42561f43ab3b29791038605170f%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+                    loading="lazy"
+                    style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                    allowfullscreen="true"
+                  ></iframe>
+                </div>
+              </div>
+
+            <p class="video-description">
+            I’m tasting a Mc Donalds Burger I’ve never tried before and rate it 10/10!
+            </p>
+
+            <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+            </div>
+
+            <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+                <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+                </label>
+                <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+                </label>
+                <button type="submit">Post comment</button>
+            </form>
+
+            <div class="comment-list"></div>
+            </div>
+        </section>
+        
+        <!-- JOSEF -->
+        <section class="card video-card" data-video-id="dc1011_video_example">
+
+            <div class="video-card-header">
+            <h2>Buldak Ramen Mukbang </h2>
+            <p>By Josef H • DigiComm 10/11</p>
+            </div>
+
+            <div class="video-wrapper">
+              <div class="video-frame landscape">
+                <iframe
+                  src="https://customer-5bn4yvuguu8qv7e1.cloudflarestream.com/46678d9d9bd99d3f3ae6c4b8e8941d06/iframe?poster=https%3A%2F%2Fcustomer-5bn4yvuguu8qv7e1.cloudflarestream.com%2F46678d9d9bd99d3f3ae6c4b8e8941d06%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+                  loading="lazy"
+                  allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                  allowfullscreen
+                  title="Buldak Ramen Mukbang – Josef H">
+                </iframe>
+              </div>
+            </div>
+
+
+            <p class="video-description">
+            If you like ramen then watch this video!
+            </p>
+
+            <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+            </div>
+
+            <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+                <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+                </label>
+                <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+                </label>
+                <button type="submit">Post comment</button>
+            </form>
+
+            <div class="comment-list"></div>
+            </div>
+        </section>
+
+        <!-- CADENCE -->
+        <section class="card video-card" data-video-id="dc1011_video_landscape_TEMPLATE">
+
+          <div class="video-card-header">
+            <h2>Where Darkness Meets Performance: The Chevrolet Volt Defined</h2>
+            <p>By Cadence • DigiComm 10/11</p>
+          </div>
+
+            <div class="video-wrapper">
+              <div class="video-frame landscape">
+                <iframe
+                  src="https://customer-5bn4yvuguu8qv7e1.cloudflarestream.com/8b276de50969cd6b4795ca19fb09fbe9/iframe?poster=https%3A%2F%2Fcustomer-5bn4yvuguu8qv7e1.cloudflarestream.com%2F8b276de50969cd6b4795ca19fb09fbe9%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+                  loading="lazy"
+                  allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                  allowfullscreen
+                  title="Where Darkness Meets Performance: The Chevrolet Volt Defined – Cadence">
+                </iframe>
+              </div>
+            </div>
+
+
+          <p class="video-description">
+            This video is a short film mixed with an edit of a 2017 Chevrolet Volt. It shows all the features of the car, and why you should be more interested in what cars have to offer. 
+          </p>
+
+          <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+          </div>
+
+          <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+              <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+              </label>
+              <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+              </label>
+              <button type="submit">Post comment</button>
+            </form>
+            <div class="comment-list"></div>
+          </div>
+
+        </section>
+
+        <!-- SAYA -->
+        <section class="card video-card" data-video-id="dc1011_video_portrait_TEMPLATE">
+
+          <div class="video-card-header">
+            <h2>Unforgettable Views - Vancouver</h2>
+            <p>By Saya • DigiComm 10/11</p>
+          </div>
+
+              <div class="video-wrapper">
+                <div class="video-frame" data-aspect="auto">
+                  <!-- STEP 3 below: replace ONLY the src value -->
+                  <iframe
+                    src="https://customer-5bn4yvuguu8qv7e1.cloudflarestream.com/32fc262d50b9af28c8c7b5f58629c699/iframe?poster=https%3A%2F%2Fcustomer-5bn4yvuguu8qv7e1.cloudflarestream.com%2F32fc262d50b9af28c8c7b5f58629c699%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+                    loading="lazy"
+                    style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                    allowfullscreen="true"
+                  ></iframe>
+                </div>
+              </div>
+
+
+          <p class="video-description">
+             Want to escape daily stress and enjoy breathtaking views? Join me on a visual journey through Vancouver's most unforgettable spots, from serene parks to vibrant cityscapes.
+          </p>
+
+          <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+          </div>
+
+          <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+              <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+              </label>
+              <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+              </label>
+              <button type="submit">Post comment</button>
+            </form>
+            <div class="comment-list"></div>
+          </div>
+
+        </section>        
+
+        <!-- Waku -->
+        <section class="card video-card" data-video-id="dc1011_video_landscape_TEMPLATE">
+
+          <div class="video-card-header">
+            <h2>How We Should Practice Volleyball</h2>
+            <p>By Waku • DigiComm 10/11</p>
+          </div>
+
+          <div class="video-wrapper">
+            <div class="video-frame landscape">
+              <iframe
+                src="https://customer-5bn4yvuguu8qv7e1.cloudflarestream.com/b882491a29348b4d75dc8e2c1015da25/iframe?poster=https%3A%2F%2Fcustomer-5bn4yvuguu8qv7e1.cloudflarestream.com%2Fb882491a29348b4d75dc8e2c1015da25%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+                loading="lazy"
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <p class="video-description">
+            Short description of the video: purpose, style, concept, or message.
+          </p>
+
+          <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+          </div>
+
+          <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+              <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+              </label>
+              <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+              </label>
+              <button type="submit">Post comment</button>
+            </form>
+            <div class="comment-list"></div>
+          </div>
+
+        </section>
+
+        <!-- MATTIAS D-->
+        <section class="card video-card" data-video-id="dc1011_video_portrait_TEMPLATE">
+
+          <div class="video-card-header">
+            <h2>Skit Movie</h2>
+            <p>By Mattias D • DigiComm 10/11</p>
+          </div>
+
+              <div class="video-wrapper">
+                <div class="video-frame" data-aspect="auto">
+                  <!-- STEP 3 below: replace ONLY the src value -->
+                  <iframe
+                    src="https://customer-5bn4yvuguu8qv7e1.cloudflarestream.com/adf757fd863fa6b054822c3924f09bad/watch"
+                    loading="lazy"
+                    style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                    allowfullscreen="true"
+                  ></iframe>
+                </div>
+              </div>
+
+
+          <p class="video-description">
+            One mission. One fake name. Zero preparation.
+          </p>
+
+          <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+          </div>
+
+          <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+              <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+              </label>
+              <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+              </label>
+              <button type="submit">Post comment</button>
+            </form>
+            <div class="comment-list"></div>
+          </div>
+
+        </section>
+
+       <!-- Naomi E
+        <section class="card video-card" data-video-id="dc1011_video_portrait_TEMPLATE">
+
+          <div class="video-card-header">
+            <h2>Portrait Video Title</h2>
+            <p>By Naomi • DigiComm 10/11</p>
+          </div>
+
+              <div class="video-wrapper">
+                <div class="video-frame" data-aspect="auto">
+                  <!-- STEP 3 below: replace ONLY the src value
+                  <iframe
+                    src="https://customer-5bn4yvuguu8qv7e1.cloudflarestream.com/a58f8f44f46d71f6b596798cdabfe16c/watch"
+                    loading="lazy"
+                    style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                    allowfullscreen="true"
+                  ></iframe>
+                </div>
+              </div>
+
+
+          <p class="video-description">
+            Short description of the video: purpose, style, concept, or message.
+          </p>
+
+          <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+          </div>
+
+          <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+              <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+              </label>
+              <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+              </label>
+              <button type="submit">Post comment</button>
+            </form>
+            <div class="comment-list"></div>
+          </div>
+
+        </section> -->
+
+        <!-- Marcus G -->
+        <section class="card video-card" data-video-id="dc1011_video_landscape_TEMPLATE">
+
+          <div class="video-card-header">
+            <h2>Red 40 Mukbang</h2>
+            <p>By Marcus • DigiComm 10/11</p>
+          </div>
+
+          <div class="video-wrapper">
+            <div class="video-frame landscape">
+              <iframe
+                src="https://customer-5bn4yvuguu8qv7e1.cloudflarestream.com/6e9323cb2236acc5bfa1a1bd340f34a8/iframe?poster=https%3A%2F%2Fcustomer-5bn4yvuguu8qv7e1.cloudflarestream.com%2F6e9323cb2236acc5bfa1a1bd340f34a8%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+                loading="lazy"
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <p class="video-description">
+            Short description of the video: purpose, style, concept, or message.
+          </p>
+
+          <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+          </div>
+
+          <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+              <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+              </label>
+              <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+              </label>
+              <button type="submit">Post comment</button>
+            </form>
+            <div class="comment-list"></div>
+          </div>
+
+        </section>
+
+        <!-- Jade G 
+        <section class="card video-card" data-video-id="dc1011_video_portrait_TEMPLATE">
+
+          <div class="video-card-header">
+            <h2>Jade G</h2>
+            <p>By Jade • DigiComm 10/11</p>
+          </div>
+
+              <div class="video-wrapper">
+                <div class="video-frame" data-aspect="auto">
+                  <!-- STEP 3 below: replace ONLY the src value 
+                  <iframe
+                    src="https://customer-5bn4yvuguu8qv7e1.cloudflarestream.com/968688a3941e0082027c5d8b9e3d2de3/watch"
+                    loading="lazy"
+                    style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                    allowfullscreen="true"
+                  ></iframe>
+                </div>
+              </div> 
+
+
+          <p class="video-description">
+            Short description of the video: purpose, style, concept, or message.
+          </p>
+
+          <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+          </div>
+
+          <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+              <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+              </label>
+              <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+              </label>
+              <button type="submit">Post comment</button>
+            </form>
+            <div class="comment-list"></div>
+          </div>
+
+        </section> -->
+
+        <!-- Liam -->
+        <section class="card video-card" data-video-id="dc1011_video_landscape_TEMPLATE">
+
+          <div class="video-card-header">
+            <h2>The REAL Dangers of HOMEWORK – Misinformation PSA</h2>
+            <p>By Liam • DigiComm 10/11</p>
+          </div>
+
+          <div class="video-wrapper">
+            <div class="video-frame landscape">
+              <iframe
+                src="https://customer-5bn4yvuguu8qv7e1.cloudflarestream.com/2fd2ebee3ee6ad2774891253f9364a02/iframe?poster=https%3A%2F%2Fcustomer-5bn4yvuguu8qv7e1.cloudflarestream.com%2F2fd2ebee3ee6ad2774891253f9364a02%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+                loading="lazy"
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <p class="video-description">
+            This video will show the TRUE and HIDDEN facts about Homework that teachers don’t want you to know! 
+          </p>
+
+          <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+          </div>
+
+          <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+              <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+              </label>
+              <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+              </label>
+              <button type="submit">Post comment</button>
+            </form>
+            <div class="comment-list"></div>
+          </div>
+
+        </section>
+
+        <!-- Minhyeok -->
+        <section class="card video-card" data-video-id="dc1011_video_portrait_TEMPLATE">
+
+          <div class="video-card-header">
+            <h2>Soccer Video</h2>
+            <p>By Minhyeok • DigiComm 10/11</p>
+          </div>
+
+                        <div class="video-wrapper">
+            <div class="video-frame landscape">
+              <iframe
+                src="https://customer-5bn4yvuguu8qv7e1.cloudflarestream.com/022ff081924933e50d8ce3988b4f010a/watch"
+                loading="lazy"
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+
+          <p class="video-description">
+            Short description of the video: purpose, style, concept, or message.
+          </p>
+
+          <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+          </div>
+
+          <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+              <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+              </label>
+              <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+              </label>
+              <button type="submit">Post comment</button>
+            </form>
+            <div class="comment-list"></div>
+          </div>
+
+        </section>
+
+        <!-- Pranjal -->
+        <section class="card video-card" data-video-id="dc1011_video_landscape_TEMPLATE">
+
+          <div class="video-card-header">
+            <h2>What Did You Say?</h2>
+            <p>By Pranjal • DigiComm 10/11</p>
+          </div>
+
+          <div class="video-wrapper">
+            <div class="video-frame landscape">
+              <iframe
+                src="https://customer-5bn4yvuguu8qv7e1.cloudflarestream.com/50cfaadcd533fa983a0aa9b3433d4632/watch"
+                loading="lazy"
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <p class="video-description">
+            This is a comedy skit of an interviewer who mishears everything the applicant says. It shows the importance of good communication while giving you a good laugh.
+          </p>
+
+          <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+          </div>
+
+          <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+              <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+              </label>
+              <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+              </label>
+              <button type="submit">Post comment</button>
+            </form>
+            <div class="comment-list"></div>
+          </div>
+
+        </section>
+
+        <!-- Ramadan -->
+        <section class="card video-card" data-video-id="dc1011_video_landscape_TEMPLATE">
+
+          <div class="video-card-header">
+            <h2>Paint.Net (For Dummies) </h2>
+            <p>By Ramadan • DigiComm 10/11</p>
+          </div>
+
+          <div class="video-wrapper">
+            <div class="video-frame landscape">
+              <iframe
+                src="https://customer-5bn4yvuguu8qv7e1.cloudflarestream.com/a64817e1e7ee689456876aaae5fb9464/watch"
+                loading="lazy"
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <p class="video-description">
+            Because even dummies need to edit their photos.  
+          </p>
+
+          <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+          </div>
+
+          <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+              <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+              </label>
+              <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+              </label>
+              <button type="submit">Post comment</button>
+            </form>
+            <div class="comment-list"></div>
+          </div>
+
+        </section>        
+
+        <!-- Kye -->
+        <section class="card video-card" data-video-id="dc1011_video_portrait_TEMPLATE">
+
+          <div class="video-card-header">
+            <h2>Pov: those movies where it starts with the end clip</h2>
+            <p>By Kye • DigiComm 10/11</p>
+          </div>
+
+              <div class="video-wrapper">
+                <div class="video-frame" data-aspect="auto">
+                  <!-- STEP 3 below: replace ONLY the src value -->
+                  <iframe
+                    src="https://customer-5bn4yvuguu8qv7e1.cloudflarestream.com/7c2989451260b4034db33f8f9e7041df/watch"
+                    loading="lazy"
+                    style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                    allowfullscreen="true"
+                  ></iframe>
+                </div>
+              </div>
+
+
+          <p class="video-description">
+            Target spotted confirm shot. 
+          </p>
+
+          <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+          </div>
+
+          <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+              <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+              </label>
+              <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+              </label>
+              <button type="submit">Post comment</button>
+            </form>
+            <div class="comment-list"></div>
+          </div>
+
+        </section>        
+
+        <!-- The Yoshi Documentary - Callum A -->
+        <section class="card video-card" data-video-id="dc1011_video_landscape_TEMPLATE">
+
+          <div class="video-card-header">
+            <h2>The Yoshi Documentary</h2>
+            <p>By Callum A • DigiComm 10/11</p>
+          </div>
+
+          <div class="video-wrapper">
+            <div class="video-frame landscape">
+              <iframe
+                src="https://customer-5bn4yvuguu8qv7e1.cloudflarestream.com/629dad91d4813f1625c16d72671bca33/iframe?poster=https%3A%2F%2Fcustomer-5bn4yvuguu8qv7e1.cloudflarestream.com%2F629dad91d4813f1625c16d72671bca33%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+                loading="lazy"
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <p class="video-description">
+            Follow Yoshi's surprising evolution from Mario sidekick to beloved star across three decades.
+          </p>
+
+          <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+          </div>
+
+          <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+              <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+              </label>
+              <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+              </label>
+              <button type="submit">Post comment</button>
+            </form>
+            <div class="comment-list"></div>
+          </div>
+
+        </section>
+
+        <!-- First Time Camping - Selim -->
+        <section class="card video-card" data-video-id="dc1011_video_portrait_TEMPLATE">
+
+          <div class="video-card-header">
+            <h2>First Time Camping</h2>
+            <p>By Selim • DigiComm 10/11</p>
+          </div>
+
+              <div class="video-wrapper">
+                <div class="video-frame" data-aspect="auto">
+                  <!-- STEP 3 below: replace ONLY the src value -->
+                  <iframe
+                    src="https://customer-5bn4yvuguu8qv7e1.cloudflarestream.com/8c6f3fea515c734a62f3c66b10ad6906/iframe?poster=https%3A%2F%2Fcustomer-5bn4yvuguu8qv7e1.cloudflarestream.com%2F8c6f3fea515c734a62f3c66b10ad6906%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+                    loading="lazy"
+                    style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                    allowfullscreen="true"
+                  ></iframe>
+                </div>
+              </div>
+
+
+          <p class="video-description">
+            Hello everybody today I'm here to explain and show who wants to go camping in the wilderness for the first time in this video we are showcasing tools shelter spots and more other important stuff you need to know. 
+          </p>
+
+          <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+          </div>
+
+          <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+              <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+              </label>
+              <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+              </label>
+              <button type="submit">Post comment</button>
+            </form>
+            <div class="comment-list"></div>
+          </div>
+
+        </section>
+        
+        <!-- Summer Memories - Ariana-->
+        <section class="card video-card" data-video-id="dc1011_video_landscape_TEMPLATE">
+
+          <div class="video-card-header">
+            <h2>Summer Memories</h2>
+            <p>By Ariana • DigiComm 10/11</p>
+          </div>
+
+          <div class="video-wrapper">
+            <div class="video-frame landscape">
+              <iframe
+                src="https://customer-5bn4yvuguu8qv7e1.cloudflarestream.com/571429c0e3ae49e354d739fb90007532/iframe?poster=https%3A%2F%2Fcustomer-5bn4yvuguu8qv7e1.cloudflarestream.com%2F571429c0e3ae49e354d739fb90007532%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+                loading="lazy"
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <p class="video-description">
+            A summer full of memories.
+          </p>
+
+          <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+          </div>
+
+          <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+              <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+              </label>
+              <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+              </label>
+              <button type="submit">Post comment</button>
+            </form>
+            <div class="comment-list"></div>
+          </div>
+
+        </section>        
+
+        <!-- Sahira -->
+        <section class="card video-card" data-video-id="dc1011_video_landscape_TEMPLATE">
+
+          <div class="video-card-header">
+            <h2>My friends took these LITTLE TOO SERIOUSLY</h2>
+            <p>By Sahira • DigiComm 10/11</p>
+          </div>
+
+          <div class="video-wrapper">
+            <div class="video-frame landscape">
+              <iframe
+                src="https://customer-5bn4yvuguu8qv7e1.cloudflarestream.com/a8c9a8525bed54709cc8ac3d66c4d24a/iframe?poster=https%3A%2F%2Fcustomer-5bn4yvuguu8qv7e1.cloudflarestream.com%2Fa8c9a8525bed54709cc8ac3d66c4d24a%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+                loading="lazy"
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <p class="video-description">
+            The video is about reacting to my friends' answers as I asked them questions. (I cringed out editing this video. you guys will have to suffer as well LOL) 
+          </p>
+
+          <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+          </div>
+
+          <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+              <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+              </label>
+              <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+              </label>
+              <button type="submit">Post comment</button>
+            </form>
+            <div class="comment-list"></div>
+          </div>
+
+        </section>
+
+        <!-- Hirad -->
+        <section class="card video-card" data-video-id="dc1011_video_landscape_TEMPLATE">
+
+          <div class="video-card-header">
+            <h2>Life of a newcomer student</h2>
+            <p>By Hirad • DigiComm 10/11</p>
+          </div>
+
+          <div class="video-wrapper">
+            <div class="video-frame landscape">
+              <iframe
+                src="https://customer-5bn4yvuguu8qv7e1.cloudflarestream.com/9f7cbf81426da7e7f61fc63836252eb3/iframe?poster=https%3A%2F%2Fcustomer-5bn4yvuguu8qv7e1.cloudflarestream.com%2F9f7cbf81426da7e7f61fc63836252eb3%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+                loading="lazy"
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <p class="video-description">
+            Starting over in a new country is hard-but a little kindness can change everything.
+          </p>
+
+          <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+          </div>
+
+          <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+              <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+              </label>
+              <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+              </label>
+              <button type="submit">Post comment</button>
+            </form>
+            <div class="comment-list"></div>
+          </div>
+
+        </section>
+
+        <!-- Dayton -->
+        <section class="card video-card" data-video-id="dc1011_video_landscape_TEMPLATE">
+
+          <div class="video-card-header">
+            <h2>Wasting Love – Iron Maiden: Guitar Tutorial w/ tabs</h2>
+            <p>By Dayton • DigiComm 10/11</p>
+          </div>
+
+          <div class="video-wrapper">
+            <div class="video-frame landscape">
+              <iframe
+                src="https://customer-5bn4yvuguu8qv7e1.cloudflarestream.com/96ba479b96af6b497a717a337602e45f/iframe?poster=https%3A%2F%2Fcustomer-5bn4yvuguu8qv7e1.cloudflarestream.com%2F96ba479b96af6b497a717a337602e45f%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+                loading="lazy"
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <p class="video-description">
+            Do not waste your love for guitar, learn Wasting Love by Iron Maiden with this simple tutorial.
+          </p>
+
+          <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+          </div>
+
+          <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+              <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+              </label>
+              <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+              </label>
+              <button type="submit">Post comment</button>
+            </form>
+            <div class="comment-list"></div>
+          </div>
+
+        </section>
+
+        <!-- MK -->
+        <section class="card video-card" data-video-id="dc1011_video_landscape_TEMPLATE">
+
+          <div class="video-card-header">
+            <h2>K-Pop Demon Hunters explained by a die-hard fan</h2>
+            <p>By MK • DigiComm 10/11</p>
+          </div>
+
+          <div class="video-wrapper">
+            <div class="video-frame landscape">
+              <iframe
+                src="https://customer-5bn4yvuguu8qv7e1.cloudflarestream.com/abd6508ccd85848b860d332bac1e2273/iframe?poster=https%3A%2F%2Fcustomer-5bn4yvuguu8qv7e1.cloudflarestream.com%2Fabd6508ccd85848b860d332bac1e2273%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+                loading="lazy"
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <p class="video-description">
+            Enter the world of <em>Demon Hunter</em>, where K-pop idols fight dark forces and uncover secrets that could change everything! 
+          </p>
+
+          <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+          </div>
+
+          <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+              <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+              </label>
+              <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+              </label>
+              <button type="submit">Post comment</button>
+            </form>
+            <div class="comment-list"></div>
+          </div>
+
+        </section>
+
+        <!-- TEMPLATE EXAMPLES BELOW -->
+        <!-- PORTRAIT VIDEO CARD -->
+        <section class="card video-card" data-video-id="dc1011_video_portrait_TEMPLATE">
+
+          <div class="video-card-header">
+            <h2>Portrait Video Title</h2>
+            <p>By Student Name • DigiComm 10/11</p>
+          </div>
+
+              <div class="video-wrapper">
+                <div class="video-frame" data-aspect="auto">
+                  <!-- STEP 3 below: replace ONLY the src value -->
+                  <iframe
+                    src="https://customer-xxxx.cloudflarestream.com/VIDEO_ID/iframe?poster=POSTER_URL"
+                    loading="lazy"
+                    style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                    allowfullscreen="true"
+                  ></iframe>
+                </div>
+              </div>
+
+
+          <p class="video-description">
+            Short description of the video: purpose, style, concept, or message.
+          </p>
+
+          <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+          </div>
+
+          <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+              <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+              </label>
+              <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+              </label>
+              <button type="submit">Post comment</button>
+            </form>
+            <div class="comment-list"></div>
+          </div>
+
+        </section>
+
+        <!-- LANDSCAPE VIDEO CARD -->
+        <section class="card video-card" data-video-id="dc1011_video_landscape_TEMPLATE">
+
+          <div class="video-card-header">
+            <h2>Landscape Video Title</h2>
+            <p>By Student Name • DigiComm 10/11</p>
+          </div>
+
+          <div class="video-wrapper">
+            <div class="video-frame landscape">
+              <iframe
+                src="https://customer-xxxx.cloudflarestream.com/VIDEO_ID/iframe"
+                loading="lazy"
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <p class="video-description">
+            Short description of the video: purpose, style, concept, or message.
+          </p>
+
+          <div class="video-actions">
+            <button class="video-like-btn" type="button">👍 Like</button>
+            <span class="video-like-count" aria-live="polite">0 likes</span>
+            <button class="video-comment-toggle" type="button">💬 Comment</button>
+          </div>
+
+          <div class="video-comments" aria-hidden="true">
+            <form class="comment-form">
+              <label>
+                Name (first name or initials)
+                <input type="text" name="name" placeholder="Your name">
+              </label>
+              <label>
+                Comment
+                <textarea name="comment" placeholder="What did you notice or appreciate?"></textarea>
+              </label>
+              <button type="submit">Post comment</button>
+            </form>
+            <div class="comment-list"></div>
+          </div>
+
+        </section>
+
+
+        </main>
+
+
+      <!-- Right rail -->
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card">
+          <strong>Feedback Guidelines</strong>
+          <ul class="list-tight">
+            <li>Be kind and specific.</li>
+            <li>Notice story, camera, and sound.</li>
+            <li>Say what worked well.</li>
+            <li>Suggest one thing to improve.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Remember</strong>
+          <ul class="list-tight">
+            <li>Wear headphones.</li>
+            <li>Don’t pause others’ work mid-way.</li>
+            <li>Keep comments school appropriate.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/code/common/partials/footer.html"></footer>
+
+    <!-- Page-specific JS for likes & comments -->
+    <script>
+      (function () {
+        const STORAGE_KEY = "dc1011_video_feedback";
+
+        function loadState() {
+          try {
+            const raw = localStorage.getItem(STORAGE_KEY);
+            return raw ? JSON.parse(raw) : {};
+          } catch (e) {
+            return {};
+          }
+        }
+
+        function saveState(state) {
+          try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+          } catch (e) {
+            // ignore if storage is blocked
+          }
+        }
+
+        const state = loadState();
+
+        function initCard(card) {
+          const videoId = card.dataset.videoId;
+          if (!videoId) return;
+
+          const likeBtn       = card.querySelector(".video-like-btn");
+          const likeCountEl   = card.querySelector(".video-like-count");
+          const commentToggle = card.querySelector(".video-comment-toggle");
+          const commentsWrap  = card.querySelector(".video-comments");
+          const commentForm   = card.querySelector(".comment-form");
+          const commentList   = card.querySelector(".comment-list");
+
+          if (!state[videoId]) {
+            state[videoId] = { liked: false, likes: 0, comments: [] };
+          }
+
+          function renderLikes() {
+            const { liked, likes } = state[videoId];
+            likeBtn.classList.toggle("is-liked", liked);
+            likeBtn.textContent = liked ? "👍 Liked" : "👍 Like";
+            likeCountEl.textContent = likes === 1 ? "1 like" : `${likes} likes`;
+          }
+
+          likeBtn.addEventListener("click", () => {
+            const entry = state[videoId];
+            if (entry.liked) {
+              entry.liked = false;
+              entry.likes = Math.max(0, entry.likes - 1);
+            } else {
+              entry.liked = true;
+              entry.likes += 1;
+            }
+            renderLikes();
+            saveState(state);
+          });
+
+          function renderComments() {
+            const entry = state[videoId];
+            commentList.innerHTML = "";
+            entry.comments.forEach(c => {
+              const div = document.createElement("div");
+              div.className = "comment-item";
+              div.innerHTML = `<strong>${c.name || "Anonymous"}:</strong> ${c.text}`;
+              commentList.appendChild(div);
+            });
+          }
+
+          commentToggle.addEventListener("click", () => {
+            const isOpen = commentsWrap.classList.toggle("is-open");
+            commentsWrap.setAttribute("aria-hidden", isOpen ? "false" : "true");
+          });
+
+          commentForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const nameInput = commentForm.querySelector('input[name="name"]');
+            const textInput = commentForm.querySelector('textarea[name="comment"]');
+
+            const name = nameInput.value.trim();
+            const text = textInput.value.trim();
+            if (!text) return;
+
+            state[videoId].comments.push({
+              name: name || "Anonymous",
+              text
+            });
+
+            textInput.value = "";
+            renderComments();
+            saveState(state);
+          });
+
+          // Initial paint from state
+          renderLikes();
+          renderComments();
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+          document.querySelectorAll(".video-card").forEach(initCard);
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,135 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>MySpace – Vaanya K  </title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Vaanya K" />
+
+      <p style="margin-top:12px;">
+        <a href='/code/ict8/unit4/web_dev/S1W3/index.html'>← Back to S1W3 class page</a>
+      </p>
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #f5e6eb;
+      --ink: #695c64;
+      --accent: #cf84b0; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #fff; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#f3f3f6; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="studentName">Vaanya 𝄞</span> </h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        My hobbies are music, making visual novels, art, editing and writing.
+        I was born in southeast Asia and  can speak 2 1/2 languages!
+        My goal for this course was to get better at coding and I think I've done good so far.
+
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://ca.pinterest.com/pin/7670261861489138/" target="_blank" rel="noopener">Pinterest</a></li>
+        <li><a href="https://persona.atlus.com/p5r/" target="_blank" rel="noopener">P5r !!!! ₍₍⚞(˶˃ ꒳ ˂˶)⚟⁾⁾</a></li>
+          <li><a href="https://www.youtube.com/watch?v=LFlyELZqdGI&list=RDLFlyELZqdGI&start_radio=1" target="_blank" rel="noopener">Viola (Yves)</a></li>
+      </ul>
+    </section>
+<div class="embed video" aria-label="YouTube video embed">
+  <iframe 
+    src="https://www.youtube.com/embed/_jmcb6_aKvM" 
+    title="YouTube video player" allowfullscreen
+    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    
+</div>
+fav youtuber ! 
+    <section>
+      <h2>Favourites ♡</h2>
+      <div class="row">
+  <div class="column">
+    <img src="https://i.pinimg.com/236x/10/81/c6/1081c65a3a8b891d272199e0d554c507.jpg" alt="A poster of music artist Yves." style="width:30%">
+  </div>
+  <div class="column">
+    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSmwQYVLeyKwLqnpwzsLvxPgOvq8nIc4jeLdL60GAGDmRIujdt9" alt="A picture of Dazai Osamu, a character from Bungo Stray Dogs." style="width:30%">
+  <figcaption>credits: pinterest</figcaption>
+  </div>
+</div>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+
+     
+      <h2>Bad Apple Pun</h2>
+      <p id="pun">An apple a day can keep anyone away..</p>
+      <button type="button" onclick="myFunction()">How?</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p> ♡ In the first unit I learned essential digital skills like setting up my workspace, organizing files and folders, and practicing responsible habits. 
+        It helped me feel confident navigating my computer and managing my work efficiently. In unit two I learned how to use Canva and Excel to create digital work that is organized and visually appealing which
+        will help me in future projets. I liked the photobomb lesson a lot and will definitely use those skills in the future to edit photos.
+      In the following unit I learned how to code my own retro themed space shooter game and it helped me improve my problem solving and coding skills. The game was much more fun to play
+      knowing that I coded it! 
+      In my last unit I learned how to make my own webpage, add links, pictures and tweak CSS. The webpage was definitely the most fun unit I had and I'll definitely try to make my own site again now that I know how to do it! I like doing projects that let me personalise and
+  give me more creative freedom and thats something I really liked.  </p>
+      
+    </section>
+    
+    
+    
+    <footer>
+      <p>
+        Built by <strong>vaanya</strong>. Last updated: <span id="lastUpdated"></span> Dec 10 2025
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "If you hit hard enough!";
+    }
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

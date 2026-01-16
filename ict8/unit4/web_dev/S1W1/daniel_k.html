@@ -1,0 +1,124 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>My First Webpage – Daniel Kulhavy</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Your Name" />
+
+  <!-- 💡 TYPE ZONE: You will edit the text above and below.  -->
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #10ca10;
+      --ink: #cc0f0f;
+      --accent: #4f46e5; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #83dde0; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#f3f3f6; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <header>
+
+      <p style="margin-top:12px;">
+        <a href='/code/ict8/unit4/web_dev/S1W1/index.html'>← Back to S1W1 class page</a>
+      </p>
+      <h1>Hi, I'm <span id="studentName">Daniel Kulhavy</span> 🙌</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I like playing video games, I play video games almost everyday. I also like sim racing and I want to become a Formula Racer hopefully Formula 1. and I am allergic to wheat and cannot swim.
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://www.webosumania.com" target="_blank" rel="noopener">Web osu mania</a></li>
+        <li><a href="https://www.monkeytype.com" target="_blank" rel="noopener">monkeytype</a></li>
+        <li><a href="https://www.roblox.com" target="_blank" rel="noopener">roblox</a></li>
+        <li><a href="https://gd.games/games/1e2defc2-23d9-4771-84f5-75b403fb77cf" target="_blank" rel="noopener">My Game</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="https://ix-marketing.imgix.net/autotagging.png?auto=format,compress&w=1946" alt="A cool nature image from Unsplash" />
+        <figcaption>Photo credit: Unsplash</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">Why do fish swim in salt water?</p>
+      <button type="button" onclick="myFunction()">Why?</button>
+    </section>
+
+    <section>
+      <h2>Reflection</h2>
+      <p>ICT 8 Final Reflection 
+
+U1: I enjoyed learning about the computer parts the most. What I found most challenging was doing the file management. What I would like to learn more about is learning the parts of a computer because when I get enough money i want to build my own gaming pc and I need to know about computer parts for that. A way I could use this information in the future is if I take another computer class in grade 9 or higher, and if I build a computer, which I will probably do. 
+
+U2: I enjoyed learning about the meme tracker because we got to watch videos on YouTube, and we also got to work with excel which was easy for me. 
+
+What I found challenging was the unit 2 final project and I made it about AI. It took me a while to finish it. 
+
+I would like to learn more about how ai is not good. 
+
+I might use the excel skills that I learnt in the future if I work in a job where i need to use computers. 
+
+U3: I enjoyed adding the enemy because it added a challenge to the game. I found making the enemys spawn quite challenging. I would like to learn more about the features of gdevelop. I might use this in the future if I want to make a game and I want to use an easy-to-use game engine. 
+
+U4: what i enjoyed most was adding the pun. 
+
+What i found challenging was getting the image. I would like to learn more about what html can do. 
+
+I can use this in the future to make a website. </p>
+    </section>
+
+    <footer>
+      <p>
+        Built by <strong>Daniel Kulhavy</strong>. Last updated: <span id="lastUpdated"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "Because pepper makes them sneeze!";
+    }
+  </script>
+</body>
+</html>

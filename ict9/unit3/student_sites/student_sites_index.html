@@ -1,0 +1,973 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ICT 9 • Game Website Launch Page</title>
+
+    <!-- Core site styles + layout -->
+    <link rel="stylesheet" href="/code/common/css/base.css" />
+
+    <!-- Page-specific gallery styles (local to this page) -->
+    <style>
+      /* Grid layout – similar to podcast gallery: 2 across on desktop */
+      .grid-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: var(--gap, 1.5rem);
+        align-items: flex-start;
+      }
+
+      /* Row inside each card: icon on the left, text on the right */
+      .game-row {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .game-art {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        border-radius: var(--radius, 12px);
+        background: var(--surface-subtle, #f3f4f6);
+        flex-shrink: 0;
+      }
+
+      .game-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      .game-title {
+        margin: 0 0 0.25rem 0;
+      }
+
+      .game-student {
+        margin: 0;
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+
+      .game-tagline {
+        margin: 0;
+        font-size: 0.9rem;
+      }
+
+      .game-link {
+        margin-top: 0.75rem;
+      }
+
+      .game-link .btn {
+        display: inline-block;
+      }
+
+      /* Add space at the top of the right rail */
+      #sidebar-right .card:first-child {
+        margin-top: 2rem;
+      }
+
+    </style>
+
+    <!-- Site scripts (match existing paths) -->
+    <script src="/code/common/js/nav_data.js" defer></script>
+    <script src="/code/common/js/utils.js" defer></script>
+    <script src="/code/common/js/inject_partials.js" defer></script>
+    <script src="/code/common/js/nav_systems.js" defer></script>
+    <script src="/code/common/js/main.js" defer></script>
+  </head>
+
+  <!-- ict9 class so accent colours work (like dc1011 on the podcast page) -->
+  <body class="ict9 theme-ict9">
+    <!-- Header from partial -->
+    <header
+      id="site-header"
+      data-partial="/code/common/partials/header.html"
+    ></header>
+
+    <div class="page-wrap">
+      <!-- Left nav rail -->
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <!-- Main content -->
+      <main id="content" role="main">
+        <!-- Intro card -->
+        <section class="card">
+          <h1>ICT 9 – Game Website Launch Page</h1>
+          <p>
+            Welcome to our ICT 9 game website gallery. Each tile below
+            showcases a student-created game website, featuring:
+          </p>
+          <ul>
+            <li>the <strong>game title</strong>,</li>
+            <li>the <strong>student’s name</strong> (first name + last initial),</li>
+            <li>an icon of their <strong>main character</strong> or logo, and</li>
+            <li>a button to launch the live website in a new tab.</li>
+          </ul>
+        </section>
+        
+        <section class="card">
+          <h2>Upload Checklist</h2>
+          <p class="muted">These must be in your OneDrive folder before your website is published:</p>
+
+          <ul class="list-tight">
+            <li>✔ index.html</li>
+            <li>✔ about.html</li>
+            <li>✔ game.html (with your trailer)</li>
+            <li>✔ style.css (with your final colours & fonts)</li>
+            <li>✔ Images folder (icons, banners, screenshots)</li>
+            <li>✔ Trailer file (MP4) or working embed link</li>
+            <li>✔ Game Main Character Icon PNG</li>
+          </ul>
+
+          <details>
+            <summary><strong>How to Create Your Game Character Icon (PNG)</strong></summary>
+
+            <div style="margin-top: 0.75rem;">
+              <p>Your game icon should be a <strong>300 × 300 px PNG</strong>. Follow these steps:</p>
+
+              <h4>1️⃣ Create the Icon</h4>
+              <ul class="list-tight">
+                <li>Open <strong>Canva</strong></li>
+                <li>Create a <strong>square design</strong> → <code>300 × 300 px</code></li>
+                <li>Add your main character or game symbol</li>
+                <li>Keep the design simple and bold</li>
+              </ul>
+
+              <h4>2️⃣ Export the Image</h4>
+              <ul class="list-tight">
+                <li>Click <strong>Share → Download</strong></li>
+                <li>Select <strong>PNG</strong></li>
+                <li>Download it as <strong>game_icon.png</strong></li>
+              </ul>
+
+              <h4>3️⃣ Upload to Your Website Folder</h4>
+              <p>Place the icon inside your website’s <strong>images</strong> folder:</p>
+              <pre><code>/images/game_icon.png</code></pre>
+            </div>
+          </details>
+
+          <details>
+              <summary><strong>How to Export Your Game Trailer (Clipchamp)</strong></summary>
+
+              <div style="margin-top: 0.75rem;">
+                <p>Your game trailer must be exported as an <strong>MP4 under 100 MB</strong> so it can be uploaded and published to your website.</p>
+
+                <h4>1️⃣ Finish Your Edit</h4>
+                <ul class="list-tight">
+                  <li>Make sure all clips, audio, and titles are complete.</li>
+                  <li>Trim any extra seconds at the start or end.</li>
+                  <li>Your trailer should be <strong>20–60 seconds</strong>.</li>
+                </ul>
+
+                <h4>2️⃣ Export in Clipchamp</h4>
+                <ul class="list-tight">
+                  <li>Click <strong>Export → 1080p</strong></li>
+                  <li>When the quality option appears, choose <strong>Medium</strong></li>
+                  <li>This keeps your file under <strong>100 MB</strong></li>
+                </ul>
+
+                <h4>3️⃣ Save Your File</h4>
+                <p>Name your trailer exactly:</p>
+                <pre><code>trailer.mp4</code></pre>
+
+                <h4>4️⃣ Upload to Your Website Folder</h4>
+                <p>Place <code>trailer.mp4</code> in the same folder as your other website files (next to <code>index.html</code>).</p>
+
+                <h4>⭐ If Your File is Too Big</h4>
+                <ul class="list-tight">
+                  <li>Re-export using <strong>1080p → Medium</strong></li>
+                  <li>Or choose <strong>Low file size</strong> preset</li>
+                  <li>Trailers should almost always be <strong>20–60 MB</strong></li>
+                </ul>
+
+                <p>Your website will automatically show the trailer once everything is uploaded and published.</p>
+              </div>
+            </details>
+
+
+        </section>
+
+        <!-- =========================================
+             GALLERY GRID – 2 ACROSS LIKE PODCASTS
+             ========================================= -->
+        <section id="game-gallery" class="grid-gallery">
+
+          <!-- ESCAPE TO THE RADIOACTIVE FACTORY - AIDEN -->
+          <section class="card">
+            <h3 class="game-title">Escape to the Radioactive Factory</h3>
+
+            <div class="game-row">
+              <img
+                class="game-art"
+                src="https://ict9.codemathbike.ca/2025_P4/aidan_f/Images/game_icon.png"
+                alt="Main character icon for Escape to the Radioactive Factory"
+              />
+
+              <div class="game-info">
+                <p class="game-student">By Aiden S</p>
+                <p class="game-tagline">
+                  OUTRUN THE EXPLOSION • OUTLIVE THE DEAD • ESCAPE THE RADIOACTIVE FACTORY •
+                </p>
+              </div>
+            </div>
+
+            <div class="game-link">
+              <a
+                class="btn"
+                href="https://ict9.codemathbike.ca/2025_P4/aidan_f/Website.html"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Game Website
+              </a>
+            </div>
+          </section>
+
+          <!-- MUNCH FISH - ALA -->
+          <section class="card">
+            <h3 class="game-title">Munch Fish</h3>
+
+            <div class="game-row">
+              <img
+                class="game-art"
+                src="https://ict9.codemathbike.ca/2025_P4/ala_h/Munch_Fish_icon.png"
+                alt="Main character icon for Munch Fish"
+              />
+
+              <div class="game-info">
+                <p class="game-student">By Ala H</p>
+                <p class="game-tagline">
+                  Eat. Grow. Survive.
+                </p>
+              </div>
+            </div>
+
+            <div class="game-link">
+              <a
+                class="btn"
+                href="https://ict9.codemathbike.ca/2025_P4/ala_h/index.html"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Game Website
+              </a>
+            </div>
+          </section>
+
+          <!-- THE SWEET LABRINTH - ALYANA-->
+          <section class="card">
+            <h3 class="game-title">The Sweet Labyrinth</h3>
+
+            <div class="game-row">
+              <img
+                class="game-art"
+                src="https://ict9.codemathbike.ca/2025_P4/alyana_b/assets/game_icon.png"
+                alt="Main character icon for The Sweet Labyrinth"
+              />
+
+              <div class="game-info">
+                <p class="game-student">By Alyana B</p>
+                <p class="game-tagline">
+                 A fun candy themed game where you must escape both the enemies and falling to your death! Avoid enemies by completing parkour and tasks or stomping on their heads. Can you complete this impossible game?
+                </p>
+              </div>
+            </div>
+
+            <div class="game-link">
+              <a
+                class="btn"
+                href="https://ict9.codemathbike.ca/2025_P4/alyana_b/index.html"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Game Website
+              </a>
+            </div>
+          </section>
+
+          <!--INDUSTRY RUN - BUGRA-->
+          <section class="card">
+            <h3 class="game-title">Industry Run</h3>
+
+            <!-- Row: icon on the left, text on the right -->
+            <div class="game-row">
+              <img
+                class="game-art"
+                src="https://ict9.codemathbike.ca/2025_P4/bugra_k/Icon.png"
+                alt="Main character icon for Industry Run"
+              />
+
+              <div class="game-info">
+                <p class="game-student">By Bugra K</p>
+                <p class="game-tagline">Fast-paced space platformer.</p>
+              </div>
+            </div>
+
+            <!-- Button at the bottom -->
+            <div class="game-link">
+              <a
+                class="btn"
+                href="https://ict9.codemathbike.ca/2025_P4/bugra_k/IndustryWebPage.html"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Game Website
+              </a>
+            </div>
+          </section>
+
+          <!-- FACTORY ESCAPE - EMERSON-->
+          <section class="card">
+            <h3 class="game-title">Factory Escape</h3>
+
+            <div class="game-row">
+              <img
+                class="game-art"
+                src="https://ict9.codemathbike.ca/2025_P4/emerson_l/Main_Character.png"
+                alt="Main character icon for Factory Escape"
+              />
+
+              <div class="game-info">
+                <p class="game-student">By Emerson L</p>
+                <p class="game-tagline">
+                  Enter a world of danger, strategy, and excitement, the finish is the, but the path to victory is not so easy. Do you have what it takes?
+                </p>
+              </div>
+            </div>
+
+            <div class="game-link">
+              <a
+                class="btn"
+                href="https://ict9.codemathbike.ca/2025_P4/emerson_l/index.html"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Game Website
+              </a>
+            </div>
+          </section>
+
+          <!-- FROG HOP - HENRY -->
+          <section class="card">
+            <h3 class="game-title">Frog Hop</h3>
+
+            <div class="game-row">
+              <img
+                class="game-art"
+                src="https://ict9.codemathbike.ca/2025_P4/henry_k/FrogHop_Henry_icon.png"
+                alt="Main character icon for Frog Hop"
+              />
+
+              <div class="game-info">
+                <p class="game-student">By Henry K</p>
+                <p class="game-tagline">
+                  
+                </p>
+              </div>
+            </div>
+
+            <div class="game-link">
+              <a
+                class="btn"
+                href="https://ict9.codemathbike.ca/2025_P4/henry_k/index2.html"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Game Website
+              </a>
+            </div>
+          </section>
+
+          <!-- LEGENDS OF LEDA - JOHN -->
+          <section class="card">
+            <h3 class="game-title">Legends of Leda</h3>
+
+            <div class="game-row">
+              <img
+                class="game-art"
+                src="https://ict9.codemathbike.ca/2025_P4/john_m/images/LegendsofLelda_Zink_JohnMoreno.png"
+                alt="Main character icon for Legends of Leda"
+              />
+
+              <div class="game-info">
+                <p class="game-student">By John M</p>
+                <p class="game-tagline">
+                  Legends of Lelda is a fast paced pixel game. Dodge or defeat the goblins.
+                </p>
+
+            <div class="game-link">
+              <a
+                class="btn"
+                href="https://ict9.codemathbike.ca/2025_P4/john_m/index.html"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Game Website
+              </a>
+            </div>
+          </section>
+
+          <!-- BENEATH THE QUIET - KASRA H-->
+          <section class="card">
+            <h3 class="game-title">Beneath the Quiet</h3>
+
+            <div class="game-row">
+              <img
+                class="game-art"
+                src="https://ict9.codemathbike.ca/2025_P4/kasra_h/images/silentknight.svg"
+                alt="Main character icon for Beneath the Quiet"
+              />
+
+              <div class="game-info">
+                <p class="game-student">By Kasra H</p>
+                <p class="game-tagline">
+                  Escape the loud. Embrace the quiet.
+                </p>
+              </div>
+            </div>
+
+            <div class="game-link">
+              <a
+                class="btn"
+                href="https://ict9.codemathbike.ca/2025_P4/kasra_h/index.html"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Game Website
+              </a>
+            </div>
+          </section>
+          
+          <!-- EXOTIC EYES - LISHAM G-->
+          <section class="card">
+            <h3 class="game-title">Exotic Eyes</h3>
+
+            <div class="game-row">
+              <img
+                class="game-art"
+                src="https://ict9.codemathbike.ca/2025_P4/lisham_g/.png"
+                alt="Main character icon for Exotic Eyes"
+              />
+
+              <div class="game-info">
+                <p class="game-student">By Lisham G</p>
+                <p class="game-tagline">
+                  A Pixel Knight. A Cursed Castle. Exotic Powers.
+                </p>
+              </div>
+            </div>
+
+            <div class="game-link">
+              <a
+                class="btn"
+                href="https://ict9.codemathbike.ca/2025_P4/lisham_g/web.html"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Game Website
+              </a>
+            </div>
+          </section>
+
+          <!-- WAR SHOOTER - MAX H -->
+          <section class="card">
+            <h3 class="game-title">War Shooter</h3>
+
+            <div class="game-row">
+              <img
+                class="game-art"
+                src="https://ict9.codemathbike.ca/2025_P4/max_h/Idle.png"
+                alt="Main character icon for War Shooter"
+              />
+
+              <div class="game-info">
+                <p class="game-student">By Max H</p>
+                <p class="game-tagline">
+                  Optional: one-line description or genre of the game.
+                </p>
+              </div>
+            </div>
+
+            <div class="game-link">
+              <a
+                class="btn"
+                href="https://ict9.codemathbike.ca/2025_P4/max_h/WixWebsiiteditorWarShooter.html"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Game Website
+              </a>
+            </div>
+          </section>       
+
+          <!-- MARIO'S ADVENTURES - RAJEN D-->
+          <section class="card">
+            <h3 class="game-title">Mario's Adventures</h3>
+
+            <div class="game-row">
+              <img
+                class="game-art"
+                src="https://ict9.codemathbike.ca/2025_P4/rajen_d/images/Little_Mario_vectorize.png"
+                alt="Main character icon for Mario's Adventures"
+              />
+
+              <div class="game-info">
+                <p class="game-student">By Rajen D</p>
+                <p class="game-tagline">
+                  Optional: one-line description or genre of the game.
+                </p>
+              </div>
+            </div>
+
+            <div class="game-link">
+              <a
+                class="btn"
+                href="https://ict9.codemathbike.ca/2025_P4/rajen_d/index.html"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Game Website
+              </a>
+            </div>
+          </section>
+          
+          <!-- 2067 - Alex P -->
+          <section class="card">
+            <h3 class="game-title">2067</h3>
+
+            <div class="game-row">
+              <img
+                class="game-art"
+                src="https://ict9.codemathbike.ca/2025_P4/alex_p/images/Main character.png"
+                alt="Main character icon for 2067"
+              />
+
+              <div class="game-info">
+                <p class="game-student">By Alex P</p>
+                <p class="game-tagline">
+                  Jump through the ruins of tomorrow.
+                </p>
+              </div>
+            </div>
+
+            <div class="game-link">
+              <a
+                class="btn"
+                href="https://ict9.codemathbike.ca/2025_P4/alex_p/index.html"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Game Website
+              </a>
+            </div>
+          </section>          
+
+          <!-- SPOOKY CASTLE - ARSHAM-->
+          <section class="card">
+            <h3 class="game-title">Spooky Castle</h3>
+
+            <div class="game-row">
+              <img
+                class="game-art"
+                src="https://ict9.codemathbike.ca/2025_P4/arsham_g/icon.png"
+                alt="Main character icon for Spooky Castle"
+              />
+
+              <div class="game-info">
+                <p class="game-student">By Arsham G</p>
+                <p class="game-tagline">
+                  Explore, fight, escape… or join the dead.
+                </p>
+              </div>
+            </div>
+
+            <div class="game-link">
+              <a
+                class="btn"
+                href="https://ict9.codemathbike.ca/2025_P4/arsham_g/spooky_castle_website.html"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Game Website
+              </a>
+            </div>
+          </section>
+
+          <!-- CAVE DIVE - FIEN-->
+          <section class="card">
+            <h3 class="game-title">Cave Dive</h3>
+
+            <div class="game-row">
+              <img
+                class="game-art"
+                src="https://ict9.codemathbike.ca/2025_P4/fien_b/LOGO.png"
+                alt="Main character icon for Cave Dive"
+              />
+
+              <div class="game-info">
+                <p class="game-student">By Fien B</p>
+                <p class="game-tagline">
+                 Dive into a joyous challenge and explore the wonderous underground!
+                </p>
+              </div>
+            </div>
+
+            <div class="game-link">
+              <a
+                class="btn"
+                href="https://ict9.codemathbike.ca/2025_P4/fien_b/index1.html"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Game Website
+              </a>
+            </div>
+          </section>
+
+          <!-- HAUNTED WITHIN - KIEDIS G-->
+          <section class="card">
+            <h3 class="game-title">Haunted Within</h3>
+
+            <div class="game-row">
+              <img
+                class="game-art"
+                src="https://ict9.codemathbike.ca/2025_P4/kiedis_g/Game_Icon.png"
+                alt="Main character icon for Haunted Within"
+              />
+
+              <div class="game-info">
+                <p class="game-student">By Kiedis G</p>
+                <p class="game-tagline">
+                  Embark on a thrilling journey into the world of Haunted Within, & remember <br />
+                  VOYAGE FORWARD AND QUESTION EVERYTHING
+                </p>
+              </div>
+            </div>
+
+            <div class="game-link">
+              <a
+                class="btn"
+                href="https://ict9.codemathbike.ca/2025_P4/kiedis_g/index.html"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Game Website
+              </a>
+            </div>
+          </section>
+
+          <!-- PINK POGO - MEGAN H-->
+          <section class="card">
+            <h3 class="game-title">Pink Pogo</h3>
+
+            <div class="game-row">
+              <img
+                class="game-art"
+                src="https://ict9.codemathbike.ca/2025_P4/megan_h/Pinkpogo_Megan_icon.png"
+                alt="Main character icon for Pink Pogo"
+              />
+
+              <div class="game-info">
+                <p class="game-student">By Megan H</p>
+                <p class="game-tagline">
+                  Hop, Bounce, and Endless Wonders
+                </p>
+              </div>
+            </div>
+
+            <div class="game-link">
+              <a
+                class="btn"
+                href="https://ict9.codemathbike.ca/2025_P4/megan_h/index1.html"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Game Website
+              </a>
+            </div>
+          </section>
+
+          <!-- LAVA JUMP - JOSH-->
+          <section class="card">
+            <h3 class="game-title">Lava Jump</h3>
+
+            <div class="game-row">
+              <img
+                class="game-art"
+                src="https://ict9.codemathbike.ca/2025_P4/joshua_m/game website Josh M/images/soldier_idle.png"
+                alt="Main character icon for Game Title Here"
+              />
+
+              <div class="game-info">
+                <p class="game-student">By Josh M</p>
+                <p class="game-tagline">
+                  The volcano is awake… and it wants YOU!
+                </p>
+              </div>
+            </div>
+
+            <div class="game-link">
+              <a
+                class="btn"
+                href="https://ict9.codemathbike.ca/2025_P4/joshua_m/game website Josh M/index.html"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Game Website
+              </a>
+            </div>
+          </section>
+
+          <!-- Angry Game - Samson-->
+          <section class="card">
+            <h3 class="game-title">Angry Game</h3>
+
+            <div class="game-row">
+              <img
+                class="game-art"
+                src="https://ict9.codemathbike.ca/2025_P4/samson_r/angryface.png"
+                alt="Main character icon for Angry Man"
+              />
+
+              <div class="game-info">
+                <p class="game-student">By Samson R</p>
+                <p class="game-tagline">
+                  Optional: one-line description or genre of the game.
+                </p>
+              </div>
+            </div>
+
+            <div class="game-link">
+              <a
+                class="btn"
+                href="https://ict9.codemathbike.ca/2025_P4/samson_r/angrygaem_website.html"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Game Website
+              </a>
+            </div>
+          </section>
+
+          <!-- EMBERWING - Sebastian-->
+          <section class="card">
+            <h3 class="game-title">Emberwing</h3>
+
+            <div class="game-row">
+              <img
+                class="game-art"
+                src="https://ict9.codemathbike.ca/2025_P4/sebastian_m/si.png"
+                alt="Main character icon for Game Title Here"
+              />
+
+              <div class="game-info">
+                <p class="game-student">By Sebastian M</p>
+                <p class="game-tagline">
+                  The deeper you go, the darker the secrets.
+                </p>
+              </div>
+            </div>
+
+            <div class="game-link">
+              <a
+                class="btn"
+                href="https://ict9.codemathbike.ca/2025_P4/sebastian_m/index.html"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Game Website
+              </a>
+            </div>
+          </section>
+          
+          <!-- CROWN & CONQUEST - ROZ-->
+          <section class="card">
+            <h3 class="game-title">Crown & Conquest</h3>
+
+            <div class="game-row">
+              <img
+                class="game-art"
+                src="https://ict9.codemathbike.ca/2025_P4/roz_v/assets/game_icon.png"
+                alt="Main character icon for Game Title Here"
+              />
+
+              <div class="game-info">
+                <p class="game-student">By Roz V</p>
+                <p class="game-tagline">
+                  Flee the fortress, rally your allies, dethrone the king.
+                </p>
+              </div>
+            </div>
+
+            <div class="game-link">
+              <a
+                class="btn"
+                href="https://ict9.codemathbike.ca/2025_P4/roz_v/index.html"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Game Website
+              </a>
+            </div>
+          </section>     
+
+          <!-- Pixel Platformer - JD -->
+          <section class="card">
+            <h3 class="game-title">Pixel Platformer</h3>
+
+            <div class="game-row">
+              <img
+                class="game-art"
+                src="https://ict9.codemathbike.ca/2025_P4/jd_p/"
+                alt="Main character icon for Game Title Here"
+              />
+
+              <div class="game-info">
+                <p class="game-student">By JD P</p>
+                <p class="game-tagline">
+                  WHERE EVERY PIXEL TELLS AN ADVENTURE!
+                </p>
+              </div>
+            </div>
+
+            <div class="game-link">
+              <a
+                class="btn"
+                href="https://ict9.codemathbike.ca/2025_P4/jd_p/Pixel_platformer_homepage.html"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Game Website
+              </a>
+            </div>
+          </section>
+
+          <!-- Homeland Defense Simulator - Vincent -->
+          <section class="card">
+            <h3 class="game-title">Homeland Defense Simulator</h3>
+
+            <div class="game-row">
+              <img
+                class="game-art"
+                src="https://ict9.codemathbike.ca/2025_P4/vincent_p/assets/game_icon.png"
+                alt="Main character icon for Homeland Defense Simulator"
+              />
+
+              <div class="game-info">
+                <p class="game-student">By Vincent P</p>
+                <p class="game-tagline">
+                  Home is calling you!
+                </p>
+              </div>
+            </div>
+
+            <div class="game-link">
+              <a
+                class="btn"
+                href="https://ict9.codemathbike.ca/2025_P4/vincent_p/index.html"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Game Website
+              </a>
+            </div>
+          </section>
+
+          <!-- Block TD - Paul -->
+          <section class="card">
+            <h3 class="game-title">Block TD</h3>
+
+            <div class="game-row">
+              <img
+                class="game-art"
+                src="https://ict9.codemathbike.ca/2025_P4/paul_k/icon.png"
+                alt="Main character icon for Block TD"
+              />
+
+              <div class="game-info">
+                <p class="game-student">By Paul K</p>
+                <p class="game-tagline">
+                  The blocks are coming. Build. Defend. Survive.
+                </p>
+              </div>
+            </div>
+
+            <div class="game-link">
+              <a
+                class="btn"
+                href="https://ict9.codemathbike.ca/2025_P4/paul_k/index.html"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Game Website
+              </a>
+            </div>
+          </section>
+
+
+
+
+          <!-- ============================================================
+               START: GAME CARD TEMPLATE – COPY THIS BLOCK PER STUDENT
+               ============================================================ -->
+          <!-- GAME NAME - STUDENT
+          <section class="card">
+            <h3 class="game-title">Game Title Here</h3>
+
+            <div class="game-row">
+              <img
+                class="game-art"
+                src="https://ict9.codemathbike.ca/2025_P4/"
+                alt="Main character icon for Game Title Here"
+              />
+
+              <div class="game-info">
+                <p class="game-student">By Student Name (First + Last Initial)</p>
+                <p class="game-tagline">
+                  Optional: one-line description or genre of the game.
+                </p>
+              </div>
+            </div>
+
+            <div class="game-link">
+              <a
+                class="btn"
+                href="https://ict9.codemathbike.ca/2025_P4/student_folder/index.html"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Game Website
+              </a>
+            </div>
+          </section>
+
+           END: GAME CARD TEMPLATE – STOP COPYING HERE -->
+        </section> <!-- End of gallery grid -->
+      </main>
+
+      <!-- Right rail -->
+      <aside id="right-rail" aria-label="Upload Checklist">
+
+        <div class="card">
+          <h2>Before You Submit</h2>
+          <ul class="list-tight">
+            <li>✔ Your site loads without errors</li>
+            <li>✔ Buttons + links work</li>
+            <li>✔ Images display correctly</li>
+            <li>✔ Spelling + formatting checked</li>
+            <li>✔ Matches your style guide colours + fonts</li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </div>
+
+    <footer
+      id="site-footer"
+      data-partial="/code/common/partials/footer.html"
+    ></footer>
+  </body>
+</html>

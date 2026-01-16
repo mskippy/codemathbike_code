@@ -1,0 +1,258 @@
+```html
+<!-- DC 10/11 • 5.5 Publish for the Web -->
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DC 10/11 • 5.5 Publishing Your Website</title>
+
+    <!-- Common CSS + JS -->
+    <link rel="stylesheet" href="/code/common/css/base.css">
+    <script src="/code/common/js/nav_data.js" defer></script>
+    <script src="/code/common/js/utils.js" defer></script>
+    <script src="/code/common/js/inject_partials.js" defer></script>
+    <script src="/code/common/js/nav_systems.js" defer></script>
+    <script src="/code/common/js/main.js" defer></script>
+  </head>
+
+  <!-- Set body class to match course theme: ict8, ict9, dc1011, or none for purple -->
+  <body data-course="dc1011">
+    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" role="main" data-page-title="DC 10/11 • Unit 5 • 5.5 Publish for the Web">
+
+        <!-- Overview -->
+        <section class="card">
+          <h1>Overview</h1>
+          <p><strong>Big idea:</strong> You can publish your website to the internet using <strong>GitHub</strong> (file hosting) + <strong>GitHub Pages</strong> (website publishing).</p>
+
+          <p>By the end of this lesson, you will be able to:</p>
+          <ul>
+            <li>Choose a GitHub username and repo name that make a clean, shareable website URL.</li>
+            <li>Create a GitHub repository and upload a copy of your site files.</li>
+            <li>Publish your site using GitHub Pages and find your live link.</li>
+          </ul>
+
+          <p><strong>You should have completed:</strong> 5.1 Roadmap + Plan, 5.2 Website Content, 5.3 Setting Up Our Workspace, 5.4 Coding Our Website Pages.</p>
+        </section>
+
+        <!-- Step 1 -->
+        <section class="card">
+          <h2>Step 1 — Plan Your Website Identity</h2>
+          <p>Before you publish, you need to make two choices. These choices become part of your public website address.</p>
+
+          <h3>1.1 Choose a GitHub Username</h3>
+          <p>Your GitHub username usually appears in your website URL:</p>
+          <pre><code>https://USERNAME.github.io/REPOSITORY-NAME/</code></pre>
+
+          <p><strong>Username guidelines:</strong></p>
+          <ul class="list-tight">
+            <li><strong>School-appropriate</strong> (you will share this link).</li>
+            <li><strong>Easy to read and spell</strong> (no random characters).</li>
+            <li><strong>Not personal info</strong> (avoid full legal names + birth years).</li>
+          </ul>
+
+          <h3>1.2 Choose a Repository Name (Your Site Name)</h3>
+          <p>This is the second part of your website URL (after your username).</p>
+          <ul class="list-tight">
+            <li>Use <strong>lowercase</strong>.</li>
+            <li>Use <strong>hyphens</strong> instead of spaces.</li>
+            <li>Keep it <strong>short</strong> and <strong>clear</strong>.</li>
+          </ul>
+
+          <h3>1.3 Write it Down</h3>
+          <p>Before you continue, write down:</p>
+          <ul class="list-tight">
+            <li><strong>GitHub username:</strong> _______________________</li>
+            <li><strong>Repository name:</strong> _______________________</li>
+          </ul>
+
+          <!-- Revision 3 -->
+          <hr>
+          <h3>Important: Email Address for GitHub</h3>
+          <p>GitHub requires an email address to create your account.</p>
+          <ul class="list-tight">
+            <li>You <strong>can</strong> use your school email.</li>
+            <li><strong>Recommended:</strong> use a personal email you will still have after this course (easier for long-term maintenance).</li>
+          </ul>
+          <p class="small">
+            Tip: Many people choose an email that matches their username (example: username <code>alexcodes</code> → email like <code>alexcodes@...</code>).
+          </p>
+        </section>
+
+        <!-- Step 2A -->
+        <section class="card">
+          <h2>Step 2 — Create Your Repo &amp; Upload Your Website</h2>
+          <p>This is the standard workflow for this course. It works on school computers and keeps things simple.</p>
+
+          <h3>2.1 Create a GitHub Account</h3>
+          <ol>
+            <li>Go to <strong>github.com</strong> and sign in (or click <strong>Sign up</strong>).</li>
+            <li>Create your account using the username you planned in Step 1.</li>
+            <li>Verify your email if GitHub asks you to.</li>
+          </ol>
+
+          <h3>2.2 Create a New Repository</h3>
+          <ol>
+            <li>Click the <strong>+</strong> icon (top right) → <strong>New repository</strong>.</li>
+            <li><strong>Repository name:</strong> use your planned site name (example: <code>portfolio-site</code>).</li>
+            <li><strong>Visibility:</strong> choose <strong>Public</strong>.</li>
+            <li>Check <strong>Add a README file</strong>.</li>
+            <li>Click <strong>Create repository</strong>.</li>
+          </ol>
+
+          <h3>2.3 Upload a Copy of Your Website Files</h3>
+          <p><strong>Your working files stay on your H drive.</strong> You are uploading a <strong>copy</strong> to GitHub for publishing.</p>
+          <ol>
+            <li>In your repo, click <strong>Add file</strong> → <strong>Upload files</strong>.</li>
+            <li>Drag in all your site files and folders (example: <code>index.html</code>, <code>css/</code>, <code>images/</code>).</li>
+            <li>Scroll down and click <strong>Commit changes</strong>.</li>
+          </ol>
+
+          <h3>2.4 Check Your Structure</h3>
+          <p>Your repo should look like this (example):</p>
+          <pre><code>index.html
+css/
+images/</code></pre>
+
+          <p><strong>Common mistake:</strong> don’t upload a folder that contains your website. Upload the <strong>contents</strong> of your website folder instead.</p>
+        </section>
+
+        <!-- Step 2B (Revision 1: collapsible) -->
+        <section class="card">
+          <h2>Level Up: Clone Your Repo</h2>
+          <h3>The standard workflow developers use to maintain a live website.</h3>
+          <p>Cloning your repo links your local files to GitHub, allowing you to manage updates through commits instead of re-uploading files.</p>
+
+          <details>
+            <summary><strong>Cloning Your Repo  (Optional)</strong></summary>
+            <div>
+              <p><strong>What does “cloning” mean?</strong><br>
+                Cloning creates a linked copy of your GitHub repo on your computer. Instead of uploading files each time, you edit your files in the repo folder and then <strong>commit + push</strong> updates.
+              </p>
+
+              <p><strong>Use this if:</strong></p>
+              <ul class="list-tight">
+                <li>You feel confident with file management.</li>
+                <li>You want a more professional workflow.</li>
+                <li>You want easier long-term maintenance.</li>
+              </ul>
+
+              <h3>1 Install GitHub Desktop (If Allowed)</h3>
+              <ol>
+                <li>Go to <strong>desktop.github.com</strong> and install GitHub Desktop.</li>
+                <li>Open GitHub Desktop and sign in to your GitHub account.</li>
+              </ol>
+
+              <h3>2 Clone Your Repository</h3>
+              <ol>
+                <li>In GitHub Desktop, choose <strong>File → Clone repository</strong>.</li>
+                <li>Select your website repo.</li>
+                <li>Choose a save location (H drive recommended).</li>
+                <li>Click <strong>Clone</strong>.</li>
+              </ol>
+
+              <h3>3 Edit Inside the Repo Folder</h3>
+              <p>From now on:</p>
+              <ul class="list-tight">
+                <li>Open the cloned repo folder in VS Code.</li>
+                <li>Edit your files inside that folder.</li>
+                <li>Use GitHub Desktop to <strong>commit</strong> and <strong>push</strong> changes.</li>
+              </ul>
+
+              <p><strong>Very important:</strong> do not mix workflows. Choose either:</p>
+              <ul class="list-tight">
+                <li><strong>Upload workflow</strong> (Step 2A), or</li>
+                <li><strong>Clone workflow</strong> (Step 2B)</li>
+              </ul>
+            </div>
+          </details>
+        </section>
+
+        <!-- Step 3 -->
+        <section class="card">
+          <h2>Step 3 — Publish Your Website with GitHub Pages</h2>
+
+          <h3>3.1 Open GitHub Pages Settings</h3>
+          <ol>
+            <li>Open your repository on GitHub.</li>
+            <li>Click <strong>Settings</strong>.</li>
+            <li>In the left menu, click <strong>Pages</strong>.</li>
+          </ol>
+
+          <h3>3.2 Turn On GitHub Pages</h3>
+          <p>Under <strong>Build and deployment</strong>:</p>
+          <ul class="list-tight">
+            <li><strong>Source:</strong> Deploy from a branch</li>
+            <li><strong>Branch:</strong> <code>main</code></li>
+            <li><strong>Folder:</strong> <code>/(root)</code></li>
+          </ul>
+          <p>Click <strong>Save</strong>.</p>
+
+          <h3>3.3 Find Your Live Website Link</h3>
+          <p>After a moment, GitHub will show your live URL. It should look like:</p>
+          <pre><code>https://USERNAME.github.io/REPOSITORY-NAME/</code></pre>
+
+          <h3>3.4 Quick Test</h3>
+          <ul class="list-tight">
+            <li>Does your homepage load?</li>
+            <li>Do your nav links work?</li>
+            <li>Do your images and CSS load properly?</li>
+          </ul>
+
+          <p><strong>If it doesn’t work yet:</strong> wait 30–60 seconds and refresh. If you see a 404, double-check that <code>index.html</code> is in the main repo folder.</p>
+        </section>
+
+        <!-- Checkpoint (no reflection/submission yet) -->
+        <section class="card">
+          <h2>Checkpoint</h2>
+          <p>Before you move on, make sure you have these saved somewhere you can easily find them:</p>
+          <ul class="list-tight">
+            <li>Your <strong>live website link</strong> (GitHub Pages URL)</li>
+            <li>Your <strong>GitHub repo link</strong></li>
+          </ul>
+          <p>Next lesson (5.6), you’ll do a final polish + submit your link on Teams.</p>
+        </section>
+
+      </main>
+
+      <!-- Lesson-specific right rail -->
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card">
+          <strong>Quick links</strong>
+          <ul class="list-tight">
+            <li><code>github.com</code> (sign in / repo)</li>
+            <li><code>Settings → Pages</code> (publish)</li>
+            <li><code>desktop.github.com</code> (optional Level Up)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Must-have files</strong>
+          <ul class="list-tight">
+            <li><code>index.html</code> (required homepage)</li>
+            <li><code>css/</code> folder (styles)</li>
+            <li><code>images/</code> folder (assets)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Common fixes</strong>
+          <ul class="list-tight">
+            <li><strong>404 error:</strong> confirm <code>index.html</code> is in the root of the repo.</li>
+            <li><strong>No CSS/images:</strong> check file paths + spelling (capital letters matter).</li>
+            <li><strong>Updates not showing:</strong> refresh (Ctrl + Shift + R).</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/code/common/partials/footer.html"></footer>
+  </body>
+</html>
+```

@@ -1,0 +1,117 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage – Audrey H</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Audrey H" />
+
+      <p style="margin-top:12px;">
+        <a href='/code/ict8/unit4/web_dev/S1W2/index.html'>← Back to S1W2 class page</a>
+      </p>
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #6f798b;
+      --ink: #f3e5b9;
+      --accent: #071925; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #193a50; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#f3f3f6; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="studentname">Audrey H </span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        My name is Audrey H And i was born on april 25 2012, I like to play sports, draw, go outdoors or to the beach, and hangout with friends. I play soccer, volleyball, and swimming and i am going to try out for the basketball team.I also like to listen to music and go on runs. A fun fact about me is that I went to late french emmersion in grade 6 for an extra challenge. For this class I want to acheive the ability to work well on a computer and maybe in the future be able to make another game with less instructions to follow.
+      </p>
+
+  
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://www.youtube.com/shorts/PfpVwWqTB1g"  target="_blank" rel="noopener">youtube</a></li>
+        <li><a href="https://www.snapchat.com/" target="_blank" rel="noopener">snapchat</a></li>
+        <li><a href="https://www.aritzia.com/en?utm_id=22383803692--173984065381--aritzia--741948480879&utm_source=google&utm_medium=cpc&gad_source=1&gad_campaignid=22383803692&gclid=EAIaIQobChMIyKObmN7WkAMVCxKtBh0c_RfQEAAYASAAEgKTBPD_BwE" target="_blank" rel="noopener">aritzia </a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="https://i.pinimg.com/564x/33/2b/b9/332bb9236a8fba4304a177c98d0aeccc.jpg" alt="A cool nature image from Unsplash" />
+        <figcaption>Photo credit: pinterest</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">Why did the fish blush?</p>
+      <button type="button" onclick="myFunction()">Why?</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p>In essential skills u1 I enjoyed learning the basics of the computer and improving my typing abilitys. I was very challenged by the parts of the computer and i still dont really know where to find and name all of the buttons and ports.With these skills in the future I can know my way around using a computer and help friends and family with their technological needs. I found that u2 Was a lot of work but the work was like a medocre challenge, and the thing I found the hardest was managing my time at school and at home so I could finish all of the things in this unit. I enjoyed makiung the resume about myself and the fake news posters. In u3 game developement I learned how to make a funcioning video game that i cant play. I found it challenging to understand the intructions and apply them to my game but after i understood the little details i got the hang of it. In U4 i thought it was really fun to make the webpage. My favourite part was changing the background and text colours and also adding the photo. I found it challenging to understand which part of the code to adjust and which parts to keep the same.  </p>
+      
+    </section>
+    
+    
+    
+    <footer>
+      <p>
+        Built by <strong>Audrey H</strong>. Last updated: <span id="lastUpdated"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "Because it saw the oceans bottom";
+    }
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

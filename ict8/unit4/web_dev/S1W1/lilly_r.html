@@ -1,0 +1,102 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>My First Webpage – Lilly R</Ri:a></title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Your Name" />
+
+  <!-- 💡 TYPE ZONE: You will edit the text above and below.  -->
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #e68b41;
+      --ink: #ffffff;
+      --accent: #a3eb91; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #e69069; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#ffffff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#f3f3f6; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <header>
+      <p style="margin-top:12px;">
+        <a href='/code/ict8/unit4/web_dev/S1W1/index.html'>← Back to S1W1 class page</a>
+      </p>
+      <h1>Hi, I'm <span id="studentName">Lilly R</span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p> I have many hobbies inculding chrochet, boxing, reading, sculpting, and lacrosse. I really like movies ranging from comedy to action, and documentumerys. I spend most of my free time crocheting, I taught myself how to crochet with nothing to help me but youtube videos, and now its not really a hobby but an obession.        
+        
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">Youtube</a></li>
+        <li><a href="https://chaicoffeecrochet.com/cute-crochet-baby-gifts-free-patterns/" target="_blank" rel="noopener">Crochet Patterns</a></li>
+        <li><a href="https://ca.pinterest.com/#search" target="_blank" rel="noopener">Pinterest</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="https://images.unsplash.com/photo-1603884652342-2b6992a1a9ff?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A cool nature image from Unsplash" />
+        <figcaption>Photo credit: By: Daniel J. Schwarz </figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">Why couldn’t the programmer dance to the song?</p>
+      <button type="button" onclick="myFunction()">Why?</button>
+    </section>
+  
+<section><h2>Reflection</h2></section>
+<p><body>I enjoyed a lot of things about this class but my overall favourite thing was being able to build a game; I have never done that before and It was a great experience as well as very informative. I really liked creating the players in my game because of the great feeling of accomplishment when I completed the player and what the player was able to do. What I found most challenging was when we first started this class and we had to create folders with links and files; I had never done this before and I was quite a bit lost, but over time I was able to understand how to do it, and then we started to build the game and I thought nothing was harder to do then learn how to create folders and files, and download, but I was wrong. I would like to learn more about coding and building a game, this goes back to what I said about adding stuff to make the game more challenging. I would like to learn how to make levels, different enemy health and player health for each level, and difernet objectives for each level. I talked a lot about levels but I would also like to learn how to create my own design of players and enemys, basically just building off what I have compleated already. I will most likely use the information I gained on files, and downloading information and saving it to files. I also feel I will use the information I learned about on AI misninformation, beacse of how important it is becoming in todays society, as well as being able to use excel and powerpoint with a higher difficulty level.     </body></p>
+   <footer>
+ 
+
+     Built by <strong>Lilly R</strong>. Last updated: <span id="lastUpdated"></span>2025-10-03
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "Because he didn’t get the… algo-rhythm…";
+    }
+  </script>
+</body>
+</html>

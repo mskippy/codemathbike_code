@@ -1,0 +1,117 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>My First Webpage – Your Name</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Your Name" />
+
+  <!-- 💡 TYPE ZONE: You will edit the text above and below.  -->
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #fdfbdc;
+      --ink: #10103f;
+      --accent: #fcc1ed; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, 'Times New Roman', Times, serif sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #fff; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#f0b7d8; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <header>
+      <p style="margin-top:12px;">
+        <a href='/code/ict8/unit4/web_dev/S1W1/index.html'>← Back to S1W1 class page</a>
+      </p>
+      <h1>Hi, I'm <span id="studentName">       Mei</span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript. It took lots of work but i hope you enjoy my webpage!</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        Hi my name is Mei and I am a grade eight student at sutherland secondary. I love to dance and run. I live in Canada.
+        My favorite color is pink and blue. My favorite icecream flavor is chocolate. I also have a little sister!   
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->  
+        <li><a href="https://ca.pinterest.com/"target="_blank" rel="noopener">pinterest</a></li>
+        <li><a href="https://www.nvschools.ca" target="_blank" rel="noopener">NVSD</a></li>
+        <li><a href="https://www.starbucks.ca/en-CA/" target="_blank" rel="noopener">Starbucks</a></li>
+        <li><a href="https://gd.games/games/22d892db-9597-41f3-8cc5-9757bb16043f" target="_blank" rel="noopener">Space Shooter Game</a></li>
+        
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="https://i.pinimg.com/236x/7f/69/ee/7f69eeb9ffe238830f7adab9ed5d876f.jpg" alt="A cute photo of a jellycat" width=90%  />
+        <figcaption>Photo credit: pinterest</figcaption>
+      </figure>
+    </section>
+
+    <section> 
+      <h2>Something punny</h2>
+      <p id="pun">What do you call a angry carrot?</p>
+      <button type="button" onclick="myFunction()">Why?</button>
+    </section>
+<section>
+  <section> 
+    
+    <h2>Reflection</h2>
+    Working and studying in ICT8 was sometimes a pain in the butt but some times it was really fun.there were many early mornings where I had to come to school early. 
+    But in the end it was all worth it because now I know how to use so many different types of sites and apps on the computer that I didnt even know existed a month ago.
+    I really enjoyed making this website I think it was one of my favorite things to make in ICT8. It was a really enjoyable way to finish of this ADST course.I think I found making the 
+    the video game the most difficult because of all the coding and sites. But because I did all that this webpage feels more familiar. I would like to start learnig more about 
+    making websites and and powerpoints it is really fun to be able to customize your own project to make it feel like your own. I am definetly going to use all of these things
+    like excel worksheets and powerpoints for my futre job and resumes and all of that stuff for when im grown up. Over all I really enjoyed ICT8 and I wish to learn 
+    even more in th futre.
+  </section>
+<section>
+  
+</section>
+</section>
+    <footer>
+      <p>
+        Built by <strong>Mei.T</strong>. Last updated: <span id="October 1st 2025"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "A steamed veggie!";
+    }
+  </script>
+</body>
+</html>

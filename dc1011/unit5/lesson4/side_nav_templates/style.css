@@ -1,0 +1,141 @@
+/* ============================================================
+   WEBSITE STYLESHEET — READ FIRST
+
+   This file controls the look of your ENTIRE website.
+   All pages (index, about, gallery, contact) use this file.
+
+   ✔ You ARE expected to edit this file in Lesson 5.5
+   ✔ Change values (fonts, colours, spacing) — not structure
+   ✔ Save often and refresh your browser to see changes
+
+   SAFE TO EDIT:
+   - font-family
+   - font-size
+   - colors (color, background-color)
+   - spacing (margin, padding)
+   - borders, border-radius, box-shadow
+   - hover effects
+
+   DO NOT EDIT (yet):
+   - layout structure rules
+   - display: flex / grid on main layout containers
+   - widths that control navigation placement
+   - class or selector names
+
+   RULES:
+   - Make ONE change at a time
+   - Refresh the browser after every change
+   - If something breaks, undo your last change
+
+   Need help?
+   Use W3Schools:
+   https://www.w3schools.com/css/
+
+   ============================================================ */
+
+   /* ==================================================
+   GLOBAL RESET + BASE
+   ================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ==================================================
+   HEADER
+   ================================================== */
+
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 1.5rem;
+}
+
+header h1 {
+  margin-bottom: 0.25rem;
+}
+
+header p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ==================================================
+   LAYOUT (DO NOT REMOVE)
+   ================================================== */
+
+.layout {
+  display: flex;
+  min-height: calc(100vh - 140px);
+}
+
+/* ==================================================
+   SIDEBAR NAVIGATION
+   ================================================== */
+
+aside {
+  width: 220px;
+  background-color: #333;
+  padding: 1rem;
+}
+
+aside nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 0;
+}
+
+aside nav a:hover {
+  background-color: #444;
+  padding-left: 0.5rem;
+}
+
+/* ==================================================
+   MAIN CONTENT
+   ================================================== */
+
+main {
+  flex: 1;
+  background-color: #fff;
+  padding: 2rem;
+}
+
+main h2 {
+  margin-bottom: 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/* ==================================================
+   FOOTER
+   ================================================== */
+
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+}
+
+/* ==================================================
+   STUDENT SAFE EDIT ZONE
+   ==================================================
+   ✔ Fonts
+   ✔ Colours
+   ✔ Spacing
+   ✔ Hover effects
+   ✖ Layout (.layout, aside width)
+   ================================================== */

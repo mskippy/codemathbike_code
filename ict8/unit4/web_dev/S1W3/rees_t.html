@@ -1,0 +1,117 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage – Rees Townsend</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Your Name" />
+
+      <p style="margin-top:12px;">
+        <a href='/code/ict8/unit4/web_dev/S1W2/index.html'>← Back to S1W2 class page</a>
+      </p>
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #f7f7fb;
+      --ink: #1a1a1f;
+      --accent: #4f46e5; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #7087d4; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#f3f3f6; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="studentName">Rees</span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        My name is Rees Townsend and I am 13 years old. Some of my hobbies are playing guitar, skateboarding, and playing video games. I have three guitars and me favorite one is a Gibson SG. Some of the video games I like to play are Call of Duty, Skate, and Rocket League. I play soccer for a club called Faly as a center midfeilder. A fun fact about me is that I used to have a pet tarantula. I have two sisters one of them is 15 and the other is 6. In the future, I am hoping to go to university and become a mechanical engineer.
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://poki.com/" target="_blank" rel="noopener">Poki</a></li>
+        <li><a href="https://surron.ca/?srsltid=AfmBOopqhcoEnbFE_LrXD9fwFp-c0lzO6xlE3Bb9fZaWkBFzjIFf8V7z" target="_blank" rel="noopener">Surron</a></li>
+        <li><a href="https://pizza.dominos.ca/squamish-british-columbia-39038/?gad_source=1&gad_campaignid=20454029023&gclid=EAIaIQobChMI4f3k65y2kQMVYw6tBh1hlBasEAAYASAAEgKmY_D_BwE" target="_blank" rel="noopener">Dominoes Pizza</a></li>
+      </ul>
+    </section>
+</section>
+My space shooter game: <li><a href="https://gd.games/games/56c5f349-f5a1-4b9d-acde-32205dcec90f" target="_blank" rel="noopener">Space Shooter Game</a></li>
+</section>
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="https://thumbs.dreamstime.com/b/delicious-bbq-ribs-grilling-sunset-beach-barbecue-over-hot-coals-grill-bonfire-ocean-background-340249690.jpg?w=768" alt="A cool nature image from Unsplash" />
+        <figcaption>Photo credit: Dreamstine</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">What happens when a frogs car breaks down?</p>
+      <button type="button" onclick="myFunction()">Why?</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection 
+     </h2>
+      <p>This course, I learned about how to use things like Microsoft Excel and how to properely use my Onedrive and H: Drive. I have gotten better at typing, and now know how to navigate around my computer with purpose. During this course I have also learned to take my time and to not get frustrated when things are not working. My favorite part was creating the space shooter game and figuring out how coding works. My goal for this course was to get better at typing and I think I have. Overall, I have learned alot here which will help me a ton in the future. </strong> <span id="lastUpdated"></span>.
+</p>
+      
+    </section>
+    
+    
+    
+    <footer>
+      <p>
+        <strong>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "It gets toad!";
+    }
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

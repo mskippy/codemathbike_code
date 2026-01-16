@@ -1,0 +1,172 @@
+<!-- Unit 4 • Extension Project (Student-facing) -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ICT 8 • Unit 4 Extension Project</title>
+    <link rel="stylesheet" href="/code/common/css/base.css">
+    <script src="/code/common/js/nav_data.js" defer></script>
+    <script src="/code/common/js/utils.js" defer></script>
+    <script src="/code/common/js/inject_partials.js" defer></script>
+    <script src="/code/common/js/nav_systems.js" defer></script>
+    <script src="/code/common/js/main.js" defer></script>
+    <style>
+      /* tiny helpers scoped to this page only */
+      .embed { position: relative; width: 100%; }
+      .embed.video { aspect-ratio: 16 / 9; }
+      .embed iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+      .file-list code { font-size: .9rem; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+      .pill { display:inline-block; padding:.15rem .5rem; border:1px solid var(--border-2); border-radius:999px; font-size:.85rem; }
+      .grid { display:grid; gap:1rem; }
+      @media (min-width: 880px){ .grid.cols-2{ grid-template-columns: 1fr 1fr; } }
+    </style>
+  </head>
+  <body data-course="ict8">
+    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="ICT 8 • Unit 4 Extension Project">
+
+        <section class="card">
+          <h1>Finish‑early? Build more!</h1>
+          <p>Choose <strong>one</strong> path below (or do more for bonus). Each path grows your HTML/CSS skills using what you already built in Unit 4.</p>
+          <p><span class="pill">Tip</span> Keep Live Server running so you can see changes instantly.</p>
+        </section>
+
+        <section class="card" id="path-a">
+          <h2>Path A — Make a Second Page + Site Navigation</h2>
+          <ol>
+            <li>Duplicate your current file and rename it <code>about_&lt;firstname&gt;&lt;lastinitial&gt;.html</code> in <strong>H: → ICT8 → 4. Web Development</strong>.</li>
+            <li>Change the <span class="mono">&lt;title&gt;</span> and top heading to <strong>About</strong>. Write a short paragraph about your project or hobbies.</li>
+            <li>Add simple <strong>site navigation</strong> to both pages:
+              <pre class="mono">&lt;nav&gt;
+  &lt;a href="/H/ICT8/4. Web Development/firstname_lastinitial.html"&gt;Home&lt;/a&gt;
+  &lt;a href="/H/ICT8/4. Web Development/about_firstnameL.html"&gt;About&lt;/a&gt;
+&lt;/nav&gt;</pre>
+              <em>Adjust the H: paths to match your files.</em>
+            </li>
+            <li>Style the nav: add spacing and a hover effect in your <span class="mono">&lt;style&gt;</span> block.</li>
+          </ol>
+          <h3>Success check</h3>
+          <ul>
+            <li>Both links work (Home ↔ About).</li>
+            <li>Titles/headings are clear and different per page.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="path-b">
+          <h2>Path B — Add a Downloadable Document</h2>
+          <p>Create a small Word document (1–2 paragraphs) and link it for download from your site.</p>
+          <ol>
+            <li>Create a Word file named <code>Unit4_Plan_&lt;firstname&gt;&lt;lastinitial&gt;.docx</code> and save it in <strong>H: → ICT8 → 4. Web Development</strong>.</li>
+            <li>Add a download link to your page (under a new heading like “My Plan”):
+              <pre class="mono">&lt;a href="/H/ICT8/4. Web Development/Unit4_Plan_firstnameL.docx" download&gt;Download my plan (.docx)&lt;/a&gt;</pre>
+              <em>If the browser opens it instead of downloading, right‑click &rarr; Save link as.</em>
+            </li>
+            <li>Below the link, add a short sentence explaining what’s inside the file.</li>
+          </ol>
+          <h3>Success check</h3>
+          <ul class="file-list">
+            <li>Link points to the correct <code>.docx</code> in your H: drive folder.</li>
+            <li>Text explains the file contents.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="path-c">
+          <h2>Path C — Embed a YouTube Video (Responsive)</h2>
+          <ol>
+            <li>Pick a school‑appropriate YouTube video that relates to your interests.</li>
+            <li>Copy the video ID (the letters after <code>v=</code> in the URL).</li>
+            <li>Add this block to your page where you want the video:
+              <pre class="mono">&lt;div class="embed video" aria-label="YouTube video embed"&gt;
+  &lt;iframe 
+    src="https://www.youtube.com/embed/VIDEO_ID" 
+    title="YouTube video player" allowfullscreen
+    referrerpolicy="strict-origin-when-cross-origin"&gt;&lt;/iframe&gt;
+&lt;/div&gt;</pre>
+              <em>Replace <code>VIDEO_ID</code>.</em>
+            </li>
+            <li>Add a one‑sentence caption under the video using <span class="mono">&lt;figcaption&gt;</span> or a plain paragraph.</li>
+          </ol>
+          <h3>Success check</h3>
+          <ul>
+            <li>Video scales on narrow and wide screens.</li>
+            <li>Caption explains why you picked it.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="path-d">
+          <h2>Bonus — Image Gallery with Credits</h2>
+          <p>Create a 2‑column mini‑gallery using <span class="mono">&lt;figure&gt;</span> + <span class="mono">&lt;figcaption&gt;</span>. Use images with proper credits.</p>
+          <div class="grid cols-2">
+            <pre class="mono">&lt;section aria-label="Gallery" class="gallery"&gt;
+  &lt;figure&gt;
+    &lt;img src="FULL_IMAGE_URL" alt="Short description"&gt;
+    &lt;figcaption&gt;Title — credit/source&lt;/figcaption&gt;
+  &lt;/figure&gt;
+  &lt;figure&gt;…&lt;/figure&gt;
+&lt;/section&gt;</pre>
+          </div>
+          <p>Add a little CSS (padding/border‑radius/shadow) to make it tidy.</p>
+        </section>
+
+        <section class="card" id="stretch">
+          <h2>Stretch Ideas (pick any)</h2>
+          <ul>
+            <li>Create <strong>jump links</strong> (table of contents at the top linking to sections using <span class="mono">id="..."</span>).</li>
+            <li>Add a <strong>mailto</strong> contact link: <code>&lt;a href="mailto:firstnameL@school.example"&gt;Email me&lt;/a&gt;</code>.</li>
+            <li>Move your inline CSS into a separate file <code>custom.css</code> and include it with <code>&lt;link rel="stylesheet" href="/H/ICT8/4. Web Development/custom.css"&gt;</code>.</li>
+            <li>Use a semantic layout: wrap content in <span class="mono">&lt;header&gt;</span>, <span class="mono">&lt;main&gt;</span>, <span class="mono">&lt;footer&gt;</span>.</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Hand‑in</h2>
+          <ol>
+            <li>Preview both pages in your browser and click all links.</li>
+            <li>Take one screenshot of your new feature (nav, download, or video).</li>
+            <li>Attach your <code>.html</code> file(s) and screenshot to the <strong>Unit 4 Extension</strong> assignment in Teams.</li>
+          </ol>
+          <details>
+            <summary>Where should I save my files?</summary>
+            <p>Use <strong>H: → ICT8 → 4. Web Development</strong>. Keep filenames simple (letters, numbers, underscores). Avoid spaces when possible.</p>
+          </details>
+        </section>
+
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <section class="card">
+          <h2>Goals</h2>
+          <ul>
+            <li>Link between pages using proper <span class="mono">href</span> paths.</li>
+            <li>Offer a file download using the <span class="mono">download</span> attribute.</li>
+            <li>Embed third‑party media responsively with <span class="mono">&lt;iframe&gt;</span>.</li>
+          </ul>
+        </section>
+        <section class="card">
+          <h2>Check List</h2>
+          <ul>
+            <li>Clear headings; tidy spacing.</li>
+            <li>Working links (no 404s or blanks).</li>
+            <li>Alt text on images; short captions/credits.</li>
+            <li>No personal info beyond first name + last initial.</li>
+          </ul>
+        </section>
+        <section class="card">
+          <h2>Troubleshooting</h2>
+          <ul>
+            <li><em>Link opens wrong file:</em> Double‑check your path and filename.</li>
+            <li><em>Video doesn’t show:</em> Ensure the <code>VIDEO_ID</code> is correct; some videos block embedding.</li>
+            <li><em>Download doesn’t download:</em> Try right‑click → Save link as.</li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/code/common/partials/footer.html"></footer>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://codemathbike.ca/code/ict8/unit4/templates/student_template -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage –</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like.">
+  <meta name="author" content="Your Name">
+
+      </head><body><p style="margin-top:12px;">
+        <a href="https://codemathbike.ca/code/ict8/unit4/web_dev/S1W2/index.html">← Back to S1W2 class page</a>
+      </p>
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+    code 
+      --bg:  ;
+      --ink:  #1a1a1f;
+      --accent: #4f46e5; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--Ink); background:var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background:; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--bg); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#000000; padding:2px 6px; border-radius:6px; }
+  </style>
+
+
+
+
+  <main class="card">
+    <header>
+      <p style="margin-top:12px;">
+        <a href="https://codemathbike.ca/code/ict8/unit4/index.html">← Back to S1W2 class page</a>
+      </p>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="Niavash">Niavash S</span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I like to just chill most of the time just playing on my phone in my room or going out with me freinds. I usually play games that are from a group named project moon which has 3 games called: lor (liberary of runia) lob corp (lobotomy corpiration) lc (limbus company). I find life pretty challenging because life is about overcoming the challenges that come to your life and i leard from life that no matter how impossible it seems if you give it your best god will help you and guide your path. Id like to learn more about the people i meet so i could know them better and hopefully have a good freindship with them.
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://www." target="_blank" rel="noopener">youtube</a></li>
+        <li><a href="https://www.nvschools.ca/" target="_blank" rel="noopener">project moon</a></li>
+        <li><a href="https://www.gdevelop.io/" target="_blank" rel="noopener">instagram</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src=https://preview.redd.it/im-crying-why-is-he-built-like-the-chibi-roland-from-v0-8wh4i30ckxte1.jpg?width=562&format=pjpg&auto=webp&s=592902a14a53968bea993dd4264ae94868d2c8d2
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">Why do programmers like dark mode?</p>
+      <button type="button" onclick="myFunction()">Why?</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p>I learned how to use technology even more now by creating my own web and learned how to create it responsibly. I found adding a background pretty challanging because even by guides and videos i still couldent understand what to do so i just gave the idea of adding an image to my background.Im happy that i could and have improved on using techonology and im glad i could proceed and understand some of these things and im proud of myself. I really enjoyed just doing this in general and showing a bit of who i am and just overall creating my own website. Maybe in the close future i might use the things i learned to my own use which im not ure of because i forget stuff pretty quickly. </p>
+      
+    </section>
+    
+    
+    
+    <footer>
+      <p>
+        Built by <strong>Your Name</strong>. Last updated: <span id="lastUpdated"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "To hide from bugs.";
+    }
+  </script>
+<script defer="" src="../../../../Working%20files/Niavash%20Shekouh/U4%20Web%20Development/My%20First%20Webpage%20–%20Your%20Name_files/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;890e296de4ab443083747c565b7457a5&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+</body></html>
