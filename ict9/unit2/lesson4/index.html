@@ -5,17 +5,17 @@
   <head>
     <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
     <title>ICT 9 • 2.4 Adding Enemies</title>
-    <link rel="stylesheet" href="/code/common/css/base.css">
-    <script src="/code/common/js/nav_data.js" defer></script>
-    <script src="/code/common/js/utils.js" defer></script>
-    <script src="/code/common/js/inject_partials.js" defer></script>
-    <script src="/code/common/js/nav_systems.js" defer></script>
-    <script src="/code/common/js/main.js" defer></script>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
   </head>
  
   <!-- Set body class to match course theme: ict8, ict9, dc1011, or none for purple -->
   <body data-course="ict9">
-    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
 
     <div class="page-wrap">
       <aside id="sidebar" aria-label="Course navigation"></aside>
@@ -24,7 +24,7 @@
       <!-- 2.4.0 -->
     <div class="card">
         <h2>Intro</h2>
-            <p>Now it’s time to add an enemy. In this lesson you’ll create a simple enemy that <em>patrols</em> back and forth on a platform using a per‑enemy <code>state</code> variable ("left"/"right"). In the next lesson we’ll add <strong>stomp to defeat</strong> and player damage.</p>
+            <p>Now it’s time to add an enemy. In this lesson you’ll create a simple enemy that <em>patrols</em> back and forth on a platform using a per‑enemy <code>state<> variable ("left"/"right"). In the next lesson we’ll add <strong>stomp to defeat</strong> and player damage.</p>
             <ul>
                 <li><strong>Enemy sprite</strong> — an animated character that is auto‑controlled (no keyboard input).</li>
                 <li><strong>Variables</strong> — values stored on an object (or scene) that control behaviour.</li>
@@ -37,21 +37,21 @@
       <h2>1. Add the Enemy Object</h2>
         <ol>
                             
-          <li><code>Add a new object</code> → <strong>Sprite</strong> → name it <k-input>Enemy</k-input>. Select <code>Import images</code>.</li>
+          <li><code>Add a new object<> → <strong>Sprite</strong> → name it <k-input>Enemy</k-input>. Select <code>Import images<>.</li>
           
-          <li>Select <code>enemyWalking_1.png</code> and <code>enemyWalking_2.png</code> from <em>assets</em> → <em>PNG</em> → <em>Enemies</em> from your U2 Game Development folder.</li> 
+          <li>Select <code>enemyWalking_1.png<> and <code>enemyWalking_2.png<> from <em>assets</em> → <em>PNG</em> → <em>Enemies</em> from your U2 Game Development folder.</li> 
             
-          <li> In the <code>Enemy Editor</code> name this <code>Animation #0</code> <k-input>Walk</k-input>. <em>Loop</em> the animation and change the timing to <k-input>0.225</k-input>. 
-            <div class="figure"><img src="/code/ict9/unit2/lesson4/01_enemy_properties.png" alt="enemy properties"></div>
+          <li> In the <code>Enemy Editor<> name this <code>Animation #0<> <k-input>Walk</k-input>. <em>Loop</em> the animation and change the timing to <k-input>0.225</k-input>. 
+            <div class="figure"><img src="/ict9/unit2/lesson4/01_enemy_properties.png" alt="enemy properties"></div>
           </li>
             
-          <li><strong>Edit points</strong> → select <em>Origin</em> and set approximately center‑bottom (example for a 32×48 sprite: <strong>X</strong> <k-input>16</k-input>, <strong>Y</strong> <k-input>44</k-input>). Click <code>Apply</code>.</li>
+          <li><strong>Edit points</strong> → select <em>Origin</em> and set approximately center‑bottom (example for a 32×48 sprite: <strong>X</strong> <k-input>16</k-input>, <strong>Y</strong> <k-input>44</k-input>). Click <code>Apply<>.</li>
             
           <li>Add the <strong>Platformer Character</strong> behaviour:
             <ul>
 
               <li><strong>Disable default keyboard controls</strong>.</li>
-                  <div class="figure"><img src="/code/ict9/unit2/lesson4/02_enemy_behaviour.png" alt="enemy behaviours"></div>
+                  <div class="figure"><img src="/ict9/unit2/lesson4/02_enemy_behaviour.png" alt="enemy behaviours"></div>
               </li> 
 
               <li>Set <strong>Max speed</strong> to <k-input>140</k-input>–<k-input>180</k-input> (start with <k-input>140</k-input>).</li>
@@ -74,11 +74,11 @@
             <li>Name: <k-input>state</k-input></li>
             <li>Type: <strong>String</strong></li>
             <li>Default value: <k-input>"right"</k-input></li>
-                <div class="figure"><img src="/code/ict9/unit2/lesson4/03_state_variable.png" alt="state variable"></div>
+                <div class="figure"><img src="/ict9/unit2/lesson4/03_state_variable.png" alt="state variable"></div>
             </ul>
         </li>
  
-        <li>(Optional) In the scene, select one Enemy instance and set its <em>Instance variable</em> <code>state</code> to <k-input>"left"</k-input> so it starts moving left. This shows that each enemy can behave independently.</li>
+        <li>(Optional) In the scene, select one Enemy instance and set its <em>Instance variable</em> <code>state<> to <k-input>"left"</k-input> so it starts moving left. This shows that each enemy can behave independently.</li>
       </ol>
     </div>
 
@@ -90,20 +90,20 @@
       <p>Before we can animate the <em>Enemy</em> we need to set up some "Markers" that tells the Enemy to turn around and go the other way. These markers will also keep the enemy at the top of platforms so they don't fall off the edge.</p>
 
       <ol>
-        <li>Add a new <code>Tiled Sprite</code> object. Name this object <k-input>Right Edge Marker<k-input></li>
-        <li>Select <code>Create with Piskel</code>
-            <div class="figure"><img src="/code/ict9/unit2/lesson4/04_create_w_piskel.png" alt="Create with Piskel"></div>
+        <li>Add a new <code>Tiled Sprite<> object. Name this object <k-input>Right Edge Marker<k-input></li>
+        <li>Select <code>Create with Piskel<>
+            <div class="figure"><img src="/ict9/unit2/lesson4/04_create_w_piskel.png" alt="Create with Piskel"></div>
             <p>This is where you can create your own custom images</p></li>
             
-          <li>Keep the size at <k-input>32 x 32</k-input>, change the colour to a <k-input>Red</k-input> and select the <code>paint bucket</code> to fill the area. Save your sprite.
+          <li>Keep the size at <k-input>32 x 32</k-input>, change the colour to a <k-input>Red</k-input> and select the <code>paint bucket<> to fill the area. Save your sprite.
               <p><em>Why Red? Red = Right</em></p>
-                  <div class="figure"><img src="/code/ict9/unit2/lesson4/05_fill_area.png" alt="New Sprite properties"></div>
+                  <div class="figure"><img src="/ict9/unit2/lesson4/05_fill_area.png" alt="New Sprite properties"></div>
           </li>
             
           <li>Repeat the steps to create a <k-input>Left Edge Marker</k-input> using a <strong>Lime</strong> colour.</li>
           <li>Save your work.</li>
 
-            <div class="figure"><img src="/code/ict9/unit2/lesson4/06_scene_objects.png" alt="list of scene objects"></div>
+            <div class="figure"><img src="/ict9/unit2/lesson4/06_scene_objects.png" alt="list of scene objects"></div>
             <p>This is the list of objects you should have by now. If you have extra - delete them and keep your files organized. Now we are ready to animate our Enemy! </p>
         </ol>
 
@@ -113,28 +113,28 @@
     <div class="card">
       <h2>4. Enemy Animations</h2>
 
-        <p>First thing we need to do is to put Edge markers to define the enemy area. Choose an area, up on a plateau or between two "walls". Add your <code>Left</code> and <code>Right</code> markers, just inside the platform area. Add your <code>Enemy</code> between the two markers.</p>
+        <p>First thing we need to do is to put Edge markers to define the enemy area. Choose an area, up on a plateau or between two "walls". Add your <code>Left<> and <code>Right<> markers, just inside the platform area. Add your <code>Enemy<> between the two markers.</p>
 
-        <div class="figure"><img src="/code/ict9/unit2/lesson4/07_adding_markers_enemy.png" alt="Where to place your objects"> </div>
+        <div class="figure"><img src="/ict9/unit2/lesson4/07_adding_markers_enemy.png" alt="Where to place your objects"> </div>
 
-        <p>Go to your <code>Level 1(Events)</code> sheet and enter the following events: </p>
+        <p>Go to your <code>Level 1(Events)<> sheet and enter the following events: </p>
 
         <ul>
           <p>This set of events animates the Enemy's movement back and forth</p>
           <p><strong>Add a new event</strong></p>
           <ul>
-            <li><strong>Condition : </strong><code> Enemy → Variables → Object variable value</code> → <kbd>state = "right"</li>
-            <li><strong>Action : </strong><code>  Enemy → Platformer controls → Simulate right key press </code></li>
-            <li><strong>Action : </strong><code>  Enemy → Effects → Flip the object horizontally </code>→ <kbd>Activate flipping → NO</li>
+            <li><strong>Condition : </strong><code> Enemy → Variables → Object variable value<> → <kbd>state = "right"</li>
+            <li><strong>Action : </strong><code>  Enemy → Platformer controls → Simulate right key press <></li>
+            <li><strong>Action : </strong><code>  Enemy → Effects → Flip the object horizontally <>→ <kbd>Activate flipping → NO</li>
           </ul>
         
          <br>
             
         <p><strong>Add a new event</strong></p>
           <ul>
-            <li><strong>Condition : </strong><code> Enemy → Variables → Object variable value</code> → <kbd>state = "left"</kbd></li>
-            <li><strong>Action : </strong><code>  Enemy → Platformer controls → Simulate left key press </code></li>
-            <li><strong>Action : </strong><code>  Enemy → Effects → Flip the object horizontally </code> → <kbd>Activate flipping → YES</li>
+            <li><strong>Condition : </strong><code> Enemy → Variables → Object variable value<> → <kbd>state = "left"</kbd></li>
+            <li><strong>Action : </strong><code>  Enemy → Platformer controls → Simulate left key press <></li>
+            <li><strong>Action : </strong><code>  Enemy → Effects → Flip the object horizontally <> → <kbd>Activate flipping → YES</li>
           </ul>
           
           <br>
@@ -142,15 +142,15 @@
         <p>This set of events tells the Enemy to change directions when it hits a marker</p>
         <p><strong>Add a new event</strong></p>
           <ul>
-            <li><strong>Condition : </strong><code> Enemy → Collision → Collision</code> →  <kbd><strong>Right</strong>_Edge_Marker</kbd></li>
-            <li><strong>Action : </strong><code>  Enemy → Variables → Change object variable value</code> → <kbd>state = "left"</kbd></li>
+            <li><strong>Condition : </strong><code> Enemy → Collision → Collision<> →  <kbd><strong>Right</strong>_Edge_Marker</kbd></li>
+            <li><strong>Action : </strong><code>  Enemy → Variables → Change object variable value<> → <kbd>state = "left"</kbd></li>
           </ul>
         <br>
 
         <p><strong>Add a new event</strong></p>
           <ul>
-            <li><strong>Condition : </strong><code> Enemy → Collision → Collision</code> →  <kbd><strong>Left</strong>_Edge_Marker</kbd></li>
-            <li><strong>Action : </strong><code>  Enemy → Variables → Change object variable value</code> → <kbd>state = "right"</kbd></li>
+            <li><strong>Condition : </strong><code> Enemy → Collision → Collision<> →  <kbd><strong>Left</strong>_Edge_Marker</kbd></li>
+            <li><strong>Action : </strong><code>  Enemy → Variables → Change object variable value<> → <kbd>state = "right"</kbd></li>
           </ul>
         <br>
         
@@ -160,17 +160,17 @@
 
 
         <h4>Hiding Markers</h4>
-        <p>To <strong>hide</strong> all your edge markers, <code>add an action</code> in the event with a <strong>blank</strong> condition. Add the following: </p>
+        <p>To <strong>hide</strong> all your edge markers, <code>add an action<> in the event with a <strong>blank</strong> condition. Add the following: </p>
         
           <ul>
-              <li><strong>Action : </strong><code>Left_Edge_Marker → Visibility → Hide</code> </li>
-              <li><strong>Action : </strong><code>Right_Edge_Marker → Visibility → Hide</code> </li>
+              <li><strong>Action : </strong><code>Left_Edge_Marker → Visibility → Hide<> </li>
+              <li><strong>Action : </strong><code>Right_Edge_Marker → Visibility → Hide<> </li>
           </ul>
       
         <p>Save all your work and preview.</p>
 
         <p>Your event sheet should look like this</p>
-            <div class="figure"><img src="/code/ict9/unit2/lesson4/08_event_sheet.png" alt="Event Sheet"></div>
+            <div class="figure"><img src="/ict9/unit2/lesson4/08_event_sheet.png" alt="Event Sheet"></div>
 
     </div>
     
@@ -178,10 +178,10 @@
     <div class="card">
         <h2>5. Preview &amp; Save</h2>
             <ul>
-                <li>Preview and confirm each Enemy moves according to its <code>state</code> ("right" or "left").</li>
+                <li>Preview and confirm each Enemy moves according to its <code>state<> ("right" or "left").</li>
                 <li>Adjust <strong>Max speed</strong> if movement feels too slow/fast.</li>
                 <li>Confirm facing: moving right = not flipped; moving left = flipped. Swap the flip actions if your art faces the opposite way.</li>
-                <li>Place a second Enemy with <code>state = "left"</code> to confirm each instance moves independently.</li>
+                <li>Place a second Enemy with <code>state = "left"<> to confirm each instance moves independently.</li>
                 
                 <li>Save your project (<kbd>Ctrl</kbd>+<kbd>S</kbd>).</li>
             </ul>
@@ -191,7 +191,7 @@
     <div class="card">
         <h2>6. Reflection</h2>
         <ul>
-            <li>In 2–3 sentences, explain how the <code>state</code> variable controls Enemy movement and why a text value ("left"/"right") keeps events readable.</li>
+            <li>In 2–3 sentences, explain how the <code>state<> variable controls Enemy movement and why a text value ("left"/"right") keeps events readable.</li>
             <li>If an Enemy doesn’t turn at a marker, list two fixes you’d try (e.g., move marker inward; check the collision event; disable default controls; confirm the state comparisons).</li>
             <li>If you couldn’t use markers, how else could you make a patrolling enemy (hint: ledge/wall checks or raycasts)? What are the trade‑offs?</li>
         </ul>
@@ -218,9 +218,9 @@
               <ul>
                 <li>Enemy sprite added with <strong>Walk</strong> (loop) and origin set near center‑bottom.</li>
                 <li>Platformer Character on Enemy; <strong>Default controls = Disabled</strong>; Max speed set.</li>
-                <li>Enemy variable <code>state</code> created and set per instance ("left"/"right").</li>
+                <li>Enemy variable <code>state<> created and set per instance ("left"/"right").</li>
                 <li>Left/Right edge markers created and placed just inside the platform edges.</li>
-                <li>Events added: simulate Left/Right by <code>state</code>; collision with marker flips <code>state</code>.</li>
+                <li>Events added: simulate Left/Right by <code>state<>; collision with marker flips <code>state<>.</li>
                 <li>Preview works; markers can be hidden (optional); project saved.</li>
               </ul>
         </div>
@@ -240,7 +240,7 @@
     </aside>
   </div>
         
-  <footer id="site-footer" data-partial="/code/common/partials/footer.html"></footer>
+  <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
   
 
   </body>

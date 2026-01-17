@@ -5,17 +5,17 @@
   <head>
     <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
     <title>ICT 9 • 2.1 Getting Started</title>
-    <link rel="stylesheet" href="/code/common/css/base.css">
-    <script src="/code/common/js/nav_data.js" defer></script>
-    <script src="/code/common/js/utils.js" defer></script>
-    <script src="/code/common/js/inject_partials.js" defer></script>
-    <script src="/code/common/js/nav_systems.js" defer></script>
-    <script src="/code/common/js/main.js" defer></script>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
   </head>
  
   <!-- Set body class to match course theme: ict8, ict9, dc1011, or none for purple -->
   <body data-course="ict9">
-    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
 
     <div class="page-wrap">
       <aside id="sidebar" aria-label="Course navigation"></aside>
@@ -33,9 +33,9 @@
           <section class="card">
             <h2>1. Folder Setup</h2>
             <ul>
-              <li>Create a <code>U2 Game Development</code> folder in your <code>ICT 9</code> on your <code>H:\</code> drive.</li>
-              <li>In your <code>U2 Game Development</code> folder, create another folder called <code>assets</code></li>
-              <li>Download the <a href="https://kenney.nl/assets/abstract-platformer" target="_blank" rel="noopener">Kenney Abstract Platformer</a> and extract the files to your <code>assets</code> folder.</li>
+              <li>Create a <code>U2 Game Development<> folder in your <code>ICT 9<> on your <code>H:\<> drive.</li>
+              <li>In your <code>U2 Game Development<> folder, create another folder called <code>assets<></li>
+              <li>Download the <a href="https://kenney.nl/assets/abstract-platformer" target="_blank" rel="noopener">Kenney Abstract Platformer</a> and extract the files to your <code>assets<> folder.</li>
               <br>
               <details>
                 <summary>How to download &amp; unzip</summary>
@@ -43,14 +43,14 @@
                 <ol>
                   <li>Click the Folder Download Link in the <strong>Resources</strong> section (right sidebar).</li>
                   <li>On the site, click the <strong>Download</strong> button.</li>
-                  <li>Choose <strong>Save as</strong> → save to <code>H:\ICT 9\2. Game Development\assets</code>.</li>
+                  <li>Choose <strong>Save as</strong> → save to <code>H:\ICT 9\2. Game Development\assets<>.</li>
                 </ol>
     
                 <h4>Step 2 – Extract</h4>
                 <ol>
                   <li>Open File Explorer and go to that folder.</li>
                   <li>Right-click the zip → <strong>Extract All…</strong> → confirm destination → <strong>Extract</strong>.</li>
-                  <li>A new folder appears (e.g., <code>kenney_abstract-platformer</code>).</li>
+                  <li>A new folder appears (e.g., <code>kenney_abstract-platformer<>).</li>
                 </ol>
               </details>
               <br>
@@ -65,9 +65,9 @@
                 <em>Create → Create New Game →</em> and select <em>Empty Project</em>
                 <div class="figure"><img src="./01_create_new_game.png" alt="Create new project dialog"></div>
               </li>
-                <li>Name your project <code>Platform Game Tutorial - Your Name</code>
+                <li>Name your project <code>Platform Game Tutorial - Your Name<>
                 </li>
-                <li>Save your game to your <code>U2 Game Development</code> folder on your <code>H:\</code> drive. 
+                <li>Save your game to your <code>U2 Game Development<> folder on your <code>H:\<> drive. 
                     <!--Add image link here-->
                 </li>
                 <li> Go into the <em>Project Manager</em> menu and rename your scene to <strong>Level 1</strong>. Close the menu </li>
@@ -83,31 +83,31 @@
           <section class="card">
                 <h2>3. Adding a Background</h2>
                     <p>Now we are going to add a background to our scene. It will be on the <strong>Base Layer</strong> of our game.<p>
-                      <div class="figure"><img src="/code/ict9/unit2/lesson1/03_workspace.png" alt="Tiled sprite"></div>
+                      <div class="figure"><img src="/ict9/unit2/lesson1/03_workspace.png" alt="Tiled sprite"></div>
                       <br>
                 <ol>
-                    <li>Click on the <code>Add new object</code> button and select <code>Tiled Sprite</code>
-                        <div class="figure"><img src="/code/ict9/unit2/lesson1/04_tiled_sprite.png" style="width:50%" alt="Tiled sprite"></div>
+                    <li>Click on the <code>Add new object<> button and select <code>Tiled Sprite<>
+                        <div class="figure"><img src="/ict9/unit2/lesson1/04_tiled_sprite.png" style="width:50%" alt="Tiled sprite"></div>
                     </li>
                 
-                    <li>Name the sprite <code>Background</code> and press the button to <code>Choose folder</code> and select <em>Files from your device</em>. Navigate to the following folder <em>ICT 9 → 2 Game Development → PNG → Backgrounds</em> and select the <code>set1_tile.png</code>. Change the <code>Default width</code> and <code>height</code> to <k-input>64</k-input> </li>
+                    <li>Name the sprite <code>Background<> and press the button to <code>Choose folder<> and select <em>Files from your device</em>. Navigate to the following folder <em>ICT 9 → 2 Game Development → PNG → Backgrounds</em> and select the <code>set1_tile.png<>. Change the <code>Default width<> and <code>height<> to <k-input>64</k-input> </li>
                         <br>
                         <details><summary>Changing the view in File Manager</summary>
                             <ul>
-                                <li>If you cannot see the icons for your files, press the view button in the bar and select <code>Large Icons</code>. This will help you select the images you want. </li><br>
-                                    <div class="figure"><img src="/code/ict9/unit2/lesson1/05_background_files.png" alt="Large icons"></div>
+                                <li>If you cannot see the icons for your files, press the view button in the bar and select <code>Large Icons<>. This will help you select the images you want. </li><br>
+                                    <div class="figure"><img src="/ict9/unit2/lesson1/05_background_files.png" alt="Large icons"></div>
                         </details>
                         <br>
                     
                     
                     <li>Drag and drop it to your scene layout. Click on it again and make it bigger. </li> 
                         <br>
-                        <div class="figure"><img src="/code/ict9/unit2/lesson1/06_background_tile.png" alt="tile background insert"></div>
+                        <div class="figure"><img src="/ict9/unit2/lesson1/06_background_tile.png" alt="tile background insert"></div>
                       
                         
-                    <li>The <code>Tiled Sprite Properties</code> menu should pop up on your left side. Enter the following : <em> X : 0 → Y : 0 → Z : 1 → W : 6400 → H : 3600</em>. (If you cannot adjust the H, press the paperclip to the side).</li>
+                    <li>The <code>Tiled Sprite Properties<> menu should pop up on your left side. Enter the following : <em> X : 0 → Y : 0 → Z : 1 → W : 6400 → H : 3600</em>. (If you cannot adjust the H, press the paperclip to the side).</li>
                         <br>
-                        <div class="figure"><img src="/code/ict9/unit2/lesson1/07_background_properties.png" alt="background properties"></div>
+                        <div class="figure"><img src="/ict9/unit2/lesson1/07_background_properties.png" alt="background properties"></div>
                     
                     
                     <li>You should see your bacground fill with the image - repeated seamlessly across the space.</li>
@@ -124,12 +124,12 @@
                 <p>Now that we have a background, we need to lock it in place, so that it doesn't get moved or accidently deleted.</p>
     
                 <ol>
-                  <li>Click on the <code>Open Instance Panel</code>button to reveal the panel at the bottom.</li>
-                  <li>Click on the <code>Lock</code> icon in the <code>Background</code> to lock the background.</li>
-                  <li>You can close the panel by pressing the <code>X</code></li>
+                  <li>Click on the <code>Open Instance Panel<>button to reveal the panel at the bottom.</li>
+                  <li>Click on the <code>Lock<> icon in the <code>Background<> to lock the background.</li>
+                  <li>You can close the panel by pressing the <code>X<></li>
                   <br>
     
-                  <div class='figure'><img src="/code/ict9/unit2/lesson1/08_lock_background.png" alt="lock background"></div>
+                  <div class='figure'><img src="/ict9/unit2/lesson1/08_lock_background.png" alt="lock background"></div>
     
                   <li>Save your work</li>
                 </ol>
@@ -141,7 +141,7 @@
             <section class="card">
                 <h2>All Set Up!</h2>
     
-                    <p>Great! We have set up some of the backend work for our project and created a background. If you press the <code>Preview</code> button, you should see a window with what your background will look like when you are playing your game.<p>
+                    <p>Great! We have set up some of the backend work for our project and created a background. If you press the <code>Preview<> button, you should see a window with what your background will look like when you are playing your game.<p>
                     
                     <p>Next we will create some platforms on a new layer for our game.</p>
             </section>
@@ -168,7 +168,7 @@
       </aside>
     </div>
     
-    <footer id="site-footer" data-partial="/code/common/partials/footer.html"></footer>
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
   </body>
 </html>
   

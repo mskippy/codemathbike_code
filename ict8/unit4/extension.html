@@ -4,12 +4,12 @@
   <head>
     <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
     <title>ICT 8 • Unit 4 Extension Project</title>
-    <link rel="stylesheet" href="/code/common/css/base.css">
-    <script src="/code/common/js/nav_data.js" defer></script>
-    <script src="/code/common/js/utils.js" defer></script>
-    <script src="/code/common/js/inject_partials.js" defer></script>
-    <script src="/code/common/js/nav_systems.js" defer></script>
-    <script src="/code/common/js/main.js" defer></script>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
     <style>
       /* tiny helpers scoped to this page only */
       .embed { position: relative; width: 100%; }
@@ -23,7 +23,7 @@
     </style>
   </head>
   <body data-course="ict8">
-    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
 
     <div class="page-wrap">
       <aside id="sidebar" aria-label="Course navigation"></aside>
@@ -39,7 +39,7 @@
         <section class="card" id="path-a">
           <h2>Path A — Make a Second Page + Site Navigation</h2>
           <ol>
-            <li>Duplicate your current file and rename it <code>about_&lt;firstname&gt;&lt;lastinitial&gt;.html</code> in <strong>H: → ICT8 → 4. Web Development</strong>.</li>
+            <li>Duplicate your current file and rename it <code>about_&lt;firstname&gt;&lt;lastinitial&gt;.html<> in <strong>H: → ICT8 → 4. Web Development</strong>.</li>
             <li>Change the <span class="mono">&lt;title&gt;</span> and top heading to <strong>About</strong>. Write a short paragraph about your project or hobbies.</li>
             <li>Add simple <strong>site navigation</strong> to both pages:
               <pre class="mono">&lt;nav&gt;
@@ -61,7 +61,7 @@
           <h2>Path B — Add a Downloadable Document</h2>
           <p>Create a small Word document (1–2 paragraphs) and link it for download from your site.</p>
           <ol>
-            <li>Create a Word file named <code>Unit4_Plan_&lt;firstname&gt;&lt;lastinitial&gt;.docx</code> and save it in <strong>H: → ICT8 → 4. Web Development</strong>.</li>
+            <li>Create a Word file named <code>Unit4_Plan_&lt;firstname&gt;&lt;lastinitial&gt;.docx<> and save it in <strong>H: → ICT8 → 4. Web Development</strong>.</li>
             <li>Add a download link to your page (under a new heading like “My Plan”):
               <pre class="mono">&lt;a href="/H/ICT8/4. Web Development/Unit4_Plan_firstnameL.docx" download&gt;Download my plan (.docx)&lt;/a&gt;</pre>
               <em>If the browser opens it instead of downloading, right‑click &rarr; Save link as.</em>
@@ -70,7 +70,7 @@
           </ol>
           <h3>Success check</h3>
           <ul class="file-list">
-            <li>Link points to the correct <code>.docx</code> in your H: drive folder.</li>
+            <li>Link points to the correct <code>.docx<> in your H: drive folder.</li>
             <li>Text explains the file contents.</li>
           </ul>
         </section>
@@ -79,7 +79,7 @@
           <h2>Path C — Embed a YouTube Video (Responsive)</h2>
           <ol>
             <li>Pick a school‑appropriate YouTube video that relates to your interests.</li>
-            <li>Copy the video ID (the letters after <code>v=</code> in the URL).</li>
+            <li>Copy the video ID (the letters after <code>v=<> in the URL).</li>
             <li>Add this block to your page where you want the video:
               <pre class="mono">&lt;div class="embed video" aria-label="YouTube video embed"&gt;
   &lt;iframe 
@@ -87,7 +87,7 @@
     title="YouTube video player" allowfullscreen
     referrerpolicy="strict-origin-when-cross-origin"&gt;&lt;/iframe&gt;
 &lt;/div&gt;</pre>
-              <em>Replace <code>VIDEO_ID</code>.</em>
+              <em>Replace <code>VIDEO_ID<>.</em>
             </li>
             <li>Add a one‑sentence caption under the video using <span class="mono">&lt;figcaption&gt;</span> or a plain paragraph.</li>
           </ol>
@@ -117,8 +117,8 @@
           <h2>Stretch Ideas (pick any)</h2>
           <ul>
             <li>Create <strong>jump links</strong> (table of contents at the top linking to sections using <span class="mono">id="..."</span>).</li>
-            <li>Add a <strong>mailto</strong> contact link: <code>&lt;a href="mailto:firstnameL@school.example"&gt;Email me&lt;/a&gt;</code>.</li>
-            <li>Move your inline CSS into a separate file <code>custom.css</code> and include it with <code>&lt;link rel="stylesheet" href="/H/ICT8/4. Web Development/custom.css"&gt;</code>.</li>
+            <li>Add a <strong>mailto</strong> contact link: <code>&lt;a href="mailto:firstnameL@school.example"&gt;Email me&lt;/a&gt;<>.</li>
+            <li>Move your inline CSS into a separate file <code>custom.css<> and include it with <code>&lt;link rel="stylesheet" href="/H/ICT8/4. Web Development/custom.css"&gt;<>.</li>
             <li>Use a semantic layout: wrap content in <span class="mono">&lt;header&gt;</span>, <span class="mono">&lt;main&gt;</span>, <span class="mono">&lt;footer&gt;</span>.</li>
           </ul>
         </section>
@@ -128,7 +128,7 @@
           <ol>
             <li>Preview both pages in your browser and click all links.</li>
             <li>Take one screenshot of your new feature (nav, download, or video).</li>
-            <li>Attach your <code>.html</code> file(s) and screenshot to the <strong>Unit 4 Extension</strong> assignment in Teams.</li>
+            <li>Attach your <code>.html<> file(s) and screenshot to the <strong>Unit 4 Extension</strong> assignment in Teams.</li>
           </ol>
           <details>
             <summary>Where should I save my files?</summary>
@@ -160,13 +160,13 @@
           <h2>Troubleshooting</h2>
           <ul>
             <li><em>Link opens wrong file:</em> Double‑check your path and filename.</li>
-            <li><em>Video doesn’t show:</em> Ensure the <code>VIDEO_ID</code> is correct; some videos block embedding.</li>
+            <li><em>Video doesn’t show:</em> Ensure the <code>VIDEO_ID<> is correct; some videos block embedding.</li>
             <li><em>Download doesn’t download:</em> Try right‑click → Save link as.</li>
           </ul>
         </section>
       </aside>
     </div>
 
-    <footer id="site-footer" data-partial="/code/common/partials/footer.html"></footer>
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
   </body>
 </html>

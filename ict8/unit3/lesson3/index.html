@@ -5,17 +5,17 @@
   <head>
     <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
     <title>ICT 8 • 3.3 Adding the Enemy</title>
-    <link rel="stylesheet" href="/code/common/css/base.css">
-    <script src="/code/common/js/nav_data.js" defer></script>
-    <script src="/code/common/js/utils.js" defer></script>
-    <script src="/code/common/js/inject_partials.js" defer></script>
-    <script src="/code/common/js/nav_systems.js" defer></script>
-    <script src="/code/common/js/main.js" defer></script>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
   </head>
  
   <!-- Set body class to match course theme: ict8, ict9, dc1011, or none for purple -->
   <body data-course="ict8">
-    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
 
     <div class="page-wrap">
       <aside id="sidebar" aria-label="Course navigation"></aside>
@@ -29,14 +29,14 @@
         </p>
         <ol>
           <li><strong>Add a new object → Sprite</strong></li>
-          <li><strong>Object Name:</strong> <code>Enemy1</code></li>
-          <li><strong>Import image:</strong> <code>enemy1.png</code> (from your assets folder)</li>
-          <li><strong>Behaviours:</strong> Add <code>DestroyOutside</code></li>
+          <li><strong>Object Name:</strong> <code>Enemy1<></li>
+          <li><strong>Import image:</strong> <code>enemy1.png<> (from your assets folder)</li>
+          <li><strong>Behaviours:</strong> Add <code>DestroyOutside<></li>
         </ol>
 
         <!-- Placeholder image: enemy sprite setup -->
         <figure>
-          <img src="/code/ict8/unit3/lesson3/01_add_enemy.png" alt="Adding the enemy sprite">
+          <img src="/ict8/unit3/lesson3/01_add_enemy.png" alt="Adding the enemy sprite">
         </figure>
       </section>
 
@@ -48,17 +48,17 @@
         </p>
         <ol>
           <li><strong>Add a new object → Sprite</strong></li>
-          <li><strong>Object Name:</strong> <code>SpawnPoint</code></li>
+          <li><strong>Object Name:</strong> <code>SpawnPoint<></li>
           <li><strong>Create with Piskel:</strong> choose a colour (e.g., green), use the paint bucket to fill, then <em>Save</em> and <em>Apply</em>.</li>
 
-          <img src="/code/ict8/unit3/lesson3/02_add_spawnpoint.png" alt="Creating the spawn point sprite">
-          <img src="/code/ict8/unit3/lesson3/03_create_spawnpoint.png" alt="fill to create spawnpoint">
-          <li>Zoom out and place <strong>three</strong> <code>SpawnPoint</code> objects just outside the right edge of your game space.</li>
+          <img src="/ict8/unit3/lesson3/02_add_spawnpoint.png" alt="Creating the spawn point sprite">
+          <img src="/ict8/unit3/lesson3/03_create_spawnpoint.png" alt="fill to create spawnpoint">
+          <li>Zoom out and place <strong>three</strong> <code>SpawnPoint<> objects just outside the right edge of your game space.</li>
         </ol>
 
         <!-- Placeholder image: spawn point creation -->
         <figure>
-          <img src="/code/ict8/unit3/lesson3/04_in_scene.png" alt="Spawn points placement placeholder">
+          <img src="/ict8/unit3/lesson3/04_in_scene.png" alt="Spawn points placement placeholder">
         </figure>
       </section>
 
@@ -75,11 +75,11 @@
           <p><strong>Add a new event</strong></p>
           <ul>
             <li><strong>Add condition:</strong> → <em>Other Conditions</em> → <em>Scene</em> → <em>At the beginning of the scene</em></li>
-            <li><strong>Add action:</strong> → <em>Other actions</em> → <em>Timers and time</em> →  <em>Start (or reset) a scene timer</em> → Name it <code>"EnemySpawn"</code></li>
+            <li><strong>Add action:</strong> → <em>Other actions</em> → <em>Timers and time</em> →  <em>Start (or reset) a scene timer</em> → Name it <code>"EnemySpawn"<></li>
           </ul>
           <!-- Placeholder image: timer setup -->
           <figure>
-            <img src="/code/ict8/unit3/lesson3/05_setup_scene_timer.png" alt="Timer setup placeholder">
+            <img src="/ict8/unit3/lesson3/05_setup_scene_timer.png" alt="Timer setup placeholder">
         </ul>
 
         <h3>2) Spawn &amp; Move Toward Player</h3>
@@ -117,11 +117,11 @@
 
         <!-- Placeholder image: spawn event sheet -->
         <figure>
-          <img src="/code/ict8/unit3/lesson3/06_spawn_event.png" alt="Spawn event code">
+          <img src="/ict8/unit3/lesson3/06_spawn_event.png" alt="Spawn event code">
         </figure>
 
         <p>Preview your game—you should see enemies spawning every 3 seconds and moving toward the Player. If they fly off-screen, they should be deleted automatically.</p>
-        <p>If <code>Enemy</code> is too big, add an action to scale it down (as you did for the Player).</p>
+        <p>If <code>Enemy<> is too big, add an action to scale it down (as you did for the Player).</p>
       </section>
 
       
@@ -132,13 +132,13 @@
 
         <h3>1) Add Enemy Health Variable</h3>
         <ol>
-          <li>Open <code>Enemy1</code> → <em>Variables</em> tab.</li>
-          <li>Add variable: <strong>Name</strong> <code>EnemyHealth</code>, <strong>Type</strong> <em>Number</em>, <strong>Value</strong> <code>5</code>.</li>
+          <li>Open <code>Enemy1<> → <em>Variables</em> tab.</li>
+          <li>Add variable: <strong>Name</strong> <code>EnemyHealth<>, <strong>Type</strong> <em>Number</em>, <strong>Value</strong> <code>5<>.</li>
         </ol>
 
         <!-- Placeholder image: enemy variable -->
         <figure>
-          <img src="/code/ict8/unit3/lesson3/07_enemy_variable.png" alt="Enemy variable setup ">
+          <img src="/ict8/unit3/lesson3/07_enemy_variable.png" alt="Enemy variable setup ">
         </figure>
 
         <h3>2) Bullet Collision Reduces Health</h3>
@@ -151,8 +151,8 @@
               <li>Other object: <k-input>Enemy1</k-input></li>
             </ul>
           
-            <li><strong>Add action:</strong> <code>Bullet</code> → <em>Delete the object</em></li>
-          <li><strong>Add action:</strong> <code>Enemy1</code> → <em>Change variable value</em> </li>
+            <li><strong>Add action:</strong> <code>Bullet<> → <em>Delete the object</em></li>
+          <li><strong>Add action:</strong> <code>Enemy1<> → <em>Change variable value</em> </li>
             <ul>
               <li>Variable: <k-input>EnemyHealth</k-input> - <em>Make sure you can select the variable from the dropdown list</em></li>
               <li>Modification's sign: <k-input>-(subtract)</k-input></li>
@@ -162,7 +162,7 @@
 
         <!-- Placeholder image: collision event -->
         <figure>
-          <img src="/code/ict8/unit3/lesson3/08_reduce_enemy_health.png" alt="Bullet collision event placeholder">
+          <img src="/ict8/unit3/lesson3/08_reduce_enemy_health.png" alt="Bullet collision event placeholder">
         </figure>
 
         <h3>3) Delete Enemy at 0 Health</h3>
@@ -176,20 +176,20 @@
               <li>Sign of the test: <k-input>≤ (less or equal to)</k-input></li>
               <li>Value: <k-input>0</k-input></li>
             </ul>
-            <li><strong>Add action:</strong> <code>Enemy1</code> → <em>Delete the object</em></li>
+            <li><strong>Add action:</strong> <code>Enemy1<> → <em>Delete the object</em></li>
           </ul>
           
         </ul>
 
         <!-- Placeholder image: delete at zero -->
         <figure>
-          <img src="/code/ict8/unit3/lesson3/09_kill_enemy.png" alt="Delete enemy at zero health placeholder">
+          <img src="/ict8/unit3/lesson3/09_kill_enemy.png" alt="Delete enemy at zero health placeholder">
         </figure>
 
         <p>Preview your game—you should now be able to shoot and destroy enemies. 🎉</p>
 
         <div class="figure">  <video autoplay loop muted playsinline width="720">
-                <source src="/code/ict8/unit3/lesson3/10_killing_the_enemy_clip.mp4" type="video/mp4">
+                <source src="/ict8/unit3/lesson3/10_killing_the_enemy_clip.mp4" type="video/mp4">
                 Your browser does not support the video tag.
         </video></div>
 
@@ -219,7 +219,7 @@
             <ol>
                 <li>A screenshot of your <strong>SpawnPoints</strong> placed on the right side of the screen.</li>
                 <li>A screenshot of your <strong>Event Sheet</strong> showing the timer and spawn actions.</li>
-                <li>A screenshot of the <strong>EnemyHealth variable</strong> added to <code>Enemy</code>.</li>
+                <li>A screenshot of the <strong>EnemyHealth variable</strong> added to <code>Enemy<>.</li>
                 <li>A screenshot of your game running, with an Enemy visible on screen.</li>
                 <li>(Optional) A screenshot showing an Enemy being destroyed by your bullet.</li>
             </ol>
@@ -240,7 +240,7 @@
                 <ul>
                 <li>Create &amp; configure Sprite objects</li>
                 <li>Use scene timers to schedule events</li>
-                <li>Randomize with <code>Pick a random object</code></li>
+                <li>Randomize with <code>Pick a random object<></li>
                 <li>Move objects toward targets with forces</li>
                 <li>Hide helper objects (spawn markers)</li>
                 <li>Use object variables for health</li>
@@ -251,12 +251,12 @@
             <section class="card">
                 <h3>Quick Checklist</h3>
                 <ul>
-                <li><code>Enemy1</code> sprite added with <code>DestroyOutside</code></li>
-                <li>Three <code>SpawnPoint</code> objects placed</li>
-                <li>Timer <code>EnemySpawn</code> spawns every 3s</li>
-                <li>Enemies move toward <code>Player</code> at speed 200</li>
-                <li><code>SpawnPoint</code>s hidden</li>
-                <li><code>EnemyHealth</code> variable set to 5</li>
+                <li><code>Enemy1<> sprite added with <code>DestroyOutside<></li>
+                <li>Three <code>SpawnPoint<> objects placed</li>
+                <li>Timer <code>EnemySpawn<> spawns every 3s</li>
+                <li>Enemies move toward <code>Player<> at speed 200</li>
+                <li><code>SpawnPoint<>s hidden</li>
+                <li><code>EnemyHealth<> variable set to 5</li>
                 <li>Bullets reduce health and delete on hit</li>
                 <li>Enemies delete at ≤ 0 health</li>
                 </ul>
@@ -268,7 +268,7 @@
     </div> <!--Closing div for unit-shell layout-3-->
 
     <!-- Footer -->
-    <footer id="site-footer" data-partial="/code/common/partials/footer.html"></footer>
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
 
   </body>
 </html>

@@ -5,17 +5,17 @@
   <head>
     <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
     <title>ICT 8 • 3.5 HUD</title>
-    <link rel="stylesheet" href="/code/common/css/base.css">
-    <script src="/code/common/js/nav_data.js" defer></script>
-    <script src="/code/common/js/utils.js" defer></script>
-    <script src="/code/common/js/inject_partials.js" defer></script>
-    <script src="/code/common/js/nav_systems.js" defer></script>
-    <script src="/code/common/js/main.js" defer></script>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
   </head>
  
   <!-- Set body class to match course theme: ict8, ict9, dc1011, or none for purple -->
   <body data-course="ict8">
-    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
 
     <div class="page-wrap">
       <aside id="sidebar" aria-label="Course navigation"></aside>
@@ -29,7 +29,7 @@
               We’ll place these on a dedicated <strong>HUD layer</strong> so they render above gameplay and stay fixed on screen.
             </p>
             <figure class="img">
-              <img src="/code/ict8/unit3/lesson5/01_HUD.png" alt="Example of HUD with Score (top-left) and Health (bottom-left)">
+              <img src="/ict8/unit3/lesson5/01_HUD.png" alt="Example of HUD with Score (top-left) and Health (bottom-left)">
             </figure>
           </section>
     
@@ -37,12 +37,12 @@
             <h2>1) Create the HUD Layer</h2>
             <ol>
               <li>Open your <strong>Level 1</strong> scene and show the <strong>Layers Panel</strong>.</li>
-              <li><strong>Add new layer</strong> and rename it <code>HUD</code>.</li>
-              <li>Drag the <code>HUD</code> layer to the top so it draws above all other layers.</li>
-              <li>Make sure <code>HUD</code> is the active (selected) layer before adding HUD objects.</li>
+              <li><strong>Add new layer</strong> and rename it <code>HUD<>.</li>
+              <li>Drag the <code>HUD<> layer to the top so it draws above all other layers.</li>
+              <li>Make sure <code>HUD<> is the active (selected) layer before adding HUD objects.</li>
             </ol>
             <figure class="img">
-              <img src="/code/ict8/unit3/lesson5/02_new_layer.png" alt="Layers panel with HUD layer on top">
+              <img src="/ict8/unit3/lesson5/02_new_layer.png" alt="Layers panel with HUD layer on top">
             </figure>
           </section>
     
@@ -52,8 +52,8 @@
             <h3>Score</h3>
             <ul>
               <li><strong>New Object → BBText</strong></li>
-              <li><strong>Object Name:</strong> <code>Score</code></li>
-              <li><strong>BBCode Text:</strong> <code>Score: 0</code></li>
+              <li><strong>Object Name:</strong> <code>Score<></li>
+              <li><strong>BBCode Text:</strong> <code>Score: 0<></li>
               <li><strong>Font:</strong> Replace → Choose from Asset Store (e.g., <em>Kenny High Square</em>)</li>
               <li><strong>Base Size:</strong> ~50 (adjust to taste)</li>
               <li><strong>Base Color:</strong> Yellow (high contrast)</li>
@@ -61,8 +61,8 @@
     
             <h3>Health</h3>
             <ul>
-              <li>Duplicate <code>Score</code> and rename to <code>Health</code></li>
-              <li><strong>BBCode Text:</strong> <code>Health: 5</code></li>
+              <li>Duplicate <code>Score<> and rename to <code>Health<></li>
+              <li><strong>BBCode Text:</strong> <code>Health: 5<></li>
               <li><strong>Base Color:</strong> Green</li>
             </ul>
     
@@ -73,7 +73,7 @@
             </ul>
     
           <figure class="img">
-              <img src="/code/ict8/unit3/lesson5/03_text_objects.png" alt="BBText settings for HUD labels and values">
+              <img src="/ict8/unit3/lesson5/03_text_objects.png" alt="BBText settings for HUD labels and values">
             </figure>
           </section>
     
@@ -82,11 +82,11 @@
             <p>We’ll track score across scenes using a <strong>Global Variable</strong>:</p>
             <ol>
               <li>Open <strong>Project Manager → Project Settings → Global variables</strong>.</li>
-              <li>Add <strong>Number</strong> variable <code>PlayerScore</code> with initial value <code>0</code>.</li>
+              <li>Add <strong>Number</strong> variable <code>PlayerScore<> with initial value <code>0<>.</li>
             </ol>
-            <p><em>Note:</em> You already have <code>PlayerHealth</code> from earlier lessons.</p>
+            <p><em>Note:</em> You already have <code>PlayerHealth<> from earlier lessons.</p>
             <figure class="img">
-              <img src="/code/ict8/unit3/lesson5/04_global_variables.png" alt="Global variables showing PlayerScore and PlayerHealth">
+              <img src="/ict8/unit3/lesson5/04_global_variables.png" alt="Global variables showing PlayerScore and PlayerHealth">
             </figure>
           </section>
     
@@ -95,7 +95,7 @@
             <p>Add the following actions to your no conditions event at the top of your event sheet</p>
 
             <ul>
-                <li>Add action: <code>Score</code> → BBCode text</li>
+                <li>Add action: <code>Score<> → BBCode text</li>
                 <ul>
                     <li>Modification's sign → <k-input>= (set to)</k-input></li>
                     <li>Text → <k-input>"Score : " + PlayerScore</k-input></li>
@@ -103,7 +103,7 @@
             </ul>
 
             <ul>
-                <li>Add action: <code>Health</code> → BBCode text</li>
+                <li>Add action: <code>Health<> → BBCode text</li>
                 <ul>
                     <li>Modification's sign → <k-input>= (set to)</k-input></li>
                     <li>Text → <k-input>"Health : " + PlayerHealth</k-input></li>
@@ -116,13 +116,13 @@
 
             <p><em>Don't forget to add spaces in between the quotes to make your text readable.</em></p>
             <figure class="img">
-              <img src="/code/ict8/unit3/lesson5/05_text_event.png" alt="Events sheet showing Score and Health text bindings">
+              <img src="/ict8/unit3/lesson5/05_text_event.png" alt="Events sheet showing Score and Health text bindings">
             </figure>
 
             <p>Now you can see your Player's Health and if it get hits by enemy fire, and now we can see the score when the enemy is killed.</p>
           
             <figure class="img">
-              <img src="/code/ict8/unit3/lesson5/06_player_pts.png" alt="Enemy destroyed event with PlayerScore increment">
+              <img src="/ict8/unit3/lesson5/06_player_pts.png" alt="Enemy destroyed event with PlayerScore increment">
             </figure>
           </section>
     
@@ -165,7 +165,7 @@
         <ul>
             <li>Create and order layers; keep HUD above gameplay.</li>
             <li>Add <strong>BBText</strong> objects for Score and Health.</li>
-            <li>Use a <strong>Global Variable</strong> (<code>PlayerScore</code>) for cross-level scoring.</li>
+            <li>Use a <strong>Global Variable</strong> (<code>PlayerScore<>) for cross-level scoring.</li>
             <li>Bind text to variables with BBCode and update via events.</li>
         </ul>
         </section>
@@ -193,7 +193,7 @@
     </div> <!--Closing div for unit-shell layout-3-->
 
     <!-- Footer -->
-    <footer id="site-footer" data-partial="/code/common/partials/footer.html"></footer>
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
 
   </body>
 </html>

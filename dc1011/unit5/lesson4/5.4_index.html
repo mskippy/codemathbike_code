@@ -8,16 +8,16 @@
     <title>DigiComm 10/11 • Unit 5 • 5.4 Formatting Your Website</title>
 
     <!-- Common CSS + JS -->
-    <link rel="stylesheet" href="/code/common/css/base.css">
-    <script src="/code/common/js/nav_data.js" defer></script>
-    <script src="/code/common/js/utils.js" defer></script>
-    <script src="/code/common/js/inject_partials.js" defer></script>
-    <script src="/code/common/js/nav_systems.js" defer></script>
-    <script src="/code/common/js/main.js" defer></script>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
   </head>
 
   <body data-course="dc1011">
-    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
 
     <div class="page-wrap">
       <aside id="sidebar" aria-label="Course navigation"></aside>
@@ -37,7 +37,7 @@
 
           <p>
             In this lesson, you will format your website by editing the
-            <strong><code>style.css</code></strong> file from your Layout Kit so your site matches
+            <strong><code>style.css<></strong> file from your Layout Kit so your site matches
             the <strong>visual design you created in 5.2</strong> (your Canva mock-up).
           </p>
 
@@ -69,7 +69,7 @@
           </ul>
 
           <p class="note">
-            All of these changes happen in <strong>one file</strong>: <code>style.css</code>
+            All of these changes happen in <strong>one file</strong>: <code>style.css<>
           </p>
         </section>
 
@@ -83,11 +83,11 @@
 
           <h3>✅ Safe to edit</h3>
           <ul>
-            <li>Colours: <code>color</code>, <code>background-color</code></li>
-            <li>Text: <code>font-family</code>, <code>font-size</code>, <code>line-height</code></li>
-            <li>Spacing: <code>margin</code>, <code>padding</code></li>
-            <li>Cards: <code>border</code>, <code>border-radius</code>, <code>box-shadow</code></li>
-            <li>Hover effects (optional): <code>:hover</code></li>
+            <li>Colours: <code>color<>, <code>background-color<></li>
+            <li>Text: <code>font-family<>, <code>font-size<>, <code>line-height<></li>
+            <li>Spacing: <code>margin<>, <code>padding<></li>
+            <li>Cards: <code>border<>, <code>border-radius<>, <code>box-shadow<></li>
+            <li>Hover effects (optional): <code>:hover<></li>
           </ul>
 
           <h3>⛔ Do not change (yet)</h3>
@@ -127,12 +127,12 @@
 
           <ol>
             <li>Open your project folder in <strong>VS Code</strong>.</li>
-            <li>Open <code>style.css</code>.</li>
+            <li>Open <code>style.css<>.</li>
             <li>Read the comment block at the top of the file.</li>
           </ol>
 
           <p class="note">
-            <strong>Quick check:</strong> If you edit <code>style.css</code> and nothing changes when you refresh,
+            <strong>Quick check:</strong> If you edit <code>style.css<> and nothing changes when you refresh,
             your HTML pages may not be linked to it.
           </p>
 
@@ -140,8 +140,8 @@
             <summary><strong>If your CSS isn’t loading</strong> (click to expand)</summary>
             <div>
               <ul class="list-tight">
-                <li>Confirm <code>style.css</code> is in the same folder as your HTML files.</li>
-                <li>Confirm each HTML file has: <code>&lt;link rel="stylesheet" href="style.css"&gt;</code></li>
+                <li>Confirm <code>style.css<> is in the same folder as your HTML files.</li>
+                <li>Confirm each HTML file has: <code>&lt;link rel="stylesheet" href="style.css"&gt;<></li>
                 <li>Hard refresh your browser (Ctrl + Shift + R / Cmd + Shift + R).</li>
               </ul>
             </div>
@@ -159,9 +159,9 @@
 
           <h3>What you can change</h3>
           <ul>
-            <li>Font style (<code>font-family</code>)</li>
-            <li>Text size (<code>font-size</code>)</li>
-            <li>Line spacing (<code>line-height</code>)</li>
+            <li>Font style (<code>font-family<>)</li>
+            <li>Text size (<code>font-size<>)</li>
+            <li>Line spacing (<code>line-height<>)</li>
             <li>Heading vs body contrast (bigger headings, readable body text)</li>
           </ul>
 
@@ -218,8 +218,8 @@
 
           <h3>What you can change</h3>
           <ul>
-            <li>Space inside sections (<code>padding</code>)</li>
-            <li>Space between sections (<code>margin</code>)</li>
+            <li>Space inside sections (<code>padding<>)</li>
+            <li>Space between sections (<code>margin<>)</li>
           </ul>
 
           <p class="note">
@@ -240,10 +240,10 @@
 
           <h3>Common upgrades</h3>
           <ul class="list-tight">
-            <li>Rounded corners (<code>border-radius</code>)</li>
-            <li>Soft borders (<code>border</code>)</li>
-            <li>Subtle depth (<code>box-shadow</code>)</li>
-            <li>Consistent spacing inside sections (<code>padding</code>)</li>
+            <li>Rounded corners (<code>border-radius<>)</li>
+            <li>Soft borders (<code>border<>)</li>
+            <li>Subtle depth (<code>box-shadow<>)</li>
+            <li>Consistent spacing inside sections (<code>padding<>)</li>
           </ul>
 
           <p class="note">
@@ -275,7 +275,7 @@
                 </a>
               </p>
               <p class="small-text muted">
-                Helpful terms: <code>display: flex</code>, <code>align-items</code>, <code>gap</code>
+                Helpful terms: <code>display: flex<>, <code>align-items<>, <code>gap<>
               </p>
             </div>
           </details>
@@ -308,7 +308,7 @@
                 </a>
               </p>
               <p class="small-text muted">
-                Helpful terms: <code>background-image</code>, <code>background-size</code>, <code>background-position</code>
+                Helpful terms: <code>background-image<>, <code>background-size<>, <code>background-position<>
               </p>
             </div>
           </details>
@@ -344,7 +344,7 @@
             <li>Decide what you want to change (font, colour, spacing, cards, images).</li>
             <li>Open the matching W3Schools page (links above).</li>
             <li>Copy <strong>only</strong> the line(s) you need.</li>
-            <li>Paste into <code>style.css</code> and adjust values to match your design.</li>
+            <li>Paste into <code>style.css<> and adjust values to match your design.</li>
             <li>Save → refresh → check at least 2 pages.</li>
           </ol>
 
@@ -383,7 +383,7 @@
           <ul class="list-tight">
             <li>Your Canva mock-up (from 5.2)</li>
             <li>Your working Layout Kit (from 5.4)</li>
-            <li><code>style.css</code> in the same folder as your HTML files</li>
+            <li><code>style.css<> in the same folder as your HTML files</li>
             <li>VS Code + browser preview</li>
           </ul>
         </div>
@@ -391,7 +391,7 @@
         <div class="card">
           <strong>Today’s focus</strong>
           <ul class="list-tight">
-            <li>Edit <code>style.css</code></li>
+            <li>Edit <code>style.css<></li>
             <li>Fonts, colours, spacing, cards</li>
             <li>Optional: images + simple polish</li>
           </ul>
@@ -403,10 +403,10 @@
         <div class="card">
           <strong>Safe edits</strong>
           <ul class="list-tight">
-            <li><code>font-family</code>, <code>font-size</code>, <code>line-height</code></li>
-            <li><code>color</code>, <code>background-color</code></li>
-            <li><code>margin</code>, <code>padding</code></li>
-            <li><code>border-radius</code>, <code>box-shadow</code></li>
+            <li><code>font-family<>, <code>font-size<>, <code>line-height<></li>
+            <li><code>color<>, <code>background-color<></li>
+            <li><code>margin<>, <code>padding<></li>
+            <li><code>border-radius<>, <code>box-shadow<></li>
           </ul>
         </div>
 
@@ -435,6 +435,6 @@
       </aside>
     </div>
 
-    <footer id="site-footer" data-partial="/code/common/partials/footer.html"></footer>
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
   </body>
 </html>

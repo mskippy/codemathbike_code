@@ -7,16 +7,16 @@
     <title>DigiComm 10/11 • Unit 5 • 5.3 Building Our Website Pages</title>
 
     <!-- Common CSS + JS -->
-    <link rel="stylesheet" href="/code/common/css/base.css">
-    <script src="/code/common/js/nav_data.js" defer></script>
-    <script src="/code/common/js/utils.js" defer></script>
-    <script src="/code/common/js/inject_partials.js" defer></script>
-    <script src="/code/common/js/nav_systems.js" defer></script>
-    <script src="/code/common/js/main.js" defer></script>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
   </head>
 
   <body data-course="dc1011">
-    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
 
     <div class="page-wrap">
       <aside id="sidebar" aria-label="Course navigation"></aside>
@@ -43,7 +43,7 @@
           <p><strong>Today’s goal:</strong> Leave class with:</p>
           <ul>
             <li>A correctly saved project folder on your <strong>H: Drive</strong></li>
-            <li>Four working pages (<code>index</code>, <code>about</code>, <code>gallery</code>, <code>contact</code>)</li>
+            <li>Four working pages (<code>index<>, <code>about<>, <code>gallery<>, <code>contact<>)</li>
             <li>Your content from 5.2 started inside the templates</li>
             <li>A website you can preview in a browser</li>
           </ul>
@@ -67,7 +67,7 @@
 
           <pre><code>H: Drive
 └── DigiComm1011
-    └── your_project_folder</code></pre>
+    └── your_project_folder<></pre>
 
           <p class="note">
             <strong>File naming rules:</strong> lowercase only • no spaces (use underscores) • keep names short
@@ -81,7 +81,7 @@
           <ol>
             <li>
               Open File Explorer and go to:
-              <code>H: Drive → DigiComm1011</code>
+              <code>H: Drive → DigiComm1011<>
             </li>
             <li>
               Create one folder for your website:
@@ -91,7 +91,7 @@
                 <li>Short and clear</li>
               </ul>
               <p class="note">
-                Examples: <code>portfolio_site</code>, <code>music_blog</code>, <code>club_site</code>
+                Examples: <code>portfolio_site<>, <code>music_blog<>, <code>club_site<>
               </p>
             </li>
           </ol>
@@ -125,7 +125,7 @@
 
             <figure>
               <img
-                src="/code/dc1011/unit5/lesson4/sidebar_nav_eg.png"
+                src="/dc1011/unit5/lesson4/sidebar_nav_eg.png"
                 alt="Website layout with sidebar navigation"
                 loading="lazy">
               <figcaption>
@@ -147,7 +147,7 @@
 
             <figure>
               <img
-                src="/code/dc1011/unit5/lesson4/top_nav_eg.png"
+                src="/dc1011/unit5/lesson4/top_nav_eg.png"
                 alt="Website layout with navigation under header"
                 loading="lazy">
               <figcaption>
@@ -170,7 +170,7 @@
           </p>
 
           <ul class="list-tight">
-            <li>You should end up with <strong>5 files</strong> in your folder: 4 HTML pages + <code>style.css</code></li>
+            <li>You should end up with <strong>5 files</strong> in your folder: 4 HTML pages + <code>style.css<></li>
             <li>Do not rename anything yet</li>
           </ul>
 
@@ -199,7 +199,7 @@
               If you’re stuck on opening folders or using Live Server, review this guide:
             </p>
             <p>
-              <a href="https://codemathbike.ca/code/ict8/unit4/"
+              <a href="https:/mathbike.ca/ict8/unit4/"
                  target="_blank" rel="noopener">
                 VS Code Setup Guide (CodeMathBike)
               </a>
@@ -215,7 +215,7 @@
           <ul class="list-tight">
             <li><strong>Live Server</strong> (recommended)</li>
             <li><strong>Live Preview</strong></li>
-            <li>Or double-click <code>index.html</code> to open it in a browser</li>
+            <li>Or double-click <code>index.html<> to open it in a browser</li>
           </ul>
 
           <p><strong>Quick test:</strong></p>
@@ -266,19 +266,19 @@
 
           <h3>✅ Safe to edit</h3>
           <ul class="list-tight">
-            <li>Text between tags (example: <code>&lt;p&gt;this text&lt;/p&gt;</code>)</li>
-            <li>Headings (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>)</li>
+            <li>Text between tags (example: <code>&lt;p&gt;this text&lt;/p&gt;<>)</li>
+            <li>Headings (<code>&lt;h1&gt;<>, <code>&lt;h2&gt;<>, <code>&lt;h3&gt;<>)</li>
             <li>Paragraphs and lists</li>
-            <li>The page title inside <code>&lt;title&gt;</code></li>
+            <li>The page title inside <code>&lt;title&gt;<></li>
           </ul>
 
           <h3>⛔ Do not edit (yet)</h3>
           <ul class="list-tight">
-            <li>Navigation links inside <code>&lt;nav&gt;</code></li>
-            <li>File names inside links (<code>href="about.html"</code>)</li>
-            <li>Main structure tags (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;footer&gt;</code>)</li>
-            <li>CSS file links (<code>href="style.css"</code>)</li>
-            <li>Layout structure (wrappers like <code>.layout</code>, <code>&lt;aside&gt;</code>, <code>&lt;main&gt;</code>)</li>
+            <li>Navigation links inside <code>&lt;nav&gt;<></li>
+            <li>File names inside links (<code>href="about.html"<>)</li>
+            <li>Main structure tags (<code>&lt;header&gt;<>, <code>&lt;nav&gt;<>, <code>&lt;footer&gt;<>)</li>
+            <li>CSS file links (<code>href="style.css"<>)</li>
+            <li>Layout structure (wrappers like <code>.layout<>, <code>&lt;aside&gt;<>, <code>&lt;main&gt;<>)</li>
           </ul>
 
           <h3>Where most of your typing happens</h3>
@@ -289,13 +289,13 @@
     &lt;h3&gt;Section heading&lt;/h3&gt;
     &lt;p&gt;Replace this text with your content from 5.2.&lt;/p&gt;
   &lt;/section&gt;
-&lt;/main&gt;</code></pre>
+&lt;/main&gt;<></pre>
 
           <h3>Use your Canva mock-up as a guide</h3>
           <ul class="list-tight">
             <li>Match your page sections to your Canva plan</li>
             <li>Replace placeholder text with your real writing</li>
-            <li>If you need more sections, copy/paste an existing <code>&lt;section&gt;</code> block</li>
+            <li>If you need more sections, copy/paste an existing <code>&lt;section&gt;<> block</li>
           </ul>
 
           <p class="note">
@@ -311,7 +311,7 @@
           <details>
             <summary><strong>My page looks plain (no styling)</strong></summary>
             <ul class="list-tight">
-              <li>Check that <code>style.css</code> is in the same folder as your HTML files</li>
+              <li>Check that <code>style.css<> is in the same folder as your HTML files</li>
               <li>Make sure the CSS link in the template was not changed</li>
               <li>Hard refresh the browser (Ctrl + Shift + R)</li>
             </ul>
@@ -321,7 +321,7 @@
             <summary><strong>My links aren’t working / I get a “file not found” error</strong></summary>
             <ul class="list-tight">
               <li>Make sure you did not rename files after linking</li>
-              <li>Check spelling: <code>about.html</code> is not the same as <code>About.html</code></li>
+              <li>Check spelling: <code>about.html<> is not the same as <code>About.html<></li>
               <li>Keep everything lowercase</li>
             </ul>
           </details>
@@ -364,7 +364,7 @@
         <!-- Folder location -->
         <div class="card">
           <strong>Folder location</strong>
-          <pre><code>H:\DigiComm1011\your_project_folder</code></pre>
+          <pre><code>H:\DigiComm1011\your_project_folder<></pre>
         </div>
 
         <!-- Navigation rule -->
@@ -382,11 +382,11 @@
           <details>
             <summary><strong>Sidebar Navigation Templates</strong></summary>
             <ul class="list-tight">
-              <li><a href="/code/dc1011/unit5/lesson4/side_nav_templates/index.html" download>index.html</a></li>
-              <li><a href="/code/dc1011/unit5/lesson4/side_nav_templates/about.html" download>about.html</a></li>
-              <li><a href="/code/dc1011/unit5/lesson4/side_nav_templates/gallery.html" download>gallery.html</a></li>
-              <li><a href="/code/dc1011/unit5/lesson4/side_nav_templates/contact.html" download>contact.html</a></li>
-              <li><a href="/code/dc1011/unit5/lesson4/side_nav_templates/style.css" download>style.css</a></li>
+              <li><a href="/dc1011/unit5/lesson4/side_nav_templates/index.html" download>index.html</a></li>
+              <li><a href="/dc1011/unit5/lesson4/side_nav_templates/about.html" download>about.html</a></li>
+              <li><a href="/dc1011/unit5/lesson4/side_nav_templates/gallery.html" download>gallery.html</a></li>
+              <li><a href="/dc1011/unit5/lesson4/side_nav_templates/contact.html" download>contact.html</a></li>
+              <li><a href="/dc1011/unit5/lesson4/side_nav_templates/style.css" download>style.css</a></li>
             </ul>
             <p class="small-text muted">
               Download all files and save them into your project folder.
@@ -399,11 +399,11 @@
           <details>
             <summary><strong>Top Navigation Templates</strong></summary>
             <ul class="list-tight">
-              <li><a href="/code/dc1011/unit5/lesson4/top_nav_templates/index.html" download>index.html</a></li>
-              <li><a href="/code/dc1011/unit5/lesson4/top_nav_templates/about.html" download>about.html</a></li>
-              <li><a href="/code/dc1011/unit5/lesson4/top_nav_templates/gallery.html" download>gallery.html</a></li>
-              <li><a href="/code/dc1011/unit5/lesson4/top_nav_templates/contact.html" download>contact.html</a></li>
-              <li><a href="/code/dc1011/unit5/lesson4/top_nav_templates/style.css" download>style.css</a></li>
+              <li><a href="/dc1011/unit5/lesson4/top_nav_templates/index.html" download>index.html</a></li>
+              <li><a href="/dc1011/unit5/lesson4/top_nav_templates/about.html" download>about.html</a></li>
+              <li><a href="/dc1011/unit5/lesson4/top_nav_templates/gallery.html" download>gallery.html</a></li>
+              <li><a href="/dc1011/unit5/lesson4/top_nav_templates/contact.html" download>contact.html</a></li>
+              <li><a href="/dc1011/unit5/lesson4/top_nav_templates/style.css" download>style.css</a></li>
             </ul>
             <p class="small-text muted">
               Use these only if you chose top navigation.
@@ -434,6 +434,6 @@
       </aside>
     </div>
 
-    <footer id="site-footer" data-partial="/code/common/partials/footer.html"></footer>
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
   </body>
 </html>

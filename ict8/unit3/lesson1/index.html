@@ -4,17 +4,17 @@
   <head>
     <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
     <title>ICT 8 • 3.1 Background</title>
-    <link rel="stylesheet" href="/code/common/css/base.css">
-    <script src="/code/common/js/nav_data.js" defer></script>
-    <script src="/code/common/js/utils.js" defer></script>
-    <script src="/code/common/js/inject_partials.js" defer></script>
-    <script src="/code/common/js/nav_systems.js" defer></script>
-    <script src="/code/common/js/main.js" defer></script>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
   </head>
  
   <!-- Set body class to match course theme: ict8, ict9, dc1011, or none for purple -->
   <body data-course="ict8">
-    <header id="site-header" data-partial="/code/common/partials/header.html"></header>
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
   
   
 
@@ -32,44 +32,44 @@
       <!-- Instructions -->
       <section class="card">
         <h3>Add a Background Object</h3>
-            <p>In the <strong>Objects</strong> panel, click <em>Add a new object</em> → <strong>Tiled Sprite</strong>. Name it <code>Background</code>.</p>
+            <p>In the <strong>Objects</strong> panel, click <em>Add a new object</em> → <strong>Tiled Sprite</strong>. Name it <code>Background<>.</p>
             <!-- IMAGE PLACEHOLDER: Objects panel → Add a new object (Sprite) -->
             <figure class="figure">
-              <img src="/code/ict8/unit3/lesson1/1_add_tiled_sprite.png" alt="GDevelop: Add a new Tiled Sprite object for Background">
+              <img src="/ict8/unit3/lesson1/1_add_tiled_sprite.png" alt="GDevelop: Add a new Tiled Sprite object for Background">
             </figure>
             <figure class="figure">
-              <img src="/code/ict8/unit3/lesson1/2_edit_properties.png" alt="Rename: Background">
+              <img src="/ict8/unit3/lesson1/2_edit_properties.png" alt="Rename: Background">
             </figure>
 
             <h3>Select the Background Image</h3>
-            <p>Click <strong>Choose image</strong> and select your background from the assets folder. Press <code>Open</code> then <code>Apply</code> to add the object</p>
+            <p>Click <strong>Choose image</strong> and select your background from the assets folder. Press <code>Open<> then <code>Apply<> to add the object</p>
             <!-- IMAGE PLACEHOLDER: Choose image dialog showing the background asset -->
             <figure class="screenshot">
-              <img src="/code/ict8/unit3/lesson1/3_add_asset.png" alt="Adding the background image.">
+              <img src="/ict8/unit3/lesson1/3_add_asset.png" alt="Adding the background image.">
               
             </figure>
           
           
             <h3>Place It in the Scene</h3>
-            <p>Open the <strong>Scene Editor</strong> and drag <code>Background</code> into the scene.</p>
+            <p>Open the <strong>Scene Editor</strong> and drag <code>Background<> into the scene.</p>
             <!-- IMAGE PLACEHOLDER: Dragging Background into the scene -->
             <figure class="screenshot">
-              <img src="/code/ict8/unit3/lesson1/4_place_before_drag.png" alt="Place in scene">
+              <img src="/ict8/unit3/lesson1/4_place_before_drag.png" alt="Place in scene">
             </figure>
 
             <h3>Cover the Game Window</h3>
             <p>Use the resize handles so the background <strong>fills the entire game window</strong> (no white edges).</p>
             <!-- IMAGE PLACEHOLDER: Resizing the background to fill the scene -->
             <figure class="screenshot">
-              <img src="/code/ict8/unit3/lesson1/5_background.png" alt="GDevelop: Resize background to fill the viewport">
+              <img src="/ict8/unit3/lesson1/5_background.png" alt="GDevelop: Resize background to fill the viewport">
               <figcaption>Resize until it fully covers the viewport.</figcaption>
             </figure>
 
             <h3>Lock the Background</h3>
-            <p>In the Properties panel, click on the <code>Lock</code> icon to keep the background in place..</p>
+            <p>In the Properties panel, click on the <code>Lock<> icon to keep the background in place..</p>
             <!-- IMAGE PLACEHOLDER: Right-click menu showing Lock object -->
             <figure class="screenshot">
-              <img src="/code/ict8/unit3/lesson1/6_lock_background.png" alt="GDevelop: Lock object in the scene">
+              <img src="/ict8/unit3/lesson1/6_lock_background.png" alt="GDevelop: Lock object in the scene">
               <figcaption>Lock the object to prevent accidental edits.</figcaption>
             </figure>
 
@@ -82,27 +82,27 @@
         <p>To do this we are going to add an action to the background by adding events</p>
 
         <h3>Adding events</h3>
-        <p>Events are how we tell the objects in our game what to do. Click on your <code>Level 1 (Events)</code> tab and press <code>Add an event</code></p>
+        <p>Events are how we tell the objects in our game what to do. Click on your <code>Level 1 (Events)<> tab and press <code>Add an event<></p>
         <figure class="screenshot">
-          <img src="/code/ict8/unit3/lesson1/7_add_event.png" alt="GDevelop: Add an event">
+          <img src="/ict8/unit3/lesson1/7_add_event.png" alt="GDevelop: Add an event">
         </figure>
 
         <h3>Add action</h3>
-        <p>Now we need to add an action to the event. Click on <code>Add action</code></p>
+        <p>Now we need to add an action to the event. Click on <code>Add action<></p>
         <figure class="screenshot">
-          <img src="/code/ict8/unit3/lesson1/8_add_action.png" alt="GDevelop: Add an action">
+          <img src="/ict8/unit3/lesson1/8_add_action.png" alt="GDevelop: Add an action">
           </figure>
         
         <p>Now we need to define the action. The action we want is to offset the image backgroud.</p>
-        <p>Click on the <code>Background → Image X offset</code> and change the <code>Modification sign</code> to <k-input>+(add)</k-input> and the <code>Value</code> to <k-input>1</k-input>. Finish by pressing <code>OK</code> </p>
+        <p>Click on the <code>Background → Image X offset<> and change the <code>Modification sign<> to <k-input>+(add)</k-input> and the <code>Value<> to <k-input>1</k-input>. Finish by pressing <code>OK<> </p>
 
         <figure class="screenshot">
-          <img src="/code/ict8/unit3/lesson1/9_image_offset.png" alt="GDevelop: Add an action">
+          <img src="/ict8/unit3/lesson1/9_image_offset.png" alt="GDevelop: Add an action">
           </figure>
         
-        <p>Save your work and press <code>Preview</code> to see your background move!</p>
+        <p>Save your work and press <code>Preview<> to see your background move!</p>
         <div class="figure">  <video autoplay loop muted playsinline width="720">
-                <source src="/code/ict8/unit3/lesson1/11_scrolling_background.mp4" type="video/mp4">
+                <source src="/ict8/unit3/lesson1/11_scrolling_background.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video></div>
         
@@ -139,7 +139,7 @@
       <section class="card">
         <h3>Submit</h3>
         <ul class="checklist">
-          <li>Project saved to <code>H:\ICT8\3. Game Development</code>.</li>
+          <li>Project saved to <code>H:\ICT8\3. Game Development<>.</li>
           <li>Take a screenshot of your scene layout and another of your event sheet.</li>
         </ul>
       </section>
@@ -149,7 +149,7 @@
     </div> <!--Closing div for unit-shell layout-3-->
 
     <!-- Footer -->
-    <footer id="site-footer" data-partial="/code/common/partials/footer.html"></footer>
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
 
   </body>
 </html>
