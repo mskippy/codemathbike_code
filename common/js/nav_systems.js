@@ -17,8 +17,8 @@
     href = href.replace(/\/+$/g, "");
 
     // If it ends with "/something.html" (ANY filename), drop that filename
-    // e.g. "/code/ict8/unit2/lesson1/2.1_index.html" -> "/code/ict8/unit2/lesson1"
-    //      "/code/ict8/unit2/index.html"            -> "/code/ict8/unit2"
+    // e.g. "/ict8/unit2/lesson1/2.1_index.html" -> "/ict8/unit2/lesson1"
+    //      "/ict8/unit2/index.html"            -> "/ict8/unit2"
     return href.replace(/\/[^/]*\.html?$/i, "");
   }
 

@@ -13,7 +13,7 @@ function normalizePath(pathname = window.location.pathname) {
   return p;
 }
 
-/* Expect /code/{course}/{unit?}/{page?} */
+/* Expect /{course}/{unit?}/{page?} */
 function parseLocation() {
   const parts = normalizePath().split("/").filter(Boolean);
   const ix = parts.indexOf("code_v2");
