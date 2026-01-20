@@ -10,11 +10,11 @@
 window.NAV_DATA = {
     ict8: {
       title: "ICT 8",
-      href: "/ict8/index.html",
+      href: "/ict8/ict8_index.html",
       units: {
         unit1: {
           title: "U1 Essential Skills",
-          href: "/ict8/unit1/index.html",
+          href: "/ict8/unit1/u1_index.html",
           pages: {
             lesson1: { title: "1.1 Welcome to ICT 8",       href: "/ict8/unit1/lesson1/1.1_index.html" },
             lesson2: { title: "1.2 File Management",        href: "/ict8/unit1/lesson2/1.2_index.html" },
@@ -23,7 +23,7 @@ window.NAV_DATA = {
         },
         unit2: {
           title: "U2 Digital Media",
-          href: "/ict8/unit2/index.html",
+          href: "/ict8/unit2/u2_index.html",
           pages: {
             lesson1: { title: "2.1 Canva: About Me",        href: "/ict8/unit2/lesson1/2.1_index.html" },
             lesson2: { title: "2.2 Excel: Class Data",      href: "/ict8/unit2/lesson2/2.2_index.html" },
@@ -34,7 +34,7 @@ window.NAV_DATA = {
         },
         unit3: {
           title: "U3 Game Development",
-          href: "/ict8/unit3/lesson0/index.html",
+          href: "/ict8/unit3/lesson0/3.0_index.html",
           pages: {
             lesson1: { title: "3.1 Adding the Background",  href: "/ict8/unit3/lesson1/3.1_index.html" },
             lesson2: { title: "3.2 Adding the Player",      href: "/ict8/unit3/lesson2/3.2_index.html" },
@@ -48,9 +48,9 @@ window.NAV_DATA = {
           title: "U4 Web Development",
           href: "/ict8/unit4/index.html",
           pages: {
-            lesson1: { title: "Editing Your HTML",     href: "/ict8/unit4/edit_html_steps/u4_index.html" },
+            lesson1: { title: "Editing Your HTML",         href: "/ict8/unit4/edit_html_steps/u4_index.html" },
             lesson2: { title: "All Done? Do This!",        href: "/ict8/unit4/u4_extension.html" },
-            lesson3: { title: "Showcase Sites",        href: "/ict8/unit4/web_dev/master_index.html" }
+            lesson3: { title: "Showcase Sites",            href: "/ict8/unit4/web_dev/master_index.html" }
           }
         }
       }
