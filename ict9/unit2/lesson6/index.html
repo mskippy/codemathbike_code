@@ -39,11 +39,11 @@
       </li>
   
       <li><strong>Add points for killing enemies</strong>
-        <p>When the player <em>stomps</em> an enemy, add <code>score += 5<> (or your value) and update the HUD. Keep pickup points separate so you can tune balance later.</p>
+        <p>When the player <em>stomps</em> an enemy, add <code>score += 5</code> (or your value) and update the HUD. Keep pickup points separate so you can tune balance later.</p>
       </li>
   
       <li><strong>Add new enemies &amp; change their characteristics</strong>
-        <p>Create a second enemy type or tweak variables (speed, patrol width, jump strength, damage). Consider a “tough” enemy that takes two stomps (use an <code>hp<> object variable).</p>
+        <p>Create a second enemy type or tweak variables (speed, patrol width, jump strength, damage). Consider a “tough” enemy that takes two stomps (use an <code>hp</code> object variable).</p>
       </li>
   
       <li><strong>Add new levels that get harder</strong>
@@ -51,7 +51,7 @@
       </li>
   
       <li><strong>Add a health component to your player</strong>
-        <p>Create a <code>health<> scene or object variable (e.g., 3). On side/below enemy hit, <code>health -= 1<>, flash briefly, and show hearts or a health number on the HUD. Go to Game Over when health reaches 0.</p>
+        <p>Create a <code>health</code> scene or object variable (e.g., 3). On side/below enemy hit, <code>health -= 1</code>, flash briefly, and show hearts or a health number on the HUD. Go to Game Over when health reaches 0.</p>
       </li>
   
       <li><strong>Start &amp; Game Over screens</strong>
@@ -128,9 +128,9 @@
         <section class="card">
           <h3>Helpful Hints</h3>
           <ul class="list-tight">
-            <li><strong>Score on stomp:</strong> on top-hit event, <code>score += 5<>; keep HUD text in a blank-condition action.</li>
-            <li><strong>Enemy HP:</strong> </br>add object variable <code>hp<>; on stomp, <code>hp -= 1<>; delete when <code>hp &lt;= 0<>.</li>
-            <li><strong>Health/Lives:</strong></br> <code>health = 3<>; on side hit, <code>health -= 1<>; if 0 → change scene to Game Over.</li>
+            <li><strong>Score on stomp:</strong> on top-hit event, <code>score += 5</code>; keep HUD text in a blank-condition action.</li>
+            <li><strong>Enemy HP:</strong> </br>add object variable <code>hp</code>; on stomp, <code>hp -= 1</code>; delete when <code>hp &lt;= 0</code>.</li>
+            <li><strong>Health/Lives:</strong></br> <code>health = 3</code>; on side hit, <code>health -= 1</code>; if 0 → change scene to Game Over.</li>
             <li><strong>Next Level:</strong> add a goal object; on collision → <em>Change to scene</em> (Level 2).</li>
             <li><strong>Restart:</strong> key <kbd>R</kbd> → <em>Restart the current scene</em>.</li>
           </ul>

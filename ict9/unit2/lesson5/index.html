@@ -43,12 +43,12 @@
                   <li>First lets add the <strong>Ellipse movement</strong> extension to make our pickup appear to be floating</li>
       
                   <ul>
-                      <li>Open <code>Project Manager → Extensions<></li>
-                      <li>Click on the <code>"+"<> next to <strong>Extensions</strong> and search for the <code>EllipseMovement<> extension. Sellect <code>Install in project<></li>
+                      <li>Open <code>Project Manager → Extensions</code></li>
+                      <li>Click on the <code>"+"</code> next to <strong>Extensions</strong> and search for the <code>EllipseMovement</code> extension. Sellect <code>Install in project</code></li>
                   </ul>
-                  <li>Add a new <code>Sprite<> and rename it <k-input>jewel_pickup</k-input>. Import <strong>yellowJewel.png</strong> file from <em>assets → PNG → Items</em></li>
+                  <li>Add a new <code>Sprite</code> and rename it <k-input>jewel_pickup</k-input>. Import <strong>yellowJewel.png</strong> file from <em>assets → PNG → Items</em></li>
       
-                  <li>Search and add the <code>EllipseMovement<>behaviour.</li>
+                  <li>Search and add the <code>EllipseMovement</code>behaviour.</li>
       
                   <li>Edit the following settings:
                       <ul>
@@ -73,7 +73,7 @@
               <ol>
                   <li>Open the <kbd>Layers Panel</kbd> and <kbd>Add a Layer</kbd>. Name the layer <k-input>HUD</k-input>.
                   <p><em>HUD stands for Heads Up Display</em></p></li>
-                  <li>Ensure the <code>HUD<> is selected and <kbd>Add Object</kbd> selecting <code>BBText<></li>
+                  <li>Ensure the <code>HUD</code> is selected and <kbd>Add Object</kbd> selecting <code>BBText</code></li>
                   <li>Add the following properties
                       <ul>
                           <li>Object name : <k-input>Score</k-input></li>
@@ -83,7 +83,7 @@
                       </ul>
                   </li>
                   <li>Select <kbd>Apply</kbd></li>
-                  <li>Add the <code>Score<> object to your scene in the top left corner.
+                  <li>Add the <code>Score</code> object to your scene in the top left corner.
                       <div class="figure"><img src="/ict9/unit2/lesson5/02_scene_w_score.png" alt="Scene with Score"></div>
                   </li>
       
@@ -101,12 +101,12 @@
       
               <p>A <kbd>scene variable</kbd> called <k-input>Score</k-input> will keep track of the number of jewels the player collides with.</p>
               <ol>
-                  <li>Open the <code>Project Manager<></li>
-                  <li>Right-click on the three dots <code>...<> next to <kbd>Level 1</kbd> under <kbd>Scene</kbd></li>
-                  <li><code>Add a variable<> called <k-input>score</k-input> with a number value of <k-input>0</k-input></li>
+                  <li>Open the <code>Project Manager</code></li>
+                  <li>Right-click on the three dots <code>...</code> next to <kbd>Level 1</kbd> under <kbd>Scene</kbd></li>
+                  <li><code>Add a variable</code> called <k-input>score</k-input> with a number value of <k-input>0</k-input></li>
                   <li><kbd>Add action</kbd> in the event with the <strong>blank</strong> condition <em>at the top</em>
                       <ul>
-                          <li><code>Score → BBCode text<> = <k-input>"Score : " + score</k-input>
+                          <li><code>Score → BBCode text</code> = <k-input>"Score : " + score</k-input>
                               <ul>
                                   <p><em>Add spaces in between the quotes</em></p>
                                   <p><em>After the <strong>+</strong> start typing "score" and select it from the menu - or you will create a new variable.</em></p>
@@ -119,9 +119,9 @@
        
                   <li><strong>Add new event</strong>
                       <ul>
-                          <li>Condition : <code>Player → Collision<> → <kbd>Object → jewel_pickup</kbd></li>
-                          <li>Action : <code>jewel_pickup → Objects → Delete the object<></li>
-                          <li>Action : <code>Other actions → Variables → Change variable value <>
+                          <li>Condition : <code>Player → Collision</code> → <kbd>Object → jewel_pickup</kbd></li>
+                          <li>Action : <code>jewel_pickup → Objects → Delete the object</code></li>
+                          <li>Action : <code>Other actions → Variables → Change variable value </code>
                           <ul>
                               <li>Variable : <k-input>score</k-input></li>
                               <li>Modifiation sign : <k-input>+(add)</k-input></li>
@@ -212,9 +212,9 @@
           <div class="card">
           <h2>4. Reflection</h2>
             <ul>
-                <li>In 2–3 sentences, explain how the <code>Score<> scene variable is displayed on the HUD and updated when the player collects a pickup.</li>
+                <li>In 2–3 sentences, explain how the <code>Score</code> scene variable is displayed on the HUD and updated when the player collects a pickup.</li>
             
-                <li>Describe the logic that makes “Stomp-to-Defeat” work. Why do we check both <code>Is falling<> and <code>Player.Y() &lt; Enemy.Y()<>?</li>
+                <li>Describe the logic that makes “Stomp-to-Defeat” work. Why do we check both <code>Is falling</code> and <code>Player.Y() &lt; Enemy.Y()</code>?</li>
             
                 <li>If the player collides with the enemy from the side, what simple visual feedback did we implement, and why is a short <em>Wait</em> helpful here?</li>
             </ul>
@@ -229,7 +229,7 @@
                 <li><strong>Short preview clip</strong> (5–10s) showing:
                 
                 <ul>
-                    <li>At least one <em>jewel_pickup</em> collected and the <code>Score<> HUD updating.</li>
+                    <li>At least one <em>jewel_pickup</em> collected and the <code>Score</code> HUD updating.</li>
                 
                     <li>Player <em>stomps</em> to defeat an enemy (bounce up) and a <em>side collision</em> briefly flashes the player.</li>
                 </ul>
@@ -237,8 +237,8 @@
       
                 <li><strong>Event Sheet screenshot(s)</strong> covering:
                 <ul>
-                    <li>Pickup collision → delete pickup → <code>score<> += 1</li>
-                    <li>Blank-condition action that sets the HUD text: <code>"Score : " + score<></li>
+                    <li>Pickup collision → delete pickup → <code>score</code> += 1</li>
+                    <li>Blank-condition action that sets the HUD text: <code>"Score : " + score</code></li>
                     <li>Stomp-to-Defeat events (top-hit vs side/below-hit)</li>
                 </ul>
                 </li>
@@ -256,11 +256,11 @@
             <div class="card sticky">
               <h3>Checklist</h3>
               <ul>
-                <li><strong>Pickups</strong> added and floating (EllipseMovement radius Y ≈ <code>8<>, loop ≈ <code>1s<>).</li>
-                <li><strong>HUD</strong> layer created; <code>Score<> (BBText) placed top-left.</li>
-                <li><strong>Scene variable</strong> <code>score<> created and initialized to <code>0<>.</li>
-                <li>Blank-condition action updates HUD: <code>"Score : " + score<>.</li>
-                <li>Event: Player collides with <code>jewel_pickup<> → delete → <code>score += 1<>.</li>
+                <li><strong>Pickups</strong> added and floating (EllipseMovement radius Y ≈ <code>8</code>, loop ≈ <code>1s</code>).</li>
+                <li><strong>HUD</strong> layer created; <code>Score</code> (BBText) placed top-left.</li>
+                <li><strong>Scene variable</strong> <code>score</code> created and initialized to <code>0</code>.</li>
+                <li>Blank-condition action updates HUD: <code>"Score : " + score</code>.</li>
+                <li>Event: Player collides with <code>jewel_pickup</code> → delete → <code>score += 1</code>.</li>
                 <li><strong>Stomp-to-Defeat</strong>:
                   <ul>
                     <li>Top-hit: destroy enemy → allow jump → simulate jump</li>

@@ -37,15 +37,15 @@
         <h2>1. Add the Player Object</h2>
         <ol>
                             
-            <li><code>Add a new object<> → <strong>Sprite</strong> → name it <k-input>Player</k-input>. Select <code>Import images<>.
+            <li><code>Add a new object</code> → <strong>Sprite</strong> → name it <k-input>Player</k-input>. Select <code>Import images</code>.
             <div class="figure"><img src="/ict9/unit2/lesson3/1_sprite.png" style="width:50%" alt="sprite"></div></li>
 
-            <li>Select <code>playerRed_stand.png<> from <em>U2 Game Development</em> → <em>PNG</em> → <em>Players</em> → <em>Player Red</em> folder.</li>
+            <li>Select <code>playerRed_stand.png</code> from <em>U2 Game Development</em> → <em>PNG</em> → <em>Players</em> → <em>Player Red</em> folder.</li>
 
-            <li> In the <code>Player Editor<> name this <code>Animation #0<> <k-input>Idle</k-input>. </li>
+            <li> In the <code>Player Editor</code> name this <code>Animation #0</code> <k-input>Idle</k-input>. </li>
             
-            <li>Click <code>+ Add an animation<> to add another animation for <k-input>Walk</k-input>.</li>
-            <li> Click <code> + Add a sprite<> and select <em>playerRed_walk1.png</em>, <em>playerRed_walk2.png</em>, and <em>playerRed_walk3.png</em>.</li>
+            <li>Click <code>+ Add an animation</code> to add another animation for <k-input>Walk</k-input>.</li>
+            <li> Click <code> + Add a sprite</code> and select <em>playerRed_walk1.png</em>, <em>playerRed_walk2.png</em>, and <em>playerRed_walk3.png</em>.</li>
             
             <li> Repeat Step 4 for the following animations
                 <ul>
@@ -54,9 +54,9 @@
                 </ul>
             <li>For the <k-input>Walk</k-input> and <k-input>Jump</k-input> we need to do a bit more work. If we preview the animation, it doesn't look right.<li>  
                 <ul>
-                    <li>First check the <code>Loop<> box. This repeats the animation.</li>
-                    <li>Press the <code>Preview<>, you'll notice that the animation is moving very fast. Change the <code>FSP<> to <k-input>5</k-input>, this will slow the animation down a bit. </li>
-                    <li>The animation still looks weird - it's missing some images. When the animation <em>loops</em> it goes through the images from left to right, then back to the left image again. So it is missing an image inbetween. Select the <em>second image</em> and <code>duplicate<> it. Make sure it goes at the very right. Preview the animation.</li>
+                    <li>First check the <code>Loop</code> box. This repeats the animation.</li>
+                    <li>Press the <code>Preview</code>, you'll notice that the animation is moving very fast. Change the <code>FSP</code> to <k-input>5</k-input>, this will slow the animation down a bit. </li>
+                    <li>The animation still looks weird - it's missing some images. When the animation <em>loops</em> it goes through the images from left to right, then back to the left image again. So it is missing an image inbetween. Select the <em>second image</em> and <code>duplicate</code> it. Make sure it goes at the very right. Preview the animation.</li>
                     <li>Repeat for the <kbd>Jump</kbd> animation.</li>
                     <p>This is what your Player Properties should look like
                       <div class="figure"><img src="/ict9/unit2/lesson3/2_player_animations.png" alt="player animations"></div>
@@ -64,13 +64,13 @@
                 </ul>  
             
             <li>
-              Click on <code>Edit points<> and click on the <code>Origin<>
+              Click on <code>Edit points</code> and click on the <code>Origin</code>
               <ul>
-                <li>Set <strong>X</strong> to <k-input>19.5</k-input> and <strong>Y</strong> to <k-input>48</k-input>. Press <code>Apply<></li>
+                <li>Set <strong>X</strong> to <k-input>19.5</k-input> and <strong>Y</strong> to <k-input>48</k-input>. Press <code>Apply</code></li>
                 <p>This will help keep the player inline with the platforms and other objects</p>
               </ul>
             </li>
-            <li><strong> DO NOT press</strong> <code>Apply<> - we need to add some behaviours first!</li>      
+            <li><strong> DO NOT press</strong> <code>Apply</code> - we need to add some behaviours first!</li>      
         </ol>
       </div>
 
@@ -78,18 +78,18 @@
       <div class="card">
         <h2>2. Add Platformer Character Behavior</h2>
         <ol>
-          <li>Select the <code>Behaviors<> tab → <code>Add a behavior<> → choose <strong>Platformer Character</strong>.</li>
+          <li>Select the <code>Behaviors</code> tab → <code>Add a behavior</code> → choose <strong>Platformer Character</strong>.</li>
 
           <li>Leave all the values as is for now, we can adjust later</li>
 
           <li>Confirm your ground objects have the <strong>Platform</strong> behavior and any pass‑throughs use <strong>Jump‑thru Platform</strong>.</li>
 
-          <li>Press <code>Apply<>. Now we can add our player to the scene.</li>
+          <li>Press <code>Apply</code>. Now we can add our player to the scene.</li>
 
-          <li>Drag your <code>Player<> from the object menu and place it above a platform.
+          <li>Drag your <code>Player</code> from the object menu and place it above a platform.
             <div class="figure"><img src="/ict9/unit2/lesson3/3_player_inscene.png" alt="player animations"></div>
         </li>
-        <li><code>Preview<> your game and see if you can move your <kbd>Player</kbd></li>
+        <li><code>Preview</code> your game and see if you can move your <kbd>Player</kbd></li>
         </ol>
       </div>
 
@@ -97,22 +97,22 @@
       <!-- 2.3.3 -->
       <div class="card">
         <h2>3. Setting the Camera</h2>
-        <p>In your preview, you probably noticed that the <code>Player<> runs off the screen! In order to fix that, we need to set up the camera so that it follows the <kbd>Player</kbd>.</p>
+        <p>In your preview, you probably noticed that the <code>Player</code> runs off the screen! In order to fix that, we need to set up the camera so that it follows the <kbd>Player</kbd>.</p>
         <ol>
-          <li>Double click on the <code>Player<> object and select the <code>Behaviour<> tab.</li>
-          <li>Add the <code>Smooth Camera<> and <code>Smooth platformer camera<> and <code>Apply<> those behaviours.</li>
+          <li>Double click on the <code>Player</code> object and select the <code>Behaviour</code> tab.</li>
+          <li>Add the <code>Smooth Camera</code> and <code>Smooth platformer camera</code> and <code>Apply</code> those behaviours.</li>
           <li>Save and Preview your work and you should see the camera follow your player.</li>
           <div class="figure"><img src="/ict9/unit2/lesson3/4_center_camera.png" alt="Smooth Camera Behaviour"></div>
         </ol>
 
-        <p>Now that we have that going, you probably noticed that there is some deadspace that we don't want to see. Let's fix that by enforcing some boundaries so that our camera only shows what we want the user to see. To do this we will need to <code>Add an event<>.</p>
+        <p>Now that we have that going, you probably noticed that there is some deadspace that we don't want to see. Let's fix that by enforcing some boundaries so that our camera only shows what we want the user to see. To do this we will need to <code>Add an event</code>.</p>
           
         <ol>
-          <li>Click on your <code>Level 1(Events)<> sheet</li>
-          <li><code>Add a new event<>
+          <li>Click on your <code>Level 1(Events)</code> sheet</li>
+          <li><code>Add a new event</code>
             <ul class="list-tight">
               <li><strong>Add condition : </strong> Leave this blank
-              <li><strong>Add action : </strong> <code>Enforce Camera Boundaries<> <p><em>Other actions → Camera → Layers and cameras → Enforce camera boundaries</em></p>
+              <li><strong>Add action : </strong> <code>Enforce Camera Boundaries</code> <p><em>Other actions → Camera → Layers and cameras → Enforce camera boundaries</em></p>
                 <ul>
                   <li>Left = <k-input>0</k-input></li>
                   <li>Top = <k-input>0</k-input></li>
@@ -132,14 +132,14 @@
       <!-- 2.3.4 -->
       <div class="card">
         <h2>4. Player Animations</h2>
-          <p>To make our player more interesting, we want to add the animations to our player movement. We have already added the animations to our Player, but now now we need to tell our program what to do with it.  We can do this in our <code>Level 1(Events)<>sheet.</p>
+          <p>To make our player more interesting, we want to add the animations to our player movement. We have already added the animations to our Player, but now now we need to tell our program what to do with it.  We can do this in our <code>Level 1(Events)</code>sheet.</p>
 
           <ol>
             <li>Add the <strong>Jump</strong> animation.
               <p><strong>Add a new event</strong></p>
               <ul>
-                <li><strong>Condition : </strong><code> Player → Platform state → Is Jumping <></li>
-                <li><strong>Action : </strong><code>  Player → Animations and images → Animation (by name) <> set to → <k-input>Jump</k-input></li>
+                <li><strong>Condition : </strong><code> Player → Platform state → Is Jumping </code></li>
+                <li><strong>Action : </strong><code>  Player → Animations and images → Animation (by name) </code> set to → <k-input>Jump</k-input></li>
               </ul>
             </li>
             <br>
@@ -147,8 +147,8 @@
             <li>Add the <strong>Fall</strong> animation.
               <p><strong>Add a new event</strong></p>
               <ul>
-                <li><strong>Condition : </strong><code> Player → Platform state → Is Falling <></li>
-                <li><strong>Action : </strong><code>  Player → Animations and images → Animation (by name) <> set to → <k-input>Fall</k-input></li>
+                <li><strong>Condition : </strong><code> Player → Platform state → Is Falling </code></li>
+                <li><strong>Action : </strong><code>  Player → Animations and images → Animation (by name) </code> set to → <k-input>Fall</k-input></li>
               </ul>
             </li>
             <br>
@@ -156,9 +156,9 @@
             <li>Add the <strong>Walk</strong> animation.
               <p><strong>Add a new event</strong></p>
               <ul>
-                <li><strong>Condition : </strong><code> Player → Platform state → Is Moving <> <strong>AND</strong></li>
-                <li><strong>Add condition : </strong><code> Player → Platform state → Is On Floor <></li> 
-                <li><strong>Action : </strong><code>  Player → Animations and images → Animation (by name) <> set to → <k-input>Walk</k-input></li>
+                <li><strong>Condition : </strong><code> Player → Platform state → Is Moving </code> <strong>AND</strong></li>
+                <li><strong>Add condition : </strong><code> Player → Platform state → Is On Floor </code></li> 
+                <li><strong>Action : </strong><code>  Player → Animations and images → Animation (by name) </code> set to → <k-input>Walk</k-input></li>
               </ul>
             </li>
             <br>
@@ -166,24 +166,24 @@
             <li>Add the <strong>Idle</strong> animation.
               <p><strong>Add a new event</strong></p>
               <ul>
-                <li><strong>Condition : </strong><code> Player → Platform state → Is On Floor <> <strong>AND</strong></li>
-                <li><strong>Add condition : </strong><code> Player → Platform state → Is Moving <> and click on <strong>Invert condition</strong>
+                <li><strong>Condition : </strong><code> Player → Platform state → Is On Floor </code> <strong>AND</strong></li>
+                <li><strong>Add condition : </strong><code> Player → Platform state → Is Moving </code> and click on <strong>Invert condition</strong>
                 <p>Here we want to say "When the player is NOT moving" - that is what invert means</li> 
-                <li><strong>Action : </strong><code>  Player → Animations and images → Animation (by name) <> set to → <k-input>Walk</k-input></li>
+                <li><strong>Action : </strong><code>  Player → Animations and images → Animation (by name) </code> set to → <k-input>Walk</k-input></li>
               </ul>
             </li>
             <br>
             <li>Save your work and preview. But now we notice that the Player doesn't look in the direction it is moving. We need to add a couple more events.
               <p><strong>Add new event</strong></p>
               <ul>
-                <li><strong>Condition : </strong><code>Key is pressed → <><k-input>Left</k-input></li>
-                <li><strong>Action : </strong><code>Player → Effects → Flip the object horizontally<> and select <code>Yes<> to activate flipping.</li>
+                <li><strong>Condition : </strong><code>Key is pressed → </code><k-input>Left</k-input></li>
+                <li><strong>Action : </strong><code>Player → Effects → Flip the object horizontally</code> and select <code>Yes</code> to activate flipping.</li>
               </ul>
       
               <p><strong>Add new event</strong></p>
               <ul>
-                <li><strong>Condition : </strong><code>Key is pressed → <><k-input>Right</k-input></li>
-                <li><strong>Action : </strong><code>Player → Effects → Flip the object horizontally<> DO NOT select YES.</li>
+                <li><strong>Condition : </strong><code>Key is pressed → </code><k-input>Right</k-input></li>
+                <li><strong>Action : </strong><code>Player → Effects → Flip the object horizontally</code> DO NOT select YES.</li>
               </ul>
             </li>
 
@@ -240,7 +240,7 @@
           <li>What animation timing (fps) feels most responsive for <em>Run</em> and <em>Jump</em>?</li>
           <li>Where did you place the origin and why?</li>
         </ul>
-        <p class="muted">Write answers in a document titled <code>2.3 Reflection<>.</p>
+        <p class="muted">Write answers in a document titled <code>2.3 Reflection</code>.</p>
       </div>
 
       <!-- Submit List -->
@@ -251,7 +251,7 @@
           <li>Screenshot of <strong>Player</strong> object editor showing animations list.</li>
           <li>Screenshot of <strong>Collision masks</strong> and <strong>Origin</strong> (one frame is fine).</li>
           <li>Short clip or screenshot set showing Idle → Run → Jump → Fall in action.</li>
-          <li>Your <code>2.3 Reflection<> on Teams.</li>
+          <li>Your <code>2.3 Reflection</code> on Teams.</li>
         </ul>
       </div>
 
@@ -264,7 +264,7 @@
           <li>Player animations screenshot</li>
           <li>Origin screenshot</li>
           <li>Game preview screenshot/clip</li>
-          <li><code>2.3 Reflection<> doc</li>
+          <li><code>2.3 Reflection</code> doc</li>
         </ul>
       </div>
       <div class="card">
