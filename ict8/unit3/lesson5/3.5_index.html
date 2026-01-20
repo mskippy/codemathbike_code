@@ -37,9 +37,9 @@
             <h2>1) Create the HUD Layer</h2>
             <ol>
               <li>Open your <strong>Level 1</strong> scene and show the <strong>Layers Panel</strong>.</li>
-              <li><strong>Add new layer</strong> and rename it <code>HUD<>.</li>
-              <li>Drag the <code>HUD<> layer to the top so it draws above all other layers.</li>
-              <li>Make sure <code>HUD<> is the active (selected) layer before adding HUD objects.</li>
+              <li><strong>Add new layer</strong> and rename it <code>HUD</code>.</li>
+              <li>Drag the <code>HUD</code> layer to the top so it draws above all other layers.</li>
+              <li>Make sure <code>HUD</code> is the active (selected) layer before adding HUD objects.</li>
             </ol>
             <figure class="img">
               <img src="/ict8/unit3/lesson5/02_new_layer.png" alt="Layers panel with HUD layer on top">
@@ -52,8 +52,8 @@
             <h3>Score</h3>
             <ul>
               <li><strong>New Object → BBText</strong></li>
-              <li><strong>Object Name:</strong> <code>Score<></li>
-              <li><strong>BBCode Text:</strong> <code>Score: 0<></li>
+              <li><strong>Object Name:</strong> <code>Score</code></li>
+              <li><strong>BBCode Text:</strong> <code>Score: 0</code></li>
               <li><strong>Font:</strong> Replace → Choose from Asset Store (e.g., <em>Kenny High Square</em>)</li>
               <li><strong>Base Size:</strong> ~50 (adjust to taste)</li>
               <li><strong>Base Color:</strong> Yellow (high contrast)</li>
@@ -61,8 +61,8 @@
     
             <h3>Health</h3>
             <ul>
-              <li>Duplicate <code>Score<> and rename to <code>Health<></li>
-              <li><strong>BBCode Text:</strong> <code>Health: 5<></li>
+              <li>Duplicate <code>Score</code> and rename to <code>Health</code></li>
+              <li><strong>BBCode Text:</strong> <code>Health: 5</code></li>
               <li><strong>Base Color:</strong> Green</li>
             </ul>
     
@@ -82,9 +82,9 @@
             <p>We’ll track score across scenes using a <strong>Global Variable</strong>:</p>
             <ol>
               <li>Open <strong>Project Manager → Project Settings → Global variables</strong>.</li>
-              <li>Add <strong>Number</strong> variable <code>PlayerScore<> with initial value <code>0<>.</li>
+              <li>Add <strong>Number</strong> variable <code>PlayerScore</code> with initial value <code>0</code>.</li>
             </ol>
-            <p><em>Note:</em> You already have <code>PlayerHealth<> from earlier lessons.</p>
+            <p><em>Note:</em> You already have <code>PlayerHealth</code> from earlier lessons.</p>
             <figure class="img">
               <img src="/ict8/unit3/lesson5/04_global_variables.png" alt="Global variables showing PlayerScore and PlayerHealth">
             </figure>
@@ -95,7 +95,7 @@
             <p>Add the following actions to your no conditions event at the top of your event sheet</p>
 
             <ul>
-                <li>Add action: <code>Score<> → BBCode text</li>
+                <li>Add action: <code>Score</code> → BBCode text</li>
                 <ul>
                     <li>Modification's sign → <k-input>= (set to)</k-input></li>
                     <li>Text → <k-input>"Score : " + PlayerScore</k-input></li>
@@ -103,7 +103,7 @@
             </ul>
 
             <ul>
-                <li>Add action: <code>Health<> → BBCode text</li>
+                <li>Add action: <code>Health</code> → BBCode text</li>
                 <ul>
                     <li>Modification's sign → <k-input>= (set to)</k-input></li>
                     <li>Text → <k-input>"Health : " + PlayerHealth</k-input></li>
@@ -166,7 +166,7 @@
         <ul>
             <li>Create and order layers; keep HUD above gameplay.</li>
             <li>Add <strong>BBText</strong> objects for Score and Health.</li>
-            <li>Use a <strong>Global Variable</strong> (<code>PlayerScore<>) for cross-level scoring.</li>
+            <li>Use a <strong>Global Variable</strong> (<code>PlayerScore</code>) for cross-level scoring.</li>
             <li>Bind text to variables with BBCode and update via events.</li>
         </ul>
         </section>

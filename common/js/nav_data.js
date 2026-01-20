@@ -16,9 +16,9 @@ window.NAV_DATA = {
           title: "U1 Essential Skills",
           href: "/ict8/unit1/index.html",
           pages: {
-            lesson1: { title: "1.1 Welcome to ICT 8",       href: "/ict8/unit1/lesson1/index.html" },
-            lesson2: { title: "1.2 File Management",        href: "/ict8/unit1/lesson2/index.html" },
-            lesson3: { title: "1.3 Parts of My Computer",   href: "/ict8/unit1/lesson3/index.html" },
+            lesson1: { title: "1.1 Welcome to ICT 8",       href: "/ict8/unit1/lesson1/1.1_index.html" },
+            lesson2: { title: "1.2 File Management",        href: "/ict8/unit1/lesson2/1.2_index.html" },
+            lesson3: { title: "1.3 Parts of My Computer",   href: "/ict8/unit1/lesson3/1.3_index.html" },
           }
         },
         unit2: {
@@ -36,20 +36,20 @@ window.NAV_DATA = {
           title: "U3 Game Development",
           href: "/ict8/unit3/lesson0/index.html",
           pages: {
-            lesson1: { title: "3.1 Adding the Background",  href: "/ict8/unit3/lesson1/index.html" },
-            lesson2: { title: "3.2 Adding the Player",      href: "/ict8/unit3/lesson2/index.html" },
-            lesson3: { title: "3.3 Adding the Enemy",       href: "/ict8/unit3/lesson3/index.html" },
-            lesson4: { title: "3.4 More Game Mechanics",    href: "/ict8/unit3/lesson4/index.html" },
-            lesson5: { title: "3.5 HUD",                    href: "/ict8/unit3/lesson5/index.html" },
-            lesson6: { title: "3.6 Game Enhancements",      href: "/ict8/unit3/lesson6/index.html" }
+            lesson1: { title: "3.1 Adding the Background",  href: "/ict8/unit3/lesson1/3.1_index.html" },
+            lesson2: { title: "3.2 Adding the Player",      href: "/ict8/unit3/lesson2/3.2_index.html" },
+            lesson3: { title: "3.3 Adding the Enemy",       href: "/ict8/unit3/lesson3/3.3_index.html" },
+            lesson4: { title: "3.4 More Game Mechanics",    href: "/ict8/unit3/lesson4/3.4_index.html" },
+            lesson5: { title: "3.5 HUD",                    href: "/ict8/unit3/lesson5/3.5_index.html" },
+            lesson6: { title: "3.6 Game Enhancements",      href: "/ict8/unit3/lesson6/3.6_index.html" }
           }
         },
         unit4: {
           title: "U4 Web Development",
           href: "/ict8/unit4/index.html",
           pages: {
-            lesson1: { title: "Editing Your HTML",     href: "/ict8/unit4/edit_html_steps/index.html" },
-            lesson2: { title: "All Done? Do This!",        href: "/ict8/unit4/extension.html" },
+            lesson1: { title: "Editing Your HTML",     href: "/ict8/unit4/edit_html_steps/u4_index.html" },
+            lesson2: { title: "All Done? Do This!",        href: "/ict8/unit4/u4_extension.html" },
             lesson3: { title: "Showcase Sites",        href: "/ict8/unit4/web_dev/master_index.html" }
           }
         }

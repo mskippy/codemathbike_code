@@ -29,9 +29,9 @@
         </p>
         <ol>
           <li><strong>Add a new object → Sprite</strong></li>
-          <li><strong>Object Name:</strong> <code>Enemy1<></li>
-          <li><strong>Import image:</strong> <code>enemy1.png<> (from your assets folder)</li>
-          <li><strong>Behaviours:</strong> Add <code>DestroyOutside<></li>
+          <li><strong>Object Name:</strong> <code>Enemy1</code></li>
+          <li><strong>Import image:</strong> <code>enemy1.png</code> (from your assets folder)</li>
+          <li><strong>Behaviours:</strong> Add <code>DestroyOutside</code></li>
         </ol>
 
         <!-- Placeholder image: enemy sprite setup -->
@@ -48,12 +48,12 @@
         </p>
         <ol>
           <li><strong>Add a new object → Sprite</strong></li>
-          <li><strong>Object Name:</strong> <code>SpawnPoint<></li>
+          <li><strong>Object Name:</strong> <code>SpawnPoint</code></li>
           <li><strong>Create with Piskel:</strong> choose a colour (e.g., green), use the paint bucket to fill, then <em>Save</em> and <em>Apply</em>.</li>
 
           <img src="/ict8/unit3/lesson3/02_add_spawnpoint.png" alt="Creating the spawn point sprite">
           <img src="/ict8/unit3/lesson3/03_create_spawnpoint.png" alt="fill to create spawnpoint">
-          <li>Zoom out and place <strong>three</strong> <code>SpawnPoint<> objects just outside the right edge of your game space.</li>
+          <li>Zoom out and place <strong>three</strong> <code>SpawnPoint</code> objects just outside the right edge of your game space.</li>
         </ol>
 
         <!-- Placeholder image: spawn point creation -->
@@ -75,7 +75,7 @@
           <p><strong>Add a new event</strong></p>
           <ul>
             <li><strong>Add condition:</strong> → <em>Other Conditions</em> → <em>Scene</em> → <em>At the beginning of the scene</em></li>
-            <li><strong>Add action:</strong> → <em>Other actions</em> → <em>Timers and time</em> →  <em>Start (or reset) a scene timer</em> → Name it <code>"EnemySpawn"<></li>
+            <li><strong>Add action:</strong> → <em>Other actions</em> → <em>Timers and time</em> →  <em>Start (or reset) a scene timer</em> → Name it <code>"EnemySpawn"</code></li>
           </ul>
           <!-- Placeholder image: timer setup -->
           <figure>
@@ -121,7 +121,7 @@
         </figure>
 
         <p>Preview your game—you should see enemies spawning every 3 seconds and moving toward the Player. If they fly off-screen, they should be deleted automatically.</p>
-        <p>If <code>Enemy<> is too big, add an action to scale it down (as you did for the Player).</p>
+        <p>If <code>Enemy</code> is too big, add an action to scale it down (as you did for the Player).</p>
       </section>
 
       
@@ -132,8 +132,8 @@
 
         <h3>1) Add Enemy Health Variable</h3>
         <ol>
-          <li>Open <code>Enemy1<> → <em>Variables</em> tab.</li>
-          <li>Add variable: <strong>Name</strong> <code>EnemyHealth<>, <strong>Type</strong> <em>Number</em>, <strong>Value</strong> <code>5<>.</li>
+          <li>Open <code>Enemy1</code> → <em>Variables</em> tab.</li>
+          <li>Add variable: <strong>Name</strong> <code>EnemyHealth</code>, <strong>Type</strong> <em>Number</em>, <strong>Value</strong> <code>5</code>.</li>
         </ol>
 
         <!-- Placeholder image: enemy variable -->
@@ -150,9 +150,9 @@
             <ul>
               <li>Other object: <k-input>Enemy1</k-input></li>
             </ul>
-          
-            <li><strong>Add action:</strong> <code>Bullet<> → <em>Delete the object</em></li>
-          <li><strong>Add action:</strong> <code>Enemy1<> → <em>Change variable value</em> </li>
+
+            <li><strong>Add action:</strong> <code>Bullet</code> → <em>Delete the object</em></li>
+          <li><strong>Add action:</strong> <code>Enemy1</code> → <em>Change variable value</em> </li>
             <ul>
               <li>Variable: <k-input>EnemyHealth</k-input> - <em>Make sure you can select the variable from the dropdown list</em></li>
               <li>Modification's sign: <k-input>-(subtract)</k-input></li>
@@ -176,7 +176,7 @@
               <li>Sign of the test: <k-input>≤ (less or equal to)</k-input></li>
               <li>Value: <k-input>0</k-input></li>
             </ul>
-            <li><strong>Add action:</strong> <code>Enemy1<> → <em>Delete the object</em></li>
+            <li><strong>Add action:</strong> <code>Enemy1</code> → <em>Delete the object</em></li>
           </ul>
           
         </ul>
@@ -219,7 +219,7 @@
             <ol>
                 <li>A screenshot of your <strong>SpawnPoints</strong> placed on the right side of the screen.</li>
                 <li>A screenshot of your <strong>Event Sheet</strong> showing the timer and spawn actions.</li>
-                <li>A screenshot of the <strong>EnemyHealth variable</strong> added to <code>Enemy<>.</li>
+                <li>A screenshot of the <strong>EnemyHealth variable</strong> added to <code>Enemy</code>.</li>
                 <li>A screenshot of your game running, with an Enemy visible on screen.</li>
                 <li>(Optional) A screenshot showing an Enemy being destroyed by your bullet.</li>
             </ol>
@@ -240,7 +240,7 @@
                 <ul>
                 <li>Create &amp; configure Sprite objects</li>
                 <li>Use scene timers to schedule events</li>
-                <li>Randomize with <code>Pick a random object<></li>
+                <li>Randomize with <code>Pick a random object</code></li>
                 <li>Move objects toward targets with forces</li>
                 <li>Hide helper objects (spawn markers)</li>
                 <li>Use object variables for health</li>
@@ -251,12 +251,12 @@
             <section class="card">
                 <h3>Quick Checklist</h3>
                 <ul>
-                <li><code>Enemy1<> sprite added with <code>DestroyOutside<></li>
-                <li>Three <code>SpawnPoint<> objects placed</li>
-                <li>Timer <code>EnemySpawn<> spawns every 3s</li>
-                <li>Enemies move toward <code>Player<> at speed 200</li>
-                <li><code>SpawnPoint<>s hidden</li>
-                <li><code>EnemyHealth<> variable set to 5</li>
+                <li><code>Enemy1</code> sprite added with <code>DestroyOutside</code></li>
+                <li>Three <code>SpawnPoint</code> objects placed</li>
+                <li>Timer <code>EnemySpawn</code> spawns every 3s</li>
+                <li>Enemies move toward <code>Player</code> at speed 200</li>
+                <li><code>SpawnPoint</code>s hidden</li>
+                <li><code>EnemyHealth</code> variable set to 5</li>
                 <li>Bullets reduce health and delete on hit</li>
                 <li>Enemies delete at ≤ 0 health</li>
                 </ul>

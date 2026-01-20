@@ -40,7 +40,7 @@
         </ul>
       
         <h3>Assets Audit</h3>
-        <p>Open your <code>Assets/<> folder and list what else you can use right now—no new downloads needed.</p>
+        <p>Open your <code>Assets/</code> folder and list what else you can use right now—no new downloads needed.</p>
         <ul>
           <li>Extra SFX (shoot, hit, explosion, pickup), background music loops.</li>
           <li>Alternate enemy/player sprites, meteor variants, background images.</li>
@@ -77,7 +77,7 @@
       When PlayerHealth ≤ 0:
         Audio → Stop all sounds and music
         // or: Audio → Set global volume to 0, then show Game Over
-      <></pre>
+      </code></pre>
         </details>
       
         <h4>Polish checklist</h4>
@@ -94,9 +94,9 @@
       <section class="card">
         <h2>Part B — Power-Ups &amp; Pickups (Depth)</h2>
         <ul>
-          <li><strong>Health pickup:</strong> Increase <code>PlayerHealth<> on collision, then delete the pickup.</li>
-          <li><strong>Shield pickup (timed):</strong> Set <code>PlayerHasShield = true<>, start timer, ignore damage while true; add a ring animation for feedback.</li>
-          <li><strong>Stronger lasers / fire-rate boost:</strong> Temporarily increase <code>BulletDamage<> or reduce <code>FireCooldown<>, then revert.</li>
+          <li><strong>Health pickup:</strong> Increase <code>PlayerHealth</code> on collision, then delete the pickup.</li>
+          <li><strong>Shield pickup (timed):</strong> Set <code>PlayerHasShield = true</code>, start timer, ignore damage while true; add a ring animation for feedback.</li>
+          <li><strong>Stronger lasers / fire-rate boost:</strong> Temporarily increase <code>BulletDamage</code> or reduce <code>FireCooldown</code>, then revert.</li>
         </ul>
         <p><em>Stretch:</em> A pickup spawner that appears every X seconds at a safe random position; use rarity tiers.</p>
         
@@ -106,7 +106,7 @@
       <section class="card">
         <h2>Part C — Enemies, Meteors &amp; Pacing (Fun)</h2>
         <ul>
-          <li><strong>Gradual escalation:</strong> Track <code>DifficultyLevel<>; every 20–30s, increase spawn rate or variety.</li>
+          <li><strong>Gradual escalation:</strong> Track <code>DifficultyLevel</code>; every 20–30s, increase spawn rate or variety.</li>
           <li><strong>Waves:</strong> Spawn enemies in waves; brief pause between waves; show “Wave 2”.</li>
           <li><strong>Caps &amp; spacing:</strong> Limit concurrent enemies (e.g., ≤ 8) to avoid instant swarms.</li>
           <li><strong>Meteor fields:</strong> Occasional clusters players must weave through.</li>
