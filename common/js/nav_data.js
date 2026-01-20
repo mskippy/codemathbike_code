@@ -172,7 +172,7 @@ window.NAV_DATA = {
             lesson3: { title: "5.3 Building Our Website Pages",             href: "/dc1011/unit5/lesson3/5.3_index.html" },
             lesson4: { title: "5.4 Formatting Our Website",                    href: "/dc1011/unit5/lesson4/5.4_index.html" },
             lesson5: { title: "5.5 Publishing Your Website",             href: "/dc1011/unit5/lesson5/5.5_index.html" },
-            lesson6: { title: "5.6 Final Polish & Submission",                  href: "/dc1011/unit5/student_sites/student_sites_index.html" }
+            lesson6: { title: "5.6 Final Polish & Submission",                  href: "/dc1011/unit5/lesson6/5.6_index.html" }
           }
         }
       }
