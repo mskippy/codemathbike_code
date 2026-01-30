@@ -1,74 +1,41 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>ICT 8 • 1.2 Essential Skills Studio: Managing Your Files</title>
 
+  <!-- Common CSS + JS -->
   <link rel="stylesheet" href="/common/css/base.css">
   <script src="/common/js/nav_data.js" defer></script>
   <script src="/common/js/utils.js" defer></script>
   <script src="/common/js/inject_partials.js" defer></script>
   <script src="/common/js/nav_systems.js" defer></script>
   <script src="/common/js/main.js" defer></script>
-
-  <style>
-    .muted { color: var(--muted, #666); font-size: .95rem; }
-    .callout {
-      border: 1px solid rgba(0,0,0,.12);
-      border-radius: 12px;
-      padding: 0.9rem 1rem;
-      background: rgba(0,0,0,.03);
-    }
-    .path {
-      background: rgba(0,0,0,.04);
-      border: 1px solid rgba(0,0,0,.08);
-      border-radius: 10px;
-      padding: .75rem .9rem;
-      overflow-x: auto;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
-      font-size: .95rem;
-      line-height: 1.3;
-    }
-    .mini-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-top: .6rem;
-    }
-    @media (max-width: 900px){
-      .mini-grid { grid-template-columns: 1fr; }
-    }
-    .btn-row { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.6rem; }
-    .btn {
-      display:inline-block;
-      padding:.6rem .85rem;
-      border-radius: 12px;
-      border: 1px solid rgba(0,0,0,.18);
-      text-decoration:none;
-      background: #fff;
-    }
-    .btn:hover { background: rgba(0,0,0,.04); }
-    .tight > li { margin-bottom: .35rem; }
-  </style>
 </head>
 
-<body class="ict8" data-course="ict8">
+<!-- Set body class to match course theme: ict8, ict9, dc1011, or none for purple -->
+<body data-course="ict8">
   <header id="site-header" data-partial="/common/partials/header.html"></header>
 
   <div class="page-wrap">
     <aside id="sidebar" aria-label="Course navigation"></aside>
 
-    <main id="content" role="main">
-      <!-- Overview -->
+    <main id="content" role="main" data-page-title="ICT 8 • Unit 1 • 1.2 Essential Skills Studio: Managing Your Files">
+
+      <!-- Lesson overview -->
       <section class="card">
-        <h1>Lesson 1.2 — Essential Skills Studio: Managing Your Files</h1>
+        <h1>Overview</h1>
         <p>
-          Today you’ll practise how to <strong>organize, save, move, and manage files</strong> the way you are expected to in ICT.
+          <strong>Today’s focus:</strong> You’ll practise how to <strong>organize, save, move, and manage files</strong>
+          the way you are expected to in ICT.
+        </p>
+        <p>
           You will complete the <strong>same task four times</strong>, but each file will start in a different place.
+          This helps you understand how file behaviour changes depending on <em>where the file comes from</em>.
         </p>
-        <p class="muted">
-          These skills will be used all year (Digital Media, Game Development, and Web Development).
-        </p>
+        <p><strong>These skills will be used all year</strong> (Digital Media, Game Development, Web Development).</p>
       </section>
 
       <!-- Activity A -->
@@ -76,43 +43,38 @@
         <h2>Activity A — Organize Your Folders</h2>
         <p><strong>Goal:</strong> Set up your ICT folder so you always know where your work belongs.</p>
 
-        <ol class="tight">
+        <ol>
           <li>Open <strong>OneDrive</strong>.</li>
           <li>Create this folder structure:</li>
         </ol>
 
-        <div class="path" aria-label="Folder structure">
-OneDrive
+        <pre><code>OneDrive
 └── Grade 8
     └── ICT 8
-        └── 1. Essential Skills
-        </div>
+        └── 1. Essential Skills</code></pre>
 
-        <ol class="tight" start="3" style="margin-top:.8rem;">
+        <ol start="3">
           <li>Open <strong>File Explorer</strong>.</li>
           <li>Confirm you can see the same folders in your OneDrive location.</li>
         </ol>
 
-        <div class="callout" style="margin-top:.75rem;">
-          <strong>All Lesson 1.2 files must be saved here:</strong>
-          <div class="path" style="margin-top:.5rem;">OneDrive → Grade 8 → ICT 8 → 1. Essential Skills</div>
-          <p class="muted" style="margin:.6rem 0 0 0;">Don’t continue until your folders are set up correctly.</p>
-        </div>
+        <p><strong>All Lesson 1.2 files must be saved here:</strong></p>
+        <p><code>OneDrive → Grade 8 → ICT 8 → 1. Essential Skills</code></p>
+
+        <p><strong>Do not continue until this is done.</strong></p>
       </section>
 
-      <!-- Important Rule -->
+      <!-- Important rule -->
       <section class="card">
         <h2>Important Rule</h2>
-        <div class="callout">
-          <p style="margin:.1rem 0 .5rem 0;"><strong>Do not start typing in any file until you:</strong></p>
-          <ul style="margin:.25rem 0 0 1.1rem;">
-            <li>check where it is saved</li>
-            <li>move it to the correct folder</li>
-            <li>rename it</li>
-            <li>turn Autosave on</li>
-          </ul>
-          <p class="muted" style="margin:.6rem 0 0 0;">This is part of the learning.</p>
-        </div>
+        <p><strong>Do not start typing in any file until you:</strong></p>
+        <ul class="list-tight">
+          <li>check where it is saved</li>
+          <li>move it to the correct folder</li>
+          <li>rename it</li>
+          <li>turn Autosave on</li>
+        </ul>
+        <p>This is part of the learning.</p>
       </section>
 
       <!-- Activity B -->
@@ -120,50 +82,42 @@ OneDrive
         <h2>Activity B — File Downloaded from the Website</h2>
         <p><strong>Where this file comes from:</strong> the class website (using <strong>Microsoft Edge</strong>).</p>
 
-        <div class="callout">
-          <p style="margin:.1rem 0 .5rem 0;">
-            When you click a download link in Edge, a box appears with options like <strong>Open</strong>, <strong>Save</strong>, and <strong>Save As</strong>.
-          </p>
+        <p>
+          When you click a download link in Edge, a box appears with options like <strong>Open</strong>,
+          <strong>Save</strong>, and <strong>Save As</strong>.
+        </p>
 
-          <p style="margin:.25rem 0;"><strong>Choose ONE:</strong></p>
-          <div class="mini-grid">
-            <div>
-              <p style="margin:.1rem 0 .35rem 0;"><strong>Option A — Save</strong></p>
-              <ul style="margin:.25rem 0 0 1.1rem;">
-                <li>Click <strong>Save</strong></li>
-                <li>The file goes to <strong>Downloads</strong></li>
-                <li>Move it to:</li>
-              </ul>
-              <div class="path" style="margin-top:.45rem;">OneDrive → Grade 8 → ICT 8 → 1. Essential Skills</div>
-            </div>
+        <p><strong>Choose ONE:</strong></p>
 
-            <div>
-              <p style="margin:.1rem 0 .35rem 0;"><strong>Option B — Save As</strong></p>
-              <ul style="margin:.25rem 0 0 1.1rem;">
-                <li>Click <strong>Save As</strong></li>
-                <li>Choose:</li>
-              </ul>
-              <div class="path" style="margin-top:.45rem;">OneDrive → Grade 8 → ICT 8 → 1. Essential Skills</div>
-              <p class="muted" style="margin:.5rem 0 0 0;">This saves it to the right place right away.</p>
-            </div>
-          </div>
+        <ul>
+          <li>
+            <strong>Option A — Save</strong>
+            <ul class="list-tight">
+              <li>Click <strong>Save</strong> (the file goes to <strong>Downloads</strong>)</li>
+              <li>Move it to: <code>OneDrive → Grade 8 → ICT 8 → 1. Essential Skills</code></li>
+            </ul>
+          </li>
+          <li>
+            <strong>Option B — Save As</strong>
+            <ul class="list-tight">
+              <li>Click <strong>Save As</strong></li>
+              <li>Save directly to: <code>OneDrive → Grade 8 → ICT 8 → 1. Essential Skills</code></li>
+            </ul>
+          </li>
+        </ul>
 
-          <p style="margin:.75rem 0 0 0;"><strong>Do NOT choose “Open”</strong> when downloading from a website.</p>
-        </div>
+        <p><strong>Do NOT choose “Open” when downloading from a website.</strong></p>
 
-        <ol class="tight" style="margin-top:.9rem;">
-          <li>Download the file below.</li>
-        </ol>
-
-        <div class="btn-row">
-          <!-- TODO: Update the href to your real file path -->
-          <a class="btn" href="/ict8/unit1/lesson2/1.2_Website_Download_Practice.docx" download>
-            Download: 1.2_Website_Download_Practice.docx
+        <p style="margin-top:12px;"><strong>Download file:</strong></p>
+        <!-- TODO: update href to match your real site path -->
+        <p>
+          <a href="/ict8/unit1/lesson2/1.2_Website_Download_Practice.docx" download>
+            1.2_Website_Download_Practice.docx
           </a>
-        </div>
+        </p>
 
-        <ol class="tight" start="2" style="margin-top:.9rem;">
-          <li>Rename the file to: <span class="path" style="display:inline-block; margin-left:.25rem;">1.2_File_Practice_[YourName]</span></li>
+        <ol>
+          <li>Rename the file to: <code>1.2_File_Practice_[YourName]</code></li>
           <li>Open the file and complete <strong>all tasks inside it</strong>.</li>
         </ol>
       </section>
@@ -173,30 +127,20 @@ OneDrive
         <h2>Activity C — File from a Teams Assignment</h2>
         <p><strong>Where this file comes from:</strong> a Teams assignment attachment.</p>
 
-        <div class="callout">
-          <p style="margin:.1rem 0 .35rem 0;">
-            <strong>Important:</strong> Teams makes a copy for you, but it is not saved in your ICT folder.
-          </p>
-          <p class="muted" style="margin:.25rem 0 0 0;">You must move it before you start typing.</p>
-        </div>
+        <p>
+          <strong>Important:</strong> Teams makes a copy for you, but it is not saved in your ICT folder.
+          You must move it before you start typing.
+        </p>
 
-        <ol class="tight" style="margin-top:.9rem;">
+        <ol>
           <li>Open the Word file from the Teams assignment.</li>
           <li><strong>Do not start typing.</strong></li>
           <li>Go to <strong>File → Save As</strong>.</li>
-          <li>Save it to:
-            <div class="path" style="margin-top:.45rem;">OneDrive → Grade 8 → ICT 8 → 1. Essential Skills</div>
-          </li>
-          <li>Rename it to:
-            <div class="path" style="margin-top:.45rem;">1.2_File_Practice_[YourName]</div>
-          </li>
+          <li>Save it to: <code>OneDrive → Grade 8 → ICT 8 → 1. Essential Skills</code></li>
+          <li>Rename it to: <code>1.2_File_Practice_[YourName]</code></li>
           <li>Turn <strong>Autosave ON</strong>.</li>
           <li>Complete <strong>all tasks inside the document</strong>.</li>
         </ol>
-
-        <p class="muted" style="margin-top:.75rem;">
-          (Your teacher will provide this file inside Teams — there is no website download link for this one.)
-        </p>
       </section>
 
       <!-- Activity D -->
@@ -204,26 +148,15 @@ OneDrive
         <h2>Activity D — Shared File in Teams</h2>
         <p><strong>Where this file comes from:</strong> Teams → <strong>Shared</strong>.</p>
 
-        <div class="callout">
-          <p style="margin:.1rem 0 .35rem 0;">Shared files belong to the class. They are not your personal working copy.</p>
-          <p style="margin:.25rem 0 0 0;"><strong>Rule:</strong> Use <strong>Save a copy</strong> before you edit.</p>
-        </div>
+        <p><strong>Rule:</strong> Shared files belong to the class. Use <strong>Save a copy</strong> before you edit.</p>
 
-        <ol class="tight" style="margin-top:.9rem;">
+        <ol>
           <li>Open the shared file in <strong>Teams → Shared</strong>.</li>
           <li>Choose <strong>Save a copy</strong>.</li>
-          <li>Save the copy to:
-            <div class="path" style="margin-top:.45rem;">OneDrive → Grade 8 → ICT 8 → 1. Essential Skills</div>
-          </li>
-          <li>Rename it to:
-            <div class="path" style="margin-top:.45rem;">1.2_File_Practice_[YourName]</div>
-          </li>
+          <li>Save the copy to: <code>OneDrive → Grade 8 → ICT 8 → 1. Essential Skills</code></li>
+          <li>Rename it to: <code>1.2_File_Practice_[YourName]</code></li>
           <li>Complete <strong>all tasks inside the document</strong>.</li>
         </ol>
-
-        <p class="muted" style="margin-top:.75rem;">
-          (This file is provided in Teams — there is no website download link for this one.)
-        </p>
       </section>
 
       <!-- Activity E -->
@@ -231,21 +164,14 @@ OneDrive
         <h2>Activity E — Creating a New File</h2>
         <p><strong>Where this file comes from:</strong> you create it in Word (blank document).</p>
 
-        <div class="callout">
-          <p style="margin:.1rem 0 .35rem 0;"><strong>Rule:</strong> Save first, then work.</p>
-          <p class="muted" style="margin:.25rem 0 0 0;">Autosave only works after the file is saved to OneDrive.</p>
-        </div>
+        <p><strong>Rule:</strong> Save first, then work.</p>
 
-        <ol class="tight" style="margin-top:.9rem;">
+        <ol>
           <li>Open <strong>Word</strong>.</li>
           <li>Create a <strong>new blank document</strong>.</li>
           <li>Immediately go to <strong>File → Save As</strong>.</li>
-          <li>Save it to:
-            <div class="path" style="margin-top:.45rem;">OneDrive → Grade 8 → ICT 8 → 1. Essential Skills</div>
-          </li>
-          <li>Name the file:
-            <div class="path" style="margin-top:.45rem;">1.2_New_File_Practice_[YourName]</div>
-          </li>
+          <li>Save it to: <code>OneDrive → Grade 8 → ICT 8 → 1. Essential Skills</code></li>
+          <li>Name the file: <code>1.2_New_File_Practice_[YourName]</code></li>
           <li>Turn <strong>Autosave ON</strong>.</li>
           <li>Complete the task inside your document.</li>
         </ol>
@@ -256,17 +182,14 @@ OneDrive
         <h2>Screenshot Reminder</h2>
         <p>Each document will ask you to include <strong>one screenshot</strong> as proof you saved the file correctly.</p>
 
-        <div class="callout">
-          <p style="margin:.1rem 0 .35rem 0;"><strong>Your screenshot must show:</strong></p>
-          <ul style="margin:.25rem 0 0 1.1rem;">
-            <li><strong>File Explorer</strong></li>
-            <li>the <strong>file name</strong></li>
-            <li>the file inside the correct folder</li>
-          </ul>
-          <p class="muted" style="margin:.6rem 0 0 0;">
-            Shortcut: <strong>Windows + Shift + S</strong> (screenshot) → <strong>Ctrl + V</strong> (paste into Word).
-          </p>
-        </div>
+        <p><strong>Your screenshot must show:</strong></p>
+        <ul class="list-tight">
+          <li><strong>File Explorer</strong></li>
+          <li>the <strong>file name</strong></li>
+          <li>the file inside the correct folder</li>
+        </ul>
+
+        <p><strong>Shortcut:</strong> <code>Windows + Shift + S</code> (screenshot) → <code>Ctrl + V</code> (paste into Word)</p>
       </section>
 
       <!-- Success Criteria -->
@@ -293,8 +216,45 @@ OneDrive
       </section>
 
     </main>
+
+    <!-- Lesson-specific right rail -->
+    <aside id="right-rail" aria-label="Resources">
+
+      <div class="card">
+        <strong>Save location</strong>
+        <ul class="list-tight">
+          <li><code>OneDrive → Grade 8 → ICT 8 → 1. Essential Skills</code></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>File naming</strong>
+        <ul class="list-tight">
+          <li><code>1.2_File_Practice_[YourName]</code></li>
+          <li><code>1.2_New_File_Practice_[YourName]</code></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>Screenshot shortcut</strong>
+        <ul class="list-tight">
+          <li><code>Windows + Shift + S</code> (capture)</li>
+          <li><code>Ctrl + V</code> (paste into Word)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>Quick links</strong>
+        <ul class="list-tight">
+          <li><a href="https://teams.microsoft.com/" target="_blank" rel="noopener">Microsoft Teams</a></li>
+          <li><a href="https://www.office.com/" target="_blank" rel="noopener">Office.com (Word / OneDrive)</a></li>
+        </ul>
+      </div>
+
+    </aside>
   </div>
 
   <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
 </body>
+
 </html>
