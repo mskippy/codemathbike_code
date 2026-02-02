@@ -1,336 +1,329 @@
-<!-- v2 – Oct 2025 -->
 <!doctype html>
 <html lang="en">
-  
-  <head>
-    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>ICT 8 • 1.2 File Management</title>
-    <link rel="stylesheet" href="/common/css/base.css">
-    <script src="/common/js/nav_data.js" defer></script>
-    <script src="/common/js/utils.js" defer></script>
-    <script src="/common/js/inject_partials.js" defer></script>
-    <script src="/common/js/nav_systems.js" defer></script>
-    <script src="/common/js/main.js" defer></script>
-  </head>
 
-  <style>
-    .ppt-wrap { position: relative; width: 100%; aspect-ratio: 16/9; }
-    .ppt-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-    .muted { color: var(--muted, #666); font-size: .95rem; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
-    @media (max-width: 900px){ .two-col { grid-template-columns: 1fr; } }
-  </style>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ICT 8 • 1.2 Essential Skills Studio: Managing Your Files</title>
 
-  <body class="ict8">
-    <header id="site-header" data-partial="/common/partials/header.html"></header>
-   
+  <!-- Common CSS + JS -->
+  <link rel="stylesheet" href="/common/css/base.css">
+  <script src="/common/js/nav_data.js" defer></script>
+  <script src="/common/js/utils.js" defer></script>
+  <script src="/common/js/inject_partials.js" defer></script>
+  <script src="/common/js/nav_systems.js" defer></script>
+  <script src="/common/js/main.js" defer></script>
+</head>
 
-    
-    <div class="page-wrap">
-      <aside id="sidebar" aria-label="Course navigation"></aside>
-    
-      <main id="content" role="main">
-        <!-- Embedded PPT -->
-            <section class="card">
-                <h2>Home Drive vs. OneDrive &amp; Online vs. Desktop Apps</h2>
+<!-- Set body class to match course theme: ict8, ict9, dc1011, or none for purple -->
+<body data-course="ict8">
+  <header id="site-header" data-partial="/common/partials/header.html"></header>
 
-            <div id="canva-wrapper-1" style="position:relative; padding-top:56.25%; height:0; overflow:hidden; border-radius:8px;">
-                <iframe
-                id="canva-frame-1"
-                src="https://www.canva.com/design/DAG4g1f3pm8/z6kGZZx4DVYXG9fY130qlw/view?embed"
-                title="1.2 File Management (Canva presentation)"
-                allowfullscreen
-                loading="lazy"
-                style="position:absolute; inset:0; width:100%; height:100%; border:0;">
-                </iframe>
+  <div class="page-wrap">
+    <aside id="sidebar" aria-label="Course navigation"></aside>
 
-                <!-- Hidden fallback UI; we’ll reveal it if the iframe doesn’t load -->
-                <div id="canva-fallback-1" style="display:none; position:absolute; inset:0; padding:1rem; background:#f7f7f7; border-radius:8px;">
-                <p style="margin:0 0 0.75rem 0">Can’t load the preview here.</p>
-                <a href="https://www.canva.com/design/DAG4g1f3pm8/z6kGZZx4DVYXG9fY130qlw/view?utm_content=DAG4g1f3pm8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hc9b25696d7"
-                    target="_blank" rel="noopener"
-                    style="display:inline-block; padding:0.75rem 1rem; border-radius:10px; border:1px solid #ccc; text-decoration:none">
-                    Open in Canva (new tab)
-                </a>
-                </div>
-            </div>
+    <main id="content" role="main" data-page-title="ICT 8 • Unit 1 • 1.2 Essential Skills Studio: Managing Your Files">
 
-            </section>
+      <!-- Lesson overview -->
+      <section class="card">
+        <h1>Overview</h1>
+        <p>
+          <strong>Today’s focus:</strong> You will learn how to <strong>organize, save, move, and manage files</strong>
+          the way you are expected to in ICT.
+        </p>
+        <p>
+          You will complete the <strong>same task multiple times</strong>, but each file will start in a
+          <strong>different place</strong>. This helps you understand how file behaviour changes depending on
+          <em>how the file was opened</em>.
+        </p>
+        <p><strong>These skills will be used all year</strong> (Digital Media, Game Development, Web Development).</p>
+      </section>
 
-            
-            <!-- Activity A -->
-            <section class="card">
-                <h2>Activity A — Organize in OneDrive</h2>
-                <p><strong>Objective:</strong> Create your cloud folders so you can work at school <em>and</em> at home.</p>
-                <ol>
-                <li>Go to <a href="https://sd44.ca" target="_blank" rel="noopener">sd44.ca</a> and click on <strong>Mail</strong> and sign in with your SD44 account.</li>
-                <li>Click on the "waffle" then open <strong>OneDrive</strong>.
-                    <div class="figure"><img src="/ict8/unit1/lesson2/1_onedrive.png" style="width:50%; height:auto;" alt="onedrive"></div>
-                </li>
-                <li>Create a new folder named <code>ICT 8</code>.</li>
-                <details>
-                    <summary>How to create a folder in OneDrive</summary>
-                    <ol>
-                    <li>Click <strong>+ New</strong> (top left).</li>
-                    <li>Choose <strong>Folder</strong>.</li>
-                    <li>Type <code>ICT 8</code> → press <kbd>Enter</kbd>.
-                        <div class="figure"><img src="/ict8/unit1/lesson2/2_create_new_folder.png" style="width: 40%; height:auto"  alt="new folder"></div></li>
-                    </ol>
-                </details>
-                <li>Inside <code>ICT 8</code>, create folders for each unit we will do.</li>
-                <ul>
-                    <li><code>1. Essential Skills</code></li>
-                    <li><code>2. Digital Media</code></li>
-                    <li><code>3. Game Development</code></li>
-                    <li><code>4. Web Development</code></li>
-                </ul>
-                <li>Now organize all the other files in your OneDrive.</li>
-                <ul>
-                    <li>Move any files that you created in Elementary School to a folder called <code>Elementary School</code>.</li>
-                    <li>Create a <code>Grade 8</code> folder.</li>
-                    <li>Create subject folders for each subject you are taking this year.</li>
-                    <li>Move any files you have for this year into the correct subject folder.</li>
-                    <li>Move your <code>ICT 8</code> files into your <code>Grade 8</code> folder.</li>
-                </ul>
-                </ol>
+      <!-- Activity A -->
+      <section class="card">
+        <h2>Activity A — Organize Your Folders</h2>
+        <p><strong>Goal:</strong> Set up your ICT folder so you always know where your work belongs.</p>
 
-                <p class="muted"><em>All work created in Unit 1 should be saved in your <code>1. Essential Skills</code> folder.</em></p>
-            </section>
+        <ol>
+          <li>Open <strong>OneDrive</strong>.</li>
+          <li>Create this folder structure:</li>
+        </ol>
 
-            <!-- Activity B -->
-            <section class="card">
-                <h2>Activity B - Organize Home Drive</h2>
-                <p><strong>Objective:</strong> Create your network folders so you can work at school</p>
-                <ol>
-                <li>Go to <code>File Manager</code> and click on <code>This Computer</code> and double click on your <code>H:</code> drive.</li>
-                    <div class="figure"><img src="/ict8/unit1/lesson2/3_home_drive.png" style="width:50%; height:auto;" alt="home drive"></div>
-                </li>
-                <li>Create a new folder named <code>Grade 8</code>.</li>
-                <details>
-                      <summary>How to Create a New Folder in File Manager</summary>
-                        <ol>
-                            <li>
-                            <strong>Open File Explorer</strong>
-                            <ul>
-                                <li>Click the <em>yellow folder</em> icon on your taskbar (bottom of the screen),</li>
-                                <li>or press <kbd>Windows</kbd> + <kbd>E</kbd> on your keyboard.</li>
-                            </ul>
-                            </li>
+        <pre><code>OneDrive
+└── Grade 8
+    └── ICT 8
+        └── 1. Essential Skills</code></pre>
 
-                            <li>
-                            <strong>Go to the Location You Want</strong>
-                            <ul>
-                                <li>In the left sidebar, click <strong>This PC</strong> → your <strong>H: Drive</strong> (student drive),</li>
-                                <li>then open the folder where you want to create your new folder.</li>
-                            </ul>
-                            </li>
+        <ol start="3">
+          <li>Open <strong>File Explorer</strong>.</li>
+          <li>Confirm you can see the same folders in your OneDrive location.</li>
+        </ol>
 
-                            <li>
-                            <strong>Create the Folder</strong>
-                            <ul>
-                                <li><strong>Option A:</strong> Right-click on a blank area → <strong>New</strong> → <strong>Folder</strong></li>
-                                <li><strong>Option B:</strong> Click <strong>New</strong> (or <strong>New Folder</strong>) on the top toolbar</li>
-                                <li><strong>Option C (shortcut):</strong> Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd></li>
-                            </ul>
-                            </li>
+        <p><strong>Most Lesson 1.2 files should be saved here:</strong></p>
+        <p><code>OneDrive → Grade 8 → ICT 8 → 1. Essential Skills</code></p>
 
-                            <li>
-                            <strong>Name Your Folder</strong>
-                            <ul>
-                                <li>Type the name (for example: <code>ICT8_Game_Project</code>) and press <kbd>Enter</kbd>.</li>
-                            </ul>
-                            </li>
+        <p><strong>Do not continue until this is done.</strong></p>
+      </section>
 
-                            <li>
-                            <strong>You're Done! 🎉</strong>
-                            <ul>
-                                <li>Double-click the new folder to open it.</li>
-                                <li>Save your files here from now on.</li>
-                            </ul>
-                            </li>
-                        </ol>
-                </details>
-                <li>Inside your <code>Grade 8</code> folder, create your <code>ICT 8</code> folder and a folder for each unit we will do.</li>
-                <ul>
-                    <li><code>1. Essential Skills</code></li>
-                    <li><code>2. Digital Media</code></li>
-                    <li><code>3. Game Development</code></li>
-                    <li><code>4. Web Development</code></li>
-                </ul>
-                <li>Now organize all the other files in your <code>H:</code> drive.</li>
-                </ol>
-            </section>
+      <!-- Most important rule -->
+      <section class="card">
+        <h2>The Most Important Rule in ICT</h2>
+        <p><strong>Never start typing or editing until you:</strong></p>
+        <ul class="list-tight">
+          <li>check where the file is saved</li>
+          <li>move it to the correct folder if needed</li>
+          <li>rename it clearly</li>
+          <li>turn <strong>Autosave ON</strong> (when available)</li>
+        </ul>
+        <p>This rule applies to <strong>every project</strong> you do this year.</p>
+      </section>
 
-            <!-- Activity C -->
-            <section class="card">
-            <h2>Activity C — Download &amp; Save Files</h2>
-            <p><strong>Objective:</strong> Practice moving a file from the website/Teams to your computer, then into OneDrive for editing in <em>Office Online</em></p>
+      <!-- Save locations -->
+      <section class="card">
+        <h2>Where Files Are Saved (This Explains Everything)</h2>
+        <p>
+          Not all files save to the same place. <strong>Where a file saves depends on how it is opened.</strong>
+          Understanding this now will save you a lot of frustration later.
+        </p>
 
-            <ol>
-                <li>Download the <a href="/ict8/unit1/lesson2/1_essential_skills_web_quest.docx" download>1.2 Essential Skills Web Quest</a> document</li>
-                <li>Save this file in your <code>1. Essential Skills</code> folder on your OneDrive.</li>
-                <li>Complete the tasks in the document. Make sure you do them all!</li>
-            </ol>
+        <h3>🖥️ When File Explorer Opens → H Drive</h3>
+        <p>This usually happens when:</p>
+        <ul class="list-tight">
+          <li>you download a file from a website</li>
+          <li>you export or download media</li>
+          <li>you choose <strong>Save As</strong> and browse folders</li>
+        </ul>
+        <p>Files saved this way live on your <strong>H Drive (school network)</strong>. This is normal and expected.</p>
 
-            </section>
+        <h3>☁️ When Word Opens First → OneDrive</h3>
+        <p>This usually happens when:</p>
+        <ul class="list-tight">
+          <li>you open a file from <strong>Teams</strong></li>
+          <li>you open Word and start a new document</li>
+          <li>Autosave is turned on</li>
+        </ul>
+        <p>Files saved this way usually live in <strong>OneDrive</strong>.</p>
 
-            <!-- Activity D -->
-            <section class="card">
-            <h2>Activity D — Download & Extract a ZIP Folder (Game Assets)</h2>
+        <h3>✅ In ICT 8</h3>
+        <p>Your work may be saved in <strong>OneDrive OR your H Drive</strong>. Both are OK.</p>
+        <p><strong>What matters is that:</strong></p>
+        <ul class="list-tight">
+          <li>the file is saved <strong>on purpose</strong></li>
+          <li>it is in your <strong>ICT folder</strong></li>
+          <li>you can find it quickly</li>
+          <li>you can submit it correctly</li>
+        </ul>
+      </section>
 
-            <p><strong>Objective:</strong> Download a ZIP file from a website, extract it, move it to the correct folder, and document the process.</p>
+      <!-- Activity B -->
+      <section class="card">
+        <h2>Activity B — File Downloaded from the Website</h2>
+        <p><strong>Where this file comes from:</strong> the class website (using <strong>Microsoft Edge</strong>).</p>
 
-            <ol>
-                <li>
-                <strong>Go to the download page</strong><br>
-                Open <strong>Microsoft Edge</strong> and go to:<br>
-                <a href="https://kenney.nl/assets/space-shooter-redux" target="_blank" rel="noopener">
-                    https://kenney.nl/assets/space-shooter-redux
-                </a>
-                </li>
+        <p>
+          When you click a download link in Edge, a box appears with options like <strong>Open</strong>,
+          <strong>Save</strong>, and <strong>Save As</strong>.
+        </p>
 
-                <li>
-                <strong>Download the ZIP file</strong>
-                <ul>
-                    <li>Scroll down and click the <strong>Download</strong> button.</li>
-                    <li>When Edge asks what to do, <strong>click Save</strong>.</li>
-                    <li>The file will download to your <strong>Downloads</strong> folder.</li>
-                </ul>
-                </li>
+        <p><strong>Choose ONE option:</strong></p>
 
-                <li>
-                <strong>Find the ZIP file</strong>
-                <ul>
-                    <li>Open <strong>File Explorer</strong>.</li>
-                    <li>Click <strong>Downloads</strong> on the left.</li>
-                    <li>Look for <code>space-shooter-redux.zip</code>.</li>
-                </ul>
-                </li>
-
-                <li>
-                <strong>Extract the ZIP file</strong>
-                <ul>
-                    <li>Right-click on <code>space-shooter-redux.zip</code>.</li>
-                    <li>Click <strong>Extract All…</strong></li>
-                    <li>A dialog box will appear asking where to extract the files.</li>
-                    <li><strong>Do not change anything</strong> — just click <strong>Extract</strong>.</li>
-                </ul>
-                </li>
-
-                <li>
-                <strong>Locate the extracted folder</strong>
-                <ul>
-                    <li>A new folder called <code>space-shooter-redux</code> will appear.</li>
-                    <li>This is the folder you will use (not the ZIP file).</li>
-                </ul>
-                </li>
-
-                <li>
-                <strong>Move the folder to your Game Development folder</strong><br>
-                Move the <code>space-shooter-redux</code> folder into:
-                <br><code>ICT 8 → Game Development</code>
-
-                <details>
-                    <summary>Ways to move the folder</summary>
-                    <ul>
-                    <li>
-                        <strong>Option A: Click & Drag</strong><br>
-                        Click and hold the folder, drag it to your <code>Game Development</code> folder, then release.
-                    </li>
-                    <li>
-                        <strong>Option B: Right-click → Cut / Paste</strong><br>
-                        Right-click the folder → <strong>Cut</strong><br>
-                        Open your <code>Game Development</code> folder → right-click → <strong>Paste</strong>
-                    </li>
-                    <li>
-                        <strong>Option C: Keyboard shortcuts</strong><br>
-                        Click the folder once → press <kbd>Ctrl</kbd> + <kbd>X</kbd><br>
-                        Open your <code>Game Development</code> folder → press <kbd>Ctrl</kbd> + <kbd>V</kbd>
-                    </li>
-                    </ul>
-                </details>
-                </li>
-
-                <li>
-                <strong>Take a screenshot</strong>
-                <ul>
-                    <li>Take a screenshot showing the <code>space-shooter-redux</code> folder inside your <code>Game Development</code> folder.</li>
-                    <li>Add this screenshot to your <strong>1.2 Essential Skills Webquest</strong>.</li>
-                </ul>
-                </li>
-            </ol>
-
-            <details>
-                <summary>What NOT to do (common mistakes)</summary>
-                <ul>
-                <li>❌ Do not work directly out of the <code>.zip</code> file.</li>
-                <li>❌ Do not move the ZIP file instead of the extracted folder.</li>
-                <li>❌ Do not change the extract location unless instructed.</li>
-                <li>❌ Do not delete the folder after extracting it.</li>
-                </ul>
-            </details>
-
-            <p class="muted"><em>Final check: the folder should NOT end in <code>.zip</code>.</em></p>
-            </section>
-
-
-            
-            
-
-
-            <!-- Reflection -->
-            <section class="card">
-            <h2>Activity E — Handing In Your Work</h2>
-            <p><strong>Objective:</strong> Learn how to find your files and attach them to a Teams assignment</p>
-
-            <ol>
-                <li>Go to teams and find <code>1.2 File Management Assignment</code></li>
-                <li>Attach the following documents:</li>
-                <ul>
-                    <li><code>1.2 Essential Skills Webquest.docx</code> located in your <strong>OneDrive</strong></li>
-                    <li><code>1.2 Essential Skills Webquest.pdf</code> located in your <strong>H: Drive</strong></li>
-                    <p class="muted">One is a <strong>Word document</strong> and the other is a <strong>PDF</strong>.</p>
-                </ul>
-                <li>Press the <code>Hand In</code> button to submit your work.</li>
-            </ol>
-
-            
-            </section>
-
-
-
-
-      </main>
-    
-      <!-- Lesson-specific right rail -->
-      <aside id="right-rail" aria-label="Resources">
-        <!-- Right Rail: Success Criteria -->
-        <section class="card">
-            <h2>At the beginning of class</h2>
-            <ul>
-                <li><a href="https://msahoysutherland.edclub.com/">TypingClub</a></li>
-                <li>Start with typing (15-20 minutes)</li>
-                <li>User name and password not working? See Ms. Ahoy</li>
+        <ul>
+          <li>
+            <strong>Option A — Save</strong>
+            <ul class="list-tight">
+              <li>Click <strong>Save</strong> (the file goes to <strong>Downloads</strong>)</li>
+              <li>Move it to: <code>OneDrive → Grade 8 → ICT 8 → 1. Essential Skills</code></li>
             </ul>
-        </section>
-        
-        <section class="card">
+          </li>
+          <li>
+            <strong>Option B — Save As</strong>
+            <ul class="list-tight">
+              <li>Click <strong>Save As</strong></li>
+              <li>Save directly to: <code>OneDrive → Grade 8 → ICT 8 → 1. Essential Skills</code></li>
+            </ul>
+          </li>
+        </ul>
+
+        <p><strong>Do NOT choose “Open” when downloading from a website.</strong></p>
+
+        <p style="margin-top:12px;"><strong>Download file:</strong></p>
+        <!-- TODO: update href to match your real site path -->
+        <p>
+          <a href="/ict8/unit1/lesson2/1.2_Website_Download_Practice.docx" download>
+            1.2_Website_Download_Practice.docx
+          </a>
+        </p>
+
+        <ol>
+          <li>Rename the file to: <code>1.2_File_Practice_[YourName]</code></li>
+          <li>Open the file and complete <strong>all tasks inside it</strong>.</li>
+        </ol>
+      </section>
+
+      <!-- Activity C -->
+      <section class="card">
+        <h2>Activity C — File from a Teams Assignment</h2>
+        <p><strong>Where this file comes from:</strong> a Teams assignment attachment.</p>
+
+        <p>
+          <strong>Important:</strong> Teams makes a copy for you, but it is not saved in your ICT folder.
+          You must move it before you start typing.
+        </p>
+
+        <ol>
+          <li>Open the Word file from the Teams assignment.</li>
+          <li><strong>Do not start typing.</strong></li>
+          <li>Go to <strong>File → Save As</strong>.</li>
+          <li>Save it to: <code>OneDrive → Grade 8 → ICT 8 → 1. Essential Skills</code></li>
+          <li>Rename it to: <code>1.2_File_Practice_[YourName]</code></li>
+          <li>Turn <strong>Autosave ON</strong> (when available).</li>
+          <li>Complete <strong>all tasks inside the document</strong>.</li>
+        </ol>
+      </section>
+
+      <!-- Activity D -->
+      <section class="card">
+        <h2>Activity D — Shared File in Teams</h2>
+        <p><strong>Where this file comes from:</strong> Teams → <strong>Shared</strong>.</p>
+
+        <p><strong>Rule:</strong> Shared files belong to the class. Use <strong>Save a copy</strong> before you edit.</p>
+
+        <ol>
+          <li>Open the shared file in <strong>Teams → Shared</strong>.</li>
+          <li>Choose <strong>Save a copy</strong>.</li>
+          <li>Save the copy to: <code>OneDrive → Grade 8 → ICT 8 → 1. Essential Skills</code></li>
+          <li>Rename it clearly.</li>
+          <li>Complete <strong>all tasks inside the document</strong>.</li>
+        </ol>
+      </section>
+
+      <!-- Activity E -->
+      <section class="card">
+        <h2>Activity E — Creating a New File</h2>
+        <p><strong>Where this file comes from:</strong> you create it in Word (blank document).</p>
+
+        <p><strong>Rule:</strong> Save first, then work.</p>
+
+        <ol>
+          <li>Open <strong>Word</strong>.</li>
+          <li>Create a <strong>new blank document</strong>.</li>
+          <li>Immediately go to <strong>File → Save As</strong>.</li>
+          <li>Save it to: <code>OneDrive → Grade 8 → ICT 8 → 1. Essential Skills</code></li>
+          <li>Name the file: <code>1.2_New_File_Practice_[YourName]</code></li>
+          <li>Turn <strong>Autosave ON</strong> (when available).</li>
+          <li>Complete the task inside your document.</li>
+        </ol>
+      </section>
+
+      <!-- Looking ahead -->
+      <section class="card">
+        <h2>Looking Ahead (Important Setup for Later)</h2>
+        <p>Later in ICT 8, you will create:</p>
+        <ul class="list-tight">
+          <li>posters</li>
+          <li>images</li>
+          <li>videos</li>
+          <li>other media files</li>
+        </ul>
+
+        <p>
+          These files often do <strong>not</strong> auto-save. They are usually <strong>downloaded</strong>, which opens
+          <strong>File Explorer</strong>. When that happens, files will usually save to your <strong>H Drive</strong>.
+        </p>
+
+        <p>
+          This is expected. We will practise this again when we start Digital Media.
+          Today, you are learning <strong>how files behave</strong>.
+        </p>
+      </section>
+
+      <!-- Screenshot Reminder -->
+      <section class="card">
+        <h2>Screenshot Reminder</h2>
+        <p>Each document will ask you to include <strong>one screenshot</strong> as proof you saved the file correctly.</p>
+
+        <p><strong>Your screenshot must show:</strong></p>
+        <ul class="list-tight">
+          <li><strong>File Explorer</strong></li>
+          <li>the <strong>file name</strong></li>
+          <li>the file inside the correct folder</li>
+        </ul>
+
+        <p><strong>Shortcut:</strong> <code>Windows + Shift + S</code> (screenshot) → <code>Ctrl + V</code> (paste into Word)</p>
+      </section>
+
+      <!-- Success Criteria -->
+      <section class="card">
         <h2>Success Criteria</h2>
         <ul>
-            <li>Folders created correctly: </li>
-            <li>Practice files saved and renamed</li>
-            <li>Reflection file saved</li>
-            <li>Files stored in both <strong>H:</strong> drive and <strong>OneDrive</strong></li>
-            <li>Autosave verified in Office Online</li>
+          <li>☐ My folders are organized correctly</li>
+          <li>☐ I completed all file tasks</li>
+          <li>☐ My files are saved intentionally (I know where they are)</li>
+          <li>☐ All files are renamed clearly</li>
+          <li>☐ Autosave is ON when available</li>
+          <li>☐ Each document includes a screenshot</li>
         </ul>
-        </section>
+      </section>
 
+      <!-- Why it Matters -->
+      <section class="card">
+        <h2>Why This Matters</h2>
+        <p>
+          Good file management prevents lost work, makes submitting assignments easier,
+          and prepares you for Digital Media, Game Development, and Web Development.
+          These are <strong>essential ICT skills</strong>.
+        </p>
+      </section>
 
+    </main>
 
-      </aside>
-    </div>
-    
-    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
-  </body>
+    <!-- Lesson-specific right rail -->
+    <aside id="right-rail" aria-label="Resources">
+
+      <div class="card">
+        <strong>Main save location</strong>
+        <ul class="list-tight">
+          <li><code>OneDrive → Grade 8 → ICT 8 → 1. Essential Skills</code></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>Remember</strong>
+        <ul class="list-tight">
+          <li>Word often saves to <strong>OneDrive</strong></li>
+          <li>Downloads often save to <strong>H Drive</strong></li>
+          <li><strong>Check before typing</strong></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>File naming</strong>
+        <ul class="list-tight">
+          <li><code>1.2_File_Practice_[YourName]</code></li>
+          <li><code>1.2_New_File_Practice_[YourName]</code></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>Screenshot shortcut</strong>
+        <ul class="list-tight">
+          <li><code>Windows + Shift + S</code> (capture)</li>
+          <li><code>Ctrl + V</code> (paste into Word)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>Quick links</strong>
+        <ul class="list-tight">
+          <li><a href="https://teams.microsoft.com/" target="_blank" rel="noopener">Microsoft Teams</a></li>
+          <li><a href="https://www.office.com/" target="_blank" rel="noopener">Office.com (Word / OneDrive)</a></li>
+        </ul>
+      </div>
+
+    </aside>
+  </div>
+
+  <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+</body>
+
 </html>
-  
