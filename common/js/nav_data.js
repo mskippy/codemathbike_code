@@ -18,7 +18,7 @@ window.NAV_DATA = {
           pages: {
             lesson1: { title: "1.1 Welcome to ICT 8",       href: "/ict8/unit1/lesson1/1.1_index.html" },
             lesson2: { title: "1.2 File Management",        href: "/ict8/unit1/lesson2/1.2_index.html" },
-            lesson3: { title: "1.3 Parts of My Computer",   href: "/ict8/unit1/lesson3/1.3_index.html" },
+            lesson3: { title: "1.3 Downloading & Extracting",   href: "/ict8/unit1/lesson3/1.3_index.html" },
           }
         },
         unit2: {
