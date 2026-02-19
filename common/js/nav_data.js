@@ -47,9 +47,9 @@ window.NAV_DATA = {
         },
         unit4: {
           title: "U4 Web Development",
-          href: "/ict8/unit4/index.html",
+          href: "/ict8/unit4/u4_index.html",
           pages: {
-            lesson1: { title: "Editing Your HTML",         href: "/ict8/unit4/edit_html_steps/u4_index.html" },
+            lesson1: { title: "Editing Your HTML",         href: "/ict8/unit4/edit_html_steps/index.html" },
             lesson2: { title: "All Done? Do This!",        href: "/ict8/unit4/u4_extension.html" },
             lesson3: { title: "Showcase Sites",            href: "/ict8/unit4/web_dev/master_index.html" }
           }
