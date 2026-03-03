@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://code.codemathbike.ca/ict8/unit4/templates/student_template -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage – Tessa</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like.">
+  <meta name="author" content="Your Name">
+
+      </head><body><p style="margin-top:12px;">
+        <a href="https://code.codemathbike.ca/ict8/unit4/web_dev/S2W1/s2w1_index.html">← Back to S2W1 class page</a>
+      </p>
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #ffcafc;
+      --ink: #1a1a1f;
+      --accent: #9b399e; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #fffcdd; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#d84dd8; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#fbceff; padding:2px 6px; border-radius:6px; }
+  </style>
+
+
+
+
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="Tessa">Tessa</span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      </p>
+       Some sports I enjoy are skiing and gymnastics. Other hobbies i have are sewing, volleyball and reading. Fun fact: Giraffes are 30x more likely to be struck by lightning than humans! A goal i have for this course is to get better at computing.
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiNkYaK8veSAxUgLDQIHRseIncQFnoECCAQAQ&url=https%3A%2F%2Fca.pinterest.com%2F&usg=AOvVaw2FaZWgQ7gUEpP9bI21uZsz&opi=89978449" target="_blank" rel="noopener">Pinterest</a></li>
+        <li><a href="https://thisissand.com/" target="_blank" rel="noopener">This Is Sand</a></li>
+        <li><a href="http://weavesilk.com/" target="_blank" rel="noopener">Silk Art</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Cute Owls!</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="https://plus.unsplash.com/premium_photo-1729791088946-c3994880b47c?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b3dsc3xlbnwwfHwwfHx8MA%3D%3D" alt="A pretty Owl Photo">
+  
+        <figcaption>Photo credit: Unsplash</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">What do you call a bear with no teeth?</p>
+      <button type="button" onclick="myFunction()">Why?</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p> In this course i learned about different aspects of web developement including HTML, CSS, and Javascript. I enjoyed adding a photo of two owls because I could find any photo that I like to make my web page more personal.
+  
+      </p> My favourite part of this course was the design part where I could make my project look unique and pretty. I especially like changing the colors to my favourite color.
+      
+    
+    
+    
+
+    
+    <footer>
+      <p>
+        Built by Tessa Bird. Last updated: 2026-03-02<span id="lastUpdated"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "A Gummy bear!";
+    }
+  </script>
+<script defer="" src="../../../../Working%20files/Tessa%20Bird/U4%20Web%20Development/My%20First%20Webpage%20–%20Your%20Name_files/v67327c56f0bb4ef8b305cae61679db8f1769101564043" integrity="sha512-rdcWY47ByXd76cbCFzznIcEaCN71jqkWBBqlwhF1SY7KubdLKZiEGeP7AyieKZlGP9hbY/MhGrwXzJC/HulNyg==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;890e296de4ab443083747c565b7457a5&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+</body></html>

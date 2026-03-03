@@ -1,0 +1,121 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage - Patricia S</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Patricia Santiago" />
+
+      <p style="margin-top:12px;">
+        <a href='/ict8/unit4/web_dev/S2W1/s2w1_index.html'>← Back to S2W1 class page</a>
+      </p>
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #fcebf7;
+      --ink: #1a1a1f;
+      --accent: #e775aa; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #fff; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#f3f3f6; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="studentName">Patricia S</span> </h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me۫ ꣑ৎ   .</h2>
+      <p>
+        I’m a creative person who loves music and writing, and I express myself through poetry. As a student,
+         I enjoy sharing stories in meaningful ways. I see myself as thoughtful, artistic, and always growing.
+         
+    
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://ca.pinterest.com/" target="_blank" rel="noopener">Pinterest</a></li>
+        <li><a href="https://www.roblox.com/" target="_blank" rel="noopener">Roblox</a></li>
+        <li><a href="https://www.hollisterco.com/" target="_blank" rel="noopener">Hollister</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Starry Night by Van Gogh</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="https://cdn.britannica.com/78/43678-050-F4DC8D93/Starry-Night-canvas-Vincent-van-Gogh-New-1889.jpg?w=1000" alt="A cool nature image from Unsplash" />
+        <figcaption>Photo credit: britannica</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">Why do seagulls fly over the ocean?</p>
+      <button type="button" onclick="myFunction()">Drumroll, Please...</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p>In the Essential Skills & Digital Literacy unit, I liked learning how to stay organized, but it was a bit tough remembering all the different tech terms. I really want to learn more about keeping my accounts safe from hackers, and I’ll definitely use the file saving skills I learned so I don't lose my homework in the future. For Digital Media, I had a blast designing on Canva, though figuring out Excel formulas was pretty confusing. I’d love to learn more about making professional graphics, which will help me if I ever need to make a flyer or a presentation for school.
+Building a webpage in Web Development was my favorite part of the whole class because it felt easy to see my work right away. The Game Development unit with GDevelop was the hardest part because of all the coding logic, but that actually makes me want to learn more about how "coding and stuff" works so I can make better games. I’ll use my web skills to make a cool personal site one day, and I'll use the problem-solving I learned in GDevelop to help me fix tech issues when they pop up.
+ 
+</p>
+      
+    </section>
+    
+    
+    
+    <footer>
+      <p>
+        Built by <strong>Patricia Santiago</strong>. Last updated: 02/26/26<span id="lastUpdated"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "Because if they flew over the bay, they’d be bagels.";
+    }
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v67327c56f0bb4ef8b305cae61679db8f1769101564043" integrity="sha512-rdcWY47ByXd76cbCFzznIcEaCN71jqkWBBqlwhF1SY7KubdLKZiEGeP7AyieKZlGP9hbY/MhGrwXzJC/HulNyg==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

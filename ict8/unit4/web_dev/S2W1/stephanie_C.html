@@ -1,0 +1,127 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage – stephanie C </title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="stephanie" />
+
+      <p style="margin-top:12px;">
+        <a href='/ict8/unit4/web_dev/S2W1/s2w1_index.html'>← Back to S2W1 class page</a>
+      </p>
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #b8cbd3;
+      --ink: #588688;
+      --accent: #52726e; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #fff; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#ffffff; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="studentName">stephanie!😺</span> </h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        Sports and hobbies I'm into are playing volleyball, figure skating or skating in general, but mose of all, acro! Acro is a short term of acrobatics, and the style I do is the tumbling on hard floor! I speak 3 languages but 2 fluently. The ones fluent being tagalog and english! And i'm still learning french. A fun fact about me is I have a hidden scar about 1 inch long underneath my baby hairs at the very top of my forehead!
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwil0u_SmPqSAxWAPDQIHVxLCJMQFnoECBYQAQ&url=https%3A%2F%2Fca.pinterest.com%2F&usg=AOvVaw2FaZWgQ7gUEpP9bI21uZsz&opi=89978449" target="_blank" rel="noopener">pinterest</a></li>
+        <li><a href="https://www.google.com/aclk?sa=L&ai=DChsSEwjF7-X9mPqSAxUcFK0GHdaJKdoYACICCAEQChoCcHY&co=1&gclid=EAIaIQobChMIxe_l_Zj6kgMVHBStBh3WiSnaEAAYASAAEgK_svD_BwE&cid=CAASugHkaOIymVde_FVGBCpcU5YEvCkXnp7bTcGLOeuJz7LKZrICsxq9OAgJNTAzOWUau112FQZiIL8nOgGegDPFCQVwgDgGPOfp6N7aq5A10_4NdqtoKldD3i6sTvBmyvVRbIVksBIiOjX1x8Ff23ESMN6P9Uaf2-WGUgGjfMHiX-94oBBLgSnDb3uSgWnMMbqDTC2-Cw7pbe8GpFfsp11QlVFcU8uA0Wv5puEDCDA4hFcw25C2_yzpXXRXZ-I&cce=2&sig=AOD64_0OPnb9D-3NG-doQXzklGj2sWZhFA&q&adurl&ved=2ahUKEwiZ3uD9mPqSAxUMHjQIHTRoO9EQ0Qx6BAgOEAE" target="_blank" rel="noopener">aritzia</a></li>
+        <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiO6pOTmfqSAxXqGDQIHRwKCfkQFnoECDEQAQ&url=https%3A%2F%2Fwww.roblox.com%2F&usg=AOvVaw31obxNSZwdX-aiiNZtVHXn&opi=89978449" target="_blank" rel="noopener">roblox</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image linkts/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="https://i.pinimg.com/236x/7a/6c/79/7a6c796fc828edf0f886f2bc03a83d61.jpg" alt="A cool nature image from Unsplash" />
+        <figcaption>Photo credit: pinterest</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">Why did the rabbit skip school?</p>
+      <button type="button" onclick="myFunction()">Why?</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p><strong>game development</strong></p>
+
+      <p>During my game development, I enjoyed making and playing my space shooter game. Things I found troubling were certain small steps that I could have missed and resulted me into starting over. I would like to learn is definitely making another game witha different theme/objective! I'd use this info when I will be trasitioning into grade 9 ICT.
+
+        <p> <strong> web development</strong></p>
+        <p></p>Through my web development, I enjoyed seeing my website come together beatifully. what I found troubling was understanding the concepts and which letters to replace in the coding. Something I'd like to learn more about is how to make a more bigger an sophisticated web page. I'd use this info in the future for any advertisements I would need to show.
+        <p><strong>digital media</strong></p>
+        <p>Something I enjoyed during digital media is making the projects on canva, like the about me poster and the photoshopping! I didn't findanything troubling though it was frustrating when the erasing something to big from the photo, leaves an obvious blur. Something I'd like to learn is how to get rid of that blur or make it more subtle. This would help me in the futrue when taking care of photo bombers!
+          <p><strong>essential skills</strong></p>
+          <p>I enjoyed colouring and making my one drive folders. What I found challeging was making all the how to posters and handing them in on time. Something I'd to learn more about would be how to make organizing less time consuming if thats possible. This would helo me in the future when I would need to find specific files when needed.</p>
+        </p>
+      
+      </p>
+      
+    </section>
+    
+    
+    
+    <footer>
+      <p>
+        Built by <strong>stephanie</strong>. Last updated: <span id="lastUpdated"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "Because it was having a bad HARE day!";
+    }
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v67327c56f0bb4ef8b305cae61679db8f1769101564043" integrity="sha512-rdcWY47ByXd76cbCFzznIcEaCN71jqkWBBqlwhF1SY7KubdLKZiEGeP7AyieKZlGP9hbY/MhGrwXzJC/HulNyg==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

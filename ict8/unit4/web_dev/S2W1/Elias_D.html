@@ -1,0 +1,136 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage – Elias D</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Elias DuMerton" />
+
+      <p style="margin-top:12px;">
+        <a href='/ict8/unit4/web_dev/S2W1/s2w1_index.html'>← Back to S2W1 class page</a>
+      </p>
+
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #87e2f1;
+      --ink: #1a1a1f;
+      --accent: #802ddf; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #d9fffe; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#ffffff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#ffffff; padding:2px 6px; border-radius:6px; }
+    .video-container {
+  width: 100%; /* or a specific large pixel value, e.g., 800px */
+  aspect-ratio: 16 / 9;
+}
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+}
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="studentName">Elias D</span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        Some of my hobbies and activites are playing soccer, piano, video games like Animal Crossing New Horizions, and watching movies like Star Wars. I enjoy skiing with my family and friends as well as wakeboarding in the summer in Osoyoos, BC. A fun fact about me is my favourite sports team is the Vancouver Canucks and I like going to their games! At school I'm interested in Social Studies and Science. My goal for this course was to learn more about using computers and technology.
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://outlook.office365.com/mail/" target="_blank" rel="noopener">Email</a></li>
+        <li><a href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://www.nhl.com/standings/" target="_blank" rel="noopener">NHL Standings</a></li>
+      </ul>
+      <h2>My Space Shooter Game!</h2>
+       <a href="https://gd.games/games/bd3d56dd-70ad-49a0-847b-8f4241027137" target="_blank" rel="noopener">Space Shooter Game</a></li>
+    </section>
+    
+  
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="https://images.unsplash.com/photo-1599148874821-a3aa38f27ede?q=80&w=1167&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Whister Peak 2 Peak" />
+        <figcaption>Photo credit: Unsplash</figcaption>
+        <firgrecaption> Whistler Peak 2 Peak, Whistler, BC, Canada</firgrecaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">Why are mountains so funny?</p>
+      <button type="button" onclick="myFunction()">Find Out!</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p>In Essential Skills & Digital Literacy I enjoyed learning about how to create folders to organize my documents and files and learning to save files to different locations. I found it most challenging to save files that were not created on my OneDrive to my OneDrive but handled it by practicing it and eventually got it. I can use these skills when doing schoolwork and in the future a job but would like to get more efficient at saving files to different locations. In Digital Media I learned to create posters in Canva, and edit images, but enjoyed using formulas in Excel the most. It was challenging to make more complex formulas in Excel (Triangle Classification Challenge), and I handled it by trying different things and searching up formulas if I was still stuck. I can use these skills in the future when creating budgets, designing advertisements, creating resumes, and would like to learn to use more advanced photo editing tools.</p>
+
+      <p>The second half of the class had larger projects like game development and building a webpage. In Game Development, I learned to create a simple space shooter game in Gdevelop and enjoyed adding powerups like a shield and health reset the most because it made the game more engaging. I found adding a high score system was the most challenging, but I handled it by using Google Search and experimenting with storage actions. These skills could be useful when creating a small game and I would like to learn about making a more interesting enemy that can fly in different directions. In Web Development, I learned to edit a simple website and enjoyed putting my favorite links and a cool image in it. These skills could be useful when running a business and creating a simple website to show products and sell online in the future, but it would be useful to learn more about the code that goes into a website. ICT 8 really helped me improve my computer literacy and gave me skills that will help me at school and at jobs.</p>
+
+    </section>
+   <h2>Youtube Video</h2>
+    <div class="video-container">
+      <iframe 
+    src="https://www.youtube.com/embed/E-XFfvcXYBc" 
+    title="YouTube video player" allowfullscreen
+    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+     <figcaption>Milano Cortina 2026 Men's Slopestyle Final Runs</figcaption>
+</div>
+    
+    
+
+    <footer>
+      <p>
+        Built by <strong>ELias D</strong>. Last updated: <span id="lastUpdated">March 2, 2026</span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "Because they're hill-arious.";
+    }
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v67327c56f0bb4ef8b305cae61679db8f1769101564043" integrity="sha512-rdcWY47ByXd76cbCFzznIcEaCN71jqkWBBqlwhF1SY7KubdLKZiEGeP7AyieKZlGP9hbY/MhGrwXzJC/HulNyg==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

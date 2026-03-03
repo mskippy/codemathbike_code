@@ -1,0 +1,117 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage – Mason Richardson
+
+  </title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Mason Richardson" />
+
+      <p style="margin-top:12px;">
+        <a href='/ict8/unit4/web_dev/S2W1/s2w1_index.html'>← Back to S2W1 class page</a>
+      </p>
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #fdcf02;
+      --ink:#fdcf02;
+      --accent: #ff0000; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #a94acf; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(218, 255, 9, 0);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#f7f7f7; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#ffffff; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="Mason">Mason Richardson</span> 👋</h1>
+      <p>Welcome To my first webpage for ICT 8. I built this in VS code using HTMl, CSS and a tiny bit of java Script</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I like to play basketball and go to the gym. a fun fact about me is that i used to hate basketball but now it is my favourite sport. My goal for this course was to understand computers and code more and i can cofidently say i have completed this goal.
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://www.footlocker.ca" target="_blank" rel="noopener">FootLocker</a></li>
+        <li><a href="https://bro-mon.world" target="_blank" rel="noopener">Bro-Mon</a></li>
+        <li><a href="https://open.spotify.com" target="_blank" rel="noopener">Spotify</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="data:image/jpeg;base64,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" alt="A cool nature image from Unsplash" />
+        <figcaption>Photo credit: Pintrest</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">What would bears be without bees?</p>
+      <button type="button" onclick="myFunction()">What?</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p>Overall this course was super fun and exciting but I struggled on the game making. It was super cool to lern how to code and organize files and get better at typing. in conclusion this was a fun class and i would think about doing it again.</p>
+      
+    </section>
+    
+    
+    
+    <footer>
+      <p>
+        Built by <strong>Mason Richardson</strong>. Last updated: <span id="lastUpdated"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "Ears.";
+    }
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v67327c56f0bb4ef8b305cae61679db8f1769101564043" integrity="sha512-rdcWY47ByXd76cbCFzznIcEaCN71jqkWBBqlwhF1SY7KubdLKZiEGeP7AyieKZlGP9hbY/MhGrwXzJC/HulNyg==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

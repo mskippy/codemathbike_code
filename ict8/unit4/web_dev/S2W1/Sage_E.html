@@ -1,0 +1,120 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage – Sage E</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Sage E" />
+
+      <p style="margin-top:12px;">
+        <a href='/ict8/unit4/web_dev/S2W1/s2w1_index.html'>← Back to S2W1 class page</a>
+      </p>
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: lch(71.94% 37.99 320.25);
+      --ink: #1a1a1f;
+      --accent: #d397df; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #fff; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#f3f3f6; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="studentName">Sage E</span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        My name is Sage! I am 13 years old and in grade 8. My favourite hoobies and activities include soccer, rock climbing, skiing, reading, drawing, and knitting!
+        I live with my parents and younger brother, and my favourite food is pizza. My goal for this course is to get better at typing and learn how to properly organize my files in my computer.
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://ca.pinterest.com/opener">Pinterest</a></li>
+        <li><a href="https://www.popmart.com/ca">Labubu</a></li>
+        <li><a href="" target="https://www.aritzia.com/en" rel="noopener
+        "> Aritzia</a></li>
+         <li><a href="https://gd.games/games/26cd9517-a312-482d-b490-be759547ab5b">My Game</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg" alt="Puppies!!" />
+        <figcaption>Photo credit: Chevanon Photography</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">What do you call an alligator in a vest??</p>
+      <button type="button" onclick="myFunction()">What?</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p>In this course, I learned a lot about saving files properly, using diferent applications like Canva, Excel, GDevelop, and VS code, coding, and web development.
+      In Unit 1, I learned about properly saving files to OneDrive and the H Drive. My favourite part about this unit was creating all of the folders, I enjoyed naming and organizing all of my subjects and adding a different colour for each folder. One thing that was challenging for me in this unit was unzipping files, as it was a bit harder to remember than just saving a file. I would like to learn more about the features in the H drive, because there are a lot of helpful ones that I could use in the future. I will use what I learned in this unit for the rest of my school career and beyond, as it is very important to keep your files organized, eepecially in upcoming grades.
+    In unit 2, I learned about designing in Canva, using Excel, and editing images. My favourite part was editing photos in Canva, I loved exploring the features I hadn't used before, but I found Excel challenging because it was completely new to me. I would like to learn more about Excel, although I know that what I learned will help me a lot in the future, to create charts, tables, and spreadsheets. In Unit 3, I learned about game development, and my favourite part was adding my own features to the game to make it feel more complex. Although I liked adding my own features, it was also a challenge because I didn't have the instructions I had to code the other elements of the game. In Unit 4, I coded my own webpage with VS Code, my favourie part being changing the photo and colours to make it look more my own. The most challenging part for me was finding the right places to insert my text within the code, but I want to learn more about it so that I can eventually code things from scratch. I will also have some experience at making a webpage if I need to in the future! Overall, I enjoyed this course and learned a lot! </p>
+      My goal for this course was to improve at typing and organizing my files within my computer, and I acheived that goal, by relearning how to place my hands properly on the keyboard, and creating differnt folders in my file explorer and OneDrive for different subjects.
+    </section>
+    
+    
+  
+    <footer>
+      <p>
+        Built by <strong>Sage E</strong>. Last updated: <span id="lastUpdated"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "An investigator!";
+    }
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v67327c56f0bb4ef8b305cae61679db8f1769101564043" integrity="sha512-rdcWY47ByXd76cbCFzznIcEaCN71jqkWBBqlwhF1SY7KubdLKZiEGeP7AyieKZlGP9hbY/MhGrwXzJC/HulNyg==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
