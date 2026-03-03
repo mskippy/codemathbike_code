@@ -1,0 +1,149 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage – Paris s</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Pais s" />
+
+      <p style="margin-top:12px;">
+        <a href='/ict8/unit4/web_dev/S2W1/s2w1_index.html'>← Back to S2W1 class page</a>
+      </p>
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #51f7f7;
+      --ink: #ffffff;
+      --accent: #ffffff; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #cba9e7; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(255, 255, 255, 0.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#ffffff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#ffffff; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="studentName">Paris s</span  </h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        Hi. My name is Paris. I like watching YouTube, TV shows and movies with my Guinea pig named Clover. In my spare time, I’m either bedazzling or building Lego botanical sets.  
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://puginarug.com/" target="_blank" rel="noopener">Pug in the Rug</a></li>
+        <li><a href="https://neal.fun/" target="_blank" rel="noopener">Games and Stuff by Neal</a></li>
+        <li><a href="https://weirdorconfusing.com/" target="_blank" rel="noopener">Weird or Confusing</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Adorable Animal</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTl2pMAGesb31bOfGlZ7SdkUbhzLTiLo6hG_Tzcv4q-WAyhQom0" width="650"  alt="A cool nature image from Unsplash" />
+        <figcaption>Photo credit: SPCA</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">What did the scarecrow win an award for?</p>
+      <button type="button" onclick="myFunction()">what?</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p><strong>Essential Skills </strong><br />
+I learned about file management, creating folders on the H drive, and unzipping files. I created how-to posters to show the steps for the things I learned. </p>
+
+<p>
+  <strong>Digital Media </strong><br />
+In Digital Media I worked in Canva, learned how to use Excel and worked on image editing (before and after photo).
+</p>
+
+<p>
+  <strong>Game Development</strong><br />
+In game development I made a side scrolling space shooter using GDevelop. 
+</p>
+
+<p>
+  <strong>Web Development </strong><br />
+In Web Development I learned to edit HTML. This included changing font sizes, colors, links and images.
+</p>
+<br />
+<hr />
+<p>
+<strong>What you enjoyed most</strong><br />
+
+I enjoyed the photo editing and the web page editing the most. <br /><br />
+
+<strong>What you found challenging? </strong><br />
+I found Excel and game development the most challenging. <br /><br />
+
+<strong>What would you like to learn more about? </strong><br />
+I would like to learn more about web development by trying out more advanced features. <br /><br />
+
+<strong>How you might use what you learned in the future? </strong><br />
+I will definitely use image editing and web development in the future. 
+
+</p>
+
+
+    </section>
+    
+    
+    
+    <footer>
+      <p>
+        Built by <strong>Your Name</strong>. Last updated: <span id="lastUpdated"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "He was outstanding in his field.";
+    }
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v67327c56f0bb4ef8b305cae61679db8f1769101564043" integrity="sha512-rdcWY47ByXd76cbCFzznIcEaCN71jqkWBBqlwhF1SY7KubdLKZiEGeP7AyieKZlGP9hbY/MhGrwXzJC/HulNyg==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
