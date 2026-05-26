@@ -1,0 +1,115 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage – Isabel H</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Your Name" />
+
+      <p style="margin-top:12px;">
+        <a href='/ict8/unit4/web_dev/S2W1/s2w3_index.html'>← Back to S2W3 class page</a>
+      </p>
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #ffae625d;
+      --ink: #1a1a1f;
+      --accent: #fd941c; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #fff; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#f3f3f6; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="studentName">Isabel H</span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        Some of my interest include running, playing tennis, baking, and learnng new languages. A fun fact about me is that I like trying new things. I enjoy competing in track and field, and like to see how I improve over time. A goal I had set for myself before coming to this class was to become more comftorable around computers and learn the basics of coding. 
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://www.norwesterstandf.com/" target="_blank" rel="noopener">Norwesters</a></li>
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://open.spotify.com/" target="_blank" rel="noopener">Spotify</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="https://i.pinimg.com/736x/42/d1/94/42d1940c9a7a40664da156c40a277d26.jpg" alt="A cool nature image from Unsplash" />
+        <figcaption>Photo credit: Cartier - a sunset on a beach</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">What did the beach say to the tide when it came in?</p>
+      <button type="button" onclick="myFunction()">What?</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p>In essential skills and literacy, I enjoyed organizng all my folders because I've always enjoyed organizing anything I got my hands on. I found making the how to posters slightly challenging because sometimes I had trouble explaining the next step. I got over this challenge by thinking through everything I had done before the certain step, and going through the process again. I would like to learn more about extracting ZIP files because I found it interesting. In the future I can use the skills I learned in this unit when I'm organzing my files on my computer. In digital media I enjoyed creating the about me posters because I was able to add whatever I wanted and customize it. A challenge I had was when we graphed data on the excel sheets. In the beginning I simply didn't understand so I had to ask for help. After this everything else went smoothly. I would like to learn more about photo editing because I'm interested in photography, so I found editing images fun. I could use the skills I learned in this unit in the future when I'm editing images or creating digital posters for marketing. In game development I enjoyed creating the video game because I liked how you need to really think when you do something wrong so you can fix the mistake. I found adding extensions like adding a get ready screen or a game over screen really challenging, specifically when I didn't have much time to attempt to build one. I would like to learn more about coding in general because I found it fun and it suprisingly wasn't too complicated. I could use these skills in the future when I am coding different things with my dad. In our last unit, web development, I enjoyed customizing my web page to what I wanted it to be. If I'm being honest, I didn't really find this unit challenging as I found it pretty straight forward. I would like to learn more about writing code so I could build things from scratch. I could use the skills I learned in this unit when I'm creating websites or writing code in different settings.</p>
+      
+    </section>
+    
+    
+    
+    <footer>
+      <p>
+        Built by <strong>Isabel H</strong>. Last updated: May 20 2026 <span id="lastUpdated"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "Long time, no sea!";
+    }
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
