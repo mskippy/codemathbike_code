@@ -1,0 +1,152 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage – Ethan RK</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Your Name" />
+
+      <p style="margin-top:12px;">
+        <a href='/ict8/unit4/web_dev/S2W4/s2w4_index.html'>← Back to S2W4 class page</a>
+      </p>
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #f7f7fb;
+      --ink: #1a1a1f;
+      --accent: #4f46e5; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #fff; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#f3f3f6; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, my name is  <span id="Ethan Roy-Krayenhoff">Ethan Roy-Krayenhoff</span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        My full name is Ethan Roy-
+Krayenhoff​,
+
+I am 14 years old ​,
+
+I was born march 28 2012 at
+lions gate hospital​,
+
+I was raised in Vancouver my
+entire life​,
+
+I am currently in grade 8 at
+Sutherland​,
+
+I used to go to Eastview​ elementry. Some of my interests are Biking, playing basketball, soccer and video-games. Fun fact: I have never traveled out of canada. For my ICT goal I want to go beyond just playing games and learn how to code one.​
+
+ This will help me level up my skills, because I'll understand how the game mechanics work behind the scenes.​
+
+To achieve this goal I’ll start by learning a coding language like Python through online tutorials and aim to have a playable mini game by 2030.
+
+
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://workspace.google.com/intl/en-US/gmail/" target="_blank" rel="noopener">Gmail</a></li>
+        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">Youtube</a></li>
+        <li><a href="https://editor.gdevelop.io/browser_sw_preview/1/preview/index.html" target="_blank" rel="noopener">Gdevelop "Warning shooter game!!"</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="data:image/jpeg;base64,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" alt="A cool nature image from Unsplash" />
+        <figcaption>Photo credit: Unsplash</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something funny that is connected to ICT</h2>
+      <p id="pun">What is the biggest lie in the universe?</p>
+      <button type="button" onclick="myFunction()">What?</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p>
+      </p>
+      
+    </section>
+    
+    
+    
+    <footer>
+      <p>
+Over the time that I have spent in ICT, what I enjoyed the most was seeing everything eventually come together after spending many hours building my video game. Watching the mechanics finally click after putting in the work was incredibly satisfying. 
+
+Although the game design project was a lot of fun, it was definitely the most challenging part of the course for me. Simply understanding the logic of GDevelop, figuring out how to organize the event sheets, and getting the program's concepts down took a lot of effort. 
+
+One of the most valuable things I took away from this class wasn't just the coding, but learning how to save, organize, and work around the computer's storage. Even though managing files can feel a bit repetitive and boring at times, learning how to properly save and locate files has helped me immensely throughout the rest of school and on my own PC at home. 
+
+The biggest challenge I faced was figuring out how to track the health of the meteors and keeping my event sheet in order while trying to learn the software. It was also really tough at first when objects were vibrating and freezing in place, but I figured out how to stop the freezing by cleaning up the code and getting the timers and triggers to cooperate better. 
+
+I wanted the game to feel fun and responsive when you actually hit an obstacle. To do that, I figured out how to spawn explosions whenever you blast a meteor. Having those visual explosions pop up gives the player great feedback and makes shooting the lasers feel way more rewarding than just having objects disappear. 
+
+I still have some bugs to fully iron out with my mini boss phase, but a huge design fix I made during testing was switching to GDevelop’s built in Health behavior for the meteors. Instead of making things confusing with custom variables, the Health behavior automatically handles hit points cleanly and saved me from writing extra lines of messy code. 
+
+During this project, I discovered that I am a hardworking and creative problem solver. When my code wasn't working or things were breaking, it would have been easy to just give up. Sticking with it and hunting down the errors taught me that I have the patience to keep editing and testing until the mechanics actually work. 
+
+Moving forward, I plan to use the file explorer a lot more to organize my storage and keep my files nice and tidy. In the future, I want to jump back into GDevelop to fix the mini boss completely, create waves of different enemies, and add cool power ups like shield boosts or faster blasters. Finally, I plan on using the typing skills we practiced at the start of each ICT class to make all of my future school projects way faster and easier to complete. 
+
+  <strong></strong> <span id="lastUpdated"></span>
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "I have read and agreed to the terms and conditions.";
+    }
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage – Marlowe D</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Your Name" />
+
+      <p style="margin-top:12px;">
+        <a href='/ict8/unit4/web_dev/s2w4_/s2w4_index.html'>← Back to S2W4 class page</a>
+      </p>
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #bdf1fa;
+      --ink: #2c6877;
+      --accent: #5c65e4; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #fff; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#f3f3f6; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="studentName">Marlowe D.</span> 😊</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+       my hobby is doing different medieums of art and gaming with friends. One of my intrests is watching TV shows and movies. A fun fact about me is that i was almost cast on chip and potato but could not read so i didn't get the part. My goal for this course was to get good grades.
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://ca.pinterest.com/" target="_blank" rel="noopener">pintrest</a></li>
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://toytraders.ca/" target="_blank" rel="noopener">Toy Traders</a></li>
+      </ul>
+    </section> <h2>My GDevelop Game </h2> 
+            <li><a href="https://gd.games/c0olgurl/space-shooter---marlowe-dickie" target="_blank" rel="noopener">Space Shooter</a></li>
+    <section>
+      <h2>An Awesome Image of a Shar Pei</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="https://assets.wfcdn.com/im/29268808/compr-r85/2232/223211546/%22+Shar+Pei+Baby+Dog+%22+by+Kokimk.jpg" alt="A cool nature image from Unsplash" />
+        <figcaption>Photo credit: wayfair canada </figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">Why did the banana go to the doctor?</p>
+      <button type="button" onclick="myFunction()">Why?</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p>
+
+In ICT 8 we had four units, essential skills and digital literacy, digital media, game development, and web development.  
+
+In essential skills and digital literacy, I learned how to extract zip files, how to save a file to h-drive, how to save a file to one drive, and how to create folders in one drive and h-drive. I enjoyed learning about how to save a file to H-drive most because it was most useful. I found extracting zip files most challenging because I could not find the right buttons. I would like to learn more about extracting, saving, and organizing so my computer experience is smoother. I might use what I learnt on my future school projects or in a future job position. 
+
+In digital media, I learned how to edit photos and use Canva. I enjoyed designing my poster most because it gave me creative freedom. I found the Ai component most challenging because I don't particularly like supporting Ai so morally it was challenging. I would like to learn more about manual hand editing in photoshop. I might use these skills in future projects in classes or when I want to erase a photo bomber! 
+
+In Game development I learned how to create a video game! The thing I enjoyed most was creating and playing my game. The most challenging part was coding and spelling. I would like to learn more about game design and development as a future creative career. I might use these skills in a future job in tech and game design. 
+
+In web development, I learned how to personalize websites. The part I enjoyed most was customizing it and making it reflect me! The most challenging part was coding once again. I would like to learn more about web development and design. I could use this if I made a future art website! </p>
+      
+    </section>
+    
+    
+    
+    <footer>
+      <p>
+        Built by <strong>Marlowe D.</strong>. Last updated:2026-06-15 <span id="lastUpdated"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "Because he wasn't peeling well!";
+    }
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

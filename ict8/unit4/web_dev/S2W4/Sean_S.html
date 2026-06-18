@@ -1,0 +1,117 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage – Sean S</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Sean S" />
+
+      <p style="margin-top:12px;">
+        <a href='/ict8/unit4/web_dev/S2W4/s2w4_index.html'>← Back to S2W4 class page</a>
+      </p>
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #f7f7fb;
+      --ink: #1a1a1f;
+      --accent: #07811b; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #fff; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#f3f3f6; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="studentName">SeanS </span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+       Some of my Hobbies are playing baseball, playing the trumpet, and playing Zelda games. Something i'm proud of this year is that even though I am a grade 8, I got a trumpet solo (granted i'm playing the written solo and it was in the lowest part, Trumpet 4) and it has given me a greater motivation to practice. By next year, I want to be able to play higher notes than high G with ease.
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://www.nintendo.com/en-ca/?srsltid=AfmBOoogWBNK_lZ8DzLJ0mS9YloICyr8ey2cy52QNishSz7jg2u-xj9d" target="_blank" rel="noopener">Nintendo - Home Page</a></li>
+        <li><a href="https://www.bricklink.com/v3/studio/main.page" target="_blank" rel="noopener">Bricklink - Stud.io Download and Staff Picks</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>  
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6OtZZ276uj2tmqGOpq7Pb-sesZIGN5TPqnqWXxCQEB5q-gVCsxpbUZNosQd9CWM20lMRAKDRGiU_9Njp4ArgsN_2p9gkhz3wS8HWd4_gI1Aeu82M&s=10" alt="Concept art for the Legend of Zelda: Ocarina of Time" />
+        <figcaption>Photo credit: Nintendo </figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">What do you call a pumpkin wearing a suit?</p>
+      <button type="button" onclick="myFunction()">Why?</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p>In this course, I learned a lot. I learned how to use basic functions on a computer, how to remove photobombers, how to make a simple Space Shooter, and how to make/edit a website. I enjoyed using computers to learn about stuff I have allways been intrested in.
+      </p>
+      <p> I have enjoyed taking this course and I am exited to make games on my own time with these skils I have learned</p>
+
+      
+    </section>
+    
+    
+    
+    <footer>
+      <p>
+        Built by <strong>Sean Smith</strong>. June 16th : <span id="lastUpdated"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "The President of the United States!";
+    }
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

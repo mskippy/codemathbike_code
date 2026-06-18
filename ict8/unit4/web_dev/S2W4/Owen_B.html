@@ -1,0 +1,116 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage – Your Name</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Your Name" />
+
+      <p style="margin-top:12px;">
+        <a href='/ict8/unit4/web_dev/S2W4/s2w4_index.html'>← Back to S2W4 class page</a>
+      </p>
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #5b5bff;
+      --ink: #1a1a1f;
+      --accent: #5d55f3; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #c1e7ee; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 12px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#138dff; }
+    footer { margin-top: 40px; font-size: 12px; opacity: .7; }
+    code { background:#7676ff; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="studentName">Owen</span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+       My name is Owen Baker I was born in the USA but I moved here in grade 6 and went to Brooksbank. I love playing sports and playing video games but I especially love playing baseball. My favourite food is sushi and I love watching sports and going to do things. I also love hanging out with friends and going to do things with them.
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://www.82-0.com/" target="_blank" rel="noopener">82-0</a></li>
+        <li><a href="https://www.mlb.com/" target="_blank" rel="noopener">MLB</a></li>
+        <li><a href="https://www.nba.com/" target="_blank" rel="noopener">NBA</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="https://images.unsplash.com/photo-1542157565-4607d82cf417?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bmF0dXJlJTIwd2F0ZXJmYWxsfGVufDB8fDB8fHww" alt="A cool nature image from Amazon.ca" />
+        <figcaption>Photo credit: Unsplash
+        </figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">What did the baby computer say to his dad?</p>
+      <button type="button" onclick="myFunction()">What?</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p>My favourite thing I did in Essential skills was doing the typing game because it was fun and helped my typing and what I found challenging in Essential skills was having to do all the assingments. What I would like to learn more in Essential skills is to learn how to type like a professional typer and I would use this in a job in the future. In Digital media I liked making the all about me poster the most because it was fun and interesting, I found writing the reflection for the poster the hardest because it was a lot of writing. I would like to learn how to use Canva better so I can make things on there quicker and I could use this to do projects easier in school. In Game development I liked making my game and getting new high scores in the game I made and what was most challenging was doing all the right coding in the game. I would like to learn how to code better so I could make games quicker and beter. In Web development I liked doing this webpage the most and it was most challenging to access this website. What I could learn more is how to make a brand new webpage from scratch to do school assignments on in other grades.</p>
+      
+    </section>
+    
+    
+    
+    <footer>
+      <p>
+        Built by <strong>Owen Baker</strong>. Last updated: June 16th <span id="lastUpdated"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "Data!";
+    }
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
