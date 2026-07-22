@@ -1,0 +1,153 @@
+<!-- v3 – Jul 2026 -->
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ICT 9 • 1.2 How Computers Think</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="ict9">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" role="main" data-page-title="ICT 9 • Unit 1 • Lesson 1.2">
+
+        <section class="card">
+          <h1>1.2 How Computers Think: Binary</h1>
+          <p><strong>Big idea:</strong> Every photo, song, game, and message the studio will ever make comes down to the same two things: <strong>on</strong> and <strong>off</strong>. Before you build anything this semester, it helps to know what's actually happening underneath.</p>
+          <p><strong>Estimated time:</strong> 1–2 classes. This one moves at whatever pace makes sense — some classes will fly through it in a single sitting, others will want the extra day. Pace it however fits.</p>
+        </section>
+
+        <!-- Activity A -->
+        <section class="card">
+          <h2>Activity A — What Is Binary?</h2>
+          <p>Computer hardware is built from switches (transistors) that can only be in one of two states: <strong>on (1)</strong> or <strong>off (0)</strong>. That's it — no in-between. Everything a computer does is some clever arrangement of those two states.</p>
+          <p>A single 1 or 0 is called a <strong>bit</strong>. Group 8 bits together and you get a <strong>byte</strong> — enough combinations to represent a letter, a small number, or one tiny piece of a picture.</p>
+
+          <p>Binary numbers work just like the decimal numbers you already know, except each place is worth a power of 2 instead of a power of 10:</p>
+
+          <div class="table-wrap">
+            <table class="schedule-table">
+              <thead>
+                <tr><th>128</th><th>64</th><th>32</th><th>16</th><th>8</th><th>4</th><th>2</th><th>1</th></tr>
+              </thead>
+            </table>
+          </div>
+
+          <p>To read a binary number, add up the place values wherever there's a 1. For example:</p>
+          <p><code>0 0 1 0 1 1 0 1</code> → 32 + 8 + 4 + 1 = <strong>45</strong></p>
+
+          <details>
+            <summary>Try one yourself: what decimal number is <code>0 1 0 0 0 0 1 0</code>?</summary>
+            <p>64 + 2 = <strong>66</strong></p>
+          </details>
+        </section>
+
+        <!-- Activity B -->
+        <section class="card">
+          <h2>Activity B — Convert It Yourself</h2>
+          <p>Convert each decimal number below into 8-bit binary (use the place-value chart above), then click to check your answer.</p>
+
+          <ul class="list-tight">
+            <li>13 →
+              <details><summary>Check answer</summary><code>0000 1101</code></details>
+            </li>
+            <li>50 →
+              <details><summary>Check answer</summary><code>0011 0010</code></details>
+            </li>
+            <li>97 →
+              <details><summary>Check answer</summary><code>0110 0001</code></details>
+            </li>
+          </ul>
+
+          <p>Now go the other way — convert each binary number into decimal:</p>
+          <ul class="list-tight">
+            <li><code>0001 0110</code> →
+              <details><summary>Check answer</summary><strong>22</strong></details>
+            </li>
+            <li><code>0101 1000</code> →
+              <details><summary>Check answer</summary><strong>88</strong></details>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Activity C -->
+        <section class="card">
+          <h2>Activity C — Decode the Studio's Secret Message</h2>
+          <p>Text works the same way — every letter has a standard binary code (called <strong>ASCII</strong>). Capital letters start at 65 (A), so <code>A = 0100 0001</code>, <code>B = 0100 0010</code>, and so on in order through the alphabet.</p>
+          <p>Use the pattern above (or an ASCII table) to decode this message, one byte at a time:</p>
+          <p><code>0100 1000 0100 1001</code></p>
+          <details>
+            <summary>Reveal the message</summary>
+            <p><strong>H I</strong> — 72 = H, 73 = I</p>
+          </details>
+          <p>This is exactly how a computer stores every word in this lesson, every chat message you send, and every line of code you'll write later this semester — just bytes, arranged in the right order.</p>
+        </section>
+
+        <!-- Why it matters -->
+        <section class="card">
+          <h2>Why This Matters</h2>
+          <p>More bits means more possible values — each extra bit doubles how much you can represent. That's why an 8-bit byte can hold 256 different values (2⁸), why old 8-bit games looked blocky and had limited colours, and why a modern photo with millions of colours needs far more bits per pixel than a simple text file needs per letter.</p>
+          <p>Binary isn't a side topic — it's the layer underneath everything else in this course: your website's code, your game's save data, your AI conversations. All of it is bytes.</p>
+        </section>
+
+        <!-- Reflection / Submit -->
+        <section class="card">
+          <h2>Reflection &amp; Submit</h2>
+          <p>Answer briefly, in your own words:</p>
+          <ul class="list-tight">
+            <li>Where does binary show up in something you use every day (your phone, a game, a photo)?</li>
+            <li>Why do you think more bits are needed for a photo than for a short text message?</li>
+          </ul>
+          <p>Submit your completed conversions (Activity B) and your reflection to the <strong>1.2 Binary Worksheet</strong> assignment in MS Teams.</p>
+
+          <details>
+            <summary>If you used AI on this lesson — your first AI Log entry</summary>
+            <p>If you asked an AI tool to help explain binary or check a conversion, that's your first entry in your AI Log for the semester. Just note: what you asked, what it told you, and whether it actually helped you understand — not just get the answer. We'll build on this log all year.</p>
+          </details>
+        </section>
+
+      </main>
+
+      <!-- Lesson-specific right rail -->
+      <aside id="right-rail" aria-label="Resources">
+        <section class="card">
+          <h2>Learning Goals</h2>
+          <ul>
+            <li>Explain what binary is and why computers use it.</li>
+            <li>Convert between binary and decimal numbers.</li>
+            <li>Connect binary to real examples: text, images, and data.</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h3>Lesson 1.2 Submit List</h3>
+          <ul class="list-tight">
+            <li>Binary conversions (Activity B)</li>
+            <li>Reflection (2 prompts)</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h3>Quick Reference</h3>
+          <ul class="list-tight">
+            <li>Place values: 128, 64, 32, 16, 8, 4, 2, 1</li>
+            <li>1 byte = 8 bits</li>
+            <li>ASCII: A = 65, B = 66 … in order</li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+  </body>
+</html>
