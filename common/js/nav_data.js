@@ -66,7 +66,8 @@ window.NAV_DATA = {
           href: "/ict9/unit1/index.html",
           pages: {
             lesson1: { title: "1.1 Welcome to the Studio",  href: "/ict9/unit1/lesson1/1.1_index.html" },
-            lesson2: { title: "1.2 Setting Up Shop",        href: "/ict9/unit1/lesson2/1.2_index.html" }
+            lesson2: { title: "1.2 Setting Up Shop",        href: "/ict9/unit1/lesson2/1.2_index.html" },
+            lesson3: { title: "1.3 Ready for Day One",      href: "/ict9/unit1/lesson3/1.3_index.html" }
           }
         },
         unit2: {
