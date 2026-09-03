@@ -62,15 +62,15 @@ window.NAV_DATA = {
       href: "/ict9/index.html",
       units: {
         unit1: {
-          title: "U1 Essential Skills",
+          title: "U1 Studio Onboarding",
           href: "/ict9/unit1/index.html",
           pages: {
-            lesson1: { title: "1.1 Welcome to ICT 9!",    href: "/ict9/unit1/lesson1/index.html" },
-            lesson2: { title: "1.2 ",                     href: "/ict9/unit1/lesson2/index.html" }
+            lesson1: { title: "1.1 Welcome to the Studio",  href: "/ict9/unit1/lesson1/1.1_index.html" },
+            lesson2: { title: "1.2 Setting Up Shop",        href: "/ict9/unit1/lesson2/1.2_index.html" }
           }
         },
         unit2: {
-          title: "U2 Game Development",
+          title: "U2 Web & Code Foundations",
           href: "/ict9/unit2/index.html",
           pages: {
             label1: { title: "2.1 Game Setup",         href: "/ict9/unit2/lesson1/index.html" },
@@ -84,7 +84,7 @@ window.NAV_DATA = {
           }
         },
         unit3: {
-          title: "U3 Game Promotion & Branding",
+          title: "U3 Studio Build: Choose Your Track",
           href: "/ict9/unit3/index.html",
           pages: {
             lesson1: { title: "3.1 Understanding Promotion",  href: "/ict9/unit3/lesson1/index.html" },
@@ -97,24 +97,24 @@ window.NAV_DATA = {
           }
         },
         unit4: {
-          title: "Unit 4",
+          title: "U4 Promote, Publish & Reflect",
           href: "/ict9/unit4/index.html",
           pages: {
             lesson1: { title: "4.1",     href: "" },
             lesson2: { title: "4.2",     href: "" }
           }
-        },
-        unit5: {
-          title: "Unit 5",
-          href: "/ict9/unit5/index.html",
-          pages: {
-            lesson1: { title: "5.1",     href: "" },
-            lesson2: { title: "5.2",     href: "" }
-          }
         }
       }
     },
   
+    cp1112: {
+      title: "Computer Programming 11/12",
+      href: "/cp1112/index.html",
+      units: {
+        // New course for this year — units to be added once the course is built out.
+      }
+    },
+
     dc1011: {
       title: "Digital Communications 10/11",
       href: "/dc1011/index.html",

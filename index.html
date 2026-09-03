@@ -4,88 +4,112 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CODE Courses</title>
-  
- 
+
   <link rel="stylesheet" href="/common/css/base.css">
   <script type="module" src="/common/js/main.js"></script>
 
-
-
-
-
   <style>
-    /* --- compact CODE page styles (scoped) --- */
-    body.code-page { --container: 960px; --gap:16px; --card-min:220px; --card-pad:16px; --icon:64px; --title:18px; }
-  
-    body.code-page header h1{
-      font-size: 24px;           /* prevent global h1 from blowing up the title */
-      line-height: 1.25;
-      margin: 16px 0 8px;
-      text-align: center;
+    /* --- CODE landing page: simple, flat, line-driven (no icon art) --- */
+    body.code-page {
+      background: var(--bg);
+      font-family: var(--font-body);
+      color: var(--text);
     }
-  
-    body.code-page .code-landing{
-      max-width: var(--container);
+
+    body.code-page .code-landing {
+      max-width: 880px;
       margin: 0 auto;
-      padding: 16px;
+      padding: 4.5rem 1.5rem 3rem;
     }
-  
-    body.code-page .course-grid{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(var(--card-min), 1fr));
-      gap: var(--gap);
-      align-items: stretch;
-    }
-  
-    body.code-page .course-card{
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: 8px;
-      padding: var(--card-pad);
-      aspect-ratio: 5 / 4;       /* shorter than 4/3; lowers perceived size */
-      border-radius: 12px;
-      background: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,.08);
-      text-decoration: none; color: inherit;
-      transition: transform .15s ease, box-shadow .15s ease;
-    }
-    body.code-page .course-card:hover{ transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,.12); }
-  
-    body.code-page .course-card img{
-      width: var(--icon); height: var(--icon);
-      aspect-ratio: 1/1; object-fit: contain;
-    }
-  
-    body.code-page .course-card h2{
-      margin: 0;
-      font-size: var(--title);   /* fixed px keeps it compact */
-      line-height: 1.2;
+
+    body.code-page header {
       text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    body.code-page header h1 {
+      font-size: var(--h1);
+      font-weight: var(--font-light);
+      margin: 0 0 0.4rem;
+      letter-spacing: 0.01em;
+    }
+
+    body.code-page header p {
+      color: var(--muted);
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    body.code-page .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+
+    /* Flat, bordered tile — a colour-coded top rule stands in for a logo until one exists */
+    body.code-page .course-card {
+      display: block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--course-accent, var(--accent));
+      border-radius: var(--radius);
+      padding: 1.25rem 1.35rem;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color .15s ease, box-shadow .15s ease;
+    }
+
+    body.code-page .course-card:hover {
+      box-shadow: var(--shadow);
+      text-decoration: none;
+    }
+
+    body.code-page .course-card h2 {
+      margin: 0 0 0.35rem;
+      font-size: 1.05rem;
+      font-weight: var(--font-regular);
+      color: var(--text);
+    }
+
+    body.code-page .course-card p {
+      margin: 0;
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.4;
     }
   </style>
-  
+
 </head>
 <body class="code-page">
-  <header>
-    <h1 style="text-align:center;">CODE Courses</h1>
-  </header>
+  <div class="code-landing">
+    <header>
+      <h1>CODE Courses</h1>
+      <p>Pick a course to get started.</p>
+    </header>
 
-  <main>
-    <div class="course-grid">
-      <a href="/ict8/ict8_index.html" class="course-card">
-        <img src="/shared_course_assets/images/ict_8_icon.png" alt="ICT 8 Icon">
-        <h2>ICT 8</h2>
-      </a>
+    <main>
+      <div class="course-grid">
+        <a href="/ict8/ict8_index.html" class="course-card" style="--course-accent:#2e7d32">
+          <h2>ICT 8</h2>
+          <p>Digital foundations, file management, and intro coding.</p>
+        </a>
 
-      <a href="/ict9/index.html" class="course-card">
-        <img src="/shared_course_assets/images/ict_9_icon.png" alt="ICT 9 Icon">
-        <h2>ICT 9</h2>
-      </a>
+        <a href="/ict9/index.html" class="course-card" style="--course-accent:#1565c0">
+          <h2>ICT 9</h2>
+          <p>Studio-based IT: onboarding, web &amp; code, and a build-your-own project.</p>
+        </a>
 
-      <a href="/dc1011/index.html" class="course-card">
-        <img src="/shared_course_assets/images/digi_media_10.png" alt="Digital Media Icon"> <!--Temp page to deliver lesson need to redirect later-->
-        <h2>Digital Communications 10/11</h2>
-      </a>
-    </div>
-  </main>
+        <a href="/dc1011/index.html" class="course-card" style="--course-accent:#f59e0b">
+          <h2>Digital Communications 10/11</h2>
+          <p>Branding, media production, and digital communication.</p>
+        </a>
+
+        <a href="/cp1112/index.html" class="course-card" style="--course-accent:#00695c">
+          <h2>Computer Programming 11/12</h2>
+          <p>New this year &mdash; course content coming soon.</p>
+        </a>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
