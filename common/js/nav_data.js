@@ -10,11 +10,11 @@
 window.NAV_DATA = {
     ict8: {
       title: "ICT 8",
-      href: "/ict8/ict8_index.html",
+      href: "/ict8/index.html",
       units: {
         unit1: {
           title: "U1 Essential Skills",
-          href: "/ict8/unit1/u1_index.html",
+          href: "/ict8/unit1/index.html",
           pages: {
             lesson1: { title: "1.1 Welcome to ICT 8",       href: "/ict8/unit1/lesson1/1.1_index.html" },
             lesson2: { title: "1.2 File Management",        href: "/ict8/unit1/lesson2/1.2_index.html" },
@@ -24,7 +24,7 @@ window.NAV_DATA = {
         },
         unit2: {
           title: "U2 Digital Media",
-          href: "/ict8/unit2/u2_index.html",
+          href: "/ict8/unit2/index.html",
           pages: {
             lesson1: { title: "2.1 Canva: About Me",        href: "/ict8/unit2/lesson1/2.1_index.html" },
             lesson2: { title: "2.2 Excel: Class Data",      href: "/ict8/unit2/lesson2/2.2_index.html" },
@@ -47,7 +47,7 @@ window.NAV_DATA = {
         },
         unit4: {
           title: "U4 Web Development",
-          href: "/ict8/unit4/u4_index.html",
+          href: "/ict8/unit4/index.html",
           pages: {
             lesson1: { title: "Editing Your HTML",         href: "/ict8/unit4/edit_html_steps/index.html" },
             lesson2: { title: "All Done? Do This!",        href: "/ict8/unit4/u4_extension.html" },
