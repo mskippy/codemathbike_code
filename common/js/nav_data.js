@@ -16,10 +16,11 @@ window.NAV_DATA = {
           title: "U1 Essential Skills",
           href: "/ict8/unit1/index.html",
           pages: {
-            lesson1: { title: "1.1 Welcome to ICT 8",       href: "/ict8/unit1/lesson1/1.1_index.html" },
-            lesson2: { title: "1.2 File Management",        href: "/ict8/unit1/lesson2/1.2_index.html" },
-            lesson3: { title: "1.3 Downloading & Extracting",   href: "/ict8/unit1/lesson3/1.3_index.html" },
-            lesson4: { title: "1.4 How To Posters",          href: "/ict8/unit1/lesson4/1.4_index.html" }
+            lesson1: { title: "1.1 Welcome & Get Connected",             href: "/ict8/unit1/lesson1/1.1_index.html" },
+            lesson2: { title: "1.2 The Essential Skills Ladder",         href: "/ict8/unit1/lesson2/1.2_index.html" },
+            lesson3: { title: "1.3 Organize Your Digital Workspace",     href: "/ict8/unit1/lesson3/1.3_index.html" },
+            lesson4: { title: "1.4 Essential Skills Passport",           href: "/ict8/unit1/lesson4/1.4_index.html" },
+            lesson5: { title: "1.5 Know Your Computer",                  href: "/ict8/unit1/lesson5/1.5_index.html" }
           }
         },
         unit2: {
