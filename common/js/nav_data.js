@@ -111,7 +111,41 @@ window.NAV_DATA = {
       title: "Computer Programming 11/12",
       href: "/cp1112/index.html",
       units: {
-        // New course for this year — units to be added once the course is built out.
+        unit0: {
+          title: "U0 Launch & Diagnostic",
+          href: "/cp1112/unit0/index.html",
+          pages: {}
+        },
+        unit1: {
+          title: "U1 Python Foundations",
+          href: "/cp1112/unit1/index.html",
+          pages: {}
+        },
+        unit2: {
+          title: "U2 Guided Project 1",
+          href: "/cp1112/unit2/index.html",
+          pages: {}
+        },
+        unit3: {
+          title: "U3 Choice Project 2",
+          href: "/cp1112/unit3/index.html",
+          pages: {}
+        },
+        unit4: {
+          title: "U4 Independent / Specialization Project",
+          href: "/cp1112/unit4/index.html",
+          pages: {}
+        },
+        unit5: {
+          title: "U5 Capstone Showcase",
+          href: "/cp1112/unit5/index.html",
+          pages: {}
+        },
+        unit6: {
+          title: "U6 Wrap-Up & Reflection",
+          href: "/cp1112/unit6/index.html",
+          pages: {}
+        }
       }
     },
 

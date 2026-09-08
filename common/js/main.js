@@ -176,8 +176,8 @@ function applyThemeFromCourse(courseKey) {
   if (!b) return;
   // remove any old course classes (both schemes)
   b.className = b.className
-    .replace(/\btheme-(ict8|ict9|dc1011)\b/g, "")
-    .replace(/\b(ict8|ict9|dc1011)\b/g, "")
+    .replace(/\btheme-(ict8|ict9|dc1011|cp1112)\b/g, "")
+    .replace(/\b(ict8|ict9|dc1011|cp1112)\b/g, "")
     .trim();
   if (courseKey) {
     b.classList.add("theme-" + courseKey); // preferred
