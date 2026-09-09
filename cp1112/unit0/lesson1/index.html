@@ -1,0 +1,107 @@
+<!-- v2 – Nov 2025 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CP11/12 • 0.1 Course Launch and Diagnostic</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="cp1112">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="CP11/12 • 0.1 Course Launch and Diagnostic">
+        <section class="card">
+          <h1>Course Launch and Diagnostic</h1>
+          <h2>Welcome to the Studio</h2>
+          <p>This course runs a little differently than most. Most days won't be a long lecture &mdash; you'll get a quick intro to something new, then time to actually work, with support around you the whole time. Today's about getting oriented: meeting the room, getting your setup working, and giving your teacher a first look at where everyone's starting from. No stakes today.</p>
+        </section>
+
+        <section class="card">
+          <h2>Today's Plan</h2>
+          <ul>
+            <li>Meet the room</li>
+            <li>How this course runs</li>
+            <li>Get your environment working</li>
+            <li>Set up a work folder</li>
+            <li>"Make It Yours" challenge</li>
+            <li>Wrap-up &amp; what's next</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>How This Course Runs</h2>
+          <ul>
+            <li>Most days, you won't be sitting through a long lecture. You'll get a quick intro, then work independently or in a small group while your teacher circulates to help.</li>
+            <li>This course has two tracks &mdash; Core and Extended &mdash; but which one you're in isn't about your grade level, it's about where you're starting from. That gets sorted out by the end of this week.</li>
+            <li>Help comes from a few places: your teacher, the people around you, and &mdash; soon &mdash; your own notes and documentation.</li>
+            <li>Be honest about where you're at. This week isn't about a grade, it's about figuring out how to actually support you. Overselling yourself just means less help later, when you might actually want it.</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Check Your Setup</h2>
+          <ul>
+            <li>Open VS Code</li>
+            <li>Open or create a Python file (one ending in <code>.py</code>) &mdash; if VS Code asks you to install the Python extension, say yes. This might happen again later in the semester too, since these computers get reset sometimes &mdash; it's a quick "click install," not a real setup task, once you know the prompt to expect.</li>
+            <li>You might spot other tools on these computers, like PyCharm &mdash; for this course, we're sticking with VS Code</li>
+            <li>Run a simple "hello world" to make sure everything's talking to each other</li>
+            <li>Already comfortable with this? Help a neighbour who isn't &mdash; you'll be doing a lot of that this semester.</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Set Up a Work Folder</h2>
+          <p>Before you start coding, set up one folder to keep today's work in &mdash; this saves you from losing anything if you close VS Code without thinking about it.</p>
+          <ol>
+            <li>In VS Code, go to File &rarr; Open Folder</li>
+            <li>It should open straight into your H: drive &mdash; your personal network drive, and the one thing on these computers that doesn't get wiped between sessions</li>
+            <li>Create a new folder and call it something like <code>CP11-12</code></li>
+            <li>Open that folder &mdash; VS Code will now treat it as your workspace</li>
+          </ol>
+          <p>This is just a placeholder home for now &mdash; and a bit of a hassle, since it only works from a school computer logged into your account. Next class, you'll set up a GitHub repo instead, which fixes that: push your work up, pull it down again from anywhere &mdash; home, a laptop, wherever. Today's workaround is exactly the kind of problem repos were built to solve.</p>
+        </section>
+
+        <section class="card">
+          <h2>Make It Yours</h2>
+          <p>Not graded. Not a test. This just helps us see where everyone's starting from so we can support you properly from day one.</p>
+          <p>Create a new file inside your <code>CP11-12</code> folder &mdash; something like <code>makeityours.py</code> &mdash; and start from this tiny script:</p>
+          <pre><code>name = "Ms. Smith"
+print("Hi, I'm " + name + "!")</code></pre>
+          <p>Save as you go (<code>Ctrl+S</code>).</p>
+          <p>Take it as far as you want. Try however many of these make sense for you:</p>
+          <ol class="tier-list">
+            <li><strong>Personalize it</strong> &mdash; swap in your own name and get it running</li>
+            <li><strong>Add more</strong> &mdash; a couple more lines about yourself (an interest, why you signed up, whatever)</li>
+            <li><strong>Make it interactive</strong> &mdash; use <code>input()</code> to ask for something instead of hardcoding it</li>
+            <li><strong>Add a decision</strong> &mdash; an if/else that changes what prints, based on an answer</li>
+            <li><strong>Add a loop</strong> &mdash; repeat something, or loop through a short list of facts about yourself</li>
+            <li><strong>Go further</strong> &mdash; already done all that? Try something you haven't been taught here yet. Impress us.</li>
+          </ol>
+          <p class="lesson-note">Used AI? Totally fine. If you used ChatGPT, Copilot, or anything else for part of this, leave a one-line note: what did you ask for, and what did you keep or change? No penalty either way &mdash; we're just starting a habit that'll matter a lot later this semester.</p>
+        </section>
+
+        <section class="card">
+          <h2>What's Next</h2>
+          <p>Next class (0.2), you'll set up your developer identity and get your programming portfolio started on GitHub &mdash; the home for your work all semester. Hang onto today's script, you'll need it.</p>
+        </section>
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card"><strong>This lesson</strong><br>Unit 0 &middot; Lesson 0.1</div>
+        <div class="card"><a href="/cp1112/unit0/index.html">&larr; Back to Unit 0</a></div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+
+  </body>
+</html>

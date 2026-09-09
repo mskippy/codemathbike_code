@@ -11,6 +11,7 @@ window.NAV_DATA = {
     ict8: {
       title: "ICT 8",
       href: "/ict8/index.html",
+      icon: "/shared_course_assets/images/ICT%208%20Logo.png",
       units: {
         unit1: {
           title: "U1 Essential Skills",
@@ -59,6 +60,7 @@ window.NAV_DATA = {
     ict9: {
       title: "ICT 9",
       href: "/ict9/index.html",
+      icon: "/shared_course_assets/images/ICT%209%20Logo.png",
       units: {
         unit1: {
           title: "U1 Studio Onboarding",
@@ -110,11 +112,14 @@ window.NAV_DATA = {
     cp1112: {
       title: "Computer Programming 11/12",
       href: "/cp1112/index.html",
+      icon: "/shared_course_assets/images/CP%2011.12%20Logo.png",
       units: {
         unit0: {
           title: "U0 Launch & Diagnostic",
           href: "/cp1112/unit0/index.html",
-          pages: {}
+          pages: {
+            lesson1: { title: "0.1 Course Launch and Diagnostic", href: "/cp1112/unit0/lesson1/index.html" }
+          }
         },
         unit1: {
           title: "U1 Python Foundations",
@@ -152,6 +157,7 @@ window.NAV_DATA = {
     dc1011: {
       title: "Digital Communications 10/11",
       href: "/dc1011/index.html",
+      icon: "/shared_course_assets/images/digi_media_10.png",
       units: {
         unit1: {
           title: "U1 Intro to Digital Communications",

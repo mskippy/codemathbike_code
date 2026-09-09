@@ -589,3 +589,82 @@ pre code {
 #site-footer { border-top: 1px solid var(--border-200, #e5e7eb); margin-top: 2rem; padding: 1rem 0; }
 #site-footer .footer-brand { margin: 0; font-size: .95rem; }
 .sr-only { position: absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+
+/* ============================================================
+   Lesson pages — tiered task list ("try as many as make sense")
+   Reusable wherever a lesson offers a menu of levelled options.
+   ============================================================ */
+.tier-list {
+  counter-reset: tier;
+  list-style: none;
+  margin: 0.75rem 0;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  background: rgba(0, 0, 0, 0.02);
+  overflow: hidden;
+}
+
+.tier-list li {
+  counter-increment: tier;
+  position: relative;
+  padding: 0.75rem 1rem 0.75rem 3.25rem;
+  border-bottom: 1px solid var(--border);
+  line-height: 1.5;
+}
+
+.tier-list li:last-child { border-bottom: none; }
+
+.tier-list li::before {
+  content: counter(tier);
+  position: absolute;
+  left: 0.85rem;
+  top: 0.7rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Small inline note under a tiered list (e.g. an AI-use note) */
+.lesson-note {
+  margin-top: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-alt);
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+/* ============================================================
+   Header — course icon (mirrors each course's MS Teams class icon)
+   ============================================================ */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.header-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex: none;
+  box-shadow: 0 0 0 1px var(--border);
+}
+
+.site-icon[hidden] { display: none; }

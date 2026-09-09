@@ -204,6 +204,21 @@ function setHeaderTitleFromMatch(match, courseKey) {
   document.title = `${match.title} • ${(courseKey || "Course").toUpperCase()}`;
 }
 
+function setHeaderIconFromCourse(courseKey) {
+  const img = document.querySelector("#site-icon");
+  if (!img) return;
+  const course = (window.NAV_DATA || {})[courseKey];
+  if (course && course.icon) {
+    img.onerror = () => { img.hidden = true; };
+    img.src = course.icon;
+    img.alt = `${course.title || courseKey} class icon`;
+    img.hidden = false;
+  } else {
+    img.hidden = true;
+    img.removeAttribute("src");
+  }
+}
+
 function applyContext(ctx) {
   if (!ctx) return;
   const courseKey = ctx.courseKey;
@@ -212,6 +227,7 @@ function applyContext(ctx) {
 
   applyThemeFromCourse(courseKey);
   setHeaderTitleFromMatch(match, courseKey);
+  setHeaderIconFromCourse(courseKey);
 }
 
 
