@@ -1,0 +1,128 @@
+<!-- v2 – Nov 2025 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CP11/12 • 0.3 Local Git Workflow</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="cp1112">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="CP11/12 • 0.3 Local Git Workflow">
+        <section class="card">
+          <h1>Local Git Workflow</h1>
+          <p>So far, every edit has happened directly in the browser on GitHub.com. That's fine for quick changes, but real project work happens in an editor &mdash; today connects the two, and this becomes your daily habit for the rest of the semester.</p>
+          <p>Go at your own speed. If you already know this, move fast &mdash; you can help a neighbour once you're done. If any step doesn't make sense, put a hand up.</p>
+        </section>
+
+        <section class="card">
+          <h2>Part A &mdash; Sign In to GitHub from VS Code</h2>
+          <p><em>This is a one-time setup &mdash; once it's done on a machine, VS Code won't ask again until the machine is reimaged.</em></p>
+
+          <h3>Step 1: Allow VS Code to sign in</h3>
+          <p>The first time you try to sync with GitHub, VS Code shows a notification asking to sign in. Click <strong>Allow</strong>.</p>
+          <img class="screenshot" src="images/01-signin-allow.png" alt="VS Code notification asking to sign in to GitHub" style="max-width:min(1536px,100%)">
+
+          <h3>Step 2: Authorize in your browser</h3>
+          <p>A browser window opens on GitHub's site, asking you to authorize Visual Studio Code. Review the permissions and click <strong>Authorize</strong>.</p>
+          <img class="screenshot" src="images/02-authorize-browser.png" alt="GitHub browser page authorizing Visual Studio Code" style="max-width:min(1536px,100%)">
+
+          <h3>Step 3: You're connected</h3>
+          <p>Back in VS Code, the account icon in the bottom-left now shows you're signed in. That's it &mdash; done for the rest of the semester.</p>
+          <img class="screenshot" src="images/03-signed-in.png" alt="VS Code account icon showing signed-in state" style="max-width:min(1536px,100%)">
+          <p class="lesson-note">Since lab machines get wiped periodically, this sign-in may need to be repeated later in the semester &mdash; same idea as the Python extension reinstall from Day 1.</p>
+        </section>
+
+        <section class="card">
+          <h3>Before You Clone &mdash; Avoid This Trap</h3>
+          <p class="gotcha">If you open VS Code on a folder that already has files in it (like your 0.1 course folder) and check the Source Control panel, you'll see this instead of your repo:</p>
+          <img class="screenshot" src="images/04-not-connected-warning.png" alt="Source Control panel showing an uninitialized folder, with an Initialize Repository button" style="max-width:min(318px,100%)">
+          <p>That means the folder isn't actually connected to GitHub &mdash; it's just a plain folder. <strong>Don't click either button here.</strong> The fix is Part B below: clone into a brand new folder instead of reusing an old one.</p>
+        </section>
+
+        <section class="card">
+          <h2>Part B &mdash; Clone Your Repo</h2>
+
+          <h3>Step 4: Copy your repo's URL</h3>
+          <p>On GitHub, open your portfolio repo and click the green <strong>Code</strong> button. Under the HTTPS tab, click the copy icon next to the URL.</p>
+          <img class="screenshot" src="images/05-copy-repo-url.png" alt="GitHub Code button showing the HTTPS clone URL" style="max-width:min(1536px,100%)">
+
+          <h3>Step 5: Open the Command Palette and run Git: Clone</h3>
+          <p>In VS Code, press <code>Ctrl+Shift+P</code>, type "clone", and select <strong>Git: Clone</strong> from the list.</p>
+          <img class="screenshot" src="images/06-command-palette-clone.png" alt="VS Code Command Palette showing the Git: Clone option" style="max-width:min(1536px,100%)">
+
+          <h3>Step 6: Paste your repo's URL</h3>
+          <p>Paste the URL you copied in Step 4 and press Enter.</p>
+          <img class="screenshot" src="images/07-paste-url.png" alt="VS Code prompt to paste the repository URL" style="max-width:min(1536px,100%)">
+
+          <h3>Step 7: Choose where to save it</h3>
+          <p>Pick a location on your H: drive &mdash; this is where the cloned copy will live.</p>
+          <img class="screenshot" src="images/08-choose-location.png" alt="File picker for choosing where to save the cloned repository" style="max-width:min(1536px,100%)">
+
+          <h3>Step 8: Open the cloned repository</h3>
+          <p>VS Code asks if you'd like to open what was just cloned. Click <strong>Open</strong>.</p>
+          <img class="screenshot" src="images/09-open-cloned-repo.png" alt="VS Code prompt asking to open the cloned repository" style="max-width:min(1536px,100%)">
+
+          <h3>Step 9: Confirm your files are there</h3>
+          <p>Your README and 0.1 script should already be sitting in the file explorer &mdash; exactly as they appear on GitHub. You're fully connected.</p>
+          <img class="screenshot" src="images/10-files-confirmed.png" alt="VS Code file explorer showing the cloned repository's files" style="max-width:min(1536px,100%)">
+        </section>
+
+        <section class="card">
+          <h2>The Source Control Panel</h2>
+          <p>Open the panel using the branch icon in the sidebar, or <code>Ctrl+Shift+G</code>.</p>
+
+          <h3>Step 1: See your changes</h3>
+          <p>Make a change to a file in your repo &mdash; changed files show up automatically in the Source Control panel.</p>
+          <div class="screenshot-placeholder">Screenshot coming soon: the Source Control panel showing a changed file</div>
+
+          <h3>Step 2: Stage and commit</h3>
+          <p>Click the <strong>+</strong> next to a file to stage it, type a commit message in the box at the top, then click the checkmark to commit.</p>
+          <div class="screenshot-placeholder">Screenshot coming soon: staging a file and writing a commit message</div>
+
+          <h3>Step 3: Sync</h3>
+          <p>Click <strong>Sync Changes</strong> &mdash; this pushes your commit up to GitHub, and pulls down anything new, in one action.</p>
+          <div class="screenshot-placeholder">Screenshot coming soon: the Sync Changes button</div>
+
+          <p class="gotcha"><strong>Heads up &mdash; the "stage and commit directly" prompt:</strong> if you click the checkmark without staging anything first, VS Code asks if you'd like to automatically stage all your changes and commit them directly. Saying yes skips the staging step entirely and commits everything at once &mdash; convenient, but it means you don't get a chance to check exactly what's going into the commit. For this course, stage on purpose with the <strong>+</strong> button so you know what each commit contains.</p>
+        </section>
+
+        <section class="card">
+          <h2>Practice: Commit &amp; Sync Loop</h2>
+          <p>Not graded &mdash; just a rep, so the loop actually sticks.</p>
+          <ol class="tier-list">
+            <li>Add a new file locally (e.g. <code>day3_notes.py</code>) with a couple of lines of code, commit it, sync it, and confirm it shows up on GitHub.</li>
+            <li>Make one more edit &mdash; tweak that file, or add a line to the README &mdash; commit and sync again.</li>
+          </ol>
+          <div class="screenshot-placeholder">Screenshot coming soon: a completed commit visible in GitHub's history after syncing</div>
+          <p class="lesson-note">Already comfortable with the panel? Try the same loop using <code>git add</code>, <code>git commit -m</code>, and <code>git push</code> in the built-in terminal instead &mdash; same result, different tool.</p>
+        </section>
+
+        <section class="card">
+          <h2>What's Next</h2>
+          <p>Unit 1 &mdash; Python Foundations starts next class. You'll also find out your track placement (Core or Extended) at the start of Unit 1, based on everything observed across these three days.</p>
+        </section>
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card"><strong>This lesson</strong><br>Unit 0 &middot; Lesson 0.3</div>
+        <div class="card"><a href="/cp1112/unit0/lesson2/0.2_index.html">&larr; Back to Lesson 0.2</a></div>
+        <div class="card"><a href="/cp1112/unit0/index.html">&larr; Back to Unit 0</a></div>
+        <div class="card"><a href="/cp1112/unit1/index.html">Next: Unit 1 &mdash; Python Foundations &rarr;</a></div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+
+  </body>
+</html>
