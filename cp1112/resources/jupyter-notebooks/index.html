@@ -1,0 +1,73 @@
+<!-- v2 – Nov 2025 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CP11/12 • Using Jupyter Notebooks</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="cp1112">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="CP11/12 • Using Jupyter Notebooks">
+        <section class="card">
+          <h1>Using Jupyter Notebooks</h1>
+          <p>A few of your lesson resources come as Jupyter Notebooks &mdash; files ending in <code>.ipynb</code> &mdash; instead of a plain Python file. They're not hard to use, but the first one can be confusing if nobody's shown you the two or three things that are different. This page is that explanation, once, so you're not re-learning it every time.</p>
+        </section>
+
+        <section class="card">
+          <h2>What's Different About a Notebook</h2>
+          <p>A regular <code>.py</code> file is just code, top to bottom, and you run the whole thing at once. A notebook is broken into <strong>cells</strong> &mdash; some hold code, some hold formatted text like this page &mdash; and you run cells one at a time, in whatever order you want. That's what makes them good for explanations: text and code can sit right next to each other.</p>
+        </section>
+
+        <section class="card">
+          <h2>Opening One</h2>
+          <ol>
+            <li>Find the <code>.ipynb</code> file (usually linked from a lesson page) and open it in VS Code</li>
+            <li>First time only: VS Code may ask you to select a kernel &mdash; choose the Python option (it'll usually just say something like "Python 3.x.x")</li>
+            <li>If VS Code prompts you to install the Jupyter extension, say yes &mdash; same idea as the Python extension prompt from Day 1</li>
+          </ol>
+        </section>
+
+        <section class="card">
+          <h2>Running a Cell</h2>
+          <ul>
+            <li>Click into a cell, then press <code>Shift+Enter</code> to run it and move to the next one (or <code>Ctrl+Enter</code> to run it and stay put)</li>
+            <li>Or hover over the cell and click the &#9654; button that appears on its left</li>
+            <li>Output shows up directly underneath the cell you ran</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>A Couple of Things to Know</h2>
+          <ul>
+            <li>Cells can be run in any order, and out of order &mdash; if something seems off, that's usually why. Use <strong>Restart Kernel and Run All</strong> (in the toolbar at the top) to run everything fresh, top to bottom, in the order it's written.</li>
+            <li>Editing a cell doesn't break anything permanently &mdash; change it, run it again, see what happens.</li>
+            <li>Nothing here submits or saves to anyone but you unless a lesson tells you otherwise.</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <p>That's genuinely it. If a lesson links you a notebook: open it, read the text cells, run the code cells with <code>Shift+Enter</code>, and you're using Jupyter.</p>
+        </section>
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card"><a href="/cp1112/resources/index.html">&larr; All resources</a></div>
+        <div class="card"><strong>Used in</strong><br><a href="/cp1112/unit0/lesson1/index.html">Lesson 0.1</a></div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+
+  </body>
+</html>
