@@ -645,6 +645,42 @@ pre code {
 }
 
 /* ============================================================
+   Lesson pages — tutorial screenshots
+   ============================================================ */
+.screenshot {
+  display: block;
+  margin: 0.75rem 0 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Dashed placeholder for a screenshot not added yet */
+.screenshot-placeholder {
+  margin: 0.75rem 0 1.25rem;
+  padding: 1.25rem 1rem;
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+  background: rgba(0, 0, 0, 0.015);
+  color: var(--muted);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+/* Callout for a technical "gotcha" worth flagging prominently */
+.gotcha {
+  margin: 0.75rem 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid #f2c94c;
+  border-left: 4px solid #b8860b;
+  border-radius: var(--radius);
+  background: rgba(184, 134, 11, 0.07);
+  font-size: 0.92rem;
+}
+
+.gotcha strong { color: #8b6508; }
+
+/* ============================================================
    Header — course icon (mirrors each course's MS Teams class icon)
    ============================================================ */
 .header-left {

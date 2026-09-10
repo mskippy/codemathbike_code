@@ -118,7 +118,9 @@ window.NAV_DATA = {
           title: "U0 Launch & Diagnostic",
           href: "/cp1112/unit0/index.html",
           pages: {
-            lesson1: { title: "0.1 Course Launch and Diagnostic", href: "/cp1112/unit0/lesson1/index.html" }
+            lesson1: { title: "0.1 Course Launch and Diagnostic", href: "/cp1112/unit0/lesson1/index.html" },
+            lesson2: { title: "0.2 GitHub Setup", href: "/cp1112/unit0/lesson2/index.html" },
+            lesson3: { title: "0.3 Local Git Workflow", href: "/cp1112/unit0/lesson3/index.html" }
           }
         },
         unit1: {

@@ -1,0 +1,126 @@
+<!-- v2 – Nov 2025 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CP11/12 • 0.2 GitHub Setup</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="cp1112">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="CP11/12 • 0.2 GitHub Setup">
+        <section class="card">
+          <h1>GitHub Setup</h1>
+          <p>Today you're doing two things: creating a professional coding identity on GitHub, and setting up the repository (repo) that will hold your project work for the rest of the semester. Go at your own pace &mdash; if you already know this, help a neighbour once you're done. If a step doesn't make sense, put a hand up.</p>
+        </section>
+
+        <section class="card">
+          <h2>Before You Start: What You're Actually Building</h2>
+          <ul>
+            <li><strong>GitHub</strong> is where developers store and share their code online. Your account there is your professional coding identity.</li>
+            <li>A <strong>repository</strong> ("repo" for short) is like a project folder &mdash; except it remembers every version of every file inside it. Every change you save is called a <strong>commit</strong>, so over the semester you (and I) can see exactly how your work grew, one commit at a time.</li>
+            <li>Today you'll create one repo that holds all of your work this semester &mdash; think of it as your project's home base.</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Part 1 &mdash; Create Your GitHub Account</h2>
+          <p>Pick your handle first &mdash; name-based (like <code>msmith</code>) or a clean pseudonym. Real name not required.</p>
+
+          <h3>Step 1: Go to github.com and sign up</h3>
+          <p>Head to <a href="https://github.com" target="_blank" rel="noopener">github.com</a>. Type an email you already have (school, personal, or otherwise &mdash; no need to make a new one) into the box on the homepage, and click <strong>Sign up for GitHub</strong>.</p>
+          <img class="screenshot" src="images/01-signup-homepage.png" alt="GitHub homepage sign-up box" style="max-width:min(1920px,100%)">
+
+          <h3>Step 2: Fill in your account details</h3>
+          <p>On the sign-up page, confirm your email, set a password (GitHub wants at least 15 characters, or 8 characters with a number and a lowercase letter), pick your username &mdash; this is your handle &mdash; and choose your country.</p>
+          <img class="screenshot" src="images/02-signup-form.png" alt="GitHub sign-up form" style="max-width:min(1920px,100%)">
+          <p class="lesson-note">GitHub may ask you to verify your email with a code afterward &mdash; if it does, just check your inbox and enter it. Don't worry if it skips straight to your account instead.</p>
+        </section>
+
+        <section class="card">
+          <h2>Part 2 &mdash; Set Up Your Portfolio Repository</h2>
+
+          <h3>Step 3: Create your repository</h3>
+          <p>Go to <a href="https://github.com/new" target="_blank" rel="noopener">github.com/new</a>.</p>
+          <ul>
+            <li><strong>Repository name:</strong> <code>CP11portfolio</code> if you're taking CP11 this semester, or <code>CP12portfolio</code> if you're taking CP12 (use exactly this format &mdash; it makes it easy for me to find everyone's)</li>
+            <li><strong>Description:</strong> leave it blank, or add a line about yourself if you want</li>
+            <li><strong>Visibility:</strong> Private</li>
+            <li><strong>Add a README file:</strong> turn this on</li>
+            <li><strong>Add .gitignore</strong> and <strong>Add license:</strong> leave both as "None" &mdash; you won't need these</li>
+          </ul>
+          <p>Click <strong>Create repository</strong>.</p>
+          <img class="screenshot" src="images/03-create-repo.png" alt="Create a new repository page" style="max-width:min(1920px,100%)">
+
+          <h3>What's a README, and what's Markdown?</h3>
+          <p>Every repo can have a <code>README.md</code> file &mdash; it's the first thing anyone sees when they open your repo, like the cover page of your portfolio. It explains what the repo is and what's in it.</p>
+          <p>The <code>.md</code> means it's written in <strong>Markdown</strong> &mdash; a simple way to format text using symbols instead of buttons:</p>
+          <ul>
+            <li><code>#</code> makes a big heading, <code>##</code> makes a smaller one. They look like hashtags, but in Markdown they mean "heading," not "hashtag."</li>
+            <li>Everything else is just plain text.</li>
+          </ul>
+
+          <h3>Step 4: Open your README to edit it</h3>
+          <p>When your repo is created, GitHub automatically makes a plain README with just your repo's name on it. Click the pencil icon next to the README to start editing it.</p>
+          <img class="screenshot" src="images/04-repo-created.png" alt="Repo page with edit icon highlighted" style="max-width:min(1920px,100%)">
+
+          <h3>Step 5: Write your README</h3>
+          <p>Replace the contents with something like this (the heading at the top will already match your repo name &mdash; <code>CP11portfolio</code> or <code>CP12portfolio</code>):</p>
+          <pre><code># CP11portfolio
+
+## About Me
+Hi, I'm ... , and I'm taking Computer Programming 11/12 this semester.
+
+## Project Work &amp; Process
+This repo holds all my project work for the semester.
+
+## AI Collaboration
+Log of what I asked AI for and what I kept or changed.</code></pre>
+          <img class="screenshot" src="images/05-readme-edit.png" alt="Editing README.md" style="max-width:min(1920px,100%)">
+
+          <h3>Step 6: Commit your changes</h3>
+          <p>Scroll up and click <strong>Commit changes...</strong>. A window pops up &mdash; the commit message is already filled in for you (or write your own), leave "Commit directly to the main branch" selected, and click <strong>Commit changes</strong>.</p>
+          <p>That's your first commit!</p>
+          <img class="screenshot" src="images/06-commit-modal.png" alt="Commit changes dialog" style="max-width:min(752px,100%)">
+        </section>
+
+        <section class="card">
+          <h2>Part 3 &mdash; Share Your Repo With Me</h2>
+          <p>Your repo is private, which means only you can see it &mdash; until you add someone else. So I'll need you to add me as a collaborator.</p>
+
+          <h3>Step 7: Go to your repo's Collaborators settings</h3>
+          <p>In your repo, click <strong>Settings</strong>, then <strong>Collaborators</strong> in the sidebar, then <strong>Add people</strong>.</p>
+          <img class="screenshot" src="images/07-collaborators-settings.png" alt="Collaborators settings page" style="max-width:min(1920px,100%)">
+
+          <h3>Step 8: Add me</h3>
+          <p>Type in <strong>mahoy@sd44.ca</strong>, and click <strong>Add</strong>. I'll get an invite by email and accept it &mdash; that's how I'll be able to see your work all semester.</p>
+          <img class="screenshot" src="images/08-add-collaborator.png" alt="Add collaborator dialog" style="max-width:min(796px,100%)">
+        </section>
+
+        <section class="card">
+          <h2>What's Next</h2>
+          <p>Next class (0.3), you'll connect this portfolio to VS Code and get comfortable with the local git workflow &mdash; committing and syncing changes right from your editor.</p>
+        </section>
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card"><strong>This lesson</strong><br>Unit 0 &middot; Lesson 0.2</div>
+        <div class="card"><a href="/cp1112/unit0/lesson1/index.html">&larr; Back to Lesson 0.1</a></div>
+        <div class="card"><a href="/cp1112/unit0/index.html">&larr; Back to Unit 0</a></div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+
+  </body>
+</html>
