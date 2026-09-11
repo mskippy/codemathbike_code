@@ -120,7 +120,7 @@ window.NAV_DATA = {
           pages: {
             lesson1: { title: "0.1 Course Launch and Diagnostic", href: "/cp1112/unit0/lesson1/0.1_index.html" },
             lesson2: { title: "0.2 GitHub Setup", href: "/cp1112/unit0/lesson2/0.2_index.html" },
-            lesson3: { title: "0.3 Local Git Workflow", href: "/cp1112/unit0/lesson3/0.3_index.html" }
+            lesson3: { title: "0.3 GitHub Workflow", href: "/cp1112/unit0/lesson3/0.3_index.html" }
           }
         },
         unit1: {
