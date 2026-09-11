@@ -1,0 +1,105 @@
+<!-- v2 – Nov 2025 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CP11/12 • Naming Conventions</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="cp1112">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="CP11/12 • Naming Conventions">
+        <section class="card">
+          <h1>Naming Conventions: How We Name Things in This Course</h1>
+          <p>Every programming language and team has habits around how things get named &mdash; variables, functions, files. These habits are called <strong>naming conventions</strong>. They're not enforced by the computer (mostly), but following them matters more than it might seem.</p>
+        </section>
+
+        <section class="card">
+          <h2>The Main Styles</h2>
+          <div class="table-wrap">
+            <table class="content-table">
+              <thead>
+                <tr><th>Style</th><th>Looks like</th><th>Used for</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>snake_case</strong></td>
+                  <td><code>favourite_language</code>, <code>day1_make_it_yours.py</code></td>
+                  <td>Python variables, functions, and file names</td>
+                </tr>
+                <tr>
+                  <td><strong>camelCase</strong></td>
+                  <td><code>favouriteLanguage</code></td>
+                  <td>JavaScript, Java &mdash; <strong>not</strong> the Python convention</td>
+                </tr>
+                <tr>
+                  <td><strong>PascalCase</strong></td>
+                  <td><code>FavouriteLanguage</code></td>
+                  <td>Python <strong>class</strong> names (once we get there)</td>
+                </tr>
+                <tr>
+                  <td><strong>kebab-case</strong></td>
+                  <td><code>favourite-language</code></td>
+                  <td>Web URLs, some config file names &mdash; hyphens <strong>break Python variable names</strong> (Python reads <code>-</code> as subtraction)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Why It Matters</h2>
+          <p><strong>1. Consistency makes code readable &mdash; for you, for me, and for AI.</strong><br>
+          When every variable in a file follows the same pattern, your eyes stop having to think about <em>how</em> something is named and can focus on <em>what</em> it does. Mixing styles in the same file (<code>favourite_language</code> next to <code>favouriteColor</code>) is a small thing that adds up to real friction when reading code later &mdash; including your own code, a month from now.</p>
+          <p><strong>2. Python has an official style guide, and it says snake_case.</strong><br>
+          It's called <strong>PEP 8</strong>, and it's the closest thing Python has to a rulebook. Following it means your code "looks like Python" to anyone else who reads it &mdash; including the person grading it, and including AI tools, which are trained on millions of files that mostly follow this convention. Code that matches the convention is easier for AI to help with correctly, too.</p>
+          <p><strong>3. File names cause real bugs, not just style complaints.</strong><br>
+          Some systems are case-sensitive and some aren't &mdash; <code>Portfolio.py</code> and <code>portfolio.py</code> might be the same file on your laptop and two different files once it's on GitHub. Spaces in file names cause problems with a lot of tools (including git). Sticking to lowercase snake_case for file names sidesteps both problems entirely.</p>
+        </section>
+
+        <section class="card">
+          <h2>What to Use in This Course</h2>
+          <ul>
+            <li><strong>Variables and functions:</strong> snake_case &mdash; <code>student_name</code>, <code>calculate_average()</code></li>
+            <li><strong>File names:</strong> snake_case, no spaces &mdash; <code>magic_eightball.py</code>, <code>day1_make_it_yours.py</code></li>
+            <li><strong>Class names</strong> (later in the semester): PascalCase &mdash; <code>StudentRecord</code></li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Organizing Your Repo by Unit</h2>
+          <p>As the semester goes on, keep your repo organized by unit &mdash; one folder per unit, prefixed with its number, so everything stays easy to find (yours, and anyone looking at your repo).</p>
+          <ul>
+            <li>Unit 0 &mdash; Launch &amp; Diagnostic: <code>0_getting_started</code></li>
+            <li>Unit 1 &mdash; Python Foundations: <code>1_python_learning</code></li>
+            <li>...and so on, one numbered folder per unit as the semester continues</li>
+          </ul>
+          <p>Same rules apply as file names: lowercase snake_case, no spaces.</p>
+        </section>
+
+        <section class="card">
+          <h2>If AI Writes Code for You</h2>
+          <p>AI tools don't always default to the convention a specific course or team wants &mdash; some lean camelCase out of habit from other languages. If AI hands you camelCase in a Python file, that's worth noticing and fixing, not just accepting. Part of showing your understanding is catching things like this, not just making sure the code runs.</p>
+        </section>
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card"><a href="/cp1112/resources/index.html">&larr; All resources</a></div>
+        <div class="card"><strong>Used in</strong><br><a href="/cp1112/unit0/lesson3/0.3_index.html">Lesson 0.3</a></div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+
+  </body>
+</html>

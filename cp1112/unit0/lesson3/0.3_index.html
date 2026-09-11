@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>CP11/12 • 0.3 Local Git Workflow</title>
+    <title>CP11/12 • 0.3 GitHub Workflow</title>
     <link rel="stylesheet" href="/common/css/base.css">
     <script src="/common/js/nav_data.js" defer></script>
     <script src="/common/js/utils.js" defer></script>
@@ -18,104 +18,115 @@
     <div class="page-wrap">
       <aside id="sidebar" aria-label="Course navigation"></aside>
 
-      <main id="content" data-page-title="CP11/12 • 0.3 Local Git Workflow">
+      <main id="content" data-page-title="CP11/12 • 0.3 GitHub Workflow">
         <section class="card">
-          <h1>Local Git Workflow</h1>
-          <p>So far, every edit has happened directly in the browser on GitHub.com. That's fine for quick changes, but real project work happens in an editor &mdash; today connects the two, and this becomes your daily habit for the rest of the semester.</p>
-          <p>Go at your own speed. If you already know this, move fast &mdash; you can help a neighbour once you're done. If any step doesn't make sense, put a hand up.</p>
+          <h1>GitHub Workflow</h1>
+          <p>So far, every change you've made has happened in the browser, directly on GitHub.com. That's fine for quick edits, but real project work happens in an editor on your own computer. Today connects the two &mdash; and the habit you build today is the one you'll use for every project this semester.</p>
         </section>
 
         <section class="card">
-          <h2>Part A &mdash; Sign In to GitHub from VS Code</h2>
-          <p><em>This is a one-time setup &mdash; once it's done on a machine, VS Code won't ask again until the machine is reimaged.</em></p>
-
-          <h3>Step 1: Allow VS Code to sign in</h3>
-          <p>The first time you try to sync with GitHub, VS Code shows a notification asking to sign in. Click <strong>Allow</strong>.</p>
-          <img class="screenshot" src="images/01-signin-allow.png" alt="VS Code notification asking to sign in to GitHub" style="max-width:min(1536px,100%)">
-
-          <h3>Step 2: Authorize in your browser</h3>
-          <p>A browser window opens on GitHub's site, asking you to authorize Visual Studio Code. Review the permissions and click <strong>Authorize</strong>.</p>
-          <img class="screenshot" src="images/02-authorize-browser.png" alt="GitHub browser page authorizing Visual Studio Code" style="max-width:min(1536px,100%)">
-
-          <h3>Step 3: You're connected</h3>
-          <p>Back in VS Code, the account icon in the bottom-left now shows you're signed in. That's it &mdash; done for the rest of the semester.</p>
-          <img class="screenshot" src="images/03-signed-in.png" alt="VS Code account icon showing signed-in state" style="max-width:min(1536px,100%)">
-          <p class="lesson-note">Since lab machines get wiped periodically, this sign-in may need to be repeated later in the semester &mdash; same idea as the Python extension reinstall from Day 1.</p>
+          <h2>Why We Do This</h2>
+          <p>Every time you save meaningful progress on a project, you make a <strong>commit</strong> &mdash; a snapshot of your work at that exact moment, with a short note explaining what changed and why. Do this regularly, and your commit history becomes something genuinely valuable: a real record of how your project actually grew, not just the finished result.</p>
+          <p>This isn't busywork or a school-only exercise &mdash; it's how software actually gets built, everywhere, by everyone.</p>
         </section>
 
         <section class="card">
-          <h3>Before You Clone &mdash; Avoid This Trap</h3>
-          <p class="gotcha">If you open VS Code on a folder that already has files in it (like your 0.1 course folder) and check the Source Control panel, you'll see this instead of your repo:</p>
-          <img class="screenshot" src="images/04-not-connected-warning.png" alt="Source Control panel showing an uninitialized folder, with an Initialize Repository button" style="max-width:min(318px,100%)">
-          <p>That means the folder isn't actually connected to GitHub &mdash; it's just a plain folder. <strong>Don't click either button here.</strong> The fix is Part B below: clone into a brand new folder instead of reusing an old one.</p>
+          <h2>The Basic Mechanics</h2>
+          <p>Three moves make up almost everything you'll do:</p>
+          <ul>
+            <li><strong>Pull (or fetch) from origin</strong> &mdash; get the latest version from GitHub, in case anything changed there since you last worked</li>
+            <li><strong>Commit</strong> &mdash; save a snapshot of your current changes, locally, with a message explaining it</li>
+            <li><strong>Push to origin</strong> &mdash; send your local commits up to GitHub, where they're backed up and visible</li>
+          </ul>
+          <p><strong>"Origin"</strong> is just the name for the copy of your repo that lives on GitHub. The copy on your own computer is your <em>local</em> copy. Pulling brings changes down from GitHub to you; pushing sends changes up from you to GitHub.</p>
         </section>
 
         <section class="card">
-          <h2>Part B &mdash; Clone Your Repo</h2>
-
-          <h3>Step 4: Copy your repo's URL</h3>
-          <p>On GitHub, open your portfolio repo and click the green <strong>Code</strong> button. Under the HTTPS tab, click the copy icon next to the URL.</p>
-          <img class="screenshot" src="images/05-copy-repo-url.png" alt="GitHub Code button showing the HTTPS clone URL" style="max-width:min(1536px,100%)">
-
-          <h3>Step 5: Open the Command Palette and run Git: Clone</h3>
-          <p>In VS Code, press <code>Ctrl+Shift+P</code>, type "clone", and select <strong>Git: Clone</strong> from the list.</p>
-          <img class="screenshot" src="images/06-command-palette-clone.png" alt="VS Code Command Palette showing the Git: Clone option" style="max-width:min(1536px,100%)">
-
-          <h3>Step 6: Paste your repo's URL</h3>
-          <p>Paste the URL you copied in Step 4 and press Enter.</p>
-          <img class="screenshot" src="images/07-paste-url.png" alt="VS Code prompt to paste the repository URL" style="max-width:min(1536px,100%)">
-
-          <h3>Step 7: Choose where to save it</h3>
-          <p>Pick a location on your H: drive &mdash; this is where the cloned copy will live.</p>
-          <img class="screenshot" src="images/08-choose-location.png" alt="File picker for choosing where to save the cloned repository" style="max-width:min(1536px,100%)">
-
-          <h3>Step 8: Open the cloned repository</h3>
-          <p>VS Code asks if you'd like to open what was just cloned. Click <strong>Open</strong>.</p>
-          <img class="screenshot" src="images/09-open-cloned-repo.png" alt="VS Code prompt asking to open the cloned repository" style="max-width:min(1536px,100%)">
-
-          <h3>Step 9: Confirm your files are there</h3>
-          <p>Your README and 0.1 script should already be sitting in the file explorer &mdash; exactly as they appear on GitHub. You're fully connected.</p>
-          <img class="screenshot" src="images/10-files-confirmed.png" alt="VS Code file explorer showing the cloned repository's files" style="max-width:min(1536px,100%)">
+          <h2>Why Documentation Matters</h2>
+          <p>Code that works isn't the same as code that's understandable. Comments in your code, clear commit messages, and a well-written README are all forms of <strong>documentation</strong> &mdash; they explain your thinking to someone else. That "someone else" might be a teammate, a future employer looking at your portfolio, or future-you in three months, having completely forgotten how any of this worked.</p>
+          <p>This course treats documentation as a real, core skill &mdash; not an afterthought tacked onto the "real" work.</p>
         </section>
 
         <section class="card">
-          <h2>The Source Control Panel</h2>
-          <p>Open the panel using the branch icon in the sidebar, or <code>Ctrl+Shift+G</code>.</p>
-
-          <h3>Step 1: See your changes</h3>
-          <p>Make a change to a file in your repo &mdash; changed files show up automatically in the Source Control panel.</p>
-          <div class="screenshot-placeholder">Screenshot coming soon: the Source Control panel showing a changed file</div>
-
-          <h3>Step 2: Stage and commit</h3>
-          <p>Click the <strong>+</strong> next to a file to stage it, type a commit message in the box at the top, then click the checkmark to commit.</p>
-          <div class="screenshot-placeholder">Screenshot coming soon: staging a file and writing a commit message</div>
-
-          <h3>Step 3: Sync</h3>
-          <p>Click <strong>Sync Changes</strong> &mdash; this pushes your commit up to GitHub, and pulls down anything new, in one action.</p>
-          <div class="screenshot-placeholder">Screenshot coming soon: the Sync Changes button</div>
-
-          <p class="gotcha"><strong>Heads up &mdash; the "stage and commit directly" prompt:</strong> if you click the checkmark without staging anything first, VS Code asks if you'd like to automatically stage all your changes and commit them directly. Saying yes skips the staging step entirely and commits everything at once &mdash; convenient, but it means you don't get a chance to check exactly what's going into the commit. For this course, stage on purpose with the <strong>+</strong> button so you know what each commit contains.</p>
+          <h2>How Your Repo Structure Works</h2>
+          <p>Your repo isn't a black box that GitHub manages for you behind the scenes &mdash; it's a real folder, with real subfolders and files, identical whether you're looking at it on your H: drive or on GitHub.com. Clone your repo, and you get an actual folder you can open in File Explorer or VS Code. Add a file locally, commit it, push it &mdash; and it shows up on GitHub in exactly the same place you put it.</p>
         </section>
 
         <section class="card">
-          <h2>Practice: Commit &amp; Sync Loop</h2>
-          <p>Not graded &mdash; just a rep, so the loop actually sticks.</p>
-          <ol class="tier-list">
-            <li>Add a new file locally (e.g. <code>day3_notes.py</code>) with a couple of lines of code, commit it, sync it, and confirm it shows up on GitHub.</li>
-            <li>Make one more edit &mdash; tweak that file, or add a line to the README &mdash; commit and sync again.</li>
+          <h2>Why GitHub Instead of OneDrive?</h2>
+          <p>You already have OneDrive through the school &mdash; so why bother with something new?</p>
+          <ul>
+            <li>OneDrive saves your <em>current</em> file. GitHub saves every meaningful <em>version</em>, with your own notes on what changed and why &mdash; a real project history, not just a backup.</li>
+            <li>Git is built for code specifically. It can show the <em>exact lines</em> that changed between versions, not just "this file is different now."</li>
+            <li>This is the actual tool the software industry uses. GitHub experience is a real, transferable skill for post-secondary and employment &mdash; a OneDrive folder isn't.</li>
+            <li>Your GitHub portfolio is something you can genuinely show someone. A OneDrive folder was never built to be shared as "here's my work."</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>The Workflow, Every Time</h2>
+          <ol>
+            <li><strong>Pull origin</strong> &mdash; check for anything new before you start</li>
+            <li><strong>Make your changes</strong> &mdash; write code, edit files, whatever the task calls for</li>
+            <li><strong>Commit</strong> &mdash; save a snapshot locally, with a message</li>
+            <li><strong>Push to origin</strong> &mdash; send it up to GitHub</li>
           </ol>
-          <div class="screenshot-placeholder">Screenshot coming soon: a completed commit visible in GitHub's history after syncing</div>
-          <p class="lesson-note">Already comfortable with the panel? Try the same loop using <code>git add</code>, <code>git commit -m</code>, and <code>git push</code> in the built-in terminal instead &mdash; same result, different tool.</p>
+        </section>
+
+        <section class="card">
+          <h2>Writing a Good Commit Message</h2>
+          <p>A commit message has two parts:</p>
+          <ul>
+            <li><strong>Summary</strong> (always) &mdash; a short, specific line. "Fixed bug" tells nobody anything. "Fix average calculation to ignore empty scores" actually explains it.</li>
+            <li><strong>Description</strong> (when it helps) &mdash; a sentence or two on <em>why</em> you made the change, not just what changed.</li>
+          </ul>
+          <p>Good habit to build now: write your commit message like you're leaving a note for someone who's never seen your code before &mdash; because eventually, that's exactly what it is.</p>
+        </section>
+
+        <section class="card">
+          <h2>Today's Activity</h2>
+          <p>Now that you know the why and the how, let's actually use it.</p>
+          <ol class="tier-list">
+            <li><strong>Download</strong> the activity file for your track (below), and save it into a <code>0_getting_started</code> folder in your cloned repo</li>
+            <li><strong>Commit</strong> that addition &mdash; your first commit of the day</li>
+            <li><strong>Do the activity</strong> &mdash; work through the notebook at your own pace</li>
+            <li><strong>Commit</strong> your finished (or in-progress) work</li>
+            <li><strong>Push to origin</strong> &mdash; send it up to GitHub and confirm it's there</li>
+          </ol>
+
+          <p><strong>Beginners:</strong> variables, input, conditionals, and loops, ending with a combined challenge.<br>
+          <a class="btn" href="files/0.3_intro_to_python.ipynb" download>Download 0.3_intro_to_python.ipynb</a></p>
+
+          <p><strong>Ready for something harder:</strong> build a Magic 8-Ball, with six tiers to climb as far as you want. AI is fine to use, but comments and clean syntax are expected either way.<br>
+          <a class="btn" href="files/0.3_challenge_magic_eightball.ipynb" download>Download 0.3_challenge_magic_eightball.ipynb</a></p>
+
+          <p>Naming your own file for the first time in this new tool? Quick reference: <a href="/cp1112/resources/naming-conventions/index.html">Naming Conventions</a> (snake_case, and why it matters).</p>
+
+          <p>Need help getting GitHub Desktop installed and connected first? See the <a href="/cp1112/resources/github-desktop-setup/index.html">GitHub Desktop Setup Guide</a> <em>(coming soon)</em>.</p>
         </section>
 
         <section class="card">
           <h2>What's Next</h2>
-          <p>Unit 1 &mdash; Python Foundations starts next class. You'll also find out your track placement (Core or Extended) at the start of Unit 1, based on everything observed across these three days.</p>
+          <p><strong>Coming up:</strong> Unit 1 &mdash; Python Foundations starts next class. Track placement (Core/Extended) will be shared then, based on what's been observed across 0.1&ndash;0.3.</p>
         </section>
       </main>
 
       <aside id="right-rail" aria-label="Resources">
         <div class="card"><strong>This lesson</strong><br>Unit 0 &middot; Lesson 0.3</div>
+        <div class="card">
+          <strong>Resources</strong><br>
+          <a href="/cp1112/resources/jupyter-notebooks/index.html">Using Jupyter Notebooks</a>
+        </div>
+        <div class="card">
+          <strong>Reminders</strong>
+          <ul class="list-tight">
+            <li>Turn on Auto Save in VS Code</li>
+            <li><a href="https://desktop.github.com/" target="_blank" rel="noopener">Download GitHub Desktop</a></li>
+            <li>Pull before you start working each class</li>
+            <li>Commit often &mdash; don't wait until the end</li>
+            <li>Write clear, specific commit messages</li>
+          </ul>
+        </div>
         <div class="card"><a href="/cp1112/unit0/lesson2/0.2_index.html">&larr; Back to Lesson 0.2</a></div>
         <div class="card"><a href="/cp1112/unit0/index.html">&larr; Back to Unit 0</a></div>
         <div class="card"><a href="/cp1112/unit1/index.html">Next: Unit 1 &mdash; Python Foundations &rarr;</a></div>
