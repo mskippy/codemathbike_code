@@ -1,0 +1,76 @@
+<!-- v2 – Nov 2025 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CP11/12 • 1.6 Functions</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="cp1112">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="CP11/12 • 1.6 Functions">
+        <section class="card">
+          <h1>Functions</h1>
+          <p>You've been writing the same <em>kind</em> of code over and over &mdash; reading input, calculating damage, printing a message. Functions let you package that up once, give it a name, and reuse it &mdash; the first real step toward organizing a program instead of just writing it top to bottom.</p>
+        </section>
+
+        <section class="card">
+          <h2>What You'll Learn</h2>
+          <ul>
+            <li><strong><code>def</code></strong> &mdash; creates a function; anything in parentheses is a <strong>parameter</strong>, a value the function needs from whoever calls it</li>
+            <li><strong><code>return</code></strong> &mdash; sends a value back out; a function with no <code>return</code> gives back <code>None</code></li>
+            <li><strong>Scope</strong> &mdash; a variable created inside a function only exists inside that function</li>
+          </ul>
+        </section>
+
+        <section class="gotcha">
+          <strong>Watch out for:</strong> <code>print()</code>-ing inside a function shows something on screen, but doesn't give the calling code anything to work with afterward. If you need to use the result later, you need <code>return</code>, not just <code>print()</code>.
+        </section>
+
+        <section class="card">
+          <h2>Today's Activity</h2>
+          <p>Today's practice happens inside the notebook below &mdash; work through it top to bottom:</p>
+          <ol class="tier-list">
+            <li>A worked example, fully written out</li>
+            <li>Two guided practices &mdash; change a few values, then fill in some blanks</li>
+            <li>Two independent practices &mdash; write your own from scratch, different scenario each time</li>
+            <li>An optional stretch, if you want to go further</li>
+            <li>One check-your-understanding question to close</li>
+          </ol>
+          <p><strong>Download</strong> the notebook, save it into your <code>1_python_learning</code> folder in your cloned repo, and open it in VS Code. Commit once you've saved it, then commit again when you're done for the day.</p>
+          <a class="btn" href="1.6_Functions.ipynb" download>Download 1.6_Functions.ipynb</a>
+          <p>New to notebooks? See <a href="/cp1112/resources/jupyter-notebooks/index.html">Using Jupyter Notebooks</a> first.</p>
+        </section>
+
+        <section class="card">
+          <h2>What's Next</h2>
+          <p><strong>Coming up:</strong> Project 1B &mdash; The Adventure Loops, where you turn your one-shot decision into a multi-room adventure.</p>
+        </section>
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card"><strong>This lesson</strong><br>Unit 1 &middot; Core &middot; Lesson 1.6</div>
+        <div class="card">
+          <strong>Resources</strong><br>
+          <a href="/cp1112/resources/jupyter-notebooks/index.html">Using Jupyter Notebooks</a><br>
+          <a href="/cp1112/resources/naming-conventions/index.html">Naming Conventions</a>
+        </div>
+        <div class="card"><a href="/cp1112/unit1/core/lesson5/1.5_index.html">&larr; Back to Lesson 1.5</a></div>
+        <div class="card"><a href="/cp1112/unit1/core/project1b/index.html">Next: Project 1B &mdash; The Adventure Loops &rarr;</a></div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+
+  </body>
+</html>

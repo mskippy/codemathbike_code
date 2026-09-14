@@ -1,0 +1,78 @@
+<!-- v2 – Nov 2025 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CP11/12 • 1.1 Variables & Data Types</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="cp1112">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="CP11/12 • 1.1 Variables & Data Types">
+        <section class="card">
+          <h1>Variables &amp; Data Types</h1>
+          <p>Welcome to Python Foundations. Every program starts the same way &mdash; giving names to pieces of information so you can use them later. That's a <strong>variable</strong>, and it's the first building block for everything else this semester, including the text adventure game you'll start putting together over the next few classes.</p>
+        </section>
+
+        <section class="card">
+          <h2>What You'll Learn</h2>
+          <ul>
+            <li><strong>str</strong> (string) &mdash; text, always in quotes &mdash; <code>character_name = "Zara"</code></li>
+            <li><strong>int</strong> (integer) &mdash; a whole number, no quotes &mdash; <code>health = 100</code></li>
+            <li><strong>float</strong> (decimal) &mdash; a number with a decimal point &mdash; <code>damage_multiplier = 1.5</code></li>
+            <li><strong>bool</strong> (boolean) &mdash; exactly <code>True</code> or <code>False</code>, no quotes &mdash; <code>is_alive = True</code></li>
+          </ul>
+          <p>Python figures out the type automatically from the value you give it &mdash; you never have to declare it yourself. The built-in <code>type()</code> function tells you what type any variable actually is.</p>
+        </section>
+
+        <section class="gotcha">
+          <strong>Watch out for:</strong> a string without quotes isn't text &mdash; Python will think it's another variable and crash. And <code>True</code>/<code>False</code> are capitalized with no quotes &mdash; <code>true</code>, <code>false</code>, and <code>"True"</code> are all something else entirely.
+        </section>
+
+        <section class="card">
+          <h2>Today's Activity</h2>
+          <p>Today's practice happens inside the notebook below &mdash; work through it top to bottom:</p>
+          <ol class="tier-list">
+            <li>A worked example, fully written out</li>
+            <li>Two guided practices &mdash; change a few values, then fill in some blanks</li>
+            <li>Two independent practices &mdash; write your own from scratch, different scenario each time</li>
+            <li>An optional stretch, if you want to go further</li>
+            <li>One check-your-understanding question to close</li>
+          </ol>
+          <p><strong>Download</strong> the notebook, save it into your <code>1_python_learning</code> folder in your cloned repo, and open it in VS Code. Commit once you've saved it, then commit again when you're done for the day.</p>
+          <a class="btn" href="1.1_Variables_and_Data_Types.ipynb" download>Download 1.1_Variables_and_Data_Types.ipynb</a>
+          <p>New to notebooks? See <a href="/cp1112/resources/jupyter-notebooks/index.html">Using Jupyter Notebooks</a> first.</p>
+        </section>
+
+        <section class="card">
+          <h2>What's Next</h2>
+          <p><strong>Coming up:</strong> 1.2 &mdash; Input/Output &amp; f-strings, where your programs start talking back.</p>
+        </section>
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card"><strong>This lesson</strong><br>Unit 1 &middot; Core &middot; Lesson 1.1</div>
+        <div class="card">
+          <strong>Resources</strong><br>
+          <a href="/cp1112/resources/jupyter-notebooks/index.html">Using Jupyter Notebooks</a><br>
+          <a href="/cp1112/resources/naming-conventions/index.html">Naming Conventions</a>
+        </div>
+        <div class="card"><a href="/cp1112/unit1/u1_index.html">&larr; Back to Unit 1</a></div>
+        <div class="card"><a href="/cp1112/unit1/core/lesson2/1.2_index.html">Next: 1.2 &mdash; Input/Output &amp; f-strings &rarr;</a></div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+
+  </body>
+</html>

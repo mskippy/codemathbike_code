@@ -1,0 +1,65 @@
+<!-- v1 – Sept 2026
+     Studio Directory: lists every published student site.
+     Cowork's Friday batch-publish script should insert one <li> per
+     student inside the STUDIO_DIRECTORY_LIST markers below, linking
+     to /ict9/studio/[slug]/index.html per the Unit 2 build spec.
+     Leave the markers in place — the script matches on them. -->
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ICT 9 • Unit 2 • Studio Directory</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="ict9">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" role="main" data-page-title="ICT 9 • Unit 2 • Studio Directory">
+
+        <section class="card">
+          <h1>Studio Directory</h1>
+          <p>
+            Every employee's portfolio site, in one place. This list fills in week by week as sites go live — check
+            back after each Friday review to find your own page and see what your studio-mates are building.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Published Sites</h2>
+          <!-- STUDIO_DIRECTORY_LIST_START -->
+          <p class="muted">No sites published yet — check back after the first Friday review.</p>
+          <!--
+          <ul class="list-tight">
+            <li><a href="/ict9/studio/emma-r/index.html">Emma R.</a></li>
+          </ul>
+          -->
+          <!-- STUDIO_DIRECTORY_LIST_END -->
+        </section>
+
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card">
+          <strong>Not seeing your site?</strong>
+          <p class="muted">Directory updates after each Friday's review — if it's been more than a week, check with your teacher.</p>
+        </div>
+        <div class="card">
+          <strong>Back to Unit 2</strong>
+          <p class="muted"><a href="/ict9/unit2/u2_index.html">Unit 2: Web Department</a></p>
+        </div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+  </body>
+</html>

@@ -63,7 +63,7 @@ window.NAV_DATA = {
       icon: "/shared_course_assets/images/ICT%209%20Logo.png",
       units: {
         unit1: {
-          title: "U1 Studio Onboarding",
+          title: "U1 IT Onboarding",
           href: "/ict9/unit1/index.html",
           pages: {
             lesson1: { title: "1.1 Welcome to the Studio",  href: "/ict9/unit1/lesson1/1.1_index.html" },
@@ -72,24 +72,21 @@ window.NAV_DATA = {
           }
         },
         unit2: {
-          title: "U2 Web & Code Foundations",
-          href: "/ict9/unit2/index.html",
+          title: "U2 Web Department",
+          href: "/ict9/unit2/u2_index.html",
           pages: {
-            label1: { title: "2.1 Game Setup",         href: "/ict9/unit2/lesson1/index.html" },
-            label2: { title: "2.2 Adding Platforms",   href: "/ict9/unit2/lesson2/index.html" },
-            label3: { title: "2.3 Adding the Player",  href: "/ict9/unit2/lesson3/index.html" },
-            label4: { title: "2.4 Adding Enemies",     href: "/ict9/unit2/lesson4/index.html" },
-            label5: { title: "2.5 Game Mechanics",     href: "/ict9/unit2/lesson5/index.html" },
-            label6: { title: "2.6 Enhancements",       href: "/ict9/unit2/lesson6/index.html" },
-            label7: { title: "U2 Final Project",       href: "/ict9/unit2/unit_project/index.html" }
-
+            lesson1: { title: "2.1 HTML: Studio Profile Setup", href: "/ict9/unit2/lesson1/2.1_index.html" },
+            lesson2: { title: "2.2 CSS: Style Your Site",       href: "/ict9/unit2/lesson2/2.2_index.html" },
+            lesson3: { title: "2.3 JS: Add Interactivity",      href: "/ict9/unit2/lesson3/2.3_index.html" },
+            lesson4: { title: "2.4 Assembly & Publish",         href: "/ict9/unit2/lesson4/2.4_index.html" },
+            studio:  { title: "Studio Directory",               href: "/ict9/unit2/studio/studio_index.html" }
           }
         },
         unit3: {
-          title: "U3 Studio Build: Choose Your Track",
-          href: "/ict9/unit3/index.html",
+          title: "U3 Dev Team",
+          href: "/ict9/unit3/u3_index.html",
           pages: {
-            lesson1: { title: "3.1 Understanding Promotion",  href: "/ict9/unit3/lesson1/index.html" },
+            lesson1: { title: "3.1 Understanding Promotion",  href: "/ict9/unit3/lesson1/3.1_index.html" },
             lesson2: { title: "3.2 Brand Identity Design",    href: "/ict9/unit3/lesson2/3.2_index.html" },
             lesson3: { title: "3.3 Asset Creation",           href: "/ict9/unit3/lesson3/3.3_index.html" },
             lesson4: { title: "3.4 Poster Design",            href: "/ict9/unit3/lesson4/3.4_index.html" },
@@ -99,7 +96,7 @@ window.NAV_DATA = {
           }
         },
         unit4: {
-          title: "U4 Promote, Publish & Reflect",
+          title: "U4 Innovation Lab",
           href: "/ict9/unit4/index.html",
           pages: {
             lesson1: { title: "4.1",     href: "" },
@@ -116,7 +113,7 @@ window.NAV_DATA = {
       units: {
         unit0: {
           title: "U0 Launch & Diagnostic",
-          href: "/cp1112/unit0/index.html",
+          href: "/cp1112/unit0/u0_index.html",
           pages: {
             lesson1: { title: "0.1 Course Launch and Diagnostic", href: "/cp1112/unit0/lesson1/0.1_index.html" },
             lesson2: { title: "0.2 GitHub Setup", href: "/cp1112/unit0/lesson2/0.2_index.html" },
@@ -125,32 +122,49 @@ window.NAV_DATA = {
         },
         unit1: {
           title: "U1 Python Foundations",
-          href: "/cp1112/unit1/index.html",
-          pages: {}
+          href: "/cp1112/unit1/u1_index.html",
+          pages: {
+            core_lesson1: { title: "1.1 Variables & Data Types", href: "/cp1112/unit1/core/lesson1/1.1_index.html" },
+            core_lesson2: { title: "1.2 Input/Output & f-strings", href: "/cp1112/unit1/core/lesson2/1.2_index.html" },
+            core_lesson3: { title: "1.3 Operators & Expressions", href: "/cp1112/unit1/core/lesson3/1.3_index.html" },
+            core_lesson4: { title: "1.4 Conditionals", href: "/cp1112/unit1/core/lesson4/1.4_index.html" },
+            core_project1a: { title: "Project 1A — Character & First Choice", href: "/cp1112/unit1/core/project1a/index.html" },
+            core_lesson5: { title: "1.5 Loops", href: "/cp1112/unit1/core/lesson5/1.5_index.html" },
+            core_lesson6: { title: "1.6 Functions", href: "/cp1112/unit1/core/lesson6/1.6_index.html" },
+            core_project1b: { title: "Project 1B — The Adventure Loops", href: "/cp1112/unit1/core/project1b/index.html" },
+            core_lesson7: { title: "1.7 Lists & Strings", href: "/cp1112/unit1/core/lesson7/1.7_index.html" },
+            core_lesson8: { title: "1.8 Debugging Basics", href: "/cp1112/unit1/core/lesson8/1.8_index.html" },
+            core_project1c: { title: "Project 1C — Inventory & the Full Game", href: "/cp1112/unit1/core/project1c/index.html" },
+            ext_lesson1: { title: "1.EXT.1 Fundamentals Refresher", href: "/cp1112/unit1/extended/lesson1/1.ext1_index.html" },
+            ext_lesson2: { title: "1.EXT.2 Building on Basics", href: "/cp1112/unit1/extended/lesson2/1.ext2_index.html" },
+            ext_project1x: { title: "Project 1X — Shared Start", href: "/cp1112/unit1/extended/project1x/index.html" },
+            ext_project1y: { title: "Project 1Y — Diverges", href: "/cp1112/unit1/extended/project1y/index.html" },
+            ext_project1z: { title: "Project 1Z — Open Stretch", href: "/cp1112/unit1/extended/project1z/index.html" }
+          }
         },
         unit2: {
           title: "U2 Guided Project 1",
-          href: "/cp1112/unit2/index.html",
+          href: "/cp1112/unit2/u2_index.html",
           pages: {}
         },
         unit3: {
           title: "U3 Choice Project 2",
-          href: "/cp1112/unit3/index.html",
+          href: "/cp1112/unit3/u3_index.html",
           pages: {}
         },
         unit4: {
           title: "U4 Independent / Specialization Project",
-          href: "/cp1112/unit4/index.html",
+          href: "/cp1112/unit4/u4_index.html",
           pages: {}
         },
         unit5: {
           title: "U5 Capstone Showcase",
-          href: "/cp1112/unit5/index.html",
+          href: "/cp1112/unit5/u5_index.html",
           pages: {}
         },
         unit6: {
           title: "U6 Wrap-Up & Reflection",
-          href: "/cp1112/unit6/index.html",
+          href: "/cp1112/unit6/u6_index.html",
           pages: {}
         }
       }

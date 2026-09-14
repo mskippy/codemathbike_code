@@ -1,0 +1,76 @@
+<!-- v2 – Nov 2025 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CP11/12 • 1.5 Loops</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="cp1112">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="CP11/12 • 1.5 Loops">
+        <section class="card">
+          <h1>Loops</h1>
+          <p>Every program so far has run each line exactly once, top to bottom. Loops let you repeat a block of code &mdash; either a fixed number of times, or until something changes. This is where your programs stop feeling like a list of instructions and start feeling like actual software.</p>
+        </section>
+
+        <section class="card">
+          <h2>What You'll Learn</h2>
+          <ul>
+            <li><strong><code>for</code> loop</strong> &mdash; repeats a set number of times, using <code>range(n)</code> for the numbers <code>0</code> through <code>n-1</code></li>
+            <li><strong><code>while</code> loop</strong> &mdash; repeats as long as a condition stays <code>True</code>, for when you don't know the count ahead of time</li>
+            <li><strong><code>break</code></strong> &mdash; exits a loop immediately, even if its condition is still true</li>
+          </ul>
+        </section>
+
+        <section class="gotcha">
+          <strong>Watch out for:</strong> a <code>while</code> loop needs something inside it that eventually makes its condition <code>False</code> &mdash; forget to update that variable and you've built an infinite loop. If a cell seems frozen, that's almost always why.
+        </section>
+
+        <section class="card">
+          <h2>Today's Activity</h2>
+          <p>Today's practice happens inside the notebook below &mdash; work through it top to bottom:</p>
+          <ol class="tier-list">
+            <li>A worked example, fully written out</li>
+            <li>Two guided practices &mdash; change a few values, then fill in some blanks</li>
+            <li>Two independent practices &mdash; write your own from scratch, different scenario each time</li>
+            <li>An optional stretch, if you want to go further</li>
+            <li>One check-your-understanding question to close</li>
+          </ol>
+          <p><strong>Download</strong> the notebook, save it into your <code>1_python_learning</code> folder in your cloned repo, and open it in VS Code. Commit once you've saved it, then commit again when you're done for the day.</p>
+          <a class="btn" href="1.5_Loops.ipynb" download>Download 1.5_Loops.ipynb</a>
+          <p>New to notebooks? See <a href="/cp1112/resources/jupyter-notebooks/index.html">Using Jupyter Notebooks</a> first.</p>
+        </section>
+
+        <section class="card">
+          <h2>What's Next</h2>
+          <p><strong>Coming up:</strong> 1.6 &mdash; Functions, where you start packaging up reusable pieces of your code.</p>
+        </section>
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card"><strong>This lesson</strong><br>Unit 1 &middot; Core &middot; Lesson 1.5</div>
+        <div class="card">
+          <strong>Resources</strong><br>
+          <a href="/cp1112/resources/jupyter-notebooks/index.html">Using Jupyter Notebooks</a><br>
+          <a href="/cp1112/resources/naming-conventions/index.html">Naming Conventions</a>
+        </div>
+        <div class="card"><a href="/cp1112/unit1/core/project1a/index.html">&larr; Back to Project 1A</a></div>
+        <div class="card"><a href="/cp1112/unit1/core/lesson6/1.6_index.html">Next: 1.6 &mdash; Functions &rarr;</a></div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+
+  </body>
+</html>

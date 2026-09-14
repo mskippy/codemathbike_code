@@ -1,0 +1,76 @@
+<!-- v2 – Nov 2025 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CP11/12 • 1.2 Input/Output & f-strings</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="cp1112">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="CP11/12 • 1.2 Input/Output & f-strings">
+        <section class="card">
+          <h1>Input/Output &amp; f-strings</h1>
+          <p>So far, every value in your programs has been typed directly into the code. Today your programs start listening: <code>input()</code> lets a person type something back, and f-strings are the clean way to weave that &mdash; or any variable &mdash; into a sentence.</p>
+        </section>
+
+        <section class="card">
+          <h2>What You'll Learn</h2>
+          <ul>
+            <li><strong><code>input("prompt")</code></strong> &mdash; pauses your program, shows the prompt, and waits for the player to type something and hit Enter</li>
+            <li><strong>f-strings</strong> &mdash; put an <code>f</code> before the opening quote and wrap variables in <code>{ }</code> to drop them straight into a sentence</li>
+            <li><strong>Type conversion</strong> &mdash; <code>input()</code> always hands back a string, so wrap it in <code>int()</code> or <code>float()</code> when you need a number</li>
+          </ul>
+        </section>
+
+        <section class="gotcha">
+          <strong>Watch out for:</strong> <code>input()</code> always returns a string, even if the player types <code>100</code>. Add two un-converted inputs together and you'll get <code>"10" + "5"</code> &rarr; <code>"105"</code> instead of <code>15</code> &mdash; convert numeric input the moment you read it.
+        </section>
+
+        <section class="card">
+          <h2>Today's Activity</h2>
+          <p>Today's practice happens inside the notebook below &mdash; work through it top to bottom:</p>
+          <ol class="tier-list">
+            <li>A worked example, fully written out</li>
+            <li>Two guided practices &mdash; change a few values, then fill in some blanks</li>
+            <li>Two independent practices &mdash; write your own from scratch, different scenario each time</li>
+            <li>An optional stretch, if you want to go further</li>
+            <li>One check-your-understanding question to close</li>
+          </ol>
+          <p><strong>Download</strong> the notebook, save it into your <code>1_python_learning</code> folder in your cloned repo, and open it in VS Code. Commit once you've saved it, then commit again when you're done for the day.</p>
+          <a class="btn" href="1.2_Input_Output_and_Fstrings.ipynb" download>Download 1.2_Input_Output_and_Fstrings.ipynb</a>
+          <p>New to notebooks? See <a href="/cp1112/resources/jupyter-notebooks/index.html">Using Jupyter Notebooks</a> first.</p>
+        </section>
+
+        <section class="card">
+          <h2>What's Next</h2>
+          <p><strong>Coming up:</strong> 1.3 &mdash; Operators &amp; Expressions, where you start actually calculating things.</p>
+        </section>
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card"><strong>This lesson</strong><br>Unit 1 &middot; Core &middot; Lesson 1.2</div>
+        <div class="card">
+          <strong>Resources</strong><br>
+          <a href="/cp1112/resources/jupyter-notebooks/index.html">Using Jupyter Notebooks</a><br>
+          <a href="/cp1112/resources/naming-conventions/index.html">Naming Conventions</a>
+        </div>
+        <div class="card"><a href="/cp1112/unit1/core/lesson1/1.1_index.html">&larr; Back to Lesson 1.1</a></div>
+        <div class="card"><a href="/cp1112/unit1/core/lesson3/1.3_index.html">Next: 1.3 &mdash; Operators &amp; Expressions &rarr;</a></div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+
+  </body>
+</html>

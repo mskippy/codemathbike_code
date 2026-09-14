@@ -1,0 +1,351 @@
+<!-- v2 – Sept 2026 -->
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ICT 9 • Unit 2 • Lesson 2.1 — HTML: Studio Profile Setup</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="ict9">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" role="main" data-page-title="ICT 9 • Unit 2 • Lesson 2.1 — HTML: Studio Profile Setup">
+
+        <section class="card">
+          <h1>2.1 HTML: Studio Profile Setup</h1>
+          <p>
+            Every website starts with a skeleton — the basic structure that tells the browser "this is a webpage."
+            This week you're building the front door to your studio profile: three real pages, connected together.
+            Work through the tasks below in order — each one builds toward a complete, visible page.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Before You Start</h2>
+          <ol class="list-tight">
+            <li>Download the starter folder and unzip it into your OneDrive: <a href="/ict9/unit2/lesson1/student-site-starter.zip">student-site-starter.zip</a>.</li>
+            <li>Open the folder in VS Code.</li>
+            <li>Confirm the Live Server extension works — you should be able to right-click any HTML file and choose "Open with Live Server."</li>
+          </ol>
+
+          <h3>VS Code reminders</h3>
+          <ul class="list-tight">
+            <li><strong>Always open your folder from your H: drive</strong> — that's where all your real files live, and it's what you should be updating.</li>
+            <li><strong>Turn on Auto Save</strong> — <code>File &gt; Auto Save</code> — so you don't lose your work.</li>
+            <li><strong>Alt + Z</strong> turns on word wrap, so long lines of code stop running off the screen.</li>
+          </ul>
+
+          <div class="lesson-note">
+            <strong>Monday:</strong> your teacher will model Task 1 live, line by line, with everyone typing along.
+            That walkthrough <em>is</em> Task 1 — once it's done, you keep going independently. This read → copy →
+            customize → checkpoint pattern repeats all unit, so pay attention to how it works today.
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="task-heading">
+            <span class="pill pill-green">Green</span>
+            <h2>Task 1 — Build your Home page</h2>
+          </div>
+          <p>You're building your Home page: the front door to your studio profile.</p>
+          <ol class="list-tight">
+            <li>Copy the starter code below into <code>index.html</code>.</li>
+            <li>Drag your New Hire Avatar (from Unit 1) into your <code>/images</code> folder.</li>
+            <li>Change the two spots marked "Your Name" to your actual name.</li>
+            <li>Update the image <code>src</code> to match your avatar's filename, and write real alt text describing your avatar.</li>
+            <li>Replace the placeholder sentence with one real sentence about yourself.</li>
+            <li>Save, then open with Live Server to see it live.</li>
+          </ol>
+
+          <h3>Starter code</h3>
+          <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Your Name — Studio Profile&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Your Name&lt;/h1&gt;
+  &lt;img src="images/avatar.png" alt="Describe your avatar here"&gt;
+  &lt;p&gt;Write one sentence introducing yourself here.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+          <div class="customize-this">
+            <strong>Customize this:</strong> both "Your Name" spots, the image <code>src</code> + alt text, and the placeholder sentence. Leave everything else alone.
+          </div>
+
+          <div class="checkpoint">
+            <div class="checkpoint-row is-green">
+              <span class="checkpoint-icon">🟢</span>
+              <span><span class="checkpoint-label">Green:</span> page opens in Live Server, browser tab shows your name, avatar image displays (not a broken image icon).</span>
+            </div>
+            <div class="checkpoint-row is-red">
+              <span class="checkpoint-icon">🔴</span>
+              <span><span class="checkpoint-label">Red:</span> page is blank, title still says "Your Name," or the image shows a broken icon (this usually means the file path doesn't match your avatar's actual filename — check spelling and that it's inside <code>/images</code>).</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="task-heading">
+            <span class="pill pill-green">Green</span>
+            <h2>Task 2 — Build your About Me page</h2>
+          </div>
+          <p>
+            Now build a second page that tells people more about you. Your Home page was a quick intro — this page is
+            where you actually say something. It'll have a few short sections, each with its own heading, so it's easy
+            to read at a glance.
+          </p>
+          <ol class="list-tight">
+            <li>Create a new file called <code>about.html</code> in the same folder as <code>index.html</code>.</li>
+            <li>Copy the starter code below into it.</li>
+            <li>Write a real bio (2–3 sentences) under "My Story."</li>
+            <li>Replace the three list items under "A Few Things I'm Into" with three real things about you.</li>
+            <li>Fill in the "Quick Facts" section — one short line per fact, using the prompts below.</li>
+          </ol>
+
+          <h3>20 Questions About Me</h3>
+          <p class="muted">
+            You don't need to answer all 20 — just pick enough to fill your three sections: a few for "My Story,"
+            a few for "A Few Things I'm Into," and a few short ones for "Quick Facts."
+          </p>
+          <ol class="tier-list">
+            <li>What should people call you? (nickname's fine)</li>
+            <li>What grade were you in last year, and how's this year different so far?</li>
+            <li>What's your favourite subject (besides this one)?</li>
+            <li>What's one hobby or activity you spend a lot of time on?</li>
+            <li>What's your favourite video game, show, or movie right now?</li>
+            <li>Do you play any sports or an instrument?</li>
+            <li>What's a skill you're actually proud of?</li>
+            <li>What's your favourite food?</li>
+            <li>If you could have any superpower, what would it be?</li>
+            <li>What's the weirdest food combination you genuinely enjoy?</li>
+            <li>Cats, dogs, or something else? (or no pets at all)</li>
+            <li>What's a goal you have for this course?</li>
+            <li>What's something you're good at that has nothing to do with school?</li>
+            <li>If you could visit anywhere in the world, where would you go?</li>
+            <li>What's your favourite season, and why?</li>
+            <li>What's a fun fact most people don't know about you?</li>
+            <li>Morning person or night owl?</li>
+            <li>What's your favourite way to spend a weekend?</li>
+            <li>What's a game or show you'd recommend to literally anyone?</li>
+            <li>What do you want to build or make by the end of this course?</li>
+          </ol>
+
+          <div class="lesson-note">
+            <strong>Stuck on what to say?</strong> It's fine to ask an AI tool to help you brainstorm ideas or word a
+            sentence — this page is supposed to be fun, not stressful. A couple of rules, though:
+            <ul class="list-tight">
+              <li>Log it in your AI log, like always — what you asked, what it gave you, and what you changed.</li>
+              <li>This page goes on your live, public site. Keep it fun and light — favourite games, interests,
+                a funny fact — and leave out anything you wouldn't want a stranger to know (your address, phone number,
+                last name, what school you go to, etc.).</li>
+              <li>Make sure the final wording still sounds like <em>you</em>, not like a robot wrote your whole bio.</li>
+            </ul>
+          </div>
+
+          <h3>Starter code</h3>
+          <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;About Me — Your Name&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;About Me&lt;/h1&gt;
+
+  &lt;h2&gt;My Story&lt;/h2&gt;
+  &lt;p&gt;Write your bio here — a couple sentences about who you are.&lt;/p&gt;
+
+  &lt;h2&gt;A Few Things I'm Into&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Thing one&lt;/li&gt;
+    &lt;li&gt;Thing two&lt;/li&gt;
+    &lt;li&gt;Thing three&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h2&gt;Quick Facts&lt;/h2&gt;
+  &lt;p&gt;
+    Favourite subject: your answer here&lt;br&gt;
+    A skill I'm proud of: your answer here&lt;br&gt;
+    Goal for this course: your answer here
+  &lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+          <div class="customize-this">
+            <strong>Customize this:</strong> the title, the "My Story" paragraph, all three list items, and all three lines in "Quick Facts." Leave the headings and tags as they are.
+          </div>
+
+          <div class="lesson-note">
+            <strong>Reference — tags used on this page:</strong>
+            <ul class="list-tight">
+              <li><code>&lt;h2&gt;</code> — a section heading. Bigger sections use <code>&lt;h1&gt;</code>, sub-sections use <code>&lt;h2&gt;</code>, and headings should go in order (never skip from <code>h1</code> straight to <code>h3</code>).</li>
+              <li><code>&lt;p&gt;</code> — a paragraph. Use one per block of writing.</li>
+              <li><code>&lt;br&gt;</code> — a line break inside a paragraph, for short items that each need their own line without starting a whole new paragraph. Don't overuse it — it's for short lists like "Quick Facts," not for spacing out regular paragraphs.</li>
+            </ul>
+          </div>
+
+          <div class="checkpoint">
+            <div class="checkpoint-row is-green">
+              <span class="checkpoint-icon">🟢</span>
+              <span><span class="checkpoint-label">Green:</span> <code>about.html</code> opens correctly, all three sections (My Story, A Few Things I'm Into, Quick Facts) show your real content — not placeholders — and each Quick Fact is on its own line.</span>
+            </div>
+            <div class="checkpoint-row is-red">
+              <span class="checkpoint-icon">🔴</span>
+              <span><span class="checkpoint-label">Red:</span> page won't open (check the filename is exactly <code>about.html</code>), placeholder text is still showing, or the Quick Facts run together on one line (check your <code>&lt;br&gt;</code> tags).</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="task-heading">
+            <span class="pill pill-green">Green</span>
+            <h2>Task 3 — Build My Work + connect your pages</h2>
+          </div>
+          <p>
+            Your third page is where your projects will live — but you haven't made any yet! That's OK. For now, build
+            a placeholder so the page exists and looks right. Then you'll connect all three pages together with
+            navigation, so anyone visiting your site can move between them.
+          </p>
+          <ol class="list-tight">
+            <li>Create <code>work.html</code> using the starter code below.</li>
+            <li>Add the navigation code to the top of all three pages (<code>index.html</code>, <code>about.html</code>, <code>work.html</code>) — it's the same three links every time.</li>
+            <li>Test every link from every page — you should be able to get anywhere from anywhere.</li>
+          </ol>
+
+          <h3><code>work.html</code> starter code</h3>
+          <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;My Work — Your Name&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;My Work&lt;/h1&gt;
+  &lt;p&gt;Coming soon — this is where my projects will show up as I build them this year.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+          <h3>Navigation code (add to the top of <code>&lt;body&gt;</code> on all three pages)</h3>
+          <pre><code>&lt;nav&gt;
+  &lt;a href="index.html"&gt;Home&lt;/a&gt;
+  &lt;a href="about.html"&gt;About Me&lt;/a&gt;
+  &lt;a href="work.html"&gt;My Work&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+
+          <div class="customize-this">
+            <strong>Customize this:</strong> nothing — the nav code is identical on every page, that's the point.
+          </div>
+
+          <div class="checkpoint">
+            <div class="checkpoint-row is-green">
+              <span class="checkpoint-icon">🟢</span>
+              <span><span class="checkpoint-label">Green:</span> all three pages have the nav bar, and clicking any link from any page correctly opens the right page.</span>
+            </div>
+            <div class="checkpoint-row is-red">
+              <span class="checkpoint-icon">🔴</span>
+              <span><span class="checkpoint-label">Red:</span> a link does nothing or shows an error (usually a typo in the filename — check <code>index.html</code> vs <code>About.html</code> vs <code>about.html</code>, capitalization matters).</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="task-heading">
+            <span class="pill pill-blue">Blue</span>
+            <h2>Make it feel professional</h2>
+          </div>
+          <p class="muted">Unlocks after all three Green tasks are done.</p>
+          <p>Right now your pages work, but the code is pretty plain. Let's clean it up so it reads like a real website.</p>
+          <ol class="list-tight">
+            <li>On all three pages, replace <code>&lt;h1&gt;</code> + <code>&lt;nav&gt;</code> at the top with a <code>&lt;header&gt;</code> wrapping both.</li>
+            <li>Wrap your main page content in <code>&lt;main&gt;</code>.</li>
+            <li>Add this to the <code>&lt;head&gt;</code> of all three pages (swap in your own one-line description):
+              <pre><code>&lt;meta name="description" content="One sentence describing this page."&gt;</code></pre>
+            </li>
+            <li>If you have a favicon image, add it too:
+              <pre><code>&lt;link rel="icon" href="images/favicon.ico"&gt;</code></pre>
+            </li>
+          </ol>
+          <p class="muted"><strong>Checkpoint (self-assessed):</strong> pages still work exactly the same in the browser, but the code is organized into <code>&lt;header&gt;</code>/<code>&lt;main&gt;</code> sections.</p>
+        </section>
+
+        <section class="card">
+          <div class="task-heading">
+            <span class="pill pill-black">Black menu</span>
+            <h2>Pick one or more</h2>
+          </div>
+          <details>
+            <summary><strong>Accessibility pass</strong></summary>
+            <div>
+              <p>Go through all three pages and check every image has real, descriptive alt text (not "image" or blank), and that headings go in order (<code>h1</code> before <code>h2</code>, no skipping).</p>
+            </div>
+          </details>
+          <details>
+            <summary><strong>Plan ahead</strong></summary>
+            <div>
+              <p>Sketch (on paper or in a doc) what sections your pages will need once they're styled next week — colours, fonts, layout ideas for your studio identity.</p>
+            </div>
+          </details>
+          <details>
+            <summary><strong>Caretaker pilot</strong></summary>
+            <div>
+              <p>You're one of the first to try this task system — write down anything that was confusing or could be clearer, and share it with your teacher. This feedback might shape how tasks work for the rest of the class.</p>
+            </div>
+          </details>
+        </section>
+
+        <section class="card">
+          <h2>Friday Submission</h2>
+          <p>
+            Zip your whole project folder and attach it to the <strong>Lesson 2.1 assignment in Teams</strong>. Whatever
+            task you've reached by Friday is what you hand in — you can re-attach an updated zip any time before then.
+          </p>
+        </section>
+
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card">
+          <strong>Success criteria</strong>
+          <ul class="list-tight">
+            <li>Home page: title, avatar, intro sentence</li>
+            <li>About Me: bio + 3 interests</li>
+            <li>My Work: placeholder page</li>
+            <li>Nav bar working on all 3 pages</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Downloads</strong>
+          <ul class="list-tight">
+            <li><a href="/ict9/unit2/lesson1/student-site-starter.zip">Starter folder (.zip)</a></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Watch out for</strong>
+          <p class="muted">Relative paths matter — a broken avatar image usually means a typo in the filename or the wrong folder.</p>
+        </div>
+
+        <div class="card">
+          <strong>Next up</strong>
+          <p class="muted">2.2 CSS — styling your site.</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+  </body>
+</html>

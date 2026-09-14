@@ -305,7 +305,26 @@ h3 { font-size: var(--h3); line-height: 1.3; font-weight: 500; margin: 0 0 .4rem
     transition: background .2s ease;
   }
   .btn:hover { background: var(--accent-hover); }
-  
+
+  /* Track-choice cards (e.g. Core vs Extended landing pages) */
+  .track-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .track-card {
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface-alt);
+    padding: 1.25rem;
+  }
+  .track-card h3 {
+    margin-top: 0;
+    color: var(--accent);
+  }
+  .track-card .btn { margin-top: 0.5rem; }
+
   @media print {
     body { background: #fff; }
     #sidebar, #right-rail, #site-header { display: none; }
@@ -704,3 +723,59 @@ pre code {
 }
 
 .site-icon[hidden] { display: none; }
+
+/* ============================================================
+   Task pages — Green/Blue/Black task ladder (Unit 2 Web Dept
+   and reusable anywhere a lesson uses the same tiering)
+   Added Sept 2026. Extends .pill / .gotcha / .details patterns
+   already established elsewhere rather than inventing new ones.
+   ============================================================ */
+
+/* Small colour-coded label on a task card's heading, e.g.
+   <h2><span class="pill pill-green">Green</span> Task 1 — ...</h2> */
+.pill-green { background: rgba(46, 125, 50, 0.12);  border-color: rgba(46, 125, 50, 0.35);  color: #1b5e20; }
+.pill-blue  { background: rgba(21, 101, 192, 0.12); border-color: rgba(21, 101, 192, 0.35); color: #0d47a1; }
+.pill-black { background: rgba(15, 23, 42, 0.10);   border-color: rgba(15, 23, 42, 0.35);   color: #0f172a; }
+
+/* "Customize this:" callout — distinguishes structural starter
+   code from what's the student's to change. Same shape as .gotcha,
+   blue instead of amber so the two callouts read as different things. */
+.customize-this {
+  margin: 0.75rem 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid #90caf9;
+  border-left: 4px solid #1565c0;
+  border-radius: var(--radius);
+  background: rgba(21, 101, 192, 0.06);
+  font-size: 0.92rem;
+}
+.customize-this strong { color: #0d47a1; }
+
+/* Red/Green self-assessed checkpoint at the bottom of a task */
+.checkpoint {
+  margin: 1rem 0 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  font-size: 0.92rem;
+}
+.checkpoint-row {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  padding: 0.65rem 1rem;
+}
+.checkpoint-row + .checkpoint-row { border-top: 1px solid var(--border); }
+.checkpoint-row.is-green { background: rgba(46, 125, 50, 0.07); border-left: 4px solid #2e7d32; }
+.checkpoint-row.is-red   { background: rgba(198, 40, 40, 0.06); border-left: 4px solid #c62828; }
+.checkpoint-icon { flex: none; font-size: 1.1rem; line-height: 1.5; }
+.checkpoint-label { font-weight: 600; margin-right: 0.35rem; }
+
+/* Task card header row — badge + title on one line */
+.task-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.task-heading h2 { margin: 0; }

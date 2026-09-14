@@ -1,0 +1,66 @@
+<!-- v2 – Nov 2025 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CP11/12 • Project 1X</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="cp1112">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="CP11/12 • Project 1X">
+        <section class="card">
+          <h1>Project 1X &mdash; Shared Start</h1>
+          <p>Same adventure-game world as the Core track, same basic shape &mdash; a character, a branching choice, a small explorable space, an inventory. The difference is the bar: this project asks for three things Core's version doesn't.</p>
+        </section>
+
+        <section class="card">
+          <h2>Requirements</h2>
+          <ol class="tier-list">
+            <li><strong>A character and a branching adventure</strong> &mdash; roughly Core's Projects 1A + 1B combined</li>
+            <li><strong>At least one function that returns a value</strong> the rest of your program actually uses</li>
+            <li><strong>Handles bad input gracefully</strong> &mdash; a non-numeric answer where a number is expected shouldn't crash your program</li>
+            <li><strong>A dictionary-based inventory</strong>, not a list &mdash; item name mapped to quantity or description</li>
+          </ol>
+          <p class="lesson-note">Bad-input handling and dictionaries are both new territory beyond 1.EXT.1/1.EXT.2 &mdash; the notebook includes a short primer on two viable approaches (<code>try</code>/<code>except</code>, or a validation loop).</p>
+        </section>
+
+        <section class="card">
+          <h2>Getting Started</h2>
+          <p><strong>Download</strong> the project notebook, save it into your <code>1_python_learning</code> folder in your cloned repo, and commit once you've saved it.</p>
+          <a class="btn" href="Project_1X_Shared_Start.ipynb" download>Download Project_1X_Shared_Start.ipynb</a>
+          <p>Before you submit: test your bad-input handling on purpose &mdash; actually type letters where a number is expected, and confirm your program doesn't crash.</p>
+        </section>
+
+        <section class="card">
+          <h2>What's Next</h2>
+          <p><strong>Coming up:</strong> Project 1Y &mdash; choose your own diverging project from three concrete options.</p>
+        </section>
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card"><strong>This checkpoint</strong><br>Unit 1 &middot; Extended &middot; Project 1X</div>
+        <div class="card">
+          <strong>Resources</strong><br>
+          <a href="/cp1112/resources/jupyter-notebooks/index.html">Using Jupyter Notebooks</a><br>
+          <a href="/cp1112/resources/naming-conventions/index.html">Naming Conventions</a>
+        </div>
+        <div class="card"><a href="/cp1112/unit1/extended/lesson2/1.ext2_index.html">&larr; Back to 1.EXT.2</a></div>
+        <div class="card"><a href="/cp1112/unit1/extended/project1y/index.html">Next: Project 1Y &rarr;</a></div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+
+  </body>
+</html>

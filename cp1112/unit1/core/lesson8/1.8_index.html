@@ -1,0 +1,76 @@
+<!-- v2 – Nov 2025 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CP11/12 • 1.8 Debugging Basics</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="cp1112">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="CP11/12 • 1.8 Debugging Basics">
+        <section class="card">
+          <h1>Debugging Basics</h1>
+          <p>Every programmer, at every level, spends serious time fixing code that doesn't work. That's not a sign something's gone wrong with <em>you</em> &mdash; it's just what programming actually is. Today's about doing it efficiently: reading error messages properly, and tracing through code by hand when the bug isn't obvious.</p>
+        </section>
+
+        <section class="card">
+          <h2>What You'll Learn</h2>
+          <ul>
+            <li><strong>Reading tracebacks bottom-to-top</strong> &mdash; the last line names the error type and gives the clearest description</li>
+            <li><strong>Error types:</strong> <code>NameError</code> (undefined variable), <code>TypeError</code> (wrong type for the operation), <code>IndexError</code> (out-of-range access)</li>
+            <li><strong>Print-statement debugging</strong> &mdash; adding temporary <code>print()</code> statements to see what a variable actually holds</li>
+          </ul>
+        </section>
+
+        <section class="gotcha">
+          <strong>Watch out for:</strong> not every bug crashes your program. A logic bug runs fine and produces <em>a</em> result &mdash; just the wrong one. Those are exactly what print-statement debugging is for.
+        </section>
+
+        <section class="card">
+          <h2>Today's Activity</h2>
+          <p>Today's practice is different &mdash; instead of writing new code, you're finding and fixing bugs in code that's already there. Work through the notebook below top to bottom:</p>
+          <ol class="tier-list">
+            <li>A worked example showing how to read a traceback</li>
+            <li>Two guided fixes &mdash; a typo bug, then an off-by-one bug you'll trace with <code>print()</code></li>
+            <li>Two independent fixes &mdash; an <code>IndexError</code>, then a silent logic bug</li>
+            <li>An optional stretch bug, if you want to go further</li>
+            <li>One check-your-understanding question to close</li>
+          </ol>
+          <p><strong>Download</strong> the notebook, save it into your <code>1_python_learning</code> folder in your cloned repo, and open it in VS Code. Commit once you've saved it, then commit again when you're done for the day.</p>
+          <a class="btn" href="1.8_Debugging_Basics.ipynb" download>Download 1.8_Debugging_Basics.ipynb</a>
+          <p>New to notebooks? See <a href="/cp1112/resources/jupyter-notebooks/index.html">Using Jupyter Notebooks</a> first.</p>
+        </section>
+
+        <section class="card">
+          <h2>What's Next</h2>
+          <p><strong>Coming up:</strong> Project 1C &mdash; Inventory &amp; the Full Game, your final Unit 1 checkpoint.</p>
+        </section>
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card"><strong>This lesson</strong><br>Unit 1 &middot; Core &middot; Lesson 1.8</div>
+        <div class="card">
+          <strong>Resources</strong><br>
+          <a href="/cp1112/resources/jupyter-notebooks/index.html">Using Jupyter Notebooks</a><br>
+          <a href="/cp1112/resources/naming-conventions/index.html">Naming Conventions</a>
+        </div>
+        <div class="card"><a href="/cp1112/unit1/core/lesson7/1.7_index.html">&larr; Back to Lesson 1.7</a></div>
+        <div class="card"><a href="/cp1112/unit1/core/project1c/index.html">Next: Project 1C &mdash; Inventory &amp; the Full Game &rarr;</a></div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+
+  </body>
+</html>

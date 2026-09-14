@@ -1,0 +1,76 @@
+<!-- v2 – Nov 2025 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CP11/12 • 1.4 Conditionals</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="cp1112">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="CP11/12 • 1.4 Conditionals">
+        <section class="card">
+          <h1>Conditionals</h1>
+          <p>Every program you've written so far runs the exact same way every time. Conditionals change that &mdash; your code can finally make decisions, which means Zara's story can actually branch.</p>
+        </section>
+
+        <section class="card">
+          <h2>What You'll Learn</h2>
+          <ul>
+            <li><strong><code>if</code></strong> &mdash; runs a block of code only when a condition is <code>True</code></li>
+            <li><strong><code>elif</code> / <code>else</code></strong> &mdash; more conditions to check, then a catch-all; Python runs the <em>first</em> <code>True</code> branch and skips the rest</li>
+            <li><strong><code>and</code> / <code>or</code> / <code>not</code></strong> &mdash; combine conditions (both must be true / at least one must be true / flip a bool)</li>
+          </ul>
+        </section>
+
+        <section class="gotcha">
+          <strong>Watch out for:</strong> <code>=</code> assigns a value; <code>==</code> compares two values. Mixing them up in a condition (<code>if health = 100:</code>) is actually a <code>SyntaxError</code> in Python &mdash; it won't run at all, which is a fast, loud signal once you know what that error means.
+        </section>
+
+        <section class="card">
+          <h2>Today's Activity</h2>
+          <p>Today's practice happens inside the notebook below &mdash; work through it top to bottom:</p>
+          <ol class="tier-list">
+            <li>A worked example, fully written out</li>
+            <li>Two guided practices &mdash; change a few values, then fill in some blanks</li>
+            <li>Two independent practices &mdash; write your own from scratch, different scenario each time</li>
+            <li>An optional stretch, if you want to go further</li>
+            <li>One check-your-understanding question to close</li>
+          </ol>
+          <p><strong>Download</strong> the notebook, save it into your <code>1_python_learning</code> folder in your cloned repo, and open it in VS Code. Commit once you've saved it, then commit again when you're done for the day.</p>
+          <a class="btn" href="1.4_Conditionals.ipynb" download>Download 1.4_Conditionals.ipynb</a>
+          <p>New to notebooks? See <a href="/cp1112/resources/jupyter-notebooks/index.html">Using Jupyter Notebooks</a> first.</p>
+        </section>
+
+        <section class="card">
+          <h2>What's Next</h2>
+          <p><strong>Coming up:</strong> Project 1A &mdash; Character &amp; First Choice, your first checkpoint. You'll use exactly what 1.1&ndash;1.4 taught you to create a character and write one branching decision.</p>
+        </section>
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card"><strong>This lesson</strong><br>Unit 1 &middot; Core &middot; Lesson 1.4</div>
+        <div class="card">
+          <strong>Resources</strong><br>
+          <a href="/cp1112/resources/jupyter-notebooks/index.html">Using Jupyter Notebooks</a><br>
+          <a href="/cp1112/resources/naming-conventions/index.html">Naming Conventions</a>
+        </div>
+        <div class="card"><a href="/cp1112/unit1/core/lesson3/1.3_index.html">&larr; Back to Lesson 1.3</a></div>
+        <div class="card"><a href="/cp1112/unit1/core/project1a/index.html">Next: Project 1A &mdash; Character &amp; First Choice &rarr;</a></div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+
+  </body>
+</html>
