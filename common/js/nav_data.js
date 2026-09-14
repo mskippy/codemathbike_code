@@ -26,11 +26,9 @@ window.NAV_DATA = {
           title: "U2 Digital Media",
           href: "/ict8/unit2/index.html",
           pages: {
-            lesson1: { title: "2.1 Canva: About Me",        href: "/ict8/unit2/lesson1/2.1_index.html" },
-            lesson2: { title: "2.2 Excel: Class Data",      href: "/ict8/unit2/lesson2/2.2_index.html" },
-            lesson3: { title: "2.3 Image Editing",          href: "/ict8/unit2/lesson3/2.3_index.html" },
-
-            
+            lesson1: { title: "2.1 Canva: About Me",              href: "/ict8/unit2/lesson1/2.1_index.html" },
+            lesson2: { title: "2.2 Removing a Photobomber",       href: "/ict8/unit2/lesson2/2.2_index.html" },
+            lesson3: { title: "2.3 Combine & Create",             href: "/ict8/unit2/lesson3/2.3_index.html" }
           }
         },
         unit3: {
