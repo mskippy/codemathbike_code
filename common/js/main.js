@@ -94,6 +94,7 @@
     root.querySelectorAll('pre > code').forEach(code => {
       const pre = code.parentElement;
       if (pre.dataset.copyBound) return;
+      if (pre.classList.contains('no-copy')) return; // opt-out: <pre class="no-copy"> skips the Copy button
       pre.dataset.copyBound = "1";
       const btn = document.createElement('button');
       btn.type = 'button';

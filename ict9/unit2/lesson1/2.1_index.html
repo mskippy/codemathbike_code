@@ -32,12 +32,51 @@
 
         <section class="card">
           <h2>Before You Start</h2>
+          <p>Your project folder has one exact home. If it's anywhere else, Live Preview and your links will break.</p>
+
+          <h3>Your folder structure needs to look exactly like this:</h3>
+          <pre><code>H:\
+└── ICT 9\
+    └── 2_web_development\
+        └── your-slug\          (e.g. emma-r — see Step 5 below)
+            ├── index.html
+            ├── about.html
+            ├── work.html
+            ├── css\
+            │   └── style.css
+            ├── js\
+            │   └── script.js
+            └── images\</code></pre>
+
           <ol class="list-tight">
-            <li>Create your <code>2_web_development</code> folder in your <strong>H: drive</strong>.</li>
-            <li>Download the starter folder and unzip it into your H: Drive <a href="/ict9/unit2/lesson1/student-site-starter.zip">student-site-starter.zip</a>.</li>
-            <li>Open the folder in VS Code.</li>
-            <li>Add the <strong>Live Preview</strong> extension in VS Code, which allows you to see your changes in real time as you edit your HTML files.</li>
+            <li>Open <strong>File Explorer</strong> and go to your <strong>H: drive</strong>.</li>
+            <li>Create a folder called <code>ICT 9</code> if you don't already have one, then inside it create a folder called <code>2_web_development</code>.</li>
+            <li>Download <a href="/ict9/unit2/lesson1/student-site.zip">student-site.zip</a> — just let it save normally. It'll land in your <strong>Downloads</strong> folder.</li>
+            <li>In <strong>Downloads</strong>, right-click the zip → <strong>Extract All</strong>, and leave the destination as Downloads. This creates a new <code>student-site</code> folder right there.</li>
+            <li>
+              <strong>Rename that extracted <code>student-site</code> folder to your slug</strong> — while it's still
+              in Downloads — your first name plus the first letter of your last name, all lowercase, no spaces (e.g.
+              Emma Rodriguez → <code>emma-r</code>). This will be the exact name of your published site later, so
+              it's worth getting right now. If someone else in your block already has that slug, check with your
+              teacher — you'll get a number added (<code>emma-r2</code>).
+            </li>
+            <li>Move (cut and paste) your renamed folder out of Downloads and into the <code>2_web_development</code> folder on your <strong>H: drive</strong>.</li>
+            <li>Open your renamed folder in VS Code — <strong>not</strong> <code>2_web_development</code>, not a
+              folder still called <code>student-site</code>, and not a folder called <code>student-site (1)</code> or
+              anything else. Check the VS Code Explorer sidebar: you should see <code>css</code>, <code>js</code>,
+              <code>images</code> right away, with no extra folder in between — like this:
+              <img class="screenshot" src="vscode-folder-check.png" width="420" alt="VS Code Explorer sidebar showing a correctly opened student folder named STUDENT-A, with css, images, and js subfolders visible directly underneath it — no extra wrapper folder in between."></li>
+            <li>Add the <strong>Live Preview</strong> extension in VS Code, which lets you see your changes in real time as you edit your HTML files.</li>
           </ol>
+
+          <div class="gotcha">
+            <strong>Common mistake:</strong> Windows sometimes creates an extra folder when you extract a zip (you'll
+            see something like <code>student-site\student-site\</code>, or a second copy named <code>student-site (1)</code>).
+            Check for this in your Downloads folder before you rename or move anything — the folder you're about to
+            rename should have <code>css</code>, <code>js</code>, <code>images</code>, and <code>index.html</code>
+            directly inside it, not another folder in between. Fixing this now is much easier than after it's on
+            your H: drive.
+          </div>
 
           <h3>VS Code reminders</h3>
           <ul class="list-tight">
@@ -58,14 +97,36 @@
             <span class="pill pill-green">Green</span>
             <h2>Task 1 — Build your Home page</h2>
           </div>
-          <p>You're building your Home page: the front door to your studio profile.</p>
+          <p>You're building your Home page: the front door to your studio profile. It needs four things: your name, your avatar image, a tagline, and your studio role.</p>
           <ol class="list-tight">
+            <li>In the VS Code Explorer sidebar, first click on your <strong>folder name</strong> at the very top so
+              nothing else is highlighted — if <code>css</code>, <code>js</code>, or <code>images</code> is still
+              highlighted blue from clicking around, your new file will get created <em>inside</em> that folder
+              instead. Then click the <strong>New File</strong> icon (a page with a <code>+</code>) at the top of the
+              sidebar and name the new file exactly <code>index.html</code>.</li>
+            <li>Double-check it worked: <code>index.html</code> should appear at the <strong>same level</strong> as
+              <code>css</code>, <code>js</code>, and <code>images</code> — not nested inside any of them. If it ended
+              up inside a folder, drag it out to the top level (or delete it and try again).</li>
             <li>Copy the starter code below into <code>index.html</code>.</li>
-            <li>Drag your New Hire Avatar (from Unit 1) into your <code>/images</code> folder.</li>
+            <li>Add your New Hire Avatar image into your <code>images</code> folder — full steps below.</li>
             <li>Change the two spots marked "Your Name" to your actual name.</li>
-            <li>Update the image <code>src</code> to match your avatar's filename, and write real alt text describing your avatar.</li>
-            <li>Replace the placeholder sentence with one real sentence about yourself.</li>
-            <li>Save, then open with Live Server to see it live.</li>
+            <li>Update the image <code>src</code> to match your avatar's filename exactly, and write real alt text describing your avatar.</li>
+            <li>Replace the placeholder tagline with a short one-line tagline (think: how a game studio would describe an employee — e.g. "Web Department • Problem-solver, gamer, coffee enthusiast").</li>
+            <li>Replace the placeholder sentence with one real sentence about your studio role — what you're excited to work on, or what you bring to the team.</li>
+            <li>Save, then open with Live Preview to see it live.</li>
+          </ol>
+
+          <h3>Step by step: adding your avatar image</h3>
+          <p class="muted">This trips people up more than anything else this week — follow every step, in order.</p>
+          <ol class="list-tight">
+            <li>Find your New Hire Avatar file (the Canva PNG you made in Unit 1, Lesson 1.3). It's probably in your Downloads folder or OneDrive.</li>
+            <li>Copy it (right-click → Copy, or click it and press <strong>Ctrl+C</strong>).</li>
+            <li>In File Explorer, navigate to <code>H:\ICT 9\2_web_development\your-slug\images</code> (your renamed folder, not <code>student-site</code>).</li>
+            <li>Paste it there (<strong>Ctrl+V</strong>).</li>
+            <li>Look at the exact filename — including capitalization and the file extension. <code>Avatar.PNG</code> and <code>avatar.png</code> are <strong>not</strong> the same to a website. If you want, rename it to something simple and all lowercase, like <code>avatar.png</code>.</li>
+            <li>In <code>index.html</code>, make the <code>src</code> match that exact filename: <code>src="images/avatar.png"</code>.</li>
+            <li>Write real alt text — a sentence describing what the avatar actually looks like (e.g. <code>alt="Cartoon avatar of a person with short brown hair, glasses, and a green hoodie"</code>), not <code>alt="image"</code> or <code>alt=""</code>.</li>
+            <li>Save and check Live Preview — you should see the image, not a broken-image icon.</li>
           </ol>
 
           <h3>Starter code</h3>
@@ -78,22 +139,30 @@
 &lt;body&gt;
   &lt;h1&gt;Your Name&lt;/h1&gt;
   &lt;img src="images/avatar.png" alt="Describe your avatar here"&gt;
-  &lt;p&gt;Write one sentence introducing yourself here.&lt;/p&gt;
+  &lt;p&gt;Your tagline goes here — one line, studio-employee style.&lt;/p&gt;
+  &lt;p&gt;Write one sentence introducing yourself and your studio role here.&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
           <div class="customize-this">
-            <strong>Customize this:</strong> both "Your Name" spots, the image <code>src</code> + alt text, and the placeholder sentence. Leave everything else alone.
+            <strong>Customize this:</strong> both "Your Name" spots, the image <code>src</code> + alt text, the tagline, and the intro sentence. Leave everything else alone.
+          </div>
+
+          <div class="gotcha">
+            <strong>Broken image checklist:</strong> if you see a broken-image icon instead of your avatar, check —
+            is the file actually inside the <code>images</code> folder (not a subfolder, not the main folder)? Does
+            the filename in <code>src</code> match exactly, including capital letters? Does the extension match
+            (<code>.png</code> vs <code>.jpg</code> vs <code>.jpeg</code> are all different)?
           </div>
 
           <div class="checkpoint">
             <div class="checkpoint-row is-green">
               <span class="checkpoint-icon">🟢</span>
-              <span><span class="checkpoint-label">Green:</span> page opens in Live Server, browser tab shows your name, avatar image displays (not a broken image icon).</span>
+              <span><span class="checkpoint-label">Green:</span> page opens in Live Preview, browser tab shows your name, avatar image displays (not a broken image icon), and you have a real tagline and intro sentence — not placeholders.</span>
             </div>
             <div class="checkpoint-row is-red">
               <span class="checkpoint-icon">🔴</span>
-              <span><span class="checkpoint-label">Red:</span> page is blank, title still says "Your Name," or the image shows a broken icon (this usually means the file path doesn't match your avatar's actual filename — check spelling and that it's inside <code>/images</code>).</span>
+              <span><span class="checkpoint-label">Red:</span> page is blank, title still says "Your Name," the image shows a broken icon, or the tagline/intro text is still the placeholder wording.</span>
             </div>
           </div>
         </section>
@@ -222,6 +291,7 @@
           </p>
           <ol class="list-tight">
             <li>Create <code>work.html</code> using the starter code below.</li>
+            <li>Replace the three placeholder list items with three real project ideas you're hoping to build this year (a game, an app, a website feature — anything, even rough ideas count).</li>
             <li>Add the navigation code to the top of all three pages (<code>index.html</code>, <code>about.html</code>, <code>work.html</code>) — it's the same three links every time.</li>
             <li>Test every link from every page — you should be able to get anywhere from anywhere.</li>
           </ol>
@@ -235,7 +305,12 @@
 &lt;/head&gt;
 &lt;body&gt;
   &lt;h1&gt;My Work&lt;/h1&gt;
-  &lt;p&gt;Coming soon — this is where my projects will show up as I build them this year.&lt;/p&gt;
+  &lt;p&gt;Coming soon — here's what I'm hoping to build this year:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Project idea one&lt;/li&gt;
+    &lt;li&gt;Project idea two&lt;/li&gt;
+    &lt;li&gt;Project idea three&lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
@@ -247,17 +322,17 @@
 &lt;/nav&gt;</code></pre>
 
           <div class="customize-this">
-            <strong>Customize this:</strong> nothing — the nav code is identical on every page, that's the point.
+            <strong>Customize this:</strong> the three project ideas in <code>work.html</code>. The nav code itself doesn't change — it's identical on every page, that's the point.
           </div>
 
           <div class="checkpoint">
             <div class="checkpoint-row is-green">
               <span class="checkpoint-icon">🟢</span>
-              <span><span class="checkpoint-label">Green:</span> all three pages have the nav bar, and clicking any link from any page correctly opens the right page.</span>
+              <span><span class="checkpoint-label">Green:</span> all three pages have the nav bar, clicking any link from any page correctly opens the right page, and <code>work.html</code> lists three real project ideas.</span>
             </div>
             <div class="checkpoint-row is-red">
               <span class="checkpoint-icon">🔴</span>
-              <span><span class="checkpoint-label">Red:</span> a link does nothing or shows an error (usually a typo in the filename — check <code>index.html</code> vs <code>About.html</code> vs <code>about.html</code>, capitalization matters).</span>
+              <span><span class="checkpoint-label">Red:</span> a link does nothing or shows an error (usually a typo in the filename — check <code>index.html</code> vs <code>About.html</code> vs <code>about.html</code>, capitalization matters), or the project list is still the placeholder text.</span>
             </div>
           </div>
         </section>
@@ -272,6 +347,12 @@
           <ol class="list-tight">
             <li>On all three pages, replace <code>&lt;h1&gt;</code> + <code>&lt;nav&gt;</code> at the top with a <code>&lt;header&gt;</code> wrapping both.</li>
             <li>Wrap your main page content in <code>&lt;main&gt;</code>.</li>
+            <li>Add a <code>&lt;footer&gt;</code> at the bottom of all three pages with a short line like <code>&lt;p&gt;&amp;copy; 2026 Your Name&lt;/p&gt;</code>.</li>
+            <li>Clean up your indentation — everything nested inside <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>,
+              and <code>&lt;footer&gt;</code> should be indented one level in from its parent tag. This is one of the
+              easiest ways to tell professional code from messy code, and it makes your own file way easier to read
+              and fix later.</li>
+            <li>Add a horizontal rule (<code>&lt;hr&gt;</code>) between major sections on your About Me page — one before "A Few Things I'm Into" and one before "Quick Facts."</li>
             <li>Add this to the <code>&lt;head&gt;</code> of all three pages (swap in your own one-line description):
               <pre><code>&lt;meta name="description" content="One sentence describing this page."&gt;</code></pre>
             </li>
@@ -279,7 +360,39 @@
               <pre><code>&lt;link rel="icon" href="images/favicon.ico"&gt;</code></pre>
             </li>
           </ol>
-          <p class="muted"><strong>Checkpoint (self-assessed):</strong> pages still work exactly the same in the browser, but the code is organized into <code>&lt;header&gt;</code>/<code>&lt;main&gt;</code> sections.</p>
+
+          <h3>What a professional page should look like</h3>
+          <p class="muted">Here's the Home page, fully wrapped and indented:</p>
+          <pre class="no-copy"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Your Name — Studio Profile&lt;/title&gt;
+  &lt;meta name="description" content="One sentence describing this page."&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Your Name&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;a href="index.html"&gt;Home&lt;/a&gt;
+      &lt;a href="about.html"&gt;About Me&lt;/a&gt;
+      &lt;a href="work.html"&gt;My Work&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;img src="images/avatar.png" alt="Describe your avatar here"&gt;
+    &lt;p&gt;Your tagline goes here — one line, studio-employee style.&lt;/p&gt;
+    &lt;p&gt;Write one sentence introducing yourself and your studio role here.&lt;/p&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;&amp;copy; 2026 Your Name&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+          <p class="muted"><strong>Checkpoint (self-assessed):</strong> pages still work exactly the same in the browser, but the code is organized into <code>&lt;header&gt;</code>/<code>&lt;main&gt;</code>/<code>&lt;footer&gt;</code> sections, indentation is consistent, and <code>&lt;hr&gt;</code> divides your About Me sections.</p>
         </section>
 
         <section class="card">
@@ -305,13 +418,36 @@
               <p>You're one of the first to try this task system — write down anything that was confusing or could be clearer, and share it with your teacher. This feedback might shape how tasks work for the rest of the class.</p>
             </div>
           </details>
+          <details>
+            <summary><strong>Bonus page: My Setup</strong></summary>
+            <div>
+              <p>
+                Build a fourth page, <code>setup.html</code>, describing your tech setup — computer, keyboard/mouse,
+                monitor, any apps or extensions you can't live without, your desk setup, whatever's relevant. Add it to
+                the nav bar on all four pages (yes, that means updating <code>index.html</code>, <code>about.html</code>,
+                and <code>work.html</code> too, plus adding the link on <code>setup.html</code> itself). Use at least
+                one heading and one list.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary><strong>Second image + caption</strong></summary>
+            <div>
+              <p>
+                Add a second image to your About Me page — a photo of something you're into, a screenshot, a drawing,
+                anything with real alt text. Underneath it, add a one-line caption in a <code>&lt;p&gt;</code> explaining
+                what it is. If you didn't take the photo yourself, note where it's from underneath it.
+              </p>
+            </div>
+          </details>
         </section>
 
         <section class="card">
           <h2>Friday Submission</h2>
           <p>
-            Zip your whole project folder and attach it to the <strong>Lesson 2.1 assignment in Teams</strong>. Whatever
-            task you've reached by Friday is what you hand in — you can re-attach an updated zip any time before then.
+            Zip your renamed folder (your slug, e.g. <code>emma-r.zip</code>) and attach it to the
+            <strong>Lesson 2.1 assignment in Teams</strong>. Whatever task you've reached by Friday is what you hand
+            in — you can re-attach an updated zip any time before then.
           </p>
         </section>
 
@@ -321,9 +457,10 @@
         <div class="card">
           <strong>Success criteria</strong>
           <ul class="list-tight">
-            <li>Home page: title, avatar, intro sentence</li>
-            <li>About Me: bio + 3 interests</li>
-            <li>My Work: placeholder page</li>
+            <li>Folder renamed to your slug, living at <code>H:\ICT 9\2_web_development\your-slug</code></li>
+            <li>Home page: title, avatar, tagline, intro sentence</li>
+            <li>About Me: My Story, 3 interests, 20 Questions</li>
+            <li>My Work: 3 project ideas</li>
             <li>Nav bar working on all 3 pages</li>
           </ul>
         </div>
@@ -331,13 +468,18 @@
         <div class="card">
           <strong>Downloads</strong>
           <ul class="list-tight">
-            <li><a href="/ict9/unit2/lesson1/student-site-starter.zip">Starter folder (.zip)</a></li>
+            <li><a href="/ict9/unit2/lesson1/student-site.zip">Starter folder (.zip)</a></li>
           </ul>
         </div>
 
         <div class="card">
+          <strong>Your slug</strong>
+          <p class="muted">First name + first letter of last name, lowercase, no spaces — e.g. <code>emma-r</code>. This is your folder name, your zip name, and eventually your site's URL. Ask your teacher if it's already taken.</p>
+        </div>
+
+        <div class="card">
           <strong>Watch out for</strong>
-          <p class="muted">Relative paths matter — a broken avatar image usually means a typo in the filename or the wrong folder.</p>
+          <p class="muted">Relative paths matter — a broken avatar image usually means the file isn't in <code>images</code>, or the filename doesn't match exactly (capitalization and extension both count).</p>
         </div>
 
         <div class="card">
