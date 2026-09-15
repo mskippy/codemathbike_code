@@ -25,8 +25,9 @@
           <h1>2.1 HTML: Studio Profile Setup</h1>
           <p>
             Every website starts with a skeleton — the basic structure that tells the browser "this is a webpage."
-            This week you're building the front door to your studio profile: three real pages, connected together.
-            Work through the tasks below in order — each one builds toward a complete, visible page.
+            This week you're building the front door to your studio profile: three real pages, connected together,
+            and properly organized the way real websites are built. Work through the tasks below in order — each
+            one builds toward a complete, visible page.
           </p>
         </section>
 
@@ -264,14 +265,54 @@
 
         <section class="card">
           <div class="task-heading">
-            <span class="pill pill-blue">Blue</span>
-            <h2>Make it feel professional</h2>
+            <span class="pill pill-green">Green</span>
+            <h2>Task 4 — Give your pages real structure</h2>
           </div>
-          <p class="muted">Unlocks after all three Green tasks are done.</p>
-          <p>Right now your pages work, but the code is pretty plain. Let's clean it up so it reads like a real website.</p>
+          <p>
+            Right now every part of your page — the nav, the heading, the body content — sits loose in
+            <code>&lt;body&gt;</code> with no organization. <strong>Semantic tags</strong> label what each part of the
+            page actually is, which makes your code easier to read and is exactly how real websites are built.
+            Every student's pages need to use the same structure — this is the part we'll be checking site-wide.
+          </p>
           <ol class="list-tight">
-            <li>On all three pages, replace <code>&lt;h1&gt;</code> + <code>&lt;nav&gt;</code> at the top with a <code>&lt;header&gt;</code> wrapping both.</li>
-            <li>Wrap your main page content in <code>&lt;main&gt;</code>.</li>
+            <li>On all three pages, replace <code>&lt;h1&gt;</code> + <code>&lt;nav&gt;</code> at the top with a <code>&lt;header&gt;</code> wrapping both:
+              <pre><code>&lt;header&gt;
+  &lt;h1&gt;Your Name&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;a href="index.html"&gt;Home&lt;/a&gt;
+    &lt;a href="about.html"&gt;About Me&lt;/a&gt;
+    &lt;a href="work.html"&gt;My Work&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+            </li>
+            <li>Wrap the rest of each page's content — everything after <code>&lt;/header&gt;</code> — in <code>&lt;main&gt;...&lt;/main&gt;</code>.</li>
+            <li>Do this on <strong>all three pages</strong>, not just Home.</li>
+          </ol>
+
+          <div class="customize-this">
+            <strong>Customize this:</strong> nothing structural — the <code>&lt;header&gt;</code>/<code>&lt;main&gt;</code> pattern should look identical across all three of your pages, and match how every other student's site is organized.
+          </div>
+
+          <div class="checkpoint">
+            <div class="checkpoint-row is-green">
+              <span class="checkpoint-icon">🟢</span>
+              <span><span class="checkpoint-label">Green:</span> all three pages still look and work exactly the same in the browser, but every page's heading + nav is inside <code>&lt;header&gt;</code> and the rest of the content is inside <code>&lt;main&gt;</code>.</span>
+            </div>
+            <div class="checkpoint-row is-red">
+              <span class="checkpoint-icon">🔴</span>
+              <span><span class="checkpoint-label">Red:</span> the page looks different than before (check you didn't delete anything, just wrapped it), or one of the three pages is missing the <code>&lt;header&gt;</code>/<code>&lt;main&gt;</code> wrap.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="task-heading">
+            <span class="pill pill-blue">Blue</span>
+            <h2>Add finishing touches</h2>
+          </div>
+          <p class="muted">Optional — unlocks after Task 4 is done.</p>
+          <p>A couple of small extras that real websites have and yours doesn't yet.</p>
+          <ol class="list-tight">
             <li>Add this to the <code>&lt;head&gt;</code> of all three pages (swap in your own one-line description):
               <pre><code>&lt;meta name="description" content="One sentence describing this page."&gt;</code></pre>
             </li>
@@ -279,7 +320,7 @@
               <pre><code>&lt;link rel="icon" href="images/favicon.ico"&gt;</code></pre>
             </li>
           </ol>
-          <p class="muted"><strong>Checkpoint (self-assessed):</strong> pages still work exactly the same in the browser, but the code is organized into <code>&lt;header&gt;</code>/<code>&lt;main&gt;</code> sections.</p>
+          <p class="muted"><strong>Checkpoint (self-assessed):</strong> each page has its own description in the <code>&lt;head&gt;</code>, and a favicon shows in the browser tab if you added one.</p>
         </section>
 
         <section class="card">
@@ -325,6 +366,7 @@
             <li>About Me: bio + 3 interests</li>
             <li>My Work: placeholder page</li>
             <li>Nav bar working on all 3 pages</li>
+            <li>Header/main structure on all 3 pages</li>
           </ul>
         </div>
 
