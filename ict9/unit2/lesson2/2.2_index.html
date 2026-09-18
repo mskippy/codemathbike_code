@@ -320,6 +320,59 @@ nav a {
                 the variable once and every rule using it updates at the same time — try it on your nav bar or
                 heading colours.
               </p>
+              <p class="muted">
+                Doing the dark mode toggle below too? Also add <code>--bg</code> and <code>--text</code> variables
+                here, and use them in your <code>body</code> rule instead of hard-coded colours — that's what makes
+                the toggle work.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary><strong>Dark mode toggle — CSS only, no JavaScript</strong></summary>
+            <div>
+              <p>
+                You can build a real, working light/dark switch using nothing but CSS. It uses a trick: a hidden
+                checkbox remembers whether the switch is on, and CSS reacts to whether that checkbox is checked.
+              </p>
+
+              <p>
+                <strong>1. Set up variables first.</strong> Do the "CSS variables" item above if you haven't —
+                define <code>--bg</code> and <code>--text</code> in <code>:root</code>, and make sure your
+                <code>body</code> rule uses <code>background-color: var(--bg);</code> and <code>color: var(--text);</code>
+                instead of hard-coded colours. The toggle can't work without this step.
+              </p>
+
+              <p>
+                <strong>2. Add the switch itself</strong> right after your opening <code>&lt;body&gt;</code> tag, on
+                all three pages — before your <code>&lt;header&gt;</code>:
+              </p>
+              <pre><code>&lt;input type="checkbox" id="dark-mode-toggle"&gt;
+&lt;label for="dark-mode-toggle"&gt;🌙 Dark mode&lt;/label&gt;</code></pre>
+
+              <p><strong>3. Add this rule</strong> to the bottom of <code>style.css</code> (pick your own dark colours):</p>
+              <pre><code>body:has(#dark-mode-toggle:checked) {
+  --bg: #1a1a1a;
+  --text: #f4f4f4;
+}</code></pre>
+
+              <p>
+                Here's why it works: <code>:has()</code> lets a rule check <em>inside</em> an element instead of just
+                looking at the element itself — so this rule reads "if the checkbox inside <code>body</code> is
+                checked, override these two variables." Because your other rules already pull their colours from
+                <code>var(--bg)</code> and <code>var(--text)</code>, the instant those variables change, the whole
+                page follows — no JavaScript needed to make it happen.
+              </p>
+
+              <div class="gotcha">
+                <strong>Test it for real:</strong> <code>:has()</code> is a newer CSS feature — it works in current
+                Chrome, Edge, and Safari, but check that clicking your checkbox actually flips the colours before you
+                call this done. If nothing happens, ask your teacher.
+              </div>
+
+              <p class="muted">
+                Extra challenge: the checkbox looks like a plain checkbox by default — style the <code>label</code>
+                to look like a real toggle switch instead.
+              </p>
             </div>
           </details>
           <details>
