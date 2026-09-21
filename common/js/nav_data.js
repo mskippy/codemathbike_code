@@ -11,7 +11,7 @@ window.NAV_DATA = {
     ict8: {
       title: "ICT 8",
       href: "/ict8/index.html",
-      icon: "/shared_course_assets/images/ICT%208%20Logo.png",
+      icon: "/shared_course_assets/images/ict8logo.png",
       units: {
         unit1: {
           title: "U1 Essential Skills",
@@ -58,7 +58,7 @@ window.NAV_DATA = {
     ict9: {
       title: "ICT 9",
       href: "/ict9/index.html",
-      icon: "/shared_course_assets/images/ICT%209%20Logo.png",
+      icon: "/shared_course_assets/images/ict9logo.png",
       units: {
         unit1: {
           title: "U1 IT Onboarding",
@@ -107,7 +107,7 @@ window.NAV_DATA = {
     cp1112: {
       title: "Computer Programming 11/12",
       href: "/cp1112/index.html",
-      icon: "/shared_course_assets/images/CP%2011.12%20Logo.png",
+      icon: "/shared_course_assets/images/cp1112logo.png",
       units: {
         unit0: {
           title: "U0 Launch & Diagnostic",
