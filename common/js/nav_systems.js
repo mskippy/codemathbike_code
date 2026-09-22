@@ -201,6 +201,11 @@ function init() {
   // Expose context (used by other scripts and our own fallbacks)
   window.NAV_CONTEXT = { ...current, courseKey, version: VERSION };
 
+  // Tag <body> with the current unit so CSS can colour breadcrumbs/sidebar
+  // per-unit (see --unitN-accent / --current-accent in base.css)
+  if (current.unitKey) document.body.dataset.unit = current.unitKey;
+  else delete document.body.dataset.unit;
+
   // Fallback: set document title + header <h1> directly
   (function () {
     const navTitle = window.NAV_CONTEXT?.title;
