@@ -72,7 +72,7 @@
                 <li><strong>Add action: </strong> <code>Meteor</code> → <em>Create object</em> at position <k-input>SpawnPoint.X()</k-input>, <k-input>SpawnPoint.Y()</k-input></li>
                 </li>
                 <li><strong>Add action: </strong> <em>Start (or reset) the timer</em> → <k-input>MeteorSpawn</k-input></li>
-                <li><strong>Add action: </strong> <code>Meteor</code> → <em>Move toward an object</em> → <k-input>Player</k-input> with a permanent force of <k-input>100</k-input> pixels</li>
+                <li><strong>Add action: </strong> <code>Meteor</code> → <em>Apply a force toward an object</em> → <k-input>Player</k-input> with a permanent force of <k-input>100</k-input> pixels</li>
             </ul>
             <p><em>Note: You can copy the Enemy events and replace <code>Enemy</code> and <code>Meteor</code></em></p>
         </ul>
@@ -164,10 +164,20 @@
               <li><strong>PlayerHealth</strong> (Number) = <strong>5</strong></li>
             </ul>
           </li>
-          <li>Add a new event: <strong>EnemyBullet</strong> collides with <strong>Player</strong> 
+          <li>Add a new event: <strong>EnemyBullet</strong> collides with <strong>Player</strong> and add the following actions:
             <ul>
               <li><em>Delete</em> the <code>EnemyBullet</code></li>
-              <li><em>Change the variable value</em> from the <code>Player</code> to <k-input>-1</k-input></li>
+              <li>Change the <code>PlayerHealth</code> variable to subtract 1
+              
+                <ol>
+                  <li><em>Other action</em></li>
+                  <li><em>Variables → Change variable value</em></li>
+                  <li>Variables: <code>PlayerHealth</code> (this should pop up with a globe icon)</li>
+                  <li>Modification's sign: <k-input>- (subtract)</k-input></li>
+                  <li>Value: <k-input>1</k-input></li>
+                </ol>
+              </li>
+           
             </ul></li>
           <ul>
             <p><em>Add this event above the Player death event</em></p>
@@ -178,9 +188,13 @@
           </ul>
           <li>At the beginning of the scene, <strong>reset PlayerHealth to 5</strong> so lives are restored on restart.</li>
           <ul>
-            <p>Add this action to the other actions in the "At the beginning of scene" event</p>
+            <p><em>Make sure you select <strong>Other Condition</strong> to find add your <code>Player Health</code> variable</em></p>
           </ul>
+
         </ol>
+        
+        <p class="muted"></p>
+
         <p class="task">Preview your game to confirm the player can take 5 hits from enemy bullets before dying and restarting the scene.</p>       
   
         <!-- Image placeholders -->
