@@ -61,6 +61,29 @@
   body.dc1011 { --accent: #6a1b9a; --accent-hover: #4a148c; }
   body.cp1112 { --accent: #B8860B; --accent-hover: #8B6508; }
 
+  /* ─── ICT9 unit colour/icon system ──────────────────────────
+     One accent + one icon per unit, defined once and reused for
+     hero banners, homepage unit cards, and breadcrumb/sidebar
+     active-state colour. Icons are emoji placeholders for now —
+     swap for real SVGs later without touching any markup below. */
+  :root {
+    --unit1-accent: #2b7a94; /* IT Onboarding — blue/teal, "getting set up" */
+    --unit2-accent: #6a1b9a; /* Web Department — purple, creative/web */
+    --unit3-accent: #d9622b; /* Dev Team — orange/red, energy */
+    --unit4-accent: #2f9e52; /* Innovation Lab — green, growth/launch */
+    --unit1-icon: "🪪";
+    --unit2-icon: "🌐";
+    --unit3-icon: "🎮";
+    --unit4-icon: "💡";
+  }
+
+  /* Active unit → --current-accent, scoped to ICT9 pages only so it
+     doesn't affect ict8/dc1011/cp1112 pages that reuse unit1..unit4 keys */
+  body[data-course="ict9"][data-unit="unit1"] { --current-accent: var(--unit1-accent); }
+  body[data-course="ict9"][data-unit="unit2"] { --current-accent: var(--unit2-accent); }
+  body[data-course="ict9"][data-unit="unit3"] { --current-accent: var(--unit3-accent); }
+  body[data-course="ict9"][data-unit="unit4"] { --current-accent: var(--unit4-accent); }
+
   /* ─── Resets ───────────────────────────────────────────────── */
   *,
   *::before,
@@ -201,12 +224,12 @@ h3 { font-size: var(--h3); line-height: 1.3; font-weight: 500; margin: 0 0 .4rem
     color: var(--text);
   }
   #sidebar .nav a:hover {
-    color: var(--accent);
+    color: var(--current-accent, var(--accent));
     background: rgba(0,0,0,.04);
   }
   #sidebar .nav a.active {
     font-weight: 600;
-    color: var(--accent);
+    color: var(--current-accent, var(--accent));
     background: transparent;
   }
   
@@ -603,6 +626,98 @@ pre code {
 .crumb-sep {
   margin: 0 .4rem;
   opacity: .6;
+}
+
+.crumb-current {
+  font-weight: 600;
+  color: var(--current-accent, var(--accent));
+}
+
+/* ============================================================
+   Hero banner — reusable across the course landing page and
+   each unit landing page. Works with or without an icon: no
+   icon supplied just means the text carries the banner alone.
+   Set --hero-accent inline per instance, e.g.:
+   <section class="hero" style="--hero-accent: var(--unit2-accent);">
+   ============================================================ */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.75rem 2rem;
+  margin-bottom: var(--gap);
+  border-radius: var(--radius);
+  background: var(--hero-accent, var(--accent));
+  color: #ffffff;
+  box-shadow: var(--shadow);
+}
+
+.hero-icon {
+  font-size: 2.75rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.hero-text { min-width: 0; }
+
+.hero-title {
+  margin: 0 0 .35rem;
+  color: #ffffff;
+}
+
+.hero-tagline {
+  margin: 0;
+  opacity: .92;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+/* ============================================================
+   Homepage unit cards — colour-coded links to each unit,
+   using the same --unitN-accent variables as the hero banners.
+   ============================================================ */
+.unit-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.unit-card {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--unit-accent, var(--accent));
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  transition: box-shadow .15s ease, transform .15s ease;
+}
+
+.unit-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-1px);
+}
+
+.unit-card-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.unit-card-title {
+  font-weight: 600;
 }
 
 #site-footer { border-top: 1px solid var(--border-200, #e5e7eb); margin-top: 2rem; padding: 1rem 0; }

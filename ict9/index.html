@@ -21,8 +21,15 @@
       <aside id="sidebar" aria-label="Course navigation"></aside>
     
         <main id="content" data-page-title="ICT 9 • Unit 1">
+            <section class="hero">
+              <span class="hero-icon" aria-hidden="true">🏢</span>
+              <div class="hero-text">
+                <h1 class="hero-title">Welcome to ICT 9</h1>
+                <p class="hero-tagline">Four departments, one studio — plan, build, and launch real creative projects this year.</p>
+              </div>
+            </section>
+
             <section class="card">
-              <h1>Welcome to ICT 9</h1>
               <p>
                 In ICT 9, you’ll plan, build, and launch a real creative project — a game, an app, or an interactive story —
                 using the same process real studios use: research, design, prototype, test, and ship.
@@ -50,12 +57,24 @@
             <section id="units" class="card">
               <h2>Units of Study</h2>
               <p class="unit-sub small">Quick navigation to unit home pages.</p>
-              <ul class="navlist">
-                <li><a href="/ict9/unit1/index.html">U1 IT Onboarding</a></li>
-                <li><a href="/ict9/unit2/u2_index.html">U2 Web Department</a></li>
-                <li><a href="/ict9/unit3/u3_index.html">U3 Dev Team</a></li>
-                <li><a href="/ict9/unit4/index.html">U4 Innovation Lab</a></li>
-              </ul>
+              <div class="unit-cards">
+                <a class="unit-card" href="/ict9/unit1/index.html" style="--unit-accent: var(--unit1-accent);">
+                  <span class="unit-card-icon" aria-hidden="true">🪪</span>
+                  <span class="unit-card-title">U1 IT Onboarding</span>
+                </a>
+                <a class="unit-card" href="/ict9/unit2/u2_index.html" style="--unit-accent: var(--unit2-accent);">
+                  <span class="unit-card-icon" aria-hidden="true">🌐</span>
+                  <span class="unit-card-title">U2 Web Department</span>
+                </a>
+                <a class="unit-card" href="/ict9/unit3/u3_index.html" style="--unit-accent: var(--unit3-accent);">
+                  <span class="unit-card-icon" aria-hidden="true">🎮</span>
+                  <span class="unit-card-title">U3 Dev Team</span>
+                </a>
+                <a class="unit-card" href="/ict9/unit4/index.html" style="--unit-accent: var(--unit4-accent);">
+                  <span class="unit-card-icon" aria-hidden="true">💡</span>
+                  <span class="unit-card-title">U4 Innovation Lab</span>
+                </a>
+              </div>
             </section>
       
             <!-- Schedule — commented out for next year; update and re-enable when the new timetable is set

@@ -1,8 +1,10 @@
+<!-- v1 – Sept 2026 -->
 <!doctype html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>ICT 9 • Unit 2 • Coming Soon</title>
+    <title>ICT 9 • Unit 2 • Lesson 2.2 — CSS: Styling Your Studio Profile</title>
     <link rel="stylesheet" href="/common/css/base.css">
     <script src="/common/js/nav_data.js" defer></script>
     <script src="/common/js/utils.js" defer></script>
@@ -10,18 +12,447 @@
     <script src="/common/js/nav_systems.js" defer></script>
     <script src="/common/js/main.js" defer></script>
   </head>
+
   <body data-course="ict9">
     <header id="site-header" data-partial="/common/partials/header.html"></header>
+
     <div class="page-wrap">
       <aside id="sidebar" aria-label="Course navigation"></aside>
-      <main id="content" role="main" data-page-title="ICT 9 • Unit 2 • Coming Soon">
+
+      <main id="content" role="main" data-page-title="ICT 9 • Unit 2 • Lesson 2.2 — CSS: Styling Your Studio Profile">
+
         <section class="card">
-          <h1>This lesson is not published yet</h1>
-          <p>Check back once class is in session — this page is still being built.</p>
+          <h1>2.2 CSS: Styling Your Studio Profile</h1>
+          <p>
+            Last week you built three real pages with real HTML — but right now they look like plain, unstyled
+            text on a white background. That's because HTML only handles <strong>structure</strong> (what's a
+            heading, what's a paragraph, what's a link). <strong>CSS</strong> (Cascading Style Sheets) is a
+            separate language that controls <strong>how things look</strong> — colours, fonts, spacing, layout —
+            without touching your HTML at all. This week you're writing CSS to turn your three plain pages into
+            a site that actually looks like a studio profile. Work through the tasks below in order — each one
+            builds on the last.
+          </p>
         </section>
+
+        <section class="card">
+          <h2>Before You Start</h2>
+          <ol class="list-tight">
+            <li>Open your <code>2_web_development</code> folder in VS Code — the same one from last week, in your <strong>H: drive</strong>. No new download this week; you're building on what you already made.</li>
+            <li>Check that it still has <code>index.html</code>, <code>about.html</code>, <code>work.html</code>, and a <code>/css</code> folder with a file called <code>style.css</code> inside it. If <code>style.css</code> is missing, create it now: right-click the <code>css</code> folder → New File → name it exactly <code>style.css</code>.</li>
+            <li>Open <code>style.css</code> and leave it open in a tab — almost everything you do today happens in this one file.</li>
+          </ol>
+
+          <h3>VS Code reminders</h3>
+          <ul class="list-tight">
+            <li><strong>Auto Save should still be on</strong> from last week — check <code>File &gt; Auto Save</code> has a checkmark.</li>
+            <li>Keep <strong>Live Preview</strong> open on <code>index.html</code> so you see your CSS changes the moment you save.</li>
+            <li>CSS is picky about <strong>curly braces <code>{ }</code> and semicolons <code>;</code></strong> — a missing one can stop your whole rule from working. If something doesn't apply, that's the first thing to check.</li>
+          </ul>
+
+          <div class="lesson-note">
+            <strong>Monday:</strong> your teacher will model Task 1 live, line by line, with everyone typing along —
+            linking the stylesheet and writing your first CSS rules together. That walkthrough <em>is</em> Task 1.
+            Once it's done, you keep going independently through Tasks 2 and 3.
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>How CSS Works (quick reference)</h2>
+          <p>Every CSS rule has the same three parts. You'll use this exact pattern all week:</p>
+          <pre><code>selector {
+  property: value;
+}</code></pre>
+          <ul class="list-tight">
+            <li><strong>selector</strong> — which HTML element(s) this rule styles. <code>body</code> selects the whole page, <code>h1</code> selects every heading 1, <code>nav a</code> selects every link inside a <code>&lt;nav&gt;</code>.</li>
+            <li><strong>property</strong> — what you're changing, like <code>color</code> or <code>font-size</code>.</li>
+            <li><strong>value</strong> — what you're changing it to, like <code>blue</code> or <code>20px</code>.</li>
+            <li>Every line inside the <code>{ }</code> ends with a <strong>semicolon</strong> <code>;</code> — even the last one.</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <div class="task-heading">
+            <span class="pill pill-green">Green</span>
+            <h2>Task 1 — Link your stylesheet + set the site-wide look</h2>
+          </div>
+          <p>
+            Right now your <code>style.css</code> file exists but none of your pages know it's there — you have to
+            tell each page to use it. Once it's linked, anything you write in <code>style.css</code> instantly
+            changes <strong>all three pages at once</strong>, because they all point to the same one file. That's
+            the whole reason CSS lives in its own file instead of inside the HTML.
+          </p>
+          <ol class="list-tight">
+            <li>Open <code>index.html</code>. Inside <code>&lt;head&gt;</code>, right after your <code>&lt;title&gt;</code> line, add:
+              <pre><code>&lt;link rel="stylesheet" href="css/style.css"&gt;</code></pre>
+            </li>
+            <li>Do the <strong>exact same thing</strong> in <code>about.html</code> and <code>work.html</code> — same line, same spot, in all three files.</li>
+            <li>Save all three files.</li>
+          </ol>
+
+          <div class="lesson-note">
+            <strong>Nothing looks different yet — that's expected.</strong> The link just connects the file; it
+            doesn't style anything until you actually write CSS rules inside <code>style.css</code>. That's the next step.
+          </div>
+
+          <h3>Starter code — add this to <code>style.css</code></h3>
+          <p>This rule styles the <code>&lt;body&gt;</code> element — since every visible thing on your page is inside the body, this sets the base look for the whole site.</p>
+          <pre><code>body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #222222;
+}</code></pre>
+
+          <div class="customize-this">
+            <strong>Customize this:</strong> pick your own <code>background-color</code> and <code>color</code> —
+            just make sure your text colour and background colour are different enough to actually read (dark text
+            on a light background, or light text on a dark background).
+          </div>
+
+          <h3>Your turn — style your headings</h3>
+          <p>
+            Using the <strong>exact same pattern</strong> as the <code>body</code> rule above, add a new rule below
+            it for <code>h1</code>. Give it a <code>color</code> and a <code>font-size</code> (try a value like
+            <code>36px</code> to start).
+          </p>
+          <pre><code>h1 {
+  color: ;
+  font-size: ;
+}</code></pre>
+
+          <div class="lesson-note">
+            <strong>Reference — properties used on this page:</strong>
+            <ul class="list-tight">
+              <li><code>font-family</code> — which font to use. List a backup after a comma in case the first one isn't available.</li>
+              <li><code>background-color</code> / <code>color</code> — background colour and text colour. Can be a name (<code>blue</code>) or a hex code (<code>#3366cc</code>).</li>
+              <li><code>font-size</code> — text size, usually in <code>px</code> (pixels).</li>
+            </ul>
+          </div>
+
+          <div class="checkpoint">
+            <div class="checkpoint-row is-green">
+              <span class="checkpoint-icon">🟢</span>
+              <span><span class="checkpoint-label">Green:</span> opening any of your three pages in Live Server shows your new background colour, text colour, font, and heading style — all three pages match, because they share one <code>style.css</code>.</span>
+            </div>
+            <div class="checkpoint-row is-red">
+              <span class="checkpoint-icon">🔴</span>
+              <span><span class="checkpoint-label">Red:</span> nothing changed (check the <code>&lt;link&gt;</code> line is inside <code>&lt;head&gt;</code>, spelled exactly <code>css/style.css</code>, on all three pages), or only one page changed (you forgot to add the link to the others).</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="task-heading">
+            <span class="pill pill-green">Green</span>
+            <h2>Task 2 — Style your navigation bar</h2>
+          </div>
+          <p>
+            Right now your nav links are just plain, underlined text stacked one under another. We're going to turn
+            that into a real horizontal navigation bar — the kind every website has — using a layout tool called
+            <strong>flexbox</strong>.
+          </p>
+          <ol class="list-tight">
+            <li>In <code>style.css</code>, add a rule for the <code>nav</code> element itself (below your other rules):</li>
+          </ol>
+
+          <h3>Starter code</h3>
+          <pre><code>nav {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  background-color: #333333;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}</code></pre>
+
+          <div class="lesson-note">
+            <strong>Reference — what each property does:</strong>
+            <ul class="list-tight">
+              <li><code>display: flex</code> — the key line. It tells the browser to line up everything inside <code>&lt;nav&gt;</code> in a row instead of stacking it.</li>
+              <li><code>gap</code> — space between each link.</li>
+              <li><code>padding</code> — space between the nav bar's edge and what's inside it.</li>
+              <li><code>text-decoration: none</code> — removes the default underline from links.</li>
+              <li><code>nav a</code> is a different selector than <code>nav</code> — it only selects the links <em>inside</em> the nav, not the nav bar itself.</li>
+            </ul>
+          </div>
+
+          <div class="customize-this">
+            <strong>Customize this:</strong> the <code>background-color</code> on <code>nav</code> and the <code>color</code> on <code>nav a</code> — pick colours that go with the scheme you started in Task 1.
+          </div>
+
+          <h3>Your turn — add a hover effect</h3>
+          <p>
+            A <strong>hover state</strong> changes how something looks when the mouse is over it — it's what makes a
+            site feel interactive instead of static. Add this rule, using the same selector as <code>nav a</code>
+            but with <code>:hover</code> added to the end:
+          </p>
+          <pre><code>nav a:hover {
+  color: ;
+  background-color: ;
+}</code></pre>
+          <p>Fill in a <code>color</code> and/or <code>background-color</code> that's different from the normal link style, so students can actually see the change when they move their mouse over a link.</p>
+
+          <div class="checkpoint">
+            <div class="checkpoint-row is-green">
+              <span class="checkpoint-icon">🟢</span>
+              <span><span class="checkpoint-label">Green:</span> your three nav links sit in a horizontal bar (not stacked), have no underline, and visibly change colour when you hover your mouse over them.</span>
+            </div>
+            <div class="checkpoint-row is-red">
+              <span class="checkpoint-icon">🔴</span>
+              <span><span class="checkpoint-label">Red:</span> links still stack vertically (check <code>display: flex;</code> is on the <code>nav</code> rule, not the <code>nav a</code> rule), or hover does nothing (check you typed <code>nav a:hover</code> exactly, no space before the colon).</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="task-heading">
+            <span class="pill pill-green">Green</span>
+            <h2>Task 3 — Give your content breathing room</h2>
+          </div>
+          <p>
+            Right now your headings, paragraphs, and avatar image are all jammed right up against each other and
+            the edge of the browser window. That's because by default, HTML elements have almost no space around
+            them. We'll fix that using the <strong>box model</strong> — every element on a page is basically a box,
+            and you can control the space <em>inside</em> the box (<code>padding</code>) and <em>outside</em> the box
+            (<code>margin</code>).
+          </p>
+
+          <h3>Starter code — style your avatar image</h3>
+          <pre><code>img {
+  max-width: 200px;
+  border-radius: 50%;
+  border: 4px solid #333333;
+}</code></pre>
+
+          <div class="lesson-note">
+            <strong>Reference:</strong>
+            <ul class="list-tight">
+              <li><code>max-width</code> — stops the image from ever displaying wider than this, so a huge photo doesn't take over the whole page.</li>
+              <li><code>border-radius: 50%</code> — rounds the corners all the way into a circle. Try a smaller value like <code>10px</code> if you want rounded corners instead of a full circle.</li>
+              <li><code>border</code> — a line around the image: thickness, style, then colour, in that order.</li>
+            </ul>
+          </div>
+
+          <div class="customize-this">
+            <strong>Customize this:</strong> the <code>border</code> colour (match your scheme), and try switching <code>border-radius</code> between <code>50%</code> and a smaller pixel value to see the difference.
+          </div>
+
+          <h3>Your turn — space out your paragraphs and headings</h3>
+          <p>
+            Using the same selector-property-value pattern, add a rule for <code>p</code> that gives paragraphs
+            some breathing room and makes them easier to read:
+          </p>
+          <pre><code>p {
+  padding: ;
+  line-height: ;
+}</code></pre>
+          <p>
+            Try a <code>padding</code> value like <code>10px</code>, and a <code>line-height</code> around
+            <code>1.6</code> (this controls the space between lines of text inside a paragraph — the default is
+            cramped).
+          </p>
+
+          <div class="checkpoint">
+            <div class="checkpoint-row is-green">
+              <span class="checkpoint-icon">🟢</span>
+              <span><span class="checkpoint-label">Green:</span> your avatar has a border and rounded corners, and your paragraph text has visible space around it and between lines — the page no longer looks like plain default text.</span>
+            </div>
+            <div class="checkpoint-row is-red">
+              <span class="checkpoint-icon">🔴</span>
+              <span><span class="checkpoint-label">Red:</span> the image didn't change (check the selector is <code>img</code>, not <code>image</code> — that's not a real HTML tag), or nothing on the page looks different from before Task 3.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="task-heading">
+            <span class="pill pill-blue">Blue</span>
+            <h2>Centre your page content</h2>
+          </div>
+          <p class="muted">Unlocks after all three Green tasks are done.</p>
+          <p>
+            Right now your content stretches all the way across the browser window, which looks awkward on a wide
+            screen. Professional sites usually keep content in a centred column with space on either side. You'll
+            do this with <code>max-width</code> and a trick called <code>margin: auto</code> — and it only works
+            because your pages already have a <code>&lt;main&gt;</code> tag from Lesson 2.1's Task 4.
+          </p>
+          <div class="lesson-note">
+            <strong>Didn't finish 2.1's Task 4?</strong> Go back and do it first — wrap your heading + nav in
+            <code>&lt;header&gt;</code> and the rest of your content in <code>&lt;main&gt;</code> on all three pages.
+            This week's task won't work without it.
+          </div>
+          <ol class="list-tight">
+            <li>Add a new rule to <code>style.css</code> for <code>main</code> (this wraps your page content):
+              <pre><code>main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}</code></pre>
+            </li>
+          </ol>
+          <div class="lesson-note">
+            <strong>Why this works:</strong> <code>margin: 0 auto</code> means "no margin on top and bottom, and
+            automatically split the leftover horizontal space evenly on both sides" — which is exactly what centres
+            a box. It only works because you gave the box a fixed <code>max-width</code> first.
+          </div>
+          <p class="muted"><strong>Checkpoint (self-assessed):</strong> your page content sits in a centred column with visible space on the left and right on a wide browser window, instead of stretching edge to edge.</p>
+        </section>
+
+        <section class="card">
+          <div class="task-heading">
+            <span class="pill pill-black">Black menu</span>
+            <h2>Pick one or more</h2>
+          </div>
+          <details>
+            <summary><strong>CSS variables for your colour scheme</strong></summary>
+            <div>
+              <p>
+                Instead of retyping the same colour everywhere, define it once at the top of <code>style.css</code>:
+              </p>
+              <pre><code>:root {
+  --accent: #3366cc;
+}</code></pre>
+              <p>
+                Then use it anywhere you'd normally write a colour, like <code>color: var(--accent);</code>. Change
+                the variable once and every rule using it updates at the same time — try it on your nav bar or
+                heading colours.
+              </p>
+              <p class="muted">
+                Doing the dark mode toggle below too? Also add <code>--bg</code> and <code>--text</code> variables
+                here, and use them in your <code>body</code> rule instead of hard-coded colours — that's what makes
+                the toggle work.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary><strong>Dark mode toggle — CSS only, no JavaScript</strong></summary>
+            <div>
+              <p>
+                You can build a real, working light/dark switch using nothing but CSS. It uses a trick: a hidden
+                checkbox remembers whether the switch is on, and CSS reacts to whether that checkbox is checked.
+              </p>
+
+              <p>
+                <strong>1. Set up variables first.</strong> Do the "CSS variables" item above if you haven't —
+                define <code>--bg</code> and <code>--text</code> in <code>:root</code>, and make sure your
+                <code>body</code> rule uses <code>background-color: var(--bg);</code> and <code>color: var(--text);</code>
+                instead of hard-coded colours. The toggle can't work without this step.
+              </p>
+
+              <p>
+                <strong>2. Add the switch itself</strong> right after your opening <code>&lt;body&gt;</code> tag, on
+                all three pages — before your <code>&lt;header&gt;</code>:
+              </p>
+              <pre><code>&lt;input type="checkbox" id="dark-mode-toggle"&gt;
+&lt;label for="dark-mode-toggle"&gt;🌙 Dark mode&lt;/label&gt;</code></pre>
+
+              <p><strong>3. Add this rule</strong> to the bottom of <code>style.css</code> (pick your own dark colours):</p>
+              <pre><code>body:has(#dark-mode-toggle:checked) {
+  --bg: #1a1a1a;
+  --text: #f4f4f4;
+}</code></pre>
+
+              <p>
+                Here's why it works: <code>:has()</code> lets a rule check <em>inside</em> an element instead of just
+                looking at the element itself — so this rule reads "if the checkbox inside <code>body</code> is
+                checked, override these two variables." Because your other rules already pull their colours from
+                <code>var(--bg)</code> and <code>var(--text)</code>, the instant those variables change, the whole
+                page follows — no JavaScript needed to make it happen.
+              </p>
+
+              <div class="gotcha">
+                <strong>Test it for real:</strong> <code>:has()</code> is a newer CSS feature — it works in current
+                Chrome, Edge, and Safari, but check that clicking your checkbox actually flips the colours before you
+                call this done. If nothing happens, ask your teacher.
+              </div>
+
+              <p class="muted">
+                Extra challenge: the checkbox looks like a plain checkbox by default — style the <code>label</code>
+                to look like a real toggle switch instead.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary><strong>Swap in a Google Font</strong></summary>
+            <div>
+              <p>
+                Add a font link inside <code>&lt;head&gt;</code> on all three pages (pick a font at
+                <code>fonts.google.com</code> and copy its link tag), then update your <code>body</code> rule's
+                <code>font-family</code> to use it instead of Arial.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary><strong>Caretaker: propose a Studio colour palette</strong></summary>
+            <div>
+              <p>
+                Put together 3–4 colours that could work as a shared accent palette for the Studio Directory page,
+                and share them with your teacher — with a short note on why they work well together.
+              </p>
+            </div>
+          </details>
+        </section>
+
+        <section class="card">
+          <h2>Handing In Your Work</h2>
+          <p>
+            You already shared your project folder with your teacher back in Lesson 2.1 — you don't need to share it
+            again. Just copy your updated folder into OneDrive, replacing the one that's already there, and your
+            teacher will see this week's progress automatically.
+          </p>
+
+          <ol class="list-tight">
+            <li>Open File Explorer and go to your project folder on your H: drive — <code>H:\ICT 9\2_web_development\your-slug</code>.</li>
+            <li>Copy it — right-click → Copy, or Ctrl+C.</li>
+            <li>Go to your <code>ICT 9</code> folder in OneDrive, where your <code>your-slug</code> folder already lives from last week.</li>
+            <li>Paste your updated folder in (Ctrl+V). Windows will ask what to do about the folder that's already
+              there — choose <strong>Replace the files in the destination</strong> so your latest work overwrites last
+              week's copy.</li>
+          </ol>
+
+          <div class="gotcha">
+            <strong>Common mistake:</strong> If you end up with a second folder like <code>your-slug (1)</code> in
+            OneDrive instead of replacing the original, delete the extra copy and paste again, choosing
+            <strong>Replace</strong> when prompted — otherwise your teacher is still looking at last week's version,
+            not this week's.
+          </div>
+
+          <p class="muted"><strong>Done?</strong> Once your updated folder is copied over, you're finished for today — move on to Lesson 2.3.</p>
+        </section>
+
       </main>
-      <aside id="right-rail" aria-label="Resources"></aside>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card">
+          <strong>Success criteria</strong>
+          <ul class="list-tight">
+            <li>Stylesheet linked on all 3 pages</li>
+            <li>Site-wide font + colour scheme</li>
+            <li>Horizontal nav bar with hover effect</li>
+            <li>Spaced-out headings, text, and image</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Downloads</strong>
+          <p class="muted">No new starter this week — you're building on last week's <code>2_web_development</code> folder.</p>
+        </div>
+
+        <div class="card">
+          <strong>Watch out for</strong>
+          <p class="muted">A missing semicolon or curly brace can silently break a whole rule. If a change doesn't show up, check your syntax first before assuming it's the wrong property.</p>
+        </div>
+
+        <div class="card">
+          <strong>Next up</strong>
+          <p class="muted">2.3 JavaScript — making your site interactive.</p>
+        </div>
+      </aside>
     </div>
+
     <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
   </body>
 </html>
