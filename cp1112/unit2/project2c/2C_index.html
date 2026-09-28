@@ -1,0 +1,212 @@
+<!-- v3 – Sep 2026 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CP11/12 • 2C Transfer It</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="cp1112">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="CP11/12 • 2C Transfer It">
+        <!-- 1. Header -->
+        <section class="card">
+          <span class="pill">Unit 2 &middot; Level 2C</span>
+          <h1>2C &mdash; Transfer It</h1>
+          <p><strong>Take what you know in Python and prove it works in a new language.</strong></p>
+        </section>
+
+        <!-- 2. This level is for you if... -->
+        <section class="card">
+          <h2>This Level Is for You If&hellip;</h2>
+          <ul class="list-tight">
+            <li>Python feels comfortable, and you're curious how other languages do the same things.</li>
+            <li>You finished Unit 1 without getting stuck on the core concepts.</li>
+            <li>You're up for learning new syntax. That's the challenge here, so the fundamentals need to be solid already.</li>
+          </ul>
+          <p class="lesson-note">2C is a sideways move, not a step up. The program itself is at the 2A level, because learning a new language is the stretch.</p>
+        </section>
+
+        <!-- 3. What you'll build -->
+        <section class="card">
+          <h2>What You'll Build</h2>
+          <p>A program from the <a href="/cp1112/unit2/u2_index.html">problem menu</a> (calculator-type tool, quiz engine, or simple tracker), written entirely in your new language, at the 2A level. Alongside it, you'll keep a <strong>translation log</strong> showing how each Python idea carries over.</p>
+
+          <h3>Approved languages</h3>
+          <p>Only use a language from this list. It's the list of languages that work on the lab computers.</p>
+          <div class="table-wrap">
+            <table class="content-table">
+              <thead>
+                <tr><th>Language</th><th>VS Code extension</th><th>Also needs</th><th>Day-one check</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>JavaScript</strong> (in the browser)</td>
+                  <td>Nothing to add, it's built into VS Code</td>
+                  <td>A browser (Chrome or Edge), which is already there</td>
+                  <td>Open your <code>index.html</code> in the browser, press <code>F12</code>, and click <strong>Console</strong>. You should see your hello message.</td>
+                </tr>
+                <!-- ============================================================
+                     MORE LANGUAGES GO HERE
+                     Add a row once a language's check command passes on a lab
+                     machine. Copy this template and fill it in:
+
+                <tr>
+                  <td><strong>Java</strong></td>
+                  <td>Extension Pack for Java</td>
+                  <td>A JDK (the extension's built-in one only powers the editor)</td>
+                  <td>In the VS Code terminal, run <code>java -version</code>. A version number means you're ready.</td>
+                </tr>
+
+                     Other candidates from the Unit Outline:
+                     C#  — C# Dev Kit + .NET SDK — check: dotnet --version
+                     C++ — C/C++ extension + MinGW (g++) — check: g++ --version
+                     ============================================================ -->
+              </tbody>
+            </table>
+          </div>
+          <p class="muted small">More languages may be added once they're confirmed on the lab computers.</p>
+
+          <h3>Your hello world (CP1)</h3>
+          <p>In your Unit 2 project folder, make two files:</p>
+          <p><code>index.html</code></p>
+          <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Project&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;My Project&lt;/h1&gt;
+    &lt;script src="main.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          <p><code>main.js</code></p>
+          <pre><code>console.log("Hello, world!");
+alert("Hello, world!");</code></pre>
+          <p>Open <code>index.html</code> in your browser (double-click it in File Explorer, or right-click &rarr; Open with &rarr; Chrome). You should get a pop-up, and the message in the Console. Commit it. That's your CP1 hello world.</p>
+          <p class="lesson-note"><strong>"Console program" in the browser:</strong> JavaScript in the browser doesn't have a terminal. Use <code>prompt()</code> for input and <code>alert()</code> or <code>console.log()</code> for output, or build a simple HTML page with an input box. Either is fine. Your design-cycle work is what's assessed, not how fancy the interface is.</p>
+          <!--
+          <div class="screenshot-placeholder">[ Screenshot placeholder &mdash; index.html open in Chrome with the Console showing "Hello, world!" &mdash; <code>images/01-hello-console.png</code> ]</div>
+          -->
+        </section>
+
+        <!-- 4. Requirements checklist -->
+        <section class="card">
+          <h2>Requirements Checklist</h2>
+          <p>Your finished project must include all of these. (Ticking the boxes is just for you, it doesn't save.)</p>
+          <ul class="list-tight" style="list-style:none; padding-left:0;">
+            <li><label><input type="checkbox"> Everything on the <a href="/cp1112/unit2/project2a/2A_index.html">2A functional list</a> (variables, conditionals, loops, functions, a list/array, input validation, a menu loop), written in your new language</label></li>
+            <li><label><input type="checkbox"> <strong>Inline comments</strong> in the new language</label></li>
+            <li><label><input type="checkbox"> A <strong>test table</strong> with at least 6 tests, including 2 bad-input tests</label></li>
+            <li><label><input type="checkbox"> A <strong>translation log</strong> in your README: one row per concept, showing how you'd write it in Python, how it's written in your language, and what surprised you. At least 6 concepts.</label></li>
+            <li><label><input type="checkbox"> A <strong>"what was harder, what was easier"</strong> reflection paragraph</label></li>
+            <li><label><input type="checkbox"> <strong>AI Collaboration</strong> section filled in</label></li>
+          </ul>
+          <p class="lesson-note"><strong>AI matters extra here.</strong> Asking AI how to write something in a new language is a normal way to learn it. Log it, though: note where you asked AI to translate something, and whether you understood what came back. When your teacher calls you up, you'll be asked to explain rows of your translation log.</p>
+
+          <h3>Translation log example</h3>
+          <div class="table-wrap">
+            <table class="content-table">
+              <thead>
+                <tr><th>Concept</th><th>Python</th><th>JavaScript</th><th>What surprised me</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Loop over a list</td>
+                  <td><code>for item in items:</code></td>
+                  <td><code>for (const item of items) {</code></td>
+                  <td>Curly braces instead of indentation, and <code>const</code> inside the loop</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 5. Checkpoints at this level -->
+        <section class="card">
+          <h2>Checkpoints at 2C</h2>
+          <div class="table-wrap">
+            <table class="content-table">
+              <thead>
+                <tr><th>Checkpoint</th><th>What it looks like at 2C</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>CP1</strong><br><span class="muted small">End of Week 1</span></td>
+                  <td>Pitch names the language; pseudocode (not written in any language); hello world running in the new language, committed</td>
+                </tr>
+                <tr>
+                  <td><strong>CP2</strong><br><span class="muted small">End of Week 2</span></td>
+                  <td>Menu runs with two features working; translation log started with at least 3 rows; test table written</td>
+                </tr>
+                <tr>
+                  <td><strong>CP3</strong><br><span class="muted small">End of Week 3</span></td>
+                  <td>All tests recorded; translation log complete; reflection written; shown to a peer</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Remember to start each checkpoint commit with <code>CP1:</code>, <code>CP2:</code> or <code>CP3:</code>, and push before your teacher calls you up.</p>
+          <div class="gotcha">
+            <strong>Hello world by midweek.</strong> If you can't get hello world running by the middle of Week 1, talk to your teacher. A setup problem that eats the first week sinks the whole project, so you may be moved to 2B instead.
+          </div>
+        </section>
+
+        <!-- 6. When you're stuck -->
+        <section class="card">
+          <h2>When You're Stuck</h2>
+          <ul>
+            <li><strong>Write it in Python first.</strong> Get it working, then translate one function at a time.</li>
+            <li><strong>Use the official docs.</strong> For JavaScript, that's <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener">MDN</a>.</li>
+            <li><strong>Ask another 2C student.</strong> You're learning the same things at the same time.</li>
+            <li><strong>Check the Console.</strong> JavaScript errors in the browser show up in the Console (<code>F12</code>), with the line number.</li>
+          </ul>
+        </section>
+
+        <!-- 7. Done looks like -->
+        <section class="card">
+          <h2>Done Looks Like&hellip;</h2>
+          <p>Your program works as well as a strong 2A project, and your translation log shows you understand <em>why</em> the new language does things differently, not just that you found the right syntax.</p>
+        </section>
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card"><strong>This level</strong><br>Unit 2 &middot; 2C Transfer It<br>3 weeks &middot; 3 checkpoints</div>
+        <div class="card">
+          <strong>Resources</strong><br>
+          <a href="/cp1112/unit2/lesson1/README_template.md" download>README_template.md</a><br>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener">MDN: JavaScript</a>
+        </div>
+        <div class="card">
+          <strong>Reminders</strong>
+          <ul class="list-tight">
+            <li>Pull before you start each class</li>
+            <li>Hello world running in Week 1</li>
+            <li>Add translation log rows as you go, not at the end</li>
+          </ul>
+        </div>
+        <div class="card">
+          <strong>All levels</strong><br>
+          <a href="/cp1112/unit2/project2a/2A_index.html">2A &mdash; Build It</a><br>
+          <a href="/cp1112/unit2/project2b/2B_index.html">2B &mdash; Structure It</a><br>
+          2C &mdash; Transfer It <span class="muted small">(you're here)</span><br>
+          <a href="/cp1112/unit2/project2d/2D_index.html">2D &mdash; Engineer It</a>
+        </div>
+        <div class="card"><a href="/cp1112/unit2/u2_index.html">&larr; Back to Unit 2</a></div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+
+  </body>
+</html>

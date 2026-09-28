@@ -1,8 +1,10 @@
+<!-- v1.1 – Sept 2026 (self-serve catch-up edits) -->
 <!doctype html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>ICT 9 • Unit 2 • Coming Soon</title>
+    <title>ICT 9 • Unit 2 • Lesson 2.4 — Assembly: Going Live on GitHub</title>
     <link rel="stylesheet" href="/common/css/base.css">
     <script src="/common/js/nav_data.js" defer></script>
     <script src="/common/js/utils.js" defer></script>
@@ -10,18 +12,560 @@
     <script src="/common/js/nav_systems.js" defer></script>
     <script src="/common/js/main.js" defer></script>
   </head>
+
   <body data-course="ict9">
     <header id="site-header" data-partial="/common/partials/header.html"></header>
+
     <div class="page-wrap">
       <aside id="sidebar" aria-label="Course navigation"></aside>
-      <main id="content" role="main" data-page-title="ICT 9 • Unit 2 • Coming Soon">
+
+      <main id="content" role="main" data-page-title="ICT 9 • Unit 2 • Lesson 2.4 — Assembly: Going Live on GitHub">
+
         <section class="card">
-          <h1>This lesson is not published yet</h1>
-          <p>Check back once class is in session — this page is still being built.</p>
+          <h1>2.4 Assembly: Going Live on GitHub</h1>
+          <p>
+            You've built the structure (HTML), the style (CSS), and the interactivity (JavaScript). Right now, though,
+            your site only exists on your H: drive, so nobody else can see it. Today the Web Department ships.
+            You'll put your project folder into <strong>Git</strong>, the tool every real studio uses to track changes
+            to code. Then you'll get an AI to clean up your code, <strong>push</strong> it all to <strong>GitHub</strong>, and
+            turn it into a real, live website with its own URL. Work through the tasks in order, because each one
+            depends on the one before it.
+          </p>
         </section>
+
+        <section class="card">
+          <h2>Before You Start</h2>
+          <ol class="list-tight">
+            <li>Open your project folder in VS Code, the same <code>H:\ICT 9\2_web_development\your-slug</code> folder you've used all unit. No new download needed.</li>
+            <li>Check the Explorer sidebar. You should see <code>index.html</code>, <code>about.html</code>, <code>work.html</code>, and your <code>css</code>, <code>js</code>, and <code>images</code> folders directly inside it, with no extra folder in between.</li>
+            <li>Have a browser tab open and ready. You'll be creating an account and signing in during class.</li>
+          </ol>
+
+          <h3>Four words you'll hear today</h3>
+          <ul class="list-tight">
+            <li><strong>Repository (repo)</strong>: a project folder that Git is keeping track of.</li>
+            <li><strong>Commit</strong>: a save point. It's a snapshot of every file at one moment, with a short message describing what changed. You can always go back to one.</li>
+            <li><strong>Push / Sync</strong>: sending your commits from your computer up to GitHub.</li>
+            <li><strong>GitHub Pages</strong>: a free GitHub feature that turns a repo into a live website.</li>
+          </ul>
+
+          <div class="lesson-note">
+            <strong>Missed class, or got lost partway through?</strong> This page covers everything we did together,
+            step by step. Find the task you got stuck on in the list below, jump to it, and use each task's
+            <strong>checkpoint</strong> to confirm you're on track before you move on. Don't skip ahead, because each
+            task depends on the one before it.
+          </div>
+
+          <h3>Find your spot</h3>
+          <ul class="list-tight">
+            <li><a href="#task1">Task 1 — Pre-flight check</a>: haven't done anything yet? Start here. This includes the 20 Questions oversharing audit.</li>
+            <li><a href="#task2">Task 2 — GitHub account</a>: no account yet, or you haven't verified your email.</li>
+            <li><a href="#task3">Task 3 — First commit</a>: you have an account, but the Source Control panel still says "Initialize Repository."</li>
+            <li><a href="#task4">Task 4 — AI code cleanup</a>: your first commit is done.</li>
+            <li><a href="#task5">Task 5 — Publish and go live</a>: your "AI code cleanup" commit is done.</li>
+            <li><a href="#task6">Task 6 — Ship an update</a>: your site is live.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="task1">
+          <div class="task-heading">
+            <span class="pill pill-green">Green</span>
+            <h2>Task 1 — Pre-flight check: polish and privacy</h2>
+          </div>
+          <p>
+            Once your site is live, <strong>anyone on the internet can see it</strong>. Your teacher, your family, a
+            future employer, and total strangers can all open it. Before anything gets published, go through this checklist.
+          </p>
+
+          <h3>Polish</h3>
+          <ol class="list-tight">
+            <li>Open all three pages in Live Preview and click every nav link. Every page should load, with no broken links.</li>
+            <li>Check every file name. Names should be <strong>all lowercase, with no spaces</strong>. <code>avatar.png</code> is fine, but <code>My Avatar.PNG</code> isn't. Rename any that break the rule, then update the <code>src</code> or <code>href</code> that points to them.</li>
+            <li>Your home page must be called exactly <code>index.html</code> and sit directly in your project folder, not inside a subfolder.</li>
+          </ol>
+
+          <div class="gotcha">
+            <strong>Common mistake:</strong> Windows doesn't care about capital letters, but the web server
+            does. If your HTML says <code>images/avatar.png</code> and the file is really <code>Avatar.png</code>, the
+            image works on your computer and is <em>broken</em> on your live site. Fix it now, while it's easy.
+          </div>
+
+          <h3>Privacy</h3>
+          <p>Go through all three pages, including your 20 Questions, and remove anything on this list:</p>
+          <ul class="list-tight">
+            <li>Your last name (your first name, or first name plus last initial, is fine)</li>
+            <li>Your school name, home address, neighbourhood, or phone number</li>
+            <li>Your birthday or exact age</li>
+            <li>Photos of your face or of other people. Your cartoon avatar is exactly what it's for.</li>
+            <li>Personal email or social media handles</li>
+          </ul>
+          <p class="muted">Quick test: would you be fine with this page being printed and taped up in the hallway? If not, take it out.</p>
+
+          <h3>Oversharing audit: your 20 Questions</h3>
+          <p>
+            The list above catches the obvious stuff. Oversharing is sneakier. Each answer on its own seems harmless,
+            but <strong>put together, they can add up to a lot</strong>: where you'll be on Saturday, what your
+            passwords might be, or enough clues for a stranger to work out who you are. Time to look at your 20
+            Questions the way a stranger would.
+          </p>
+          <ol class="list-tight">
+            <li>Open <code>about.html</code> and read your 20 answers slowly, as if you were a stranger who has never met you.</li>
+            <li>Rate each answer:
+              <ul class="list-tight">
+                <li>🟢 <strong>Safe</strong>: general likes and opinions. <em>"Pizza." "Flight." "Night owl."</em></li>
+                <li>🟡 <strong>Think twice</strong>: specific details that narrow down who or where you are. <em>Team names, specific places, your pet's name.</em></li>
+                <li>🔴 <strong>Overshare</strong>: tells a stranger where to find you, or could help someone get into your accounts. <em>Your full birthday, your schedule, your school.</em></li>
+              </ul>
+            </li>
+            <li>Check your answers against the three overshare traps below.</li>
+            <li>Rewrite every 🔴 answer and most 🟡 ones. Rewrite them rather than deleting them, so the page is still about you, just less specific (see the examples).</li>
+          </ol>
+
+          <h3>The three overshare traps</h3>
+          <ul class="list-tight">
+            <li><strong>Password-reset answers.</strong> "What was your first pet's name?" and "What month were you born?" are classic security questions for resetting passwords. Questions 2 (birth month) and 11 (pets) are the ones to check. Keep your star sign or say "a dog," but leave out the month and the pet's name.</li>
+            <li><strong>Location + schedule.</strong> "I skate at [park name] every Saturday morning" tells a stranger exactly where you'll be and when. Check questions 4, 6, and 18 (hobby, sports, weekends).</li>
+            <li><strong>The puzzle effect.</strong> First name + a team name + a neighbourhood + a birth month might be all it takes to find you. Read all 20 answers together and ask: <em>what could someone piece together?</em></li>
+          </ul>
+
+          <div class="table-wrap">
+            <table class="schedule-table">
+              <thead>
+                <tr><th>Overshare 🔴🟡</th><th>Still you, less specific 🟢</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>I'm a Leo, born August 9th.</td><td>I'm a Leo, a summer baby.</td></tr>
+                <tr><td>My dog Biscuit is a golden retriever.</td><td>I have a golden retriever who steals socks.</td></tr>
+                <tr><td>I play centre-back for the [club name] U15 team, Tuesdays at [field name].</td><td>I play soccer, and I'm a defender.</td></tr>
+                <tr><td>Every Saturday I'm at [skate park] from 9 to noon.</td><td>Weekends are for skateboarding.</td></tr>
+                <tr><td>I'd love to visit Japan because my grandparents live in Osaka.</td><td>I'd love to visit Japan for the food and the arcades.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="customize-this">
+            <strong>In class? Try the stranger test with a partner.</strong> Swap seats and read each other's About Me
+            page for two minutes. Write down everything you could figure out about the person: where they might live,
+            where they'll be and when, and anything that sounds like a password-reset answer. Swap back and compare
+            lists. Anything on your partner's list that surprised you gets rewritten.
+          </div>
+
+          <div class="lesson-note">
+            <strong>Be ready to explain.</strong> In your submission, name one answer you changed and why it was an
+            overshare. If you changed nothing, explain why every answer is 🟢.
+          </div>
+
+          <div class="checkpoint">
+            <div class="checkpoint-row is-green">
+              <span class="checkpoint-icon">🟢</span>
+              <span><span class="checkpoint-label">Green:</span> all nav links work, every file name is lowercase with no spaces, nothing on any page could identify where you live or go to school, and every one of your 20 answers is 🟢 (or a 🟡 you've thought about and decided to keep).</span>
+            </div>
+            <div class="checkpoint-row is-red">
+              <span class="checkpoint-icon">🔴</span>
+              <span><span class="checkpoint-label">Red:</span> a link or image breaks after renaming a file. Check that the name in your HTML matches the new file name exactly.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" id="task2">
+          <div class="task-heading">
+            <span class="pill pill-green">Green</span>
+            <h2>Task 2 — Create your GitHub account</h2>
+          </div>
+          <p>
+            GitHub is where more than 100 million developers store their code, and it'll host your site for free.
+            Your <strong>username becomes your website address</strong>, so choose it carefully.
+          </p>
+
+          <h3>Choose your username first</h3>
+          <ul class="list-tight">
+            <li>Your site will live at <code>https://<em>username</em>.github.io</code>. Say it out loud: would you be happy putting it on a résumé?</li>
+            <li>Use lowercase letters, numbers, and hyphens only.</li>
+            <li><strong>No last name, no birth year, no school name.</strong> Try your slug plus a studio word, like <code>emma-r-studio</code> or <code>emmar-dev</code>.</li>
+            <li>Your first choice will probably be taken, since usernames are shared with every GitHub user in the world. Have two or three backups ready.</li>
+          </ul>
+
+          <h3>Sign up</h3>
+          <ol class="list-tight">
+            <li>Go to <a href="https://github.com/signup" target="_blank" rel="noopener">github.com/signup</a>.</li>
+            <li>Enter your <strong>school email address</strong>.</li>
+            <li>Create a <strong>new password</strong> you haven't used anywhere else, and write it down somewhere safe (not on a sticky note on the monitor).</li>
+            <li>Enter your username and finish the puzzle check.</li>
+            <li>GitHub emails you a code. Open your school email, copy the code, and paste it into GitHub.</li>
+            <li>If GitHub asks you a few "personalize your experience" questions, you can skip them.</li>
+            <li>Write your exact username on the class sign-in sheet your teacher shares.</li>
+          </ol>
+
+          <div class="gotcha">
+            <strong>Common mistake:</strong> don't get fancy with capitals or look-alike characters. GitHub URLs are
+            always shown in lowercase, and if you can't spell your own username from memory, you'll lose your own
+            website. Keep it simple.
+          </div>
+
+          <div class="checkpoint">
+            <div class="checkpoint-row is-green">
+              <span class="checkpoint-icon">🟢</span>
+              <span><span class="checkpoint-label">Green:</span> you're signed in at github.com, your email is verified, and your username is on the class sheet.</span>
+            </div>
+            <div class="checkpoint-row is-red">
+              <span class="checkpoint-icon">🔴</span>
+              <span><span class="checkpoint-label">Red:</span> the verification email never arrives. Check your Junk folder first, then ask your teacher.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" id="task3">
+          <div class="task-heading">
+            <span class="pill pill-green">Green</span>
+            <h2>Task 3 — Make your first save point (commit)</h2>
+          </div>
+          <p>
+            Now you'll turn your project folder into a Git repository and take your first snapshot. This happens
+            <em>only on your computer</em>. Nothing goes online until Task 5.
+          </p>
+
+          <h3>Step 1: Turn on Git for this folder</h3>
+          <ol class="list-tight">
+            <li>In VS Code, open the <strong>Source Control</strong> panel. It's the icon in the left sidebar that looks like a branch with three dots, or press <code>Ctrl + Shift + G</code>.</li>
+            <li>Click <strong>Initialize Repository</strong>.</li>
+            <li>All your files now show up under <strong>Changes</strong> with a green <strong>U</strong> (untracked) next to them. That's normal. It means Git can see them but hasn't saved them yet.</li>
+          </ol>
+
+          <h3>Step 2: Tell Git who you are (one time only)</h3>
+          <p>Every commit is signed with a name and email. You'll use a private GitHub email, so your real school email never appears in public.</p>
+          <ol class="list-tight">
+            <li>On github.com, click your profile picture (top right) → <strong>Settings</strong> → <strong>Emails</strong>.</li>
+            <li>Turn on <strong>Keep my email addresses private</strong>. GitHub then shows you a private address that looks like <code>12345678+username@users.noreply.github.com</code>. Copy it.</li>
+            <li>Back in VS Code, open the terminal: <strong>Terminal → New Terminal</strong> (or <code>Ctrl + `</code>).</li>
+            <li>Type these two lines, pressing Enter after each one. Swap in your own username and the private email you just copied, and keep the quotation marks:
+              <pre><code>git config --global user.name "your-username"
+git config --global user.email "12345678+your-username@users.noreply.github.com"</code></pre>
+            </li>
+          </ol>
+
+          <h3>Step 3: Commit</h3>
+          <ol class="list-tight">
+            <li>In the Source Control panel, hover over the word <strong>Changes</strong> and click the <strong>+</strong> (Stage All Changes). Your files move up into <strong>Staged Changes</strong>.</li>
+            <li>In the message box at the top, type: <code>First version of my studio site</code></li>
+            <li>Click the blue <strong>Commit</strong> button.</li>
+          </ol>
+
+          <div class="gotcha">
+            <strong>Stuck? Two common setup problems (neither one is your fault):</strong>
+            <ul class="list-tight">
+              <li><strong>VS Code shows a "Download Git" button</strong> instead of Initialize Repository. This computer doesn't have Git installed. Move to another computer, or check with your teacher.</li>
+              <li><strong>An error mentions "dubious ownership" or "safe.directory".</strong> Git is being cautious because your folder is on the H: drive. In the terminal, type this and press Enter:
+                <pre><code>git config --global --add safe.directory "*"</code></pre>
+                Then press <code>Ctrl + Shift + P</code>, type <strong>Reload Window</strong>, press Enter, and try again.</li>
+            </ul>
+          </div>
+
+          <div class="checkpoint">
+            <div class="checkpoint-row is-green">
+              <span class="checkpoint-icon">🟢</span>
+              <span><span class="checkpoint-label">Green:</span> the Changes list is empty, and your commit "First version of my studio site" appears in the <strong>Graph</strong> section at the bottom of the Source Control panel.</span>
+            </div>
+            <div class="checkpoint-row is-red">
+              <span class="checkpoint-icon">🔴</span>
+              <span><span class="checkpoint-label">Red:</span> you get a message saying to configure <code>user.name</code> and <code>user.email</code>. Step 2 didn't take, so redo it and check the quotation marks.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" id="task4">
+          <div class="task-heading">
+            <span class="pill pill-green">Green</span>
+            <h2>Task 4 — AI code review: clean up the scary code</h2>
+          </div>
+          <p>
+            Four weeks of copying, customizing, deleting, and re-trying leaves a mess: unclosed tags, wonky
+            indentation, CSS rules that don't do anything, and leftover experiments. Real studios run code reviews
+            before anything ships. Yours will be done by an AI, and <strong>you're the one who approves it</strong>.
+          </p>
+          <p>
+            Because you just made a save point, this is completely safe. If the AI breaks something, you can undo it
+            with one click.
+          </p>
+
+          <h3>Step 1: Get the AI to clean up one file</h3>
+          <ol class="list-tight">
+            <li>Open the AI tool of your choice (any of the ones allowed in class).</li>
+            <li>Copy the prompt below and paste it into the AI. Fill in the file name at the end.</li>
+            <li>In VS Code, open <code>index.html</code>, press <code>Ctrl + A</code> then <code>Ctrl + C</code> to copy the whole file, and paste it into the AI right after the prompt.</li>
+          </ol>
+          <pre><code>I'm a Grade 9 student and this is my first website, built with HTML, CSS and JavaScript. Please clean up the code below.
+
+Rules:
+- Keep how the page LOOKS and WORKS exactly the same.
+- Fix indentation, close any unclosed tags, fix errors, and remove anything that is duplicated or unused.
+- Do NOT change any id or class names, file names, or the text on my page.
+- Do NOT add new features, frameworks, libraries, or links to other websites.
+- Keep it at a beginner level so I can still understand every line.
+- Give me the full cleaned-up file first, then a short list of every change you made and why.
+
+My file is called: ________</code></pre>
+
+          <h3>Step 2: Paste it back in and test it</h3>
+          <ol class="list-tight">
+            <li>Copy the AI's cleaned-up file. In VS Code, select everything in <code>index.html</code> (<code>Ctrl + A</code>) and paste over it.</li>
+            <li>Check Live Preview. The page should look and work <strong>exactly</strong> like it did before. Click everything, including your JavaScript buttons.</li>
+          </ol>
+
+          <h3>Step 3: Review every change (this is the important part)</h3>
+          <ol class="list-tight">
+            <li>In the Source Control panel, click <code>index.html</code> under Changes. VS Code opens a side-by-side view: <strong>red</strong> is what the AI removed, and <strong>green</strong> is what it added.</li>
+            <li>Read every change. For each one, you should be able to say what it does.</li>
+            <li>Don't understand a change? Ask the AI: <em>"Explain this change like I'm new to coding."</em> Still not sure? Don't keep it.</li>
+            <li>If the AI broke something, right-click the file under Changes → <strong>Discard Changes</strong>. You're back to your save point, and you can try again.</li>
+          </ol>
+
+          <h3>Step 4: Repeat, then commit</h3>
+          <ol class="list-tight">
+            <li>Do the same for <code>about.html</code>, <code>work.html</code>, <code>css/style.css</code>, and <code>js/script.js</code>, <strong>one file at a time</strong>.</li>
+            <li>When all five files are cleaned up and tested, stage everything (<strong>+</strong>) and commit with the message: <code>AI code cleanup</code></li>
+          </ol>
+
+          <div class="gotcha">
+            <strong>Watch the AI closely. It makes mistakes too.</strong> Red flags to look for in the diff:
+            <ul class="list-tight">
+              <li>A new <code>&lt;script src="https://..."&gt;</code> or <code>&lt;link href="https://..."&gt;</code> pointing to another website that you didn't add. Delete it.</li>
+              <li>A changed <code>id</code> or <code>class</code> name. This silently breaks your JavaScript or CSS.</li>
+              <li>Your own words rewritten, or whole sections gone missing.</li>
+              <li>A file that suddenly got <em>much</em> longer. The AI probably added features you didn't ask for.</li>
+            </ul>
+          </div>
+
+          <div class="lesson-note">
+            <strong>This is your AI reflection for this lesson.</strong> When you submit, answer the usual
+            questions about this task: what you asked, what it gave you, what you kept or rejected (and why), and one
+            thing you learned from its list of changes.
+          </div>
+
+          <div class="checkpoint">
+            <div class="checkpoint-row is-green">
+              <span class="checkpoint-icon">🟢</span>
+              <span><span class="checkpoint-label">Green:</span> your site looks and works exactly the same, the "AI code cleanup" commit is in your Graph, and you can explain at least three changes the AI made.</span>
+            </div>
+            <div class="checkpoint-row is-red">
+              <span class="checkpoint-icon">🔴</span>
+              <span><span class="checkpoint-label">Red:</span> something looks or behaves differently after pasting. Discard Changes on that file and try again. You can also paste only the part of the file that's messy.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" id="task5">
+          <div class="task-heading">
+            <span class="pill pill-green">Green</span>
+            <h2>Task 5 — Publish to GitHub and go live</h2>
+          </div>
+          <p>This is the moment your site hits the internet.</p>
+
+          <h3>Step 1: Push your repo to GitHub</h3>
+          <ol class="list-tight">
+            <li>In the Source Control panel, click the blue <strong>Publish Branch</strong> button.</li>
+            <li>VS Code asks to sign in with GitHub. Click <strong>Allow</strong>, sign in in the browser window that opens, and click <strong>Authorize</strong>. Then go back to VS Code.</li>
+            <li>A box appears at the top of VS Code with your folder name in it. <strong>Delete that name</strong> and type exactly:
+              <pre><code>your-username.github.io</code></pre>
+              using <em>your</em> GitHub username, spelled exactly the way it is on GitHub.</li>
+            <li>Choose <strong>Publish to GitHub public repository</strong>. (Free GitHub sites have to be public.)</li>
+            <li>When VS Code shows a message that it published successfully, you can click <strong>Open on GitHub</strong> to see your code online.</li>
+          </ol>
+
+          <div class="gotcha">
+            <strong>Common mistake:</strong> the repository name has to be <em>exactly</em> your username plus
+            <code>.github.io</code>. If you keep your folder name (like <code>emma-r</code>), your site still
+            works, but it ends up at a longer address (<code>username.github.io/emma-r</code>). Ask your teacher if
+            that happens, or fix it yourself: on GitHub, open your repo → <strong>Settings</strong> → change the
+            <strong>Repository name</strong> to <code>your-username.github.io</code> → <strong>Rename</strong>. VS Code keeps syncing to it.
+          </div>
+
+          <h3>Step 2: Turn on GitHub Pages</h3>
+          <ol class="list-tight">
+            <li>On your repo's GitHub page, click <strong>Settings</strong> (the gear tab along the top) → <strong>Pages</strong> in the left menu.</li>
+            <li>Under <strong>Build and deployment → Source</strong>, choose <strong>Deploy from a branch</strong>.</li>
+            <li>Under <strong>Branch</strong>, choose <code>main</code> and <code>/ (root)</code>, then click <strong>Save</strong>.</li>
+            <li>Wait 1 to 5 minutes. You can watch the progress in the <strong>Actions</strong> tab, where a yellow dot turns into a green check. Refresh the Pages settings and your live link appears at the top.</li>
+          </ol>
+
+          <h3>Step 3: Test it for real</h3>
+          <ol class="list-tight">
+            <li>Open <code>https://your-username.github.io</code>. That's your site, live on the internet.</li>
+            <li>Click every nav link and every button. Check that your avatar shows up.</li>
+            <li>Open it on your phone too. It should work anywhere.</li>
+            <li>Post your live URL to the 2.4 Teams assignment.</li>
+          </ol>
+
+          <div class="checkpoint">
+            <div class="checkpoint-row is-green">
+              <span class="checkpoint-icon">🟢</span>
+              <span><span class="checkpoint-label">Green:</span> your site loads at <code>https://your-username.github.io</code> on a different device, every page and image works, and the URL is posted in Teams.</span>
+            </div>
+            <div class="checkpoint-row is-red">
+              <span class="checkpoint-icon">🔴</span>
+              <span><span class="checkpoint-label">Red:</span> a <strong>404</strong> page means GitHub can't find <code>index.html</code>. Check that it's spelled in lowercase and sitting at the top of your repo, not inside a folder. A broken image that works locally is almost always a capital letter in the file name (see Task 1). No <strong>Pages</strong> option, or it says you need to upgrade? Your repo is private. Go to Settings → scroll to <strong>Danger Zone</strong> → <strong>Change visibility</strong> → Public.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" id="task6">
+          <div class="task-heading">
+            <span class="pill pill-green">Green</span>
+            <h2>Task 6 — Ship an update</h2>
+          </div>
+          <p>
+            Your site isn't finished. It'll get new projects every unit for the rest of the course. Here's the
+            loop you'll use every time: <strong>edit → commit → sync</strong>.
+          </p>
+          <ol class="list-tight">
+            <li>Make one small change. For example, add <code>&lt;p&gt;Last updated: October 2026&lt;/p&gt;</code> to your footer on all three pages.</li>
+            <li>In Source Control, stage (<strong>+</strong>), type a message that describes the change (<code>Add last-updated date to footer</code>), and click <strong>Commit</strong>.</li>
+            <li>Click <strong>Sync Changes</strong>. The little <strong>↑1</strong> means one commit is waiting to go up.</li>
+            <li>Wait about a minute, then reload your live site with <code>Ctrl + F5</code> (a hard refresh).</li>
+          </ol>
+
+          <div class="lesson-note">
+            <strong>Good commit messages</strong> say <em>what</em> changed: "Add dark mode toggle" or "Fix broken
+            avatar link." Messages like "stuff," "asdf," or "final FINAL v2" don't count. Your commit history is part
+            of your portfolio now, and people can read it.
+          </div>
+
+          <div class="checkpoint">
+            <div class="checkpoint-row is-green">
+              <span class="checkpoint-icon">🟢</span>
+              <span><span class="checkpoint-label">Green:</span> your change shows up on the live site, and GitHub shows at least three commits with clear messages.</span>
+            </div>
+            <div class="checkpoint-row is-red">
+              <span class="checkpoint-icon">🔴</span>
+              <span><span class="checkpoint-label">Red:</span> the live site hasn't changed. Check that you clicked Sync (not just Commit), wait another minute, and hard refresh with <code>Ctrl + F5</code>. Renamed a file only to fix its capital letters, and Source Control doesn't show any change? Git on Windows misses that. In the terminal, use <code>git mv images/Avatar.png images/avatar.png</code> (with your own file names), then commit and sync.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="task-heading">
+            <span class="pill pill-blue">Blue</span>
+            <h2>Make your repo look professional</h2>
+          </div>
+          <p class="muted">Optional. Unlocks after Task 6 is done.</p>
+          <p>Studios judge developers by their repos as well as their sites. Make yours look like it belongs to a professional.</p>
+          <ol class="list-tight">
+            <li><strong>Add a README.</strong> Create a new file called <code>README.md</code> in your project folder. GitHub shows it on your repo's front page. Include what the site is, what you built it with, and one thing you're proud of:
+              <pre><code># My Studio Profile
+
+This is my portfolio site for ICT 9 at the Studio.
+
+## Built with
+- HTML, CSS, and JavaScript
+- VS Code, Git, and GitHub Pages
+
+## Proud of
+The click-to-reveal skills list on my About Me page.</code></pre>
+            </li>
+            <li><strong>Validate your code.</strong> Paste your live URL into the <a href="https://validator.w3.org/" target="_blank" rel="noopener">W3C Markup Validator</a>. Fix any errors it finds on all three pages.</li>
+            <li><strong>Add a repo description.</strong> On your repo's GitHub page, click the gear next to <strong>About</strong> (on the right), write a one-line description, and tick <strong>Use your GitHub Pages website</strong>.</li>
+            <li>Commit and sync.</li>
+          </ol>
+          <p class="muted"><strong>Checkpoint (self-assessed):</strong> your repo's front page shows your README and a link to your live site, and the validator shows no errors.</p>
+        </section>
+
+        <section class="card">
+          <div class="task-heading">
+            <span class="pill pill-black">Black menu</span>
+            <h2>Pick one or more</h2>
+          </div>
+          <details>
+            <summary><strong>Custom 404 page</strong></summary>
+            <div>
+              <p>Create a <code>404.html</code> at the top of your repo. GitHub Pages shows it automatically whenever someone visits a page on your site that doesn't exist. Make it on-brand and funny, with a link back home.</p>
+            </div>
+          </details>
+          <details>
+            <summary><strong>Link preview card</strong></summary>
+            <div>
+              <p>Add Open Graph <code>&lt;meta&gt;</code> tags (<code>og:title</code>, <code>og:description</code>, <code>og:image</code>) to your <code>&lt;head&gt;</code> so your site shows a proper preview card when someone pastes the link in a chat.</p>
+            </div>
+          </details>
+          <details>
+            <summary><strong>Lighthouse audit</strong></summary>
+            <div>
+              <p>On your live site, open DevTools → <strong>Lighthouse</strong> tab → Analyze. Try to get your Accessibility score to 90 or higher, and write down what you changed to get there.</p>
+            </div>
+          </details>
+          <details>
+            <summary><strong>Time travel</strong></summary>
+            <div>
+              <p>On GitHub, open your repo and click the <strong>commits</strong> link (the clock icon). Open your "AI code cleanup" commit and read the diff online. Can you find a change the AI made that you'd now do differently?</p>
+            </div>
+          </details>
+          <details>
+            <summary><strong>Automatic "last updated" date</strong></summary>
+            <div>
+              <p>Replace your hand-typed footer date from Task 6 with one your JavaScript fills in by itself, using <code>document.lastModified</code>.</p>
+            </div>
+          </details>
+          <details>
+            <summary><strong>GitHub profile README</strong></summary>
+            <div>
+              <p>Create a repo named <em>exactly</em> your username (no <code>.github.io</code>). Its README shows up on your GitHub profile page. Introduce yourself as a studio developer (same privacy rules as Task 1) and link to your site.</p>
+            </div>
+          </details>
+          <p class="muted"><strong>Checkpoint for any Black task:</strong> it's committed, synced, and working on the live site, not just on your computer.</p>
+        </section>
+
+        <section class="card">
+          <h2>Before You Leave Class</h2>
+          <p>School computers are shared, so sign out so nobody else can push to <em>your</em> site:</p>
+          <ol class="list-tight">
+            <li>In VS Code, click the <strong>Accounts</strong> icon (the person icon at the bottom of the left sidebar) → your GitHub account → <strong>Sign Out</strong>.</li>
+            <li>In your browser, sign out of github.com.</li>
+          </ol>
+          <p class="muted">Next class, VS Code asks you to sign in again the first time you click Sync. That's normal.</p>
+        </section>
+
       </main>
-      <aside id="right-rail" aria-label="Resources"></aside>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card">
+          <strong>Success criteria</strong>
+          <ul class="list-tight">
+            <li>Privacy check done on all 3 pages</li>
+            <li>20 Questions audited for oversharing</li>
+            <li>GitHub account created and verified</li>
+            <li>Folder is a Git repo with a first commit</li>
+            <li>AI cleanup reviewed, tested, and committed</li>
+            <li>Site live at <code>username.github.io</code></li>
+            <li>One update shipped with edit → commit → sync</li>
+            <li>Live URL posted in Teams</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Downloads</strong>
+          <p class="muted">Nothing to download. You're publishing the <code>2_web_development</code> folder you already have.</p>
+        </div>
+
+        <div class="card">
+          <strong>Your live URL</strong>
+          <p class="muted"><code>https://your-username.github.io</code><br>Your repo is named the same thing: <code>your-username.github.io</code>.</p>
+        </div>
+
+        <div class="card">
+          <strong>The everyday loop</strong>
+          <p class="muted">Edit → <strong>+</strong> Stage → message → <strong>Commit</strong> → <strong>Sync Changes</strong> → wait a minute → <code>Ctrl + F5</code>.</p>
+        </div>
+
+        <div class="card">
+          <strong>Watch out for</strong>
+          <p class="muted">Capital letters in file names. They work on Windows and break on the live site, and they're the #1 cause of missing images in this lesson.</p>
+        </div>
+
+        <div class="card">
+          <strong>Next up</strong>
+          <p class="muted">Unit 3 — Dev Team. Your game gets its own page on this site.</p>
+        </div>
+      </aside>
     </div>
+
     <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
   </body>
 </html>

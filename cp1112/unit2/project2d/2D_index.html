@@ -1,0 +1,191 @@
+<!-- v3 – Sep 2026 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CP11/12 • 2D Engineer It</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="cp1112">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="CP11/12 • 2D Engineer It">
+        <!-- 1. Header -->
+        <section class="card">
+          <span class="pill">Unit 2 &middot; Level 2D</span>
+          <h1>2D &mdash; Engineer It</h1>
+          <p><strong>Build it the way professional developers do: designed, tested, and version-controlled properly.</strong></p>
+        </section>
+
+        <!-- 2. This level is for you if... -->
+        <section class="card">
+          <h2>This Level Is for You If&hellip;</h2>
+          <ul class="list-tight">
+            <li>You're confident in Python, and classes feel natural.</li>
+            <li>Your code usually works, and now you want it to be <em>well-built</em>.</li>
+            <li>You want to learn the habits that separate working code from well-engineered code.</li>
+          </ul>
+        </section>
+
+        <!-- 3. What you'll build -->
+        <section class="card">
+          <h2>What You'll Build</h2>
+          <p>A program from the <a href="/cp1112/unit2/u2_index.html">problem menu</a> (calculator-type tool, quiz engine, or simple tracker) with a real object-oriented design: <strong>multiple classes that work together</strong>. It's backed by automated tests and built on a git branch.</p>
+          <p>Your project folder will look something like this:</p>
+          <pre><code>2_quiz_engine/
+├── README.md
+├── main.py              ← your classes and main program
+└── tests/
+    └── test_quiz.py     ← your unittest tests</code></pre>
+        </section>
+
+        <!-- 4. Requirements checklist -->
+        <section class="card">
+          <h2>Requirements Checklist</h2>
+          <p>Your finished project must include all of these. (Ticking the boxes is just for you, it doesn't save.)</p>
+          <ul class="list-tight" style="list-style:none; padding-left:0;">
+            <li><label><input type="checkbox"> Everything on the <a href="/cp1112/unit2/project2b/2B_index.html">2B list</a></label></li>
+            <li><label><input type="checkbox"> At least <strong>two classes that interact</strong> (e.g. a <code>Quiz</code> that holds <code>Question</code> objects), sketched before coding</label></li>
+            <li><label><input type="checkbox"> <strong>Automated tests</strong> using Python's <code>unittest</code> in a <code>tests/</code> folder: at least 8 test methods, all passing, and your README explains how to run them</label></li>
+            <li><label><input type="checkbox"> Developed on a <strong>branch</strong> (e.g. <code>dev</code>), merged into <code>main</code> at CP3 through GitHub Desktop</label></li>
+            <li><label><input type="checkbox"> One <strong>mentoring session</strong> with a 2A student, logged in your README: who, what they were stuck on, and how you helped without writing their code</label></li>
+            <li><label><input type="checkbox"> <strong>AI Collaboration</strong> section filled in</label></li>
+          </ul>
+          <p class="lesson-note"><strong>On AI and tutorials:</strong> fine to use, as long as your AI Collaboration section records what came from them. That includes tests. If AI wrote a test, you should still be able to say what it checks and why.</p>
+          <p class="lesson-note"><strong>Not in this unit:</strong> reading and writing files, or splitting your code across multiple files. Those are coming in Unit 3, so keep your program in <code>main.py</code> for now.</p>
+          <h3>Your mentoring session</h3>
+          <p>Sometime in Week 2, your teacher will pair you with a 2A student. Spend some time helping them get unstuck, then log it in the Mentoring Log section of your README.</p>
+          <div class="customize-this">
+            <strong>Your job is to ask questions, not to type.</strong> Try "What do you expect this line to do?" and "What did it actually do?" If you take the keyboard, you've taken over.
+          </div>
+          <p>Make your log specific. "Helped with loops" isn't enough. "Asked what <code>range(5)</code> produces, and they found the off-by-one themselves" is.</p>
+        </section>
+
+        <!-- 5. Checkpoints at this level -->
+        <section class="card">
+          <h2>Checkpoints at 2D</h2>
+          <div class="table-wrap">
+            <table class="content-table">
+              <thead>
+                <tr><th>Checkpoint</th><th>What it looks like at 2D</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>CP1</strong><br><span class="muted small">End of Week 1</span></td>
+                  <td>Pitch; pseudocode; a class sketch (a box for each class with its attributes and methods, and arrows showing how they connect); <code>dev</code> branch created</td>
+                </tr>
+                <tr>
+                  <td><strong>CP2</strong><br><span class="muted small">End of Week 2</span></td>
+                  <td>Classes working together; at least 4 unittest tests passing; mentoring session scheduled or done</td>
+                </tr>
+                <tr>
+                  <td><strong>CP3</strong><br><span class="muted small">End of Week 3</span></td>
+                  <td>All tests passing; <code>dev</code> merged into <code>main</code>; mentoring logged; shown to a peer</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Remember to start each checkpoint commit with <code>CP1:</code>, <code>CP2:</code> or <code>CP3:</code>, and push before your teacher calls you up.</p>
+          <p class="lesson-note"><strong>Class sketch:</strong> draw it on paper and add a photo to your README, or type it out as text boxes. Either works, as long as someone could understand your design from the sketch alone.</p>
+
+          <h3>Setting up your dev branch (CP1)</h3>
+          <ol class="list-tight">
+            <li>In GitHub Desktop, click <strong>Current Branch</strong> at the top, then <strong>New Branch</strong>.</li>
+            <li>Name it <code>dev</code> and click <strong>Create Branch</strong>. Leave it based on <code>main</code>.</li>
+            <li>Click <strong>Publish branch</strong> so it's on GitHub too.</li>
+            <li>From now on, check that <strong>Current Branch</strong> says <code>dev</code> before you commit.</li>
+          </ol>
+          <!--
+          <div class="screenshot-placeholder">[ Screenshot placeholder &mdash; GitHub Desktop Current Branch menu with New Branch &mdash; <code>images/01-new-branch.png</code> ]</div>
+          -->
+
+          <h3>Writing and running your tests</h3>
+          <p>Your test file goes in <code>tests/</code> and its name has to start with <code>test_</code>. A tiny example:</p>
+          <pre><code>import unittest
+from main import Question
+
+class TestQuestion(unittest.TestCase):
+    def test_correct_answer_is_marked_right(self):
+        q = Question("Capital of BC?", "Victoria")
+        self.assertTrue(q.check("victoria"))
+
+if __name__ == "__main__":
+    unittest.main()</code></pre>
+          <p>To run all your tests, open a terminal in your project folder (the one with <code>main.py</code> in it) and run:</p>
+          <pre><code>python -m unittest discover -s tests -v</code></pre>
+          <div class="gotcha">
+            <strong>Tests running your whole program?</strong> When a test imports <code>main.py</code>, Python runs everything in it, including your menu loop. Put the line that starts your program inside <code>if __name__ == "__main__":</code> so it only runs when you run <code>main.py</code> directly.
+          </div>
+
+          <h3>Merging dev into main (CP3)</h3>
+          <ol class="list-tight">
+            <li>Commit and push everything on <code>dev</code> first.</li>
+            <li>Click <strong>Current Branch</strong> and switch to <code>main</code>.</li>
+            <li>Click <strong>Current Branch</strong> again, then <strong>Choose a branch to merge into main</strong>. Pick <code>dev</code>, and click <strong>Create a merge commit</strong>.</li>
+            <li>Click <strong>Push origin</strong>.</li>
+          </ol>
+          <p class="lesson-note">Got a merge conflict? Don't panic, and don't delete anything. Put a hand up and your teacher will walk through it with you.</p>
+          <!--
+          <div class="screenshot-placeholder">[ Screenshot placeholder &mdash; GitHub Desktop merge dialog, merging dev into main &mdash; <code>images/02-merge-dev.png</code> ]</div>
+          -->
+        </section>
+
+        <!-- 6. When you're stuck -->
+        <section class="card">
+          <h2>When You're Stuck</h2>
+          <ul>
+            <li><strong>The Python docs for <a href="https://docs.python.org/3/library/unittest.html" target="_blank" rel="noopener">unittest</a></strong> are your main reference.</li>
+            <li><strong>If a class is getting big,</strong> it's probably two classes.</li>
+            <li><strong>If tests are hard to write,</strong> your functions may be doing too much at once. Split them up. (A method that both asks for input <em>and</em> does the math is hard to test. Keep those separate.)</li>
+            <li><strong>For branching,</strong> GitHub Desktop's <strong>Current Branch</strong> menu handles create, switch, and merge.</li>
+          </ul>
+        </section>
+
+        <!-- 7. Done looks like -->
+        <section class="card">
+          <h2>Done Looks Like&hellip;</h2>
+          <p>Another developer could clone your repo, run your tests with one command, see them pass, and understand your design from the class sketch alone. Your commit history shows a real branch-and-merge workflow.</p>
+        </section>
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card"><strong>This level</strong><br>Unit 2 &middot; 2D Engineer It<br>3 weeks &middot; 3 checkpoints</div>
+        <div class="card">
+          <strong>Resources</strong><br>
+          <a href="/cp1112/unit2/lesson1/README_template.md" download>README_template.md</a><br>
+          <a href="https://docs.python.org/3/library/unittest.html" target="_blank" rel="noopener">Python docs: unittest</a><br>
+          <a href="https://docs.github.com/en/desktop/making-changes-in-a-branch/managing-branches-in-github-desktop" target="_blank" rel="noopener">Branches in GitHub Desktop</a><br>
+          <a href="/cp1112/resources/naming-conventions/index.html">Naming Conventions</a>
+        </div>
+        <div class="card">
+          <strong>Reminders</strong>
+          <ul class="list-tight">
+            <li>Pull before you start each class</li>
+            <li>Check you're on <code>dev</code> before committing</li>
+            <li>Run your tests before every push</li>
+          </ul>
+        </div>
+        <div class="card">
+          <strong>All levels</strong><br>
+          <a href="/cp1112/unit2/project2a/2A_index.html">2A &mdash; Build It</a><br>
+          <a href="/cp1112/unit2/project2b/2B_index.html">2B &mdash; Structure It</a><br>
+          <a href="/cp1112/unit2/project2c/2C_index.html">2C &mdash; Transfer It</a><br>
+          2D &mdash; Engineer It <span class="muted small">(you're here)</span>
+        </div>
+        <div class="card"><a href="/cp1112/unit2/u2_index.html">&larr; Back to Unit 2</a></div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+
+  </body>
+</html>

@@ -1,0 +1,209 @@
+<!-- v3 – Sep 2026 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CP11/12 • 2.1 Repo Reorganization</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="cp1112">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="CP11/12 • 2.1 Repo Reorganization">
+        <section class="card">
+          <span class="pill">Unit 2 &middot; Day 1 &middot; about 20 min</span>
+          <h1>Repo Reorganization</h1>
+          <p>Before you start your project, you're going to turn your repo from a pile of files into an organized portfolio. Everyone does this, whatever your level. If you finish early, help a neighbour.</p>
+        </section>
+
+        <section class="card">
+          <h2>Why Bother?</h2>
+          <p>Your repo is turning into a portfolio, and people outside this class might see it one day. Unit folders keep it readable, and they keep each project's history with the project.</p>
+        </section>
+
+        <section class="card">
+          <h2>What You're Aiming For</h2>
+          <p>When you're done, your repo should look like this. Your repo name is <code>CP11portfolio</code> or <code>CP12portfolio</code>, whichever you made in 0.2.</p>
+          <pre><code>CP11portfolio/
+├── README.md               ← portfolio front page
+├── .gitignore
+├── 0_getting_started/
+│   └── (your Unit 0 files)
+├── 1_python_learning/
+│   ├── practice/           ← lesson notebooks (1.1–1.8 or 1.EXT)
+│   └── adventure_game/     ← 1A/1B/1C or 1X/1Y/1Z
+└── 2_quiz_engine/          ← named after YOUR project
+    ├── README.md           ← project design log
+    ├── main.py             ← (2C: your language's files)
+    └── tests/              ← 2D only</code></pre>
+          <p class="lesson-note">You might already have <code>0_getting_started</code> and <code>1_python_learning</code> from Units 0 and 1. That's great, you're partway there. Today is mostly about sorting what's inside them and catching any stray files.</p>
+        </section>
+
+        <section class="card">
+          <h2>Naming Rules</h2>
+          <div class="customize-this">
+            <ul class="list-tight">
+              <li><strong>Lowercase snake_case, no spaces:</strong> <code>adventure_game</code>, not <code>Adventure Game</code></li>
+              <li><strong>Unit number first,</strong> so folders sort in order</li>
+              <li><strong>Name your Unit 2 folder after your actual project:</strong> <code>2_habit_tracker</code>, not <code>2_project</code></li>
+              <li><strong>Why:</strong> folder names become part of the web address once your portfolio site goes live, and spaces or capitals there cause broken links</li>
+            </ul>
+          </div>
+          <p>More on this: <a href="/cp1112/resources/naming-conventions/index.html">Naming Conventions</a>.</p>
+        </section>
+
+        <section class="card">
+          <h2>Steps</h2>
+
+          <h3>Step 1: Fetch and pull</h3>
+          <p>Open GitHub Desktop and make sure your portfolio repo is the <strong>Current Repository</strong>. Click <strong>Fetch origin</strong>. If the button changes to <strong>Pull origin</strong>, click it.</p>
+          <p class="lesson-note">Don't skip this one. It's the #1 way people end up with a merge conflict on day one.</p>
+          <!--
+          <div class="screenshot-placeholder">[ Screenshot placeholder &mdash; Step 1: GitHub Desktop, Fetch origin / Pull origin button &mdash; <code>images/01-fetch-pull.png</code> ]</div>
+        -->
+          <h3>Step 2: Close your open files</h3>
+          <p>In VS Code, close any notebooks or files you have open. Moving a file while it's open can leave behind a duplicate copy.</p>
+
+          <!--
+          <div class="screenshot-placeholder">[ Screenshot placeholder &mdash; Step 2: VS Code with all editor tabs closed &mdash; <code>images/02-close-files.png</code> ]</div> -->
+
+          <h3>Step 3: Create your unit folders</h3>
+          <p>In VS Code, go to <strong>File &rarr; Open Folder</strong> and open your repo folder on your H: drive. In the Explorer panel, use the <strong>New Folder</strong> icon to create any folders you don't have yet:</p>
+          <ul class="list-tight">
+            <li><code>0_getting_started</code> (in the repo root)</li>
+            <li><code>1_python_learning</code> (in the repo root)</li>
+            <li><code>practice</code> and <code>adventure_game</code> (both <em>inside</em> <code>1_python_learning</code>)</li>
+          </ul>
+
+          <!--
+          <div class="screenshot-placeholder">[ Screenshot placeholder &mdash; Step 3: VS Code Explorer with the New Folder icon and the new folders &mdash; <code>images/03-new-folders.png</code> ]</div> -->
+
+          <h3>Step 4: Move your files</h3>
+          <p>Drag each existing file into the right folder:</p>
+          <ul class="list-tight">
+            <li>Unit 0 files (your "make it yours" script, the 0.3 notebook) &rarr; <code>0_getting_started</code></li>
+            <li>Lesson notebooks (1.1&ndash;1.8, or 1.EXT.1 and 1.EXT.2) &rarr; <code>1_python_learning/practice</code></li>
+            <li>Your adventure game project files (1A/1B/1C, or 1X/1Y/1Z) &rarr; <code>1_python_learning/adventure_game</code></li>
+          </ul>
+          <p>If VS Code asks whether you're sure you want to move a file, say yes. <strong>Don't edit anything yet.</strong> Only move things around.</p>
+          <!--
+          <div class="screenshot-placeholder">[ Screenshot placeholder &mdash; Step 4: dragging a notebook into a folder in the Explorer &mdash; <code>images/04-move-files.png</code> ]</div> -->
+
+          <h3>Step 5: Add a .gitignore</h3>
+          <p>A <code>.gitignore</code> file tells git which files to leave out of your repo, like the cache folders Python and Jupyter make on their own.</p>
+          <ol class="list-tight">
+            <li>Download the file below and open it. Copy everything in it.</li>
+            <li>In VS Code's Explorer, click on empty space at the bottom so nothing is selected, then click the <strong>New File</strong> icon. That puts the new file in your repo root.</li>
+            <li>Name it exactly <code>.gitignore</code>, with the dot at the start and no <code>.txt</code> at the end.</li>
+            <li>Paste in the contents and save (<code>Ctrl+S</code>).</li>
+          </ol>
+          <a class="btn" href="gitignore.txt" download>Download gitignore.txt</a>
+          <p class="lesson-note">Why is it a .txt? Browsers don't download files that start with a dot very well, so you're copying the contents into a new file instead.</p>
+          <!--
+          <div class="screenshot-placeholder">[ Screenshot placeholder &mdash; Step 5: new .gitignore file in the repo root with contents pasted in &mdash; <code>images/05-gitignore.png</code> ]</div> -->
+
+          <h3>Step 6: Check GitHub Desktop</h3>
+          <p>Switch back to GitHub Desktop and look at the <strong>Changes</strong> list on the left. Files you moved should show up as <strong>renamed</strong>, with an arrow from the old path to the new one. They should <em>not</em> show up as one file deleted and another added.</p>
+          <p class="lesson-note">Seeing deleted + added instead? You probably edited a file as well as moving it. Put a hand up before you commit.</p>
+          
+          <!--
+          <div class="screenshot-placeholder">[ Screenshot placeholder &mdash; Step 6: GitHub Desktop Changes list showing files as renamed &mdash; <code>images/06-renamed-view.png</code> ]</div> -->
+
+          <h3>Step 7: Commit and push</h3>
+          <p>In the <strong>Summary</strong> box at the bottom left, type <code>Reorganize repo into unit folders</code>. Click <strong>Commit to main</strong>, then click <strong>Push origin</strong>.</p>
+
+          <!--
+          <div class="screenshot-placeholder">[ Screenshot placeholder &mdash; Step 7: commit summary filled in, then Push origin &mdash; <code>images/07-commit-push.png</code> ]</div>
+          -->
+
+          <h3>Step 8: Set up your Unit 2 project folder</h3>
+          <p>You don't need your final project idea yet. A working name is fine, and you can rename the folder later (do it on its own commit).</p>
+          <ol class="list-tight">
+            <li>In VS Code, create a new folder in the repo root named after your project, like <code>2_quiz_engine</code> or <code>2_tip_splitter</code>.</li>
+            <li>Download the README template below and save it into that folder.</li>
+            <li>Rename it from <code>README_template.md</code> to <code>README.md</code>.</li>
+            <li>In GitHub Desktop, commit with a message like <code>Add Unit 2 project folder and README</code>, then <strong>Push origin</strong>.</li>
+          </ol>
+          <a class="btn" href="README_template.md" download>Download README_template.md</a>
+          
+          <!--
+          <div class="screenshot-placeholder">[ Screenshot placeholder &mdash; Step 8: new project folder with README.md inside &mdash; <code>images/08-project-folder.png</code> ]</div>
+          -->
+          
+        </section>
+
+        <section class="card">
+          <h2>Gotcha: Move First, Then Edit</h2>
+          <div class="gotcha">
+            <strong>Move, commit, <em>then</em> edit.</strong> If you rename or move a file and change what's inside it in the same commit, git may treat it as a brand-new file. When that happens, the file loses its history, and that history is your design log.
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Update Your Front Page</h2>
+          <p>Your root <code>README.md</code> is the first thing anyone sees when they open your repo. Now that it's organized, update it so it has:</p>
+          <ul class="list-tight">
+            <li><strong>About Me:</strong> a short developer intro (the one from 0.2 is a fine start)</li>
+            <li><strong>A list of your unit folders:</strong> each with a link and a one-line description</li>
+            <li><strong>AI Collaboration:</strong> keep your existing Unit 0 entries here</li>
+          </ul>
+          <p>Something like this:</p>
+          <pre><code># CP11portfolio
+
+## About Me
+Hi, I'm ... , and I'm taking Computer Programming 11/12 this semester.
+
+## My Work
+- [0_getting_started](0_getting_started/) &mdash; setting up VS Code, GitHub and my first scripts
+- [1_python_learning](1_python_learning/) &mdash; Python practice and my text adventure game
+- [2_quiz_engine](2_quiz_engine/) &mdash; my Unit 2 project: a quiz that ...
+
+## AI Collaboration
+(your Unit 0 entries stay here)</code></pre>
+          <p>Commit and push when you're done.</p>
+          <p class="lesson-note"><strong>New from Unit 2 on:</strong> AI notes go in each project's own README, in its AI Collaboration section, instead of on the front page.</p>
+        </section>
+
+        <section class="card">
+          <h2>What's Next</h2>
+          <p>Head back to the <a href="/cp1112/unit2/u2_index.html">Unit 2 page</a> and open your level's page. Then start filling in the Pitch section of your new project README.</p>
+        </section>
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card"><strong>This lesson</strong><br>Unit 2 &middot; Lesson 2.1</div>
+        <div class="card">
+          <strong>Downloads</strong><br>
+          <a href="gitignore.txt" download>gitignore.txt</a><br>
+          <a href="README_template.md" download>README_template.md</a>
+        </div>
+        <div class="card">
+          <strong>Resources</strong><br>
+          <a href="/cp1112/resources/naming-conventions/index.html">Naming Conventions</a>
+        </div>
+        <div class="card">
+          <strong>Reminders</strong>
+          <ul class="list-tight">
+            <li>Fetch and pull before you start</li>
+            <li>Move first, commit, then edit</li>
+            <li>Push when you're done</li>
+          </ul>
+        </div>
+        <div class="card"><a href="/cp1112/unit2/u2_index.html">&larr; Back to Unit 2</a></div>
+        <div class="card"><a href="/cp1112/unit2/project2a/2A_index.html">Next: 2A &mdash; Build It &rarr;</a></div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+
+  </body>
+</html>

@@ -270,11 +270,11 @@
           <div class="checkpoint">
             <div class="checkpoint-row is-green">
               <span class="checkpoint-icon">🟢</span>
-              <span><span class="checkpoint-label">Green:</span> <code>about.html</code> opens correctly, all three sections (My Story, A Few Things I'm Into, Quick Facts) show your real content — not placeholders — and each Quick Fact is on its own line.</span>
+              <span><span class="checkpoint-label">Green:</span> <code>about.html</code> opens correctly, all three sections (My Story, A Few Things I'm Into, 20 Questions About Me) show your real content — not placeholders — and each answer is on its own line.</span>
             </div>
             <div class="checkpoint-row is-red">
               <span class="checkpoint-icon">🔴</span>
-              <span><span class="checkpoint-label">Red:</span> page won't open (check the filename is exactly <code>about.html</code>), placeholder text is still showing, or the Quick Facts run together on one line (check your <code>&lt;br&gt;</code> tags).</span>
+              <span><span class="checkpoint-label">Red:</span> page won't open (check the filename is exactly <code>about.html</code>), placeholder text is still showing, or the 20 Questions answers run together on one line (check your <code>&lt;br&gt;</code> tags).</span>
             </div>
           </div>
         </section>
@@ -351,13 +351,14 @@
           <ol class="list-tight">
             <li>On all three pages, replace <code>&lt;h1&gt;</code> + <code>&lt;nav&gt;</code> at the top with a <code>&lt;header&gt;</code> wrapping both:
               <pre><code>&lt;header&gt;
-  &lt;h1&gt;Your Name&lt;/h1&gt;
+  &lt;h1&gt;This page's heading&lt;/h1&gt;
   &lt;nav&gt;
     &lt;a href="index.html"&gt;Home&lt;/a&gt;
     &lt;a href="about.html"&gt;About Me&lt;/a&gt;
     &lt;a href="work.html"&gt;My Work&lt;/a&gt;
   &lt;/nav&gt;
 &lt;/header&gt;</code></pre>
+              <p>Keep each page's own <code>&lt;h1&gt;</code> — just move it inside the <code>&lt;header&gt;</code>: your name on Home, <strong>About Me</strong> on about.html, and <strong>My Work</strong> on work.html. Don't copy your name onto every page.</p>
             </li>
             <li>Wrap the rest of each page's content — everything after <code>&lt;/header&gt;</code> — in <code>&lt;main&gt;...&lt;/main&gt;</code>.</li>
             <li>Do this on <strong>all three pages</strong>, not just Home.</li>
@@ -387,14 +388,12 @@
           <p class="muted">Optional — unlocks after Task 4 is done.</p>
           <p>A couple of small extras that real websites have and yours doesn't yet.</p>
           <ol class="list-tight">
-            <li>On all three pages, replace <code>&lt;h1&gt;</code> + <code>&lt;nav&gt;</code> at the top with a <code>&lt;header&gt;</code> wrapping both.</li>
-            <li>Wrap your main page content in <code>&lt;main&gt;</code>.</li>
             <li>Add a <code>&lt;footer&gt;</code> at the bottom of all three pages with a short line like <code>&lt;p&gt;&amp;copy; 2026 Your Name&lt;/p&gt;</code>.</li>
             <li>Clean up your indentation — everything nested inside <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>,
               and <code>&lt;footer&gt;</code> should be indented one level in from its parent tag. This is one of the
               easiest ways to tell professional code from messy code, and it makes your own file way easier to read
               and fix later.</li>
-            <li>Add a horizontal rule (<code>&lt;hr&gt;</code>) between major sections on your About Me page — one before "A Few Things I'm Into" and one before "Quick Facts."</li>
+            <li>Add a horizontal rule (<code>&lt;hr&gt;</code>) between major sections on your About Me page — one before "A Few Things I'm Into" and one before "20 Questions About Me."</li>
             <li>Add this to the <code>&lt;head&gt;</code> of all three pages (swap in your own one-line description):
               <pre><code>&lt;meta name="description" content="One sentence describing this page."&gt;</code></pre>
             </li>

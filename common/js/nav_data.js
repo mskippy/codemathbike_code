@@ -143,7 +143,13 @@ window.NAV_DATA = {
         unit2: {
           title: "U2 Guided Project 1",
           href: "/cp1112/unit2/u2_index.html",
-          pages: {}
+          pages: {
+            lesson1: { title: "2.1 Repo Reorganization", href: "/cp1112/unit2/lesson1/2.1_index.html" },
+            project2a: { title: "2A — Build It", href: "/cp1112/unit2/project2a/2A_index.html" },
+            project2b: { title: "2B — Structure It", href: "/cp1112/unit2/project2b/2B_index.html" },
+            project2c: { title: "2C — Transfer It", href: "/cp1112/unit2/project2c/2C_index.html" },
+            project2d: { title: "2D — Engineer It", href: "/cp1112/unit2/project2d/2D_index.html" }
+          }
         },
         unit3: {
           title: "U3 Choice Project 2",
