@@ -1,4 +1,4 @@
-<!-- v2 – Nov 2025 -->
+<!-- v3 – Sep 2026 -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -20,26 +20,140 @@
 
       <main id="content" data-page-title="CP11/12 • Unit 2">
         <section class="card">
-          <span class="pill">Weeks 5&ndash;7 &middot; 15 periods</span>
-          <h1>Unit 2 &mdash; Guided Project 1: Problem-Solving Application</h1>
-          <p>Your first full trip through the design cycle, applied to a teacher-provided problem type &mdash; a calculator, quiz engine, or simple tracker. You choose from a short list, not fully open-ended yet. This is the first formally checkpoint-graded project, so the early periods spend extra time modelling what a strong checkpoint actually looks like.</p>
+          <h1>Unit 2 &mdash; Guided Project</h1>
+          <p>You'll design, build, test and share your first complete program &mdash; start to finish, your idea.</p>
         </section>
 
         <section class="card">
-          <h2>What You'll Be Doing</h2>
-          <p>Correct use of variables, conditionals, loops, functions, and lists; basic input validation; inline comments; test cases and hand-tracing used to debug.</p>
-          <p>If you're moving faster, it's the same project idea at a higher bar: your version must include at least one class, structured error handling (try/except), a debugger walkthrough in place of print debugging, and docstring documentation.</p>
+          <h2>What You're Building</h2>
+          <p>Everyone picks one type of program from this menu. It runs in the terminal, takes input, and gives the user something useful back.</p>
+          <div class="track-grid">
+            <div class="track-card">
+              <h3>Calculator-type tool</h3>
+              <ul class="list-tight">
+                <li>Unit converter</li>
+                <li>Tip or bill splitter</li>
+                <li>Grade calculator</li>
+              </ul>
+            </div>
+            <div class="track-card">
+              <h3>Quiz engine</h3>
+              <ul class="list-tight">
+                <li>Asks questions</li>
+                <li>Checks the answers</li>
+                <li>Reports a score</li>
+              </ul>
+            </div>
+            <div class="track-card">
+              <h3>Simple tracker</h3>
+              <ul class="list-tight">
+                <li>Habit tracker</li>
+                <li>Reading log</li>
+                <li>Workout log</li>
+              </ul>
+            </div>
+          </div>
+          <p class="lesson-note">These are just examples. You decide exactly what your program does and who it's for, and that goes in your pitch.</p>
         </section>
 
         <section class="card">
-          <h2>What You'll Produce</h2>
-          <p>A working program, plus a design-cycle log: pitch &rarr; pseudocode &rarr; prototype &rarr; test &rarr; share.</p>
+          <h2>The Design Cycle</h2>
+          <p>Back in Unit 0 you met the design cycle. This unit is your first time going all the way around it on one project:</p>
+          <p>
+            <span class="pill">Understanding Context</span> &rarr;
+            <span class="pill">Defining</span> &rarr;
+            <span class="pill">Ideating</span> &rarr;
+            <span class="pill">Prototyping</span> &rarr;
+            <span class="pill">Testing</span> &rarr;
+            <span class="pill">Making</span> &rarr;
+            <span class="pill">Sharing</span>
+          </p>
+          <p>You don't need a separate journal for it. <strong>Your commit history <em>is</em> your design log.</strong> Every commit shows what you did and when, and your project README holds the thinking behind it.</p>
+        </section>
+
+        <section class="card">
+          <h2>Start Here: Reorganize Your Repo</h2>
+          <div class="customize-this">
+            <p><strong>Everyone does this first, before touching your project.</strong> Your repo is about to get a lot bigger, so you'll sort it into unit folders and set up your Unit 2 project folder. It takes about 20 minutes.</p>
+            <a class="btn" href="/cp1112/unit2/lesson1/2.1_index.html">Go to 2.1 &mdash; Repo Reorganization</a>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Checkpoints</h2>
+          <p>There are three checkpoints, one at the end of each week of the unit.</p>
+          <div class="table-wrap">
+            <table class="content-table">
+              <thead>
+                <tr><th>Checkpoint</th><th>Due</th><th>What's in your repo</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>CP1</strong> &mdash; Pitch + plan</td>
+                  <td>End of Week 1</td>
+                  <td>Project README: pitch and pseudocode (2D adds a class sketch; 2C names the language)</td>
+                </tr>
+                <tr>
+                  <td><strong>CP2</strong> &mdash; Working prototype</td>
+                  <td>End of Week 2</td>
+                  <td>Code that runs; test plan table written</td>
+                </tr>
+                <tr>
+                  <td><strong>CP3</strong> &mdash; Tested build + share</td>
+                  <td>End of Week 3</td>
+                  <td>Tests run and recorded, bugs fixed, shown to one peer, AI log complete</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="gotcha">
+            <strong>Commit prefix rule:</strong> when you hit a checkpoint, start that commit message with the checkpoint number, like <code>CP1: Pitch and pseudocode done</code>. That's how your teacher finds it in your history.
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Find Your Level</h2>
+          <p>Everyone builds from the same menu and hits the same three checkpoints. Your level sets how high the technical bar is and how much support you get along the way.</p>
+          <div class="track-grid">
+            <div class="track-card">
+              <h3>2A &mdash; Build It</h3>
+              <p>You're newer to Python and want to put Unit 1's skills together into a real program.</p>
+              <a class="btn" href="/cp1112/unit2/project2a/2A_index.html">Go to 2A</a>
+            </div>
+            <div class="track-card">
+              <h3>2B &mdash; Structure It</h3>
+              <p>You're comfortable in Python and ready to write code that's organized and hard to break.</p>
+              <a class="btn" href="/cp1112/unit2/project2b/2B_index.html">Go to 2B</a>
+            </div>
+            <div class="track-card">
+              <h3>2C &mdash; Transfer It</h3>
+              <p>You've got Python down and want to see how your skills carry into a new language.</p>
+              <a class="btn" href="/cp1112/unit2/project2c/2C_index.html">Go to 2C</a>
+            </div>
+            <div class="track-card">
+              <h3>2D &mdash; Engineer It</h3>
+              <p>You're confident in Python and want to build the way professional developers do.</p>
+              <a class="btn" href="/cp1112/unit2/project2d/2D_index.html">Go to 2D</a>
+            </div>
+          </div>
+          <p class="lesson-note">Your teacher will recommend a level based on Unit 1. Think you're ready for a different one? Bring evidence from your Unit 1 work and pitch it.</p>
+        </section>
+
+        <section class="card">
+          <h2>How You're Assessed</h2>
+          <p>Same course rubric as every project, with the same 5 criteria. Your level sets the bar for the technical part.</p>
+          <p>At each checkpoint, your teacher will call you up to go over your work one-on-one, so <strong>commit and push before each one</strong>. There are no whole-class presentations.</p>
         </section>
       </main>
 
       <aside id="right-rail" aria-label="Resources">
-        <div class="card"><strong>This unit</strong><br>Weeks 5&ndash;7 &middot; 15 periods<br>Deliverable: working program + design-cycle log</div>
+        <div class="card"><strong>This unit</strong><br>3 weeks &middot; about 15 periods<br>Deliverable: a working program + your project README as a design log</div>
+        <div class="card">
+          <strong>Resources</strong><br>
+          <a href="/cp1112/resources/naming-conventions/index.html">Naming Conventions</a>
+        </div>
         <div class="card"><a href="/cp1112/index.html">&larr; Back to course</a></div>
+        <div class="card"><a href="/cp1112/unit1/u1_index.html">&larr; Back to Unit 1</a></div>
         <div class="card"><a href="/cp1112/unit3/u3_index.html">Next: Unit 3 &mdash; Choice Project 2 &rarr;</a></div>
       </aside>
     </div>

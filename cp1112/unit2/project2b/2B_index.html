@@ -1,0 +1,151 @@
+<!-- v3 – Sep 2026 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CP11/12 • 2B Structure It</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="cp1112">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="CP11/12 • 2B Structure It">
+        <!-- 1. Header -->
+        <section class="card">
+          <h1>2B &mdash; Structure It</h1>
+          <p><strong>Build it so it's organized, documented, and hard to break.</strong></p>
+        </section>
+
+        <!-- 2. This level is for you if... -->
+        <section class="card">
+          <h2>This Level Is for You If&hellip;</h2>
+          <ul class="list-tight">
+            <li>You're comfortable writing Python, and Unit 1 didn't stretch you much.</li>
+            <li>You've met classes and try/except (in Extended Unit 1 or somewhere else).</li>
+            <li>You want to use them in a real program, not just a practice exercise.</li>
+          </ul>
+        </section>
+
+        <!-- 3. What you'll build -->
+        <section class="card">
+          <h2>What You'll Build</h2>
+          <p>A console program from the <a href="/cp1112/unit2/u2_index.html">problem menu</a>: a calculator-type tool, a quiz engine, or a simple tracker. This time it's designed around at least one <strong>class</strong>.</p>
+          <p>The class should model the main "thing" in your program, like a <code>Quiz</code>, a <code>Tracker</code> or a <code>Converter</code>. It shouldn't just be a wrapper around a function you already had.</p>
+        </section>
+
+        <!-- 4. Requirements checklist -->
+        <section class="card">
+          <h2>Requirements Checklist</h2>
+          <p>Your finished project must include all of these. (Ticking the boxes is just for you, it doesn't save.)</p>
+          <ul class="list-tight" style="list-style:none; padding-left:0;">
+            <li><label><input type="checkbox"> Everything on the <a href="/cp1112/unit2/project2a/2A_index.html">2A list</a>, except input validation now uses try/except where it fits</label></li>
+            <li><label><input type="checkbox"> At least <strong>one class</strong> with <code>__init__</code>, attributes, and at least two methods that do real work</label></li>
+            <li><label><input type="checkbox"> <strong>try/except</strong> around every user input and any conversion that can fail, with a helpful message instead of a crash</label></li>
+            <li><label><input type="checkbox"> <strong>Docstrings</strong> on every function, method and class: what it does, its parameters, and what it returns</label></li>
+            <li><label><input type="checkbox"> A <strong>debugger walkthrough</strong> in your README: a screenshot of a breakpoint in VS Code, the variable values you saw, and what that told you about a bug</label></li>
+            <li><label><input type="checkbox"> A <strong>test table</strong> with at least 8 tests, including 3 edge cases (empty input, very large numbers, unexpected text)</label></li>
+            <li><label><input type="checkbox"> <strong>AI Collaboration</strong> section filled in</label></li>
+          </ul>
+          <p class="lesson-note"><strong>On AI and tutorials:</strong> fine to use, as long as your AI Collaboration section records what came from them. When your teacher calls you up, you should be able to explain your class and every method in it.</p>
+        </section>
+
+        <!-- 5. Checkpoints at this level -->
+        <section class="card">
+          <h2>Checkpoints at 2B</h2>
+          <div class="table-wrap">
+            <table class="content-table">
+              <thead>
+                <tr><th>Checkpoint</th><th>What it looks like at 2B</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>CP1</strong><br><span class="muted small">End of Week 1</span></td>
+                  <td>Pitch; pseudocode; a short description of your class (its attributes and methods) <em>before</em> you code it</td>
+                </tr>
+                <tr>
+                  <td><strong>CP2</strong><br><span class="muted small">End of Week 2</span></td>
+                  <td>Class works and is used by the main program; at least one try/except in place; test table written</td>
+                </tr>
+                <tr>
+                  <td><strong>CP3</strong><br><span class="muted small">End of Week 3</span></td>
+                  <td>Docstrings complete; debugger walkthrough in README; all tests recorded; shown to a peer</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Remember to start each checkpoint commit with <code>CP1:</code>, <code>CP2:</code> or <code>CP3:</code>, and push before your teacher calls you up.</p>
+
+          <h3>How to do the debugger walkthrough</h3>
+          <ol class="list-tight">
+            <li>Pick a bug you actually hit, or a spot where you weren't sure what your code was doing.</li>
+            <li>Click just left of a line number to set a <strong>breakpoint</strong> (a red dot). Put it on the line <em>before</em> things go wrong.</li>
+            <li>Press <code>F5</code> and choose <strong>Python Debugger &rarr; Python File</strong>. Your program runs and pauses at the red dot.</li>
+            <li>Look at the <strong>Variables</strong> panel on the left. Use <strong>Step Over</strong> (<code>F10</code>) to go one line at a time and watch the values change.</li>
+            <li>Take a screenshot, and write down what the values were and what that told you.</li>
+          </ol>
+          <p class="lesson-note">The last sentence is the important part. "Here's a breakpoint" isn't a walkthrough. "<code>score</code> went back to 0 on every question, so I realized I was resetting it inside the loop" is.</p>
+          <!--
+          <div class="screenshot-placeholder">[ Screenshot placeholder &mdash; VS Code paused at a breakpoint, Variables panel visible &mdash; <code>images/01-breakpoint-variables.png</code> ]</div>
+          -->
+        </section>
+
+        <!-- 6. When you're stuck -->
+        <section class="card">
+          <h2>When You're Stuck</h2>
+          <ul>
+            <li><strong>Revisit the Extended Unit 1 notebooks</strong> on classes and try/except. They're in your <code>1_python_learning/practice</code> folder.</li>
+            <li><strong>Use the debugger, not print statements.</strong> Set a breakpoint on the line before things go wrong and watch the Variables panel.</li>
+            <li><strong>If your class feels pointless,</strong> ask yourself: "What data does this thing hold, and what can it do?" If the answer is "nothing" and "one thing," it might not need to be a class yet.</li>
+            <li><strong>Keep try/except small.</strong> Wrap the one line that can fail, not the whole program. Otherwise you'll hide real bugs.</li>
+          </ul>
+        </section>
+
+        <!-- 7. Done looks like -->
+        <section class="card">
+          <h2>Done Looks Like&hellip;</h2>
+          <p>Your main program reads almost like plain English, because the class does the heavy lifting. Bad input gets a friendly message every time. Someone could read your docstrings and use your class without reading the code inside it.</p>
+        </section>
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card"><strong>This level</strong><br>Unit 2 &middot; 2B Structure It<br>3 weeks &middot; 3 checkpoints</div>
+        <div class="card">
+          <strong>Resources</strong><br>
+          <a href="/cp1112/unit2/lesson1/README_template.md" download>README_template.md</a><br>
+          <a href="https://docs.python.org/3/tutorial/classes.html" target="_blank" rel="noopener">Python docs: Classes</a><br>
+          <a href="https://docs.python.org/3/tutorial/errors.html" target="_blank" rel="noopener">Python docs: Errors and Exceptions</a><br>
+          <a href="https://code.visualstudio.com/docs/python/debugging" target="_blank" rel="noopener">Debugging Python in VS Code</a><br>
+          <a href="/cp1112/resources/naming-conventions/index.html">Naming Conventions</a>
+        </div>
+        <div class="card">
+          <strong>Reminders</strong>
+          <ul class="list-tight">
+            <li>Pull before you start each class</li>
+            <li>Describe your class before you code it</li>
+            <li>Class names are PascalCase: <code>HabitTracker</code></li>
+          </ul>
+        </div>
+        <div class="card">
+          <strong>All levels</strong><br>
+          <a href="/cp1112/unit2/project2a/2A_index.html">2A &mdash; Build It</a><br>
+          2B &mdash; Structure It <span class="muted small">(you're here)</span><br>
+          <a href="/cp1112/unit2/project2c/2C_index.html">2C &mdash; Transfer It</a><br>
+          <a href="/cp1112/unit2/project2d/2D_index.html">2D &mdash; Engineer It</a>
+        </div>
+        <div class="card"><a href="/cp1112/unit2/u2_index.html">&larr; Back to Unit 2</a></div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+
+  </body>
+</html>

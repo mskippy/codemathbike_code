@@ -1,0 +1,183 @@
+<!-- v3 – Sep 2026 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CP11/12 • 2A Build It</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="cp1112">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="CP11/12 • 2A Build It">
+        <!-- 1. Header -->
+        <section class="card">
+          <h1>2A &mdash; Build It</h1>
+          <p><strong>Put everything from Unit 1 together into one complete program you designed.</strong></p>
+        </section>
+
+        <!-- 2. This level is for you if... -->
+        <section class="card">
+          <h2>This Level Is for You If&hellip;</h2>
+          <ul class="list-tight">
+            <li>Unit 1 was your first real time with Python.</li>
+            <li>You can write loops, conditionals and functions.</li>
+            <li>You haven't built a whole program from your own idea yet.</li>
+          </ul>
+        </section>
+
+        <!-- 3. What you'll build -->
+        <section class="card">
+          <h2>What You'll Build</h2>
+          <p>A console program from the <a href="/cp1112/unit2/u2_index.html">problem menu</a>: a calculator-type tool, a quiz engine, or a simple tracker. You decide what it does and who it's for. It runs in the terminal, takes input, and gives useful output.</p>
+        </section>
+
+        <!-- 4. Requirements checklist -->
+        <section class="card">
+          <h2>Requirements Checklist</h2>
+          <p>Your finished project must include all of these. (Ticking the boxes is just for you, it doesn't save.)</p>
+          <ul class="list-tight" style="list-style:none; padding-left:0;">
+            <li><label><input type="checkbox"> Uses variables, conditionals, loops, functions and at least one list, each for a real purpose</label></li>
+            <li><label><input type="checkbox"> At least <strong>three functions</strong>, each doing one job</label></li>
+            <li><label><input type="checkbox"> <strong>Input validation:</strong> the program doesn't crash on a wrong type or an out-of-range choice (use <code>if</code> checks and <code>.isdigit()</code>, not try/except)</label></li>
+            <li><label><input type="checkbox"> A <strong>menu or loop</strong> so the user can do more than one thing before quitting</label></li>
+            <li><label><input type="checkbox"> <strong>Inline comments</strong> explaining <em>why</em>, not just <em>what</em></label></li>
+            <li><label><input type="checkbox"> A <strong>test-case table</strong> in your README with at least 6 tests, including 2 "bad input" tests</label></li>
+            <li><label><input type="checkbox"> One <strong>hand-trace</strong> of a function, written out in your README</label></li>
+            <li><label><input type="checkbox"> <strong>AI Collaboration</strong> section filled in</label></li>
+          </ul>
+
+          <details>
+            <summary><strong>Need a head start?</strong></summary>
+            <p>Try building from a blank file first. If you're stuck, grab the starter for your problem type. Each one has a menu loop that already works, plus empty functions with comments saying what each should do. The rest is up to you: look for the <code># TODO</code> markers.</p>
+            <p>
+              <a class="btn" href="starter_calculator.py" download>Download starter_calculator.py</a>
+              <a class="btn" href="starter_quiz.py" download>Download starter_quiz.py</a>
+              <a class="btn" href="starter_tracker.py" download>Download starter_tracker.py</a>
+            </p>
+            <p class="lesson-note">Save it into your Unit 2 project folder and rename it <code>main.py</code>. Commit it before you change anything, so your history shows what was the starter and what's yours.</p>
+          </details>
+
+          <p class="lesson-note"><strong>On AI and tutorials:</strong> web tutorials and Copilot are fine to use, as long as your AI Collaboration section records what came from them. When your teacher calls you up, you should be able to explain every function in your program.</p>
+        </section>
+
+        <!-- 5. Checkpoints at this level -->
+        <section class="card">
+          <h2>Checkpoints at 2A</h2>
+          <div class="table-wrap">
+            <table class="content-table">
+              <thead>
+                <tr><th>Checkpoint</th><th>What it looks like at 2A</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>CP1</strong><br><span class="muted small">End of Week 1</span></td>
+                  <td>README pitch filled in using the template prompts; pseudocode for your main menu and each function</td>
+                </tr>
+                <tr>
+                  <td><strong>CP2</strong><br><span class="muted small">End of Week 2</span></td>
+                  <td>Menu runs and at least two features work; test table written with expected results filled in</td>
+                </tr>
+                <tr>
+                  <td><strong>CP3</strong><br><span class="muted small">End of Week 3</span></td>
+                  <td>All tests run with actual results recorded; any failures fixed or explained; shown to a peer</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Remember to start each checkpoint commit with <code>CP1:</code>, <code>CP2:</code> or <code>CP3:</code>, and push before your teacher calls you up.</p>
+
+          <h3>What CP1 pseudocode looks like</h3>
+          <p>Here's a worked example for a small tip calculator. Your own pseudocode should be about this detailed. Notice it's plain English steps, not Python with the colons taken out.</p>
+          <pre><code>MAIN MENU
+  keep repeating until the user picks Quit:
+    show the options: 1) Calculate a tip   2) Split the bill   3) Quit
+    ask which option they want
+    if they pick 1 → run calculate_tip
+    if they pick 2 → run split_bill
+    if they pick 3 → say goodbye and stop repeating
+    anything else  → tell them that's not an option
+
+get_whole_number(message)
+  show the message and get what they type
+  while what they typed isn't all digits:
+    tell them to type a whole number, and ask again
+  hand back what they typed, turned into a number
+
+calculate_tip
+  bill ← get_whole_number("Bill amount in dollars?")
+  percent ← get_whole_number("Tip percent?")
+  tip ← bill × percent ÷ 100
+  show the tip and the total (bill + tip)
+
+split_bill
+  total ← get_whole_number("Total bill in dollars?")
+  people ← get_whole_number("How many people?")
+  if people is 0 → tell them you can't split between 0 people, and stop
+  each ← total ÷ people
+  show how much each person pays</code></pre>
+        </section>
+
+        <!-- 6. When you're stuck -->
+        <section class="card">
+          <h2>When You're Stuck</h2>
+          <ul>
+            <li><strong>Go back to the matching Unit 1 lesson notebook.</strong> Every skill you need for this project is in there. They're in your <code>1_python_learning/practice</code> folder now.</li>
+            <li><strong>Three before me:</strong> check your notes, then ask a neighbour, then ask your teacher.</li>
+            <li><strong>Print-debug:</strong> add a <code>print()</code> of your variables just before the line that breaks, so you can see what they actually hold.</li>
+          </ul>
+        </section>
+
+        <!-- 7. Done looks like -->
+        <section class="card">
+          <h2>Done Looks Like&hellip;</h2>
+          <p>Someone who's never seen your program can run it, understand what to do, and can't easily break it. Your README shows what you planned, what you tested, and what you changed along the way.</p>
+        </section>
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card"><strong>This level</strong><br>Unit 2 &middot; 2A Build It<br>3 weeks &middot; 3 checkpoints</div>
+        <div class="card">
+          <strong>Starter files</strong><br>
+          <a href="starter_calculator.py" download>starter_calculator.py</a><br>
+          <a href="starter_quiz.py" download>starter_quiz.py</a><br>
+          <a href="starter_tracker.py" download>starter_tracker.py</a>
+        </div>
+        <div class="card">
+          <strong>Resources</strong><br>
+          <a href="/cp1112/unit2/lesson1/README_template.md" download>README_template.md</a><br>
+          <a href="/cp1112/resources/naming-conventions/index.html">Naming Conventions</a>
+        </div>
+        <div class="card">
+          <strong>Reminders</strong>
+          <ul class="list-tight">
+            <li>Pull before you start each class</li>
+            <li>Commit often, not just at checkpoints</li>
+            <li>Write expected test results <em>before</em> you run anything</li>
+          </ul>
+        </div>
+        <div class="card">
+          <strong>All levels</strong><br>
+          2A &mdash; Build It <span class="muted small">(you're here)</span><br>
+          <a href="/cp1112/unit2/project2b/2B_index.html">2B &mdash; Structure It</a><br>
+          <a href="/cp1112/unit2/project2c/2C_index.html">2C &mdash; Transfer It</a><br>
+          <a href="/cp1112/unit2/project2d/2D_index.html">2D &mdash; Engineer It</a>
+        </div>
+        <div class="card"><a href="/cp1112/unit2/lesson1/2.1_index.html">&larr; Back to 2.1 Repo Reorganization</a></div>
+        <div class="card"><a href="/cp1112/unit2/u2_index.html">&larr; Back to Unit 2</a></div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+
+  </body>
+</html>
