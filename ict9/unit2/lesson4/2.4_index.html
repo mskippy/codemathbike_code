@@ -1,4 +1,4 @@
-<!-- v1.1 – Sept 2026 (self-serve catch-up edits) -->
+<!-- v1.2 – Sept 2026 (screenshots added) -->
 <!doctype html>
 <html lang="en">
 
@@ -6,6 +6,20 @@
     <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
     <title>ICT 9 • Unit 2 • Lesson 2.4 — Assembly: Going Live on GitHub</title>
     <link rel="stylesheet" href="/common/css/base.css">
+    <style>
+      /* 2.4 screenshot layout */
+      figure.shot, figure.shot-float { margin: 0.75rem 0 1.25rem; }
+      figure.shot .screenshot, figure.shot-float .screenshot { margin: 0; width: 100%; height: auto; }
+      figure.shot-float { float: right; width: 190px; margin: 0.25rem 0 1rem 1.5rem; }
+      figure.shot-float.wide { width: 240px; }
+      .shot-pair { display: flex; flex-wrap: wrap; gap: 1rem; margin: 0.75rem 0 1.25rem; }
+      .shot-pair figure.shot { flex: 1 1 220px; max-width: 300px; margin: 0; }
+      figure figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; line-height: 1.35; }
+      .clear { clear: both; }
+      @media (max-width: 640px) {
+        figure.shot-float, figure.shot-float.wide { float: none; width: 100%; max-width: 280px; margin: 0.75rem 0; }
+      }
+    </style>
     <script src="/common/js/nav_data.js" defer></script>
     <script src="/common/js/utils.js" defer></script>
     <script src="/common/js/inject_partials.js" defer></script>
@@ -230,25 +244,59 @@
             <li>Click <strong>Initialize Repository</strong>.</li>
             <li>All your files now show up under <strong>Changes</strong> with a green <strong>U</strong> (untracked) next to them. That's normal. It means Git can see them but hasn't saved them yet.</li>
           </ol>
+          <div class="shot-pair">
+            <figure class="shot">
+                <a href="images/1_source_control_initialization.png" target="_blank" rel="noopener"><img class="screenshot" src="images/1_source_control_initialization.png" alt="VS Code Source Control panel with the Source Control icon in the left sidebar and the Initialize Repository button both highlighted."></a>
+                <figcaption><strong>Before:</strong> click the Source Control icon (left), then <strong>Initialize Repository</strong>.</figcaption>
+              </figure>
+            <figure class="shot">
+                <a href="images/2_files_in_changes.png" target="_blank" rel="noopener"><img class="screenshot" src="images/2_files_in_changes.png" alt="Source Control panel after initializing, listing about.html, index.html, work.html, style.css, avatar.png and script.js under Changes, each marked U."></a>
+                <figcaption><strong>After:</strong> every file is listed under Changes with a green <strong>U</strong>.</figcaption>
+              </figure>
+          </div>
 
           <h3>Step 2: Tell Git who you are (one time only)</h3>
           <p>Every commit is signed with a name and email. You'll use a private GitHub email, so your real school email never appears in public.</p>
+          <figure class="shot-float">
+                <a href="images/3_github_settings.png" target="_blank" rel="noopener"><img class="screenshot" src="images/3_github_settings.png" alt="GitHub profile menu opened from the profile picture in the top right, with Settings highlighted."></a>
+                <figcaption>Profile picture (top right) → <strong>Settings</strong>.</figcaption>
+              </figure>
           <ol class="list-tight">
             <li>On github.com, click your profile picture (top right) → <strong>Settings</strong> → <strong>Emails</strong>.</li>
-            <li>Turn on <strong>Keep my email addresses private</strong>. GitHub then shows you a private address that looks like <code>12345678+username@users.noreply.github.com</code>. Copy it.</li>
+            <li>Turn on <strong>Keep my email addresses private</strong>. GitHub then shows you a private address that looks like <code>12345678+username@users.noreply.github.com</code>. Copy it.
+              <div class="clear"></div>
+              <figure class="shot" style="max-width:640px">
+                <a href="images/4_email_private.png" target="_blank" rel="noopener"><img class="screenshot" src="images/4_email_private.png" alt="GitHub Emails settings with Keep my email addresses private switched On, and the private noreply address highlighted in yellow."></a>
+                <figcaption>Switch it <strong>On</strong>. The highlighted address is the one you copy. Yours has your own numbers and username.</figcaption>
+              </figure>
+            </li>
             <li>Back in VS Code, open the terminal: <strong>Terminal → New Terminal</strong> (or <code>Ctrl + `</code>).</li>
             <li>Type these two lines, pressing Enter after each one. Swap in your own username and the private email you just copied, and keep the quotation marks:
               <pre><code>git config --global user.name "your-username"
 git config --global user.email "12345678+your-username@users.noreply.github.com"</code></pre>
+              <figure class="shot" style="max-width:700px">
+                <a href="images/5_terminal_input.png" target="_blank" rel="noopener"><img class="screenshot" src="images/5_terminal_input.png" alt="VS Code terminal panel showing the git config user.name and user.email commands typed in."></a>
+                <figcaption>What it looks like in the terminal. Nothing prints back when it works, and that's normal. Can't see the terminal? Use <strong>Terminal → New Terminal</strong>, or the panel toggle icon at the top right of VS Code.</figcaption>
+              </figure>
             </li>
           </ol>
 
           <h3>Step 3: Commit</h3>
           <ol class="list-tight">
             <li>In the Source Control panel, hover over the word <strong>Changes</strong> and click the <strong>+</strong> (Stage All Changes). Your files move up into <strong>Staged Changes</strong>.</li>
-            <li>In the message box at the top, type: <code>First version of my studio site</code></li>
+            <li>In the message box at the top, type: <code>First version of my studio code</code></li>
             <li>Click the blue <strong>Commit</strong> button.</li>
           </ol>
+          <div class="shot-pair">
+            <figure class="shot">
+                <a href="images/6_stage_changes.png" target="_blank" rel="noopener"><img class="screenshot" src="images/6_stage_changes.png" alt="Source Control panel with the plus (Stage All Changes) button next to Changes highlighted."></a>
+                <figcaption>Hover over <strong>Changes</strong> and click the <strong>+</strong>.</figcaption>
+              </figure>
+            <figure class="shot">
+                <a href="images/7_staged_changes_after.png" target="_blank" rel="noopener"><img class="screenshot" src="images/7_staged_changes_after.png" alt="Source Control panel with all six files under Staged Changes marked A, a commit message typed, and the Commit button highlighted."></a>
+                <figcaption>Files move to <strong>Staged Changes</strong> (marked <strong>A</strong>). Type your message, then click <strong>Commit</strong>.</figcaption>
+              </figure>
+          </div>
 
           <div class="gotcha">
             <strong>Stuck? Two common setup problems (neither one is your fault):</strong>
@@ -263,7 +311,7 @@ git config --global user.email "12345678+your-username@users.noreply.github.com"
           <div class="checkpoint">
             <div class="checkpoint-row is-green">
               <span class="checkpoint-icon">🟢</span>
-              <span><span class="checkpoint-label">Green:</span> the Changes list is empty, and your commit "First version of my studio site" appears in the <strong>Graph</strong> section at the bottom of the Source Control panel.</span>
+              <span><span class="checkpoint-label">Green:</span> the Changes list is empty, and your commit "First version of my studio code" appears in the <strong>Graph</strong> section at the bottom of the Source Control panel.</span>
             </div>
             <div class="checkpoint-row is-red">
               <span class="checkpoint-icon">🔴</span>
@@ -361,14 +409,29 @@ My file is called: ________</code></pre>
           <p>This is the moment your site hits the internet.</p>
 
           <h3>Step 1: Push your repo to GitHub</h3>
+          <figure class="shot-float wide">
+                <a href="images/8_publish_branch.png" target="_blank" rel="noopener"><img class="screenshot" src="images/8_publish_branch.png" alt="Source Control panel after the first commit, showing a Publish Branch button."></a>
+                <figcaption>After your first commit, the button changes to <strong>Publish Branch</strong>.</figcaption>
+              </figure>
           <ol class="list-tight">
             <li>In the Source Control panel, click the blue <strong>Publish Branch</strong> button.</li>
             <li>VS Code asks to sign in with GitHub. Click <strong>Allow</strong>, sign in in the browser window that opens, and click <strong>Authorize</strong>. Then go back to VS Code.</li>
             <li>A box appears at the top of VS Code with your folder name in it. <strong>Delete that name</strong> and type exactly:
               <pre><code>your-username.github.io</code></pre>
               using <em>your</em> GitHub username, spelled exactly the way it is on GitHub.</li>
-            <li>Choose <strong>Publish to GitHub public repository</strong>. (Free GitHub sites have to be public.)</li>
-            <li>When VS Code shows a message that it published successfully, you can click <strong>Open on GitHub</strong> to see your code online.</li>
+            <li>Choose <strong>Publish to GitHub public repository</strong>. (Free GitHub sites have to be public.)
+              <div class="clear"></div>
+              <figure class="shot" style="max-width:640px">
+                <a href="images/9_publish_repo.png" target="_blank" rel="noopener"><img class="screenshot" src="images/9_publish_repo.png" alt="VS Code publish box with mskippy.github.io typed as the name and two options: Publish to GitHub private repository (highlighted) and Publish to GitHub public repository."></a>
+                <figcaption>Watch out: VS Code highlights <strong>private</strong> first. <strong>Don't just press Enter.</strong> Click the second option, <strong>public repository</strong>.</figcaption>
+              </figure>
+            </li>
+            <li>When VS Code shows a message that it published successfully, you can click <strong>Open on GitHub</strong> to see your code online.
+              <figure class="shot" style="max-width:720px">
+                <a href="images/10_github_repo.png" target="_blank" rel="noopener"><img class="screenshot" src="images/10_github_repo.png" alt="GitHub repository page for mskippy.github.io, marked Public, listing css, images, js, about.html, index.html and work.html, with Settings in the top menu and Deployments on the right."></a>
+                <figcaption>Pushed! Your files are on GitHub. Check that the name is <code>your-username.github.io</code> and that it says <strong>Public</strong>. <strong>Settings</strong> is at the right end of the top menu.</figcaption>
+              </figure>
+            </li>
           </ol>
 
           <div class="gotcha">
@@ -384,8 +447,12 @@ My file is called: ________</code></pre>
             <li>On your repo's GitHub page, click <strong>Settings</strong> (the gear tab along the top) → <strong>Pages</strong> in the left menu.</li>
             <li>Under <strong>Build and deployment → Source</strong>, choose <strong>Deploy from a branch</strong>.</li>
             <li>Under <strong>Branch</strong>, choose <code>main</code> and <code>/ (root)</code>, then click <strong>Save</strong>.</li>
-            <li>Wait 1 to 5 minutes. You can watch the progress in the <strong>Actions</strong> tab, where a yellow dot turns into a green check. Refresh the Pages settings and your live link appears at the top.</li>
+            <li>Wait 1 to 5 minutes. You can watch the progress in the <strong>Actions</strong> tab, or under <strong>Deployments</strong> on the right side of your repo's front page. A yellow dot turns into a green check when it's done. Refresh the Pages settings and your live link appears at the top.</li>
           </ol>
+          <figure class="shot" style="max-width:760px">
+                <a href="images/10_github_pages.png" target="_blank" rel="noopener"><img class="screenshot" src="images/10_github_pages.png" alt="GitHub Pages settings with the Settings tab and Pages menu item highlighted, Source set to Deploy from a branch, Branch main and root, and a box reading Your site is live at https://mskippy.github.io with a Visit site button."></a>
+                <figcaption><strong>Settings → Pages</strong>. Set Source to <strong>Deploy from a branch</strong> and Branch to <strong>main</strong> / <strong>(root)</strong>. When it's ready, <em>"Your site is live at…"</em> appears at the top. Click <strong>Visit site</strong>.</figcaption>
+              </figure>
 
           <h3>Step 3: Test it for real</h3>
           <ol class="list-tight">
