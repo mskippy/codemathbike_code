@@ -1,0 +1,323 @@
+<!-- v1 – Oct 2026 (no-Git path) -->
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ICT 9 • Unit 2 • Lesson 2.4 — Assembly: Going Live Without Git</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <style>
+      /* 2.4 screenshot layout */
+      figure.shot, figure.shot-float { margin: 0.75rem 0 1.25rem; }
+      figure.shot .screenshot, figure.shot-float .screenshot { margin: 0; width: 100%; height: auto; }
+      figure.shot-float { float: right; width: 190px; margin: 0.25rem 0 1rem 1.5rem; }
+      figure figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; line-height: 1.35; }
+      .clear { clear: both; }
+      @media (max-width: 640px) {
+        figure.shot-float { float: none; width: 100%; max-width: 280px; margin: 0.75rem 0; }
+      }
+    </style>
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="ict9">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" role="main" data-page-title="ICT 9 • Unit 2 • Lesson 2.4 — Assembly: Going Live Without Git">
+
+        <section class="card">
+          <h1>2.4 Assembly: Going Live Without Git</h1>
+          <p>
+            Your computer doesn't have Git installed, and that's fine. You'll still put your site on GitHub, make
+            real commits, and end up with the same live site at <code>https://your-username.github.io</code>.
+            The difference is that you'll <strong>upload your files on github.com</strong> instead of pushing them
+            from VS Code. You keep working in VS Code on your H: drive exactly like you have all unit, with Live Preview.
+          </p>
+          <div class="lesson-note">
+            <strong>Do these first, on the main 2.4 page:</strong>
+            <a href="2.4_index.html#task1">Task 1 — Pre-flight check</a> (including the 20 Questions oversharing audit) and
+            <a href="2.4_index.html#task2">Task 2 — GitHub account</a>. Then come back here for Tasks 3–6.
+          </div>
+
+          <h3>Find your spot</h3>
+          <ul class="list-tight">
+            <li><a href="#task3">Task 3 — Create your repo and upload your site</a>: you have a GitHub account, but no repo yet.</li>
+            <li><a href="#task4">Task 4 — AI code cleanup</a>: your files are uploaded.</li>
+            <li><a href="#task5">Task 5 — Go live</a>: your "AI code cleanup" commit is done.</li>
+            <li><a href="#task6">Task 6 — Ship an update</a>: your site is live.</li>
+          </ul>
+
+          <h3>How the no-Git path works</h3>
+          <ul class="list-tight">
+            <li><strong>VS Code on your H: drive</strong> is where you edit and test, the same as always.</li>
+            <li><strong>github.com</strong> is where you upload. Every time you upload and click <strong>Commit changes</strong>, that's a commit, and your live site updates.</li>
+            <li>The loop: <strong>edit and save in VS Code → upload to GitHub → commit</strong>.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="task3">
+          <div class="task-heading">
+            <span class="pill pill-green">Green</span>
+            <h2>Task 3 — Create your repo and upload your site</h2>
+          </div>
+          <p>Uploading your files for the first time counts as your first commit.</p>
+
+          <h3>Step 1: Make your email private (before you upload anything)</h3>
+          <figure class="shot-float">
+            <a href="images/3_github_settings.png" target="_blank" rel="noopener"><img class="screenshot" src="images/3_github_settings.png" alt="GitHub profile menu opened from the profile picture in the top right, with Settings highlighted."></a>
+            <figcaption>Profile picture (top right) → <strong>Settings</strong>.</figcaption>
+          </figure>
+          <ol class="list-tight">
+            <li>On github.com, click your profile picture (top right) → <strong>Settings</strong> → <strong>Emails</strong> (left menu).</li>
+            <li>Turn on <strong>Keep my email addresses private</strong>. Every commit you make on the website now uses a private address instead of your school email. There's nothing to copy.</li>
+          </ol>
+          <div class="clear"></div>
+          <figure class="shot" style="max-width:640px">
+            <a href="images/4_email_private.png" target="_blank" rel="noopener"><img class="screenshot" src="images/4_email_private.png" alt="GitHub Emails settings with Keep my email addresses private switched On."></a>
+            <figcaption>Switch it <strong>On</strong>.</figcaption>
+          </figure>
+
+          <h3>Step 2: Create your repository</h3>
+          <ol class="list-tight">
+            <li>On github.com, click the <strong>+</strong> at the top right → <strong>New repository</strong>.</li>
+            <li><strong>Repository name:</strong> type exactly
+              <pre><code>your-username.github.io</code></pre>
+              using <em>your</em> GitHub username, spelled exactly the way it is on GitHub.</li>
+            <li>Make sure <strong>Public</strong> is selected. (Free GitHub sites have to be public.)</li>
+            <li>Leave everything else as it is, and <strong>don't</strong> tick "Add a README." Click <strong>Create repository</strong>.</li>
+          </ol>
+
+          <h3>Step 3: Upload your files</h3>
+          <ol class="list-tight">
+            <li>On your new, empty repo page, find the <strong>Quick setup</strong> box and click the link that says <strong>uploading an existing file</strong>.</li>
+            <li>Open <strong>File Explorer</strong> and go <em>inside</em> your project folder: <code>H:\ICT 9\2_web_development\your-slug</code>. You should see <code>index.html</code>, <code>about.html</code>, <code>work.html</code>, and the <code>css</code>, <code>js</code>, and <code>images</code> folders.</li>
+            <li>Press <code>Ctrl + A</code> to select <strong>everything inside the folder</strong>, then drag it all into the browser, onto the upload box.</li>
+            <li>Wait until every file is listed underneath, including the ones inside <code>css</code>, <code>js</code>, and <code>images</code>.</li>
+            <li>Scroll down to <strong>Commit changes</strong>. In the message box, type <code>First version of my studio code</code>.</li>
+            <li>Leave <strong>Commit directly to the main branch</strong> selected, and click <strong>Commit changes</strong>.</li>
+          </ol>
+
+          <div class="gotcha">
+            <strong>Common mistake:</strong> drag the stuff <em>inside</em> your folder, not the folder itself. If
+            you drag the whole <code>your-slug</code> folder, GitHub puts everything inside a <code>your-slug</code>
+            folder, and your site shows a 404. <code>index.html</code> should be listed right at the top level of your
+            repo, next to the <code>css</code>, <code>images</code>, and <code>js</code> folders.
+          </div>
+
+          <figure class="shot" style="max-width:720px">
+            <a href="images/10_github_repo.png" target="_blank" rel="noopener"><img class="screenshot" src="images/10_github_repo.png" alt="GitHub repository page for mskippy.github.io, marked Public, listing css, images, js, about.html, index.html and work.html at the top level."></a>
+            <figcaption>What you should see: your folders and pages listed at the top level, <strong>Public</strong> next to the name, and your first commit.</figcaption>
+          </figure>
+
+          <div class="checkpoint">
+            <div class="checkpoint-row is-green">
+              <span class="checkpoint-icon">🟢</span>
+              <span><span class="checkpoint-label">Green:</span> your repo is named <code>your-username.github.io</code>, says <strong>Public</strong>, and shows <code>index.html</code>, <code>about.html</code>, <code>work.html</code>, <code>css</code>, <code>images</code>, and <code>js</code> at the top level.</span>
+            </div>
+            <div class="checkpoint-row is-red">
+              <span class="checkpoint-icon">🔴</span>
+              <span><span class="checkpoint-label">Red:</span> the name is wrong? Go to <strong>Settings</strong> → change the <strong>Repository name</strong> → <strong>Rename</strong>. Everything ended up inside one folder? It's easiest to delete the repo (Settings → scroll to <strong>Danger Zone</strong> → <strong>Delete this repository</strong>) and redo Steps 2–3.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" id="task4">
+          <div class="task-heading">
+            <span class="pill pill-green">Green</span>
+            <h2>Task 4 — AI code review: clean up the scary code</h2>
+          </div>
+          <p>
+            Same job as the VS Code path: get an AI to clean up your code, and <strong>you're the one who approves it</strong>.
+            On this path you test the changes in Live Preview first, upload them, and then review exactly what changed on GitHub.
+          </p>
+
+          <h3>Step 1: Clean up one file at a time in VS Code</h3>
+          <ol class="list-tight">
+            <li>Copy the AI prompt from <a href="2.4_index.html#task4">Task 4 on the main page</a> into the AI tool of your choice (any of the ones allowed in class).</li>
+            <li>In VS Code, open <code>index.html</code>, press <code>Ctrl + A</code> then <code>Ctrl + C</code>, and paste it into the AI right after the prompt.</li>
+            <li>Copy the AI's cleaned-up file, select everything in <code>index.html</code> (<code>Ctrl + A</code>), and paste over it. Save.</li>
+            <li>Check Live Preview. The page should look and work <strong>exactly</strong> like before. Click everything, including your JavaScript buttons.</li>
+            <li>Broken? Press <code>Ctrl + Z</code> to undo the paste, and try again (or paste only the messy part).</li>
+            <li>Repeat for <code>about.html</code>, <code>work.html</code>, <code>css/style.css</code>, and <code>js/script.js</code>.</li>
+          </ol>
+
+          <h3>Step 2: Upload your cleaned-up files</h3>
+          <ol class="list-tight">
+            <li>On github.com, go to your <strong>repo's front page</strong> (not inside a folder) → <strong>Add file</strong> → <strong>Upload files</strong>.</li>
+            <li>Drag in everything <em>inside</em> your <code>your-slug</code> folder again, the same way as Task 3. Files with the same name replace the old ones, and GitHub ignores anything that didn't change.</li>
+            <li>Commit message: <code>AI code cleanup</code> → <strong>Commit changes</strong>.</li>
+          </ol>
+
+          <h3>Step 3: Review every change on GitHub (the important part)</h3>
+          <ol class="list-tight">
+            <li>On your repo's front page, click the <strong>commits</strong> link (the clock icon near the top of your file list).</li>
+            <li>Click your <strong>AI code cleanup</strong> commit. GitHub shows every file that changed: <strong>red</strong> is what the AI removed, and <strong>green</strong> is what it added.</li>
+            <li>Read every change. For each one, you should be able to say what it does. Don't understand one? Ask the AI: <em>"Explain this change like I'm new to coding."</em></li>
+            <li>Don't want to keep a change? Fix it in VS Code, save, and upload again with a message like <code>Undo AI change to nav</code>.</li>
+          </ol>
+
+          <div class="gotcha">
+            <strong>Watch the AI closely. It makes mistakes too.</strong> Red flags to look for in the changes:
+            <ul class="list-tight">
+              <li>A new <code>&lt;script src="https://..."&gt;</code> or <code>&lt;link href="https://..."&gt;</code> pointing to another website that you didn't add.</li>
+              <li>A changed <code>id</code> or <code>class</code> name. This silently breaks your JavaScript or CSS.</li>
+              <li>Your own words rewritten, or whole sections gone missing.</li>
+              <li>A file that suddenly got <em>much</em> longer. The AI probably added features you didn't ask for.</li>
+            </ul>
+          </div>
+
+          <div class="lesson-note">
+            <strong>This is your AI reflection for this lesson.</strong> When you submit, answer the usual questions:
+            what you asked, what it gave you, what you kept or rejected (and why), and one thing you learned from its list of changes.
+          </div>
+
+          <div class="checkpoint">
+            <div class="checkpoint-row is-green">
+              <span class="checkpoint-icon">🟢</span>
+              <span><span class="checkpoint-label">Green:</span> your site still works in Live Preview, the "AI code cleanup" commit is in your repo's commit list, and you can explain at least three changes the AI made.</span>
+            </div>
+            <div class="checkpoint-row is-red">
+              <span class="checkpoint-icon">🔴</span>
+              <span><span class="checkpoint-label">Red:</span> the commit shows no changes. The AI's versions probably weren't saved in VS Code before you uploaded. Save every file (or turn on <code>File &gt; Auto Save</code>) and upload again.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" id="task5">
+          <div class="task-heading">
+            <span class="pill pill-green">Green</span>
+            <h2>Task 5 — Turn on GitHub Pages and go live</h2>
+          </div>
+          <ol class="list-tight">
+            <li>On your repo page, click <strong>Settings</strong> (the gear tab along the top) → <strong>Pages</strong> in the left menu.</li>
+            <li>Under <strong>Build and deployment → Source</strong>, choose <strong>Deploy from a branch</strong>.</li>
+            <li>Under <strong>Branch</strong>, choose <code>main</code> and <code>/ (root)</code>, then click <strong>Save</strong>.</li>
+            <li>Wait 1 to 5 minutes. Watch for a green check under <strong>Deployments</strong> on the right side of your repo's front page (or in the <strong>Actions</strong> tab). Refresh the Pages settings and your live link appears at the top.</li>
+          </ol>
+          <figure class="shot" style="max-width:760px">
+            <a href="images/10_github_pages.png" target="_blank" rel="noopener"><img class="screenshot" src="images/10_github_pages.png" alt="GitHub Pages settings with Source set to Deploy from a branch, Branch main and root, and a box reading Your site is live at https://mskippy.github.io with a Visit site button."></a>
+            <figcaption><strong>Settings → Pages</strong>: Deploy from a branch, <strong>main</strong> / <strong>(root)</strong>, Save. When it's ready, <em>"Your site is live at…"</em> appears at the top. Click <strong>Visit site</strong>.</figcaption>
+          </figure>
+
+          <h3>Test it for real</h3>
+          <ol class="list-tight">
+            <li>Open <code>https://your-username.github.io</code>. That's your site, live on the internet.</li>
+            <li>Click every nav link and every button. Check that your avatar shows up.</li>
+            <li>Open it on your phone too.</li>
+            <li>Post your live URL to the 2.4 Teams assignment.</li>
+          </ol>
+
+          <div class="checkpoint">
+            <div class="checkpoint-row is-green">
+              <span class="checkpoint-icon">🟢</span>
+              <span><span class="checkpoint-label">Green:</span> your site loads at <code>https://your-username.github.io</code> on a different device, every page and image works, and the URL is posted in Teams.</span>
+            </div>
+            <div class="checkpoint-row is-red">
+              <span class="checkpoint-icon">🔴</span>
+              <span><span class="checkpoint-label">Red:</span> a <strong>404</strong> means GitHub can't find <code>index.html</code> at the top level of your repo (see the Common mistake in Task 3). A broken image that works in Live Preview is almost always a capital letter in the file name. See <a href="#task6">the renaming note in Task 6</a>.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" id="task6">
+          <div class="task-heading">
+            <span class="pill pill-green">Green</span>
+            <h2>Task 6 — Ship an update</h2>
+          </div>
+          <p>
+            Your site gets new projects every unit for the rest of the course. Here's the loop you'll use every time:
+            <strong>edit and save in VS Code → upload to GitHub → commit</strong>.
+          </p>
+          <ol class="list-tight">
+            <li>In VS Code, make one small change. For example, add <code>&lt;p&gt;Last updated: October 2026&lt;/p&gt;</code> to your footer on all three pages. Save, and check Live Preview.</li>
+            <li>On github.com, go to your <strong>repo's front page</strong> → <strong>Add file</strong> → <strong>Upload files</strong>.</li>
+            <li>Drag in everything <em>inside</em> your <code>your-slug</code> folder.</li>
+            <li>Write a commit message that says what changed (<code>Add last-updated date to footer</code>) → <strong>Commit changes</strong>.</li>
+            <li>Wait about a minute, then reload your live site with <code>Ctrl + F5</code> (a hard refresh).</li>
+          </ol>
+
+          <div class="lesson-note">
+            <strong>Good commit messages</strong> say <em>what</em> changed: "Add dark mode toggle" or "Fix broken
+            avatar link." Messages like "stuff," "asdf," or "final FINAL v2" don't count. Your commit history is part
+            of your portfolio now, and people can read it.
+          </div>
+
+          <div class="gotcha">
+            <strong>Deleted or renamed a file?</strong> Uploading only adds and replaces files. It never removes
+            anything, so the old file stays on GitHub as an extra. That's usually harmless. To tidy up, open the old
+            file on GitHub, click the <strong>⋯</strong> menu (top right of the file) → <strong>Delete file</strong> →
+            <strong>Commit changes</strong>.
+            <br><br>
+            This matters for capital letters: if you rename <code>Avatar.PNG</code> to <code>avatar.png</code>, GitHub
+            keeps <em>both</em>, because to GitHub they're different files. Your site works, since your HTML points to the
+            new one. Delete the old one to keep your repo clean.
+          </div>
+
+          <div class="checkpoint">
+            <div class="checkpoint-row is-green">
+              <span class="checkpoint-icon">🟢</span>
+              <span><span class="checkpoint-label">Green:</span> your change shows up on the live site, and your repo's commit list shows at least three commits with clear messages.</span>
+            </div>
+            <div class="checkpoint-row is-red">
+              <span class="checkpoint-icon">🔴</span>
+              <span><span class="checkpoint-label">Red:</span> the live site hasn't changed. Check that you saved in VS Code <em>before</em> uploading, wait another minute, and hard refresh with <code>Ctrl + F5</code>.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>What's next</h2>
+          <p>
+            Head back to the main 2.4 page for the
+            <a href="2.4_index.html">Blue task and Black menu</a> (for the README, use <strong>Add file → Create new file</strong>
+            on your repo page), and do the <strong>Before You Leave Class</strong> sign-out at the bottom of that page.
+          </p>
+        </section>
+
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card">
+          <strong>Success criteria</strong>
+          <ul class="list-tight">
+            <li>Repo <code>username.github.io</code> created, Public</li>
+            <li>Files uploaded at the top level (first commit)</li>
+            <li>AI cleanup tested, uploaded, and reviewed on GitHub</li>
+            <li>Site live at <code>username.github.io</code></li>
+            <li>One update shipped with edit → upload → commit</li>
+            <li>Live URL posted in Teams</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>The everyday loop</strong>
+          <p class="muted">Edit + save in VS Code → github.com → repo front page → <strong>Add file → Upload files</strong> → drag in everything inside your folder → message → <strong>Commit changes</strong> → wait a minute → <code>Ctrl + F5</code>.</p>
+        </div>
+
+        <div class="card">
+          <strong>Your live URL</strong>
+          <p class="muted"><code>https://your-username.github.io</code><br>Your repo is named the same thing: <code>your-username.github.io</code>.</p>
+        </div>
+
+        <div class="card">
+          <strong>Watch out for</strong>
+          <p class="muted">Dragging your <em>folder</em> instead of what's inside it. If your files end up inside a <code>your-slug</code> folder on GitHub, your site shows a 404.</p>
+        </div>
+
+        <div class="card">
+          <strong>Back to</strong>
+          <p class="muted"><a href="2.4_index.html">Lesson 2.4 main page</a></p>
+        </div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+  </body>
+</html>
