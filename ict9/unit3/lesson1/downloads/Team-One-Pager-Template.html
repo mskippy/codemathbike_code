@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team One-Pager Template</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 3px solid #667eea;
+      padding-bottom: 20px;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 5px;
+      font-size: 2em;
+    }
+
+    .subtitle {
+      color: #666;
+      font-size: 0.95em;
+    }
+
+    .button-bar {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.95em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-print {
+      background: #667eea;
+      color: white;
+    }
+
+    .btn-print:hover {
+      background: #5568d3;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    .btn-download {
+      background: #48bb78;
+      color: white;
+    }
+
+    .btn-download:hover {
+      background: #38a169;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(72, 187, 120, 0.4);
+    }
+
+    .btn-clear {
+      background: #ed8936;
+      color: white;
+    }
+
+    .btn-clear:hover {
+      background: #dd6b20;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(237, 137, 54, 0.4);
+    }
+
+    section {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      border-left: 4px solid #667eea;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 15px;
+      font-size: 1.3em;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+      font-weight: 600;
+      font-size: 0.9em;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.95em;
+      transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="url"]:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .track-selector {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .track-option {
+      flex: 1;
+      min-width: 150px;
+    }
+
+    .track-option input[type="radio"] {
+      display: none;
+    }
+
+    .track-option label {
+      display: block;
+      padding: 12px;
+      text-align: center;
+      border: 2px solid #ddd;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-bottom: 0;
+    }
+
+    .track-option input[type="radio"]:checked + label {
+      border-color: #667eea;
+      background: #667eea;
+      color: white;
+      font-weight: 700;
+    }
+
+    .member-list {
+      list-style: none;
+    }
+
+    .member-item {
+      padding: 12px;
+      background: white;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #e0e0e0;
+    }
+
+    .member-item strong {
+      color: #333;
+    }
+
+    .btn-remove {
+      background: #f56565;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.85em;
+    }
+
+    .btn-remove:hover {
+      background: #e53e3e;
+    }
+
+    .btn-add-member {
+      background: #667eea;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .btn-add-member:hover {
+      background: #5568d3;
+    }
+
+    .member-input-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .member-input-group input {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+
+    .member-input-group button {
+      padding: 8px 16px;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .member-input-group button:hover {
+      background: #5568d3;
+    }
+
+    .success-message {
+      display: none;
+      background: #c6f6d5;
+      border: 1px solid #9ae6b4;
+      color: #22543d;
+      padding: 12px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      .track-selector {
+        flex-direction: column;
+      }
+
+      .track-option {
+        min-width: 100%;
+      }
+
+      .member-input-group {
+        flex-direction: column;
+      }
+
+      .button-bar {
+        flex-direction: column;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+
+      .container {
+        box-shadow: none;
+        max-width: 100%;
+      }
+
+      .button-bar {
+        display: none;
+      }
+
+      section {
+        page-break-inside: avoid;
+        border-left: 3px solid #333;
+      }
+
+      .success-message {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎮 Team One-Pager</h1>
+      <p class="subtitle">Game Concept & Team Plan</p>
+    </header>
+
+    <div class="button-bar">
+      <button class="btn-download" onclick="downloadData()">📥 Download</button>
+      <button class="btn-print" onclick="printPager()">🖨️ Print/PDF</button>
+      <button class="btn-clear" onclick="clearForm()">🔄 Clear</button>
+    </div>
+
+    <div id="successMessage" class="success-message">✓ Downloaded successfully!</div>
+
+    <form id="onePagerForm">
+      <!-- Team Info -->
+      <section>
+        <h2>1️⃣ Team Info</h2>
+        <div class="form-group">
+          <label for="teamName">Team Name</label>
+          <input type="text" id="teamName" placeholder="e.g., Team Alpha" required>
+        </div>
+        <div class="form-group">
+          <label>Your Name (Individual Submitter)</label>
+          <input type="text" id="yourName" placeholder="Your first and last name" required>
+        </div>
+        <div class="form-group">
+          <label>Team Members</label>
+          <div class="member-input-group">
+            <input type="text" id="memberInput" placeholder="Team member name">
+            <button type="button" class="btn-add-member" onclick="addMember()">+ Add</button>
+          </div>
+          <ul id="memberList" class="member-list"></ul>
+        </div>
+      </section>
+
+      <!-- Game Concept -->
+      <section>
+        <h2>2️⃣ Game Concept</h2>
+        <div class="form-group">
+          <label for="gameTitle">Game Title</label>
+          <input type="text" id="gameTitle" placeholder="e.g., Tower Escape" required>
+        </div>
+        <div class="form-group">
+          <label for="gameDescription">What's the game about? (2–3 sentences)</label>
+          <textarea id="gameDescription" placeholder="Describe the story, setting, and player goal..." required></textarea>
+        </div>
+        <div class="form-group">
+          <label>Game Track</label>
+          <div class="track-selector">
+            <div class="track-option">
+              <input type="radio" id="trackPlay" name="track" value="Play">
+              <label for="trackPlay"><strong>🎮 Play</strong><br><small>Platformer / Puzzle / Arcade</small></label>
+            </div>
+            <div class="track-option">
+              <input type="radio" id="trackStory" name="track" value="Story">
+              <label for="trackStory"><strong>📖 Story</strong><br><small>Interactive Fiction / Visual Novel</small></label>
+            </div>
+            <div class="track-option">
+              <input type="radio" id="trackExplore" name="track" value="Explore">
+              <label for="trackExplore"><strong>🔍 Explore</strong><br><small>Quiz / Simulation / Tour</small></label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Mechanics -->
+      <section>
+        <h2>3️⃣ Core Mechanics</h2>
+        <div class="form-group">
+          <label for="mainAction">Main action the player performs</label>
+          <input type="text" id="mainAction" placeholder="e.g., Jump and avoid obstacles" required>
+        </div>
+        <div class="form-group">
+          <label for="winCondition">How does the player win?</label>
+          <input type="text" id="winCondition" placeholder="e.g., Reach the exit at the top" required>
+        </div>
+        <div class="form-group">
+          <label for="challenge">What's the main challenge?</label>
+          <textarea id="challenge" placeholder="e.g., Enemies, puzzles, time limits..." required></textarea>
+        </div>
+      </section>
+
+      <!-- Your Piece -->
+      <section>
+        <h2>4️⃣ Your Piece (What YOU'RE Building)</h2>
+        <div class="form-group">
+          <label for="yourPiece"><strong>Which level / chapter / room / scenario are you building?</strong></label>
+          <input type="text" id="yourPiece" placeholder="e.g., Level 2: The Platforms, or Chapter 1: The Confession" required>
+        </div>
+        <div class="form-group">
+          <label for="pieceDescription">Describe what happens in your piece. What will the player do?</label>
+          <textarea id="pieceDescription" placeholder="Be specific. Example: 'The player starts at the bottom of a collapsing tower. They must jump across 5 moving platforms while dodging falling debris. At the top is a power-up that grants temporary invincibility to face the boss.'" required></textarea>
+        </div>
+      </section>
+
+      <!-- Success Criteria -->
+      <section>
+        <h2>5️⃣ Success Criteria</h2>
+        <div class="form-group">
+          <label for="successCriteria">How will you know your piece is done? List 3 things to check.</label>
+          <textarea id="successCriteria" placeholder="Example:&#10;1. Player can complete the level without crashing&#10;2. Difficulty feels fair (no more than 3 tries to win)&#10;3. All art and audio fit the team's style" required></textarea>
+        </div>
+      </section>
+
+      <!-- Art & Style -->
+      <section>
+        <h2>6️⃣ Art & Style</h2>
+        <div class="form-group">
+          <label for="artStyle">What's the art style? (e.g., pixel art, hand-drawn, 3D, photo-realistic)</label>
+          <input type="text" id="artStyle" placeholder="e.g., Pixel art with a retro 8-bit feel" required>
+        </div>
+        <div class="form-group">
+          <label for="colorPalette">Color palette (main colors)</label>
+          <input type="text" id="colorPalette" placeholder="e.g., Reds, golds, and dark purples" required>
+        </div>
+      </section>
+
+      <!-- Inspiration -->
+      <section>
+        <h2>7️⃣ Inspiration</h2>
+        <div class="form-group">
+          <label for="inspiration">What games or media inspired your team?</label>
+          <textarea id="inspiration" placeholder="e.g., Dark Souls, Cuphead, Celeste, Studio Ghibli films" required></textarea>
+        </div>
+      </section>
+    </form>
+  </div>
+
+  <script>
+    let members = [];
+
+    // Load saved data on page load
+    window.addEventListener('load', function() {
+      loadData();
+    });
+
+    function addMember() {
+      const input = document.getElementById('memberInput');
+      const name = input.value.trim();
+      
+      if (name) {
+        members.push(name);
+        input.value = '';
+        renderMembers();
+        saveData();
+      }
+    }
+
+    function removeMember(index) {
+      members.splice(index, 1);
+      renderMembers();
+      saveData();
+    }
+
+    function renderMembers() {
+      const list = document.getElementById('memberList');
+      list.innerHTML = members.map((member, index) => `
+        <li class="member-item">
+          <span><strong>${member}</strong></span>
+          <button type="button" class="btn-remove" onclick="removeMember(${index})">Remove</button>
+        </li>
+      `).join('');
+    }
+
+    // Handle Enter key for adding members
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('memberInput').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          addMember();
+        }
+      });
+
+      // Auto-save on input
+      document.getElementById('onePagerForm').addEventListener('input', saveData);
+    });
+
+    // Save data to localStorage
+    function saveData() {
+      const data = {
+        teamName: document.getElementById('teamName').value,
+        yourName: document.getElementById('yourName').value,
+        gameTitle: document.getElementById('gameTitle').value,
+        gameDescription: document.getElementById('gameDescription').value,
+        track: document.querySelector('input[name="track"]:checked')?.value || '',
+        mainAction: document.getElementById('mainAction').value,
+        winCondition: document.getElementById('winCondition').value,
+        challenge: document.getElementById('challenge').value,
+        yourPiece: document.getElementById('yourPiece').value,
+        pieceDescription: document.getElementById('pieceDescription').value,
+        successCriteria: document.getElementById('successCriteria').value,
+        artStyle: document.getElementById('artStyle').value,
+        colorPalette: document.getElementById('colorPalette').value,
+        inspiration: document.getElementById('inspiration').value,
+        members: members
+      };
+
+      localStorage.setItem('onePagerData', JSON.stringify(data));
+    }
+
+    // Load data from localStorage
+    function loadData() {
+      const saved = localStorage.getItem('onePagerData');
+      if (saved) {
+        const data = JSON.parse(saved);
+        document.getElementById('teamName').value = data.teamName || '';
+        document.getElementById('yourName').value = data.yourName || '';
+        document.getElementById('gameTitle').value = data.gameTitle || '';
+        document.getElementById('gameDescription').value = data.gameDescription || '';
+        document.getElementById('mainAction').value = data.mainAction || '';
+        document.getElementById('winCondition').value = data.winCondition || '';
+        document.getElementById('challenge').value = data.challenge || '';
+        document.getElementById('yourPiece').value = data.yourPiece || '';
+        document.getElementById('pieceDescription').value = data.pieceDescription || '';
+        document.getElementById('successCriteria').value = data.successCriteria || '';
+        document.getElementById('artStyle').value = data.artStyle || '';
+        document.getElementById('colorPalette').value = data.colorPalette || '';
+        document.getElementById('inspiration').value = data.inspiration || '';
+        
+        if (data.track) {
+          document.getElementById('track' + data.track.charAt(0).toUpperCase() + data.track.slice(1)).checked = true;
+        }
+
+        if (data.members) {
+          members = data.members;
+          renderMembers();
+        }
+      }
+    }
+
+    // Clear form
+    function clearForm() {
+      if (confirm('Are you sure? This will clear all data.')) {
+        document.getElementById('onePagerForm').reset();
+        members = [];
+        renderMembers();
+        localStorage.removeItem('onePagerData');
+        alert('Form cleared!');
+      }
+    }
+
+    // Print function (browser print dialog → save as PDF)
+    function printPager() {
+      window.print();
+    }
+
+    // Download as formatted document
+    function downloadData() {
+      const teamName = document.getElementById('teamName').value || 'One-Pager';
+      const filename = `${teamName.replace(/\s+/g, '_')}_One-Pager.html`;
+      
+      const htmlContent = `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>${teamName} - One-Pager</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; color: #333; max-width: 900px; }
+    h1 { color: #667eea; border-bottom: 3px solid #667eea; padding-bottom: 10px; }
+    h2 { color: #555; margin-top: 30px; }
+    section { margin-bottom: 30px; padding: 15px; background: #f9f9f9; border-radius: 5px; }
+    .label { font-weight: bold; color: #667eea; }
+    p { margin: 10px 0; }
+    .value { color: #333; }
+  </style>
+</head>
+<body>
+  <h1>🎮 ${teamName} - One-Pager</h1>
+  <p><strong>Submitted by:</strong> <span class="value">${document.getElementById('yourName').value}</span></p>
+  
+  <section>
+    <h2>Team Members</h2>
+    <p class="value">${members.length > 0 ? members.join(', ') : 'No additional members listed'}</p>
+  </section>
+
+  <section>
+    <h2>Game Concept</h2>
+    <p><span class="label">Title:</span> <span class="value">${document.getElementById('gameTitle').value}</span></p>
+    <p><span class="label">Track:</span> <span class="value">${document.querySelector('input[name="track"]:checked')?.value || 'Not selected'}</span></p>
+    <p><span class="label">Description:</span></p>
+    <p class="value">${document.getElementById('gameDescription').value.replace(/\n/g, '<br>')}</p>
+  </section>
+
+  <section>
+    <h2>Core Mechanics</h2>
+    <p><span class="label">Main Action:</span> <span class="value">${document.getElementById('mainAction').value}</span></p>
+    <p><span class="label">Win Condition:</span> <span class="value">${document.getElementById('winCondition').value}</span></p>
+    <p><span class="label">Challenge:</span></p>
+    <p class="value">${document.getElementById('challenge').value.replace(/\n/g, '<br>')}</p>
+  </section>
+
+  <section>
+    <h2>Your Piece</h2>
+    <p><span class="label">What you're building:</span> <span class="value">${document.getElementById('yourPiece').value}</span></p>
+    <p><span class="label">Description:</span></p>
+    <p class="value">${document.getElementById('pieceDescription').value.replace(/\n/g, '<br>')}</p>
+  </section>
+
+  <section>
+    <h2>Success Criteria</h2>
+    <p class="value">${document.getElementById('successCriteria').value.replace(/\n/g, '<br>')}</p>
+  </section>
+
+  <section>
+    <h2>Art & Style</h2>
+    <p><span class="label">Style:</span> <span class="value">${document.getElementById('artStyle').value}</span></p>
+    <p><span class="label">Colors:</span> <span class="value">${document.getElementById('colorPalette').value}</span></p>
+  </section>
+
+  <section>
+    <h2>Inspiration</h2>
+    <p class="value">${document.getElementById('inspiration').value.replace(/\n/g, '<br>')}</p>
+  </section>
+</body>
+</html>`;
+
+      const blob = new Blob([htmlContent], { type: 'text/html' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = filename;
+      link.click();
+      URL.revokeObjectURL(url);
+
+      // Show success message
+      const msg = document.getElementById('successMessage');
+      msg.style.display = 'block';
+      setTimeout(() => { msg.style.display = 'none'; }, 3000);
+    }
+  </script>
+</body>
+</html>

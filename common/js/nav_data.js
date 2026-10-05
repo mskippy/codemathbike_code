@@ -84,12 +84,12 @@ window.NAV_DATA = {
           title: "U3 Dev Team",
           href: "/ict9/unit3/u3_index.html",
           pages: {
-            lesson1: { title: "3.1 Understanding Promotion",  href: "/ict9/unit3/lesson1/3.1_index.html" },
-            lesson2: { title: "3.2 Brand Identity Design",    href: "/ict9/unit3/lesson2/3.2_index.html" },
-            lesson3: { title: "3.3 Asset Creation",           href: "/ict9/unit3/lesson3/3.3_index.html" },
-            lesson4: { title: "3.4 Poster Design",            href: "/ict9/unit3/lesson4/3.4_index.html" },
-            lesson5: { title: "3.5 Game Trailer Production",  href: "/ict9/unit3/lesson5/3.5_index.html" },
-            lesson6: { title: "3.6 Website Design",           href: "/ict9/unit3/lesson6/3.6_index.html" },
+            lesson1: { title: "3.1 Design Doc",      href: "/ict9/unit3/lesson1/3.1_index.html" },
+            lesson2: { title: "3.2 Boot Camp",       href: "/ict9/unit3/lesson2/3.2_index.html" },
+            lesson3: { title: "3.3 Build It",        href: "/ict9/unit3/lesson3/3.3_index.html" },
+            lesson4: { title: "3.4 Brand Kit",       href: "/ict9/unit3/lesson4/3.4_index.html" },
+            lesson5: { title: "3.5 Trailer",         href: "/ict9/unit3/lesson5/3.5_index.html" },
+            lesson6: { title: "3.6 Ship It",         href: "/ict9/unit3/lesson6/3.6_index.html" },
             lesson7: { title: "Game Websites Showcase",            href: "/ict9/unit3/student_sites/student_sites_index.html" }
           }
         },

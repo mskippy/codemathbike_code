@@ -1,4 +1,4 @@
-<!-- v1.3 – Oct 2026 (path chooser + no-Git subpage) -->
+<!-- v2 – Oct 2026 (single GitHub Desktop path) -->
 <!doctype html>
 <html lang="en">
 
@@ -40,9 +40,9 @@
           <p>
             You've built the structure (HTML), the style (CSS), and the interactivity (JavaScript). Right now, though,
             your site only exists on your H: drive, so nobody else can see it. Today the Web Department ships.
-            You'll put your project folder into <strong>Git</strong>, the tool every real studio uses to track changes
-            to code. Then you'll get an AI to clean up your code, <strong>push</strong> it all to <strong>GitHub</strong>, and
-            turn it into a real, live website with its own URL. Work through the tasks in order, because each one
+            You'll create a <strong>repository</strong> on GitHub, use <strong>GitHub Desktop</strong> to connect it to your
+            computer, and move your site into it. Then you'll get an AI to clean up your code, <strong>push</strong> it all to
+            GitHub, and turn it into a real, live website with its own URL. Work through the tasks in order, because each one
             depends on the one before it.
           </p>
         </section>
@@ -53,13 +53,14 @@
             <li>Open your project folder in VS Code, the same <code>H:\ICT 9\2_web_development\your-slug</code> folder you've used all unit. No new download needed.</li>
             <li>Check the Explorer sidebar. You should see <code>index.html</code>, <code>about.html</code>, <code>work.html</code>, and your <code>css</code>, <code>js</code>, and <code>images</code> folders directly inside it, with no extra folder in between.</li>
             <li>Have a browser tab open and ready. You'll be creating an account and signing in during class.</li>
+            <li>Find <strong>GitHub Desktop</strong> in the Start menu. You'll use it from Task 3 on.</li>
           </ol>
 
           <h3>Four words you'll hear today</h3>
           <ul class="list-tight">
-            <li><strong>Repository (repo)</strong>: a project folder that Git is keeping track of.</li>
+            <li><strong>Repository (repo)</strong>: a project folder that Git is keeping track of. Yours lives on GitHub <em>and</em> on your H: drive.</li>
             <li><strong>Commit</strong>: a save point. It's a snapshot of every file at one moment, with a short message describing what changed. You can always go back to one.</li>
-            <li><strong>Push / Sync</strong>: sending your commits from your computer up to GitHub.</li>
+            <li><strong>Push</strong>: sending your commits from your computer up to GitHub (the <strong>Push origin</strong> button in GitHub Desktop).</li>
             <li><strong>GitHub Pages</strong>: a free GitHub feature that turns a repo into a live website.</li>
           </ul>
 
@@ -74,13 +75,11 @@
           <ul class="list-tight">
             <li><a href="#task1">Task 1 — Pre-flight check</a>: haven't done anything yet? Start here. This includes the 20 Questions oversharing audit.</li>
             <li><a href="#task2">Task 2 — GitHub account</a>: no account yet, or you haven't verified your email.</li>
-            <li><a href="#pick-path">Which path are you on?</a>: you have an account. Check this before Task 3.</li>
-            <li><a href="#task3">Task 3 — First commit</a>: you're on the Git path, and Source Control still says "Initialize Repository."</li>
-            <li><a href="#task4">Task 4 — AI code cleanup</a>: your first commit is done.</li>
-            <li><a href="#task5">Task 5 — Publish and go live</a>: your "AI code cleanup" commit is done.</li>
+            <li><a href="#task3">Task 3 — Create your repo and move your site in</a>: you have an account, but no <code>username.github.io</code> repo yet (or yours has the wrong name).</li>
+            <li><a href="#task4">Task 4 — AI code cleanup</a>: your files are on GitHub.</li>
+            <li><a href="#task5">Task 5 — Go live</a>: your "AI code cleanup" commit is pushed.</li>
             <li><a href="#task6">Task 6 — Ship an update</a>: your site is live.</li>
           </ul>
-          <p class="muted"><strong>No Git on your computer?</strong> Do Tasks 1 and 2 here, then follow the <a href="2.4_no_git.html">no-Git page</a> for Tasks 3–6.</p>
         </section>
 
         <section class="card" id="task1">
@@ -230,118 +229,116 @@
           </div>
         </section>
 
-        <section class="card" id="pick-path">
-          <h2>Which path are you on?</h2>
-          <p>
-            There are two ways to get your site onto GitHub, and both end with the same live site at
-            <code>https://your-username.github.io</code>. Which one you use depends on whether your computer has
-            <strong>Git</strong> installed.
-          </p>
-          <ol class="list-tight">
-            <li>In VS Code, open the <strong>Source Control</strong> panel (<code>Ctrl + Shift + G</code>).</li>
-            <li>Look at the blue button:
-              <ul class="list-tight">
-                <li><strong>"Initialize Repository"</strong>: your computer has Git. Keep going on this page with <a href="#task3">Task 3</a>.</li>
-                <li><strong>"Download Git"</strong>: your computer doesn't have Git. Don't try to install it on a school computer. Go to the <a href="2.4_no_git.html"><strong>no-Git page</strong></a> for Tasks 3–6, and come back here afterwards for the Blue task, the Black menu, and signing out.</li>
-              </ul>
-            </li>
-          </ol>
-          <div class="lesson-note">
-            <strong>Is the no-Git path "less real"?</strong> Nope. It's the same GitHub, with real commits and the same
-            live site. You upload your files on github.com instead of pushing them from VS Code.
-          </div>
-        </section>
-
         <section class="card" id="task3">
           <div class="task-heading">
             <span class="pill pill-green">Green</span>
-            <h2>Task 3 — Make your first save point (commit)</h2>
+            <h2>Task 3 — Create your repo and move your site in</h2>
           </div>
           <p>
-            Now you'll turn your project folder into a Git repository and take your first snapshot. This happens
-            <em>only on your computer</em>. Nothing goes online until Task 5.
+            You'll create an empty repo on GitHub, use <strong>GitHub Desktop</strong> to make a copy of it on your H: drive
+            (that's called <strong>cloning</strong>), and then copy your site files into it.
           </p>
 
-          <h3>Step 1: Turn on Git for this folder</h3>
-          <ol class="list-tight">
-            <li>In VS Code, open the <strong>Source Control</strong> panel. It's the icon in the left sidebar that looks like a branch with three dots, or press <code>Ctrl + Shift + G</code>.</li>
-            <li>Click <strong>Initialize Repository</strong>.</li>
-            <li>All your files now show up under <strong>Changes</strong> with a green <strong>U</strong> (untracked) next to them. That's normal. It means Git can see them but hasn't saved them yet.</li>
-          </ol>
-          <div class="shot-pair">
-            <figure class="shot">
-                <a href="images/1_source_control_initialization.png" target="_blank" rel="noopener"><img class="screenshot" src="images/1_source_control_initialization.png" alt="VS Code Source Control panel with the Source Control icon in the left sidebar and the Initialize Repository button both highlighted."></a>
-                <figcaption><strong>Before:</strong> click the Source Control icon (left), then <strong>Initialize Repository</strong>.</figcaption>
-              </figure>
-            <figure class="shot">
-                <a href="images/2_files_in_changes.png" target="_blank" rel="noopener"><img class="screenshot" src="images/2_files_in_changes.png" alt="Source Control panel after initializing, listing about.html, index.html, work.html, style.css, avatar.png and script.js under Changes, each marked U."></a>
-                <figcaption><strong>After:</strong> every file is listed under Changes with a green <strong>U</strong>.</figcaption>
-              </figure>
-          </div>
-
-          <h3>Step 2: Tell Git who you are (one time only)</h3>
-          <p>Every commit is signed with a name and email. You'll use a private GitHub email, so your real school email never appears in public.</p>
-          <figure class="shot-float">
-                <a href="images/3_github_settings.png" target="_blank" rel="noopener"><img class="screenshot" src="images/3_github_settings.png" alt="GitHub profile menu opened from the profile picture in the top right, with Settings highlighted."></a>
-                <figcaption>Profile picture (top right) → <strong>Settings</strong>.</figcaption>
-              </figure>
-          <ol class="list-tight">
-            <li>On github.com, click your profile picture (top right) → <strong>Settings</strong> → <strong>Emails</strong>.</li>
-            <li>Turn on <strong>Keep my email addresses private</strong>. GitHub then shows you a private address that looks like <code>12345678+username@users.noreply.github.com</code>. Copy it.
-              <div class="clear"></div>
-              <figure class="shot" style="max-width:640px">
-                <a href="images/4_email_private.png" target="_blank" rel="noopener"><img class="screenshot" src="images/4_email_private.png" alt="GitHub Emails settings with Keep my email addresses private switched On, and the private noreply address highlighted in yellow."></a>
-                <figcaption>Switch it <strong>On</strong>. The highlighted address is the one you copy. Yours has your own numbers and username.</figcaption>
-              </figure>
-            </li>
-            <li>Back in VS Code, open the terminal: <strong>Terminal → New Terminal</strong> (or <code>Ctrl + `</code>).</li>
-            <li>Type these two lines, pressing Enter after each one. Swap in your own username and the private email you just copied, and keep the quotation marks:
-              <pre><code>git config --global user.name "your-username"
-git config --global user.email "12345678+your-username@users.noreply.github.com"</code></pre>
-              <figure class="shot" style="max-width:700px">
-                <a href="images/5_terminal_input.png" target="_blank" rel="noopener"><img class="screenshot" src="images/5_terminal_input.png" alt="VS Code terminal panel showing the git config user.name and user.email commands typed in."></a>
-                <figcaption>What it looks like in the terminal. Nothing prints back when it works, and that's normal. Can't see the terminal? Use <strong>Terminal → New Terminal</strong>, or the panel toggle icon at the top right of VS Code.</figcaption>
-              </figure>
-            </li>
-          </ol>
-
-          <h3>Step 3: Commit</h3>
-          <ol class="list-tight">
-            <li>In the Source Control panel, hover over the word <strong>Changes</strong> and click the <strong>+</strong> (Stage All Changes). Your files move up into <strong>Staged Changes</strong>.</li>
-            <li>In the message box at the top, type: <code>First version of my studio code</code></li>
-            <li>Click the blue <strong>Commit</strong> button.</li>
-          </ol>
-          <div class="shot-pair">
-            <figure class="shot">
-                <a href="images/6_stage_changes.png" target="_blank" rel="noopener"><img class="screenshot" src="images/6_stage_changes.png" alt="Source Control panel with the plus (Stage All Changes) button next to Changes highlighted."></a>
-                <figcaption>Hover over <strong>Changes</strong> and click the <strong>+</strong>.</figcaption>
-              </figure>
-            <figure class="shot">
-                <a href="images/7_staged_changes_after.png" target="_blank" rel="noopener"><img class="screenshot" src="images/7_staged_changes_after.png" alt="Source Control panel with all six files under Staged Changes marked A, a commit message typed, and the Commit button highlighted."></a>
-                <figcaption>Files move to <strong>Staged Changes</strong> (marked <strong>A</strong>). Type your message, then click <strong>Commit</strong>.</figcaption>
-              </figure>
-          </div>
-
-          <div class="gotcha">
-            <strong>Stuck? Two common setup problems (neither one is your fault):</strong>
+          <div class="lesson-note">
+            <strong>The most important rule today: your repo name.</strong> It must be <em>exactly</em> your GitHub
+            username followed by <code>.github.io</code>. Nothing else works.
             <ul class="list-tight">
-              <li><strong>VS Code shows a "Download Git" button</strong> instead of Initialize Repository. This computer doesn't have Git installed. Switch to the <a href="2.4_no_git.html">no-Git page</a>.</li>
-              <li><strong>An error mentions "dubious ownership" or "safe.directory".</strong> Git is being cautious because your folder is on the H: drive. In the terminal, type this and press Enter:
-                <pre><code>git config --global --add safe.directory "*"</code></pre>
-                Then press <code>Ctrl + Shift + P</code>, type <strong>Reload Window</strong>, press Enter, and try again.</li>
+              <li>Username <code>emma-r-studio</code> → repo name <code>emma-r-studio.github.io</code> ✅</li>
+              <li><code>emma-r</code> (your slug) ❌ &nbsp; <code>emma-r-studio</code> (missing <code>.github.io</code>) ❌ &nbsp; <code>emmar-studio.github.io</code> (doesn't match the username) ❌</li>
             </ul>
+            Your username is in the top-left of any of your GitHub pages, and in the class sign-in sheet. Copy it from there instead of typing it from memory.
           </div>
+
+          <h3>Step 1: Make your email private</h3>
+          <figure class="shot-float">
+            <a href="images/3_github_settings.png" target="_blank" rel="noopener"><img class="screenshot" src="images/3_github_settings.png" alt="GitHub profile menu opened from the profile picture in the top right, with Settings highlighted."></a>
+            <figcaption>Profile picture (top right) → <strong>Settings</strong>.</figcaption>
+          </figure>
+          <ol class="list-tight">
+            <li>On github.com, click your profile picture (top right) → <strong>Settings</strong> → <strong>Emails</strong> (left menu).</li>
+            <li>Turn on <strong>Keep my email addresses private</strong>. GitHub shows you a private address that looks like <code>12345678+username@users.noreply.github.com</code>. You'll pick it in GitHub Desktop in Step 3.</li>
+          </ol>
+          <div class="clear"></div>
+          <figure class="shot" style="max-width:640px">
+            <a href="images/4_email_private.png" target="_blank" rel="noopener"><img class="screenshot" src="images/4_email_private.png" alt="GitHub Emails settings with Keep my email addresses private switched On, and the private noreply address highlighted."></a>
+            <figcaption>Switch it <strong>On</strong>. The highlighted address is your private one.</figcaption>
+          </figure>
+
+          <h3>Step 2: Create your repo on github.com</h3>
+          <ol class="list-tight">
+            <li>Click the <strong>+</strong> at the top right of github.com → <strong>New repository</strong>.</li>
+            <li><strong>Repository name:</strong> your username followed by <code>.github.io</code> (see the rule above). GitHub shows a green check when the name is available.</li>
+            <li>Choose <strong>Public</strong>. (Free GitHub sites have to be public.)</li>
+            <li>Leave everything else alone. <strong>Don't</strong> tick "Add a README." Click <strong>Create repository</strong>.</li>
+          </ol>
+
+          <h3>Step 3: Clone it to your H: drive with GitHub Desktop</h3>
+          <ol class="list-tight">
+            <li>Open <strong>GitHub Desktop</strong>. If it asks you to sign in, choose <strong>Sign in to GitHub.com</strong>, sign in in the browser, and click <strong>Authorize</strong>.</li>
+            <li>In GitHub Desktop, go to <strong>File → Options → Git</strong>. Set <strong>Email</strong> to your private <code>…@users.noreply.github.com</code> address from Step 1, then click <strong>Save</strong>.</li>
+            <li>Back on your new, empty repo page on github.com, find the <strong>Quick setup</strong> box and click <strong>Set up in Desktop</strong>. If the browser asks to open GitHub Desktop, click <strong>Open</strong>.</li>
+            <li>GitHub Desktop shows a <strong>Clone a repository</strong> box. Next to <strong>Local path</strong>, click <strong>Choose…</strong> and pick your <code>H:\ICT 9\2_web_development</code> folder.</li>
+            <li>Check that the Local path now reads <code>H:\ICT 9\2_web_development\your-username.github.io</code>, then click <strong>Clone</strong>.</li>
+          </ol>
+          <p>
+            You now have a new, empty folder called <code>your-username.github.io</code> on your H: drive, sitting right next
+            to your old <code>your-slug</code> folder. It's connected to GitHub.
+          </p>
+
+          <h3>Step 4: Copy your site into the new folder</h3>
+          <ol class="list-tight">
+            <li>In File Explorer, open your <strong>old</strong> folder: <code>H:\ICT 9\2_web_development\your-slug</code>.</li>
+            <li>Press <code>Ctrl + A</code> to select <strong>everything inside it</strong> (<code>index.html</code>, <code>about.html</code>, <code>work.html</code>, <code>css</code>, <code>js</code>, <code>images</code>), then <code>Ctrl + C</code> to copy.</li>
+            <li>Open the <strong>new</strong> folder: <code>H:\ICT 9\2_web_development\your-username.github.io</code>, and press <code>Ctrl + V</code> to paste.</li>
+          </ol>
+          <div class="gotcha">
+            <strong>Common mistake:</strong> copy the stuff <em>inside</em> your slug folder, not the slug folder itself.
+            The new folder should have <code>index.html</code> right inside it, not a <code>your-slug</code> folder with everything
+            tucked inside. If you see one, open it, cut everything out, and paste it one level up.
+          </div>
+
+          <h3>Step 5: Commit and push</h3>
+          <ol class="list-tight">
+            <li>Switch to GitHub Desktop. Your files now appear in the <strong>Changes</strong> list on the left, all ticked.</li>
+            <li>In the <strong>Summary</strong> box at the bottom left, type <code>First version of my studio code</code>.</li>
+            <li>Click <strong>Commit to main</strong>.</li>
+            <li>Click <strong>Publish branch</strong> at the top. (After the first time, this button says <strong>Push origin</strong>.)</li>
+          </ol>
+
+          <h3>Step 6: Work from the new folder from now on</h3>
+          <ol class="list-tight">
+            <li>In VS Code, go to <strong>File → Open Folder</strong> and open <code>H:\ICT 9\2_web_development\your-username.github.io</code>. (Or, in GitHub Desktop: <strong>Repository → Open in Visual Studio Code</strong>.)</li>
+            <li>From today on, <strong>this is your site</strong>. Your old <code>your-slug</code> folder is just a backup. Don't edit it any more, or you'll get confused about which copy is real.</li>
+          </ol>
+
+          <figure class="shot" style="max-width:720px">
+            <a href="images/10_github_repo.png" target="_blank" rel="noopener"><img class="screenshot" src="images/10_github_repo.png" alt="GitHub repository page for mskippy.github.io, marked Public, listing css, images, js, about.html, index.html and work.html at the top level."></a>
+            <figcaption>What your repo on github.com should look like: the right name, <strong>Public</strong>, and your folders and pages listed at the top level.</figcaption>
+          </figure>
 
           <div class="checkpoint">
             <div class="checkpoint-row is-green">
               <span class="checkpoint-icon">🟢</span>
-              <span><span class="checkpoint-label">Green:</span> the Changes list is empty, and your commit "First version of my studio code" appears in the <strong>Graph</strong> section at the bottom of the Source Control panel.</span>
+              <span><span class="checkpoint-label">Green:</span> on github.com, your repo is named <code>your-username.github.io</code>, says <strong>Public</strong>, and lists <code>index.html</code>, <code>about.html</code>, <code>work.html</code>, <code>css</code>, <code>images</code>, and <code>js</code> at the top level.</span>
             </div>
             <div class="checkpoint-row is-red">
               <span class="checkpoint-icon">🔴</span>
-              <span><span class="checkpoint-label">Red:</span> you get a message saying to configure <code>user.name</code> and <code>user.email</code>. Step 2 didn't take, so redo it and check the quotation marks.</span>
+              <span><span class="checkpoint-label">Red:</span> the files aren't on github.com? You probably committed but didn't push. Click <strong>Publish branch</strong> / <strong>Push origin</strong> in GitHub Desktop. Repo has the wrong name, or the files ended up in the wrong place? See <a href="#start-over">Start over cleanly</a> below.</span>
             </div>
           </div>
+
+          <details id="start-over">
+            <summary><strong>Start over cleanly (wrong repo name, or files in the wrong place)</strong></summary>
+            <div>
+              <p>It's usually faster to start fresh than to fix a broken repo. Your H: drive files are safe the whole time.</p>
+              <ol class="list-tight">
+                <li><strong>On github.com:</strong> open the wrong repo → <strong>Settings</strong> → scroll to <strong>Danger Zone</strong> → <strong>Delete this repository</strong>, and follow the prompts.</li>
+                <li><strong>In GitHub Desktop:</strong> select that repo (top-left <strong>Current repository</strong> menu) → <strong>Repository → Remove…</strong>. This only takes it off GitHub Desktop's list; it doesn't delete your files.</li>
+                <li><strong>On your H: drive:</strong> if the bad clone left a folder in <code>2_web_development</code> (anything other than your <code>your-slug</code> folder), rename it to <code>old-attempt</code> so it's out of the way.</li>
+                <li>Redo Task 3 from <strong>Step 2</strong>, copying your files from your <code>your-slug</code> folder (or from whichever folder has your newest work).</li>
+              </ol>
+            </div>
+          </details>
         </section>
 
         <section class="card" id="task4">
@@ -355,15 +352,15 @@ git config --global user.email "12345678+your-username@users.noreply.github.com"
             before anything ships. Yours will be done by an AI, and <strong>you're the one who approves it</strong>.
           </p>
           <p>
-            Because you just made a save point, this is completely safe. If the AI breaks something, you can undo it
-            with one click.
+            Because your first commit is a save point, this is completely safe. If the AI breaks something, you can undo it
+            with one click in GitHub Desktop.
           </p>
 
           <h3>Step 1: Get the AI to clean up one file</h3>
           <ol class="list-tight">
             <li>Open the AI tool of your choice (any of the ones allowed in class).</li>
             <li>Copy the prompt below and paste it into the AI. Fill in the file name at the end.</li>
-            <li>In VS Code, open <code>index.html</code>, press <code>Ctrl + A</code> then <code>Ctrl + C</code> to copy the whole file, and paste it into the AI right after the prompt.</li>
+            <li>In VS Code (in your <code>your-username.github.io</code> folder), open <code>index.html</code>, press <code>Ctrl + A</code> then <code>Ctrl + C</code> to copy the whole file, and paste it into the AI right after the prompt.</li>
           </ol>
           <pre><code>I'm a Grade 9 student and this is my first website, built with HTML, CSS and JavaScript. Please clean up the code below.
 
@@ -385,16 +382,17 @@ My file is called: ________</code></pre>
 
           <h3>Step 3: Review every change (this is the important part)</h3>
           <ol class="list-tight">
-            <li>In the Source Control panel, click <code>index.html</code> under Changes. VS Code opens a side-by-side view: <strong>red</strong> is what the AI removed, and <strong>green</strong> is what it added.</li>
+            <li>Switch to <strong>GitHub Desktop</strong> and click <code>index.html</code> in the <strong>Changes</strong> list. It shows every change: <strong>red</strong> is what the AI removed, and <strong>green</strong> is what it added.</li>
             <li>Read every change. For each one, you should be able to say what it does.</li>
             <li>Don't understand a change? Ask the AI: <em>"Explain this change like I'm new to coding."</em> Still not sure? Don't keep it.</li>
-            <li>If the AI broke something, right-click the file under Changes → <strong>Discard Changes</strong>. You're back to your save point, and you can try again.</li>
+            <li>If the AI broke something, right-click the file in GitHub Desktop's Changes list → <strong>Discard changes…</strong>. You're back to your save point, and you can try again.</li>
           </ol>
 
           <h3>Step 4: Repeat, then commit</h3>
           <ol class="list-tight">
             <li>Do the same for <code>about.html</code>, <code>work.html</code>, <code>css/style.css</code>, and <code>js/script.js</code>, <strong>one file at a time</strong>.</li>
-            <li>When all five files are cleaned up and tested, stage everything (<strong>+</strong>) and commit with the message: <code>AI code cleanup</code></li>
+            <li>When all five files are cleaned up and tested, go to GitHub Desktop, type <code>AI code cleanup</code> in the Summary box, and click <strong>Commit to main</strong>.</li>
+            <li>Click <strong>Push origin</strong>.</li>
           </ol>
 
           <div class="gotcha">
@@ -416,7 +414,7 @@ My file is called: ________</code></pre>
           <div class="checkpoint">
             <div class="checkpoint-row is-green">
               <span class="checkpoint-icon">🟢</span>
-              <span><span class="checkpoint-label">Green:</span> your site looks and works exactly the same, the "AI code cleanup" commit is in your Graph, and you can explain at least three changes the AI made.</span>
+              <span><span class="checkpoint-label">Green:</span> your site looks and works exactly the same, the "AI code cleanup" commit shows in GitHub Desktop's <strong>History</strong> tab and has been pushed, and you can explain at least three changes the AI made.</span>
             </div>
             <div class="checkpoint-row is-red">
               <span class="checkpoint-icon">🔴</span>
@@ -428,63 +426,42 @@ My file is called: ________</code></pre>
         <section class="card" id="task5">
           <div class="task-heading">
             <span class="pill pill-green">Green</span>
-            <h2>Task 5 — Publish to GitHub and go live</h2>
+            <h2>Task 5 — Turn on GitHub Pages and go live</h2>
           </div>
           <p>This is the moment your site hits the internet.</p>
 
-          <h3>Step 1: Push your repo to GitHub</h3>
-          <figure class="shot-float wide">
-                <a href="images/8_publish_branch.png" target="_blank" rel="noopener"><img class="screenshot" src="images/8_publish_branch.png" alt="Source Control panel after the first commit, showing a Publish Branch button."></a>
-                <figcaption>After your first commit, the button changes to <strong>Publish Branch</strong>.</figcaption>
-              </figure>
+          <h3>Step 1: Turn on GitHub Pages</h3>
           <ol class="list-tight">
-            <li>In the Source Control panel, click the blue <strong>Publish Branch</strong> button.</li>
-            <li>VS Code asks to sign in with GitHub. Click <strong>Allow</strong>, sign in in the browser window that opens, and click <strong>Authorize</strong>. Then go back to VS Code.</li>
-            <li>A box appears at the top of VS Code with your folder name in it. <strong>Delete that name</strong> and type exactly:
-              <pre><code>your-username.github.io</code></pre>
-              using <em>your</em> GitHub username, spelled exactly the way it is on GitHub.</li>
-            <li>Choose <strong>Publish to GitHub public repository</strong>. (Free GitHub sites have to be public.)
-              <div class="clear"></div>
-              <figure class="shot" style="max-width:640px">
-                <a href="images/9_publish_repo.png" target="_blank" rel="noopener"><img class="screenshot" src="images/9_publish_repo.png" alt="VS Code publish box with mskippy.github.io typed as the name and two options: Publish to GitHub private repository (highlighted) and Publish to GitHub public repository."></a>
-                <figcaption>Watch out: VS Code highlights <strong>private</strong> first. <strong>Don't just press Enter.</strong> Click the second option, <strong>public repository</strong>.</figcaption>
-              </figure>
-            </li>
-            <li>When VS Code shows a message that it published successfully, you can click <strong>Open on GitHub</strong> to see your code online.
-              <figure class="shot" style="max-width:720px">
-                <a href="images/10_github_repo.png" target="_blank" rel="noopener"><img class="screenshot" src="images/10_github_repo.png" alt="GitHub repository page for mskippy.github.io, marked Public, listing css, images, js, about.html, index.html and work.html, with Settings in the top menu and Deployments on the right."></a>
-                <figcaption>Pushed! Your files are on GitHub. Check that the name is <code>your-username.github.io</code> and that it says <strong>Public</strong>. <strong>Settings</strong> is at the right end of the top menu.</figcaption>
-              </figure>
-            </li>
-          </ol>
-
-          <div class="gotcha">
-            <strong>Common mistake:</strong> the repository name has to be <em>exactly</em> your username plus
-            <code>.github.io</code>. If you keep your folder name (like <code>emma-r</code>), your site still
-            works, but it ends up at a longer address (<code>username.github.io/emma-r</code>). Ask your teacher if
-            that happens, or fix it yourself: on GitHub, open your repo → <strong>Settings</strong> → change the
-            <strong>Repository name</strong> to <code>your-username.github.io</code> → <strong>Rename</strong>. VS Code keeps syncing to it.
-          </div>
-
-          <h3>Step 2: Turn on GitHub Pages</h3>
-          <ol class="list-tight">
-            <li>On your repo's GitHub page, click <strong>Settings</strong> (the gear tab along the top) → <strong>Pages</strong> in the left menu.</li>
+            <li>In GitHub Desktop, click <strong>Repository → View on GitHub</strong> (or go to your repo on github.com).</li>
+            <li>Click <strong>Settings</strong> (the gear tab along the top) → <strong>Pages</strong> in the left menu.</li>
             <li>Under <strong>Build and deployment → Source</strong>, choose <strong>Deploy from a branch</strong>.</li>
             <li>Under <strong>Branch</strong>, choose <code>main</code> and <code>/ (root)</code>, then click <strong>Save</strong>.</li>
-            <li>Wait 1 to 5 minutes. You can watch the progress in the <strong>Actions</strong> tab, or under <strong>Deployments</strong> on the right side of your repo's front page. A yellow dot turns into a green check when it's done. Refresh the Pages settings and your live link appears at the top.</li>
+            <li>Wait 1 to 5 minutes. On your repo's front page, watch <strong>Deployments</strong> on the right (or the <strong>Actions</strong> tab): a yellow dot turns into a green check when it's done. Refresh the Pages settings and your live link appears at the top.</li>
           </ol>
           <figure class="shot" style="max-width:760px">
-                <a href="images/10_github_pages.png" target="_blank" rel="noopener"><img class="screenshot" src="images/10_github_pages.png" alt="GitHub Pages settings with the Settings tab and Pages menu item highlighted, Source set to Deploy from a branch, Branch main and root, and a box reading Your site is live at https://mskippy.github.io with a Visit site button."></a>
-                <figcaption><strong>Settings → Pages</strong>. Set Source to <strong>Deploy from a branch</strong> and Branch to <strong>main</strong> / <strong>(root)</strong>. When it's ready, <em>"Your site is live at…"</em> appears at the top. Click <strong>Visit site</strong>.</figcaption>
-              </figure>
+            <a href="images/10_github_pages.png" target="_blank" rel="noopener"><img class="screenshot" src="images/10_github_pages.png" alt="GitHub Pages settings: Settings tab and Pages menu item highlighted, Source set to Deploy from a branch, Branch main and root, and a box reading Your site is live at https://mskippy.github.io with a Visit site button."></a>
+            <figcaption><strong>Settings → Pages</strong>. Source: <strong>Deploy from a branch</strong>. Branch: <strong>main</strong> / <strong>(root)</strong>. When it's ready, <em>"Your site is live at…"</em> appears at the top. Click <strong>Visit site</strong>.</figcaption>
+          </figure>
 
-          <h3>Step 3: Test it for real</h3>
+          <h3>Step 2: Test it for real</h3>
           <ol class="list-tight">
             <li>Open <code>https://your-username.github.io</code>. That's your site, live on the internet.</li>
             <li>Click every nav link and every button. Check that your avatar shows up.</li>
             <li>Open it on your phone too. It should work anywhere.</li>
             <li>Post your live URL to the 2.4 Teams assignment.</li>
           </ol>
+
+          <div class="gotcha">
+            <strong>"Your site is live," but you get a 404?</strong> GitHub can't find your home page. Check your repo's file list on github.com:
+            <ul class="list-tight">
+              <li>It must be <code>index.html</code>, all lowercase. <code>Index.html</code> with a capital I doesn't count.</li>
+              <li>It must be at the top level of the repo, not inside a folder.</li>
+            </ul>
+            <strong>To fix a capital letter</strong> (this works for any file, like <code>Avatar.PNG</code> too): on github.com, click the file →
+            the <strong>pencil icon</strong> (Edit) → change the name at the top to lowercase → <strong>Commit changes…</strong> → <strong>Commit changes</strong>.
+            Then in GitHub Desktop, click <strong>Fetch origin</strong> → <strong>Pull origin</strong>, and rename the file to lowercase in File Explorer too.
+            (Do it on github.com, because GitHub Desktop on Windows often doesn't notice a change that's only capital letters.)
+          </div>
 
           <div class="checkpoint">
             <div class="checkpoint-row is-green">
@@ -493,7 +470,7 @@ My file is called: ________</code></pre>
             </div>
             <div class="checkpoint-row is-red">
               <span class="checkpoint-icon">🔴</span>
-              <span><span class="checkpoint-label">Red:</span> a <strong>404</strong> page means GitHub can't find <code>index.html</code>. Check that it's spelled in lowercase and sitting at the top of your repo, not inside a folder. A broken image that works locally is almost always a capital letter in the file name (see Task 1). No <strong>Pages</strong> option, or it says you need to upgrade? Your repo is private. Go to Settings → scroll to <strong>Danger Zone</strong> → <strong>Change visibility</strong> → Public.</span>
+              <span><span class="checkpoint-label">Red:</span> Settings → Pages shows an upgrade message, or there's no Pages option? Your repo is private. Go to Settings → scroll to <strong>Danger Zone</strong> → <strong>Change visibility</strong> → Public, then redo Step 1. A broken image that works on your computer is almost always a capital letter in the file name (see the box above).</span>
             </div>
           </div>
         </section>
@@ -505,12 +482,12 @@ My file is called: ________</code></pre>
           </div>
           <p>
             Your site isn't finished. It'll get new projects every unit for the rest of the course. Here's the
-            loop you'll use every time: <strong>edit → commit → sync</strong>.
+            loop you'll use every time: <strong>edit in VS Code → commit in GitHub Desktop → push</strong>.
           </p>
           <ol class="list-tight">
-            <li>Make one small change. For example, add <code>&lt;p&gt;Last updated: October 2026&lt;/p&gt;</code> to your footer on all three pages.</li>
-            <li>In Source Control, stage (<strong>+</strong>), type a message that describes the change (<code>Add last-updated date to footer</code>), and click <strong>Commit</strong>.</li>
-            <li>Click <strong>Sync Changes</strong>. The little <strong>↑1</strong> means one commit is waiting to go up.</li>
+            <li>In VS Code (your <code>your-username.github.io</code> folder), make one small change. For example, add <code>&lt;p&gt;Last updated: October 2026&lt;/p&gt;</code> to your footer on all three pages. Save, and check Live Preview.</li>
+            <li>In GitHub Desktop, your changed files show in the Changes list. Type a Summary that describes the change (<code>Add last-updated date to footer</code>), then click <strong>Commit to main</strong>.</li>
+            <li>Click <strong>Push origin</strong>.</li>
             <li>Wait about a minute, then reload your live site with <code>Ctrl + F5</code> (a hard refresh).</li>
           </ol>
 
@@ -527,7 +504,7 @@ My file is called: ________</code></pre>
             </div>
             <div class="checkpoint-row is-red">
               <span class="checkpoint-icon">🔴</span>
-              <span><span class="checkpoint-label">Red:</span> the live site hasn't changed. Check that you clicked Sync (not just Commit), wait another minute, and hard refresh with <code>Ctrl + F5</code>. Renamed a file only to fix its capital letters, and Source Control doesn't show any change? Git on Windows misses that. In the terminal, use <code>git mv images/Avatar.png images/avatar.png</code> (with your own file names), then commit and sync.</span>
+              <span><span class="checkpoint-label">Red:</span> the live site hasn't changed. Check that you clicked <strong>Push origin</strong> (not just Commit), and that you edited the files in your <code>your-username.github.io</code> folder, not the old slug folder. Wait another minute, and hard refresh with <code>Ctrl + F5</code>.</span>
             </div>
           </div>
         </section>
@@ -537,10 +514,10 @@ My file is called: ________</code></pre>
             <span class="pill pill-blue">Blue</span>
             <h2>Make your repo look professional</h2>
           </div>
-          <p class="muted">Optional. Unlocks after Task 6 is done (on either path).</p>
+          <p class="muted">Optional. Unlocks after Task 6 is done.</p>
           <p>Studios judge developers by their repos as well as their sites. Make yours look like it belongs to a professional.</p>
           <ol class="list-tight">
-            <li><strong>Add a README.</strong> Create a new file called <code>README.md</code> in your project folder. (No-Git path: on your repo page, click <strong>Add file → Create new file</strong>.) GitHub shows it on your repo's front page. Include what the site is, what you built it with, and one thing you're proud of:
+            <li><strong>Add a README.</strong> Create a new file called <code>README.md</code> in your <code>your-username.github.io</code> folder. GitHub shows it on your repo's front page. Include what the site is, what you built it with, and one thing you're proud of:
               <pre><code># My Studio Profile
 
 This is my portfolio site for ICT 9 at the Studio.
@@ -554,7 +531,7 @@ The click-to-reveal skills list on my About Me page.</code></pre>
             </li>
             <li><strong>Validate your code.</strong> Paste your live URL into the <a href="https://validator.w3.org/" target="_blank" rel="noopener">W3C Markup Validator</a>. Fix any errors it finds on all three pages.</li>
             <li><strong>Add a repo description.</strong> On your repo's GitHub page, click the gear next to <strong>About</strong> (on the right), write a one-line description, and tick <strong>Use your GitHub Pages website</strong>.</li>
-            <li>Commit and sync.</li>
+            <li>Commit and push in GitHub Desktop.</li>
           </ol>
           <p class="muted"><strong>Checkpoint (self-assessed):</strong> your repo's front page shows your README and a link to your live site, and the validator shows no errors.</p>
         </section>
@@ -600,17 +577,17 @@ The click-to-reveal skills list on my About Me page.</code></pre>
               <p>Create a repo named <em>exactly</em> your username (no <code>.github.io</code>). Its README shows up on your GitHub profile page. Introduce yourself as a studio developer (same privacy rules as Task 1) and link to your site.</p>
             </div>
           </details>
-          <p class="muted"><strong>Checkpoint for any Black task:</strong> it's committed, synced, and working on the live site, not just on your computer.</p>
+          <p class="muted"><strong>Checkpoint for any Black task:</strong> it's committed, pushed, and working on the live site, not just on your computer.</p>
         </section>
 
         <section class="card">
           <h2>Before You Leave Class</h2>
           <p>School computers are shared, so sign out so nobody else can push to <em>your</em> site:</p>
           <ol class="list-tight">
-            <li>In VS Code, click the <strong>Accounts</strong> icon (the person icon at the bottom of the left sidebar) → your GitHub account → <strong>Sign Out</strong>.</li>
+            <li>In GitHub Desktop, go to <strong>File → Options → Accounts</strong> → <strong>Sign out</strong>.</li>
             <li>In your browser, sign out of github.com.</li>
           </ol>
-          <p class="muted">Next class, VS Code asks you to sign in again the first time you click Sync. That's normal.</p>
+          <p class="muted">Next class, sign back in to GitHub Desktop (File → Options → Accounts → Sign in). Your repo is still listed, and everything picks up where you left off.</p>
         </section>
 
       </main>
@@ -622,8 +599,9 @@ The click-to-reveal skills list on my About Me page.</code></pre>
             <li>Privacy check done on all 3 pages</li>
             <li>20 Questions audited for oversharing</li>
             <li>GitHub account created and verified</li>
-            <li>First commit made (Git or no-Git path)</li>
-            <li>AI cleanup reviewed, tested, and committed</li>
+            <li>Repo named <code>username.github.io</code>, Public, cloned to H:</li>
+            <li>Site files copied in, committed, and pushed</li>
+            <li>AI cleanup reviewed, tested, committed, and pushed</li>
             <li>Site live at <code>username.github.io</code></li>
             <li>One update shipped to the live site</li>
             <li>Live URL posted in Teams</li>
@@ -632,22 +610,22 @@ The click-to-reveal skills list on my About Me page.</code></pre>
 
         <div class="card">
           <strong>Downloads</strong>
-          <p class="muted">Nothing to download. You're publishing the <code>2_web_development</code> folder you already have.</p>
+          <p class="muted">Nothing to download. You're publishing the site files you already have in <code>2_web_development</code>.</p>
         </div>
 
         <div class="card">
           <strong>Your live URL</strong>
-          <p class="muted"><code>https://your-username.github.io</code><br>Your repo is named the same thing: <code>your-username.github.io</code>.</p>
+          <p class="muted"><code>https://your-username.github.io</code><br>Your repo is named the same thing: <code>your-username.github.io</code>. Your <em>folder</em> on H: gets that name too when you clone it.</p>
         </div>
 
         <div class="card">
           <strong>The everyday loop</strong>
-          <p class="muted">Edit → <strong>+</strong> Stage → message → <strong>Commit</strong> → <strong>Sync Changes</strong> → wait a minute → <code>Ctrl + F5</code>.</p>
+          <p class="muted">Edit + save in VS Code → GitHub Desktop: Summary → <strong>Commit to main</strong> → <strong>Push origin</strong> → wait a minute → <code>Ctrl + F5</code>.</p>
         </div>
 
         <div class="card">
           <strong>Watch out for</strong>
-          <p class="muted">Capital letters in file names. They work on Windows and break on the live site, and they're the #1 cause of missing images in this lesson.</p>
+          <p class="muted">The repo name (exactly <code>username.github.io</code>), and capital letters in file names. <code>Index.html</code> or <code>Avatar.PNG</code> work on Windows and break on the live site.</p>
         </div>
 
         <div class="card">

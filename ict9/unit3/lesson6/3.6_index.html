@@ -1,8 +1,10 @@
+<!-- v1 – Oct 2026 -->
 <!doctype html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>ICT 9 • Coming Soon</title>
+    <title>ICT 9 • Unit 3 • Lesson 3.6 — Ship It</title>
     <link rel="stylesheet" href="/common/css/base.css">
     <script src="/common/js/nav_data.js" defer></script>
     <script src="/common/js/utils.js" defer></script>
@@ -10,19 +12,432 @@
     <script src="/common/js/nav_systems.js" defer></script>
     <script src="/common/js/main.js" defer></script>
   </head>
+
   <body data-course="ict9">
     <header id="site-header" data-partial="/common/partials/header.html"></header>
+
     <div class="page-wrap">
       <aside id="sidebar" aria-label="Course navigation"></aside>
-      <main id="content" role="main" data-page-title="ICT 9 • Coming Soon">
-        <section class="card">
-          <h1>This lesson is not published yet</h1>
-          <p>Check back once class is in session — this page is still being built.</p>
-        </section>
+
+      <main id="content" role="main" data-page-title="ICT 9 • Unit 3 • Lesson 3.6">
+
+        <!-- 3.6.0: Intro -->
+        <div class="card">
+          <h2>Intro</h2>
+          <p>You built it. You branded it. You made a trailer for it. Now it's time to ship it.</p>
+          <p><strong>Shipping</strong> means publishing your game live on the internet so anyone can play it from any browser, on any device, anytime. For you, that means:</p>
+          <ul>
+            <li><strong>Exporting from GDevelop:</strong> Convert your game project into a playable HTML5 web build</li>
+            <li><strong>Adding to your portfolio:</strong> Create a project page on your <code>username.github.io</code> site with screenshots, description, trailer, and a playable embed</li>
+            <li><strong>Publishing to GitHub:</strong> Push your files live and test the URL</li>
+            <li><strong>Sharing the link:</strong> Post it to Teams so your team can celebrate</li>
+          </ul>
+          <p>Your game is now live. Forever. Congrats.</p>
+        </div>
+
+        <!-- 3.6.1: Before You Start -->
+        <div class="card">
+          <h2>Before You Start</h2>
+          <p><strong>You need:</strong></p>
+          <ul>
+            <li>Your finished GDevelop project from Lesson 3.3 (the playable game)</li>
+            <li>Access to your <code>username.github.io</code> GitHub Pages site (from Unit 2, Lesson 2.4)</li>
+            <li>Your poster and trailer from Lessons 3.4 & 3.5</li>
+            <li>A 2–3 sentence description of your game (tone, what players do, why it's cool)</li>
+            <li>2–3 screenshots from your game (gameplay moments, story scenes, UI)</li>
+            <li>Basic HTML knowledge (from Unit 2)</li>
+          </ul>
+          <p><strong>Keep in mind:</strong> Once you push to GitHub, your game is public. Test it thoroughly before shipping.</p>
+        </div>
+
+        <!-- 3.6.2: Task 1 — Export from GDevelop -->
+        <div class="card">
+          <h2>Task 1: Export from GDevelop 🟢</h2>
+          <p><strong>Goal:</strong> Turn your GDevelop project into a playable web build (HTML/CSS/JavaScript).</p>
+          <p><em>Duration: 30 minutes–1 hour</em></p>
+
+          <ol>
+            <li><strong>Open your finished game in GDevelop.</strong> Make sure it plays correctly in preview mode. If there are crashes or obvious bugs, fix them first. You're about to ship this.</li>
+
+            <li><strong>Test the game one final time.</strong>
+              <ul>
+                <li>Play through start to finish</li>
+                <li>Try edge cases (jump in weird spots, click buttons multiple times, etc.)</li>
+                <li>Check that all scenes load and transitions work</li>
+                <li>Verify that the HUD, art, and audio all work</li>
+              </ul>
+              <p>If you find issues, fix them and test again. A buggy shipped game is worse than a late game.</p>
+            </li>
+
+            <li><strong>Prepare for export.</strong> In GDevelop:
+              <ul>
+                <li>Open the menu: <strong>File → Build → Build a web version</strong> (or similar; the exact path varies by GDevelop version)</li>
+                <li>Choose your project (should be selected already)</li>
+                <li>Select <strong>"Web (HTML5)"</strong> as the build target</li>
+              </ul>
+            </li>
+
+            <li><strong>Configure export settings.</strong>
+              <ul>
+                <li><strong>Project name:</strong> Something simple, no spaces. Example: <code>tower_escape</code> or <code>mystery_museum</code></li>
+                <li><strong>Output format:</strong> Choose "ZIP file" (you'll extract it later and upload to GitHub)</li>
+                <li><strong>Optimize for size:</strong> Check this box to reduce file size (speeds up loading)</li>
+              </ul>
+            </li>
+
+            <li><strong>Build and download.</strong>
+              <ul>
+                <li>Click "Build"</li>
+                <li>GDevelop will generate your web build and offer a download (ZIP file)</li>
+                <li>Save it to your desktop or a project folder (e.g., <code>H:\ICT 9\3_dev_team\exports\</code>)</li>
+              </ul>
+            </li>
+
+            <li><strong>Extract and test locally.</strong>
+              <ul>
+                <li>Right-click the ZIP file → "Extract All"</li>
+                <li>Open the extracted folder and find <code>index.html</code></li>
+                <li>Double-click <code>index.html</code> to open it in your browser (or drag it into Chrome)</li>
+                <li>Play the game. Does it work exactly like the preview in GDevelop?</li>
+              </ul>
+              <p style="background: #f5f5f5; padding: 0.75rem; border-left: 3px solid #666; margin: 0.75rem 0; font-size: 0.9rem;"><strong>Common issue:</strong> The game doesn't load or runs slowly. Try: (1) wait 5–10 seconds for assets to load, (2) check your browser's console for errors (F12 → Console tab), (3) try a different browser.</p>
+            </li>
+
+            <li><strong>Organize the files.</strong> You should have a folder structure like:
+              <div style="background: #f5f5f5; padding: 0.75rem; border-left: 3px solid #666; margin: 0.75rem 0; font-family: monospace; font-size: 0.85rem;">
+                tower_escape/<br>
+                ├── index.html<br>
+                ├── game.js<br>
+                ├── assets/<br>
+                │   ├── images/<br>
+                │   └── audio/<br>
+                └── (other GDevelop-generated files)<br>
+              </div>
+              <p><span class="checkpoint">🟢 Your game is playable as a web build locally. Ready to upload to GitHub.</span></p>
+            </li>
+          </ol>
+
+          <p><strong>Checkpoint:</strong> Game exports as HTML5. Plays correctly when opened locally in a browser.</p>
+        </div>
+
+        <!-- 3.6.3: Task 2 — Create a Project Page -->
+        <div class="card">
+          <h2>Task 2: Create a Project Page 🟢</h2>
+          <p><strong>Goal:</strong> Build an HTML page on your portfolio that showcases your game with a description, screenshots, trailer, and a playable embed.</p>
+          <p><em>Duration: 1–2 class periods</em></p>
+
+          <ol>
+            <li><strong>Plan your page structure.</strong> Your project page should include (from top to bottom):
+              <ul>
+                <li><strong>Hero section:</strong> Game title, your name(s), and one striking screenshot or poster image</li>
+                <li><strong>Description:</strong> 2–3 sentences: what's the game about, what does the player do, what makes it cool?</li>
+                <li><strong>Team credits:</strong> Names and roles of everyone who worked on it (Designer, Programmer, Artist, Sound, Marketing)</li>
+                <li><strong>Gameplay screenshots:</strong> 3–5 images showing different moments (intro, action, UI, story, victory)</li>
+                <li><strong>Embedded trailer:</strong> Your 30–60 second video from Lesson 3.5, playable right on the page</li>
+                <li><strong>Game embed:</strong> The playable game itself in an iframe, so visitors can try it without leaving the page</li>
+                <li><strong>Download link:</strong> A link to download the full game as a ZIP (optional, but nice for sharing)</li>
+                <li><strong>Back to portfolio:</strong> A link back to your main portfolio page</li>
+              </ul>
+            </li>
+
+            <li><strong>Create the HTML file.</strong> In your <code>username.github.io</code> repo, create a new folder and file:
+              <div style="background: #f5f5f5; padding: 0.75rem; border-left: 3px solid #666; margin: 0.75rem 0; font-family: monospace; font-size: 0.85rem;">
+                username.github.io/<br>
+                └── projects/<br>
+                    └── tower_escape/<br>
+                        └── index.html
+              </div>
+            </li>
+
+            <li><strong>Write the project page HTML.</strong> Here's a template to start:
+              <div style="background: #f5f5f5; padding: 1rem; border-left: 3px solid #666; margin: 1rem 0; font-family: monospace; font-size: 0.8rem; overflow-x: auto;">
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&nbsp;&nbsp;&lt;title&gt;Tower Escape - Game Project&lt;/title&gt;<br>
+&nbsp;&nbsp;&lt;style&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f0f0f0; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.container { max-width: 900px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;h1 { color: #333; margin-top: 0; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;img { max-width: 100%; height: auto; border-radius: 4px; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.game-embed { width: 100%; height: 600px; border: 1px solid #ccc; border-radius: 4px; margin: 20px 0; }<br>
+&nbsp;&nbsp;&lt;/style&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&nbsp;&nbsp;&lt;div class="container"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Tower Escape&lt;/h1&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;&lt;strong&gt;By: Team Alpha&lt;/strong&gt;&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="hero.jpg" alt="Tower Escape screenshot"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;About&lt;/h2&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;A fast-paced platformer where you race against time to reach the top of a crumbling tower. Jump, dodge, and stomp your way past obstacles and enemies. Can you escape before the tower falls?&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Team Credits&lt;/h2&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Creative Director: Alex&lt;/li&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Programmer: Jordan&lt;/li&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Artist: Sam&lt;/li&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Gameplay&lt;/h2&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="screenshot1.jpg" alt="Gameplay"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="screenshot2.jpg" alt="Boss fight"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Trailer&lt;/h2&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;iframe width="100%" height="400" src="https://www.youtube.com/embed/VIDEO_ID" title="Tower Escape Trailer"&gt;&lt;/iframe&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Play Now&lt;/h2&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;iframe class="game-embed" src="./tower_escape/" title="Tower Escape Game"&gt;&lt;/iframe&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;&lt;a href="https://github.com/username/tower_escape/archive/main.zip" download&gt;Download Game (ZIP)&lt;/a&gt;&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;&lt;a href="../"&gt;← Back to Portfolio&lt;/a&gt;&lt;/p&gt;<br>
+&nbsp;&nbsp;&lt;/div&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+              </div>
+            </li>
+
+            <li><strong>Customize the page.</strong> Replace placeholder text:
+              <ul>
+                <li>Your game's title, description, team names, and roles</li>
+                <li>Image file names (you'll add these next)</li>
+                <li>Trailer embed (if hosted on YouTube, use the embed link; if local, use &lt;video&gt; tag)</li>
+                <li>Use your Brand Kit colors and fonts if desired (add CSS)</li>
+              </ul>
+            </li>
+
+            <li><strong>Add images to your project folder.</strong> In the same folder as <code>index.html</code>, add:
+              <ul>
+                <li><code>hero.jpg</code> — Your poster or a striking screenshot</li>
+                <li><code>screenshot1.jpg</code>, <code>screenshot2.jpg</code>, etc. — 3–5 gameplay images</li>
+              </ul>
+              <p>Keep images at 1920×1080 or smaller (to avoid huge file sizes). Compress using a tool like <a href="https://tinyjpg.com" target="_blank">TinyJPG</a>.</p>
+            </li>
+
+            <li><strong>Upload the trailer video (if not on YouTube).</strong>
+              <ul>
+                <li>If your trailer is on YouTube, just embed the link (simpler)</li>
+                <li>If it's local, copy the <code>.mp4</code> file to your project folder and embed with: <code>&lt;video width="100%" controls&gt;&lt;source src="trailer.mp4" type="video/mp4"&gt;&lt;/video&gt;</code></li>
+              </ul>
+            </li>
+
+            <li><strong>Test locally.</strong> On your computer, open the <code>index.html</code> file in a browser. Check:
+              <ul>
+                <li>All images load correctly</li>
+                <li>The game embed loads (it will show the game in an iframe)</li>
+                <li>The trailer plays</li>
+                <li>All links work</li>
+              </ul>
+              <p><span class="checkpoint">🟢 Project page is complete and tested locally.</span></p>
+            </li>
+          </ol>
+
+          <p><strong>Checkpoint:</strong> Project page is written, images added, and playable locally.</p>
+        </div>
+
+        <!-- 3.6.4: Task 3 — Publish to GitHub & Test -->
+        <div class="card">
+          <h2>Task 3: Publish to GitHub & Test 🟢</h2>
+          <p><strong>Goal:</strong> Push your files to GitHub and verify the game is playable on a live URL.</p>
+          <p><em>Duration: 1–2 class periods</em></p>
+
+          <ol>
+            <li><strong>Add files to your GitHub repo.</strong> Using GitHub Desktop or the command line:
+              <ul>
+                <li>Copy your project folder (with <code>index.html</code>, images, game files) into your <code>username.github.io</code> local repo</li>
+                <li>Example folder structure:
+                  <div style="background: #f5f5f5; padding: 0.75rem; border-left: 3px solid #666; margin: 0.75rem 0; font-family: monospace; font-size: 0.85rem;">
+                    username.github.io/<br>
+                    ├── index.html (your main portfolio page)<br>
+                    ├── about.html<br>
+                    ├── projects/<br>
+                    │   └── tower_escape/<br>
+                    │       ├── index.html (project page)<br>
+                    │       ├── hero.jpg<br>
+                    │       ├── screenshots/<br>
+                    │       └── game/ (or tower_escape/) — the GDevelop export folder<br>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li><strong>Commit to GitHub.</strong> In GitHub Desktop or terminal:
+              <ul>
+                <li>Add a commit message like <code>Ship: Add Tower Escape game project page</code></li>
+                <li>Commit to your <code>main</code> branch</li>
+                <li>Push to origin (GitHub)</li>
+              </ul>
+            </li>
+
+            <li><strong>Wait for GitHub Pages to build.</strong>
+              <ul>
+                <li>GitHub automatically rebuilds your site when you push changes (takes 30 seconds–2 minutes)</li>
+                <li>Go to your GitHub repo → Settings → Pages and check the status: "Your site is live at https://username.github.io"</li>
+              </ul>
+            </li>
+
+            <li><strong>Test the live URLs.</strong>
+              <ul>
+                <li>Open <strong>https://username.github.io/projects/tower_escape/</strong> in your browser</li>
+                <li>Check:
+                  <ul>
+                    <li>✓ Project page loads and looks good</li>
+                    <li>✓ Images display correctly</li>
+                    <li>✓ Trailer plays (or embeds)</li>
+                    <li>✓ Game iframe loads (may take a few seconds)</li>
+                    <li>✓ Game is playable (click into it and test controls)</li>
+                    <li>✓ All links work</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li><strong>Test on a different device.</strong> This is your final checkpoint:
+              <ul>
+                <li>Open your live URL on a phone, tablet, or a different computer</li>
+                <li>Play the game all the way through (or at least confirm it loads and responds to input)</li>
+                <li>If it works, you're golden. If not, check:
+                  <ul>
+                    <li>Browser compatibility (try Chrome, Firefox, Safari)</li>
+                    <li>Network issues (is the site loading, or is it timing out?)</li>
+                    <li>File paths (are images and game files loading, or 404 errors?)</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li><strong>Share the URL.</strong> Post in your team's Teams channel:
+              <ul>
+                <li>Your live game URL: <code>https://username.github.io/projects/tower_escape/</code></li>
+                <li>A screenshot or 1-sentence celebration ("Live! Play my game!")</li>
+                <li>Any caveats ("best on Chrome," "might lag on older devices," etc.)</li>
+              </ul>
+              <p><span class="checkpoint">🟢 Game is live and playable on a different computer. Ship complete.</span></p>
+            </li>
+
+            <li><strong>Add to the main portfolio.</strong> Update your main portfolio page (<code>username.github.io/index.html</code> or a projects page) to include a link/card for your new game. Example:
+              <div style="background: #f5f5f5; padding: 0.75rem; border-left: 3px solid #666; margin: 0.75rem 0; font-family: monospace; font-size: 0.85rem;">
+&lt;a href="/projects/tower_escape/"&gt;<br>
+&nbsp;&nbsp;&lt;h3&gt;Tower Escape&lt;/h3&gt;<br>
+&nbsp;&nbsp;&lt;img src="/projects/tower_escape/hero.jpg" alt="Game poster"&gt;<br>
+&nbsp;&nbsp;&lt;p&gt;A platformer where you race the clock to escape a crumbling tower.&lt;/p&gt;<br>
+&lt;/a&gt;
+              </div>
+            </li>
+          </ol>
+
+          <p><strong>Checkpoint:</strong> Game is live at your public URL. Playable from another device. Added to your portfolio.</p>
+        </div>
+
+        <!-- 3.6.5: Blue — Deeper Learning -->
+        <div class="card">
+          <h2>Blue Tasks: Deeper Learning</h2>
+          <ul>
+            <li><strong>SEO & sharing optimization.</strong> Add metadata to your project page: Open Graph tags for the title, description, and thumbnail image. When someone shares the link on social media, a preview card appears with your poster and title.</li>
+            <li><strong>Accessibility audit.</strong> Run your project page through an accessibility tool (WAVE, Lighthouse). Fix any contrast issues, add alt text to all images, and ensure keyboard navigation works.</li>
+            <li><strong>Responsive design.</strong> Make your project page mobile-friendly using CSS media queries. Test on a phone. Images should scale, text should remain readable, and the game embed should adjust.</li>
+            <li><strong>Analytics.</strong> Add a simple counter (or use Google Analytics) to see how many visitors and plays your game gets. Celebrate the milestones.</li>
+          </ul>
+        </div>
+
+        <!-- 3.6.6: Black Menu — Extensions -->
+        <details class="card">
+          <summary><h2>Black Menu: Extensions</h2></summary>
+          <ul>
+            <li><strong>Leaderboard or achievement display.</strong> If your game tracks scores or achievements (Lesson 3.3 Blue), display a live leaderboard on the project page using JavaScript and localStorage.</li>
+            <li><strong>Game manual or wiki.</strong> Create a simple how-to-play guide and link it from the project page. Helps new players understand mechanics.</li>
+            <li><strong>Comments or feedback form.</strong> Add a Disqus comment section or a simple contact form so players can leave feedback.</li>
+            <li><strong>Version history.</strong> Track updates and improvements. If you add new levels or features after shipping, document them with version numbers and a changelog.</li>
+            <li><strong>Multiple game editions.</strong> Host different versions: a "Mobile-optimized" build, an "Arcade mode," or a "Speedrun challenge" variant. Let players choose.</li>
+          </ul>
+        </details>
+
+        <!-- 3.6.7: Reflection -->
+        <div class="card">
+          <h2>Reflection</h2>
+          <ul>
+            <li>From pitching the idea (Lesson 3.1) to shipping the game (3.6), what was the biggest challenge? How did you overcome it?</li>
+            <li>If you had to add one more feature to your game after shipping, what would it be? Why?</li>
+            <li>Imagine a player you don't know plays your game. What do you hope they experience (fun, challenge, story, creativity, joy)?</li>
+            <li>What's next for this game? Will you keep building, move to a new project, or ship it as-is?</li>
+          </ul>
+        </div>
+
+        <!-- 3.6.8: Hand It In -->
+        <div class="card">
+          <h2>Hand It In</h2>
+          <p>Submit to Teams under <strong>"Lesson 3.6 — Ship It."</strong></p>
+          <ul>
+            <li><strong>Live URL</strong> — The playable game page (https://username.github.io/projects/...)</li>
+            <li><strong>Screenshot of the live page</strong> — Showing the project page with images, trailer, and game embed</li>
+            <li><strong>Test report</strong> — Play the game on a different device and note: "Tested on [device/browser], game loads [yes/no], playable [yes/no], any issues encountered"</li>
+            <li><strong>Link to your GitHub repo</strong> — So your team can see the source</li>
+            <li><strong>Your reflection</strong> — (the four prompts answered)</li>
+          </ul>
+        </div>
+
       </main>
-      <aside id="right-rail" aria-label="Resources"></aside>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card sticky">
+          <h3>Success Criteria</h3>
+          <ul>
+            <li><strong>Export:</strong> Game exports from GDevelop as HTML5. Plays correctly when opened locally.</li>
+            <li><strong>Project page:</strong> HTML page includes title, description, team credits, screenshots, trailer, and game embed.</li>
+            <li><strong>Live URL:</strong> Accessible at https://username.github.io/projects/...</li>
+            <li><strong>Playable:</strong> Game loads and is playable from a different device/browser.</li>
+            <li><strong>Portfolio linked:</strong> Main portfolio page includes a link/card to the game project.</li>
+            <li><strong>Test report:</strong> Evidence of testing on another device (screenshot, description).</li>
+            <li><strong>Reflection:</strong> All four prompts answered with thoughtful examples.</li>
+          </ul>
+        </div>
+
+        <div class="card sticky">
+          <h3>Watch Out For</h3>
+          <ul>
+            <li><strong>Game doesn't load in the iframe.</strong> Check that the GDevelop export folder path is correct. If hosted at /projects/tower_escape/game/, the iframe src should be "./game/" (relative path).</li>
+            <li><strong>404 errors on images or files.</strong> Verify file names match exactly (case-sensitive on GitHub). A file named "Hero.jpg" won't load if you reference "hero.jpg".</li>
+            <li><strong>Slow game load.</strong> GDevelop exports can be large. Give it 5–10 seconds to load assets. If it times out, optimize images in your game project and re-export.</li>
+            <li><strong>Game works locally but not on GitHub.</strong> Often a relative path issue. Double-check folder structure and update src/href attributes.</li>
+            <li><strong>Trailer doesn't embed.</strong> If using YouTube, make sure to use the embed URL (youtube.com/embed/VIDEO_ID), not the watch URL.</li>
+            <li><strong>Forgot to push to GitHub.</strong> Test the live URL immediately after pushing. If it's not live, wait 2 minutes and refresh. If still not live, check GitHub Actions for build errors.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Helpful Snippets</h3>
+          <ul class="list-tight">
+            <li><strong>Embed a YouTube trailer:</strong> <code>&lt;iframe width="100%" height="400" src="https://www.youtube.com/embed/VIDEO_ID" title="Trailer"&gt;&lt;/iframe&gt;</code></li>
+            <li><strong>Embed your GDevelop game:</strong> <code>&lt;iframe class="game-embed" src="./game/" title="Game"&gt;&lt;/iframe&gt;</code></li>
+            <li><strong>Image with alt text:</strong> <code>&lt;img src="screenshot.jpg" alt="Gameplay showing the boss fight"&gt;</code></li>
+            <li><strong>Open Graph meta tag (for social sharing):</strong> <code>&lt;meta property="og:image" content="https://username.github.io/projects/tower_escape/hero.jpg"&gt;</code></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Troubleshooting</h3>
+          <p><strong>Game doesn't load?</strong> Open your browser's console (F12 → Console) and look for error messages. Common issues:</p>
+          <ul class="list-tight">
+            <li>CORS errors — usually means a file path is wrong</li>
+            <li>Missing assets — check that image/audio files were included in the GDevelop export</li>
+            <li>JavaScript errors — try a different browser or clear your cache</li>
+          </ul>
+          <p>Still stuck? Ask Ms. Ahoy or check the <a href="https://wiki.gdevelop.io/gdevelop5/publishing/exporting-to-web" target="_blank">GDevelop export docs</a>.</p>
+        </div>
+
+        <div class="card">
+          <h3>Celebration Time</h3>
+          <p><strong>Your game is live.</strong> Share it with:</p>
+          <ul class="list-tight">
+            <li>Friends and family (test on their devices)</li>
+            <li>Social media (post the URL + a screenshot + "I made this!")</li>
+            <li>Future employers (add it to your portfolio as evidence of shipped work)</li>
+            <li>The internet (submit to Itch.io if you're proud of it)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>What's Next?</h3>
+          <p><strong>Unit 4: Tech & Society</strong> — Step back from building and think about how technology impacts the world. Or start your next project.</p>
+        </div>
+      </aside>
+
     </div>
+
     <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
   </body>
 </html>
-

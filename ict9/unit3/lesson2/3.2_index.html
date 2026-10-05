@@ -1,8 +1,10 @@
+<!-- v1 – Oct 2026 -->
 <!doctype html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>ICT 9 • Coming Soon</title>
+    <title>ICT 9 • Unit 3 • Lesson 3.2 — Platformer Boot Camp: Learn GDevelop by building a platformer</title>
     <link rel="stylesheet" href="/common/css/base.css">
     <script src="/common/js/nav_data.js" defer></script>
     <script src="/common/js/utils.js" defer></script>
@@ -10,19 +12,473 @@
     <script src="/common/js/nav_systems.js" defer></script>
     <script src="/common/js/main.js" defer></script>
   </head>
+
   <body data-course="ict9">
     <header id="site-header" data-partial="/common/partials/header.html"></header>
+
     <div class="page-wrap">
       <aside id="sidebar" aria-label="Course navigation"></aside>
-      <main id="content" role="main" data-page-title="ICT 9 • Coming Soon">
+
+      <main id="content" role="main" data-page-title="ICT 9 • Unit 3 • Lesson 3.2 — Platformer Boot Camp: Learn GDevelop by building a platformer">
+
         <section class="card">
-          <h1>This lesson is not published yet</h1>
-          <p>Check back once class is in session — this page is still being built.</p>
+          <h1>3.2 Platformer Boot Camp: Learn GDevelop by building a platformer</h1>
+          <p>
+            Everyone does this, whatever your track. These are the building blocks for everything you'll make. Work through the tasks below in order — each one builds toward a working platformer you can ship in 3.6.
+          </p>
         </section>
+
+        <section class="card">
+          <h2>Find Your Spot</h2>
+          <ul class="list-tight">
+            <li><a href="#task1">Task 1: Choose how you'll work</a></li>
+            <li><a href="#task2">Task 2: Set up your project</a></li>
+            <li><a href="#task3">Task 3: Build platforms</a></li>
+            <li><a href="#task4">Task 4: Add the player</a></li>
+            <li><a href="#task5">Task 5: Set up the camera</a></li>
+            <li><a href="#task6">Task 6: One level with an end goal</a></li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <div class="lesson-note">
+            <strong>Monday:</strong> your teacher will model Task 1 live. That walkthrough <em>is</em> Task 1 — once it's done, you keep going independently. This pattern repeats all unit: read → build → checkpoint.
+          </div>
+        </section>
+
+        <!-- TASK 1: CHOOSE YOUR PATH -->
+        <section class="card">
+          <div class="task-heading">
+            <span class="pill pill-green">Green</span>
+            <h2 id="task1">Task 1 — Choose how you'll work</h2>
+          </div>
+          <p>You have two paths. Pick one and stick with it for the whole unit.</p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0;">
+            <div class="card" style="border-left: 4px solid var(--unit3-accent); padding: 1rem;">
+              <h3>Path A: Free Account</h3>
+              <p style="font-size: 0.9rem; color: #666;">You want to work from home or on different computers</p>
+              <ol style="font-size: 0.9rem;">
+                <li>Create a free GDevelop account at <code>editor.gdevelop.io</code></li>
+                <li>Create a new project called <code>platformer</code> (all lowercase, hyphens ok)</li>
+                <li>Work in the web editor or desktop app — projects save to the cloud</li>
+                <li><strong>Before you leave each session:</strong>
+                  <ul style="margin-top: 0.5rem;">
+                    <li>Save a backup copy to <code>H:\ICT 9\3_dev_team\platformer\</code></li>
+                    <li>Log out of GDevelop</li>
+                  </ul>
+                </li>
+              </ol>
+              <div class="checkpoint" style="margin-top: 1rem;">
+                <div class="checkpoint-row is-green">
+                  <span class="checkpoint-icon">🟢</span>
+                  <span><span class="checkpoint-label">Path A check:</span> I can log out, log back in, and open my project. I have a backup on H: from today.</span>
+                </div>
+              </div>
+              <div class="lesson-note" style="font-size: 0.85rem;">
+                Free accounts have a limit on cloud projects. Keep only your <strong>platformer</strong> and <strong>studio-project</strong> in the cloud. Backup and delete any experiments.
+              </div>
+            </div>
+
+            <div class="card" style="border-left: 4px solid var(--unit3-accent); padding: 1rem;">
+              <h3>Path B: Desktop App, No Account</h3>
+              <p style="font-size: 0.9rem; color: #666;">You want the simplest setup and will only work at school</p>
+              <ol style="font-size: 0.9rem;">
+                <li>Open the GDevelop desktop app and skip sign-in</li>
+                <li>Create a new project called <code>platformer</code> (all lowercase, hyphens ok)</li>
+                <li>Save directly to <code>H:\ICT 9\3_dev_team\platformer\</code> — this is your only copy</li>
+                <li>Work in the desktop app only (the web editor won't work without an account)</li>
+              </ol>
+              <div class="checkpoint" style="margin-top: 1rem;">
+                <div class="checkpoint-row is-green">
+                  <span class="checkpoint-icon">🟢</span>
+                  <span><span class="checkpoint-label">Path B check:</span> I can close GDevelop, reopen it, and open my project from H: without the web editor.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gotcha">
+            <strong>Path A notes:</strong> The free plan has a limit on cloud projects (verify with Ms. Ahoy). Keep your backup copy on H: current — that's your safety net.
+          </div>
+        </section>
+
+        <!-- TASK 2: PLATFORMS -->
+        <section class="card">
+          <div class="task-heading">
+            <span class="pill pill-green">Green</span>
+            <h2 id="task2">Task 2 — Build platforms</h2>
+          </div>
+          <p>Now it is time to create <em>Platforms</em> for your Player to run on.</p>
+          <ul class="list-tight">
+            <li><strong>Ground platforms</strong> = solid floors/walls the player cannot pass through.</li>
+            <li><strong>Floating platforms</strong> = smaller "islands" placed at various heights.</li>
+            <li><strong>Jump-thru (one-way)</strong> = player can jump up through them from below and land on top.</li>
+          </ul>
+
+          <h3>Step 1: Turn On Grid & Snapping</h3>
+          <ol class="list-tight">
+            <li>Select <code>Toggle/Grid</code> → <code>Show grid</code> (ON).</li>
+            <div class="figure"><img src="/ict9/unit3/lesson2/2_grid.png" alt="Show grid toggle"></div>
+            <li>Select <code>Setup grid</code> to set the grid size to <k-input>64 × 64</k-input>.</li>
+            <p class="muted"><em>Why:</em> snapping keeps edges aligned so collisions are clean and movement feels right.</p>
+          </ol>
+
+          <h3>Step 2: Add the Tilemap for Platforms</h3>
+          <ol class="list-tight">
+            <li><code>Add a new object</code> → choose <code>Tile map</code> → select <code>Skip and create from scratch</code></li>
+            <ul style="margin-top: 0.5rem;">
+              <li>Object name: <k-input>Level_1_Platforms</k-input></li>
+              <li>Tile size: <k-input>64</k-input></li>
+              <li>Choose a file: File from your device → select your tileset PNG (e.g., <code>tilesheet_complete.png</code>)</li>
+              <li>In the Editor, click on the tiles that will be used as platforms — it will configure their behaviors.</li>
+              <div class="figure"><img src="/ict9/unit3/lesson2/3_level_1_platform.png" alt="Level 1 Platform properties"></div>
+            </ul>
+            <li>Click <code>Apply</code>.</li>
+            <li>Drag the <code>Level_1_Platforms</code> object to the scene layout and click on it. The Tilemap painter will open. Enter <k-input>0</k-input> for both X and Y values.</li>
+            <li>Close the <code>Layers</code> and <code>Objects</code> panels to see more of the Tilemap painter.</li>
+            <div class="figure"><img src="/ict9/unit3/lesson2/4_adding_tilemap.png" alt="Adding tilemap"></div>
+          </ol>
+
+          <h3>Step 3: Paint Your Platforms</h3>
+          <p>Click on a tile to select it, then paint it on your layout by clicking and dragging.</p>
+          <div class="figure"><img src="/ict9/unit3/lesson2/5_tilemap_painter.png" alt="Tilemap Painter"></div>
+          <ul class="list-tight">
+            <li>Place your cursor where you want to draw your platform, hold your button down, and the tile will be drawn.</li>
+            <li>Draw enough platforms to span most of your background. You can create a platform or two and duplicate them for faster building.</li>
+            <li>Combine different tiles to form varied ground.</li>
+          </ul>
+          <p class="muted">Here is an example you can follow if you don't know where to start:</p>
+          <div class="figure"><img src="/ict9/unit3/lesson2/6_platform_example.png" alt="Layout example"></div>
+
+          <h3>Step 4: Add Platform Behaviors</h3>
+          <ol class="list-tight">
+            <li>Click on the <code>Open Instance List Panel</code> and lock all the <code>Level_1_Platforms</code> objects.</li>
+            <li>Open the <code>Objects</code> menu and <strong>double-click</strong> on the <code>Level_1_Platforms</code> object.</li>
+            <li>Click on the <code>Behaviors</code> tab and <code>Add a behavior</code>.</li>
+            <li>Add the <code>Platform</code> behavior. This makes your platform a solid object for sprites to run on.</li>
+            <li>Click <code>Apply</code>.</li>
+            <div class="figure"><img src="/ict9/unit3/lesson2/8_platform_behaviour.png" alt="Platform behavior"></div>
+            <li>Save your work (<kbd>Ctrl</kbd> + <kbd>S</kbd>).</li>
+          </ol>
+
+          <h3>Step 5: Add Floating Platforms (Optional for now)</h3>
+          <ol class="list-tight">
+            <li>Right-click on the <code>Level_1_Platforms</code> object and <code>duplicate</code> it.</li>
+            <li>Rename it to <code>Level_1_Floating</code></li>
+            <li>Double-click the <code>Level_1_Floating</code> object and change the <code>Platform</code> behavior to <code>Jumpthrough platform</code>.</li>
+            <li>Drag the object onto the layout at X: <k-input>0</k-input>, Y: <k-input>0</k-input>, and paint one or two floating platforms.</li>
+            <li>Open the Instance List Panel and lock all floating objects.</li>
+            <li>Save your work.</li>
+            <div class="figure"><img src="/ict9/unit3/lesson2/7_floating_platforms.png" alt="Floating Platforms"></div>
+          </ol>
+
+          <div class="checkpoint">
+            <div class="checkpoint-row is-green">
+              <span class="checkpoint-icon">🟢</span>
+              <span><span class="checkpoint-label">Green:</span> you have platforms spanning your level, grid snapping is on, and the Platform behavior is applied. Preview shows the level layout without gaps.</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- TASK 3: PLAYER -->
+        <section class="card">
+          <div class="task-heading">
+            <span class="pill pill-green">Green</span>
+            <h2 id="task3">Task 3 — Add the player</h2>
+          </div>
+          <p>Now add the player sprite with platformer controls. You'll import a multi-animation Player, set its origin, add the Platformer Character behavior, and configure animations for Idle, Walk, Jump, and Fall.</p>
+
+          <h3>Step 1: Add the Player Object</h3>
+          <ol class="list-tight">
+            <li><code>Add a new object</code> → <strong>Sprite</strong> → name it <k-input>Player</k-input>. Select <code>Import images</code>.
+            <div class="figure"><img src="/ict9/unit3/lesson2/1_sprite.png" style="width:50%" alt="Sprite creation"></div></li>
+            <li>Select your player sprite file (e.g., <code>playerRed_stand.png</code>) from your assets folder.</li>
+            <li>In the Player Editor, name this animation <k-input>Idle</k-input>.</li>
+            <li>Click <code>+ Add an animation</code> to add <k-input>Walk</k-input>. Add walk frames (e.g., walk1, walk2, walk3).</li>
+            <li>Repeat to add <k-input>Jump</k-input> and <k-input>Fall</k-input> animations with their respective frames.</li>
+            <li>For Walk and Jump:
+              <ul style="margin-top: 0.5rem;">
+                <li>Check the <code>Loop</code> box to repeat the animation.</li>
+                <li>Change the <code>FPS</code> (frames per second) to <k-input>5</k-input> to slow the animation down.</li>
+                <li>If the animation looks wrong (jumping back to the start), duplicate the second frame and place it at the end to make a smoother loop.</li>
+              </ul>
+            </li>
+            <li>
+              Click <code>Edit points</code> → <code>Origin</code>. Set <strong>X</strong> to approximately center (e.g., <k-input>19.5</k-input>) and <strong>Y</strong> to the bottom (e.g., <k-input>48</k-input>). This keeps the player aligned with platforms.
+            </li>
+            <div class="figure"><img src="/ict9/unit3/lesson2/2_player_animations.png" alt="Player animations setup"></div>
+            <li><strong>DO NOT press Apply yet</strong> — we need to add behaviors first!</li>
+          </ol>
+
+          <h3>Step 2: Add Platformer Character Behavior</h3>
+          <ol class="list-tight">
+            <li>Select the <code>Behaviors</code> tab → <code>Add a behavior</code> → choose <strong>Platformer Character</strong>.</li>
+            <li>Leave all values as default for now (you can adjust gravity and speed later).</li>
+            <li>Confirm your ground objects have the <strong>Platform</strong> behavior and any pass-throughs use <strong>Jumpthrough platform</strong>.</li>
+            <li>Press <code>Apply</code>. Now you can add the player to the scene.</li>
+            <li>Drag your <code>Player</code> from the Objects menu and place it above a platform in the scene.
+              <div class="figure"><img src="/ict9/unit3/lesson2/3_player_inscene.png" alt="Player in scene"></div>
+            </li>
+            <li><code>Preview</code> your game. Try to move your player with the arrow keys.</li>
+          </ol>
+
+          <div class="checkpoint">
+            <div class="checkpoint-row is-green">
+              <span class="checkpoint-icon">🟢</span>
+              <span><span class="checkpoint-label">Green:</span> Player sprite is in the scene, you can move with arrow keys, and the player falls onto platforms.</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- TASK 4: CAMERA -->
+        <section class="card">
+          <div class="task-heading">
+            <span class="pill pill-green">Green</span>
+            <h2 id="task4">Task 4 — Set up the camera</h2>
+          </div>
+          <p>In preview, the player probably runs off the screen. Let's set up the camera so it follows the player.</p>
+
+          <h3>Step 1: Add Camera Behaviors</h3>
+          <ol class="list-tight">
+            <li>Double-click on the <code>Player</code> object and select the <code>Behaviors</code> tab.</li>
+            <li>Add the <code>Smooth Camera</code> behavior.</li>
+            <li>Add the <code>Smooth Platformer Camera</code> behavior.</li>
+            <li>Click <code>Apply</code>.</li>
+            <li>Save and preview. The camera should now follow your player!
+              <div class="figure"><img src="/ict9/unit3/lesson2/4_center_camera.png" alt="Camera behavior"></div>
+            </li>
+          </ol>
+
+          <h3>Step 2: Set Camera Boundaries (Optional but recommended)</h3>
+          <p>You might see "dead space" at the edges of your level that you don't want players to see. Let's enforce camera boundaries with an event.</p>
+          <ol class="list-tight">
+            <li>Click on your <code>Level 1(Events)</code> sheet (or create one if you don't have it).</li>
+            <li><code>Add a new event</code>
+              <ul style="margin-top: 0.5rem;">
+                <li><strong>Condition:</strong> Leave blank (runs every frame)</li>
+                <li><strong>Action:</strong> <code>Enforce Camera Boundaries</code> (Other actions → Camera → Layers and cameras → Enforce camera boundaries)
+                  <ul style="margin-top: 0.5rem;">
+                    <li>Left = <k-input>0</k-input></li>
+                    <li>Top = <k-input>0</k-input></li>
+                    <li>Right = <k-input>6400</k-input> (adjust based on your level width)</li>
+                    <li>Bottom = <k-input>768</k-input> (number of screen heights × 64)</li>
+                    <li>Layer = <k-input>Base layer</k-input></li>
+                    <li>Camera = <k-input>0</k-input></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>Save and preview. The camera should now stay within your boundaries.
+              <div class="figure"><img src="/ict9/unit3/lesson2/5_camera_boundaries.png" alt="Camera boundaries"></div>
+              <div class="figure"><img src="/ict9/unit3/lesson2/6_event_sheet.png" alt="Event sheet"></div>
+            </li>
+          </ol>
+
+          <h3>Step 3: Add Animation Events</h3>
+          <p>Let's add events so the player's animation changes when jumping and falling.</p>
+          <ol class="list-tight">
+            <li>Add a new event for the <strong>Jump</strong> animation:
+              <ul style="margin-top: 0.5rem;">
+                <li><strong>Condition:</strong> <code>Player → Platform state → Is Jumping</code></li>
+                <li><strong>Action:</strong> <code>Player → Animations and images → Animation (by name)</code> → set to <k-input>Jump</k-input></li>
+              </ul>
+            </li>
+            <li>Add a new event for the <strong>Fall</strong> animation:
+              <ul style="margin-top: 0.5rem;">
+                <li><strong>Condition:</strong> <code>Player → Platform state → Is Falling</code></li>
+                <li><strong>Action:</strong> <code>Player → Animations and images → Animation (by name)</code> → set to <k-input>Fall</k-input></li>
+              </ul>
+            </li>
+            <li>Add a new event for the <strong>Walk</strong> animation:
+              <ul style="margin-top: 0.5rem;">
+                <li><strong>Condition:</strong> <code>Player → Platform state → Is moving horizontally</code></li>
+                <li><strong>Action:</strong> <code>Player → Animations and images → Animation (by name)</code> → set to <k-input>Walk</k-input></li>
+              </ul>
+            </li>
+            <li>Add a new event for the <strong>Idle</strong> animation:
+              <ul style="margin-top: 0.5rem;">
+                <li><strong>Condition:</strong> <code>Player → Animations and images → Animation name equals</code> <k-input>Walk</k-input></li>
+                <li><strong>Condition:</strong> AND <code>Player → Platform state → Is NOT moving horizontally</code></li>
+                <li><strong>Action:</strong> <code>Player → Animations and images → Animation (by name)</code> → set to <k-input>Idle</k-input></li>
+              </ul>
+            </li>
+            <div class="figure"><img src="/ict9/unit3/lesson2/7_z_order.png" alt="Event sheet"></div>
+          </ol>
+
+          <div class="checkpoint">
+            <div class="checkpoint-row is-green">
+              <span class="checkpoint-icon">🟢</span>
+              <span><span class="checkpoint-label">Green:</span> Camera follows the player, player animations change (Idle, Walk, Jump, Fall), and camera stays in bounds.</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- TASK 5: END GOAL -->
+        <section class="card">
+          <div class="task-heading">
+            <span class="pill pill-green">Green</span>
+            <h2 id="task5">Task 5 — Add an end goal</h2>
+          </div>
+          <p>Now add a goal object that triggers a "You win!" screen when the player reaches it.</p>
+
+          <h3>Step 1: Create a Goal Object</h3>
+          <ol class="list-tight">
+            <li><code>Add a new object</code> → <strong>Sprite</strong> → name it <k-input>Goal</k-input>.</li>
+            <li>Import a goal image (e.g., a flag, treasure chest, or exit door) from your assets.</li>
+            <li>Place one instance at the end of your level (far right, on a platform).</li>
+          </ol>
+
+          <h3>Step 2: Add a Win Condition</h3>
+          <ol class="list-tight">
+            <li>In your Level 1(Events) sheet, add a new event:
+              <ul style="margin-top: 0.5rem;">
+                <li><strong>Condition:</strong> <code>Player → Collision → Player is in collision with Goal</code></li>
+                <li><strong>Action:</strong> <code>Scene → Change the scene</code> → <k-input>WinScene</k-input> (or create a simple text overlay for now)</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h3>Step 3: Create a Win Scene (Optional)</h3>
+          <ol class="list-tight">
+            <li>Create a new scene called <k-input>WinScene</k-input>.</li>
+            <li>Add a Text object that says "You Win!" (or add a sprite).</li>
+            <li>Save and preview — reach the goal to see your win message!</li>
+          </ol>
+
+          <div class="checkpoint">
+            <div class="checkpoint-row is-green">
+              <span class="checkpoint-icon">🟢</span>
+              <span><span class="checkpoint-label">Green:</span> Player can reach the end goal and trigger a win condition (scene change, text display, or similar).</span>
+            </div>
+            <div class="checkpoint-row is-red">
+              <span class="checkpoint-icon">🔴</span>
+              <span><span class="checkpoint-label">Red:</span> Player runs off the screen, platform collisions aren't working, or camera doesn't follow.</span>
+            </div>
+          </div>
+
+          <h3>Final Checkpoint: Full Boot Camp Completion</h3>
+          <div class="checkpoint">
+            <div class="checkpoint-row is-green">
+              <span class="checkpoint-icon">🟢</span>
+              <span><span class="checkpoint-label">Complete:</span> Player moves ✓ | Jumps ✓ | Collides with platforms ✓ | Camera follows ✓ | Reaches end goal ✓</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- BLUE TASKS -->
+        <section class="card">
+          <div class="task-heading">
+            <span class="pill pill-blue">Blue</span>
+            <h2>Blue: Add enemies, collectibles, and a second level</h2>
+          </div>
+          <p>Once Green is done, try these to go deeper:</p>
+          <ul class="list-tight">
+            <li><strong>Enemies:</strong> Create an enemy sprite with patrol behavior (walks left/right, turns at edges).</li>
+            <li><strong>Collectibles with score:</strong> Add coins or gems that disappear when collected and update a score counter on screen.</li>
+            <li><strong>A second level:</strong> Build a harder Level 2 scene and add a "Next Level" trigger at the end of Level 1.</li>
+          </ul>
+        </section>
+
+        <!-- BLACK MENU -->
+        <section class="card">
+          <details>
+            <summary><span class="pill pill-black">Black</span> <strong>Black menu: advanced challenges</strong></summary>
+            <div style="padding-top: 1rem;">
+              <ul class="list-tight">
+                <li><strong>Health/lives system:</strong> Add a health variable that decreases when the player hits an enemy. Show health on the HUD. Game Over at 0.</li>
+                <li><strong>Start menu scene:</strong> Create a Title screen with a Play button that changes to Level 1.</li>
+                <li><strong>Game Over scene:</strong> Create a Game Over screen that appears when lives reach 0, with a Restart button.</li>
+                <li><strong>Advanced enemies:</strong> Multiple enemy types with different speeds or patrol patterns.</li>
+                <li><strong>Moving platforms:</strong> Platforms that move horizontally or vertically (timed or looped).</li>
+              </ul>
+            </div>
+          </details>
+        </section>
+
+        <!-- WHAT CARRIES OVER -->
+        <section class="card">
+          <h2>What carries over to your track</h2>
+          <p>You're learning the fundamentals. Here's what you'll reuse in 3.3:</p>
+          <ul class="list-tight">
+            <li><strong>All tracks:</strong> Scenes and scene switching, sprites with animations, events (conditions & actions), variables, collisions, cameras.</li>
+            <li><strong>Story:</strong> Text objects, dialogue, click-to-advance, branching choices.</li>
+            <li><strong>Explore:</strong> Click/touch conditions, drag behaviors, UI layers, HUD display.</li>
+            <li><strong>Play:</strong> Everything above — platforms, enemies, collectibles, health, game over logic.</li>
+          </ul>
+        </section>
+
+        <!-- AI PROMPT -->
+        <section class="card">
+          <h2>AI Reflection Prompt</h2>
+          <p>When an event doesn't do what you expect:</p>
+          <blockquote class="ai-prompt">
+            <em>"Copy what the event says into AI and ask: 'Explain what this GDevelop event does in plain English.' Don't ask it to fix it — use the explanation to fix it yourself."</em>
+          </blockquote>
+        </section>
+
+        <!-- GOTCHA -->
+        <section class="card">
+          <div class="gotcha">
+            <strong>Save often.</strong>
+            <ul style="margin-top: 0.5rem;">
+              <li><strong>Path A:</strong> Before you leave, back up to H: and log out.</li>
+              <li><strong>Path B:</strong> Check you're saving to H:, not Downloads or Documents.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- HAND IT IN -->
+        <section class="card">
+          <h2>Hand It In</h2>
+          <p>Post to the Teams assignment for Lesson 3.2:</p>
+          <ul class="list-tight">
+            <li>A screenshot of your level with the player at the end goal, or a short Snipping Tool screen recording.</li>
+            <li>Your AI reflection (explain one event that confused you and how you fixed it).</li>
+          </ul>
+        </section>
+
       </main>
-      <aside id="right-rail" aria-label="Resources"></aside>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card">
+          <strong>Success criteria</strong>
+          <ul class="list-tight">
+            <li>Player moves with arrow keys</li>
+            <li>Player jumps and falls with gravity</li>
+            <li>Player collides with platforms (doesn't fall through)</li>
+            <li>Camera follows the player</li>
+            <li>Reaching the goal triggers a win condition</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Watch out for</strong>
+          <ul class="list-tight">
+            <li>Collisions failing because an object is missing its behavior</li>
+            <li>Saving to the wrong folder (Path A/B confusion)</li>
+            <li>Platform behavior not applied to tilemap</li>
+            <li>Player origin not centered (causes misaligned jumps)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>What to check on a lab PC</strong>
+          <ul class="list-tight">
+            <li>GDevelop UI paths (menu names may have changed)</li>
+            <li>Behavior names (Platform, Platformer Character, Smooth Camera, etc.)</li>
+            <li>Free-plan cloud project limits</li>
+            <li>Save/backup paths to H:</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Next up</strong>
+          <p class="muted"><a href="/ict9/unit3/lesson3/3.3_index.html">3.3 Build It</a></p>
+        </div>
+      </aside>
     </div>
+
     <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
   </body>
 </html>
-

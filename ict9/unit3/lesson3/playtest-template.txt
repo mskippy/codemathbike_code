@@ -1,0 +1,85 @@
+PLAYTEST FEEDBACK TEMPLATE
+==========================
+
+Project: ________________________________
+Built by: ________________________________
+Date: ________________________________
+
+
+PLAYTEST 1
+----------
+Player name: ________________
+
+What worked well?
+-
+-
+-
+
+What confused you or felt unfair?
+-
+-
+-
+
+What would you change?
+-
+-
+-
+
+
+PLAYTEST 2
+----------
+Player name: ________________
+
+What worked well?
+-
+-
+-
+
+What confused you or felt unfair?
+-
+-
+-
+
+What would you change?
+-
+-
+-
+
+
+PLAYTEST 3+ (if done)
+----------
+Player name: ________________
+
+What worked well?
+-
+-
+-
+
+What confused you or felt unfair?
+-
+-
+-
+
+What would you change?
+-
+-
+-
+
+
+FIXES APPLIED
+==============
+After each playtest, list what you fixed:
+
+Issue from Playtest 1: ____________________
+What I changed: ____________________
+
+Issue from Playtest 2: ____________________
+What I changed: ____________________
+
+Issue from Playtest 3: ____________________
+What I changed: ____________________
+
+
+NOTES FOR NEXT SESSION
+======================
+(Anything still needing work? Known bugs? Ideas?)

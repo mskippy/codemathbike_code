@@ -1,0 +1,64 @@
+SCENE CHECKLIST
+================
+
+Project: ________________________________
+Built by: ________________________________
+
+Use this to track which levels/chapters/rooms/scenarios you need to build.
+Mark each one as you complete it.
+
+CONTENT PLAN
+============
+
+Scene Name / Description          Status    Notes
+────────────────────────────────────────────────────────────────
+☐ 1. _____________________          [ ]
+☐ 2. _____________________          [ ]
+☐ 3. _____________________          [ ]
+☐ 4. _____________________          [ ]
+☐ 5. _____________________          [ ]
+☐ 6. _____________________          [ ]
+☐ 7. _____________________          [ ]
+☐ 8. _____________________          [ ]
+
+
+POLISH CHECKLIST
+=================
+After all scenes are built, go through this checklist:
+
+Content
+  ☐ No placeholder text or graphics remain
+  ☐ All scenes have clear start and end points
+  ☐ Transitions between scenes are smooth (not jarring)
+  ☐ HUD and UI consistent across all scenes
+
+Functionality
+  ☐ Each scene is playable end-to-end with no crashes
+  ☐ No soft locks (player can't proceed)
+  ☐ Win/lose/next conditions work as designed
+  ☐ Save/reload works if applicable
+
+Art & Audio
+  ☐ All sprites match the team's art style and color palette
+  ☐ Fonts and text sizes consistent
+  ☐ Audio (if used) doesn't overlap or cut out
+
+Difficulty & Balance
+  ☐ Progression feels right (not too hard, not too easy)
+  ☐ First scene is a good intro; later scenes build on it
+  ☐ No unfair instant-deaths or confusion
+
+
+KNOWN ISSUES (note these for later fixing)
+============================================
+
+Issue                              Severity (High/Med/Low)   When found
+──────────────────────────────────────────────────────────────────────
+____________________________        ________________        ___________
+____________________________        ________________        ___________
+____________________________        ________________        ___________
+
+
+FINAL NOTES
+===========
+(Anything you learned? Anything you'd do differently? Anything to tell your teammates?)

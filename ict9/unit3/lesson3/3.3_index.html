@@ -1,8 +1,10 @@
+<!-- v1 – Oct 2026 -->
 <!doctype html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>ICT 9 • Coming Soon</title>
+    <title>ICT 9 • Unit 3 • Lesson 3.3 — Build It</title>
     <link rel="stylesheet" href="/common/css/base.css">
     <script src="/common/js/nav_data.js" defer></script>
     <script src="/common/js/utils.js" defer></script>
@@ -10,19 +12,280 @@
     <script src="/common/js/nav_systems.js" defer></script>
     <script src="/common/js/main.js" defer></script>
   </head>
+
   <body data-course="ict9">
     <header id="site-header" data-partial="/common/partials/header.html"></header>
+
     <div class="page-wrap">
       <aside id="sidebar" aria-label="Course navigation"></aside>
-      <main id="content" role="main" data-page-title="ICT 9 • Coming Soon">
-        <section class="card">
-          <h1>This lesson is not published yet</h1>
-          <p>Check back once class is in session — this page is still being built.</p>
-        </section>
+
+      <main id="content" role="main" data-page-title="ICT 9 • Unit 3 • Lesson 3.3">
+
+        <!-- 3.3.0: Intro -->
+        <div class="card">
+          <h2>Intro</h2>
+          <p>Your team has a design doc. You've learned platformer mechanics in the Boot Camp. Now it's time to build.</p>
+          <p>In this lesson, you'll create your own playable piece—a level, chapter, room, or scenario within your team's shared concept. You'll hit three <strong>gates</strong> to keep the build on track:</p>
+          <ul>
+            <li><strong>First Playable 🟢</strong> — Core mechanic works; player can do the main thing your game is about.</li>
+            <li><strong>Playtested 🟡</strong> — Real players have tried it; you've fixed the most obvious issues.</li>
+            <li><strong>Content Complete 🟢</strong> — All levels/chapters/rooms are built and working; no major placeholders.</li>
+          </ul>
+          <p>You'll work independently, but checkpoints keep you synced with the team.</p>
+        </div>
+
+        <!-- 3.3.1: Before You Start -->
+        <div class="card">
+          <h2>Before You Start</h2>
+          <p><strong>You need:</strong></p>
+          <ul>
+            <li>Your team's approved design doc from Lesson 3.1</li>
+            <li>A copy of your Platformer Boot Camp project (Lesson 3.2) as the starting point</li>
+            <li>Clarity on your playable piece: which level/chapter/room/scenario are you building?</li>
+            <li>A playtest document (Google Doc or Word) shared with your team for feedback</li>
+          </ul>
+          <p><strong>Keep in mind:</strong> Each team member builds a separate playable piece in their own GDevelop project, but all pieces follow the same art style, mechanics, and HUD from the design doc. Your Art Lead has prepared a shared assets folder in Teams.</p>
+        </div>
+
+        <!-- 3.3.2: Gate 1 — First Playable -->
+        <div class="card">
+          <h2>Task 1: First Playable 🟢</h2>
+          <p><strong>Goal:</strong> Show that the core mechanic works in your piece.</p>
+          <p><em>Duration: 1–2 class periods</em></p>
+
+          <ol>
+            <li><strong>Claim your piece.</strong> In your team's design doc, under "Build Plan," write your name next to the piece you're building (e.g., "Level 2," "Chapter 1," "Quiz Round"). If a teammate is already building it, pick the next one.</li>
+
+            <li><strong>Set up your own GDevelop project.</strong>
+              <ul>
+                <li>Copy your Platformer Boot Camp project and rename it something clear, like <code>YourName_Level2</code> or <code>YourName_Chapter1</code>.</li>
+                <li>Save it to <code>H:\ICT 9\3_dev_team\platformer\</code> (Path B) or back it up regularly (Path A).</li>
+              </ul>
+            </li>
+
+            <li><strong>Build the layout.</strong>
+              <ul>
+                <li><strong>For Play (platformer/top-down):</strong> Create the tilemap layout for your level using the tile palette your Art Lead provided. Test that the player can move, jump, collide, and the camera follows.</li>
+                <li><strong>For Story (interactive fiction/visual novel):</strong> Set up your scene with background image, character sprites, and a dialogue box (or use a dialogue extension). Make sure the player can click to advance.</li>
+                <li><strong>For Explore (quiz/simulation/tour):</strong> Create the first interactive screen: a quiz question with clickable buttons, a simulation parameter the player can adjust, or a tour waypoint with navigation buttons.</li>
+              </ul>
+            </li>
+
+            <li><strong>Implement the core mechanic.</strong>
+              <ul>
+                <li><strong>For Play:</strong> A goal object (exit, flag, or trigger) that loads a "Next Level" or "Level Complete" scene when the player reaches it.</li>
+                <li><strong>For Story:</strong> A choice or dialogue tree: the player sees two options and their choice changes the next scene.</li>
+                <li><strong>For Explore:</strong> A correct answer triggers feedback or moves to the next question/screen; a wrong answer shows a hint or penalty.</li>
+              </ul>
+            </li>
+
+            <li><strong>Preview and test.</strong> Launch preview and play through your piece end-to-end. Does the main action work? Does the player feel like they accomplished something? <span class="checkpoint">🟢 If yes, you've hit Gate 1.</span></li>
+
+            <li><strong>Save and commit.</strong> If using Git (H: drive), commit your work with a message like <code>First playable: Level 2 layout + goal</code>.</li>
+          </ol>
+
+          <p><strong>Checkpoint:</strong> Your piece is playable start-to-finish. A player can do the main action (reach a goal, make a choice, answer a question) and see a clear outcome.</p>
+        </div>
+
+        <!-- 3.3.3: Gate 2 — Playtested -->
+        <div class="card">
+          <h2>Task 2: Playtested 🟡</h2>
+          <p><strong>Goal:</strong> Get real feedback and fix the biggest issues.</p>
+          <p><em>Duration: 1–2 class periods</em></p>
+
+          <ol>
+            <li><strong>Create a playtest doc.</strong> In your team's shared folder, create a simple Google Doc or Word doc:
+              <div style="background: #f5f5f5; padding: 1rem; border-radius: 4px; margin: 1rem 0; font-family: monospace; font-size: 0.9rem;">
+                <strong>YourName's Playtest Feedback</strong><br><br>
+                Player name | Date | What worked | What confused you | What would you change<br>
+                Alex | Oct 8 | Loved the puzzle mechanic | Not clear which door opens first | Add an arrow hint<br>
+                Jordan | Oct 8 | Nice art | Too hard to time the jump | Make platforms wider<br>
+              </div>
+            </li>
+
+            <li><strong>Run at least two playtests.</strong>
+              <ul>
+                <li>Invite two teammates or another student from class (not your team—they'll give honest feedback).</li>
+                <li>Watch them play without helping. Let them struggle a bit so you see real problems.</li>
+                <li>Ask: "What was confusing? What felt unfair? What did you like?"</li>
+                <li>Record feedback in your doc.</li>
+              </ul>
+            </li>
+
+            <li><strong>Prioritize fixes.</strong> Look at your playtest feedback. Pick the top 3 issues:
+              <ul>
+                <li>Bugs (player gets stuck, crashes, unintended behavior)</li>
+                <li>Clarity (player doesn't understand what to do)</li>
+                <li>Balance (too easy / too hard / takes too long)</li>
+              </ul>
+            </li>
+
+            <li><strong>Implement fixes.</strong> In GDevelop, fix each issue. Examples:
+              <ul>
+                <li>Add a hint on screen if players miss the goal.</li>
+                <li>Adjust platform spacing or enemy speed.</li>
+                <li>Add a tutorial text if the mechanic is new.</li>
+                <li>Remove invisible walls that trap the player.</li>
+              </ul>
+            </li>
+
+            <li><strong>Playtest again.</strong> Invite one of your first testers back. Do they run into the same problems? If yes, dig deeper. If no, you're on the right track.</li>
+
+            <li><strong>Update your playtest doc.</strong> Add a "Fixes applied" section noting what you changed.
+              <div style="background: #f5f5f5; padding: 1rem; border-radius: 4px; margin: 1rem 0; font-family: monospace; font-size: 0.9rem;">
+                <strong>Fixes applied:</strong><br>
+                - Widened platforms by 50px (feedback: too hard to time)<br>
+                - Added on-screen hint: "Reach the red flag to complete" (feedback: unclear goal)<br>
+                - Slowed enemy speed from 180 to 140 (feedback: unfair side hits)<br>
+              </div>
+            </li>
+
+            <li><strong>Save and commit.</strong> Message: <code>Playtested: fixed spacing, added hints, tuned difficulty</code>.</li>
+          </ol>
+
+          <p><strong>Checkpoint:</strong> Your piece has been played by at least two people; you've documented their feedback and fixed the most critical issues.</p>
+        </div>
+
+        <!-- 3.3.4: Gate 3 — Content Complete -->
+        <div class="card">
+          <h2>Task 3: Content Complete 🟢</h2>
+          <p><strong>Goal:</strong> Finish building all the content for your piece (all levels, all chapters, all quiz rounds, etc.).</p>
+          <p><em>Duration: 2–3 class periods</em></p>
+
+          <ol>
+            <li><strong>List everything you need to build.</strong> From your design doc, write down every level/chapter/room/screen in your piece. Example for Play:
+              <ul>
+                <li>Level 1: Intro (teach basic jump) ✓ Done</li>
+                <li>Level 2: Platforms puzzle ✓ Done</li>
+                <li>Level 3: Enemy gauntlet ☐ Not started</li>
+                <li>Level 4: Boss ☐ Not started</li>
+              </ul>
+            </li>
+
+            <li><strong>Build remaining levels/chapters/rooms.</strong> You can copy and modify your first level as a template. For each:
+              <ul>
+                <li><strong>For Play:</strong> Use the same tilemap, enemy types, and HUD. Increase difficulty or introduce new mechanics (moving platforms, springs, new enemy type, collectibles).</li>
+                <li><strong>For Story:</strong> Write the dialogue, position character sprites, set up the choice branches.</li>
+                <li><strong>For Explore:</strong> Write all quiz questions, set up simulation parameters, plan tour waypoints.</li>
+              </ul>
+            </li>
+
+            <li><strong>Polish visuals and flow.</strong>
+              <ul>
+                <li>Check that all sprites use the team's art style (colors, size, proportion).</li>
+                <li>Make sure transitions between levels/chapters are smooth (use scene-change events, not just "go to next scene").</li>
+                <li>Ensure the HUD and fonts are consistent throughout.</li>
+              </ul>
+            </li>
+
+            <li><strong>Playtest the whole piece.</strong> Play from start to end. Does every level work? Can you reach every goal? Are there any crashes or soft locks?</li>
+
+            <li><strong>Remove placeholders.</strong> Delete any "TODO" comments, placeholder sprites, or debug text. Everything should feel intentional.</li>
+
+            <li><strong>Final preview.</strong> Export or run preview. Play the entire piece once more. If you're happy with it, you're done. <span class="checkpoint">🟢 Content Complete.</span></li>
+
+            <li><strong>Save and commit.</strong> Message: <code>Content complete: all levels built and polished</code>.</li>
+          </ol>
+
+          <p><strong>Checkpoint:</strong> All content for your piece is built, playable, and polished. No placeholders or major bugs remain.</p>
+        </div>
+
+        <!-- 3.3.5: Blue — Deeper Learning -->
+        <div class="card">
+          <h2>Blue Tasks: Deeper Learning</h2>
+          <p>Once you've hit all three gates, try one of these:</p>
+          <ul>
+            <li><strong>Advanced enemy AI.</strong> Add an enemy that uses pathfinding or patrols between multiple waypoints (Play tracks).</li>
+            <li><strong>Dynamic difficulty.</strong> Keep track of how many times the player fails and scale difficulty (easier platforms, slower enemies) if they're struggling too much (Play).</li>
+            <li><strong>Branching storyline.</strong> Create a second branch: two different choices lead to two different outcomes (Story).</li>
+            <li><strong>Leaderboard.</strong> Track the player's score or time and save it to show on a results screen (Play/Explore).</li>
+            <li><strong>Accessibility pass.</strong> Add colorblind-friendly palettes, bigger text, or controls remapping (any track).</li>
+          </ul>
+        </div>
+
+        <!-- 3.3.6: Black Menu — Extensions -->
+        <details class="card">
+          <summary><h2>Black Menu: Extensions</h2></summary>
+          <ul>
+            <li><strong>Procedural level generation.</strong> Code a system that randomly generates platform layouts so each playthrough is different (Play).</li>
+            <li><strong>Dialogue system.</strong> Build a more sophisticated dialogue tree with branching replies and character memory (Story).</li>
+            <li><strong>Achievements/Badges.</strong> Unlock badges for finding secrets, speedrunning, or making "good" moral choices (any track).</li>
+            <li><strong>Particle effects.</strong> Add visual polish: explosions, collectible sparkles, screen shake on stomp (any track).</li>
+            <li><strong>Your own feature.</strong> Something creative that no one in the room has done yet. Run it by your Creative Director first.</li>
+          </ul>
+        </details>
+
+        <!-- 3.3.7: Reflection -->
+        <div class="card">
+          <h2>Reflection</h2>
+          <ul>
+            <li>Describe your First Playable moment. What was the core mechanic that had to work?</li>
+            <li>What was the most surprising piece of playtest feedback you got? How did you fix it?</li>
+            <li>If you had more time, what would you add or change in your piece?</li>
+            <li>How did your team's design doc help you know what to build? What was unclear?</li>
+          </ul>
+        </div>
+
+        <!-- 3.3.8: Hand It In -->
+        <div class="card">
+          <h2>Hand It In</h2>
+          <p>Submit to Teams under <strong>"Lesson 3.3 — Build It."</strong></p>
+          <ul>
+            <li><strong>Your GDevelop project file</strong> (cloud link or attachment)</li>
+            <li><strong>A short preview clip</strong> (10–20s, showing all three gates in action if possible)</li>
+            <li><strong>Your playtest doc</strong> (link to shared Google Doc or Word file with feedback)</li>
+            <li><strong>Your reflection</strong> (the four prompts answered)</li>
+            <li><strong>A screenshot of the scene list</strong> showing all levels/chapters/rooms you built</li>
+          </ul>
+        </div>
+
       </main>
-      <aside id="right-rail" aria-label="Resources"></aside>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card sticky">
+          <h3>Success Criteria</h3>
+          <ul>
+            <li><strong>Gate 1 (First Playable):</strong> Core mechanic works. Player can start, perform the main action, and see an outcome. Project saved.</li>
+            <li><strong>Gate 2 (Playtested):</strong> ≥2 playtests completed. Feedback documented. Top 3 issues fixed. Updated doc submitted.</li>
+            <li><strong>Gate 3 (Content Complete):</strong> All levels/chapters/rooms built. Polished and free of placeholders. Full playthrough works.</li>
+            <li><strong>Reflection:</strong> All four prompts answered with specific examples from your build.</li>
+          </ul>
+        </div>
+
+        <div class="card sticky">
+          <h3>Watch Out For</h3>
+          <ul>
+            <li><strong>Scope creep.</strong> Stick to what your design doc says. Don't start building features that weren't planned.</li>
+            <li><strong>Playtester isolation.</strong> Don't watch over their shoulder and explain things. Let them figure it out. That's where the real feedback comes from.</li>
+            <li><strong>Forgetting to save/commit.</strong> Save your project after each major gate. If using Git, commit after every playtest fix.</li>
+            <li><strong>Art mismatches.</strong> Check that your sprites and colors match the team's art style. Ask your Art Lead if you're unsure.</li>
+            <li><strong>Soft locks.</strong> Test every edge case: What if the player jumps in a weird spot? What if they click a button twice? Weird AI behavior? Fix these before Content Complete.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>What Carries Over</h3>
+          <p><strong>Play track:</strong> Everything from the Platformer Boot Camp (physics, enemies, collectibles, HUD) applies directly. You're building more levels with increasing difficulty.</p>
+          <p><strong>Story track:</strong> Dialogue management and branching logic are like event-based platformer mechanics—conditions (player clicks) trigger actions (show next dialogue, change scene, update variables).</p>
+          <p><strong>Explore track:</strong> Quiz logic (check answer → show feedback), simulation (track parameters → update display), and tours (button clicks → change scenes) all use the same event architecture.</p>
+        </div>
+
+        <div class="card">
+          <h3>Downloads</h3>
+          <ul class="list-tight">
+            <li><a href="/ict9/unit3/lesson3/playtest-template.docx" download>Playtest Doc Template (Word)</a></li>
+            <li><a href="/ict9/unit3/lesson3/scene-checklist.txt" download>Scene Checklist (Text)</a></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Next Up</h3>
+          <p><strong>Lesson 3.4: Brand Kit & Poster</strong> — While your piece is out for final polish, your team's Art Lead and Marketing Lead will design your brand and poster. You'll contribute feedback.</p>
+        </div>
+      </aside>
+
     </div>
+
     <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
   </body>
 </html>
-
