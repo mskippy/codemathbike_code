@@ -39,10 +39,39 @@
             <li><a href="#task6">Task 6: One level with an end goal</a></li>
           </ul>
         </section>
-
+        <!---->
         <section class="card">
           <div class="lesson-note">
             <strong>Monday:</strong> your teacher will model Task 1 live. That walkthrough <em>is</em> Task 1 — once it's done, you keep going independently. This pattern repeats all unit: read → build → checkpoint.
+          </div>
+        </section> -->
+
+        <!-- ASSETS: DOWNLOAD FIRST -->
+        <section class="card">
+          <h2>⬇️ Download Your Assets FIRST</h2>
+          <p><strong>Before you start building, download the asset pack for this boot camp.</strong> You'll need sprites, tilesets, and background images to build your platformer.</p>
+
+          <h3>Step 1: Choose Your Asset Pack</h3>
+          <p>Pick ONE of these:</p>
+          <ul class="list-tight">
+            <li><strong>For this tutorial:</strong> <a href="/ict9/unit3/kenney_abstract-platformer/">Kenney Abstract Platformer</a> — Open this folder to see the PNG tilesets and sprite files. You can use these directly in your GDevelop project.</li>
+            <li><strong>For more variety:</strong> <a href="/ict9/unit3/kenney_platformer-pack-remastered.zip">Kenney Platformer Remastered ZIP</a> — Download and unzip this to explore more art styles and tiles.</li>
+            <li><strong>Want something different?</strong> Visit <a href="https://kenney.nl" target="_blank">kenney.nl</a> and download any free pack you like. (Kenney Assets are free for personal and commercial use.)</li>
+          </ul>
+
+          <h3>Step 2: Save Your Assets</h3>
+          <p>Once downloaded, save the assets to a folder you can access in GDevelop:</p>
+          <ul class="list-tight">
+            <li><strong>Path A (cloud account):</strong> Save to <code>H:\ICT 9\3_dev_team\assets\</code> so you can access them from the web editor</li>
+            <li><strong>Path B (desktop only):</strong> Save to <code>H:\ICT 9\3_dev_team\assets\</code> (same place)</li>
+          </ul>
+          <p class="muted"><em>You'll import PNG tilesets and sprite files from this folder when you build your platformer.</em></p>
+
+          <div class="checkpoint">
+            <div class="checkpoint-row is-green">
+              <span class="checkpoint-icon">🟢</span>
+              <span><span class="checkpoint-label">Asset setup check:</span> I have downloaded assets and saved them to H:\ICT 9\3_dev_team\assets\</span>
+            </div>
           </div>
         </section>
 
@@ -119,7 +148,7 @@
           <h3>Step 1: Turn On Grid & Snapping</h3>
           <ol class="list-tight">
             <li>Select <code>Toggle/Grid</code> → <code>Show grid</code> (ON).</li>
-            <div class="figure"><img src="/ict9/unit3/lesson2/2_grid.png" alt="Show grid toggle"></div>
+            <div class="figure"><img src="/ict9/unit3/lesson2/images/2_grid.png" alt="Show grid toggle"></div>
             <li>Select <code>Setup grid</code> to set the grid size to <k-input>64 × 64</k-input>.</li>
             <p class="muted"><em>Why:</em> snapping keeps edges aligned so collisions are clean and movement feels right.</p>
           </ol>
@@ -132,24 +161,24 @@
               <li>Tile size: <k-input>64</k-input></li>
               <li>Choose a file: File from your device → select your tileset PNG (e.g., <code>tilesheet_complete.png</code>)</li>
               <li>In the Editor, click on the tiles that will be used as platforms — it will configure their behaviors.</li>
-              <div class="figure"><img src="/ict9/unit3/lesson2/3_level_1_platform.png" alt="Level 1 Platform properties"></div>
+              <div class="figure"><img src="/ict9/unit3/lesson2/images/3_level_1_platform.png" alt="Level 1 Platform properties"></div>
             </ul>
             <li>Click <code>Apply</code>.</li>
             <li>Drag the <code>Level_1_Platforms</code> object to the scene layout and click on it. The Tilemap painter will open. Enter <k-input>0</k-input> for both X and Y values.</li>
             <li>Close the <code>Layers</code> and <code>Objects</code> panels to see more of the Tilemap painter.</li>
-            <div class="figure"><img src="/ict9/unit3/lesson2/4_adding_tilemap.png" alt="Adding tilemap"></div>
+            <div class="figure"><img src="/ict9/unit3/lesson2/images/4_adding_tilemap.png" alt="Adding tilemap"></div>
           </ol>
 
           <h3>Step 3: Paint Your Platforms</h3>
           <p>Click on a tile to select it, then paint it on your layout by clicking and dragging.</p>
-          <div class="figure"><img src="/ict9/unit3/lesson2/5_tilemap_painter.png" alt="Tilemap Painter"></div>
+          <div class="figure"><img src="/ict9/unit3/lesson2/images/5_tilemap_painter.png" alt="Tilemap Painter"></div>
           <ul class="list-tight">
             <li>Place your cursor where you want to draw your platform, hold your button down, and the tile will be drawn.</li>
             <li>Draw enough platforms to span most of your background. You can create a platform or two and duplicate them for faster building.</li>
             <li>Combine different tiles to form varied ground.</li>
           </ul>
           <p class="muted">Here is an example you can follow if you don't know where to start:</p>
-          <div class="figure"><img src="/ict9/unit3/lesson2/6_platform_example.png" alt="Layout example"></div>
+          <div class="figure"><img src="/ict9/unit3/lesson2/images/6_platform_example.png" alt="Layout example"></div>
 
           <h3>Step 4: Add Platform Behaviors</h3>
           <ol class="list-tight">
@@ -158,7 +187,7 @@
             <li>Click on the <code>Behaviors</code> tab and <code>Add a behavior</code>.</li>
             <li>Add the <code>Platform</code> behavior. This makes your platform a solid object for sprites to run on.</li>
             <li>Click <code>Apply</code>.</li>
-            <div class="figure"><img src="/ict9/unit3/lesson2/8_platform_behaviour.png" alt="Platform behavior"></div>
+            <div class="figure"><img src="/ict9/unit3/lesson2/images/8_platform_behaviour.png" alt="Platform behavior"></div>
             <li>Save your work (<kbd>Ctrl</kbd> + <kbd>S</kbd>).</li>
           </ol>
 
@@ -170,7 +199,7 @@
             <li>Drag the object onto the layout at X: <k-input>0</k-input>, Y: <k-input>0</k-input>, and paint one or two floating platforms.</li>
             <li>Open the Instance List Panel and lock all floating objects.</li>
             <li>Save your work.</li>
-            <div class="figure"><img src="/ict9/unit3/lesson2/7_floating_platforms.png" alt="Floating Platforms"></div>
+            <div class="figure"><img src="/ict9/unit3/lesson2/images/7_floating_platforms.png" alt="Floating Platforms"></div>
           </ol>
 
           <div class="checkpoint">
@@ -192,7 +221,7 @@
           <h3>Step 1: Add the Player Object</h3>
           <ol class="list-tight">
             <li><code>Add a new object</code> → <strong>Sprite</strong> → name it <k-input>Player</k-input>. Select <code>Import images</code>.
-            <div class="figure"><img src="/ict9/unit3/lesson2/1_sprite.png" style="width:50%" alt="Sprite creation"></div></li>
+            <div class="figure"><img src="/ict9/unit3/lesson2/images/1_sprite.png" style="width:50%" alt="Sprite creation"></div></li>
             <li>Select your player sprite file (e.g., <code>playerRed_stand.png</code>) from your assets folder.</li>
             <li>In the Player Editor, name this animation <k-input>Idle</k-input>.</li>
             <li>Click <code>+ Add an animation</code> to add <k-input>Walk</k-input>. Add walk frames (e.g., walk1, walk2, walk3).</li>
@@ -207,7 +236,7 @@
             <li>
               Click <code>Edit points</code> → <code>Origin</code>. Set <strong>X</strong> to approximately center (e.g., <k-input>19.5</k-input>) and <strong>Y</strong> to the bottom (e.g., <k-input>48</k-input>). This keeps the player aligned with platforms.
             </li>
-            <div class="figure"><img src="/ict9/unit3/lesson2/2_player_animations.png" alt="Player animations setup"></div>
+            <div class="figure"><img src="/ict9/unit3/lesson2/images/2_player_animations.png" alt="Player animations setup"></div>
             <li><strong>DO NOT press Apply yet</strong> — we need to add behaviors first!</li>
           </ol>
 
@@ -218,7 +247,7 @@
             <li>Confirm your ground objects have the <strong>Platform</strong> behavior and any pass-throughs use <strong>Jumpthrough platform</strong>.</li>
             <li>Press <code>Apply</code>. Now you can add the player to the scene.</li>
             <li>Drag your <code>Player</code> from the Objects menu and place it above a platform in the scene.
-              <div class="figure"><img src="/ict9/unit3/lesson2/3_player_inscene.png" alt="Player in scene"></div>
+              <div class="figure"><img src="/ict9/unit3/lesson2/images/3_player_inscene.png" alt="Player in scene"></div>
             </li>
             <li><code>Preview</code> your game. Try to move your player with the arrow keys.</li>
           </ol>
@@ -246,7 +275,7 @@
             <li>Add the <code>Smooth Platformer Camera</code> behavior.</li>
             <li>Click <code>Apply</code>.</li>
             <li>Save and preview. The camera should now follow your player!
-              <div class="figure"><img src="/ict9/unit3/lesson2/4_center_camera.png" alt="Camera behavior"></div>
+              <div class="figure"><img src="/ict9/unit3/lesson2/images/4_center_camera.png" alt="Camera behavior"></div>
             </li>
           </ol>
 
@@ -270,8 +299,8 @@
               </ul>
             </li>
             <li>Save and preview. The camera should now stay within your boundaries.
-              <div class="figure"><img src="/ict9/unit3/lesson2/5_camera_boundaries.png" alt="Camera boundaries"></div>
-              <div class="figure"><img src="/ict9/unit3/lesson2/6_event_sheet.png" alt="Event sheet"></div>
+              <div class="figure"><img src="/ict9/unit3/lesson2/images/5_camera_boundaries.png" alt="Camera boundaries"></div>
+              <div class="figure"><img src="/ict9/unit3/lesson2/images/6_event_sheet.png" alt="Event sheet"></div>
             </li>
           </ol>
 
@@ -303,7 +332,7 @@
                 <li><strong>Action:</strong> <code>Player → Animations and images → Animation (by name)</code> → set to <k-input>Idle</k-input></li>
               </ul>
             </li>
-            <div class="figure"><img src="/ict9/unit3/lesson2/7_z_order.png" alt="Event sheet"></div>
+            <div class="figure"><img src="/ict9/unit3/lesson2/images/7_z_order.png" alt="Event sheet"></div>
           </ol>
 
           <div class="checkpoint">
