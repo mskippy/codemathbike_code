@@ -5,17 +5,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
-  
+
   <!-- 💡 TYPE ZONE: Add your name below.  -->
-  <title>My First Webpage –Kiera</title>
+  <!-- CHANGED (Oct 2026): title and author had a stray dash ("–Kiera"). Corrected to "Kiera H". -->
+  <title>My First Webpage – Kiera H</title>
   <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
-  <meta name="author" content="–Kiera" />
+  <meta name="author" content="Kiera H" />
+</head>
 
-      <p style="margin-top:12px;">
-        <a href='/ict8/unit4/web_dev/S1W1/s1w1_index.html'>← Back to S1W1 class page</a>
-      </p>
+<body>
+  <!-- CHANGED (Oct 2026): back link pointed to a file that does not exist. Now points to the S1W1 index page. -->
+  <p style="margin-top:12px;">
+    <a href="/ict8/unit4/web_dev/S1W1/index.html">← Back to S1W1 class page</a>
+  </p>
 
-  
   <style>
     /* Base page styling */
     :root {
@@ -47,12 +50,11 @@
   </style>
 </head>
 
-
 <body>
   <main class="card">
     <header>
       <!-- 💡 TYPE ZONE: add your name below -->
-      <h1>Hi, I'm Kiera <span id="studentName"></span> 👋</h1>
+      <h1>Hi, I'm <span id="studentName">Kiera H</span> 👋</h1>
       <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
     </header>
 
@@ -76,9 +78,10 @@
     <section>
       <h2>An Awesome Image</h2>
       <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <!-- CHANGED (Oct 2026): caption said "Photo credit: something I would draw", which is not a credit. Changed to the website the image came from (atinydreamer.com, from the image address). TEACHER: please confirm with Kiera. Image link not checked from the repo. -->
       <figure>
-        <img src="https://www.atinydreamer.com/wp-content/uploads/2022/09/girl-drawing29-1024x1008.jpg" alt="Not my art, but something that I would draw." />
-        <figcaption>Photo credit: something I would draw</figcaption>
+        <img src="https://www.atinydreamer.com/wp-content/uploads/2022/09/girl-drawing29-1024x1008.jpg" alt="A girl drawing" />
+        <figcaption>Photo credit: atinydreamer.com</figcaption>
       </figure>
     </section>
 
@@ -87,16 +90,14 @@
       <p id="pun">Why don't pirats shower before they walk the plank?</p>
       <button type="button" onclick="myFunction()">Why?</button>
     </section>
-    
+
     <section>
       <h2>Course Reflection</h2>
 
       <p>I think I have grown alot over these last few weeks with my technology ability. I feel alot more comfortable with the computer and I feel like I know what I'm doing.</p>
-      
+
     </section>
-    
-    
-    
+
     <footer>
       <p>
         Built by <strong>Kiera H</strong>. Last updated: October 7th, 2026 <span id="lastUpdated"></span>.
@@ -110,6 +111,6 @@
       document.getElementById("pun").innerHTML = "Because they'll just wash up on shore!";
     }
   </script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"spa":2}' crossorigin="anonymous"></script>
+  <!-- CHANGED (Oct 2026): removed the injected Cloudflare analytics script (not needed for the page). -->
 </body>
 </html>

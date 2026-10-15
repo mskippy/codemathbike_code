@@ -1,21 +1,23 @@
- <!-- ===== student_template.html ===== -->
+<!-- ===== student_template.html ===== -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
-  
+
   <!-- 💡 TYPE ZONE: Add your name below.  -->
   <title>My First Webpage – Benson Holmes</title>
   <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
   <meta name="author" content="Benson Holmes" />
+</head>
 
-      <p style="margin-top:12px;">
-        <a href='/ict8/unit4/web_dev/S1W1/s1w1_index.html'>← Back to S1W1 class page</a>
-      </p>
+<body>
+  <!-- CHANGED (Oct 2026): back link pointed to a file that does not exist. Now points to the S1W1 index page. -->
+  <p style="margin-top:12px;">
+    <a href="/ict8/unit4/web_dev/S1W1/index.html">← Back to S1W1 class page</a>
+  </p>
 
-  
   <style>
     /* Base page styling */
     :root {
@@ -47,7 +49,6 @@
   </style>
 </head>
 
-
 <body>
   <main class="card">
     <header>
@@ -76,8 +77,9 @@
     <section>
       <h2>An Awesome Image</h2>
       <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <!-- CHANGED (Oct 2026): image tag had a broken attribute ("the red and blue galaxy" with no name), so the text was not used as alt text. Fixed to alt="...". Image link not checked from the repo. TEACHER: please confirm the image shows. -->
       <figure>
-        <img src="https://www.nasa.gov/wp-content/uploads/2007/10/edu_srch_astronomy_picture_of_the_day.png" the red and blue galaxy />
+        <img src="https://www.nasa.gov/wp-content/uploads/2007/10/edu_srch_astronomy_picture_of_the_day.png" alt="The red and blue galaxy" />
         <figcaption>The red and blue galaxy</figcaption>
       </figure>
     </section>
@@ -87,23 +89,21 @@
       <p id="pun">What did the buffalo say when his son left for college?</p>
       <button type="button" onclick="myFunction()">What?</button>
     </section>
-    
+
     <section>
       <h2>Course Reflection</h2>
 
       <p>In Web Development i learned how to code and how to make a decent web page. I really enjoyed making my first web page because
         because it was fun and it was fun finding new ways to code and news ways to make a web page.
-      
-      </p> My favourite part was honeslty making the joke part or styling the web page.
-      I also enjoyed experimenting with different layouts and different pictures. <picture>
-      
+      </p>
+      <p>My favourite part was honeslty making the joke part or styling the web page.
+      I also enjoyed experimenting with different layouts and different pictures.</p>
+      <!-- CHANGED (Oct 2026): removed a stray "<picture>" tag that was left open at the end of the reflection. -->
     </section>
-    
-    
-    
+
     <footer>
       <p>
-        Built by <strong>Benson H</strong> <span id="lastUpdated"></span>.
+        Built by <strong>Benson H</strong>. <span id="lastUpdated"></span>
       </p>
     </footer>
   </main>
@@ -114,6 +114,6 @@
       document.getElementById("pun").innerHTML = "Bison!";
     }
   </script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"spa":2}' crossorigin="anonymous"></script>
+  <!-- CHANGED (Oct 2026): removed the injected Cloudflare analytics script (not needed for the page). -->
 </body>
 </html>

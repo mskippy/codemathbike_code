@@ -5,17 +5,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
-  
+
   <!-- 💡 TYPE ZONE: Add your name below.  -->
   <title>My First Webpage – ava</title>
   <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
   <meta name="author" content="ava" />
+</head>
 
-      <p style="margin-top:12px;">
-        <a href='/ict8/unit4/web_dev/S1W1/s1w1_index.html'>← Back to S2W1 class page</a>
-      </p>
+<body>
+  <!-- CHANGED (Oct 2026): back link said "Back to S2W1" and pointed to a file that does not exist. Now points to the S1W1 index page. -->
+  <p style="margin-top:12px;">
+    <a href="/ict8/unit4/web_dev/S1W1/index.html">← Back to S1W1 class page</a>
+  </p>
 
-  
   <style>
     /* Base page styling */
     :root {
@@ -47,7 +49,6 @@
   </style>
 </head>
 
-
 <body>
   <main class="card">
     <header>
@@ -58,25 +59,26 @@
 
     <section>
       <h2>About Me</h2>
-      <p> im ava and im a really really shy person so often im very quiet in places i dont know anyone 
-      </p> my favourite calors are navy,teal,baby pink,and anything mixed with gold or brown
-        
-      </p>and lastly a fun fact about me is that when i was 6s i got hit by a bike
+      <!-- CHANGED (Oct 2026): fixed broken paragraph tags. The favourite colours and fun fact sentences were outside a paragraph. Wording unchanged. -->
+      <p> im ava and im a really really shy person so often im very quiet in places i dont know anyone. my favourite calors are navy,teal,baby pink,and anything mixed with gold or brown.
+        and lastly a fun fact about me is that when i was 6s i got hit by a bike</p>
     </section>
 
     <section>
       <h2>Favourite Links</h2>
       <ul>
         <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
-        <li><a href="https://:xxx.ugg.com" target="_blank">shop ugg</a>
-        <li><a href="https://www.ardene.com" target="_blank">shop Ardene</a>
-        <li><a href="https://lululemon.com" target="_blank">shop lululemon</a>
+        <!-- CHANGED (Oct 2026): first link was "https://:xxx.ugg.com" (not a valid address). Changed to https://www.ugg.com, assumed from the link text "shop ugg". TEACHER: please confirm with Ava. -->
+        <li><a href="https://www.ugg.com" target="_blank" rel="noopener">shop ugg</a></li>
+        <li><a href="https://www.ardene.com" target="_blank" rel="noopener">shop Ardene</a></li>
+        <li><a href="https://lululemon.com" target="_blank" rel="noopener">shop lululemon</a></li>
       </ul>
     </section>
 
     <section>
       <h2>An Awesome Image</h2>
       <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <!-- CHANGED (Oct 2026): image is from a Forbes link. Not checked from the repo. TEACHER: please open the page and confirm the image shows. -->
       <figure>
         <img src="https://imageio.forbes.com/specials-images/imageserve/66f49fbaf758d71647915d59/0x0.jpg?format=jpg&height=600&width=1200&fit=bounds" alt="A cool nature image from Unsplash" />
         <figcaption>Photo credit: forbess</figcaption>
@@ -85,30 +87,26 @@
 
     <section>
       <h2>Something punny</h2>
-      <p id="pun">why did the programmer quit their job ?</pdid t>
+      <!-- CHANGED (Oct 2026): closing tag was "</pdid t>" (typo). Corrected to </p>. -->
+      <p id="pun">why did the programmer quit their job ?</p>
       <button type="button" onclick="myFunction()">Why?</button>
     </section>
-    
+
     <section>
-      <h2>Course Reflection</h2
-      
-  
-My reflection for this class is that it was a fun class but sometimes it got overwhelming for me because some instructions were not clear, but overall, some parts were super fun and i really enjoyed this class when the instructions were clear and i knew what to do. 
+      <!-- CHANGED (Oct 2026): heading was missing its closing ">". Corrected. -->
+      <h2>Course Reflection</h2>
 
-For the video game making at first it was super fun but at the end it got overwhelming, but overall, it was a super-duper fun project.   
+      <p>My reflection for this class is that it was a fun class but sometimes it got overwhelming for me because some instructions were not clear, but overall, some parts were super fun and i really enjoyed this class when the instructions were clear and i knew what to do.</p>
 
-Also, at the beginning of this class i really didn't know what was going on but after a bit i kind of started to get the hang of it but for some stuff i still did not know what to do like the end of the video games. 
+      <p>For the video game making at first it was super fun but at the end it got overwhelming, but overall, it was a super-duper fun project.</p>
 
-And lastly for this project the web making i found it duper fun and interesting and it was pretty easy and fun. I loved adding my favorite websites and links and my own image. 
+      <p>Also, at the beginning of this class i really didn't know what was going on but after a bit i kind of started to get the hang of it but for some stuff i still did not know what to do like the end of the video games.</p>
 
+      <p>And lastly for this project the web making i found it duper fun and interesting and it was pretty easy and fun. I loved adding my favorite websites and links and my own image.</p>
 
       <p>Write your reflection here</p>
-
-      
     </section>
-    
-    
-    
+
     <footer>
       <p>
         Built by <strong>ava</strong>. Last updated: <span id="lastUpdated"></span>.
@@ -122,6 +120,6 @@ And lastly for this project the web making i found it duper fun and interesting 
       document.getElementById("pun").innerHTML = "Because they didnt get arrys!";
     }
   </script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"spa":2}' crossorigin="anonymous"></script>
+  <!-- CHANGED (Oct 2026): removed the injected Cloudflare analytics script (not needed for the page). -->
 </body>
 </html>

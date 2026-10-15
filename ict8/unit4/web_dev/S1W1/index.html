@@ -1,6 +1,6 @@
 <!-- ===== ICT 8 Web Dev Showcase – S1W1 (SY26/27) ===== -->
-<!-- Created Oct 2026. Add each student's page as a list item below, in alphabetical order by first name. -->
-<!-- Remove the "No pages published yet" line once the first student is added. -->
+<!-- Updated Oct 2026: student list added. Each entry links to the student's page. -->
+<!-- To add a student: copy one <li> block below, set the file name (firstname_l.html) and the display name, and keep the list alphabetical by first name. -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,17 +8,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ICT 8 – S1W1 Showcase (SY26/27)</title>
   <style>
-    :root { --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --link:#1d4ed8; --bg:#f8fafc; }
+    :root { --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --link:#1d4ed8; --bg:#f8fafc; --btn:#1d4ed8; --btn-ink:#ffffff; }
     body { margin:0; font-family: system-ui, Arial, sans-serif; background:var(--bg); color:var(--ink); }
     main { max-width:720px; margin:0 auto; padding:32px 18px 48px; }
     h1 { margin:0 0 4px; font-size:clamp(26px,4.5vw,36px); }
     .meta { margin:0 0 20px; color:var(--muted); font-size:14px; letter-spacing:.04em; text-transform:uppercase; }
-    .note { color:var(--muted); font-size:14px; }
-    ol.students { list-style:none; padding:0; margin:20px 0; border-top:1px solid var(--line); }
-    ol.students li { border-bottom:1px solid var(--line); }
-    ol.students a { display:block; padding:12px 4px; color:var(--link); text-decoration:none; font-size:17px; }
-    ol.students a:hover { text-decoration:underline; }
-    .empty { color:var(--muted); font-style:italic; }
+    .note { color:var(--muted); font-size:14px; margin:0 0 16px; }
+    .search { width:100%; box-sizing:border-box; padding:12px 14px; font-size:17px; border:1px solid #cbd5e1; border-radius:10px; background:#fff; color:var(--ink); }
+    .search:focus { outline:2px solid var(--link); outline-offset:1px; }
+    ol.students { list-style:none; padding:0; margin:16px 0 0; border-top:1px solid var(--line); }
+    ol.students li { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 4px; border-bottom:1px solid var(--line); }
+    ol.students .name { font-size:17px; }
+    ol.students a.view { display:inline-block; padding:8px 14px; border-radius:999px; background:var(--btn); color:var(--btn-ink); text-decoration:none; font-size:15px; white-space:nowrap; }
+    ol.students a.view:hover { text-decoration:underline; }
+    .empty { color:var(--muted); font-style:italic; display:none; padding:12px 4px; }
     nav { margin-top:32px; font-size:14px; }
     nav a { color:var(--link); text-decoration:none; }
     nav a:hover { text-decoration:underline; }
@@ -28,13 +31,24 @@
   <main>
     <h1>S1W1 – Web Development Showcase</h1>
     <p class="meta">ICT 8 · SY26/27</p>
-    <p class="note">Privacy: first name + last initial only. Educational links and images only.</p>
+    <p class="note">Find your first name in the list, then select <strong>View page</strong> to see your website.</p>
 
-    <ol class="students">
-      <!-- ADD STUDENT: copy the line below, then set the file name and the display name -->
-      <!-- <li><a href="firstname_l.html" target="_blank" rel="noopener">Firstname L</a></li> -->
+    <input class="search" id="search" type="search" placeholder="Type your name to find it…" aria-label="Search for your name" />
+
+    <ol class="students" id="studentList">
+      <!-- ADD STUDENT (copy this block for each new student):
+      <li><span class="name">Firstname L</span><a class="view" href="firstname_l.html">View page →</a></li>
+      -->
+      <li><span class="name">Aanik M</span><a class="view" href="aanik_m.html">View page →</a></li>
+      <li><span class="name">Ava S</span><a class="view" href="ava_s.html">View page →</a></li>
+      <li><span class="name">Benson H</span><a class="view" href="benson_h.html">View page →</a></li>
+      <li><span class="name">Brian F</span><a class="view" href="brian_f.html">View page →</a></li>
+      <li><span class="name">Emma Y</span><a class="view" href="Emma_Y.html">View page →</a></li>
+      <li><span class="name">Harita</span><a class="view" href="Harita.html">View page →</a></li>
+      <li><span class="name">Kiera H</span><a class="view" href="Kiera_H.html">View page →</a></li>
+      <li><span class="name">Olivia A</span><a class="view" href="Olivia_A.html">View page →</a></li>
     </ol>
-    <p class="empty">No pages published yet.</p>
+    <p class="empty" id="noMatch">No names match. Check the spelling, or ask your teacher.</p>
 
     <nav>
       <a href="/ict8/unit4/web_dev/master_index.html">← All classes</a> •
@@ -42,5 +56,24 @@
       <a href="/ict8/unit4/index.html">Back to Unit 4</a>
     </nav>
   </main>
+
+  <script>
+    // Filters the list as the student types. Hides names that do not match.
+    (function () {
+      var input = document.getElementById('search');
+      var items = document.querySelectorAll('#studentList li');
+      var noMatch = document.getElementById('noMatch');
+      input.addEventListener('input', function () {
+        var q = input.value.trim().toLowerCase();
+        var shown = 0;
+        items.forEach(function (li) {
+          var match = li.textContent.toLowerCase().indexOf(q) !== -1;
+          li.style.display = match ? '' : 'none';
+          if (match) shown++;
+        });
+        noMatch.style.display = shown === 0 ? 'block' : 'none';
+      });
+    })();
+  </script>
 </body>
 </html>

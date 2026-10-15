@@ -5,17 +5,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
-  
-  <!-- 💡 TYPE ZONE: Add your namebelow.  -->
+
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <!-- CHANGED (Oct 2026): spacing fixed in this comment only. -->
   <title>My First Webpage – Harita</title>
   <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
   <meta name="author" content="Harita" />
+</head>
 
-      <p style="margin-top:12px;">
-        <a href='/ict8/unit4/web_dev/S1W1/s1w1_index.html'>← Back to S1W1 class page</a>
-      </p>
+<body>
+  <!-- CHANGED (Oct 2026): back link pointed to a file that does not exist. Now points to the S1W1 index page. -->
+  <p style="margin-top:12px;">
+    <a href="/ict8/unit4/web_dev/S1W1/index.html">← Back to S1W1 class page</a>
+  </p>
 
-  
   <style>
     /* Base page styling */
     :root {
@@ -47,7 +50,6 @@
   </style>
 </head>
 
-
 <body>
   <main class="card">
     <header>
@@ -58,26 +60,28 @@
 
     <section>
       <h2>About Me</h2>
-      <p>Hi my name is Harita and im from pakistan and I love to read and play badminton.I love to crochet and I want to learn to knit but I think its way harder than crochet
-        
-      </p>One fun fact about me is that I can crochet a beanie
+      <p>Hi my name is Harita and im from pakistan and I love to read and play badminton.I love to crochet and I want to learn to knit but I think its way harder than crochet.
+      </p>
+      <p>One fun fact about me is that I can crochet a beanie</p>
     </section>
 
     <section>
       <h2>Favourite Links</h2>
       <ul>
         <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
-        <li><a href="https://www.google.com/?zx=1791224446639" target="_blank" rel="noopener">Google</a></li>
+        <li><a href="https://www.google.com/" target="_blank" rel="noopener">Google</a></li>
         <li><a href="https://teams.cloud.microsoft/" target="_blank" rel="noopener">Teams</a></li>
-        <li><a href="https://www.netflix.com/" target="_blank" rel="noopener">Netflex</a></li>
+        <!-- CHANGED (Oct 2026): "Netflex" corrected to "Netflix" (link text only). -->
+        <li><a href="https://www.netflix.com/" target="_blank" rel="noopener">Netflix</a></li>
       </ul>
     </section>
 
     <section>
       <h2>An Awesome Image</h2>
       <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <!-- CHANGED (Oct 2026): alt text said "Unsplash" but the image is from stockcake. Alt text updated. Image link not checked from the repo. TEACHER: please confirm the image shows. -->
       <figure>
-        <img src="https://images.stockcake.com/public/a/9/3/a93d626b-b6ac-4769-b917-66524861c2fd_large/sunset-beach-view-stockcake.jpg" alt="A cool nature image from Unsplash" />
+        <img src="https://images.stockcake.com/public/a/9/3/a93d626b-b6ac-4769-b917-66524861c2fd_large/sunset-beach-view-stockcake.jpg" alt="A sunset over a beach" />
         <figcaption>Beautiful sunsent in beach.</figcaption>
       </figure>
     </section>
@@ -87,19 +91,13 @@
       <p id="pun">Why don't scientists trust atoms? </p>
       <button type="button" onclick="myFunction()"> Why?.</button>
     </section>
-    
-    <section>
 
+    <section>
       <h2>Course Reflection</h2>
 
-      <p></p>
-      In essential skills and digital literacy, I learned how to save a document in my OneDrive and I also learned how to take a screenshot in a computer, but at first, I didn't know how to save stuff so my partner next to me helped me. In digital media I learned how to use the magic write tool on Canva which was cool, but figuring out exactly how I wanted my picture to turn out was a bit challenging. In GDevelop I learned a lot of new skillls.Such as learning how to make a sprite, learning how to add and action with a condition and learning how to change the color of a bbtext or sprite. In Visual Studio Code, I learned how to add an image and how to add links. When I accidentally deleted some codes, I didn't know how to undo it, so I asked the teacher and then I also learned how to do that. 
-
- 
+      <p>In essential skills and digital literacy, I learned how to save a document in my OneDrive and I also learned how to take a screenshot in a computer, but at first, I didn't know how to save stuff so my partner next to me helped me. In digital media I learned how to use the magic write tool on Canva which was cool, but figuring out exactly how I wanted my picture to turn out was a bit challenging. In GDevelop I learned a lot of new skillls.Such as learning how to make a sprite, learning how to add and action with a condition and learning how to change the color of a bbtext or sprite. In Visual Studio Code, I learned how to add an image and how to add links. When I accidentally deleted some codes, I didn't know how to undo it, so I asked the teacher and then I also learned how to do that.</p>
     </section>
-    
-    
-    
+
     <footer>
       <p>
         Built by <strong>Harita</strong>. Last updated: <span id="lastUpdated"></span>.
@@ -110,9 +108,9 @@
   <script>
     //Button function that changes the pun text//
     function myFunction() {
-      document.getElementById("pun").innerHTML = " Because they make up everything.!";
+      document.getElementById("pun").innerHTML = "Because they make up everything!";
     }
   </script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"spa":2}' crossorigin="anonymous"></script>
+  <!-- CHANGED (Oct 2026): removed the injected Cloudflare analytics script (not needed for the page). Punchline text: removed a stray "." after "everything". -->
 </body>
 </html>
