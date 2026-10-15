@@ -1,0 +1,119 @@
+ <!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage – Benson Holmes</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Benson Holmes" />
+
+      <p style="margin-top:12px;">
+        <a href='/ict8/unit4/web_dev/S1W1/s1w1_index.html'>← Back to S1W1 class page</a>
+      </p>
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #f7f7fb;
+      --ink: #1a1a1f;
+      --accent: #0290ee; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #fff; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#f3f3f6; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="studentName">Benson H</span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        Hi I am Benson H, I am a student at Sutherland Secondary school. One of my hobbies is baseball I play it everyday and I am very passionate about it. A couple intrests I have is science, art and basketabll. A fun fact about me is that i wear size 12 shoes and a goal I have for this course is to become a faster typer then when I was at the start of this course.
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://www.futbin.com" target="_blank" rel="noopener">Futbin</a></li>
+        <li><a href="https://www.mlb.com" target="_blank" rel="noopener">MLb</a></li>
+        <li><a href="https://www.nba.com" target="_blank" rel="noopener">NBA</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="https://www.nasa.gov/wp-content/uploads/2007/10/edu_srch_astronomy_picture_of_the_day.png" the red and blue galaxy />
+        <figcaption>The red and blue galaxy</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">What did the buffalo say when his son left for college?</p>
+      <button type="button" onclick="myFunction()">What?</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p>In Web Development i learned how to code and how to make a decent web page. I really enjoyed making my first web page because
+        because it was fun and it was fun finding new ways to code and news ways to make a web page.
+      
+      </p> My favourite part was honeslty making the joke part or styling the web page.
+      I also enjoyed experimenting with different layouts and different pictures. <picture>
+      
+    </section>
+    
+    
+    
+    <footer>
+      <p>
+        Built by <strong>Benson H</strong> <span id="lastUpdated"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "Bison!";
+    }
+  </script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
