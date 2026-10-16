@@ -1,0 +1,120 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage – Charlotte</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Charlotte" />
+
+      <p style="margin-top:12px;">
+        <a href='/ict8/unit4/web_dev/S1W1/s1w1_index.html'>← Back to S2W1 class page</a>
+      </p>
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #5bbdce;
+      --ink: #000000;
+      --accent: #106597; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #bce8f3; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#ececff; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="studentName">Charlotte</span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+       Hi im Charlotte! and my favorite colour is pink. i like to do taekwondo and play vollyball. i play two instrument the clairnet and the piano and finallly my favorite animals are otters and blue whales 
+
+
+  
+      </p>
+      a fun fact about me is that im two belts away from being a black belt in taekwondo
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://ca.pinterest.com/" target="_blank" rel="noopener">Pintrest</a></li>
+        <li><a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a></li>
+        
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+        <img src="https://www.visit-croatia.info/wp-content/uploads/sites/133/lake-bled-far-hd.jpg"
+        <figcaption>Photo credit: Unsplash</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">why did the computer and wifi get married?</p>
+      <button type="button" onclick="myFunction()">Why?</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p></p>I think that this coures was simple ad fun. I had a fun time doing it
+      in this unit we learned how to make a web page with some help of course. This part of the project was not a hard as some parts. For example the G develoment was a more complex thing to do because we had a simple guide line that we followed unlike the other part. eventhough this part wasnt as hard as the rest there were still some sections that made it difficult like trying to get my pun to work.
+      Over all this was very fun and usefull and i would like to do it again. 
+
+      
+    </section>
+    
+    
+    
+    <footer>
+      <p>
+        Built by <strong>Your Name</strong>. Last updated: <span id="lastUpdated"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "because they felt a connection!";
+    }
+  </script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
