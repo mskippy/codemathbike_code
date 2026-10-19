@@ -154,7 +154,15 @@ window.NAV_DATA = {
         unit3: {
           title: "U3 Choice Project 2",
           href: "/cp1112/unit3/u3_index.html",
-          pages: {}
+          pages: {
+            lesson1: { title: "3.1 Dictionaries & Nested Data", href: "/cp1112/unit3/lesson1/3.1_index.html" },
+            lesson2: { title: "3.2 Saving & Loading Files", href: "/cp1112/unit3/lesson2/3.2_index.html" },
+            lesson3: { title: "3.3 Testing Your Data", href: "/cp1112/unit3/lesson3/3.3_index.html" },
+            lesson4: { title: "3.4 Breaking Code into Functions", href: "/cp1112/unit3/lesson4/3.4_index.html" },
+            core: { title: "Core Track", href: "/cp1112/unit3/project3core/3_core_index.html" },
+            extended: { title: "Extended Track", href: "/cp1112/unit3/project3extended/3_extended_index.html" },
+            feature_request: { title: "The Feature Request", href: "/cp1112/unit3/feature_request/3_feature_request.html" }
+          }
         },
         unit4: {
           title: "U4 Independent / Specialization Project",

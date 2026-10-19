@@ -1,0 +1,4 @@
+{
+  "apple": {"qty": 4, "price": 0.5},
+  "bread": {"qty": 1, "price": 2.25}
+}

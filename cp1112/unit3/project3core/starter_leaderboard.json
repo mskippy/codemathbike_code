@@ -1,0 +1,6 @@
+{
+  "players": [
+    {"name": "Sample", "score": 120},
+    {"name": "Test", "score": 95}
+  ]
+}

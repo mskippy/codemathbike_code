@@ -1,0 +1,82 @@
+<!-- v1 – Oct 2026 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CP11/12 • 3.3 Testing Your Data</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="cp1112">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="CP11/12 • 3.3 Testing Your Data">
+        <section class="card">
+          <h1>3.3 &mdash; Testing Your Data</h1>
+          <p><strong>Check that what you save is what you load back.</strong></p>
+        </section>
+        <section class="card">
+          <h2>Why This Matters</h2>
+          <p>A feature can look like it works and still lose data. The most important test for a saved app is: <strong>save it, load it, and compare</strong>.</p>
+        </section>
+        <section class="card">
+          <h2>The Idea</h2>
+          <p>A test checks one thing and says PASS or FAIL. <code>assert</code> stops the program with an error if the condition is False. Add a message after the comma so you know what failed.</p>
+          <pre><code>def test_round_trip():
+    original = {"apple": {"qty": 4, "price": 0.50}}
+    save_data(original, "test_round_trip.json")
+    loaded = load_data("test_round_trip.json")
+    assert loaded == original, "Data changed after save and load"
+    print("PASS: round trip")
+
+test_round_trip()</code></pre>
+          <p class="lesson-note"><strong>Use a test file name.</strong> Don't test with your real save file. Your tests shouldn't be able to damage your real data.</p>
+        </section>
+        <section class="card">
+          <h2>Your Test Table</h2>
+          <p>Write the table first, and fill in <em>Expected</em> before you run anything. Then record what actually happened.</p>
+          <div class="table-wrap"><table class="content-table"><thead><tr><th>#</th><th>What I'm testing</th><th>Input</th><th>Expected</th><th>Actual</th><th>Pass?</th></tr></thead><tbody><tr><td>1</td><td>Save then load gives the same data</td><td>A small dictionary</td><td>Same as before</td><td></td><td></td></tr><tr><td>2</td><td>Missing file starts empty</td><td>No save file</td><td>Empty data, no crash</td><td></td><td></td></tr><tr><td>3</td><td>Quantity typed as text</td><td>&quot;five&quot;</td><td>Asks again, no crash</td><td></td><td></td></tr><tr><td>4</td><td>Negative quantity</td><td>-5</td><td>Rejected with a message</td><td></td><td></td></tr><tr><td>5</td><td>Empty name</td><td>(nothing)</td><td>Rejected with a message</td><td></td><td></td></tr></tbody></table></div>
+        </section>
+        <section class="card">
+          <h2>Try It</h2>
+          <ol>
+            <li>Write <code>test_round_trip</code> and run it. It should pass.</li>
+            <li>Break your save function on purpose (for example, skip the last record). Run the test and watch it fail.</li>
+            <li>Put the bug back, run the test again, and record both results.</li>
+          </ol>
+        </section>
+        <section class="card">
+          <h2>Common Mistakes</h2>
+          <ul>
+            <li><strong>Testing only the easy path.</strong> Bad input and missing files are where apps crash.</li>
+            <li><strong>Filling in Actual after the fact,</strong> so it always matches Expected. Record what really happened, even when it's a fail.</li>
+            <li><strong>Testing with your real data file.</strong> Use a separate test file name.</li>
+          </ul>
+        </section>
+        <section class="card">
+          <h2>You're Done With This Lesson When&hellip;</h2>
+          <p>At least one round-trip test passes, and you've seen one test fail on purpose.</p>
+        </section>
+
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card"><strong>This lesson</strong><br>Unit 3 &middot; 3.3</div>
+        <div class="card"><a href="/cp1112/unit3/lesson4/3.4_index.html">Next: 3.4 Breaking Code into Functions &rarr;</a></div>
+        <div class="card"><a href="/cp1112/unit3/u3_index.html">&larr; Back to Unit 3</a></div>
+
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+
+  </body>
+</html>

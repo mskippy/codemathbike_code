@@ -1,0 +1,9 @@
+{
+  "income": [
+    {"category": "Part-time job", "amount": 300}
+  ],
+  "expenses": [
+    {"category": "Food", "amount": 85},
+    {"category": "Transit", "amount": 40}
+  ]
+}

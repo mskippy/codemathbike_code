@@ -1,0 +1,97 @@
+<!-- v1 – Oct 2026 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CP11/12 • Unit 4 Pygame Option</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="cp1112">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="CP11/12 • Unit 4 Pygame Option">
+        <section class="card">
+          <h1>Unit 4 Option &mdash; A Game in a Pygame Window</h1>
+          <p><strong>A graphical game option for your Unit 4 specialization project.</strong></p>
+        </section>
+
+        <section class="card">
+          <h2>This Option Is for You If&hellip;</h2>
+          <ul class="list-tight">
+            <li>You want your project to be a game with a window, not a console.</li>
+            <li>You're ready to plan it in a proposal before you start coding.</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>What You'll Build</h2>
+          <p>A game that runs in a pygame window. Pitch it in your Unit 4 proposal (problem, users, constraints and success criteria), like any other specialization option.</p>
+        </section>
+
+        <section class="card">
+          <h2>Requirements Checklist</h2>
+          <p>Your finished game must include all of these. (Ticking the boxes is just for you, it doesn't save.)</p>
+          <ul class="list-tight" style="list-style:none; padding-left:0;">
+            <li><label><input type="checkbox"> The window opens, closes cleanly, and stays responsive</label></li>
+            <li><label><input type="checkbox"> A game loop that handles keyboard input and redraws the screen</label></li>
+            <li><label><input type="checkbox"> Something that changes over time: a score, movement, an enemy or a timer</label></li>
+            <li><label><input type="checkbox"> Game state kept in functions or a class, not spread through the loop</label></li>
+            <li><label><input type="checkbox"> Something saved between sessions, such as a high score, in a file</label></li>
+            <li><label><input type="checkbox"> At least 4 tests of game logic that run without opening the window</label></li>
+            <li><label><input type="checkbox"> Sprint checkpoints, as set out for Unit 4</label></li>
+          </ul>
+          <p class="lesson-note">Keep the game logic in functions you can test without the window. The loop only handles input, drawing and calling those functions.</p>
+        </section>
+
+        <section class="card">
+          <h2>Setup</h2>
+          <p>In the VS Code terminal, install pygame:</p>
+          <pre><code>pip install pygame</code></pre>
+          <p>Check it worked:</p>
+          <pre><code>python -c "import pygame; print(pygame.version.ver)"</code></pre>
+          <p class="lesson-note"><strong>On a lab machine:</strong> if pip is blocked, tell your teacher during the proposal stage, so there's time to sort it out or pick another option.</p>
+        </section>
+
+        <section class="card">
+          <h2>A Starting Point</h2>
+          <p>This opens a window and keeps it open until you close it. Build your game from here.</p>
+          <pre><code>import pygame
+
+pygame.init()
+screen = pygame.display.set_mode((640, 480))
+clock = pygame.time.Clock()
+
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    screen.fill((20, 20, 30))
+    pygame.display.flip()
+    clock.tick(60)
+
+pygame.quit()</code></pre>
+          <p class="lesson-note">A pygame program redraws the screen many times a second. Keep your game logic in functions, and call them from the loop, rather than writing it all inside the loop.</p>
+        </section>
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card"><strong>This option</strong><br>Unit 4 &middot; Specialization<br>Pitch it in your proposal</div>
+        <div class="card"><a href="/cp1112/unit4/u4_index.html">&larr; Back to Unit 4</a></div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+
+  </body>
+</html>

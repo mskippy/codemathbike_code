@@ -1,0 +1,87 @@
+<!-- v1 – Oct 2026 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CP11/12 • 3.2 Saving &amp; Loading Files</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="cp1112">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="CP11/12 • 3.2 Saving &amp; Loading Files">
+        <section class="card">
+          <h1>3.2 &mdash; Saving &amp; Loading Files</h1>
+          <p><strong>Keep your data after the program closes, using a JSON file.</strong></p>
+        </section>
+        <section class="card">
+          <h2>Why This Matters</h2>
+          <p>When your program closes, its variables disappear. A file keeps the data between runs. JSON is a text format that stores dictionaries and lists, and Python can read it back into the same shapes.</p>
+        </section>
+        <section class="card">
+          <h2>The Idea</h2>
+          <pre><code>import json
+
+def save_data(data, filename):
+    with open(filename, "w") as f:
+        json.dump(data, f, indent=2)
+
+def load_data(filename):
+    with open(filename) as f:
+        return json.load(f)</code></pre>
+          <p>The <code>with</code> block closes the file for you. <code>"w"</code> means write, and it <strong>replaces</strong> whatever was in the file. So make sure you're saving the whole data set, not just the part that changed.</p>
+          <p>On the first run there's no file yet, so check before you load:</p>
+          <pre><code>import os
+
+def load_or_start(filename):
+    if os.path.exists(filename):
+        return load_data(filename)
+    return {}   # first run: start with empty data</code></pre>
+          <p class="lesson-note"><strong>JSON rules to know:</strong> keys are always text (a number key comes back as text), and only dictionaries, lists, text, numbers and true/false/none can be saved directly.</p>
+          <p class="lesson-note"><strong>Extended:</strong> you can use <code>try</code> and <code>except FileNotFoundError</code> instead of the <code>if</code> check, and <code>json.JSONDecodeError</code> for a damaged file. Either works for the missing-file test.</p>
+        </section>
+        <section class="card">
+          <h2>Try It</h2>
+          <ol>
+            <li>Save a small dictionary to <code>test.json</code>.</li>
+            <li>Open <code>test.json</code> in VS Code. Can you read your data?</li>
+            <li>Load it back and print it. Does it match what you saved?</li>
+            <li>Delete <code>test.json</code> and run <code>load_or_start</code>. It should start empty, not crash.</li>
+          </ol>
+        </section>
+        <section class="card">
+          <h2>Common Mistakes</h2>
+          <ul>
+            <li><strong>Opening with <code>"w"</code> to read.</strong> That wipes the file. Use <code>"r"</code> or leave the mode out when you load.</li>
+            <li><strong>Only saving when the program quits.</strong> If it crashes, the work is gone. Save after each change.</li>
+            <li><strong>Mixing up <code>json.dump</code> and <code>json.dumps</code>.</strong> <code>dump</code> writes to a file. <code>dumps</code> returns text.</li>
+          </ul>
+        </section>
+        <section class="card">
+          <h2>You're Done With This Lesson When&hellip;</h2>
+          <p>Data you save comes back exactly the same, and a first run with no file doesn't crash.</p>
+        </section>
+
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card"><strong>This lesson</strong><br>Unit 3 &middot; 3.2</div>
+        <div class="card"><a href="/cp1112/unit3/lesson3/3.3_index.html">Next: 3.3 Testing Your Data &rarr;</a></div>
+        <div class="card"><a href="/cp1112/unit3/u3_index.html">&larr; Back to Unit 3</a></div>
+
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!-- v1 – Oct 2026 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CP11/12 • 3.4 Breaking Code into Functions</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="cp1112">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="CP11/12 • 3.4 Breaking Code into Functions">
+        <section class="card">
+          <h1>3.4 &mdash; Breaking Code into Functions</h1>
+          <p><strong>One job per function, data in and data out.</strong></p>
+        </section>
+        <section class="card">
+          <h2>Why This Matters</h2>
+          <p>One long main program is hard to test and hard to change. A change request is much easier to add when each job has its own function.</p>
+        </section>
+        <section class="card">
+          <h2>The Idea</h2>
+          <pre><code>def add_item(inventory, name, qty, price):
+    """Return the inventory with this item added, or updated if it's already there."""
+    inventory[name] = {"qty": qty, "price": price}
+    return inventory
+
+def total_value(inventory):
+    """Return the total value of everything in stock."""
+    total = 0
+    for details in inventory.values():
+        total += details["qty"] * details["price"]
+    return total</code></pre>
+          <p>Notice what these functions <strong>don't</strong> do: they don't call <code>input()</code> or <code>print()</code>. They take data in, return data out, and leave the talking to the menu. That's what makes them easy to test.</p>
+          <p class="lesson-note"><strong>Signs a function is doing too much:</strong> its name has &ldquo;and&rdquo; in it (like <code>add_and_save</code>), it runs longer than one screen, or you can't test it without typing things in.</p>
+        </section>
+        <section class="card">
+          <h2>Try It</h2>
+          <ol>
+            <li>Pick one menu option from your project. Move its logic into a function with a docstring.</li>
+            <li>Call the function on its own, with test data, and print the result.</li>
+            <li>Write one test for it using the pattern from 3.3.</li>
+          </ol>
+        </section>
+        <section class="card">
+          <h2>Common Mistakes</h2>
+          <ul>
+            <li><strong>Printing instead of returning.</strong> If the function prints, the caller gets <code>None</code> and can't use the result.</li>
+            <li><strong>Forgetting <code>return</code>.</strong> Same problem: the caller gets <code>None</code>.</li>
+            <li><strong>Changing a variable from outside the function</strong> instead of passing it in and returning it.</li>
+          </ul>
+        </section>
+        <section class="card">
+          <h2>You're Done With This Lesson When&hellip;</h2>
+          <p>Each function does one job, returns its result, and works when you call it without the menu.</p>
+        </section>
+
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card"><strong>This lesson</strong><br>Unit 3 &middot; 3.4</div>
+        <div class="card"><a href="/cp1112/unit3/u3_index.html">Back to Unit 3 &rarr;</a></div>
+        <div class="card"><a href="/cp1112/unit3/u3_index.html">&larr; Back to Unit 3</a></div>
+
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+
+  </body>
+</html>

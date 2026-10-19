@@ -1,4 +1,4 @@
-<!-- v2 – Nov 2025 -->
+<!-- v1 – Oct 2026 -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -20,27 +20,95 @@
 
       <main id="content" data-page-title="CP11/12 • Unit 3">
         <section class="card">
-          <span class="pill">Weeks 8&ndash;10 &middot; 15 periods</span>
           <h1>Unit 3 &mdash; Choice Project 2: Data &amp; Structures</h1>
-          <p>Working with more complex data &mdash; dictionaries, nested structures, simple file-based data &mdash; on a project you choose from a short menu: inventory system, gradebook, game leaderboard, or budget tracker. Same checkpoint rhythm as Unit 2, but with less scaffolding: a menu of options replaces a single guided prompt, and partway through, a classmate plays "client" and sends you a feature request you didn't see coming.</p>
+          <p>Your app will hold real data, save it to a file, and still have it the next time you open it. You'll pick one app from the menu, build it, then respond to a change request from a classmate, the way real clients do.</p>
+        </section>
+        <section class="card">
+          <h2>What You're Building</h2>
+          <p>Everyone picks one app from this menu. Each one is a console program that stores a list of records, saves them, and loads them back.</p>
+          <div class="track-grid">
+            <div class="track-card"><h3>Inventory system</h3><ul class="list-tight"><li>Items with name, quantity and price</li><li>Add, remove, restock</li><li>Low-stock warning</li></ul></div>
+            <div class="track-card"><h3>Gradebook</h3><ul class="list-tight"><li>Students and their scores</li><li>Average per student</li><li>Class average</li></ul></div>
+            <div class="track-card"><h3>Game leaderboard</h3><ul class="list-tight"><li>Player names and scores</li><li>Keep the top 10</li><li>Sort and save between sessions</li></ul></div>
+            <div class="track-card"><h3>Budget tracker</h3><ul class="list-tight"><li>Income and expenses</li><li>Totals by category</li><li>Save and reload each month</li></ul></div>
+          </div>
+          <p class="lesson-note">Each one needs a dictionary (or a list of dictionaries), and has to save to a file and load it back when the program starts.</p>
+        </section>
+        <section class="card">
+          <h2>What You'll Learn First</h2>
+          <p>Four short lessons, one for each skill the project needs. Do them before you start building.</p>
+          <ul>
+            <li><a href="/cp1112/unit3/lesson1/3.1_index.html">3.1 &mdash; Dictionaries &amp; Nested Data</a></li>
+            <li><a href="/cp1112/unit3/lesson2/3.2_index.html">3.2 &mdash; Saving &amp; Loading Files</a></li>
+            <li><a href="/cp1112/unit3/lesson3/3.3_index.html">3.3 &mdash; Testing Your Data</a></li>
+            <li><a href="/cp1112/unit3/lesson4/3.4_index.html">3.4 &mdash; Breaking Code into Functions</a></li>
+          </ul>
+        </section>
+        <section class="card">
+          <h2>The Feature Request</h2>
+          <p>Partway through Week 2, a classmate plays <strong>client</strong> and hands you a change request you didn't see coming. You triage it in writing (accept, defer or decline), then build it if you accept.</p>
+          <p><a class="btn" href="/cp1112/unit3/feature_request/3_feature_request.html">How the feature request works</a></p>
+        </section>
+        <section class="card">
+          <h2>Checkpoints</h2>
+          <p>Same rhythm as Unit 2: three checkpoints, one at the end of each week.</p>
+          <div class="table-wrap">
+            <table class="content-table">
+              <thead><tr>
+                <th>Checkpoint</th>
+                <th>Due</th>
+                <th>What's in your repo</th>
+              </tr></thead>
+              <tbody>
+                <tr>
+                  <td><strong>CP1</strong> &mdash; Pitch, data sketch and plan</td>
+                  <td>README pitch; a data sketch (what one record looks like and how you'll save it); pseudocode</td>
+                </tr>
+                <tr>
+                  <td><strong>CP2</strong> &mdash; Working build with save and load</td>
+                  <td>Menu runs; data saves and loads; test table written</td>
+                </tr>
+                <tr>
+                  <td><strong>CP3</strong> &mdash; Tested build, feature request and share</td>
+                  <td>Tests run and recorded; feature request response in the README; shown to one peer</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="gotcha"><strong>Commit rule:</strong> start each checkpoint commit with the checkpoint number, like <code>CP1: Pitch and data sketch done</code>, as you did in Unit 2.</div>
+        </section>
+        <section class="card">
+          <h2>Find Your Track</h2>
+          <p>Everyone builds an app from the same menu. Your track sets how high the technical bar is.</p>
+          <div class="track-grid">
+            <div class="track-card">
+              <h3>Core</h3>
+              <p>You're comfortable with lists, conditionals and functions, and want to build a working app with data saved to a file.</p>
+              <a class="btn" href="/cp1112/unit3/project3core/3_core_index.html">Go to Core</a>
+            </div>
+            <div class="track-card">
+              <h3>Extended</h3>
+              <p>You want to organize a bigger program across files, use Python's built-in data tools, and take on the full version of the change request.</p>
+              <a class="btn" href="/cp1112/unit3/project3extended/3_extended_index.html">Go to Extended</a>
+            </div>
+          </div>
+          <p class="lesson-note">Your teacher will recommend a track based on Unit 2. Think you're ready for a different one? Bring evidence from your Unit 2 work and pitch it.</p>
+        </section>
+        <section class="card">
+          <h2>How You're Assessed</h2>
+          <p>Same course rubric as every project, with the same 5 criteria. Your track sets the bar for the technical part.</p>
+          <p>At each checkpoint, your teacher will call you up to go over your work one-on-one, so <strong>commit and push before each one</strong>.</p>
         </section>
 
-        <section class="card">
-          <h2>What You'll Be Doing</h2>
-          <p>Lists and dictionaries, file I/O, breaking your program into functions, basic testing.</p>
-          <p>If you're moving faster, you'll also use built-in data structures where they fit, organize your project across multiple files, write self-documenting code, and triage and implement that mid-project change request &mdash; mirroring real client work.</p>
-        </section>
-
-        <section class="card">
-          <h2>What You'll Produce</h2>
-          <p>Your app, plus a written response to the feature request.</p>
-        </section>
       </main>
 
       <aside id="right-rail" aria-label="Resources">
-        <div class="card"><strong>This unit</strong><br>Weeks 8&ndash;10 &middot; 15 periods<br>Deliverable: app + feature-request response</div>
+        <div class="card"><strong>This unit</strong><br>Weeks 8&ndash;10 &middot; 15 periods<br>Deliverable: app + feature request response</div>
+        <div class="card"><strong>Resources</strong><br><a href="/cp1112/resources/naming-conventions/index.html">Naming Conventions</a></div>
         <div class="card"><a href="/cp1112/index.html">&larr; Back to course</a></div>
-        <div class="card"><a href="/cp1112/unit4/u4_index.html">Next: Unit 4 &mdash; Independent / Specialization Project &rarr;</a></div>
+        <div class="card"><a href="/cp1112/unit2/u2_index.html">&larr; Back to Unit 2</a></div>
+        <div class="card"><a href="/cp1112/unit4/u4_index.html">Next: Unit 4 &rarr;</a></div>
+
       </aside>
     </div>
 

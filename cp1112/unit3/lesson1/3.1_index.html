@@ -1,0 +1,91 @@
+<!-- v1 – Oct 2026 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CP11/12 • 3.1 Dictionaries &amp; Nested Data</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="cp1112">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="CP11/12 • 3.1 Dictionaries &amp; Nested Data">
+        <section class="card">
+          <h1>3.1 &mdash; Dictionaries &amp; Nested Data</h1>
+          <p><strong>Store each record as a dictionary, and keep many of them in a list or a dictionary.</strong></p>
+        </section>
+        <section class="card">
+          <h2>Why This Matters</h2>
+          <p>A list tells you the <em>position</em> of something. A dictionary tells you the <em>name</em>. Your app needs both: each item has a name, a quantity and a price, and you need to look things up by name.</p>
+        </section>
+        <section class="card">
+          <h2>The Idea</h2>
+          <p>One record, as a dictionary:</p>
+          <pre><code>apple = {"name": "Apple", "qty": 4, "price": 0.50}
+print(apple["qty"])                    # 4
+apple["qty"] = 3                       # change a value
+print("price" in apple)                # True: is this key there?
+print(apple.get("colour", "not set"))  # a default if the key is missing</code></pre>
+          <p>Use <code>[ ]</code> when you know the key is there. Use <code>.get()</code> when it might not be.</p>
+          <p>A list of records:</p>
+          <pre><code>items = [
+    {"name": "Apple", "qty": 4, "price": 0.50},
+    {"name": "Bread", "qty": 1, "price": 2.25},
+]
+for item in items:
+    print(item["name"], item["qty"])</code></pre>
+          <p>A dictionary of records, looked up by a key:</p>
+          <pre><code>inventory = {
+    "apple": {"qty": 4, "price": 0.50},
+    "bread": {"qty": 1, "price": 2.25},
+}
+print(inventory["bread"]["price"])     # 2.25
+for name, details in inventory.items():
+    print(name, details["qty"])</code></pre>
+          <p class="lesson-note"><strong>Which one?</strong> If you look records up by name (a gradebook by student name), use a dictionary of records. If you keep an ordered list (a leaderboard sorted by score), use a list of records. Either is fine. Say which one you chose and why in your data sketch.</p>
+        </section>
+        <section class="card">
+          <h2>Try It</h2>
+          <ol>
+            <li>Make a dictionary for one record from your app. Print one of its values.</li>
+            <li>Change that value and print it again.</li>
+            <li>Make a list of three records and loop over it, printing each name.</li>
+            <li>Look up a key that doesn't exist. Read the <code>KeyError</code>, then fix it with <code>.get()</code>.</li>
+          </ol>
+        </section>
+        <section class="card">
+          <h2>Common Mistakes</h2>
+          <ul>
+            <li><strong>KeyError:</strong> the key isn't there. Check the spelling, or print <code>data.keys()</code> to see what's really in it.</li>
+            <li><strong>Two records with the same key</strong> overwrite each other without any error. Decide what the key is before you start.</li>
+            <li><strong>Changing a dictionary while you loop over it</strong> can break the loop. Make a list of the keys first, then loop over that list.</li>
+          </ul>
+        </section>
+        <section class="card">
+          <h2>You're Done With This Lesson When&hellip;</h2>
+          <p>You can make a dictionary, change a value, look one up safely, and loop over a list of records or a dictionary of records.</p>
+        </section>
+
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card"><strong>This lesson</strong><br>Unit 3 &middot; 3.1</div>
+        <div class="card"><a href="/cp1112/unit3/lesson2/3.2_index.html">Next: 3.2 Saving &amp; Loading Files &rarr;</a></div>
+        <div class="card"><a href="/cp1112/unit3/u3_index.html">&larr; Back to Unit 3</a></div>
+
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+
+  </body>
+</html>
