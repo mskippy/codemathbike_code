@@ -1,0 +1,150 @@
+<!-- v1 – Oct 2026 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CP11/12 • Unit 3 Transfer</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="cp1112">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="CP11/12 • Unit 3 Transfer">
+        <section class="card">
+          <h1>Unit 3 &mdash; Transfer Track</h1>
+          <p><strong>Build the Unit 3 app in a language you already know, and show the same skills in it.</strong></p>
+        </section>
+
+        <section class="card">
+          <h2>This Track Is for You If&hellip;</h2>
+          <ul class="list-tight">
+            <li>You already write programs in a language other than Python, and can do basic work in it without looking up simple syntax.</li>
+            <li>You've done Unit 2 work in that language, or can show your teacher the same evidence they'd look for at 2C.</li>
+          </ul>
+          <p class="lesson-note">Transfer skips the four Unit 3 lessons. You're not skipping the concepts. You show them directly, in your language.</p>
+        </section>
+
+        <section class="card">
+          <h2>Check Before You Choose</h2>
+          <p>About 20 minutes, in the language you'd build in, with no notes. <strong>It isn't graded.</strong> It helps you and your teacher decide whether Transfer is the right track.</p>
+          <ol>
+            <li>Write a function that takes a list of records (each with a name and a number) and returns the names of the records above a threshold. Store the results in a keyed collection. Test it with one normal case and one empty list.</li>
+            <li>In two or three sentences, say what your code does with a value that isn't a number. Then say how you'd change it if the input came from a file.</li>
+          </ol>
+          <p class="lesson-note">If you can do both, Transfer is a good fit. If not, start on Core and talk to your teacher. Nothing is locked in: you can change tracks before CP1.</p>
+        </section>
+
+        <section class="card">
+          <h2>Choosing Your Language</h2>
+          <p>Use a language from the approved list on the <a href="/cp1112/unit2/project2c/2C_index.html">2C page</a>. Those are the languages confirmed to work on the lab computers.</p>
+          <p>Want a language that isn't on the list? Ask your teacher at CP1. A new language gets added once it passes its check on a lab machine.</p>
+        </section>
+
+        <section class="card">
+          <h2>What You're Building</h2>
+          <p>One app from the <a href="/cp1112/unit3/u3_index.html">Unit 3 menu</a>: inventory system, gradebook, game leaderboard or budget tracker. It's a console program: a menu, input, and a save file. Build it in your language, with the same requirements as Core and Extended.</p>
+        </section>
+
+        <section class="card">
+          <h2>Requirements Checklist</h2>
+          <p>Your finished project must include all of these. (Ticking the boxes is just for you, it doesn't save.)</p>
+          <ul class="list-tight" style="list-style:none; padding-left:0;">
+            <li><label><input type="checkbox"> Records stored in a keyed collection, one record per item, student or player (a dictionary in Python, a map or similar elsewhere)</label></li>
+            <li><label><input type="checkbox"> Saves to a file in a format you choose, and loads it back when the program starts (JSON is fine in most languages)</label></li>
+            <li><label><input type="checkbox"> Handles a missing save file: starts empty and doesn't crash</label></li>
+            <li><label><input type="checkbox"> At least <strong>three functions</strong>, each doing one job. Input and output stay in the menu.</label></li>
+            <li><label><input type="checkbox"> A <strong>menu loop</strong> that can add, view and change records, save, and quit</label></li>
+            <li><label><input type="checkbox"> <strong>Input validation</strong> that rejects bad data without crashing</label></li>
+            <li><label><input type="checkbox"> A <strong>test table</strong> in your README with at least 6 tests, written in your language's own test tools: one save-then-load round trip and 2 bad-input tests</label></li>
+            <li><label><input type="checkbox"> <strong>Feature request response</strong> in your README (triage, what changed, what the tests show)</label></li>
+            <li><label><input type="checkbox"> <strong>AI Collaboration</strong> section filled in</label></li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Concept Evidence: CONCEPTS.md</h2>
+          <p>Instead of the four lessons, include a <code>CONCEPTS.md</code> file in your repo. It has one row for each concept below: where it appears in your code, and how it's tested. Your teacher should be able to find every concept in your code in a few minutes.</p>
+          <div class="table-wrap">
+            <table class="content-table">
+              <thead><tr><th>Concept</th><th>Where it's in my code</th><th>How it's tested</th></tr></thead>
+              <tbody>
+                <tr><td>Variables and data types, including one conversion between types</td><td></td><td></td></tr>
+                <tr><td>Conditionals</td><td></td><td></td></tr>
+                <tr><td>Loops or iteration</td><td></td><td></td></tr>
+                <tr><td>Functions with inputs and outputs</td><td></td><td></td></tr>
+                <tr><td>An ordered collection</td><td></td><td></td></tr>
+                <tr><td>A keyed collection</td><td></td><td></td></tr>
+                <tr><td>Input validation and error handling, in your language's style</td><td></td><td></td></tr>
+                <tr><td>Saving and loading data</td><td></td><td></td></tr>
+                <tr><td>Splitting code into more than one unit (module, file or package)</td><td></td><td></td></tr>
+                <tr><td>Running and testing with your language's own tools</td><td></td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Your Language-Specific Concept</h2>
+          <p>Pick one thing your language does differently from Python. Examples: ownership and borrowing in Rust, manual memory and pointers in C++, prototypes in JavaScript, pattern matching, or generics.</p>
+          <p>Explain it in your README, in your own words, with one piece of your code that shows it. This is the section your one-on-one will focus on.</p>
+        </section>
+
+        <section class="card">
+          <h2>Checkpoints at Transfer</h2>
+          <div class="table-wrap">
+            <table class="content-table">
+              <thead><tr><th>Checkpoint</th><th>What it looks like on this track</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><strong>CP1</strong></td>
+                  <td>Pitch names the language and why; pseudocode; your language's check command passes on a lab machine, committed; <code>CONCEPTS.md</code> started</td>
+                </tr>
+                <tr>
+                  <td><strong>CP2</strong></td>
+                  <td>Menu runs with at least two features working; save and load working; test table written with expected results filled in</td>
+                </tr>
+                <tr>
+                  <td><strong>CP3</strong></td>
+                  <td>All tests run with actual results recorded; <code>CONCEPTS.md</code> complete; language-specific section written; feature request triaged and done (or declined, with a reason); shown to a peer</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Start each checkpoint commit with <code>CP1:</code>, <code>CP2:</code> or <code>CP3:</code>, and push before your teacher calls you up.</p>
+        </section>
+
+        <section class="card">
+          <h2>How You're Assessed</h2>
+          <p>The same 5 criteria as every other track. At CP3, your teacher will call you up for a short one-on-one: you'll walk through one function, explain one choice, and change one small thing live.</p>
+        </section>
+
+        <section class="card">
+          <h2>Done Looks Like&hellip;</h2>
+          <p>Someone can run your app, add something, close it, reopen it, and find it still there. Your tests show that, your <code>CONCEPTS.md</code> shows where each concept lives, and your language-specific section shows you understand why your language works the way it does.</p>
+        </section>
+
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card"><strong>This track</strong><br>Unit 3 &middot; Transfer</div>
+        <div class="card"><strong>Approved languages</strong><br><a href="/cp1112/unit2/project2c/2C_index.html">See the 2C list</a></div>
+        <div class="card"><strong>Feature request</strong><br><a href="/cp1112/unit3/feature_request/3_feature_request.html">How it works</a></div>
+        <div class="card"><strong>Tracks</strong><br><a href="/cp1112/unit3/project3core/3_core_index.html">Core</a><br><a href="/cp1112/unit3/project3extended/3_extended_index.html">Extended</a><br>Transfer <span class="muted small">(you&rsquo;re here)</span></div>
+        <div class="card"><a href="/cp1112/unit3/u3_index.html">&larr; Back to Unit 3</a></div>
+
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+
+  </body>
+</html>

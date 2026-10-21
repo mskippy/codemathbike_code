@@ -1,0 +1,71 @@
+<!-- v1 – Oct 2026 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CP11/12 • Project 1B (Your Language)</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
+
+  <body data-course="cp1112">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
+
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
+
+      <main id="content" data-page-title="CP11/12 • Project 1B (Your Language)">
+        <section class="card">
+          <h1>Project 1B &mdash; A Multi-Room Adventure Loop (Your Language)</h1>
+          <p>Extend your game so the player moves between rooms. A loop keeps the game running until the player wins or quits. Build it in your approved language, with your own room names and story.</p>
+        </section>
+
+        <section class="card">
+          <h2>Goals: what this project shows, in any language</h2>
+          <p>By the end of 1B, your code should show that you can:</p>
+          <ol class="tier-list">
+            <li><strong>Move through at least three rooms</strong>, with the player's current room stored in a variable.</li>
+            <li><strong>Describe a room with a function that takes a parameter.</strong> The same function should print a different description for each room it's given.</li>
+            <li><strong>Handle the player's choices in a function</strong> that takes the input and returns or changes the state of the game (for example, the next room).</li>
+            <li><strong>Use a loop with a clear ending condition</strong>, such as a won flag or a quit command. The loop must stop when the condition is met.</li>
+            <li><strong>Keep a list or other collection</strong> if your rooms or exits need one, and loop over it at least once.</li>
+          </ol>
+        </section>
+
+        <section class="card">
+          <h2>What to Hand In</h2>
+          <ul class="list-tight">
+            <li>The loop runs, with the rooms and the ending working. Test both an ending win and a quit.</li>
+            <li>Concept-log rows for loops, functions with parameters, and the ending condition (at least 5 rows in total by CP2)</li>
+            <li>A commit with the prefix <code>CP2:</code>, pushed before your one-on-one</li>
+          </ul>
+          <p>Every shared rule is on the <a href="/cp1112/unit1/your_language/1_your_language_index.html#common-parameters">Common Parameters</a> card.</p>
+        </section>
+
+        <section class="card">
+          <h2>Getting Started</h2>
+          <p>Get one room working before you add the loop. Then add the loop, then a second and third room. Run the game after each step.</p>
+          <p class="lesson-note">Check your loop by running the game twice with different choices. If one of the runs gets stuck, you've found a loop with no way out.</p>
+        </section>
+
+        <section class="card">
+          <h2>What's Next</h2>
+          <p><strong>Coming up:</strong> Project 1C &mdash; inventory, and finding a planted bug.</p>
+        </section>
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <div class="card"><strong>This project</strong><br>Unit 1 &middot; Your Language &middot; 1B</div>
+        <div class="card"><strong>Common Parameters</strong><br><a href="/cp1112/unit1/your_language/1_your_language_index.html#common-parameters">Read the shared rules</a></div>
+        <div class="card"><a href="/cp1112/unit1/your_language/1a_index.html">&larr; Back to 1A</a></div>
+        <div class="card"><a href="/cp1112/unit1/your_language/1c_index.html">Next: 1C &rarr;</a></div>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+  </body>
+</html>

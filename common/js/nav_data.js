@@ -119,7 +119,7 @@ window.NAV_DATA = {
           }
         },
         unit1: {
-          title: "U1 Python Foundations",
+          title: "U1 Foundations",
           href: "/cp1112/unit1/u1_index.html",
           pages: {
             core_lesson1: { title: "1.1 Variables & Data Types", href: "/cp1112/unit1/core/lesson1/1.1_index.html" },
@@ -137,7 +137,8 @@ window.NAV_DATA = {
             ext_lesson2: { title: "1.EXT.2 Building on Basics", href: "/cp1112/unit1/extended/lesson2/1.ext2_index.html" },
             ext_project1x: { title: "Project 1X — Shared Start", href: "/cp1112/unit1/extended/project1x/index.html" },
             ext_project1y: { title: "Project 1Y — Diverges", href: "/cp1112/unit1/extended/project1y/index.html" },
-            ext_project1z: { title: "Project 1Z — Open Stretch", href: "/cp1112/unit1/extended/project1z/index.html" }
+            ext_project1z: { title: "Project 1Z — Open Stretch", href: "/cp1112/unit1/extended/project1z/index.html" },
+            your_language: { title: "Your Language Track", href: "/cp1112/unit1/your_language/1_your_language_index.html" }
           }
         },
         unit2: {
@@ -147,7 +148,7 @@ window.NAV_DATA = {
             lesson1: { title: "2.1 Repo Reorganization", href: "/cp1112/unit2/lesson1/2.1_index.html" },
             project2a: { title: "2A — Build It", href: "/cp1112/unit2/project2a/2A_index.html" },
             project2b: { title: "2B — Structure It", href: "/cp1112/unit2/project2b/2B_index.html" },
-            project2c: { title: "2C — Transfer It", href: "/cp1112/unit2/project2c/2C_index.html" },
+            project2c: { title: "2C — Switch Languages", href: "/cp1112/unit2/project2c/2C_index.html" },
             project2d: { title: "2D — Engineer It", href: "/cp1112/unit2/project2d/2D_index.html" }
           }
         },
@@ -161,6 +162,7 @@ window.NAV_DATA = {
             lesson4: { title: "3.4 Breaking Code into Functions", href: "/cp1112/unit3/lesson4/3.4_index.html" },
             core: { title: "Core Track", href: "/cp1112/unit3/project3core/3_core_index.html" },
             extended: { title: "Extended Track", href: "/cp1112/unit3/project3extended/3_extended_index.html" },
+            transfer: { title: "Transfer Track", href: "/cp1112/unit3/project3transfer/3_transfer_index.html" },
             feature_request: { title: "The Feature Request", href: "/cp1112/unit3/feature_request/3_feature_request.html" }
           }
         },

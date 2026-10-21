@@ -1,4 +1,4 @@
-<!-- v3 – Sep 2026 -->
+<!-- v4 – Oct 2026 -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -29,8 +29,8 @@
         <section class="card">
           <h2>This Level Is for You If&hellip;</h2>
           <ul class="list-tight">
-            <li>Unit 1 was your first real time with Python.</li>
-            <li>You can write loops, conditionals and functions.</li>
+            <li>Unit 1 was your first real time programming, in Python or in another approved language.</li>
+            <li>You can write loops, conditionals and functions in your language.</li>
             <li>You haven't built a whole program from your own idea yet.</li>
           </ul>
         </section>
@@ -48,7 +48,7 @@
           <ul class="list-tight" style="list-style:none; padding-left:0;">
             <li><label><input type="checkbox"> Uses variables, conditionals, loops, functions and at least one list, each for a real purpose</label></li>
             <li><label><input type="checkbox"> At least <strong>three functions</strong>, each doing one job</label></li>
-            <li><label><input type="checkbox"> <strong>Input validation:</strong> the program doesn't crash on a wrong type or an out-of-range choice (use <code>if</code> checks and <code>.isdigit()</code>, not try/except)</label></li>
+            <li><label><input type="checkbox"> <strong>Input validation:</strong> the program doesn't crash on a wrong type or an out-of-range choice. Check the input before you use it (in Python, an <code>if</code> with <code>.isdigit()</code> does this). Don't rely on an error happening and then catching it.</label></li>
             <li><label><input type="checkbox"> A <strong>menu or loop</strong> so the user can do more than one thing before quitting</label></li>
             <li><label><input type="checkbox"> <strong>Inline comments</strong> explaining <em>why</em>, not just <em>what</em></label></li>
             <li><label><input type="checkbox"> A <strong>test-case table</strong> in your README with at least 6 tests, including 2 "bad input" tests</label></li>
@@ -58,13 +58,13 @@
 
           <details>
             <summary><strong>Need a head start?</strong></summary>
-            <p>Try building from a blank file first. If you're stuck, grab the starter for your problem type. Each one has a menu loop that already works, plus empty functions with comments saying what each should do. The rest is up to you: look for the <code># TODO</code> markers.</p>
+            <p>Try building from a blank file first, then use the pseudocode example below as your plan. If you're writing in Python and get stuck, grab the Python starter for your problem type. Each one has a menu loop that already works, plus empty functions with comments saying what each should do. Look for the <code># TODO</code> markers.</p>
             <p>
               <a class="btn" href="starter_calculator.py" download>Download starter_calculator.py</a>
               <a class="btn" href="starter_quiz.py" download>Download starter_quiz.py</a>
               <a class="btn" href="starter_tracker.py" download>Download starter_tracker.py</a>
             </p>
-            <p class="lesson-note">Save it into your Unit 2 project folder and rename it <code>main.py</code>. Commit it before you change anything, so your history shows what was the starter and what's yours.</p>
+            <p class="lesson-note">The starters are Python only. If you're writing in another language, use the blank-file route. Save your main file into your Unit 2 project folder, and commit it before you change anything, so your history shows what was the starting point and what's yours.</p>
           </details>
 
           <p class="lesson-note"><strong>On AI and tutorials:</strong> web tutorials and Copilot are fine to use, as long as your AI Collaboration section records what came from them. When your teacher calls you up, you should be able to explain every function in your program.</p>
@@ -80,15 +80,15 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>CP1</strong><br><span class="muted small">End of Week 1</span></td>
+                  <td><strong>CP1</strong></td>
                   <td>README pitch filled in using the template prompts; pseudocode for your main menu and each function</td>
                 </tr>
                 <tr>
-                  <td><strong>CP2</strong><br><span class="muted small">End of Week 2</span></td>
+                  <td><strong>CP2</strong></td>
                   <td>Menu runs and at least two features work; test table written with expected results filled in</td>
                 </tr>
                 <tr>
-                  <td><strong>CP3</strong><br><span class="muted small">End of Week 3</span></td>
+                  <td><strong>CP3</strong></td>
                   <td>All tests run with actual results recorded; any failures fixed or explained; shown to a peer</td>
                 </tr>
               </tbody>
@@ -97,7 +97,7 @@
           <p>Remember to start each checkpoint commit with <code>CP1:</code>, <code>CP2:</code> or <code>CP3:</code>, and push before your teacher calls you up.</p>
 
           <h3>What CP1 pseudocode looks like</h3>
-          <p>Here's a worked example for a small tip calculator. Your own pseudocode should be about this detailed. Notice it's plain English steps, not Python with the colons taken out.</p>
+          <p>Here's a worked example for a small tip calculator. Your own pseudocode should be about this detailed. Notice it's plain English steps, not code with the details taken out. It works the same whatever language you'll write in.</p>
           <pre><code>MAIN MENU
   keep repeating until the user picks Quit:
     show the options: 1) Calculate a tip   2) Split the bill   3) Quit
@@ -131,9 +131,9 @@ split_bill
         <section class="card">
           <h2>When You're Stuck</h2>
           <ul>
-            <li><strong>Go back to the matching Unit 1 lesson notebook.</strong> Every skill you need for this project is in there. They're in your <code>1_python_learning/practice</code> folder now.</li>
+            <li><strong>Go back to your Unit 1 work.</strong> Python students: your practice notebooks in <code>1_foundations/practice</code>. Other languages: your Unit 1 concept log. Every skill you need for this project is in there.</li>
             <li><strong>Three before me:</strong> check your notes, then ask a neighbour, then ask your teacher.</li>
-            <li><strong>Print-debug:</strong> add a <code>print()</code> of your variables just before the line that breaks, so you can see what they actually hold.</li>
+            <li><strong>Print-debug:</strong> print your variables just before the line that breaks, so you can see what they actually hold. Every language has a way to do this.</li>
           </ul>
         </section>
 
@@ -145,9 +145,9 @@ split_bill
       </main>
 
       <aside id="right-rail" aria-label="Resources">
-        <div class="card"><strong>This level</strong><br>Unit 2 &middot; 2A Build It<br>3 weeks &middot; 3 checkpoints</div>
+        <div class="card"><strong>This level</strong><br>Unit 2 &middot; 2A Build It<br>3 checkpoints</div>
         <div class="card">
-          <strong>Starter files</strong><br>
+          <strong>Python starter files</strong><br>
           <a href="starter_calculator.py" download>starter_calculator.py</a><br>
           <a href="starter_quiz.py" download>starter_quiz.py</a><br>
           <a href="starter_tracker.py" download>starter_tracker.py</a>
@@ -169,7 +169,7 @@ split_bill
           <strong>All levels</strong><br>
           2A &mdash; Build It <span class="muted small">(you're here)</span><br>
           <a href="/cp1112/unit2/project2b/2B_index.html">2B &mdash; Structure It</a><br>
-          <a href="/cp1112/unit2/project2c/2C_index.html">2C &mdash; Transfer It</a><br>
+          <a href="/cp1112/unit2/project2c/2C_index.html">2C &mdash; Switch Languages</a><br>
           <a href="/cp1112/unit2/project2d/2D_index.html">2D &mdash; Engineer It</a>
         </div>
         <div class="card"><a href="/cp1112/unit2/lesson1/2.1_index.html">&larr; Back to 2.1 Repo Reorganization</a></div>
