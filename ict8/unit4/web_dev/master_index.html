@@ -1,6 +1,6 @@
-<!-- ===== ICT 8 Web Dev Showcase – hub (updated Oct 2026) ===== -->
-<!-- Group links now point to index.html in each group folder (renamed from s2w1_index.html etc.). -->
-<!-- Added "Last year" link to the SY25/26 archive. -->
+<!-- ===== ICT 8 Web Dev Showcase – hub (updated Nov 2026) ===== -->
+<!-- Oct 2026: group links point to index.html in each group folder. "Last year" link added to the SY25/26 archive. -->
+<!-- Nov 2026: top navigation changed to buttons so the way back to Unit 4 and the archive is easy to see. -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,6 +19,9 @@
     a{color:#93c5fd;text-decoration:none}
     a:hover{text-decoration:underline}
     small{opacity:.8}
+    .topbar{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:16px 0 0}
+    .btn{display:inline-block;padding:9px 16px;border-radius:999px;border:1px solid #334155;background:#111827;color:#93c5fd;font-size:15px}
+    .btn:hover{background:#1e293b;text-decoration:none}
   </style>
 </head>
 
@@ -27,9 +30,10 @@
     <h1>ICT 8 – Web Development Showcase </h1>
     <p>Choose your class to view student pages. <small>Privacy: first name + last initial only; no personal info; educational links/images.</small></p>
 
-    <nav>
-      <a href="/ict8/unit4/index.html">Back to Unit 4</a> •
-      <a href="/ict8/unit4/web_dev/SY2526/index.html">Last year (SY25/26)</a>
+    <!-- Nov 2026: buttons replace the plain text links -->
+    <nav class="topbar">
+      <a class="btn" href="/ict8/unit4/index.html">← Back to Unit 4</a>
+      <a class="btn" href="/ict8/unit4/web_dev/SY2526/index.html">Last year (SY25/26)</a>
     </nav>
   </header>
 
