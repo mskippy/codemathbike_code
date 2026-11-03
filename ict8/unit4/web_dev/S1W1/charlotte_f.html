@@ -5,17 +5,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
-  
+
   <!-- 💡 TYPE ZONE: Add your name below.  -->
   <title>My First Webpage – Charlotte</title>
   <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
   <meta name="author" content="Charlotte" />
+</head>
 
-      <p style="margin-top:12px;">
-        <a href='/ict8/unit4/web_dev/S1W1/s1w1_index.html'>← Back to S2W1 class page</a>
-      </p>
+<body>
+  <!-- CHANGED (Oct 2026): back link said "Back to S2W1" and pointed to s1w1_index.html (does not exist). Now says "Back to S1W1 class page" and points to the S1W1 index page. -->
+  <p style="margin-top:12px;">
+    <a href="/ict8/unit4/web_dev/S1W1/index.html">← Back to S1W1 class page</a>
+  </p>
 
-  
   <style>
     /* Base page styling */
     :root {
@@ -58,29 +60,30 @@
 
     <section>
       <h2>About Me</h2>
+      <!-- CHANGED (Oct 2026): the "fun fact" sentence was outside a paragraph. Moved inside the paragraph. Wording unchanged. -->
       <p>
-       Hi im Charlotte! and my favorite colour is pink. i like to do taekwondo and play vollyball. i play two instrument the clairnet and the piano and finallly my favorite animals are otters and blue whales 
-
-
-  
+       Hi im Charlotte! and my favorite colour is pink. i like to do taekwondo and play vollyball. i play two instrument the clairnet and the piano and finallly my favorite animals are otters and blue whales
       </p>
-      a fun fact about me is that im two belts away from being a black belt in taekwondo
+      <p>a fun fact about me is that im two belts away from being a black belt in taekwondo</p>
     </section>
 
     <section>
       <h2>Favourite Links</h2>
       <ul>
         <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
-        <li><a href="https://ca.pinterest.com/" target="_blank" rel="noopener">Pintrest</a></li>
+        <!-- CHANGED (Oct 2026): "Pintrest" spelling corrected to "Pinterest" (link text only). -->
+        <li><a href="https://ca.pinterest.com/" target="_blank" rel="noopener">Pinterest</a></li>
         <li><a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a></li>
-        
       </ul>
     </section>
 
     <section>
       <h2>An Awesome Image</h2>
-        <img src="https://www.visit-croatia.info/wp-content/uploads/sites/133/lake-bled-far-hd.jpg"
-        <figcaption>Photo credit: Unsplash</figcaption>
+      <!-- CHANGED (Oct 2026): image tag was missing its closing quote and "/>", which broke the rest of this section. Fixed. Alt text added. -->
+      <!-- CHANGED (Oct 2026): caption said "Photo credit: Unsplash", but the image address is visit-croatia.info. Caption changed to match. TEACHER: please confirm the source with Charlotte. Image link not checked from the repo. -->
+      <figure>
+        <img src="https://www.visit-croatia.info/wp-content/uploads/sites/133/lake-bled-far-hd.jpg" alt="Lake Bled" />
+        <figcaption>Photo credit: visit-croatia.info</figcaption>
       </figure>
     </section>
 
@@ -89,22 +92,19 @@
       <p id="pun">why did the computer and wifi get married?</p>
       <button type="button" onclick="myFunction()">Why?</button>
     </section>
-    
+
     <section>
       <h2>Course Reflection</h2>
 
-      <p></p>I think that this coures was simple ad fun. I had a fun time doing it
+      <p>I think that this coures was simple ad fun. I had a fun time doing it
       in this unit we learned how to make a web page with some help of course. This part of the project was not a hard as some parts. For example the G develoment was a more complex thing to do because we had a simple guide line that we followed unlike the other part. eventhough this part wasnt as hard as the rest there were still some sections that made it difficult like trying to get my pun to work.
-      Over all this was very fun and usefull and i would like to do it again. 
-
-      
+      Over all this was very fun and usefull and i would like to do it again.</p>
     </section>
-    
-    
-    
+
     <footer>
+      <!-- CHANGED (Oct 2026): footer said "Built by Your Name" (template text). Replaced with the student's name. -->
       <p>
-        Built by <strong>Your Name</strong>. Last updated: <span id="lastUpdated"></span>.
+        Built by <strong>Charlotte</strong>. Last updated: <span id="lastUpdated"></span>.
       </p>
     </footer>
   </main>
@@ -115,6 +115,6 @@
       document.getElementById("pun").innerHTML = "because they felt a connection!";
     }
   </script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"spa":2}' crossorigin="anonymous"></script>
+  <!-- CHANGED (Oct 2026): removed the injected Cloudflare analytics script (not needed for the page). -->
 </body>
 </html>
