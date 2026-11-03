@@ -1,6 +1,6 @@
 <!-- ===== ICT 8 Web Dev Showcase – S2W3 (SY26/27) ===== -->
 <!-- Created Oct 2026. Add each student's page as a list item below, in alphabetical order by first name. -->
-<!-- Nov 2026: added button rows at the top (Back to Unit 4, All classes, and every class). -->
+<!-- Nov 2026: plain text links added at the top to other classes and Unit 4. -->
 <!-- Remove the "No pages published yet" line once the first student is added. -->
 <!doctype html>
 <html lang="en">
@@ -11,14 +11,12 @@
   <style>
     :root { --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --link:#1d4ed8; --bg:#f8fafc; --btn:#1d4ed8; --btn-ink:#ffffff; }
     body { margin:0; font-family: system-ui, Arial, sans-serif; background:var(--bg); color:var(--ink); }
-    main { max-width:720px; margin:0 auto; padding:24px 18px 48px; }
+    main { max-width:720px; margin:0 auto; padding:32px 18px 48px; }
     h1 { margin:0 0 4px; font-size:clamp(26px,4.5vw,36px); }
     .meta { margin:0 0 20px; color:var(--muted); font-size:14px; letter-spacing:.04em; text-transform:uppercase; }
-    .note { color:var(--muted); font-size:14px; margin:0 0 16px; }
-    .topbar, .classes { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 12px; }
-    .btn { display:inline-block; padding:8px 14px; border-radius:999px; border:1px solid #cbd5e1; background:#fff; color:var(--link); text-decoration:none; font-size:14px; }
-    .btn:hover { background:#eff6ff; text-decoration:underline; }
-    .btn.current { background:var(--link); color:#fff; border-color:var(--link); }
+    .topnav { font-size:14px; margin:0 0 20px; }
+    .topnav a { color:var(--link); text-decoration:none; }
+    .topnav a:hover { text-decoration:underline; }
     ol.students { list-style:none; padding:0; margin:16px 0 0; border-top:1px solid var(--line); }
     ol.students li { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 4px; border-bottom:1px solid var(--line); }
     ol.students .name { font-size:17px; }
@@ -31,20 +29,20 @@
 </head>
 <body>
   <main>
-    <div class="topbar">
-      <a class="btn" href="/ict8/unit4/index.html">← Back to Unit 4</a>
-      <a class="btn" href="/ict8/unit4/web_dev/master_index.html">All classes</a>
-    </div>
-    <div class="classes" aria-label="Other classes">
-      <a class="btn" href="/ict8/unit4/web_dev/S1W1/index.html">S1W1</a>
-      <a class="btn" href="/ict8/unit4/web_dev/S1W2/index.html">S1W2</a>
-      <a class="btn" href="/ict8/unit4/web_dev/S1W3/index.html">S1W3</a>
-      <a class="btn" href="/ict8/unit4/web_dev/S1W4/index.html">S1W4</a>
-      <a class="btn" href="/ict8/unit4/web_dev/S2W1/index.html">S2W1</a>
-      <a class="btn" href="/ict8/unit4/web_dev/S2W2/index.html">S2W2</a>
-      <a class="btn current" href="/ict8/unit4/web_dev/S2W3/index.html" aria-current="page">S2W3</a>
-      <a class="btn" href="/ict8/unit4/web_dev/S2W4/index.html">S2W4</a>
-    </div>
+    <nav class="topnav">
+      <a href="/ict8/unit4/index.html">← Back to Unit 4</a> •
+      <a href="/ict8/unit4/web_dev/master_index.html">All classes</a>
+    </nav>
+    <nav class="topnav">
+      <a href="/ict8/unit4/web_dev/S1W1/index.html">S1W1</a> •
+      <a href="/ict8/unit4/web_dev/S1W2/index.html">S1W2</a> •
+      <a href="/ict8/unit4/web_dev/S1W3/index.html">S1W3</a> •
+      <a href="/ict8/unit4/web_dev/S1W4/index.html">S1W4</a> •
+      <a href="/ict8/unit4/web_dev/S2W1/index.html">S2W1</a> •
+      <a href="/ict8/unit4/web_dev/S2W2/index.html">S2W2</a> •
+      <strong>S2W3</strong> •
+      <a href="/ict8/unit4/web_dev/S2W4/index.html">S2W4</a>
+    </nav>
 
     <h1>S2W3 – Web Development Showcase</h1>
     <p class="meta">ICT 8 · SY26/27</p>

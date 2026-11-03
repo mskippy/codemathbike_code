@@ -1,7 +1,7 @@
 <!-- ===== ICT 8 Web Dev Showcase – S1W1 (SY26/27) ===== -->
 <!-- Updated Oct 2026: student list added. Each entry links to the student's page. -->
 <!-- Nov 2026: Charlotte's entry fixed. The index linked to charlotte_c.html, but the file is charlotte_f.html. Link and name updated to match the file. TEACHER: confirm Charlotte's last initial. -->
-<!-- Nov 2026: added button rows at the top (Back to Unit 4, All classes, and every class) so students can move between pages. -->
+<!-- Nov 2026: plain text links added at the top to other classes and Unit 4 (replaces the earlier buttons). -->
 <!-- To add a student: copy one <li> block below, set the file name (firstname_l.html) and the display name, and keep the list alphabetical by first name. -->
 <!doctype html>
 <html lang="en">
@@ -12,14 +12,13 @@
   <style>
     :root { --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --link:#1d4ed8; --bg:#f8fafc; --btn:#1d4ed8; --btn-ink:#ffffff; }
     body { margin:0; font-family: system-ui, Arial, sans-serif; background:var(--bg); color:var(--ink); }
-    main { max-width:720px; margin:0 auto; padding:24px 18px 48px; }
+    main { max-width:720px; margin:0 auto; padding:32px 18px 48px; }
     h1 { margin:0 0 4px; font-size:clamp(26px,4.5vw,36px); }
     .meta { margin:0 0 20px; color:var(--muted); font-size:14px; letter-spacing:.04em; text-transform:uppercase; }
     .note { color:var(--muted); font-size:14px; margin:0 0 16px; }
-    .topbar, .classes { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 12px; }
-    .btn { display:inline-block; padding:8px 14px; border-radius:999px; border:1px solid #cbd5e1; background:#fff; color:var(--link); text-decoration:none; font-size:14px; }
-    .btn:hover { background:#eff6ff; text-decoration:underline; }
-    .btn.current { background:var(--link); color:#fff; border-color:var(--link); }
+    .topnav { font-size:14px; margin:0 0 20px; }
+    .topnav a { color:var(--link); text-decoration:none; }
+    .topnav a:hover { text-decoration:underline; }
     .search { width:100%; box-sizing:border-box; padding:12px 14px; font-size:17px; border:1px solid #cbd5e1; border-radius:10px; background:#fff; color:var(--ink); }
     .search:focus { outline:2px solid var(--link); outline-offset:1px; }
     ol.students { list-style:none; padding:0; margin:16px 0 0; border-top:1px solid var(--line); }
@@ -35,21 +34,20 @@
 </head>
 <body>
   <main>
-    <!-- Nov 2026: top buttons so students can get back without scrolling -->
-    <div class="topbar">
-      <a class="btn" href="/ict8/unit4/index.html">← Back to Unit 4</a>
-      <a class="btn" href="/ict8/unit4/web_dev/master_index.html">All classes</a>
-    </div>
-    <div class="classes" aria-label="Other classes">
-      <a class="btn current" href="/ict8/unit4/web_dev/S1W1/index.html" aria-current="page">S1W1</a>
-      <a class="btn" href="/ict8/unit4/web_dev/S1W2/index.html">S1W2</a>
-      <a class="btn" href="/ict8/unit4/web_dev/S1W3/index.html">S1W3</a>
-      <a class="btn" href="/ict8/unit4/web_dev/S1W4/index.html">S1W4</a>
-      <a class="btn" href="/ict8/unit4/web_dev/S2W1/index.html">S2W1</a>
-      <a class="btn" href="/ict8/unit4/web_dev/S2W2/index.html">S2W2</a>
-      <a class="btn" href="/ict8/unit4/web_dev/S2W3/index.html">S2W3</a>
-      <a class="btn" href="/ict8/unit4/web_dev/S2W4/index.html">S2W4</a>
-    </div>
+    <nav class="topnav">
+      <a href="/ict8/unit4/index.html">← Back to Unit 4</a> •
+      <a href="/ict8/unit4/web_dev/master_index.html">All classes</a>
+    </nav>
+    <nav class="topnav">
+      <strong>S1W1</strong> •
+      <a href="/ict8/unit4/web_dev/S1W2/index.html">S1W2</a> •
+      <a href="/ict8/unit4/web_dev/S1W3/index.html">S1W3</a> •
+      <a href="/ict8/unit4/web_dev/S1W4/index.html">S1W4</a> •
+      <a href="/ict8/unit4/web_dev/S2W1/index.html">S2W1</a> •
+      <a href="/ict8/unit4/web_dev/S2W2/index.html">S2W2</a> •
+      <a href="/ict8/unit4/web_dev/S2W3/index.html">S2W3</a> •
+      <a href="/ict8/unit4/web_dev/S2W4/index.html">S2W4</a>
+    </nav>
 
     <h1>S1W1 – Web Development Showcase</h1>
     <p class="meta">ICT 8 · SY26/27</p>
