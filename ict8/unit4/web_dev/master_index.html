@@ -1,59 +1,57 @@
-<!-- ===== ICT 8 Web Dev Showcase – hub (updated Nov 2026) ===== -->
-<!-- Oct 2026: group links point to index.html in each group folder. "Last year" link added to the SY25/26 archive. -->
-<!-- Nov 2026: top links are plain text again (the button style was removed). -->
+<!-- ===== ICT 8 Web Dev Showcase – all classes (SY26/27 hub) ===== -->
+<!-- Nov 2026: rebuilt to match the rest of the ICT 8 site (shared header, sidebar, cards and ICT 8 green). Button-style links replaced with plain text links. -->
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ICT 8 – Web Dev Showcase (All Classes)</title>
-  <meta name="robots" content="noindex, nofollow" />
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="noindex, nofollow" />
+    <title>ICT 8 • Web Dev Showcase</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
 
-  <style>
-    body{margin:0;font-family:system-ui,Arial,sans-serif;background:#0b1020;color:#e2e8f0}
-    header{padding:28px 18px;text-align:center}
-    h1{margin:0;font-size:clamp(28px,5vw,44px)}
-    main{max-width:1100px;margin:0 auto;padding:18px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
-    .card{background:#111827;border:1px solid #1f2937;border-radius:14px;padding:16px; text-align: center;}
-    a{color:#93c5fd;text-decoration:none}
-    a:hover{text-decoration:underline}
-    small{opacity:.8}
-  </style>
-</head>
+  <body data-course="ict8" class="ict8">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
 
-<body>
-  <header>
-    <h1>ICT 8 – Web Development Showcase </h1>
-    <p>Choose your class to view student pages. <small>Privacy: first name + last initial only; no personal info; educational links/images.</small></p>
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
 
-    <nav>
-      <a href="/ict8/unit4/index.html">Back to Unit 4</a> •
-      <a href="/ict8/unit4/web_dev/SY2526/index.html">Last year (SY25/26)</a>
-    </nav>
-  </header>
+      <main id="content" data-page-title="ICT 8 • Web Dev Showcase">
+        <section class="card">
+          <h2>Web Development Showcase</h2>
+          <p>Choose your class to see the student pages. Pages show first name and last initial only.</p>
+        </section>
 
-  <main>
-    <section class="grid">
-      <div class="card"><a href="/ict8/unit4/web_dev/S1W1/index.html">S1W1</a></div>
-      <div class="card"><a href="/ict8/unit4/web_dev/S1W2/index.html">S1W2</a></div>
-      <div class="card"><a href="/ict8/unit4/web_dev/S1W3/index.html">S1W3</a></div>
-      <div class="card"><a href="/ict8/unit4/web_dev/S1W4/index.html">S1W4</a></div>
-      <div class="card"><a href="/ict8/unit4/web_dev/S2W1/index.html">S2W1</a></div>
-      <div class="card"><a href="/ict8/unit4/web_dev/S2W2/index.html">S2W2</a></div>
-      <div class="card"><a href="/ict8/unit4/web_dev/S2W3/index.html">S2W3</a></div>
-      <div class="card"><a href="/ict8/unit4/web_dev/S2W4/index.html">S2W4</a></div>
-    </section>
-  </main>
+        <section class="card">
+          <h2>This year (SY26/27)</h2>
+          <ul class="list-tight">
+            <li><a href="/ict8/unit4/web_dev/S1W1/index.html">S1W1</a></li>
+            <li><a href="/ict8/unit4/web_dev/S1W2/index.html">S1W2</a></li>
+            <li><a href="/ict8/unit4/web_dev/S1W3/index.html">S1W3</a></li>
+            <li><a href="/ict8/unit4/web_dev/S1W4/index.html">S1W4</a></li>
+            <li><a href="/ict8/unit4/web_dev/S2W1/index.html">S2W1</a></li>
+            <li><a href="/ict8/unit4/web_dev/S2W2/index.html">S2W2</a></li>
+            <li><a href="/ict8/unit4/web_dev/S2W3/index.html">S2W3</a></li>
+            <li><a href="/ict8/unit4/web_dev/S2W4/index.html">S2W4</a></li>
+          </ul>
+        </section>
+      </main>
 
-  <script>
-    (function () {
-      const p = location.pathname;
-      const b = document.body;
-      if (p.includes('/ict8/')) b.classList.add('ict8');
-      else if (p.includes('/ict9/')) b.classList.add('ict9');
-      else if (p.includes('/dc1011/')) b.classList.add('dc1011');
-    })();
-  </script>
-</body>
+      <aside id="right-rail" aria-label="Resources">
+        <section class="card">
+          <h2>Other links</h2>
+          <ul class="list-tight">
+            <li><a href="/ict8/unit4/web_dev/SY2526/index.html">Last year (SY25/26)</a></li>
+            <li><a href="/ict8/unit4/index.html">Back to Unit 4</a></li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+  </body>
 </html>

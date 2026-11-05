@@ -1,0 +1,116 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage – Isabella</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Isabella D" />
+
+      <p style="margin-top:12px;">
+        <!-- Nov 2026 link check: back link pointed to s1w1_index.html (does not exist). Now points to S1W2/index.html. -->
+        <a href='/ict8/unit4/web_dev/S1W2/index.html'>← Back to S1W2 class page</a>
+      </p>
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #d49ce5;
+      --ink: #1a1a1f;
+      --accent: #2a99e4; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #fff; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#f3f3f6; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="studentName">Isabella</span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+       Some of my hobbies are ,Volleyball,Baking,and going swimming with my friends. My favourite thing in the whole entire world are dogs! <!-- Nov 2026 privacy: family and foster-dog details generalized. -->Recently I helped care for a foster dog, and giving him back was the hardest thing I have ever done! My goal for this course is to finish the whole thing and maybe do the optional stuff if there is.
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <!-- Nov 2026 link check: three malformed links fixed (doubled "https://https://", missing quotes and closing tags). -->
+        <li><a href="https://www.aritzia.com/en" target="_blank" rel="noopener">Aritzia</a></li>
+        <li><a href="https://www.sephora.com/ca/en/" target="_blank" rel="noopener">Sephora</a></li>
+        <li><a href="https://www.starbucks.ca/" target="_blank" rel="noopener">Starbucks</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="https://scontent.fyvr2-1.fna.fbcdn.net/v/t39.99422-6/781293073_1562393215372896_6097989529095036107_n.png?stp=dst-jpg_tt6&cstp=mx1080x1350&ctp=s590x590&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ezRZJ79qgNsQ7kNvwHeQdna&_nc_oc=AdrmhLId-gGwJ8rF7VHg41bxpeUQZr1lR8oTEhsXuhdqc8Hkf62VF4hsJtE49acPSFA&_nc_zt=14&_nc_ht=scontent.fyvr2-1.fna&_nc_gid=0-kWx1KMfcrPcEEcUlQpOg&_nc_ss=7a289&oh=00_AQTyjn5F0hJBONPUgRAgy2WNr32gJ---0F7rezaJ4BLlBQ&oe=6AF15B68">
+        <figcaption>Photo credit: Facebook.PADS</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">Why are fish bad at volleyball?</p>
+      <button type="button" onclick="myFunction()">Why?</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p>In this course I learnt how to do forms of coding that I thought were really funny! I enjoyed connecting with my friends and learning new things with them! Overall I had a lot of fun!!!!!!</p>
+      
+    </section>
+    
+    
+    
+    <footer>
+      <p>
+        <!-- Nov 2026 privacy: full name shortened to first name + initial. -->Built by <strong>Isabella D</strong>. Last updated: <span id="lastUpdated">26/11/04</span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "Because they are afraid of the net!!!";
+    }
+  </script>
+</body>
+</html>

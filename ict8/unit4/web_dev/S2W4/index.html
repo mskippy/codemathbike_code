@@ -1,62 +1,66 @@
 <!-- ===== ICT 8 Web Dev Showcase – S2W4 (SY26/27) ===== -->
-<!-- Created Oct 2026. Add each student's page as a list item below, in alphabetical order by first name. -->
-<!-- Nov 2026: plain text links added at the top to other classes and Unit 4. -->
-<!-- Remove the "No pages published yet" line once the first student is added. -->
+<!-- Nov 2026: rebuilt to match the rest of the ICT 8 site (shared header, sidebar, cards and ICT 8 green). Button-style links replaced with plain text links. -->
+<!-- To add a student: add one line to the list, e.g. <li><a href="firstname_l.html">Firstname L</a></li>, in first-name order. -->
+
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ICT 8 – S2W4 Showcase (SY26/27)</title>
-  <style>
-    :root { --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --link:#1d4ed8; --bg:#f8fafc; --btn:#1d4ed8; --btn-ink:#ffffff; }
-    body { margin:0; font-family: system-ui, Arial, sans-serif; background:var(--bg); color:var(--ink); }
-    main { max-width:720px; margin:0 auto; padding:32px 18px 48px; }
-    h1 { margin:0 0 4px; font-size:clamp(26px,4.5vw,36px); }
-    .meta { margin:0 0 20px; color:var(--muted); font-size:14px; letter-spacing:.04em; text-transform:uppercase; }
-    .topnav { font-size:14px; margin:0 0 20px; }
-    .topnav a { color:var(--link); text-decoration:none; }
-    .topnav a:hover { text-decoration:underline; }
-    ol.students { list-style:none; padding:0; margin:16px 0 0; border-top:1px solid var(--line); }
-    ol.students li { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 4px; border-bottom:1px solid var(--line); }
-    ol.students .name { font-size:17px; }
-    ol.students a.view { display:inline-block; padding:8px 14px; border-radius:999px; background:var(--btn); color:var(--btn-ink); text-decoration:none; font-size:15px; white-space:nowrap; }
-    .empty { color:var(--muted); font-style:italic; }
-    nav { margin-top:32px; font-size:14px; }
-    nav a { color:var(--link); text-decoration:none; }
-    nav a:hover { text-decoration:underline; }
-  </style>
-</head>
-<body>
-  <main>
-    <nav class="topnav">
-      <a href="/ict8/unit4/index.html">← Back to Unit 4</a> •
-      <a href="/ict8/unit4/web_dev/master_index.html">All classes</a>
-    </nav>
-    <nav class="topnav">
-      <a href="/ict8/unit4/web_dev/S1W1/index.html">S1W1</a> •
-      <a href="/ict8/unit4/web_dev/S1W2/index.html">S1W2</a> •
-      <a href="/ict8/unit4/web_dev/S1W3/index.html">S1W3</a> •
-      <a href="/ict8/unit4/web_dev/S1W4/index.html">S1W4</a> •
-      <a href="/ict8/unit4/web_dev/S2W1/index.html">S2W1</a> •
-      <a href="/ict8/unit4/web_dev/S2W2/index.html">S2W2</a> •
-      <a href="/ict8/unit4/web_dev/S2W3/index.html">S2W3</a> •
-      <strong>S2W4</strong>
-    </nav>
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="noindex, nofollow" />
+    <title>ICT 8 • S2W4 Web Dev Showcase</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
 
-    <h1>S2W4 – Web Development Showcase</h1>
-    <p class="meta">ICT 8 · SY26/27</p>
+  <body data-course="ict8" class="ict8">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
 
-    <ol class="students">
-      <!-- <li><span class="name">Firstname L</span><a class="view" href="firstname_l.html">View page →</a></li> -->
-    </ol>
-    <p class="empty">No pages published yet.</p>
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
 
-    <nav>
-      <a href="/ict8/unit4/web_dev/master_index.html">← All classes</a> •
-      <a href="/ict8/unit4/web_dev/SY2526/index.html">Last year (SY25/26)</a> •
-      <a href="/ict8/unit4/index.html">Back to Unit 4</a>
-    </nav>
-  </main>
-</body>
+      <main id="content" data-page-title="ICT 8 • S2W4 Showcase">
+        <section class="card">
+          <h2>S2W4 – Web Development Showcase</h2>
+          <p class="small">ICT 8 · SY26/27</p>
+        </section>
+
+      <section class="card">
+        <h2>Student pages</h2>
+        <p>No pages published yet.</p>
+      </section>
+      </main>
+
+      <aside id="right-rail" aria-label="Resources">
+        <section class="card">
+          <h2>Classes</h2>
+          <ul class="list-tight">
+          <li><a href="/ict8/unit4/web_dev/S1W1/index.html">S1W1</a></li>
+          <li><a href="/ict8/unit4/web_dev/S1W2/index.html">S1W2</a></li>
+          <li><a href="/ict8/unit4/web_dev/S1W3/index.html">S1W3</a></li>
+          <li><a href="/ict8/unit4/web_dev/S1W4/index.html">S1W4</a></li>
+          <li><a href="/ict8/unit4/web_dev/S2W1/index.html">S2W1</a></li>
+          <li><a href="/ict8/unit4/web_dev/S2W2/index.html">S2W2</a></li>
+          <li><a href="/ict8/unit4/web_dev/S2W3/index.html">S2W3</a></li>
+          <li><a href="/ict8/unit4/web_dev/S2W4/index.html">S2W4</a></li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Other links</h2>
+          <ul class="list-tight">
+            <li><a href="/ict8/unit4/web_dev/master_index.html">All classes</a></li>
+            <li><a href="/ict8/unit4/web_dev/SY2526/index.html">Last year (SY25/26)</a></li>
+            <li><a href="/ict8/unit4/index.html">Back to Unit 4</a></li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+
+  </body>
 </html>

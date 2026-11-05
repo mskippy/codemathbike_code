@@ -1,101 +1,95 @@
 <!-- ===== ICT 8 Web Dev Showcase – S1W1 (SY26/27) ===== -->
-<!-- Updated Oct 2026: student list added. Each entry links to the student's page. -->
-<!-- Nov 2026: Charlotte's entry fixed. The index linked to charlotte_c.html, but the file is charlotte_f.html. Link and name updated to match the file. TEACHER: confirm Charlotte's last initial. -->
-<!-- Nov 2026: plain text links added at the top to other classes and Unit 4 (replaces the earlier buttons). -->
-<!-- To add a student: copy one <li> block below, set the file name (firstname_l.html) and the display name, and keep the list alphabetical by first name. -->
+<!-- Nov 2026: rebuilt to match the rest of the ICT 8 site (shared header, sidebar, cards and ICT 8 green). Button-style links replaced with plain text links. -->
+<!-- To add a student: add one line to the list, e.g. <li><a href="firstname_l.html">Firstname L</a></li>, in first-name order. -->
+<!-- Nov 2026: Charlotte's file is charlotte_f.html; TEACHER: confirm her last initial. -->
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ICT 8 – S1W1 Showcase (SY26/27)</title>
-  <style>
-    :root { --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --link:#1d4ed8; --bg:#f8fafc; --btn:#1d4ed8; --btn-ink:#ffffff; }
-    body { margin:0; font-family: system-ui, Arial, sans-serif; background:var(--bg); color:var(--ink); }
-    main { max-width:720px; margin:0 auto; padding:32px 18px 48px; }
-    h1 { margin:0 0 4px; font-size:clamp(26px,4.5vw,36px); }
-    .meta { margin:0 0 20px; color:var(--muted); font-size:14px; letter-spacing:.04em; text-transform:uppercase; }
-    .note { color:var(--muted); font-size:14px; margin:0 0 16px; }
-    .topnav { font-size:14px; margin:0 0 20px; }
-    .topnav a { color:var(--link); text-decoration:none; }
-    .topnav a:hover { text-decoration:underline; }
-    .search { width:100%; box-sizing:border-box; padding:12px 14px; font-size:17px; border:1px solid #cbd5e1; border-radius:10px; background:#fff; color:var(--ink); }
-    .search:focus { outline:2px solid var(--link); outline-offset:1px; }
-    ol.students { list-style:none; padding:0; margin:16px 0 0; border-top:1px solid var(--line); }
-    ol.students li { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 4px; border-bottom:1px solid var(--line); }
-    ol.students .name { font-size:17px; }
-    ol.students a.view { display:inline-block; padding:8px 14px; border-radius:999px; background:var(--btn); color:var(--btn-ink); text-decoration:none; font-size:15px; white-space:nowrap; }
-    ol.students a.view:hover { text-decoration:underline; }
-    .empty { color:var(--muted); font-style:italic; display:none; padding:12px 4px; }
-    nav { margin-top:32px; font-size:14px; }
-    nav a { color:var(--link); text-decoration:none; }
-    nav a:hover { text-decoration:underline; }
-  </style>
-</head>
-<body>
-  <main>
-    <nav class="topnav">
-      <a href="/ict8/unit4/index.html">← Back to Unit 4</a> •
-      <a href="/ict8/unit4/web_dev/master_index.html">All classes</a>
-    </nav>
-    <nav class="topnav">
-      <strong>S1W1</strong> •
-      <a href="/ict8/unit4/web_dev/S1W2/index.html">S1W2</a> •
-      <a href="/ict8/unit4/web_dev/S1W3/index.html">S1W3</a> •
-      <a href="/ict8/unit4/web_dev/S1W4/index.html">S1W4</a> •
-      <a href="/ict8/unit4/web_dev/S2W1/index.html">S2W1</a> •
-      <a href="/ict8/unit4/web_dev/S2W2/index.html">S2W2</a> •
-      <a href="/ict8/unit4/web_dev/S2W3/index.html">S2W3</a> •
-      <a href="/ict8/unit4/web_dev/S2W4/index.html">S2W4</a>
-    </nav>
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="noindex, nofollow" />
+    <title>ICT 8 • S1W1 Web Dev Showcase</title>
+    <link rel="stylesheet" href="/common/css/base.css">
+    <script src="/common/js/nav_data.js" defer></script>
+    <script src="/common/js/utils.js" defer></script>
+    <script src="/common/js/inject_partials.js" defer></script>
+    <script src="/common/js/nav_systems.js" defer></script>
+    <script src="/common/js/main.js" defer></script>
+  </head>
 
-    <h1>S1W1 – Web Development Showcase</h1>
-    <p class="meta">ICT 8 · SY26/27</p>
-    <p class="note">Find your first name in the list, then select <strong>View page</strong> to see your website.</p>
+  <body data-course="ict8" class="ict8">
+    <header id="site-header" data-partial="/common/partials/header.html"></header>
 
-    <input class="search" id="search" type="search" placeholder="Type your name to find it…" aria-label="Search for your name" />
+    <div class="page-wrap">
+      <aside id="sidebar" aria-label="Course navigation"></aside>
 
-    <ol class="students" id="studentList">
-      <!-- ADD STUDENT (copy this block for each new student):
-      <li><span class="name">Firstname L</span><a class="view" href="firstname_l.html">View page →</a></li>
-      -->
-      <li><span class="name">Aanik M</span><a class="view" href="aanik_m.html">View page →</a></li>
-      <li><span class="name">Ava S</span><a class="view" href="ava_s.html">View page →</a></li>
-      <li><span class="name">Benson H</span><a class="view" href="benson_h.html">View page →</a></li>
-      <li><span class="name">Brian F</span><a class="view" href="brian_f.html">View page →</a></li>
-      <!-- CHANGED (Nov 2026): was "Charlotte C" linking to charlotte_c.html. Now matches the file charlotte_f.html. -->
-      <li><span class="name">Charlotte F</span><a class="view" href="charlotte_f.html">View page →</a></li>
-      <li><span class="name">Emma Y</span><a class="view" href="emma_y.html">View page →</a></li>
-      <li><span class="name">Harita</span><a class="view" href="harita_l.html">View page →</a></li>
-      <li><span class="name">Kiera H</span><a class="view" href="kiera_h.html">View page →</a></li>
-      <li><span class="name">Olivia A</span><a class="view" href="olivia_a.html">View page →</a></li>
-    </ol>
-    <p class="empty" id="noMatch">No names match. Check the spelling, or ask your teacher.</p>
+      <main id="content" data-page-title="ICT 8 • S1W1 Showcase">
+        <section class="card">
+          <h2>S1W1 – Web Development Showcase</h2>
+          <p class="small">ICT 8 · SY26/27</p>
+        </section>
 
-    <nav>
-      <a href="/ict8/unit4/web_dev/master_index.html">← All classes</a> •
-      <a href="/ict8/unit4/web_dev/SY2526/index.html">Last year (SY25/26)</a> •
-      <a href="/ict8/unit4/index.html">Back to Unit 4</a>
-    </nav>
-  </main>
+      <section class="card">
+        <h2>Student pages</h2>
+        <p class="small">Find your first name in the list, then click it to see your website.</p>
+        <input class="search" id="search" type="search" placeholder="Type your name to find it…" aria-label="Search for your name" style="width:100%;max-width:360px;padding:8px 10px;font-size:15px;" />
+        <ul class="list-tight" id="studentList" style="margin-top:12px;">
+          <li><a href="aanik_m.html">Aanik M</a></li>
+          <li><a href="ava_s.html">Ava S</a></li>
+          <li><a href="benson_h.html">Benson H</a></li>
+          <li><a href="brian_f.html">Brian F</a></li>
+          <li><a href="charlotte_f.html">Charlotte F</a></li>
+          <li><a href="emma_y.html">Emma Y</a></li>
+          <li><a href="harita_l.html">Harita</a></li>
+          <li><a href="kiera_h.html">Kiera H</a></li>
+          <li><a href="olivia_a.html">Olivia A</a></li>
+        </ul>
+        <p class="small" id="noMatch" style="display:none;">No names match. Check the spelling, or ask your teacher.</p>
+      </section>
+      </main>
 
-  <script>
-    // Filters the list as the student types. Hides names that do not match.
-    (function () {
-      var input = document.getElementById('search');
-      var items = document.querySelectorAll('#studentList li');
-      var noMatch = document.getElementById('noMatch');
-      input.addEventListener('input', function () {
-        var q = input.value.trim().toLowerCase();
-        var shown = 0;
-        items.forEach(function (li) {
-          var match = li.textContent.toLowerCase().indexOf(q) !== -1;
-          li.style.display = match ? '' : 'none';
-          if (match) shown++;
+      <aside id="right-rail" aria-label="Resources">
+        <section class="card">
+          <h2>Classes</h2>
+          <ul class="list-tight">
+          <li><a href="/ict8/unit4/web_dev/S1W1/index.html">S1W1</a></li>
+          <li><a href="/ict8/unit4/web_dev/S1W2/index.html">S1W2</a></li>
+          <li><a href="/ict8/unit4/web_dev/S1W3/index.html">S1W3</a></li>
+          <li><a href="/ict8/unit4/web_dev/S1W4/index.html">S1W4</a></li>
+          <li><a href="/ict8/unit4/web_dev/S2W1/index.html">S2W1</a></li>
+          <li><a href="/ict8/unit4/web_dev/S2W2/index.html">S2W2</a></li>
+          <li><a href="/ict8/unit4/web_dev/S2W3/index.html">S2W3</a></li>
+          <li><a href="/ict8/unit4/web_dev/S2W4/index.html">S2W4</a></li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Other links</h2>
+          <ul class="list-tight">
+            <li><a href="/ict8/unit4/web_dev/master_index.html">All classes</a></li>
+            <li><a href="/ict8/unit4/web_dev/SY2526/index.html">Last year (SY25/26)</a></li>
+            <li><a href="/ict8/unit4/index.html">Back to Unit 4</a></li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
+    <script>
+      (function () {
+        var input = document.getElementById('search');
+        var items = document.querySelectorAll('#studentList li');
+        var noMatch = document.getElementById('noMatch');
+        input.addEventListener('input', function () {
+          var q = input.value.trim().toLowerCase();
+          var shown = 0;
+          items.forEach(function (li) {
+            var match = li.textContent.toLowerCase().indexOf(q) !== -1;
+            li.style.display = match ? '' : 'none';
+            if (match) shown++;
+          });
+          noMatch.style.display = shown === 0 ? 'block' : 'none';
         });
-        noMatch.style.display = shown === 0 ? 'block' : 'none';
-      });
-    })();
-  </script>
-</body>
+      })();
+    </script>
+  </body>
 </html>
