@@ -1,0 +1,116 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage – Anneliese W </title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Your Name" />
+
+      <!-- Nov 2026 link check: back link pointed to s1w2_index.html (does not exist) and was labelled S2W2. Now points to S1W2/index.html. -->
+      <p style="margin-top:12px;">
+        <a href='/ict8/unit4/web_dev/S1W2/index.html'>← Back to S1W2 class page</a>
+      </p>
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #fdd2db;
+      --ink: #1a1a1f;
+      --accent: #e54690; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #fff; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#f3f3f6; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="studentName">Anneliese W</span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+       I'm Anneliese, and some of my hobbies are field hockey, writing, reading and watching movies. A fun fact about me is that I've been to a Phoebe Bridgers concert, and it was a no-phones experience. A goal I have for I.C.T. 8 is that I hope to learn more about coding, and how to make a website-- incase I ever wanted to ake my own professional website. My favourite animal is a deer, and I went as one for halloween!
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://store.oliviarodrigo.com/" target="_blank" rel="noopener">Olivia Rodrigo</a></li>
+        <li><a href="https://www.pinterest.com/" target="_blank" rel="noopener">Pinterest</a></li>
+        <li><a href="https://www.indigo.ca/" target="_blank" rel="noopener">Indigo</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="https://h2.gifposter.com/bingImages/EiffelBelow_EN-US6599490334_1920x1080.jpg_sm" alt="A Photo Of Paris" />
+        <figcaption>Photo credit: Bing: Photo Of The Day</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">Why did the M&M go to school?</p>
+      <button type="button" onclick="myFunction()">I don't know, why?</button>
+    </section>
+    
+    <section> 
+      <h2>Course Reflection</h2>
+
+      <p>This course, I learnt a lot. I learnt about the skills to make a video game, how to make a website (using a template), and lots of other things. I also gained more skills in typing, and using canva and photo-editing. I enjoyed using the photo editing techniques with canvas magic eraser, and I know I'll use that in the future. One of my favourite parts of ICT 8 was making my video game. I really liked getting to play it and learning how to code a video game properly. Another thing I enjoyed was the ability to be independent in class, only having to listen a little bit.  I get tired listening to talking and lessons all day, but this class was different because we actually followed stuff (reading instructions) and not talking as much. Overall, I really liked my 4 weeks in ICT 8.  </p>
+      
+    </section>
+    
+    
+    
+    <footer>
+      <p>
+        Built by <strong>Anneliese W</strong>. Last updated:<span id="lastUpdated"> November 4th 2026</span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "Because they wanted to be a smartie!";
+    }
+  </script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <!-- Nov 2026 link check: title had a leftover "Your Name" placeholder; now "Kyla J". -->
+  <title>My First Webpage – Kyla J</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="–Kyla" />
+
+      <!-- Nov 2026 link check: back link used lowercase folder and file names that don't exist (s1w2/s1w2_index.html) and was labelled S2W1. Now points to S1W2/index.html. -->
+      <p style="margin-top:12px;">
+        <a href='/ict8/unit4/web_dev/S1W2/index.html'>← Back to S1W2 class page</a>
+      </p>
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #edbaf1;
+      --ink: #8181bd;
+      --accent: #da1ce0; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #fff; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#f3f3f6; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <!-- Nov 2026 link check: mismatched <kyla>…</span> tag fixed to <span>…</span>. -->
+      <h1>Hi, I'm <span id="studentName">Kyla</span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        Some things about me are, I play volleyball, soccer and track. I love animals unless their snakes or spiders. 
+        Lastley I live in Canada. those are some things about me.
+      </p> 
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://www.reverso.net" target="_blank" rel="noopener">Reverso</a></li>
+        <li><a href="https://www.nvschools.ca" target="_blank" rel="noopener">NVSD</a></li>
+        <!-- Nov 2026 link check: "https:///" had an extra slash (broken link). Changed to https://teams.microsoft.com/ — please confirm this is the Teams address you want. -->
+        <li><a href="https://teams.microsoft.com/" target="_blank" rel="noopener">Teams</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="https://static.boredpanda.com/blog/wp-content/uploads/2017/02/Unbelievable-Not-Photoshopped-Photos-Real-61-58b0326e202f5__700.jpg" alt="A breath taking photo by Mike Wehner" />
+        <figcaption>Photo credit: BCR, picture taken by Mike Wehner </figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">Why did the picture go to prison?</p>
+      <button type="button" onclick="myFunction()">Not sure why?</button>
+    </section>
+    
+    <section>
+      <h2>Course reflection.</h2>
+
+      <p>In this course I learned how to copy image links by right clicking. I really enjoyed using new apps, and exploring new things I've never done.
+         Another thing I enjoyed was being able to do this on my own, and only having to ask one question. So that's pretty much it, overall I really enjoyed this project.</p>
+      
+    </section>
+    
+    
+    
+    <footer>
+      <p>
+        Built by <strong>Kyla J</strong>. Last updated: <span id="lastUpdated">2026-11-04</span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "Because it was framed!";
+    }
+  </script>
+</body>
+</html>
