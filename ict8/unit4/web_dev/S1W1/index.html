@@ -30,9 +30,7 @@
 
       <section class="card">
         <h2>Student pages</h2>
-        <p class="small">Find your first name in the list, then click it to see your website.</p>
-        <input class="search" id="search" type="search" placeholder="Type your name to find it…" aria-label="Search for your name" style="width:100%;max-width:360px;padding:8px 10px;font-size:15px;" />
-        <ul class="list-tight" id="studentList" style="margin-top:12px;">
+        <ul class="list-tight" style="margin-top:12px;">
           <li><a href="aanik_m.html">Aanik M</a></li>
           <li><a href="ava_s.html">Ava S</a></li>
           <li><a href="benson_h.html">Benson H</a></li>
@@ -43,7 +41,6 @@
           <li><a href="kiera_h.html">Kiera H</a></li>
           <li><a href="olivia_a.html">Olivia A</a></li>
         </ul>
-        <p class="small" id="noMatch" style="display:none;">No names match. Check the spelling, or ask your teacher.</p>
       </section>
       </main>
 
@@ -74,22 +71,5 @@
     </div>
 
     <footer id="site-footer" data-partial="/common/partials/footer.html"></footer>
-    <script>
-      (function () {
-        var input = document.getElementById('search');
-        var items = document.querySelectorAll('#studentList li');
-        var noMatch = document.getElementById('noMatch');
-        input.addEventListener('input', function () {
-          var q = input.value.trim().toLowerCase();
-          var shown = 0;
-          items.forEach(function (li) {
-            var match = li.textContent.toLowerCase().indexOf(q) !== -1;
-            li.style.display = match ? '' : 'none';
-            if (match) shown++;
-          });
-          noMatch.style.display = shown === 0 ? 'block' : 'none';
-        });
-      })();
-    </script>
   </body>
 </html>
