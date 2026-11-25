@@ -1,0 +1,119 @@
+<!-- ===== student_template.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <title>My First Webpage – Baylor A</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Your Name" />
+
+      <!-- Nov 2026 link check: back link pointed to s1w2_index.html (does not exist). Now points to S1W2/index.html. -->
+      <p style="margin-top:12px;">
+        <a href='/ict8/unit4/web_dev/S1W2/index.html'>← Back to S1W2 class page</a>
+      </p>
+
+  
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #020b3b;
+      --ink: #1a1a1f;
+      --accent: #4f46e5; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #fff; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#f3f3f6; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="studentName">Baylor A</span> </h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+       Some of my intrests are mountain biking, playing video games, cooking and baking. A fun fact about me is I can flambé, My goal in this course is to learn how to code better and understand more about how computers work and how to fix them.
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://cork7.com/" target="_blank" rel="noopener">cork7</a></li>
+        <li><a href="https://www.propain-bikes.com/us/" target="_blank" rel="noopener">propain-bikes</a></li>
+        <li><a href="https://www.norco.com/?srsltid=AYCX9vK-m6UoED5voedatKZva1vNwaCxuxJ0YTPj73rXzDmIJz5snPEI" target="_blank" rel="noopener">norco</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Use a web image link (right‑click → Copy image link), or change src to assets/yourfile.jpg if your teacher uploads it. -->
+      <figure>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbQpZxPcMgj29Mk-leS0WJHl-15WMAhMDIFtXxbbrbJ3KxvFmeNjwIPPbS&s=10" alt="jbw.ultra on tiktok"
+" />
+        <figcaption>Photo credit: jbw.ultra on tiktok
+</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">What do you call a fish with no eyes?</p>
+      <button type="button" onclick="myFunction()">What?</button>
+    </section>
+    
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p>In unit 1. I learned proper one drive and file explorer management and proper labeling for my documents and what folder to put each thing in. A challenge I had in unit 1. essential skills was the know your computer WebQuest. I just could not grasp how to do it for the longest time. A challenge I had in unit 2. Was the combine and create assignment. I just couldn't for the life of me get me animations to be on time with each other and I struggled with finding things that stand for myself. In unit 2. I learned how to remove a photobomber using Canva or photopea. In unit 3. I learned how to code something that represents a classic arcade style shooter game while also having some new chaotic elements like being able to fire infinite bullets with some minor changes. A challenge I faced in unit 3. game development in which my meteors would never stop coming at me in the thousands at high speed as well as my enemy's not ever dying or taking damage just killing me in one hit and coming in the thousands. In unit 4. I learned how webpages work and how to edit and make my own. A challenge I faced was getting my links to say the right thing and take you to the correct website. </p>
+      
+    </section>
+    
+    
+    
+    <footer>
+      <p>
+        <!-- Nov 2026 link check: stray </A> closing tag fixed to </strong>. -->
+        Built by <strong>Baylor A</strong>. Last updated: november 4 2026 <span id="lastUpdated"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "A fsh";
+    }
+  </script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"890e296de4ab443083747c565b7457a5","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!-- ===== student_template.html ===== -->
+<!-- Nov 2026 link/markup check: the image section had a pasted copy of the whole HTML file inside the <img src> attribute, a local file path under the student's full name, and a second copy of the page body. Those were removed (see the image section below). The original text is otherwise kept. -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- 💡 TYPE ZONE: Add your name below.  -->
+  <!-- Nov 2026 link check: title was "Webpage Sudent B" and the author line still said "Your Name". Now "Mason B". -->
+  <title>My First Webpage – Mason B</title>
+  <meta name="description" content="My first webpage for ICT 8. Includes a short bio, favourite links, and an image I like." />
+  <meta name="author" content="Mason B" />
+
+      <!-- Nov 2026 link check: back link pointed to S1W1/s1w2_index.html (wrong folder and a file that does not exist). Now points to S1W2/index.html. -->
+      <p style="margin-top:12px;">
+        <a href='/ict8/unit4/web_dev/S1W2/index.html'>← Back to S1W2 class page</a>
+      </p>
+
+
+  <style>
+    /* Base page styling */
+    :root {
+      --bg: #f7f7fb;
+      --ink: #1a1a1f;
+      --accent: #4f46e5; /* change me! */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; line-height: 1.6; font-family: system-ui, Arial, sans-serif;
+      color: var(--ink); background: var(--bg);
+    }
+    .card {
+      max-width: 900px; margin: 0 auto; background: #fff; border-radius: 16px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    h2 { margin-top: 28px; font-size: clamp(20px, 3vw, 28px); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    figure { margin: 16px 0; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; }
+    .btn:hover { background: var(--accent); color:#fff; }
+    footer { margin-top: 40px; font-size: 14px; opacity: .7; }
+    code { background:#f3f3f6; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+
+
+<body>
+  <main class="card">
+    <header>
+      <!-- 💡 TYPE ZONE: add your name below -->
+      <h1>Hi, I'm <span id="studentName">Mason B</span> 👋</h1>
+      <p>Welcome to my first webpage for ICT 8. I built this in VS Code using HTML, CSS, and a tiny bit of JavaScript.</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        <!-- Nov 2026 privacy: "with my brother" generalized to "with my family". -->
+        I like to play play basebal with my friends. I also enjoy playing video games with my family . One goal I have for this class is to make a game and do well.
+      </p>
+    </section>
+
+    <section>
+      <h2>Favourite Links</h2>
+      <ul>
+        <!-- 💡 TYPE ZONE: replace with 2–3 sites you actually use -->
+        <li><a href="https://neal.fun/" target="_blank" rel="noopener">Neal.fun</a></li>
+        <li><a href="https://www.mlb.com/" target="_blank" rel="noopener">MLB</a></li>
+        <li><a href="https://poki.com/" target="_blank" rel="noopener">poki</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>An Awesome Image</h2>
+      <!-- Nov 2026 link check + privacy: the original <img> pointed to a local file path under the student's full name (it could never load on the site) and contained a pasted copy of this whole page. Replaced with the Britannica image that the second copy of the page used. -->
+      <figure>
+        <img src="https://cdn.britannica.com/32/123832-004-E78A1D99/tuffs-Yellowstone-National-Park.jpg" alt="A cool nature image from Unsplash" />
+        <figcaption>Photo credit: Britanica AI</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Something punny</h2>
+      <p id="pun">Why was the the king only one foot tall ?</p>
+      <button type="button" onclick="myFunction()">Why?</button>
+    </section>
+
+    <section>
+      <h2>Course Reflection</h2>
+
+      <p>Course reflection. I enjoyed this classs becsuse when I finish early I get toplay games. I also found it difficult to make the game because I could load the photos the right way. I had fun working with freinds and playing games after school work. I liked trhat Ms Ahoy could help us to easily. I liked that Ms Ahoy would show us how to do the work and teach us for next time. I enjoyed learning more about the computers and making the webpage.</p>
+
+    </section>
+
+
+
+    <footer>
+      <p>
+        <!-- Nov 2026 privacy + markup: full name removed from the footer (was "<strongr Mason Bingham>"); date label fixed. -->
+        Built by <strong>Mason B</strong>. Last updated: 11/05/2026<span id="lastUpdated"></span>.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    //Button function that changes the pun text//
+    function myFunction() {
+      document.getElementById("pun").innerHTML = "Because he was a ruler!";
+    }
+  </script>
+</body>
+</html>
